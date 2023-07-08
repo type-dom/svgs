@@ -41,7 +41,6 @@ module.exports = {
       // 整个库向外暴露的变量名
       name: 'SvgsView',
       type: 'umd',
-      // export: 'formEditor' // default umd
     },
     // libraryTarget: 'window' // 变量名添加到哪个全局上，browser浏览器端添加到window上
     // libraryTarget: 'global' // 变量名添加到哪个全局上，node服务端添加到global上

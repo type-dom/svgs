@@ -19,9 +19,8 @@ module.exports = {
     path: path.resolve(__dirname, '../lib'),
     clean: true,
     library: {
-      name: 'FormEditor',
+      name: 'TypeSvgs',
       type: 'umd',
-      // export: 'FormEditor',
     },
     // globalObject: 'this'
   },

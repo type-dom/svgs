@@ -1,7 +1,7 @@
 {
-  "name": "form-editor",
-  "version": "1.0.0",
-  "description": "form editor . ",
+  "name": "type-svgs",
+  "version": "0.0.1",
+  "description": "type svg components . ",
   "main": "src/example-design-mode.ts",
   "scripts": {
     "serve": "webpack-dev-server --mode=development --config ./build/webpack.config.js",
@@ -66,7 +66,6 @@
     "webpack-merge": "^5.9.0"
   },
   "dependencies": {
-    "axios": "^1.4.0",
     "rxjs": "^7.8.1",
     "type-dom.ts": "^0.0.13"
   },
