@@ -1,0 +1,17 @@
+import {SvgPath, TypeHtml, TypeSvgSvg} from "type-dom.ts";
+export class NotificationSvg extends TypeSvgSvg {
+  className: 'NotificationSvg';
+  childNodes: SvgPath[];
+  constructor(public parent: TypeHtml) {
+    super();
+    this.className = 'NotificationSvg';
+    this.resetSize(24, 24);
+    this.childNodes = [];
+    const path0 = new SvgPath(this);
+    path0.setData("M512 128v64H256a64 64 0 0 0-64 64v512a64 64 0 0 0 64 64h512a64 64 0 0 0 64-64V512h64v256a128 128 0 0 1-128 128H256a128 128 0 0 1-128-128V256a128 128 0 0 1 128-128h256z");
+    this.childNodes.push(path0);
+    const path1 = new SvgPath(this);
+    path1.setData("M768 384a128 128 0 1 0 0-256 128 128 0 0 0 0 256zm0 64a192 192 0 1 1 0-384 192 192 0 0 1 0 384z");
+    this.childNodes.push(path1);
+  }
+}

@@ -1,5 +1,4 @@
 import {SvgPath, TypeHtml, TypeSvgSvg} from "type-dom.ts";
-
 export class AddSvg extends TypeSvgSvg {
   className: 'AddSvg';
   childNodes: [SvgPath];

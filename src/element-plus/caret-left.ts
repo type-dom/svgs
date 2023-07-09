@@ -1,0 +1,14 @@
+import {SvgPath, TypeHtml, TypeSvgSvg} from "type-dom.ts";
+export class CaretLeftSvg extends TypeSvgSvg {
+  className: 'CaretLeftSvg';
+  childNodes: SvgPath[];
+  constructor(public parent: TypeHtml) {
+    super();
+    this.className = 'CaretLeftSvg';
+    this.resetSize(24, 24);
+    this.childNodes = [];
+    const path0 = new SvgPath(this);
+    path0.setData("M672 192 288 511.936 672 832z");
+    this.childNodes.push(path0);
+  }
+}

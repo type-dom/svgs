@@ -1,0 +1,14 @@
+import {SvgPath, TypeHtml, TypeSvgSvg} from "type-dom.ts";
+export class FoldSvg extends TypeSvgSvg {
+  className: 'FoldSvg';
+  childNodes: SvgPath[];
+  constructor(public parent: TypeHtml) {
+    super();
+    this.className = 'FoldSvg';
+    this.resetSize(24, 24);
+    this.childNodes = [];
+    const path0 = new SvgPath(this);
+    path0.setData("M896 192H128v128h768V192zm0 256H384v128h512V448zm0 256H128v128h768V704zM320 384 128 512l192 128V384z");
+    this.childNodes.push(path0);
+  }
+}
