@@ -199,6 +199,7 @@ export class CommonSvgList extends TypeDiv {
           attrObj: {
             width: '2em',
             height: '2em',
+            name: '404'
           },
           styleObj: $svgStyle
         }
@@ -209,6 +210,7 @@ export class CommonSvgList extends TypeDiv {
           attrObj: {
             width: '2em',
             height: '2em',
+            name: 'A+'
           },
           styleObj: $svgStyle
         }
@@ -219,6 +221,7 @@ export class CommonSvgList extends TypeDiv {
           attrObj: {
             width: '2em',
             height: '2em',
+            name: 'A-'
           },
           styleObj: $svgStyle
         }
@@ -229,6 +232,7 @@ export class CommonSvgList extends TypeDiv {
           attrObj: {
             width: '2em',
             height: '2em',
+            name: 'adaptive-width'
           },
           styleObj: $svgStyle
         }
@@ -239,6 +243,7 @@ export class CommonSvgList extends TypeDiv {
           attrObj: {
             width: '2em',
             height: '2em',
+            name: 'add-bookmark'
           },
           styleObj: $svgStyle
         }
@@ -249,6 +254,7 @@ export class CommonSvgList extends TypeDiv {
           attrObj: {
             width: '2em',
             height: '2em',
+            name: 'add-comments'
           },
           styleObj: $svgStyle
         }
@@ -259,6 +265,7 @@ export class CommonSvgList extends TypeDiv {
           attrObj: {
             width: '2em',
             height: '2em',
+            name: 'add-restricted-edit'
           },
           styleObj: $svgStyle
         }
@@ -269,6 +276,7 @@ export class CommonSvgList extends TypeDiv {
           attrObj: {
             width: '2em',
             height: '2em',
+            name: 'add'
           },
           styleObj: $svgStyle
         }
@@ -279,6 +287,7 @@ export class CommonSvgList extends TypeDiv {
           attrObj: {
             width: '2em',
             height: '2em',
+            name: 'align-bottom'
           },
           styleObj: $svgStyle
         }
@@ -289,6 +298,7 @@ export class CommonSvgList extends TypeDiv {
           attrObj: {
             width: '2em',
             height: '2em',
+            name: 'align-center'
           },
           styleObj: $svgStyle
         }
@@ -299,6 +309,7 @@ export class CommonSvgList extends TypeDiv {
           attrObj: {
             width: '2em',
             height: '2em',
+            name: 'align-justified'
           },
           styleObj: $svgStyle
         }
@@ -309,6 +320,7 @@ export class CommonSvgList extends TypeDiv {
           attrObj: {
             width: '2em',
             height: '2em',
+            name: 'align-left'
           },
           styleObj: $svgStyle
         }
@@ -319,6 +331,7 @@ export class CommonSvgList extends TypeDiv {
           attrObj: {
             width: '2em',
             height: '2em',
+            name: 'align-middle'
           },
           styleObj: $svgStyle
         }
@@ -329,6 +342,7 @@ export class CommonSvgList extends TypeDiv {
           attrObj: {
             width: '2em',
             height: '2em',
+            name: 'align-right'
           },
           styleObj: $svgStyle
         }
@@ -339,6 +353,7 @@ export class CommonSvgList extends TypeDiv {
           attrObj: {
             width: '2em',
             height: '2em',
+            name: 'align-scatter'
           },
           styleObj: $svgStyle
         }
@@ -349,6 +364,7 @@ export class CommonSvgList extends TypeDiv {
           attrObj: {
             width: '2em',
             height: '2em',
+            name: 'align-top'
           },
           styleObj: $svgStyle
         }
@@ -359,6 +375,7 @@ export class CommonSvgList extends TypeDiv {
           attrObj: {
             width: '2em',
             height: '2em',
+            name: 'attachment'
           },
           styleObj: $svgStyle
         }
@@ -369,6 +386,7 @@ export class CommonSvgList extends TypeDiv {
           attrObj: {
             width: '2em',
             height: '2em',
+            name: 'back'
           },
           styleObj: $svgStyle
         }
@@ -379,6 +397,7 @@ export class CommonSvgList extends TypeDiv {
           attrObj: {
             width: '2em',
             height: '2em',
+            name: 'background-color'
           },
           styleObj: $svgStyle
         }
@@ -389,6 +408,7 @@ export class CommonSvgList extends TypeDiv {
           attrObj: {
             width: '2em',
             height: '2em',
+            name: 'bold-T'
           },
           styleObj: $svgStyle
         }
@@ -399,6 +419,7 @@ export class CommonSvgList extends TypeDiv {
           attrObj: {
             width: '2em',
             height: '2em',
+            name: 'bold'
           },
           styleObj: $svgStyle
         }
@@ -409,6 +430,7 @@ export class CommonSvgList extends TypeDiv {
           attrObj: {
             width: '2em',
             height: '2em',
+            name: 'bookmark-list'
           },
           styleObj: $svgStyle
         }
@@ -419,6 +441,7 @@ export class CommonSvgList extends TypeDiv {
           attrObj: {
             width: '2em',
             height: '2em',
+            name: 'bookmark'
           },
           styleObj: $svgStyle
         }
@@ -429,6 +452,7 @@ export class CommonSvgList extends TypeDiv {
           attrObj: {
             width: '2em',
             height: '2em',
+            name: 'bug'
           },
           styleObj: $svgStyle
         }
@@ -439,6 +463,7 @@ export class CommonSvgList extends TypeDiv {
           attrObj: {
             width: '2em',
             height: '2em',
+            name: 'catalog'
           },
           styleObj: $svgStyle
         }
@@ -449,6 +474,7 @@ export class CommonSvgList extends TypeDiv {
           attrObj: {
             width: '2em',
             height: '2em',
+            name: 'chart'
           },
           styleObj: $svgStyle
         }
@@ -459,6 +485,7 @@ export class CommonSvgList extends TypeDiv {
           attrObj: {
             width: '2em',
             height: '2em',
+            name: 'check'
           },
           styleObj: $svgStyle
         }
@@ -469,6 +496,7 @@ export class CommonSvgList extends TypeDiv {
           attrObj: {
             width: '2em',
             height: '2em',
+            name: 'checkbox'
           },
           styleObj: $svgStyle
         }
@@ -479,6 +507,7 @@ export class CommonSvgList extends TypeDiv {
           attrObj: {
             width: '2em',
             height: '2em',
+            name: 'circle'
           },
           styleObj: $svgStyle
         }
@@ -489,6 +518,7 @@ export class CommonSvgList extends TypeDiv {
           attrObj: {
             width: '2em',
             height: '2em',
+            name: 'clean'
           },
           styleObj: $svgStyle
         }
@@ -499,6 +529,7 @@ export class CommonSvgList extends TypeDiv {
           attrObj: {
             width: '2em',
             height: '2em',
+            name: 'clipboard'
           },
           styleObj: $svgStyle
         }
@@ -509,6 +540,7 @@ export class CommonSvgList extends TypeDiv {
           attrObj: {
             width: '2em',
             height: '2em',
+            name: 'close-revision'
           },
           styleObj: $svgStyle
         }
@@ -519,6 +551,7 @@ export class CommonSvgList extends TypeDiv {
           attrObj: {
             width: '2em',
             height: '2em',
+            name: 'close'
           },
           styleObj: $svgStyle
         }
@@ -529,6 +562,7 @@ export class CommonSvgList extends TypeDiv {
           attrObj: {
             width: '2em',
             height: '2em',
+            name: 'component'
           },
           styleObj: $svgStyle
         }
@@ -539,6 +573,7 @@ export class CommonSvgList extends TypeDiv {
           attrObj: {
             width: '2em',
             height: '2em',
+            name: 'connection'
           },
           styleObj: $svgStyle
         }
@@ -549,6 +584,7 @@ export class CommonSvgList extends TypeDiv {
           attrObj: {
             width: '2em',
             height: '2em',
+            name: 'create-fill-restriction'
           },
           styleObj: $svgStyle
         }
@@ -559,6 +595,7 @@ export class CommonSvgList extends TypeDiv {
           attrObj: {
             width: '2em',
             height: '2em',
+            name: 'cross'
           },
           styleObj: $svgStyle
         }
@@ -569,6 +606,7 @@ export class CommonSvgList extends TypeDiv {
           attrObj: {
             width: '2em',
             height: '2em',
+            name: 'dashboard'
           },
           styleObj: $svgStyle
         }
@@ -579,6 +617,7 @@ export class CommonSvgList extends TypeDiv {
           attrObj: {
             width: '2em',
             height: '2em',
+            name: 'date'
           },
           styleObj: $svgStyle
         }
@@ -589,6 +628,7 @@ export class CommonSvgList extends TypeDiv {
           attrObj: {
             width: '2em',
             height: '2em',
+            name: 'datepicker'
           },
           styleObj: $svgStyle
         }
@@ -599,6 +639,7 @@ export class CommonSvgList extends TypeDiv {
           attrObj: {
             width: '2em',
             height: '2em',
+            name: 'delete'
           },
           styleObj: $svgStyle
         }
@@ -609,6 +650,7 @@ export class CommonSvgList extends TypeDiv {
           attrObj: {
             width: '2em',
             height: '2em',
+            name: 'documentation'
           },
           styleObj: $svgStyle
         }
@@ -619,6 +661,7 @@ export class CommonSvgList extends TypeDiv {
           attrObj: {
             width: '2em',
             height: '2em',
+            name: 'drag'
           },
           styleObj: $svgStyle
         }
@@ -629,6 +672,7 @@ export class CommonSvgList extends TypeDiv {
           attrObj: {
             width: '2em',
             height: '2em',
+            name: 'dropdown-box'
           },
           styleObj: $svgStyle
         }
@@ -639,6 +683,7 @@ export class CommonSvgList extends TypeDiv {
           attrObj: {
             width: '2em',
             height: '2em',
+            name: 'edit'
           },
           styleObj: $svgStyle
         }
@@ -649,6 +694,7 @@ export class CommonSvgList extends TypeDiv {
           attrObj: {
             width: '2em',
             height: '2em',
+            name: 'education'
           },
           styleObj: $svgStyle
         }
@@ -659,6 +705,7 @@ export class CommonSvgList extends TypeDiv {
           attrObj: {
             width: '2em',
             height: '2em',
+            name: 'email'
           },
           styleObj: $svgStyle
         }
@@ -669,6 +716,7 @@ export class CommonSvgList extends TypeDiv {
           attrObj: {
             width: '2em',
             height: '2em',
+            name: 'even-odd'
           },
           styleObj: $svgStyle
         }
@@ -679,6 +727,7 @@ export class CommonSvgList extends TypeDiv {
           attrObj: {
             width: '2em',
             height: '2em',
+            name: 'example'
           },
           styleObj: $svgStyle
         }
@@ -689,6 +738,7 @@ export class CommonSvgList extends TypeDiv {
           attrObj: {
             width: '2em',
             height: '2em',
+            name: 'excel'
           },
           styleObj: $svgStyle
         }
@@ -699,6 +749,7 @@ export class CommonSvgList extends TypeDiv {
           attrObj: {
             width: '2em',
             height: '2em',
+            name: 'exit-fullscreen'
           },
           styleObj: $svgStyle
         }
@@ -709,6 +760,7 @@ export class CommonSvgList extends TypeDiv {
           attrObj: {
             width: '2em',
             height: '2em',
+            name: 'export'
           },
           styleObj: $svgStyle
         }
@@ -719,6 +771,7 @@ export class CommonSvgList extends TypeDiv {
           attrObj: {
             width: '2em',
             height: '2em',
+            name: 'eye-open'
           },
           styleObj: $svgStyle
         }
@@ -729,6 +782,7 @@ export class CommonSvgList extends TypeDiv {
           attrObj: {
             width: '2em',
             height: '2em',
+            name: 'eye'
           },
           styleObj: $svgStyle
         }
@@ -739,6 +793,7 @@ export class CommonSvgList extends TypeDiv {
           attrObj: {
             width: '2em',
             height: '2em',
+            name: 'fill-restricted-list'
           },
           styleObj: $svgStyle
         }
@@ -749,6 +804,7 @@ export class CommonSvgList extends TypeDiv {
           attrObj: {
             width: '2em',
             height: '2em',
+            name: 'find'
           },
           styleObj: $svgStyle
         }
@@ -759,6 +815,7 @@ export class CommonSvgList extends TypeDiv {
           attrObj: {
             width: '2em',
             height: '2em',
+            name: 'flow'
           },
           styleObj: $svgStyle
         }
@@ -769,6 +826,7 @@ export class CommonSvgList extends TypeDiv {
           attrObj: {
             width: '2em',
             height: '2em',
+            name: 'font-color'
           },
           styleObj: $svgStyle
         }
@@ -779,6 +837,7 @@ export class CommonSvgList extends TypeDiv {
           attrObj: {
             width: '2em',
             height: '2em',
+            name: 'forbid-edit'
           },
           styleObj: $svgStyle
         }
@@ -789,6 +848,7 @@ export class CommonSvgList extends TypeDiv {
           attrObj: {
             width: '2em',
             height: '2em',
+            name: 'form'
           },
           styleObj: $svgStyle
         }
@@ -799,6 +859,7 @@ export class CommonSvgList extends TypeDiv {
           attrObj: {
             width: '2em',
             height: '2em',
+            name: 'formImage'
           },
           styleObj: $svgStyle
         }
@@ -809,6 +870,7 @@ export class CommonSvgList extends TypeDiv {
           attrObj: {
             width: '2em',
             height: '2em',
+            name: 'formQRCode'
           },
           styleObj: $svgStyle
         }
@@ -819,6 +881,7 @@ export class CommonSvgList extends TypeDiv {
           attrObj: {
             width: '2em',
             height: '2em',
+            name: 'formText'
           },
           styleObj: $svgStyle
         }
@@ -829,6 +892,7 @@ export class CommonSvgList extends TypeDiv {
           attrObj: {
             width: '2em',
             height: '2em',
+            name: 'format-brush-new'
           },
           styleObj: $svgStyle
         }
@@ -839,6 +903,7 @@ export class CommonSvgList extends TypeDiv {
           attrObj: {
             width: '2em',
             height: '2em',
+            name: 'format-brush'
           },
           styleObj: $svgStyle
         }
@@ -849,6 +914,7 @@ export class CommonSvgList extends TypeDiv {
           attrObj: {
             width: '2em',
             height: '2em',
+            name: 'fullscreen'
           },
           styleObj: $svgStyle
         }
@@ -859,6 +925,7 @@ export class CommonSvgList extends TypeDiv {
           attrObj: {
             width: '2em',
             height: '2em',
+            name: 'guide'
           },
           styleObj: $svgStyle
         }
@@ -869,6 +936,7 @@ export class CommonSvgList extends TypeDiv {
           attrObj: {
             width: '2em',
             height: '2em',
+            name: 'h'
           },
           styleObj: $svgStyle
         }
@@ -879,6 +947,7 @@ export class CommonSvgList extends TypeDiv {
           attrObj: {
             width: '2em',
             height: '2em',
+            name: 'history'
           },
           styleObj: $svgStyle
         }
@@ -889,6 +958,7 @@ export class CommonSvgList extends TypeDiv {
           attrObj: {
             width: '2em',
             height: '2em',
+            name: 'homepage'
           },
           styleObj: $svgStyle
         }
@@ -899,6 +969,7 @@ export class CommonSvgList extends TypeDiv {
           attrObj: {
             width: '2em',
             height: '2em',
+            name: 'icon'
           },
           styleObj: $svgStyle
         }
@@ -909,6 +980,7 @@ export class CommonSvgList extends TypeDiv {
           attrObj: {
             width: '2em',
             height: '2em',
+            name: 'identifier'
           },
           styleObj: $svgStyle
         }
@@ -919,6 +991,7 @@ export class CommonSvgList extends TypeDiv {
           attrObj: {
             width: '2em',
             height: '2em',
+            name: 'image'
           },
           styleObj: $svgStyle
         }
@@ -929,6 +1002,7 @@ export class CommonSvgList extends TypeDiv {
           attrObj: {
             width: '2em',
             height: '2em',
+            name: 'import'
           },
           styleObj: $svgStyle
         }
@@ -939,6 +1013,7 @@ export class CommonSvgList extends TypeDiv {
           attrObj: {
             width: '2em',
             height: '2em',
+            name: 'increase-indent'
           },
           styleObj: $svgStyle
         }
@@ -949,6 +1024,7 @@ export class CommonSvgList extends TypeDiv {
           attrObj: {
             width: '2em',
             height: '2em',
+            name: 'increase-line-height'
           },
           styleObj: $svgStyle
         }
@@ -959,6 +1035,7 @@ export class CommonSvgList extends TypeDiv {
           attrObj: {
             width: '2em',
             height: '2em',
+            name: 'insert-column'
           },
           styleObj: $svgStyle
         }
@@ -969,6 +1046,7 @@ export class CommonSvgList extends TypeDiv {
           attrObj: {
             width: '2em',
             height: '2em',
+            name: 'insert-row'
           },
           styleObj: $svgStyle
         }
@@ -979,6 +1057,7 @@ export class CommonSvgList extends TypeDiv {
           attrObj: {
             width: '2em',
             height: '2em',
+            name: 'international'
           },
           styleObj: $svgStyle
         }
@@ -989,6 +1068,7 @@ export class CommonSvgList extends TypeDiv {
           attrObj: {
             width: '2em',
             height: '2em',
+            name: 'italic-1'
           },
           styleObj: $svgStyle
         }
@@ -999,6 +1079,7 @@ export class CommonSvgList extends TypeDiv {
           attrObj: {
             width: '2em',
             height: '2em',
+            name: 'italic'
           },
           styleObj: $svgStyle
         }
@@ -1009,6 +1090,7 @@ export class CommonSvgList extends TypeDiv {
           attrObj: {
             width: '2em',
             height: '2em',
+            name: 'language'
           },
           styleObj: $svgStyle
         }
@@ -1019,6 +1101,7 @@ export class CommonSvgList extends TypeDiv {
           attrObj: {
             width: '2em',
             height: '2em',
+            name: 'line'
           },
           styleObj: $svgStyle
         }
@@ -1029,6 +1112,7 @@ export class CommonSvgList extends TypeDiv {
           attrObj: {
             width: '2em',
             height: '2em',
+            name: 'link'
           },
           styleObj: $svgStyle
         }
@@ -1039,6 +1123,7 @@ export class CommonSvgList extends TypeDiv {
           attrObj: {
             width: '2em',
             height: '2em',
+            name: 'list'
           },
           styleObj: $svgStyle
         }
@@ -1049,6 +1134,7 @@ export class CommonSvgList extends TypeDiv {
           attrObj: {
             width: '2em',
             height: '2em',
+            name: 'lock'
           },
           styleObj: $svgStyle
         }
@@ -1059,6 +1145,7 @@ export class CommonSvgList extends TypeDiv {
           attrObj: {
             width: '2em',
             height: '2em',
+            name: 'mPage'
           },
           styleObj: $svgStyle
         }
@@ -1069,6 +1156,7 @@ export class CommonSvgList extends TypeDiv {
           attrObj: {
             width: '2em',
             height: '2em',
+            name: 'merge-cell'
           },
           styleObj: $svgStyle
         }
@@ -1079,6 +1167,7 @@ export class CommonSvgList extends TypeDiv {
           attrObj: {
             width: '2em',
             height: '2em',
+            name: 'message'
           },
           styleObj: $svgStyle
         }
@@ -1089,6 +1178,7 @@ export class CommonSvgList extends TypeDiv {
           attrObj: {
             width: '2em',
             height: '2em',
+            name: 'middle-line'
           },
           styleObj: $svgStyle
         }
@@ -1099,6 +1189,7 @@ export class CommonSvgList extends TypeDiv {
           attrObj: {
             width: '2em',
             height: '2em',
+            name: 'minus'
           },
           styleObj: $svgStyle
         }
@@ -1109,6 +1200,7 @@ export class CommonSvgList extends TypeDiv {
           attrObj: {
             width: '2em',
             height: '2em',
+            name: 'module'
           },
           styleObj: $svgStyle
         }
@@ -1119,6 +1211,7 @@ export class CommonSvgList extends TypeDiv {
           attrObj: {
             width: '2em',
             height: '2em',
+            name: 'money'
           },
           styleObj: $svgStyle
         }
@@ -1129,6 +1222,7 @@ export class CommonSvgList extends TypeDiv {
           attrObj: {
             width: '2em',
             height: '2em',
+            name: 'multiline-input'
           },
           styleObj: $svgStyle
         }
@@ -1139,6 +1233,7 @@ export class CommonSvgList extends TypeDiv {
           attrObj: {
             width: '2em',
             height: '2em',
+            name: 'multiple-options'
           },
           styleObj: $svgStyle
         }
@@ -1149,6 +1244,7 @@ export class CommonSvgList extends TypeDiv {
           attrObj: {
             width: '2em',
             height: '2em',
+            name: 'nested'
           },
           styleObj: $svgStyle
         }
@@ -1159,6 +1255,7 @@ export class CommonSvgList extends TypeDiv {
           attrObj: {
             width: '2em',
             height: '2em',
+            name: 'network'
           },
           styleObj: $svgStyle
         }
@@ -1169,6 +1266,7 @@ export class CommonSvgList extends TypeDiv {
           attrObj: {
             width: '2em',
             height: '2em',
+            name: 'numerical-input'
           },
           styleObj: $svgStyle
         }
@@ -1179,6 +1277,7 @@ export class CommonSvgList extends TypeDiv {
           attrObj: {
             width: '2em',
             height: '2em',
+            name: 'numerical'
           },
           styleObj: $svgStyle
         }
@@ -1189,6 +1288,7 @@ export class CommonSvgList extends TypeDiv {
           attrObj: {
             width: '2em',
             height: '2em',
+            name: 'overline'
           },
           styleObj: $svgStyle
         }
@@ -1199,6 +1299,7 @@ export class CommonSvgList extends TypeDiv {
           attrObj: {
             width: '2em',
             height: '2em',
+            name: 'page-add'
           },
           styleObj: $svgStyle
         }
@@ -1209,6 +1310,7 @@ export class CommonSvgList extends TypeDiv {
           attrObj: {
             width: '2em',
             height: '2em',
+            name: 'page-delete'
           },
           styleObj: $svgStyle
         }
@@ -1219,6 +1321,7 @@ export class CommonSvgList extends TypeDiv {
           attrObj: {
             width: '2em',
             height: '2em',
+            name: 'page-direction'
           },
           styleObj: $svgStyle
         }
@@ -1229,6 +1332,7 @@ export class CommonSvgList extends TypeDiv {
           attrObj: {
             width: '2em',
             height: '2em',
+            name: 'page-header-footer'
           },
           styleObj: $svgStyle
         }
@@ -1239,6 +1343,7 @@ export class CommonSvgList extends TypeDiv {
           attrObj: {
             width: '2em',
             height: '2em',
+            name: 'page-margin'
           },
           styleObj: $svgStyle
         }
@@ -1249,6 +1354,7 @@ export class CommonSvgList extends TypeDiv {
           attrObj: {
             width: '2em',
             height: '2em',
+            name: 'paginate'
           },
           styleObj: $svgStyle
         }
@@ -1259,6 +1365,7 @@ export class CommonSvgList extends TypeDiv {
           attrObj: {
             width: '2em',
             height: '2em',
+            name: 'pagination'
           },
           styleObj: $svgStyle
         }
@@ -1269,6 +1376,7 @@ export class CommonSvgList extends TypeDiv {
           attrObj: {
             width: '2em',
             height: '2em',
+            name: 'paging'
           },
           styleObj: $svgStyle
         }
@@ -1279,6 +1387,7 @@ export class CommonSvgList extends TypeDiv {
           attrObj: {
             width: '2em',
             height: '2em',
+            name: 'password'
           },
           styleObj: $svgStyle
         }
@@ -1289,6 +1398,7 @@ export class CommonSvgList extends TypeDiv {
           attrObj: {
             width: '2em',
             height: '2em',
+            name: 'pdf'
           },
           styleObj: $svgStyle
         }
@@ -1299,6 +1409,7 @@ export class CommonSvgList extends TypeDiv {
           attrObj: {
             width: '2em',
             height: '2em',
+            name: 'people'
           },
           styleObj: $svgStyle
         }
@@ -1309,6 +1420,7 @@ export class CommonSvgList extends TypeDiv {
           attrObj: {
             width: '2em',
             height: '2em',
+            name: 'peoples'
           },
           styleObj: $svgStyle
         }
@@ -1319,6 +1431,7 @@ export class CommonSvgList extends TypeDiv {
           attrObj: {
             width: '2em',
             height: '2em',
+            name: 'plus'
           },
           styleObj: $svgStyle
         }
@@ -1329,6 +1442,7 @@ export class CommonSvgList extends TypeDiv {
           attrObj: {
             width: '2em',
             height: '2em',
+            name: 'process'
           },
           styleObj: $svgStyle
         }
@@ -1339,6 +1453,7 @@ export class CommonSvgList extends TypeDiv {
           attrObj: {
             width: '2em',
             height: '2em',
+            name: 'property'
           },
           styleObj: $svgStyle
         }
@@ -1349,6 +1464,7 @@ export class CommonSvgList extends TypeDiv {
           attrObj: {
             width: '2em',
             height: '2em',
+            name: 'qq'
           },
           styleObj: $svgStyle
         }
@@ -1359,6 +1475,7 @@ export class CommonSvgList extends TypeDiv {
           attrObj: {
             width: '2em',
             height: '2em',
+            name: 'radio-button'
           },
           styleObj: $svgStyle
         }
@@ -1369,6 +1486,7 @@ export class CommonSvgList extends TypeDiv {
           attrObj: {
             width: '2em',
             height: '2em',
+            name: 'rectangle'
           },
           styleObj: $svgStyle
         }
@@ -1379,6 +1497,7 @@ export class CommonSvgList extends TypeDiv {
           attrObj: {
             width: '2em',
             height: '2em',
+            name: 'redo'
           },
           styleObj: $svgStyle
         }
@@ -1389,6 +1508,7 @@ export class CommonSvgList extends TypeDiv {
           attrObj: {
             width: '2em',
             height: '2em',
+            name: 'restricted-edit-list'
           },
           styleObj: $svgStyle
         }
@@ -1399,6 +1519,7 @@ export class CommonSvgList extends TypeDiv {
           attrObj: {
             width: '2em',
             height: '2em',
+            name: 'row-height'
           },
           styleObj: $svgStyle
         }
@@ -1409,6 +1530,7 @@ export class CommonSvgList extends TypeDiv {
           attrObj: {
             width: '2em',
             height: '2em',
+            name: 'row-spacing'
           },
           styleObj: $svgStyle
         }
@@ -1419,6 +1541,7 @@ export class CommonSvgList extends TypeDiv {
           attrObj: {
             width: '2em',
             height: '2em',
+            name: 'sPage'
           },
           styleObj: $svgStyle
         }
@@ -1429,6 +1552,7 @@ export class CommonSvgList extends TypeDiv {
           attrObj: {
             width: '2em',
             height: '2em',
+            name: 'save'
           },
           styleObj: $svgStyle
         }
@@ -1439,6 +1563,7 @@ export class CommonSvgList extends TypeDiv {
           attrObj: {
             width: '2em',
             height: '2em',
+            name: 'sd-tag'
           },
           styleObj: $svgStyle
         }
@@ -1449,6 +1574,7 @@ export class CommonSvgList extends TypeDiv {
           attrObj: {
             width: '2em',
             height: '2em',
+            name: 'search'
           },
           styleObj: $svgStyle
         }
@@ -1459,6 +1585,7 @@ export class CommonSvgList extends TypeDiv {
           attrObj: {
             width: '2em',
             height: '2em',
+            name: 'select'
           },
           styleObj: $svgStyle
         }
@@ -1469,6 +1596,7 @@ export class CommonSvgList extends TypeDiv {
           attrObj: {
             width: '2em',
             height: '2em',
+            name: 'sensitive-info'
           },
           styleObj: $svgStyle
         }
@@ -1479,6 +1607,7 @@ export class CommonSvgList extends TypeDiv {
           attrObj: {
             width: '2em',
             height: '2em',
+            name: 'shopping-card'
           },
           styleObj: $svgStyle
         }
@@ -1489,6 +1618,7 @@ export class CommonSvgList extends TypeDiv {
           attrObj: {
             width: '2em',
             height: '2em',
+            name: 'shopping'
           },
           styleObj: $svgStyle
         }
@@ -1499,6 +1629,7 @@ export class CommonSvgList extends TypeDiv {
           attrObj: {
             width: '2em',
             height: '2em',
+            name: 'sign'
           },
           styleObj: $svgStyle
         }
@@ -1509,6 +1640,7 @@ export class CommonSvgList extends TypeDiv {
           attrObj: {
             width: '2em',
             height: '2em',
+            name: 'signature'
           },
           styleObj: $svgStyle
         }
@@ -1519,6 +1651,7 @@ export class CommonSvgList extends TypeDiv {
           attrObj: {
             width: '2em',
             height: '2em',
+            name: 'single-input'
           },
           styleObj: $svgStyle
         }
@@ -1529,6 +1662,7 @@ export class CommonSvgList extends TypeDiv {
           attrObj: {
             width: '2em',
             height: '2em',
+            name: 'single-option'
           },
           styleObj: $svgStyle
         }
@@ -1539,6 +1673,7 @@ export class CommonSvgList extends TypeDiv {
           attrObj: {
             width: '2em',
             height: '2em',
+            name: 'size'
           },
           styleObj: $svgStyle
         }
@@ -1549,6 +1684,7 @@ export class CommonSvgList extends TypeDiv {
           attrObj: {
             width: '2em',
             height: '2em',
+            name: 'skill'
           },
           styleObj: $svgStyle
         }
@@ -1559,6 +1695,7 @@ export class CommonSvgList extends TypeDiv {
           attrObj: {
             width: '2em',
             height: '2em',
+            name: 'sort-value'
           },
           styleObj: $svgStyle
         }
@@ -1569,6 +1706,7 @@ export class CommonSvgList extends TypeDiv {
           attrObj: {
             width: '2em',
             height: '2em',
+            name: 'sort'
           },
           styleObj: $svgStyle
         }
@@ -1579,6 +1717,7 @@ export class CommonSvgList extends TypeDiv {
           attrObj: {
             width: '2em',
             height: '2em',
+            name: 'split-cell'
           },
           styleObj: $svgStyle
         }
@@ -1589,6 +1728,7 @@ export class CommonSvgList extends TypeDiv {
           attrObj: {
             width: '2em',
             height: '2em',
+            name: 'star'
           },
           styleObj: $svgStyle
         }
@@ -1599,6 +1739,7 @@ export class CommonSvgList extends TypeDiv {
           attrObj: {
             width: '2em',
             height: '2em',
+            name: 'static-catalog'
           },
           styleObj: $svgStyle
         }
@@ -1609,6 +1750,7 @@ export class CommonSvgList extends TypeDiv {
           attrObj: {
             width: '2em',
             height: '2em',
+            name: 'static-horizontal-line'
           },
           styleObj: $svgStyle
         }
@@ -1619,6 +1761,7 @@ export class CommonSvgList extends TypeDiv {
           attrObj: {
             width: '2em',
             height: '2em',
+            name: 'static-image'
           },
           styleObj: $svgStyle
         }
@@ -1629,6 +1772,7 @@ export class CommonSvgList extends TypeDiv {
           attrObj: {
             width: '2em',
             height: '2em',
+            name: 'static-vertical-line'
           },
           styleObj: $svgStyle
         }
@@ -1639,6 +1783,7 @@ export class CommonSvgList extends TypeDiv {
           attrObj: {
             width: '2em',
             height: '2em',
+            name: 'staticHLine'
           },
           styleObj: $svgStyle
         }
@@ -1649,6 +1794,7 @@ export class CommonSvgList extends TypeDiv {
           attrObj: {
             width: '2em',
             height: '2em',
+            name: 'staticLabel'
           },
           styleObj: $svgStyle
         }
@@ -1659,6 +1805,7 @@ export class CommonSvgList extends TypeDiv {
           attrObj: {
             width: '2em',
             height: '2em',
+            name: 'staticMLLabel'
           },
           styleObj: $svgStyle
         }
@@ -1669,6 +1816,7 @@ export class CommonSvgList extends TypeDiv {
           attrObj: {
             width: '2em',
             height: '2em',
+            name: 'staticQRCode'
           },
           styleObj: $svgStyle
         }
@@ -1679,6 +1827,7 @@ export class CommonSvgList extends TypeDiv {
           attrObj: {
             width: '2em',
             height: '2em',
+            name: 'staticSLLabel'
           },
           styleObj: $svgStyle
         }
@@ -1689,6 +1838,7 @@ export class CommonSvgList extends TypeDiv {
           attrObj: {
             width: '2em',
             height: '2em',
+            name: 'staticTable'
           },
           styleObj: $svgStyle
         }
@@ -1699,6 +1849,7 @@ export class CommonSvgList extends TypeDiv {
           attrObj: {
             width: '2em',
             height: '2em',
+            name: 'staticText'
           },
           styleObj: $svgStyle
         }
@@ -1709,6 +1860,7 @@ export class CommonSvgList extends TypeDiv {
           attrObj: {
             width: '2em',
             height: '2em',
+            name: 'staticVLine'
           },
           styleObj: $svgStyle
         }
@@ -1719,6 +1871,7 @@ export class CommonSvgList extends TypeDiv {
           attrObj: {
             width: '2em',
             height: '2em',
+            name: 'strikethrough'
           },
           styleObj: $svgStyle
         }
@@ -1729,6 +1882,7 @@ export class CommonSvgList extends TypeDiv {
           attrObj: {
             width: '2em',
             height: '2em',
+            name: 'submit'
           },
           styleObj: $svgStyle
         }
@@ -1739,6 +1893,7 @@ export class CommonSvgList extends TypeDiv {
           attrObj: {
             width: '2em',
             height: '2em',
+            name: 'tab'
           },
           styleObj: $svgStyle
         }
@@ -1749,6 +1904,7 @@ export class CommonSvgList extends TypeDiv {
           attrObj: {
             width: '2em',
             height: '2em',
+            name: 'table-1'
           },
           styleObj: $svgStyle
         }
@@ -1759,6 +1915,7 @@ export class CommonSvgList extends TypeDiv {
           attrObj: {
             width: '2em',
             height: '2em',
+            name: 'table-2'
           },
           styleObj: $svgStyle
         }
@@ -1769,6 +1926,7 @@ export class CommonSvgList extends TypeDiv {
           attrObj: {
             width: '2em',
             height: '2em',
+            name: 'table-new'
           },
           styleObj: $svgStyle
         }
@@ -1779,6 +1937,7 @@ export class CommonSvgList extends TypeDiv {
           attrObj: {
             width: '2em',
             height: '2em',
+            name: 'table'
           },
           styleObj: $svgStyle
         }
@@ -1789,6 +1948,7 @@ export class CommonSvgList extends TypeDiv {
           attrObj: {
             width: '2em',
             height: '2em',
+            name: 'task'
           },
           styleObj: $svgStyle
         }
@@ -1799,6 +1959,7 @@ export class CommonSvgList extends TypeDiv {
           attrObj: {
             width: '2em',
             height: '2em',
+            name: 'td-image'
           },
           styleObj: $svgStyle
         }
@@ -1809,6 +1970,7 @@ export class CommonSvgList extends TypeDiv {
           attrObj: {
             width: '2em',
             height: '2em',
+            name: 'td-text'
           },
           styleObj: $svgStyle
         }
@@ -1819,6 +1981,7 @@ export class CommonSvgList extends TypeDiv {
           attrObj: {
             width: '2em',
             height: '2em',
+            name: 'tdQRCode'
           },
           styleObj: $svgStyle
         }
@@ -1829,6 +1992,7 @@ export class CommonSvgList extends TypeDiv {
           attrObj: {
             width: '2em',
             height: '2em',
+            name: 'text-indent'
           },
           styleObj: $svgStyle
         }
@@ -1839,6 +2003,7 @@ export class CommonSvgList extends TypeDiv {
           attrObj: {
             width: '2em',
             height: '2em',
+            name: 'theme'
           },
           styleObj: $svgStyle
         }
@@ -1849,6 +2014,7 @@ export class CommonSvgList extends TypeDiv {
           attrObj: {
             width: '2em',
             height: '2em',
+            name: 'three-dots'
           },
           styleObj: $svgStyle
         }
@@ -1859,6 +2025,7 @@ export class CommonSvgList extends TypeDiv {
           attrObj: {
             width: '2em',
             height: '2em',
+            name: 'time'
           },
           styleObj: $svgStyle
         }
@@ -1869,6 +2036,7 @@ export class CommonSvgList extends TypeDiv {
           attrObj: {
             width: '2em',
             height: '2em',
+            name: 'transform'
           },
           styleObj: $svgStyle
         }
@@ -1879,6 +2047,7 @@ export class CommonSvgList extends TypeDiv {
           attrObj: {
             width: '2em',
             height: '2em',
+            name: 'tree-table'
           },
           styleObj: $svgStyle
         }
@@ -1889,6 +2058,7 @@ export class CommonSvgList extends TypeDiv {
           attrObj: {
             width: '2em',
             height: '2em',
+            name: 'tree'
           },
           styleObj: $svgStyle
         }
@@ -1899,6 +2069,7 @@ export class CommonSvgList extends TypeDiv {
           attrObj: {
             width: '2em',
             height: '2em',
+            name: 'underline'
           },
           styleObj: $svgStyle
         }
@@ -1909,6 +2080,7 @@ export class CommonSvgList extends TypeDiv {
           attrObj: {
             width: '2em',
             height: '2em',
+            name: 'undo'
           },
           styleObj: $svgStyle
         }
@@ -1919,6 +2091,7 @@ export class CommonSvgList extends TypeDiv {
           attrObj: {
             width: '2em',
             height: '2em',
+            name: 'user'
           },
           styleObj: $svgStyle
         }
@@ -1929,6 +2102,7 @@ export class CommonSvgList extends TypeDiv {
           attrObj: {
             width: '2em',
             height: '2em',
+            name: 'watermark'
           },
           styleObj: $svgStyle
         }
@@ -1939,6 +2113,7 @@ export class CommonSvgList extends TypeDiv {
           attrObj: {
             width: '2em',
             height: '2em',
+            name: 'wechat'
           },
           styleObj: $svgStyle
         }
@@ -1949,6 +2124,7 @@ export class CommonSvgList extends TypeDiv {
           attrObj: {
             width: '2em',
             height: '2em',
+            name: 'workflow'
           },
           styleObj: $svgStyle
         }
@@ -1959,11 +2135,11 @@ export class CommonSvgList extends TypeDiv {
           attrObj: {
             width: '2em',
             height: '2em',
+            name: 'zip'
           },
           styleObj: $svgStyle
         }
       },
     ]);
-    this.render();
   }
 }

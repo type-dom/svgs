@@ -135,6 +135,7 @@ export class CommonSvgList extends TypeDiv {
           attrObj: {
             width: '2em',
             height: '2em',
+            name: '${(fileName.toLocaleString())}'
           },
           styleObj: $svgStyle
         }
@@ -142,7 +143,6 @@ export class CommonSvgList extends TypeDiv {
   });
   template += `
     ]);
-    this.render();
   }
 }`;
   fs.writeFile('./public/common-svg-list.ts', template, err => {
