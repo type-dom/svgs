@@ -7,7 +7,7 @@
     "serve": "webpack-dev-server --mode=development --config ./build/webpack.config.js",
     "build": "webpack --mode=production --config ./build/webpack.config.js",
     "lib": "webpack --mode=none --config ./build/webpack.lib.config.js",
-    "svg-element-plus": "node transform-svg-elelment-plus.js",
+    "svg-element-plus": "node trans-elelment.js",
     "svg-common": "node transform-svg-common.js",
     "js": "tsc",
     "test": "jest",

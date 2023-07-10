@@ -1,7 +1,7 @@
 let fs = require('fs');
-const SVG_PATH = './public/common';
-const INDEX_PATH = './src/common';
-const CLASS_PATH = './src/common';
+const SVG_PATH = './public/element-plus';
+const INDEX_PATH = './src/element-plus';
+const CLASS_PATH = './src/element-plus';
 /**
  * @param str 字符串
  * @param separator 分割符(默认"-")
@@ -37,7 +37,7 @@ function generateSvgClasses(files) {
       // 输出匹配到的结果
       console.log('paths is ', paths);
       const fileName = file.replace('.svg', '');
-      const className = 'Td' + toHump(fileName) // 获取类名
+      const className = 'El' + toHump(fileName) // 获取类名
         .replaceAll('+', 'Plus') + 'Svg';
         // .replaceAll('-', 'Minus');
       let template = `import { SvgPath, TypeHtml, TypeSvgSvg } from 'type-dom.ts';
@@ -84,7 +84,7 @@ function generateSvgIndex(files) {
   let template = '';
   files.forEach(file => {
     const fileName = file.replace('.svg', '');  // 获取文件名
-    const className = 'Td' + toHump(fileName)
+    const className = 'El' + toHump(fileName)
       .replaceAll('+', 'Plus') + 'Svg';
     template += `export { ${className} } from './${fileName}';
 `;
@@ -96,26 +96,25 @@ function generateSvgIndex(files) {
     console.log('index.js 注册代码重新生成！');
   });
 }
-function generateSvgCommonList(files) {
+function generateSvgElementPlusgList(files) {
   let template = `import { IStyle, TextNode, TypeDiv } from 'type-dom.ts';
 import { SVGSRoot } from "./svgs-root";
 import {`;
   files.forEach(file => {
     const fileName = file.replace('.svg', '');  // 获取文件名
-    const className = 'Td' + toHump(fileName)
+    const className = 'El' + toHump(fileName)
       .replaceAll('+', 'Plus') + 'Svg';
     template += `
   ${className},`
   });
-
   template += `
 } from '../src';
-export class CommonSvgList extends TypeDiv {
-  className: 'CommonSvgList';
+export class ElementPlusSvgList extends TypeDiv {
+  className: 'ElementPlusSvgList';
   constructor(public parent: SVGSRoot) {
     super();
-    console.log('CommonSvgList constructor . ');
-    this.className = 'CommonSvgList';
+    console.log('ElementPlusSvgList constructor . ');
+    this.className = 'ElementPlusSvgList';
     this.addStyleObj({
       padding: '30px'
     });
@@ -126,7 +125,7 @@ export class CommonSvgList extends TypeDiv {
     this.createItems(this, [`;
   files.forEach(file => {
     const fileName = file.replace('.svg', '');  // 获取文件名
-    const className = 'Td' + toHump(fileName)
+    const className = 'El' + toHump(fileName)
       .replaceAll('+', 'Plus') + 'Svg';
     template += `
       {
@@ -142,14 +141,13 @@ export class CommonSvgList extends TypeDiv {
   });
   template += `
     ]);
-    this.render();
   }
 }`;
-  fs.writeFile('./public/common-svg-list.ts', template, err => {
+  fs.writeFile('./public/element-plus-svg-list.ts', template, err => {
     if (err) {
       return console.error(err);
     }
-    console.log('common-svg-list.ts 注册代码重新生成！');
+    console.log('element-plu-svg-list.ts 注册代码重新生成！');
   });
 }
 fs.readdir(SVG_PATH, (err, files) => {
@@ -159,5 +157,5 @@ fs.readdir(SVG_PATH, (err, files) => {
   console.log('files is ', files);
   // generateSvgClasses(files);
   // getSvgIndex(files);
-  generateSvgCommonList(files);
+  generateSvgElementPlusgList(files);
 });
