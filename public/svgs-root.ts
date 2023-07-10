@@ -1,4 +1,4 @@
-import { TypeRoot, TextNode, Division, Br } from 'type-dom.ts';
+import {TypeRoot, TextNode, Division, Br, IStyle} from 'type-dom.ts';
 import { AddSvg } from '../src/add/add';
 import { AttachmentSvg } from '../src/attachment/attachment';
 import { CheckboxSvg } from  '../src/checkbox/checkbox';
@@ -15,6 +15,7 @@ import { TableSvg } from '../src/table/table';
 import { ThreeDotsSvg } from '../src/three-dots/three-dots';
 import { TimeSvg } from '../src/time/time';
 import { TriangleSvg } from '../src/triangle/triangle';
+import {AlarmClockSvg} from "../src/element-plus";
 /**
  * 应用根节点，必须存在。
  * 应用继承 TypeRoot;
@@ -30,169 +31,183 @@ export class SVGSRoot extends TypeRoot {
     this.addStyleObj({
       padding: '30px'
     });
+    const $svgStyle: Partial<IStyle> = {
+      padding: '10px',
+      border: '1px solid #ddd',
+    }
     this.createItems(this, [
       {
         TypeClass: Division,
         childNodes: [
           {
+            TypeClass: AlarmClockSvg,
+            propObj: {
+              attrObj: {
+                width: '2em',
+                height: '2em',
+              },
+              styleObj: $svgStyle
+            }
+          },
+          {
             TypeClass: AddSvg,
             propObj: {
               attrObj: {
-                width: '1em',
-                height: '1em',
+                width: '2em',
+                height: '2em',
               },
-              styleObj: {}
+              styleObj: $svgStyle
             }
           },
           {
             TypeClass: AttachmentSvg,
             propObj: {
               attrObj: {
-                width: '1em',
-                height: '1em',
+                width: '2em',
+                height: '2em',
               },
-              styleObj: {}
+              styleObj: $svgStyle
             }
           },
           {
             TypeClass: CheckboxSvg,
             propObj: {
               attrObj: {
-                width: '1em',
-                height: '1em',
+                width: '2em',
+                height: '2em',
               },
-              styleObj: {}
+              styleObj: $svgStyle
             }
           },
           {
             TypeClass: CloseSvg,
             propObj: {
               attrObj: {
-                width: '1em',
-                height: '1em',
+                width: '2em',
+                height: '2em',
               },
-              styleObj: {}
+              styleObj: $svgStyle
             }
           },
           {
             TypeClass: ConnectionSvg,
             propObj: {
               attrObj: {
-                width: '1em',
-                height: '1em',
+                width: '2em',
+                height: '2em',
               },
-              styleObj: {}
+              styleObj: $svgStyle
             }
           },
           {
             TypeClass: DateSvg,
             propObj: {
               attrObj: {
-                width: '1em',
-                height: '1em',
+                width: '2em',
+                height: '2em',
               },
-              styleObj: {}
+              styleObj: $svgStyle
             }
           },
           {
             TypeClass: DeleteSvg,
             propObj: {
               attrObj: {
-                width: '1em',
-                height: '1em',
+                width: '2em',
+                height: '2em',
               },
-              styleObj: {}
+              styleObj: $svgStyle
             }
           },
           {
             TypeClass: MultilineInputSvg,
             propObj: {
               attrObj: {
-                width: '1em',
-                height: '1em',
+                width: '2em',
+                height: '2em',
               },
-              styleObj: {}
+              styleObj: $svgStyle
             }
           },
           {
             TypeClass: NumericalSvg,
             propObj: {
               attrObj: {
-                width: '1em',
-                height: '1em',
+                width: '2em',
+                height: '2em',
               },
-              styleObj: {}
+              styleObj: $svgStyle
             }
           },
           {
             TypeClass: RadioSvg,
             propObj: {
               attrObj: {
-                width: '1em',
-                height: '1em',
+                width: '2em',
+                height: '2em',
               },
-              styleObj: {}
+              styleObj: $svgStyle
             }
           },
           {
             TypeClass: SelectSvg,
             propObj: {
               attrObj: {
-                width: '1em',
-                height: '1em',
+                width: '2em',
+                height: '2em',
               },
-              styleObj: {}
+              styleObj: $svgStyle
             }
           },
           {
             TypeClass: SingleInputSvg,
             propObj: {
               attrObj: {
-                width: '1em',
-                height: '1em',
+                width: '2em',
+                height: '2em',
               },
-              styleObj: {}
+              styleObj: $svgStyle
             }
           },
           {
             TypeClass: TableSvg,
             propObj: {
               attrObj: {
-                width: '1em',
-                height: '1em',
+                width: '2em',
+                height: '2em',
               },
-              styleObj: {}
+              styleObj: $svgStyle
             }
           },
           {
             TypeClass: ThreeDotsSvg,
             propObj: {
               attrObj: {
-                width: '1em',
-                height: '1em',
+                width: '2em',
+                height: '2em',
               },
-              styleObj: {}
+              styleObj: $svgStyle
             }
           },
           {
             TypeClass: TimeSvg,
             propObj: {
               attrObj: {
-                width: '1em',
-                height: '1em',
+                width: '2em',
+                height: '2em',
               },
-              styleObj: {}
+              styleObj: $svgStyle
             }
           },
           {
             TypeClass: TriangleSvg,
             propObj: {
               attrObj: {
-                width: '1em',
-                height: '1em',
+                width: '2em',
+                height: '2em',
                 fill: '#000'
               },
-              styleObj: {}
+              styleObj: $svgStyle
             }
           },
         ]
