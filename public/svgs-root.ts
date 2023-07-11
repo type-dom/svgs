@@ -1,5 +1,5 @@
-import { Br, Division, IStyle, TypeRoot } from 'type-dom.ts';
-import { CommonSvgList } from "./common-svg-list";
+import { Br, TypeRoot } from 'type-dom.ts';
+import { CommonSvgList } from './common-svg-list';
 import { ElementPlusSvgList } from './element-plus-svg-list';
 export class SVGSRoot extends TypeRoot {
   className: 'SVGSRoot';
@@ -10,10 +10,6 @@ export class SVGSRoot extends TypeRoot {
     this.addStyleObj({
       padding: '30px'
     });
-    const $svgStyle: Partial<IStyle> = {
-      padding: '10px',
-      border: '1px solid #ddd'
-    };
     this.createItems(this, [
       {
         TypeClass: CommonSvgList,

@@ -1,4 +1,5 @@
 let fs = require('fs');
+const Parser = require('type-dom-parser');
 const SVG_PATH = './public/common';
 const INDEX_PATH = './src/common';
 const CLASS_PATH = './src/common';
@@ -31,6 +32,10 @@ function generateSvgClasses(files) {
       }
       const svgStr = data.toString();
       console.log('pathStr is ', svgStr);
+      const parser = new Parser({});
+      const svgDom = parser.parseFromString(svgStr);
+      console.log('svgDom is ', svgDom);
+      return;
       // 使用正则表达式提取path的值
       const pathRegex = /d="([^"]*)"/gi;
       const paths = svgStr.match(pathRegex);
@@ -105,7 +110,7 @@ import {`;
     const className = 'Td' + toHump(fileName)
       .replaceAll('+', 'Plus') + 'Svg';
     template += `
-  ${className},`
+  ${className},`;
   });
 
   template += `
@@ -157,7 +162,7 @@ fs.readdir(SVG_PATH, (err, files) => {
     return console.error(err);
   }
   console.log('files is ', files);
-  // generateSvgClasses(files);
+  generateSvgClasses(files);
   // getSvgIndex(files);
-  generateSvgCommonList(files);
+  // generateSvgCommonList(files);
 });
