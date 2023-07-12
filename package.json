@@ -1,8 +1,8 @@
 {
   "name": "type-dom-svgs",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "type dom svg components . ",
-  "main": "src/example-design-mode.ts",
+  "main": "src/index.ts",
   "scripts": {
     "serve": "webpack-dev-server --mode=development --config ./build/webpack.config.js",
     "build": "webpack --mode=production --config ./build/webpack.config.js",
