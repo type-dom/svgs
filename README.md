@@ -4,14 +4,14 @@
 
 ## 
 
-> 1、安装：yarn install type-dom-svgs
+> 1、安装：
 
 
 ## Usage
 
-### Install the framework
+### Install the lib
 
-Create a hello world page to app:
+npm install type-dom-svgs or yarn add type-dom-svgs
 
 ```ts
 // Typescript Webpack
