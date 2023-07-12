@@ -1,6 +1,7 @@
 import { Br, TypeRoot } from 'type-dom.ts';
 import { CommonSvgList } from './common-svg-list';
 import { ElementPlusSvgList } from './element-plus-svg-list';
+import { OtherSvgList } from './other-svg-list';
 export class SVGSRoot extends TypeRoot {
   className: 'SVGSRoot';
   constructor(editorEl: HTMLElement) {
@@ -16,6 +17,9 @@ export class SVGSRoot extends TypeRoot {
       },
       {
         TypeClass: ElementPlusSvgList,
+      },
+      {
+        TypeClass: OtherSvgList,
       },
       {
         TypeClass: Br

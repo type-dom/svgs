@@ -1,5 +1,4 @@
-import {SvgPath, TypeHtml, TypeSvgSvg} from "type-dom.ts";
-
+import { SvgPath, TypeHtml, TypeSvgSvg } from 'type-dom.ts';
 export class BarcodeSvg extends TypeSvgSvg {
   className: 'BarcodeSvg';
   childNodes: [SvgPath];
