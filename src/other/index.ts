@@ -24,7 +24,6 @@ export { ShapeSvg } from './shape/shape';
 export { SignStampSvg } from './signstamp/signstamp';
 export { SvgSvg } from './svg/svg';
 export { SwitchSvg } from './switch/switch';
-export { TableSvg } from './table/table';
 export { TemplatesSvg } from './templates/templates';
 export { TextSvg } from './text/text';
 export { ThumbnailSvg } from './thumbnail/thumbnail';

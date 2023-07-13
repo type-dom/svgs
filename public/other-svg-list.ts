@@ -24,8 +24,13 @@ import {
   ShapeSvg,
   SignStampSvg,
   SwitchSvg,
-  TableSvg,
-  TemplatesSvg, TextSvg, ThumbnailSvg, TreeSvg, TriangleSvg, UnfoldSvg, VertlineSvg
+  TemplatesSvg,
+  TextSvg,
+  ThumbnailSvg,
+  TreeSvg,
+  TriangleSvg,
+  UnfoldSvg,
+  VertlineSvg
 } from '../src';
 import { FolderSvg } from '../src/other/folder/folder';
 import { LogoSvg } from '../src/other/logo/logo';
@@ -325,17 +330,6 @@ export class OtherSvgList extends TypeDiv {
             width: '2em',
             height: '2em',
             name: 'chart'
-          },
-          styleObj: $svgStyle
-        }
-      },
-      {
-        TypeClass: TableSvg,
-        propObj: {
-          attrObj: {
-            width: '2em',
-            height: '2em',
-            name: 'check'
           },
           styleObj: $svgStyle
         }
