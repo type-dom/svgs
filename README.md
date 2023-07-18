@@ -1,17 +1,15 @@
-## 项目说明
+## TypeDomSvgs
 
 > 这是一个基于自建前端框架TypeDom创建的svg组件库。
-
-## 
-
-> 1、安装：
-
 
 ## Usage
 
 ### Install the lib
 
-npm install type-dom-svgs or yarn add type-dom-svgs
+```bash
+# or pnpm or yarn
+npm install type-dom-svgs
+```
 
 ```ts
 // Typescript Webpack
