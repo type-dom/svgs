@@ -5,6 +5,9 @@ export class TdFormQRCodeSvg extends TypeSvgSvg {
   constructor(public parent: TypeHtml) {
     super();
     this.className = 'TdFormQRCodeSvg';
+    this.addAttrObj({
+      viewBox: '50 50 974 974',
+    });
     this.resetSize(24, 24);
     this.childNodes = [];
   }

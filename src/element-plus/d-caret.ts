@@ -5,10 +5,15 @@ export class ElDCaretSvg extends TypeSvgSvg {
   constructor(public parent: TypeHtml) {
     super();
     this.className = 'ElDCaretSvg';
+    this.addAttrObj({
+      viewBox: '0 0 1024 1024',
+    });
     this.resetSize(24, 24);
     this.childNodes = [];
     const path0 = new SvgPath(this);
-    path0.setData('m512 128 288 320H224l288-320zM224 576h576L512 896 224 576z');
+    path0.setData(
+      'm512 128 288 320H224l288-320zM224 576h576L512 896 224 576z',
+    );
     this.childNodes.push(path0);
   }
 }

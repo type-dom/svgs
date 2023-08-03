@@ -5,10 +5,15 @@ export class ElHomeFilledSvg extends TypeSvgSvg {
   constructor(public parent: TypeHtml) {
     super();
     this.className = 'ElHomeFilledSvg';
+    this.addAttrObj({
+      viewBox: '0 0 1024 1024',
+    });
     this.resetSize(24, 24);
     this.childNodes = [];
     const path0 = new SvgPath(this);
-    path0.setData('M512 128 128 447.936V896h255.936V640H640v256h255.936V447.936z');
+    path0.setData(
+      'M512 128 128 447.936V896h255.936V640H640v256h255.936V447.936z',
+    );
     this.childNodes.push(path0);
   }
 }

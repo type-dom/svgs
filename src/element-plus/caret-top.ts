@@ -5,10 +5,15 @@ export class ElCaretTopSvg extends TypeSvgSvg {
   constructor(public parent: TypeHtml) {
     super();
     this.className = 'ElCaretTopSvg';
+    this.addAttrObj({
+      viewBox: '0 0 1024 1024',
+    });
     this.resetSize(24, 24);
     this.childNodes = [];
     const path0 = new SvgPath(this);
-    path0.setData('M512 320 192 704h639.936z');
+    path0.setData(
+      'M512 320 192 704h639.936z',
+    );
     this.childNodes.push(path0);
   }
 }

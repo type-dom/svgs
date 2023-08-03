@@ -5,6 +5,9 @@ export class TdStaticMLLabelSvg extends TypeSvgSvg {
   constructor(public parent: TypeHtml) {
     super();
     this.className = 'TdStaticMLLabelSvg';
+    this.addAttrObj({
+      viewBox: '0 0 1190 1024',
+    });
     this.resetSize(24, 24);
     this.childNodes = [];
   }

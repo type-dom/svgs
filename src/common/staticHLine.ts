@@ -5,6 +5,9 @@ export class TdStaticHLineSvg extends TypeSvgSvg {
   constructor(public parent: TypeHtml) {
     super();
     this.className = 'TdStaticHLineSvg';
+    this.addAttrObj({
+      viewBox: '0 0 1024 1024',
+    });
     this.resetSize(24, 24);
     this.childNodes = [];
   }

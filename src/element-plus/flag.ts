@@ -5,10 +5,15 @@ export class ElFlagSvg extends TypeSvgSvg {
   constructor(public parent: TypeHtml) {
     super();
     this.className = 'ElFlagSvg';
+    this.addAttrObj({
+      viewBox: '0 0 1024 1024',
+    });
     this.resetSize(24, 24);
     this.childNodes = [];
     const path0 = new SvgPath(this);
-    path0.setData('M288 128h608L736 384l160 256H288v320h-96V64h96v64z');
+    path0.setData(
+      'M288 128h608L736 384l160 256H288v320h-96V64h96v64z',
+    );
     this.childNodes.push(path0);
   }
 }
