@@ -1,5 +1,5 @@
-import { IStyle, TextNode, TypeDiv } from 'type-dom.ts';
-import { SVGSRoot } from "./svgs-root";
+import { IStyle, TypeDiv } from 'type-dom.ts';
+import { SVGSRoot } from './svgs-root';
 import {
   Td404Svg,
   TdAPlusSvg,
@@ -55,22 +55,29 @@ import {
   TdExportSvg,
   TdEyeOpenSvg,
   TdEyeSvg,
+  TdFileOpenSvg,
+  TdFileSvg,
   TdFillRestrictedListSvg,
   TdFindSvg,
   TdFlowSvg,
+  TdFoldSvg,
+  TdFolderSvg,
   TdFontColorSvg,
   TdForbidEditSvg,
   TdFormSvg,
+  TdFormatBrushNewSvg,
+  TdFormatBrushSvg,
   TdFormImageSvg,
   TdFormQRCodeSvg,
   TdFormTextSvg,
-  TdFormatBrushNewSvg,
-  TdFormatBrushSvg,
   TdFullscreenSvg,
   TdGuideSvg,
   TdHSvg,
   TdHistorySvg,
   TdHomepageSvg,
+  TdIconVerticalAlignBottoSvg,
+  TdIconVerticalAlignMiddlSvg,
+  TdIconVerticalAlignTopSvg,
   TdIconSvg,
   TdIdentifierSvg,
   TdImageSvg,
@@ -80,6 +87,7 @@ import {
   TdInsertColumnSvg,
   TdInsertRowSvg,
   TdInternationalSvg,
+  TdInventorySvg,
   TdItalic1Svg,
   TdItalicSvg,
   TdLanguageSvg,
@@ -87,19 +95,20 @@ import {
   TdLinkSvg,
   TdListSvg,
   TdLockSvg,
-  TdMPageSvg,
   TdMergeCellSvg,
   TdMessageSvg,
   TdMiddleLineSvg,
   TdMinusSvg,
   TdModuleSvg,
   TdMoneySvg,
+  TdMPageSvg,
   TdMultilineInputSvg,
   TdMultipleOptionsSvg,
   TdNestedSvg,
   TdNetworkSvg,
   TdNumericalInputSvg,
   TdNumericalSvg,
+  TdOutlineSvg,
   TdOverlineSvg,
   TdPageAddSvg,
   TdPageDeleteSvg,
@@ -123,14 +132,16 @@ import {
   TdRestrictedEditListSvg,
   TdRowHeightSvg,
   TdRowSpacingSvg,
-  TdSPageSvg,
+  TdSave2Svg,
   TdSaveSvg,
   TdSdTagSvg,
   TdSearchSvg,
   TdSelectSvg,
   TdSensitiveInfoSvg,
+  TdShapeSvg,
   TdShoppingCardSvg,
   TdShoppingSvg,
+  TdShrinkOutlinedSvg,
   TdSignSvg,
   TdSignatureSvg,
   TdSingleInputSvg,
@@ -139,6 +150,7 @@ import {
   TdSkillSvg,
   TdSortValueSvg,
   TdSortSvg,
+  TdSPageSvg,
   TdSplitCellSvg,
   TdStarSvg,
   TdStaticCatalogSvg,
@@ -155,6 +167,7 @@ import {
   TdStaticVLineSvg,
   TdStrikethroughSvg,
   TdSubmitSvg,
+  TdSvgSvg,
   TdTabSvg,
   TdTable1Svg,
   TdTable2Svg,
@@ -164,15 +177,21 @@ import {
   TdTdImageSvg,
   TdTdTextSvg,
   TdTdQRCodeSvg,
+  TdTemplatesSvg,
   TdTextIndentSvg,
   TdThemeSvg,
   TdThreeDotsSvg,
+  TdThumbnailPageSvg,
+  TdThumbnailSvg,
   TdTimeSvg,
   TdTransformSvg,
+  TdTreeShapeSvg,
   TdTreeTableSvg,
   TdTreeSvg,
   TdUnderlineSvg,
   TdUndoSvg,
+  TdUnfoldSvg,
+  TdUnfoldedOutlinedSvg,
   TdUserSvg,
   TdWatermarkSvg,
   TdWechatSvg,
@@ -788,6 +807,28 @@ export class CommonSvgList extends TypeDiv {
         }
       },
       {
+        TypeClass: TdFileOpenSvg,
+        propObj: {
+          attrObj: {
+            width: '2em',
+            height: '2em',
+            name: 'file-open'
+          },
+          styleObj: $svgStyle
+        }
+      },
+      {
+        TypeClass: TdFileSvg,
+        propObj: {
+          attrObj: {
+            width: '2em',
+            height: '2em',
+            name: 'file'
+          },
+          styleObj: $svgStyle
+        }
+      },
+      {
         TypeClass: TdFillRestrictedListSvg,
         propObj: {
           attrObj: {
@@ -816,6 +857,28 @@ export class CommonSvgList extends TypeDiv {
             width: '2em',
             height: '2em',
             name: 'flow'
+          },
+          styleObj: $svgStyle
+        }
+      },
+      {
+        TypeClass: TdFoldSvg,
+        propObj: {
+          attrObj: {
+            width: '2em',
+            height: '2em',
+            name: 'fold'
+          },
+          styleObj: $svgStyle
+        }
+      },
+      {
+        TypeClass: TdFolderSvg,
+        propObj: {
+          attrObj: {
+            width: '2em',
+            height: '2em',
+            name: 'folder'
           },
           styleObj: $svgStyle
         }
@@ -854,6 +917,28 @@ export class CommonSvgList extends TypeDiv {
         }
       },
       {
+        TypeClass: TdFormatBrushNewSvg,
+        propObj: {
+          attrObj: {
+            width: '2em',
+            height: '2em',
+            name: 'format-brush-new'
+          },
+          styleObj: $svgStyle
+        }
+      },
+      {
+        TypeClass: TdFormatBrushSvg,
+        propObj: {
+          attrObj: {
+            width: '2em',
+            height: '2em',
+            name: 'format-brush'
+          },
+          styleObj: $svgStyle
+        }
+      },
+      {
         TypeClass: TdFormImageSvg,
         propObj: {
           attrObj: {
@@ -882,28 +967,6 @@ export class CommonSvgList extends TypeDiv {
             width: '2em',
             height: '2em',
             name: 'formText'
-          },
-          styleObj: $svgStyle
-        }
-      },
-      {
-        TypeClass: TdFormatBrushNewSvg,
-        propObj: {
-          attrObj: {
-            width: '2em',
-            height: '2em',
-            name: 'format-brush-new'
-          },
-          styleObj: $svgStyle
-        }
-      },
-      {
-        TypeClass: TdFormatBrushSvg,
-        propObj: {
-          attrObj: {
-            width: '2em',
-            height: '2em',
-            name: 'format-brush'
           },
           styleObj: $svgStyle
         }
@@ -959,6 +1022,39 @@ export class CommonSvgList extends TypeDiv {
             width: '2em',
             height: '2em',
             name: 'homepage'
+          },
+          styleObj: $svgStyle
+        }
+      },
+      {
+        TypeClass: TdIconVerticalAlignBottoSvg,
+        propObj: {
+          attrObj: {
+            width: '2em',
+            height: '2em',
+            name: 'icon-vertical-align-botto'
+          },
+          styleObj: $svgStyle
+        }
+      },
+      {
+        TypeClass: TdIconVerticalAlignMiddlSvg,
+        propObj: {
+          attrObj: {
+            width: '2em',
+            height: '2em',
+            name: 'icon-vertical-align-middl'
+          },
+          styleObj: $svgStyle
+        }
+      },
+      {
+        TypeClass: TdIconVerticalAlignTopSvg,
+        propObj: {
+          attrObj: {
+            width: '2em',
+            height: '2em',
+            name: 'icon-vertical-align-top'
           },
           styleObj: $svgStyle
         }
@@ -1063,6 +1159,17 @@ export class CommonSvgList extends TypeDiv {
         }
       },
       {
+        TypeClass: TdInventorySvg,
+        propObj: {
+          attrObj: {
+            width: '2em',
+            height: '2em',
+            name: 'inventory'
+          },
+          styleObj: $svgStyle
+        }
+      },
+      {
         TypeClass: TdItalic1Svg,
         propObj: {
           attrObj: {
@@ -1140,17 +1247,6 @@ export class CommonSvgList extends TypeDiv {
         }
       },
       {
-        TypeClass: TdMPageSvg,
-        propObj: {
-          attrObj: {
-            width: '2em',
-            height: '2em',
-            name: 'mPage'
-          },
-          styleObj: $svgStyle
-        }
-      },
-      {
         TypeClass: TdMergeCellSvg,
         propObj: {
           attrObj: {
@@ -1217,6 +1313,17 @@ export class CommonSvgList extends TypeDiv {
         }
       },
       {
+        TypeClass: TdMPageSvg,
+        propObj: {
+          attrObj: {
+            width: '2em',
+            height: '2em',
+            name: 'mPage'
+          },
+          styleObj: $svgStyle
+        }
+      },
+      {
         TypeClass: TdMultilineInputSvg,
         propObj: {
           attrObj: {
@@ -1278,6 +1385,17 @@ export class CommonSvgList extends TypeDiv {
             width: '2em',
             height: '2em',
             name: 'numerical'
+          },
+          styleObj: $svgStyle
+        }
+      },
+      {
+        TypeClass: TdOutlineSvg,
+        propObj: {
+          attrObj: {
+            width: '2em',
+            height: '2em',
+            name: 'outline'
           },
           styleObj: $svgStyle
         }
@@ -1536,12 +1654,12 @@ export class CommonSvgList extends TypeDiv {
         }
       },
       {
-        TypeClass: TdSPageSvg,
+        TypeClass: TdSave2Svg,
         propObj: {
           attrObj: {
             width: '2em',
             height: '2em',
-            name: 'sPage'
+            name: 'save-2'
           },
           styleObj: $svgStyle
         }
@@ -1602,6 +1720,17 @@ export class CommonSvgList extends TypeDiv {
         }
       },
       {
+        TypeClass: TdShapeSvg,
+        propObj: {
+          attrObj: {
+            width: '2em',
+            height: '2em',
+            name: 'shape'
+          },
+          styleObj: $svgStyle
+        }
+      },
+      {
         TypeClass: TdShoppingCardSvg,
         propObj: {
           attrObj: {
@@ -1619,6 +1748,17 @@ export class CommonSvgList extends TypeDiv {
             width: '2em',
             height: '2em',
             name: 'shopping'
+          },
+          styleObj: $svgStyle
+        }
+      },
+      {
+        TypeClass: TdShrinkOutlinedSvg,
+        propObj: {
+          attrObj: {
+            width: '2em',
+            height: '2em',
+            name: 'Shrink-outlined'
           },
           styleObj: $svgStyle
         }
@@ -1707,6 +1847,17 @@ export class CommonSvgList extends TypeDiv {
             width: '2em',
             height: '2em',
             name: 'sort'
+          },
+          styleObj: $svgStyle
+        }
+      },
+      {
+        TypeClass: TdSPageSvg,
+        propObj: {
+          attrObj: {
+            width: '2em',
+            height: '2em',
+            name: 'sPage'
           },
           styleObj: $svgStyle
         }
@@ -1888,6 +2039,17 @@ export class CommonSvgList extends TypeDiv {
         }
       },
       {
+        TypeClass: TdSvgSvg,
+        propObj: {
+          attrObj: {
+            width: '2em',
+            height: '2em',
+            name: 'svg'
+          },
+          styleObj: $svgStyle
+        }
+      },
+      {
         TypeClass: TdTabSvg,
         propObj: {
           attrObj: {
@@ -1987,6 +2149,17 @@ export class CommonSvgList extends TypeDiv {
         }
       },
       {
+        TypeClass: TdTemplatesSvg,
+        propObj: {
+          attrObj: {
+            width: '2em',
+            height: '2em',
+            name: 'templates'
+          },
+          styleObj: $svgStyle
+        }
+      },
+      {
         TypeClass: TdTextIndentSvg,
         propObj: {
           attrObj: {
@@ -2020,6 +2193,28 @@ export class CommonSvgList extends TypeDiv {
         }
       },
       {
+        TypeClass: TdThumbnailPageSvg,
+        propObj: {
+          attrObj: {
+            width: '2em',
+            height: '2em',
+            name: 'thumbnail-page'
+          },
+          styleObj: $svgStyle
+        }
+      },
+      {
+        TypeClass: TdThumbnailSvg,
+        propObj: {
+          attrObj: {
+            width: '2em',
+            height: '2em',
+            name: 'thumbnail'
+          },
+          styleObj: $svgStyle
+        }
+      },
+      {
         TypeClass: TdTimeSvg,
         propObj: {
           attrObj: {
@@ -2037,6 +2232,17 @@ export class CommonSvgList extends TypeDiv {
             width: '2em',
             height: '2em',
             name: 'transform'
+          },
+          styleObj: $svgStyle
+        }
+      },
+      {
+        TypeClass: TdTreeShapeSvg,
+        propObj: {
+          attrObj: {
+            width: '2em',
+            height: '2em',
+            name: 'tree-shape'
           },
           styleObj: $svgStyle
         }
@@ -2081,6 +2287,28 @@ export class CommonSvgList extends TypeDiv {
             width: '2em',
             height: '2em',
             name: 'undo'
+          },
+          styleObj: $svgStyle
+        }
+      },
+      {
+        TypeClass: TdUnfoldSvg,
+        propObj: {
+          attrObj: {
+            width: '2em',
+            height: '2em',
+            name: 'unfold'
+          },
+          styleObj: $svgStyle
+        }
+      },
+      {
+        TypeClass: TdUnfoldedOutlinedSvg,
+        propObj: {
+          attrObj: {
+            width: '2em',
+            height: '2em',
+            name: 'Unfolded-outlined'
           },
           styleObj: $svgStyle
         }

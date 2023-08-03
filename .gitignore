@@ -8,3 +8,8 @@ dist
 lib
 js
 coverage-ts
+serve/node_modules
+serve/dist
+serve/.idea
+serve/yarn.lock
+serve/.DS_Store

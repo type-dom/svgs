@@ -13,10 +13,12 @@ import {
   FileSaveSvg,
   FileSvg,
   FoldSvg,
+  FolderSvg,
   HorilineSvg,
   ImageSvg,
   InventorySvg,
   LabelSvg,
+  LogoSvg,
   OutlineSvg,
   PictureSvg,
   QrcodeSvg,
@@ -32,8 +34,6 @@ import {
   UnfoldSvg,
   VertlineSvg
 } from '../src';
-import { FolderSvg } from '../src/other/folder/folder';
-import { LogoSvg } from '../src/other/logo/logo';
 export class OtherSvgList extends TypeDiv {
   className: 'OtherSvgList';
   constructor(public parent: SVGSRoot) {
