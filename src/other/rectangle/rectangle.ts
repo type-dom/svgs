@@ -1,4 +1,4 @@
-import {SvgPath, TypeHtml, TypeSvgSvg} from "type-dom.ts";
+import { SvgPath, TypeHtml, TypeSvgSvg } from 'type-dom.ts';
 export class RectangleSvg extends TypeSvgSvg {
   className: 'RectangleSvg';
   childNodes: [SvgPath];

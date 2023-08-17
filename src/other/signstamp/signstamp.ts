@@ -1,4 +1,4 @@
-import {SvgPath, TypeHtml, TypeSvgSvg} from "type-dom.ts";
+import { SvgPath, TypeHtml, TypeSvgSvg } from 'type-dom.ts';
 export class SignStampSvg extends TypeSvgSvg {
   className: 'SignStampSvg';
   childNodes: [SvgPath];
@@ -16,7 +16,7 @@ export class SignStampSvg extends TypeSvgSvg {
     // path.setFill('#333333');
     path.setAttrObj({
       fill: '#333333',
-    })
+    });
     this.childNodes = [path];
   }
 }
