@@ -7,7 +7,7 @@ export class SvgSvg extends TypeSvgSvg {
     this.className = 'SvgSvg';
     this.addAttrObj({
       viewBox: '0 0 1024 1024',
-      name: 'switch-svg',
+      name: 'svg-svg',
     });
     this.resetSize(24, 24);
     const path = new SvgPath(this);

@@ -7,7 +7,7 @@ export class ArrangementMiddleSvg extends TypeSvgSvg {
     this.className = 'ArrangementMiddleSvg';
     this.addAttrObj({
       viewBox: '0 0 1068 1024',
-      name: 'arrangement-bottom-svg',
+      name: 'arrangement-middle-svg',
     });
     this.resetSize(24, 24);
     const path = new SvgPath(this);

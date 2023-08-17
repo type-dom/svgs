@@ -5,7 +5,7 @@ export class PictureSvg extends TypeSvgSvg {
   constructor(public parent: TypeHtml) {
     super();
     this.className = 'PictureSvg';
-    this.setAttrObj({
+    this.addAttrObj({
       viewBox: '0 0 1229 1024',
       name: 'picture-svg',
     });

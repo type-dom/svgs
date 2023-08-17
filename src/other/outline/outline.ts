@@ -5,7 +5,7 @@ export class OutlineSvg extends TypeSvgSvg {
   constructor(public parent: TypeHtml) {
     super();
     this.className = 'OutlineSvg';
-    this.setAttrObj({
+    this.addAttrObj({
       viewBox: '0 0 1024 1024',
       name: 'outline-svg',
     });

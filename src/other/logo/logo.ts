@@ -6,12 +6,13 @@ export class LogoSvg extends TypeSvgSvg {
     super();
     this.className = 'LogoSvg';
     this.addAttrObj({
+      name: 'logo-svg',
       width: '212',
       height: '212',
       viewBox: '0 0 212 212',
     });
     const path = new SvgPath(this);
-    path.setAttrObj({
+    path.addAttrObj({
       fill: '#192d79',
       opacity: '1.0',
     });
