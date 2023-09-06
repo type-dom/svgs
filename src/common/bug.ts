@@ -5,6 +5,9 @@ export class TdBugSvg extends TypeSvgSvg {
   constructor(public parent: TypeHtml) {
     super();
     this.className = 'TdBugSvg';
+    this.addAttrObj({
+      viewBox: '0 0 128 128',
+    });
     this.resetSize(24, 24);
     this.childNodes = [];
     const path0 = new SvgPath(this);

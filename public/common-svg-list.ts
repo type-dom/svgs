@@ -48,7 +48,6 @@ import {
   TdEditSvg,
   TdEducationSvg,
   TdEmailSvg,
-  TdEvenOddSvg,
   TdExampleSvg,
   TdExcelSvg,
   TdExitFullscreenSvg,
@@ -105,7 +104,6 @@ import {
   TdMultilineInputSvg,
   TdMultipleOptionsSvg,
   TdNestedSvg,
-  TdNetworkSvg,
   TdNumericalInputSvg,
   TdNumericalSvg,
   TdOutlineSvg,
@@ -730,17 +728,6 @@ export class CommonSvgList extends TypeDiv {
         }
       },
       {
-        TypeClass: TdEvenOddSvg,
-        propObj: {
-          attrObj: {
-            width: '2em',
-            height: '2em',
-            name: 'even-odd'
-          },
-          styleObj: $svgStyle
-        }
-      },
-      {
         TypeClass: TdExampleSvg,
         propObj: {
           attrObj: {
@@ -1352,17 +1339,6 @@ export class CommonSvgList extends TypeDiv {
             width: '2em',
             height: '2em',
             name: 'nested'
-          },
-          styleObj: $svgStyle
-        }
-      },
-      {
-        TypeClass: TdNetworkSvg,
-        propObj: {
-          attrObj: {
-            width: '2em',
-            height: '2em',
-            name: 'network'
           },
           styleObj: $svgStyle
         }

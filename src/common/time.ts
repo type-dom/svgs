@@ -17,18 +17,8 @@ export class TdTimeSvg extends TypeSvgSvg {
     this.childNodes.push(path0);
     const path1 = new SvgPath(this);
     path1.setData(
-      '3187',
-    );
-    this.childNodes.push(path1);
-    const path2 = new SvgPath(this);
-    path2.setData(
       'M809.6 544l-278.4 0 0-281.6c0-12.8-9.6-22.4-22.4-22.4-12.8 0-22.4 9.6-22.4 22.4l0 307.2c0 12.8 9.6 22.4 22.4 22.4 0 0 3.2 0 3.2 0l297.6 0c12.8 0 22.4-9.6 22.4-22.4C832 553.6 822.4 544 809.6 544z',
     );
-    this.childNodes.push(path2);
-    const path3 = new SvgPath(this);
-    path3.setData(
-      '3188',
-    );
-    this.childNodes.push(path3);
+    this.childNodes.push(path1);
   }
 }

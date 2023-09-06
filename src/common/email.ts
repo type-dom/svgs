@@ -5,6 +5,9 @@ export class TdEmailSvg extends TypeSvgSvg {
   constructor(public parent: TypeHtml) {
     super();
     this.className = 'TdEmailSvg';
+    this.addAttrObj({
+      viewBox: '0 0 128 96',
+    });
     this.resetSize(24, 24);
     this.childNodes = [];
     const path0 = new SvgPath(this);

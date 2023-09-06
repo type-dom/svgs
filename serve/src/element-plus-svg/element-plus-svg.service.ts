@@ -1,6 +1,6 @@
 import { Injectable } from '@nestjs/common';
 import * as fs from 'fs';
-import { SimpleXMLParser } from 'type-node-parser';
+import { TypeNodeParser } from 'type-node-parser';
 import { toHump } from '../utils';
 const SVG_PATH = './src/element-plus-svg/svg-files';
 const INDEX_PATH = '../src/element-plus';
@@ -27,7 +27,7 @@ export class ElementPlusSvgService {
           const svgStr = data.toString();
           console.log('pathStr is ', svgStr);
           // const parser = new Parser({});
-          const parser = new SimpleXMLParser({});
+          const parser = new TypeNodeParser({});
           const svgDom = parser.parseFromString(svgStr);
           // console.log('svgDom is ', svgDom);
           // 使用正则表达式提取path的值

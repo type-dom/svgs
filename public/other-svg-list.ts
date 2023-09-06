@@ -1,4 +1,4 @@
-import { IStyle, SvgSvg, TypeDiv } from 'type-dom.ts';
+import { IStyle, TypeDiv } from 'type-dom.ts';
 import { SVGSRoot } from './svgs-root';
 import {
   ArrangementBottomSvg,
@@ -25,6 +25,7 @@ import {
   RectangleSvg,
   ShapeSvg,
   SignStampSvg,
+  SvgSvg,
   SwitchSvg,
   TemplatesSvg,
   TextSvg,
@@ -54,7 +55,7 @@ export class OtherSvgList extends TypeDiv {
           attrObj: {
             width: '2em',
             height: '2em',
-            name: '404'
+            name: 'arrangement-bottom'
           },
           styleObj: $svgStyle
         }
@@ -65,7 +66,7 @@ export class OtherSvgList extends TypeDiv {
           attrObj: {
             width: '2em',
             height: '2em',
-            name: 'A+'
+            name: 'arrangement-middle'
           },
           styleObj: $svgStyle
         }
@@ -76,7 +77,7 @@ export class OtherSvgList extends TypeDiv {
           attrObj: {
             width: '2em',
             height: '2em',
-            name: 'A-'
+            name: 'Arrangement-top'
           },
           styleObj: $svgStyle
         }
@@ -87,7 +88,7 @@ export class OtherSvgList extends TypeDiv {
           attrObj: {
             width: '2em',
             height: '2em',
-            name: 'adaptive-width'
+            name: 'barcode'
           },
           styleObj: $svgStyle
         }
@@ -98,7 +99,7 @@ export class OtherSvgList extends TypeDiv {
           attrObj: {
             width: '2em',
             height: '2em',
-            name: 'add-bookmark'
+            name: 'control-group'
           },
           styleObj: $svgStyle
         }
@@ -109,7 +110,7 @@ export class OtherSvgList extends TypeDiv {
           attrObj: {
             width: '2em',
             height: '2em',
-            name: 'add-comments'
+            name: 'currency'
           },
           styleObj: $svgStyle
         }
@@ -120,7 +121,7 @@ export class OtherSvgList extends TypeDiv {
           attrObj: {
             width: '2em',
             height: '2em',
-            name: 'add-restricted-edit'
+            name: 'ellipse'
           },
           styleObj: $svgStyle
         }
@@ -131,7 +132,7 @@ export class OtherSvgList extends TypeDiv {
           attrObj: {
             width: '2em',
             height: '2em',
-            name: 'add'
+            name: 'file'
           },
           styleObj: $svgStyle
         }
@@ -142,7 +143,7 @@ export class OtherSvgList extends TypeDiv {
           attrObj: {
             width: '2em',
             height: '2em',
-            name: 'align-bottom'
+            name: 'file-import'
           },
           styleObj: $svgStyle
         }
@@ -153,7 +154,7 @@ export class OtherSvgList extends TypeDiv {
           attrObj: {
             width: '2em',
             height: '2em',
-            name: 'align-center'
+            name: 'file-open'
           },
           styleObj: $svgStyle
         }
@@ -164,7 +165,7 @@ export class OtherSvgList extends TypeDiv {
           attrObj: {
             width: '2em',
             height: '2em',
-            name: 'align-justified'
+            name: 'file-save'
           },
           styleObj: $svgStyle
         }
@@ -175,7 +176,7 @@ export class OtherSvgList extends TypeDiv {
           attrObj: {
             width: '2em',
             height: '2em',
-            name: 'align-left'
+            name: 'fold'
           },
           styleObj: $svgStyle
         }
@@ -186,7 +187,7 @@ export class OtherSvgList extends TypeDiv {
           attrObj: {
             width: '2em',
             height: '2em',
-            name: 'align-middle'
+            name: 'folder'
           },
           styleObj: $svgStyle
         }
@@ -197,7 +198,7 @@ export class OtherSvgList extends TypeDiv {
           attrObj: {
             width: '2em',
             height: '2em',
-            name: 'align-right'
+            name: 'hori-line'
           },
           styleObj: $svgStyle
         }
@@ -208,7 +209,7 @@ export class OtherSvgList extends TypeDiv {
           attrObj: {
             width: '2em',
             height: '2em',
-            name: 'align-scatter'
+            name: 'image'
           },
           styleObj: $svgStyle
         }
@@ -219,7 +220,7 @@ export class OtherSvgList extends TypeDiv {
           attrObj: {
             width: '2em',
             height: '2em',
-            name: 'align-top'
+            name: 'inventory'
           },
           styleObj: $svgStyle
         }
@@ -230,7 +231,7 @@ export class OtherSvgList extends TypeDiv {
           attrObj: {
             width: '2em',
             height: '2em',
-            name: 'attachment'
+            name: 'label'
           },
           styleObj: $svgStyle
         }
@@ -241,7 +242,7 @@ export class OtherSvgList extends TypeDiv {
           attrObj: {
             width: '2em',
             height: '2em',
-            name: 'back'
+            name: 'outline'
           },
           styleObj: $svgStyle
         }
@@ -252,7 +253,7 @@ export class OtherSvgList extends TypeDiv {
           attrObj: {
             width: '2em',
             height: '2em',
-            name: 'background-color'
+            name: 'picture'
           },
           styleObj: $svgStyle
         }
@@ -263,7 +264,7 @@ export class OtherSvgList extends TypeDiv {
           attrObj: {
             width: '2em',
             height: '2em',
-            name: 'bold-T'
+            name: 'logo'
           },
           styleObj: $svgStyle
         }
@@ -274,7 +275,7 @@ export class OtherSvgList extends TypeDiv {
           attrObj: {
             width: '2em',
             height: '2em',
-            name: 'bold'
+            name: 'qrcode'
           },
           styleObj: $svgStyle
         }
@@ -285,7 +286,7 @@ export class OtherSvgList extends TypeDiv {
           attrObj: {
             width: '2em',
             height: '2em',
-            name: 'bookmark-list'
+            name: 'rectangel'
           },
           styleObj: $svgStyle
         }
@@ -296,7 +297,7 @@ export class OtherSvgList extends TypeDiv {
           attrObj: {
             width: '2em',
             height: '2em',
-            name: 'bookmark'
+            name: 'shape'
           },
           styleObj: $svgStyle
         }
@@ -307,7 +308,7 @@ export class OtherSvgList extends TypeDiv {
           attrObj: {
             width: '2em',
             height: '2em',
-            name: 'bug'
+            name: 'sign-stamp'
           },
           styleObj: $svgStyle
         }
@@ -318,7 +319,7 @@ export class OtherSvgList extends TypeDiv {
           attrObj: {
             width: '2em',
             height: '2em',
-            name: 'catalog'
+            name: 'svg'
           },
           styleObj: $svgStyle
         }
@@ -329,7 +330,7 @@ export class OtherSvgList extends TypeDiv {
           attrObj: {
             width: '2em',
             height: '2em',
-            name: 'chart'
+            name: 'switch'
           },
           styleObj: $svgStyle
         }
@@ -340,7 +341,7 @@ export class OtherSvgList extends TypeDiv {
           attrObj: {
             width: '2em',
             height: '2em',
-            name: 'checkbox'
+            name: 'template'
           },
           styleObj: $svgStyle
         }
@@ -351,7 +352,7 @@ export class OtherSvgList extends TypeDiv {
           attrObj: {
             width: '2em',
             height: '2em',
-            name: 'circle'
+            name: 'text'
           },
           styleObj: $svgStyle
         }
@@ -362,7 +363,7 @@ export class OtherSvgList extends TypeDiv {
           attrObj: {
             width: '2em',
             height: '2em',
-            name: 'clean'
+            name: 'thumbnail'
           },
           styleObj: $svgStyle
         }
@@ -373,7 +374,7 @@ export class OtherSvgList extends TypeDiv {
           attrObj: {
             width: '2em',
             height: '2em',
-            name: 'clipboard'
+            name: 'tree'
           },
           styleObj: $svgStyle
         }
@@ -384,7 +385,7 @@ export class OtherSvgList extends TypeDiv {
           attrObj: {
             width: '2em',
             height: '2em',
-            name: 'close-revision'
+            name: 'triangle'
           },
           styleObj: $svgStyle
         }
@@ -395,7 +396,7 @@ export class OtherSvgList extends TypeDiv {
           attrObj: {
             width: '2em',
             height: '2em',
-            name: 'close'
+            name: 'unfold'
           },
           styleObj: $svgStyle
         }
@@ -406,7 +407,7 @@ export class OtherSvgList extends TypeDiv {
           attrObj: {
             width: '2em',
             height: '2em',
-            name: 'component'
+            name: 'vertline'
           },
           styleObj: $svgStyle
         }

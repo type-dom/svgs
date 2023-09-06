@@ -5,6 +5,9 @@ export class TdWechatSvg extends TypeSvgSvg {
   constructor(public parent: TypeHtml) {
     super();
     this.className = 'TdWechatSvg';
+    this.addAttrObj({
+      viewBox: '0 0 128 110',
+    });
     this.resetSize(24, 24);
     this.childNodes = [];
     const path0 = new SvgPath(this);

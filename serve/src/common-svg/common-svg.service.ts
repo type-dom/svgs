@@ -1,6 +1,6 @@
 import { Injectable } from '@nestjs/common';
 import * as fs from 'fs';
-import { SimpleXMLParser } from 'type-node-parser';
+import { TypeNodeParser } from 'type-node-parser';
 import { toHump } from '../utils';
 const SVG_PATH = './src/common-svg/svg-files';
 const INDEX_PATH = '../src/common';
@@ -25,14 +25,20 @@ export class CommonSvgService {
             return console.error(err);
           }
           const svgStr = data.toString();
-          console.log('pathStr is ', svgStr);
+          console.log('svgStr is ', svgStr);
           // const parser = new Parser({});
-          const parser = new SimpleXMLParser({});
+          const parser = new TypeNodeParser({});
           const svgDom = parser.parseFromString(svgStr);
-          // console.log('svgDom is ', svgDom);
-          // 使用正则表达式提取path的值
-          const pathRegex = /d="([^"]*)"/gi;
-          const paths = svgStr.match(pathRegex);
+          console.log('svgDom is ', svgDom);
+          const paths = [];
+          svgDom?.children.forEach((child) => {
+            console.log('child is ', child);
+            console.log('path.attributes is ', child.attributes);
+            if (child.nodeName === 'path') {
+              paths.push(child);
+              console.log('child.attributes is ', child.attributes);
+            }
+          });
           // 输出匹配到的结果
           console.log('paths is ', paths);
           const fileName = file.replace('.svg', '');
@@ -49,14 +55,28 @@ export class ${className} extends TypeSvgSvg {
   constructor(public parent: TypeHtml) {
     super();
     this.className = '${className}';`;
-          svgDom.attributes.forEach((item) => {
-            if (item.name === 'viewBox') {
+          const viewBoxItem = svgDom.attributes.find(
+            (item) => item.name === 'viewBox',
+          );
+          if (viewBoxItem) {
+            template += `
+    this.addAttrObj({
+      viewBox: '${viewBoxItem.value}',
+    });`;
+          } else {
+            const width = svgDom.attributes.find(
+              (item) => item.name === 'width',
+            ).value;
+            const height = svgDom.attributes.find(
+              (item) => item.name === 'height',
+            ).value;
+            if (width && height) {
               template += `
     this.addAttrObj({
-      viewBox: '${item.value}',
+      viewBox: '0 0 ${width} ${height}',
     });`;
             }
-          });
+          }
           template += `
     this.resetSize(24, 24);
     this.childNodes = [];`;
@@ -64,12 +84,14 @@ export class ${className} extends TypeSvgSvg {
             paths.forEach((path, index) => {
               // const dom = parser.parseFromString(path);
               console.log('path is ', path);
-              const data = path.replace('d=', '').replaceAll('"', "'");
+              const data = path.attributes.find(
+                (item) => item.name === 'd',
+              ).value;
               console.log('data is ', data);
               template += `
     const path${index} = new SvgPath(this);
     path${index}.setData(
-      ${data},
+      '${data}',
     );
     this.childNodes.push(path${index});`;
             });
