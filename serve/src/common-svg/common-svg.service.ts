@@ -56,8 +56,8 @@ export class ${className} extends TypeSvgSvg {
     super();
     this.className = '${className}';
     this.addAttrObj({
-      name: '${fileName}',
-      title: '${fileName}'
+      name: '${className}',
+      title: '${className}'
     });`;
           const viewBoxItem = svgDom.attributes.find(
             (item) => item.name === 'viewBox',
