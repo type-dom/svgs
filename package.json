@@ -2,14 +2,12 @@
   "name": "type-dom-svgs",
   "version": "0.0.7",
   "description": "type dom svg components . ",
-  "main": "src/index.ts",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "scripts": {
     "serve": "webpack-dev-server --mode=development --config ./build/webpack.config.js",
-    "build": "webpack --mode=production --config ./build/webpack.config.js",
+    "build": "tsc",
     "lib": "webpack --mode=none --config ./build/webpack.lib.config.js",
-    "js": "tsc",
-    "svg-element-plus": "node trans-elelment.js",
-    "svg-common": "node transform-svg-common.js",
     "test": "jest",
     "lint": "eslint src",
     "lint-fix": "eslint 'src/**/*.{ts,js,tsx,jsx}' --fix -o eslint_log.log",
@@ -72,7 +70,7 @@
     "webpack-merge": "^5.9.0"
   },
   "dependencies": {
-    "type-dom.ts": "^0.1.26"
+    "type-dom.ts": "*"
   },
   "repository": {
     "type": "git",
@@ -101,5 +99,15 @@
     "showRelativePath": true,
     "historyFile": "typecoverage.json",
     "noDetailWhenFailed": true
+  },
+  "nx": {
+    "targets": {
+      "build": {
+        "outputs": [
+          "{projectRoot}/dist",
+          "{projectRoot}/public/dist"
+        ]
+      }
+    }
   }
 }
