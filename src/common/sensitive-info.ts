@@ -6,6 +6,10 @@ export class TdSensitiveInfoSvg extends TypeSvgSvg {
     super();
     this.className = 'TdSensitiveInfoSvg';
     this.addAttrObj({
+      name: 'sensitive-info',
+      title: 'sensitive-info'
+    });
+    this.addAttrObj({
       viewBox: '0 0 1088 1024',
     });
     this.resetSize(24, 24);

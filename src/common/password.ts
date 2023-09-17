@@ -6,6 +6,10 @@ export class TdPasswordSvg extends TypeSvgSvg {
     super();
     this.className = 'TdPasswordSvg';
     this.addAttrObj({
+      name: 'password',
+      title: 'password'
+    });
+    this.addAttrObj({
       viewBox: '0 0 128 128',
     });
     this.resetSize(24, 24);

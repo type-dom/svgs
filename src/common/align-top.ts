@@ -6,6 +6,10 @@ export class TdAlignTopSvg extends TypeSvgSvg {
     super();
     this.className = 'TdAlignTopSvg';
     this.addAttrObj({
+      name: 'align-top',
+      title: 'align-top'
+    });
+    this.addAttrObj({
       viewBox: '0 0 1024 1024',
     });
     this.resetSize(24, 24);

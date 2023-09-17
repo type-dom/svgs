@@ -6,6 +6,10 @@ export class ElFilterSvg extends TypeSvgSvg {
     super();
     this.className = 'ElFilterSvg';
     this.addAttrObj({
+      name: 'filter',
+      title: 'filter'
+    });
+    this.addAttrObj({
       viewBox: '0 0 1024 1024',
     });
     this.resetSize(24, 24);

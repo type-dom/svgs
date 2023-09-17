@@ -54,7 +54,11 @@ export class ${className} extends TypeSvgSvg {
   childNodes: SvgPath[];
   constructor(public parent: TypeHtml) {
     super();
-    this.className = '${className}';`;
+    this.className = '${className}';
+    this.addAttrObj({
+      name: '${fileName}',
+      title: '${fileName}'
+    });`;
           const viewBoxItem = svgDom.attributes.find(
             (item) => item.name === 'viewBox',
           );
@@ -181,7 +185,6 @@ export class CommonSvgList extends TypeDiv {
           attrObj: {
             width: '2em',
             height: '2em',
-            name: '${fileName.toLocaleString()}'
           },
           styleObj: $svgStyle
         }

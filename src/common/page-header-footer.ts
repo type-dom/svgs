@@ -6,6 +6,10 @@ export class TdPageHeaderFooterSvg extends TypeSvgSvg {
     super();
     this.className = 'TdPageHeaderFooterSvg';
     this.addAttrObj({
+      name: 'page-header-footer',
+      title: 'page-header-footer'
+    });
+    this.addAttrObj({
       viewBox: '0 0 1024 1024',
     });
     this.resetSize(24, 24);

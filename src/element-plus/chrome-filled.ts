@@ -6,6 +6,10 @@ export class ElChromeFilledSvg extends TypeSvgSvg {
     super();
     this.className = 'ElChromeFilledSvg';
     this.addAttrObj({
+      name: 'chrome-filled',
+      title: 'chrome-filled'
+    });
+    this.addAttrObj({
       viewBox: '0 0 1024 1024',
     });
     this.resetSize(24, 24);

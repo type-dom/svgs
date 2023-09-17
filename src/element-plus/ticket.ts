@@ -6,6 +6,10 @@ export class ElTicketSvg extends TypeSvgSvg {
     super();
     this.className = 'ElTicketSvg';
     this.addAttrObj({
+      name: 'ticket',
+      title: 'ticket'
+    });
+    this.addAttrObj({
       viewBox: '0 0 1024 1024',
     });
     this.resetSize(24, 24);

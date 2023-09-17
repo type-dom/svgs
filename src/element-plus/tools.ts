@@ -6,6 +6,10 @@ export class ElToolsSvg extends TypeSvgSvg {
     super();
     this.className = 'ElToolsSvg';
     this.addAttrObj({
+      name: 'tools',
+      title: 'tools'
+    });
+    this.addAttrObj({
       viewBox: '0 0 1024 1024',
     });
     this.resetSize(24, 24);

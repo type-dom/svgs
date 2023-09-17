@@ -6,6 +6,10 @@ export class ElGrapeSvg extends TypeSvgSvg {
     super();
     this.className = 'ElGrapeSvg';
     this.addAttrObj({
+      name: 'grape',
+      title: 'grape'
+    });
+    this.addAttrObj({
       viewBox: '0 0 1024 1024',
     });
     this.resetSize(24, 24);

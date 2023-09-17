@@ -6,6 +6,10 @@ export class TdFormatBrushNewSvg extends TypeSvgSvg {
     super();
     this.className = 'TdFormatBrushNewSvg';
     this.addAttrObj({
+      name: 'format-brush-new',
+      title: 'format-brush-new'
+    });
+    this.addAttrObj({
       viewBox: '0 0 1024 1024',
     });
     this.resetSize(24, 24);

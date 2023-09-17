@@ -6,6 +6,10 @@ export class TdItalic1Svg extends TypeSvgSvg {
     super();
     this.className = 'TdItalic1Svg';
     this.addAttrObj({
+      name: 'italic-1',
+      title: 'italic-1'
+    });
+    this.addAttrObj({
       viewBox: '0 0 1024 1024',
     });
     this.resetSize(24, 24);

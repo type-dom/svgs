@@ -6,6 +6,10 @@ export class TdNumericalInputSvg extends TypeSvgSvg {
     super();
     this.className = 'TdNumericalInputSvg';
     this.addAttrObj({
+      name: 'numerical-input',
+      title: 'numerical-input'
+    });
+    this.addAttrObj({
       viewBox: '0 0 1494 1024',
     });
     this.resetSize(24, 24);

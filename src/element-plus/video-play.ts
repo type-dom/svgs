@@ -6,6 +6,10 @@ export class ElVideoPlaySvg extends TypeSvgSvg {
     super();
     this.className = 'ElVideoPlaySvg';
     this.addAttrObj({
+      name: 'video-play',
+      title: 'video-play'
+    });
+    this.addAttrObj({
       viewBox: '0 0 1024 1024',
     });
     this.resetSize(24, 24);

@@ -6,6 +6,10 @@ export class Td404Svg extends TypeSvgSvg {
     super();
     this.className = 'Td404Svg';
     this.addAttrObj({
+      name: '404',
+      title: '404'
+    });
+    this.addAttrObj({
       viewBox: '0 0 128 128',
     });
     this.resetSize(24, 24);

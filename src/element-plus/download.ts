@@ -6,6 +6,10 @@ export class ElDownloadSvg extends TypeSvgSvg {
     super();
     this.className = 'ElDownloadSvg';
     this.addAttrObj({
+      name: 'download',
+      title: 'download'
+    });
+    this.addAttrObj({
       viewBox: '0 0 1024 1024',
     });
     this.resetSize(24, 24);

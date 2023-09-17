@@ -6,6 +6,10 @@ export class TdFillRestrictedListSvg extends TypeSvgSvg {
     super();
     this.className = 'TdFillRestrictedListSvg';
     this.addAttrObj({
+      name: 'fill-restricted-list',
+      title: 'fill-restricted-list'
+    });
+    this.addAttrObj({
       viewBox: '0 0 1024 1024',
     });
     this.resetSize(24, 24);

@@ -6,6 +6,10 @@ export class ElScissorSvg extends TypeSvgSvg {
     super();
     this.className = 'ElScissorSvg';
     this.addAttrObj({
+      name: 'scissor',
+      title: 'scissor'
+    });
+    this.addAttrObj({
       viewBox: '0 0 1024 1024',
     });
     this.resetSize(24, 24);

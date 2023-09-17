@@ -6,6 +6,10 @@ export class ElFinishedSvg extends TypeSvgSvg {
     super();
     this.className = 'ElFinishedSvg';
     this.addAttrObj({
+      name: 'finished',
+      title: 'finished'
+    });
+    this.addAttrObj({
       viewBox: '0 0 1024 1024',
     });
     this.resetSize(24, 24);

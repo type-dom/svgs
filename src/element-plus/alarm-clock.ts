@@ -6,6 +6,10 @@ export class ElAlarmClockSvg extends TypeSvgSvg {
     super();
     this.className = 'ElAlarmClockSvg';
     this.addAttrObj({
+      name: 'alarm-clock',
+      title: 'alarm-clock'
+    });
+    this.addAttrObj({
       viewBox: '0 0 1024 1024',
     });
     this.resetSize(24, 24);

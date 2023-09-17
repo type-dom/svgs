@@ -6,6 +6,10 @@ export class ElNotebookSvg extends TypeSvgSvg {
     super();
     this.className = 'ElNotebookSvg';
     this.addAttrObj({
+      name: 'notebook',
+      title: 'notebook'
+    });
+    this.addAttrObj({
       viewBox: '0 0 1024 1024',
     });
     this.resetSize(24, 24);

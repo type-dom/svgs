@@ -6,6 +6,10 @@ export class ElPieChartSvg extends TypeSvgSvg {
     super();
     this.className = 'ElPieChartSvg';
     this.addAttrObj({
+      name: 'pie-chart',
+      title: 'pie-chart'
+    });
+    this.addAttrObj({
       viewBox: '0 0 1024 1024',
     });
     this.resetSize(24, 24);

@@ -6,6 +6,10 @@ export class TdShrinkOutlinedSvg extends TypeSvgSvg {
     super();
     this.className = 'TdShrinkOutlinedSvg';
     this.addAttrObj({
+      name: 'Shrink-outlined',
+      title: 'Shrink-outlined'
+    });
+    this.addAttrObj({
       viewBox: '0 0 1024 1024',
     });
     this.resetSize(24, 24);

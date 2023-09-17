@@ -6,6 +6,10 @@ export class ElZoomInSvg extends TypeSvgSvg {
     super();
     this.className = 'ElZoomInSvg';
     this.addAttrObj({
+      name: 'zoom-in',
+      title: 'zoom-in'
+    });
+    this.addAttrObj({
       viewBox: '0 0 1024 1024',
     });
     this.resetSize(24, 24);

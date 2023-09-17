@@ -6,6 +6,10 @@ export class TdDragSvg extends TypeSvgSvg {
     super();
     this.className = 'TdDragSvg';
     this.addAttrObj({
+      name: 'drag',
+      title: 'drag'
+    });
+    this.addAttrObj({
       viewBox: '0 0 128 128',
     });
     this.resetSize(24, 24);

@@ -6,6 +6,10 @@ export class ElOperationSvg extends TypeSvgSvg {
     super();
     this.className = 'ElOperationSvg';
     this.addAttrObj({
+      name: 'operation',
+      title: 'operation'
+    });
+    this.addAttrObj({
       viewBox: '0 0 1024 1024',
     });
     this.resetSize(24, 24);

@@ -6,6 +6,10 @@ export class TdAdaptiveWidthSvg extends TypeSvgSvg {
     super();
     this.className = 'TdAdaptiveWidthSvg';
     this.addAttrObj({
+      name: 'adaptive-width',
+      title: 'adaptive-width'
+    });
+    this.addAttrObj({
       viewBox: '0 0 1024 1024',
     });
     this.resetSize(24, 24);

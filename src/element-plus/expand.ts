@@ -6,6 +6,10 @@ export class ElExpandSvg extends TypeSvgSvg {
     super();
     this.className = 'ElExpandSvg';
     this.addAttrObj({
+      name: 'expand',
+      title: 'expand'
+    });
+    this.addAttrObj({
       viewBox: '0 0 1024 1024',
     });
     this.resetSize(24, 24);

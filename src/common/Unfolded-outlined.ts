@@ -6,6 +6,10 @@ export class TdUnfoldedOutlinedSvg extends TypeSvgSvg {
     super();
     this.className = 'TdUnfoldedOutlinedSvg';
     this.addAttrObj({
+      name: 'Unfolded-outlined',
+      title: 'Unfolded-outlined'
+    });
+    this.addAttrObj({
       viewBox: '0 0 1024 1024',
     });
     this.resetSize(24, 24);

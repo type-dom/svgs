@@ -6,6 +6,10 @@ export class TdAlignCenterSvg extends TypeSvgSvg {
     super();
     this.className = 'TdAlignCenterSvg';
     this.addAttrObj({
+      name: 'align-center',
+      title: 'align-center'
+    });
+    this.addAttrObj({
       viewBox: '0 0 1462 1024',
     });
     this.resetSize(24, 24);

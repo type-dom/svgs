@@ -6,6 +6,10 @@ export class TdMoneySvg extends TypeSvgSvg {
     super();
     this.className = 'TdMoneySvg';
     this.addAttrObj({
+      name: 'money',
+      title: 'money'
+    });
+    this.addAttrObj({
       viewBox: '0 0 128 128',
     });
     this.resetSize(24, 24);

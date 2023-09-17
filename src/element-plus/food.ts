@@ -6,6 +6,10 @@ export class ElFoodSvg extends TypeSvgSvg {
     super();
     this.className = 'ElFoodSvg';
     this.addAttrObj({
+      name: 'food',
+      title: 'food'
+    });
+    this.addAttrObj({
       viewBox: '0 0 1024 1024',
     });
     this.resetSize(24, 24);

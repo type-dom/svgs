@@ -6,6 +6,10 @@ export class ElPictureFilledSvg extends TypeSvgSvg {
     super();
     this.className = 'ElPictureFilledSvg';
     this.addAttrObj({
+      name: 'picture-filled',
+      title: 'picture-filled'
+    });
+    this.addAttrObj({
       viewBox: '0 0 1024 1024',
     });
     this.resetSize(24, 24);

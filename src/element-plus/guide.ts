@@ -6,6 +6,10 @@ export class ElGuideSvg extends TypeSvgSvg {
     super();
     this.className = 'ElGuideSvg';
     this.addAttrObj({
+      name: 'guide',
+      title: 'guide'
+    });
+    this.addAttrObj({
       viewBox: '0 0 1024 1024',
     });
     this.resetSize(24, 24);

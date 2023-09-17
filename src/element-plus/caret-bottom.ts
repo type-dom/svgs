@@ -6,6 +6,10 @@ export class ElCaretBottomSvg extends TypeSvgSvg {
     super();
     this.className = 'ElCaretBottomSvg';
     this.addAttrObj({
+      name: 'caret-bottom',
+      title: 'caret-bottom'
+    });
+    this.addAttrObj({
       viewBox: '0 0 1024 1024',
     });
     this.resetSize(24, 24);

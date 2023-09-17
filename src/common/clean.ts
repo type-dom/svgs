@@ -6,6 +6,10 @@ export class TdCleanSvg extends TypeSvgSvg {
     super();
     this.className = 'TdCleanSvg';
     this.addAttrObj({
+      name: 'clean',
+      title: 'clean'
+    });
+    this.addAttrObj({
       viewBox: '0 0 1084 1024',
     });
     this.resetSize(24, 24);

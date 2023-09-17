@@ -6,6 +6,10 @@ export class ElGoldMedalSvg extends TypeSvgSvg {
     super();
     this.className = 'ElGoldMedalSvg';
     this.addAttrObj({
+      name: 'gold-medal',
+      title: 'gold-medal'
+    });
+    this.addAttrObj({
       viewBox: '0 0 1024 1024',
     });
     this.resetSize(24, 24);

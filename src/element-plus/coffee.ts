@@ -6,6 +6,10 @@ export class ElCoffeeSvg extends TypeSvgSvg {
     super();
     this.className = 'ElCoffeeSvg';
     this.addAttrObj({
+      name: 'coffee',
+      title: 'coffee'
+    });
+    this.addAttrObj({
       viewBox: '0 0 1024 1024',
     });
     this.resetSize(24, 24);

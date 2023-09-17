@@ -6,6 +6,10 @@ export class ElPictureRoundedSvg extends TypeSvgSvg {
     super();
     this.className = 'ElPictureRoundedSvg';
     this.addAttrObj({
+      name: 'picture-rounded',
+      title: 'picture-rounded'
+    });
+    this.addAttrObj({
       viewBox: '0 0 1024 1024',
     });
     this.resetSize(24, 24);

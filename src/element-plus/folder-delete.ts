@@ -6,6 +6,10 @@ export class ElFolderDeleteSvg extends TypeSvgSvg {
     super();
     this.className = 'ElFolderDeleteSvg';
     this.addAttrObj({
+      name: 'folder-delete',
+      title: 'folder-delete'
+    });
+    this.addAttrObj({
       viewBox: '0 0 1024 1024',
     });
     this.resetSize(24, 24);

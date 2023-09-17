@@ -6,6 +6,10 @@ export class ElPointerSvg extends TypeSvgSvg {
     super();
     this.className = 'ElPointerSvg';
     this.addAttrObj({
+      name: 'pointer',
+      title: 'pointer'
+    });
+    this.addAttrObj({
       viewBox: '0 0 1024 1024',
     });
     this.resetSize(24, 24);

@@ -6,6 +6,10 @@ export class ElVideoCameraSvg extends TypeSvgSvg {
     super();
     this.className = 'ElVideoCameraSvg';
     this.addAttrObj({
+      name: 'video-camera',
+      title: 'video-camera'
+    });
+    this.addAttrObj({
       viewBox: '0 0 1024 1024',
     });
     this.resetSize(24, 24);

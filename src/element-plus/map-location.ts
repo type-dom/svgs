@@ -6,6 +6,10 @@ export class ElMapLocationSvg extends TypeSvgSvg {
     super();
     this.className = 'ElMapLocationSvg';
     this.addAttrObj({
+      name: 'map-location',
+      title: 'map-location'
+    });
+    this.addAttrObj({
       viewBox: '0 0 1024 1024',
     });
     this.resetSize(24, 24);

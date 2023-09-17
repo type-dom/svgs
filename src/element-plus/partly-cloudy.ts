@@ -6,6 +6,10 @@ export class ElPartlyCloudySvg extends TypeSvgSvg {
     super();
     this.className = 'ElPartlyCloudySvg';
     this.addAttrObj({
+      name: 'partly-cloudy',
+      title: 'partly-cloudy'
+    });
+    this.addAttrObj({
       viewBox: '0 0 1024 1024',
     });
     this.resetSize(24, 24);

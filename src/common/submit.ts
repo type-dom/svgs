@@ -6,6 +6,10 @@ export class TdSubmitSvg extends TypeSvgSvg {
     super();
     this.className = 'TdSubmitSvg';
     this.addAttrObj({
+      name: 'submit',
+      title: 'submit'
+    });
+    this.addAttrObj({
       viewBox: '0 0 1024 1024',
     });
     this.resetSize(24, 24);

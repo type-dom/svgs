@@ -6,6 +6,10 @@ export class TdClipboardSvg extends TypeSvgSvg {
     super();
     this.className = 'TdClipboardSvg';
     this.addAttrObj({
+      name: 'clipboard',
+      title: 'clipboard'
+    });
+    this.addAttrObj({
       viewBox: '0 0 128 128',
     });
     this.resetSize(24, 24);

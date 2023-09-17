@@ -6,6 +6,10 @@ export class TdCheckSvg extends TypeSvgSvg {
     super();
     this.className = 'TdCheckSvg';
     this.addAttrObj({
+      name: 'check',
+      title: 'check'
+    });
+    this.addAttrObj({
       viewBox: '0 0 1038 1024',
     });
     this.resetSize(24, 24);

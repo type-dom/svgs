@@ -6,6 +6,10 @@ export class TdInventorySvg extends TypeSvgSvg {
     super();
     this.className = 'TdInventorySvg';
     this.addAttrObj({
+      name: 'inventory',
+      title: 'inventory'
+    });
+    this.addAttrObj({
       viewBox: '0 0 1024 1024',
     });
     this.resetSize(24, 24);

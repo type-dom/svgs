@@ -6,6 +6,10 @@ export class TdNestedSvg extends TypeSvgSvg {
     super();
     this.className = 'TdNestedSvg';
     this.addAttrObj({
+      name: 'nested',
+      title: 'nested'
+    });
+    this.addAttrObj({
       viewBox: '0 0 128 128',
     });
     this.resetSize(24, 24);

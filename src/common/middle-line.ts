@@ -6,6 +6,10 @@ export class TdMiddleLineSvg extends TypeSvgSvg {
     super();
     this.className = 'TdMiddleLineSvg';
     this.addAttrObj({
+      name: 'middle-line',
+      title: 'middle-line'
+    });
+    this.addAttrObj({
       viewBox: '0 0 1024 1024',
     });
     this.resetSize(24, 24);

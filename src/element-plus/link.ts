@@ -6,6 +6,10 @@ export class ElLinkSvg extends TypeSvgSvg {
     super();
     this.className = 'ElLinkSvg';
     this.addAttrObj({
+      name: 'link',
+      title: 'link'
+    });
+    this.addAttrObj({
       viewBox: '0 0 1024 1024',
     });
     this.resetSize(24, 24);

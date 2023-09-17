@@ -6,6 +6,10 @@ export class TdCloseRevisionSvg extends TypeSvgSvg {
     super();
     this.className = 'TdCloseRevisionSvg';
     this.addAttrObj({
+      name: 'close-revision',
+      title: 'close-revision'
+    });
+    this.addAttrObj({
       viewBox: '0 0 1024 1024',
     });
     this.resetSize(24, 24);

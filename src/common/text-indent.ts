@@ -6,6 +6,10 @@ export class TdTextIndentSvg extends TypeSvgSvg {
     super();
     this.className = 'TdTextIndentSvg';
     this.addAttrObj({
+      name: 'text-indent',
+      title: 'text-indent'
+    });
+    this.addAttrObj({
       viewBox: '0 0 1097 1024',
     });
     this.resetSize(24, 24);

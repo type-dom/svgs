@@ -6,6 +6,10 @@ export class TdAlignRightSvg extends TypeSvgSvg {
     super();
     this.className = 'TdAlignRightSvg';
     this.addAttrObj({
+      name: 'align-right',
+      title: 'align-right'
+    });
+    this.addAttrObj({
       viewBox: '0 0 1024 1024',
     });
     this.resetSize(24, 24);

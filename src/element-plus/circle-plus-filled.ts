@@ -6,6 +6,10 @@ export class ElCirclePlusFilledSvg extends TypeSvgSvg {
     super();
     this.className = 'ElCirclePlusFilledSvg';
     this.addAttrObj({
+      name: 'circle-plus-filled',
+      title: 'circle-plus-filled'
+    });
+    this.addAttrObj({
       viewBox: '0 0 1024 1024',
     });
     this.resetSize(24, 24);

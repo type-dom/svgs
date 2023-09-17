@@ -6,6 +6,10 @@ export class ElDocumentAddSvg extends TypeSvgSvg {
     super();
     this.className = 'ElDocumentAddSvg';
     this.addAttrObj({
+      name: 'document-add',
+      title: 'document-add'
+    });
+    this.addAttrObj({
       viewBox: '0 0 1024 1024',
     });
     this.resetSize(24, 24);

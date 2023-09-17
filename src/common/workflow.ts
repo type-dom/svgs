@@ -6,6 +6,10 @@ export class TdWorkflowSvg extends TypeSvgSvg {
     super();
     this.className = 'TdWorkflowSvg';
     this.addAttrObj({
+      name: 'workflow',
+      title: 'workflow'
+    });
+    this.addAttrObj({
       viewBox: '0 0 1024 1024',
     });
     this.resetSize(24, 24);

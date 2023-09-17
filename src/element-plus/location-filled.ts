@@ -6,6 +6,10 @@ export class ElLocationFilledSvg extends TypeSvgSvg {
     super();
     this.className = 'ElLocationFilledSvg';
     this.addAttrObj({
+      name: 'location-filled',
+      title: 'location-filled'
+    });
+    this.addAttrObj({
       viewBox: '0 0 1024 1024',
     });
     this.resetSize(24, 24);

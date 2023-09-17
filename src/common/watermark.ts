@@ -6,6 +6,10 @@ export class TdWatermarkSvg extends TypeSvgSvg {
     super();
     this.className = 'TdWatermarkSvg';
     this.addAttrObj({
+      name: 'watermark',
+      title: 'watermark'
+    });
+    this.addAttrObj({
       viewBox: '0 0 1084 1024',
     });
     this.resetSize(24, 24);

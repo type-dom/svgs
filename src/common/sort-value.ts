@@ -6,6 +6,10 @@ export class TdSortValueSvg extends TypeSvgSvg {
     super();
     this.className = 'TdSortValueSvg';
     this.addAttrObj({
+      name: 'sort-value',
+      title: 'sort-value'
+    });
+    this.addAttrObj({
       viewBox: '0 0 1024 1024',
     });
     this.resetSize(24, 24);

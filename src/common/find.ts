@@ -6,6 +6,10 @@ export class TdFindSvg extends TypeSvgSvg {
     super();
     this.className = 'TdFindSvg';
     this.addAttrObj({
+      name: 'find',
+      title: 'find'
+    });
+    this.addAttrObj({
       viewBox: '0 0 1165 1024',
     });
     this.resetSize(24, 24);

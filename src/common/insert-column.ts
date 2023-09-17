@@ -6,6 +6,10 @@ export class TdInsertColumnSvg extends TypeSvgSvg {
     super();
     this.className = 'TdInsertColumnSvg';
     this.addAttrObj({
+      name: 'insert-column',
+      title: 'insert-column'
+    });
+    this.addAttrObj({
       viewBox: '0 0 1024 1024',
     });
     this.resetSize(24, 24);

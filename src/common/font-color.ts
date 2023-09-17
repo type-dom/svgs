@@ -6,6 +6,10 @@ export class TdFontColorSvg extends TypeSvgSvg {
     super();
     this.className = 'TdFontColorSvg';
     this.addAttrObj({
+      name: 'font-color',
+      title: 'font-color'
+    });
+    this.addAttrObj({
       viewBox: '0 0 1024 1024',
     });
     this.resetSize(24, 24);

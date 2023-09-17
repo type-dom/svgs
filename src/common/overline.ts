@@ -6,6 +6,10 @@ export class TdOverlineSvg extends TypeSvgSvg {
     super();
     this.className = 'TdOverlineSvg';
     this.addAttrObj({
+      name: 'overline',
+      title: 'overline'
+    });
+    this.addAttrObj({
       viewBox: '0 0 1024 1024',
     });
     this.resetSize(24, 24);

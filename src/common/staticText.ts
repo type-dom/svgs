@@ -6,6 +6,10 @@ export class TdStaticTextSvg extends TypeSvgSvg {
     super();
     this.className = 'TdStaticTextSvg';
     this.addAttrObj({
+      name: 'staticText',
+      title: 'staticText'
+    });
+    this.addAttrObj({
       viewBox: '0 0 1190 1024',
     });
     this.resetSize(24, 24);

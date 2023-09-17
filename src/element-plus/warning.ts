@@ -6,6 +6,10 @@ export class ElWarningSvg extends TypeSvgSvg {
     super();
     this.className = 'ElWarningSvg';
     this.addAttrObj({
+      name: 'warning',
+      title: 'warning'
+    });
+    this.addAttrObj({
       viewBox: '0 0 1024 1024',
     });
     this.resetSize(24, 24);

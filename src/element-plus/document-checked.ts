@@ -6,6 +6,10 @@ export class ElDocumentCheckedSvg extends TypeSvgSvg {
     super();
     this.className = 'ElDocumentCheckedSvg';
     this.addAttrObj({
+      name: 'document-checked',
+      title: 'document-checked'
+    });
+    this.addAttrObj({
       viewBox: '0 0 1024 1024',
     });
     this.resetSize(24, 24);

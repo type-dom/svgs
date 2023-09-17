@@ -6,6 +6,10 @@ export class TdFormTextSvg extends TypeSvgSvg {
     super();
     this.className = 'TdFormTextSvg';
     this.addAttrObj({
+      name: 'formText',
+      title: 'formText'
+    });
+    this.addAttrObj({
       viewBox: '0 0 1024 1024',
     });
     this.resetSize(24, 24);

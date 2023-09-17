@@ -6,6 +6,10 @@ export class TdSkillSvg extends TypeSvgSvg {
     super();
     this.className = 'TdSkillSvg';
     this.addAttrObj({
+      name: 'skill',
+      title: 'skill'
+    });
+    this.addAttrObj({
       viewBox: '0 0 128 128',
     });
     this.resetSize(24, 24);

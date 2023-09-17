@@ -6,6 +6,10 @@ export class ElMenuSvg extends TypeSvgSvg {
     super();
     this.className = 'ElMenuSvg';
     this.addAttrObj({
+      name: 'menu',
+      title: 'menu'
+    });
+    this.addAttrObj({
       viewBox: '0 0 1024 1024',
     });
     this.resetSize(24, 24);

@@ -6,6 +6,10 @@ export class ElSwitchButtonSvg extends TypeSvgSvg {
     super();
     this.className = 'ElSwitchButtonSvg';
     this.addAttrObj({
+      name: 'switch-button',
+      title: 'switch-button'
+    });
+    this.addAttrObj({
       viewBox: '0 0 1024 1024',
     });
     this.resetSize(24, 24);

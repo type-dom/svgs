@@ -6,6 +6,10 @@ export class TdPaginationSvg extends TypeSvgSvg {
     super();
     this.className = 'TdPaginationSvg';
     this.addAttrObj({
+      name: 'pagination',
+      title: 'pagination'
+    });
+    this.addAttrObj({
       viewBox: '0 0 1024 1024',
     });
     this.resetSize(24, 24);

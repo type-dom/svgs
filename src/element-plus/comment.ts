@@ -6,6 +6,10 @@ export class ElCommentSvg extends TypeSvgSvg {
     super();
     this.className = 'ElCommentSvg';
     this.addAttrObj({
+      name: 'comment',
+      title: 'comment'
+    });
+    this.addAttrObj({
       viewBox: '0 0 1024 1024',
     });
     this.resetSize(24, 24);

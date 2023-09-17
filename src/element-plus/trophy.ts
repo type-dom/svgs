@@ -6,6 +6,10 @@ export class ElTrophySvg extends TypeSvgSvg {
     super();
     this.className = 'ElTrophySvg';
     this.addAttrObj({
+      name: 'trophy',
+      title: 'trophy'
+    });
+    this.addAttrObj({
       viewBox: '0 0 1024 1024',
     });
     this.resetSize(24, 24);

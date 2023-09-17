@@ -6,6 +6,10 @@ export class ElBottomRightSvg extends TypeSvgSvg {
     super();
     this.className = 'ElBottomRightSvg';
     this.addAttrObj({
+      name: 'bottom-right',
+      title: 'bottom-right'
+    });
+    this.addAttrObj({
       viewBox: '0 0 1024 1024',
     });
     this.resetSize(24, 24);

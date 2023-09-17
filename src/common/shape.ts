@@ -6,6 +6,10 @@ export class TdShapeSvg extends TypeSvgSvg {
     super();
     this.className = 'TdShapeSvg';
     this.addAttrObj({
+      name: 'shape',
+      title: 'shape'
+    });
+    this.addAttrObj({
       viewBox: '0 0 1024 1024',
     });
     this.resetSize(24, 24);

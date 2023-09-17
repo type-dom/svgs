@@ -6,6 +6,10 @@ export class TdTransformSvg extends TypeSvgSvg {
     super();
     this.className = 'TdTransformSvg';
     this.addAttrObj({
+      name: 'transform',
+      title: 'transform'
+    });
+    this.addAttrObj({
       viewBox: '0 0 1024 1024',
     });
     this.resetSize(24, 24);

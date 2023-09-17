@@ -6,6 +6,10 @@ export class ElArrowRightBoldSvg extends TypeSvgSvg {
     super();
     this.className = 'ElArrowRightBoldSvg';
     this.addAttrObj({
+      name: 'arrow-right-bold',
+      title: 'arrow-right-bold'
+    });
+    this.addAttrObj({
       viewBox: '0 0 1024 1024',
     });
     this.resetSize(24, 24);

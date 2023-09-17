@@ -6,6 +6,10 @@ export class TdMultipleOptionsSvg extends TypeSvgSvg {
     super();
     this.className = 'TdMultipleOptionsSvg';
     this.addAttrObj({
+      name: 'multiple-options',
+      title: 'multiple-options'
+    });
+    this.addAttrObj({
       viewBox: '0 0 1026 1024',
     });
     this.resetSize(24, 24);

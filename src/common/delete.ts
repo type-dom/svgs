@@ -6,6 +6,10 @@ export class TdDeleteSvg extends TypeSvgSvg {
     super();
     this.className = 'TdDeleteSvg';
     this.addAttrObj({
+      name: 'delete',
+      title: 'delete'
+    });
+    this.addAttrObj({
       viewBox: '0 0 1024 1024',
     });
     this.resetSize(24, 24);

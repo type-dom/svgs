@@ -6,6 +6,10 @@ export class TdSelectSvg extends TypeSvgSvg {
     super();
     this.className = 'TdSelectSvg';
     this.addAttrObj({
+      name: 'select',
+      title: 'select'
+    });
+    this.addAttrObj({
       viewBox: '0 0 1817 1024',
     });
     this.resetSize(24, 24);

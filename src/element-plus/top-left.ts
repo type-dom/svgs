@@ -6,6 +6,10 @@ export class ElTopLeftSvg extends TypeSvgSvg {
     super();
     this.className = 'ElTopLeftSvg';
     this.addAttrObj({
+      name: 'top-left',
+      title: 'top-left'
+    });
+    this.addAttrObj({
       viewBox: '0 0 1024 1024',
     });
     this.resetSize(24, 24);

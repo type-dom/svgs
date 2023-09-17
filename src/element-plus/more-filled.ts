@@ -6,6 +6,10 @@ export class ElMoreFilledSvg extends TypeSvgSvg {
     super();
     this.className = 'ElMoreFilledSvg';
     this.addAttrObj({
+      name: 'more-filled',
+      title: 'more-filled'
+    });
+    this.addAttrObj({
       viewBox: '0 0 1024 1024',
     });
     this.resetSize(24, 24);

@@ -6,6 +6,10 @@ export class ElFootballSvg extends TypeSvgSvg {
     super();
     this.className = 'ElFootballSvg';
     this.addAttrObj({
+      name: 'football',
+      title: 'football'
+    });
+    this.addAttrObj({
       viewBox: '0 0 1024 1024',
     });
     this.resetSize(24, 24);

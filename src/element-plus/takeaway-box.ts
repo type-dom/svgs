@@ -6,6 +6,10 @@ export class ElTakeawayBoxSvg extends TypeSvgSvg {
     super();
     this.className = 'ElTakeawayBoxSvg';
     this.addAttrObj({
+      name: 'takeaway-box',
+      title: 'takeaway-box'
+    });
+    this.addAttrObj({
       viewBox: '0 0 1024 1024',
     });
     this.resetSize(24, 24);

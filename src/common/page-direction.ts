@@ -6,6 +6,10 @@ export class TdPageDirectionSvg extends TypeSvgSvg {
     super();
     this.className = 'TdPageDirectionSvg';
     this.addAttrObj({
+      name: 'page-direction',
+      title: 'page-direction'
+    });
+    this.addAttrObj({
       viewBox: '0 0 1080 1024',
     });
     this.resetSize(24, 24);

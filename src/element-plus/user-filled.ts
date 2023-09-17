@@ -6,6 +6,10 @@ export class ElUserFilledSvg extends TypeSvgSvg {
     super();
     this.className = 'ElUserFilledSvg';
     this.addAttrObj({
+      name: 'user-filled',
+      title: 'user-filled'
+    });
+    this.addAttrObj({
       viewBox: '0 0 1024 1024',
     });
     this.resetSize(24, 24);

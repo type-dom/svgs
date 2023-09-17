@@ -6,6 +6,10 @@ export class TdThreeDotsSvg extends TypeSvgSvg {
     super();
     this.className = 'TdThreeDotsSvg';
     this.addAttrObj({
+      name: 'three-dots',
+      title: 'three-dots'
+    });
+    this.addAttrObj({
       viewBox: '0 0 1024 1024',
     });
     this.resetSize(24, 24);

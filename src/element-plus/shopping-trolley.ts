@@ -6,6 +6,10 @@ export class ElShoppingTrolleySvg extends TypeSvgSvg {
     super();
     this.className = 'ElShoppingTrolleySvg';
     this.addAttrObj({
+      name: 'shopping-trolley',
+      title: 'shopping-trolley'
+    });
+    this.addAttrObj({
       viewBox: '0 0 1024 1024',
     });
     this.resetSize(24, 24);

@@ -6,6 +6,10 @@ export class ElShareSvg extends TypeSvgSvg {
     super();
     this.className = 'ElShareSvg';
     this.addAttrObj({
+      name: 'share',
+      title: 'share'
+    });
+    this.addAttrObj({
       viewBox: '0 0 1024 1024',
     });
     this.resetSize(24, 24);

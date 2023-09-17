@@ -6,6 +6,10 @@ export class ElChatSquareSvg extends TypeSvgSvg {
     super();
     this.className = 'ElChatSquareSvg';
     this.addAttrObj({
+      name: 'chat-square',
+      title: 'chat-square'
+    });
+    this.addAttrObj({
       viewBox: '0 0 1024 1024',
     });
     this.resetSize(24, 24);

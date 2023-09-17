@@ -6,6 +6,10 @@ export class ElCaretLeftSvg extends TypeSvgSvg {
     super();
     this.className = 'ElCaretLeftSvg';
     this.addAttrObj({
+      name: 'caret-left',
+      title: 'caret-left'
+    });
+    this.addAttrObj({
       viewBox: '0 0 1024 1024',
     });
     this.resetSize(24, 24);

@@ -6,6 +6,10 @@ export class TdSave2Svg extends TypeSvgSvg {
     super();
     this.className = 'TdSave2Svg';
     this.addAttrObj({
+      name: 'save-2',
+      title: 'save-2'
+    });
+    this.addAttrObj({
       viewBox: '0 0 1024 1024',
     });
     this.resetSize(24, 24);

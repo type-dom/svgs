@@ -6,6 +6,10 @@ export class TdMinusSvg extends TypeSvgSvg {
     super();
     this.className = 'TdMinusSvg';
     this.addAttrObj({
+      name: 'minus',
+      title: 'minus'
+    });
+    this.addAttrObj({
       viewBox: '0 0 16 16',
     });
     this.resetSize(24, 24);

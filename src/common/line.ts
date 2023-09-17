@@ -6,6 +6,10 @@ export class TdLineSvg extends TypeSvgSvg {
     super();
     this.className = 'TdLineSvg';
     this.addAttrObj({
+      name: 'line',
+      title: 'line'
+    });
+    this.addAttrObj({
       viewBox: '0 0 1227 1024',
     });
     this.resetSize(24, 24);

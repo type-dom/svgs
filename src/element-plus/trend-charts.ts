@@ -6,6 +6,10 @@ export class ElTrendChartsSvg extends TypeSvgSvg {
     super();
     this.className = 'ElTrendChartsSvg';
     this.addAttrObj({
+      name: 'trend-charts',
+      title: 'trend-charts'
+    });
+    this.addAttrObj({
       viewBox: '0 0 1024 1024',
     });
     this.resetSize(24, 24);

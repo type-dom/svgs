@@ -6,6 +6,10 @@ export class TdCreateFillRestrictionSvg extends TypeSvgSvg {
     super();
     this.className = 'TdCreateFillRestrictionSvg';
     this.addAttrObj({
+      name: 'create-fill-restriction',
+      title: 'create-fill-restriction'
+    });
+    this.addAttrObj({
       viewBox: '0 0 1024 1024',
     });
     this.resetSize(24, 24);

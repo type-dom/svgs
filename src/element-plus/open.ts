@@ -6,6 +6,10 @@ export class ElOpenSvg extends TypeSvgSvg {
     super();
     this.className = 'ElOpenSvg';
     this.addAttrObj({
+      name: 'open',
+      title: 'open'
+    });
+    this.addAttrObj({
       viewBox: '0 0 1024 1024',
     });
     this.resetSize(24, 24);

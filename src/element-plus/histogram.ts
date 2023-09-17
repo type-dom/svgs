@@ -6,6 +6,10 @@ export class ElHistogramSvg extends TypeSvgSvg {
     super();
     this.className = 'ElHistogramSvg';
     this.addAttrObj({
+      name: 'histogram',
+      title: 'histogram'
+    });
+    this.addAttrObj({
       viewBox: '0 0 1024 1024',
     });
     this.resetSize(24, 24);

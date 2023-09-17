@@ -6,6 +6,10 @@ export class TdFlowSvg extends TypeSvgSvg {
     super();
     this.className = 'TdFlowSvg';
     this.addAttrObj({
+      name: 'flow',
+      title: 'flow'
+    });
+    this.addAttrObj({
       viewBox: '0 0 1088 1024',
     });
     this.resetSize(24, 24);

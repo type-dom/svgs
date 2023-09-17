@@ -6,6 +6,10 @@ export class TdAddCommentsSvg extends TypeSvgSvg {
     super();
     this.className = 'TdAddCommentsSvg';
     this.addAttrObj({
+      name: 'add-comments',
+      title: 'add-comments'
+    });
+    this.addAttrObj({
       viewBox: '0 0 1024 1024',
     });
     this.resetSize(24, 24);

@@ -6,6 +6,10 @@ export class TdIncreaseLineHeightSvg extends TypeSvgSvg {
     super();
     this.className = 'TdIncreaseLineHeightSvg';
     this.addAttrObj({
+      name: 'increase-line-height',
+      title: 'increase-line-height'
+    });
+    this.addAttrObj({
       viewBox: '0 0 1024 1024',
     });
     this.resetSize(24, 24);

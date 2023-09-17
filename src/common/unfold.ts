@@ -6,6 +6,10 @@ export class TdUnfoldSvg extends TypeSvgSvg {
     super();
     this.className = 'TdUnfoldSvg';
     this.addAttrObj({
+      name: 'unfold',
+      title: 'unfold'
+    });
+    this.addAttrObj({
       viewBox: '0 0 1024 1024',
     });
     this.resetSize(24, 24);

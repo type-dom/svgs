@@ -6,6 +6,10 @@ export class ElDrizzlingSvg extends TypeSvgSvg {
     super();
     this.className = 'ElDrizzlingSvg';
     this.addAttrObj({
+      name: 'drizzling',
+      title: 'drizzling'
+    });
+    this.addAttrObj({
       viewBox: '0 0 1024 1024',
     });
     this.resetSize(24, 24);

@@ -6,6 +6,10 @@ export class TdEditSvg extends TypeSvgSvg {
     super();
     this.className = 'TdEditSvg';
     this.addAttrObj({
+      name: 'edit',
+      title: 'edit'
+    });
+    this.addAttrObj({
       viewBox: '0 0 128 128',
     });
     this.resetSize(24, 24);

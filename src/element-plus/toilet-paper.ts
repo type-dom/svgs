@@ -6,6 +6,10 @@ export class ElToiletPaperSvg extends TypeSvgSvg {
     super();
     this.className = 'ElToiletPaperSvg';
     this.addAttrObj({
+      name: 'toilet-paper',
+      title: 'toilet-paper'
+    });
+    this.addAttrObj({
       viewBox: '0 0 1024 1024',
     });
     this.resetSize(24, 24);

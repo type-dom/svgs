@@ -6,6 +6,10 @@ export class TdZipSvg extends TypeSvgSvg {
     super();
     this.className = 'TdZipSvg';
     this.addAttrObj({
+      name: 'zip',
+      title: 'zip'
+    });
+    this.addAttrObj({
       viewBox: '0 0 128 128',
     });
     this.resetSize(24, 24);

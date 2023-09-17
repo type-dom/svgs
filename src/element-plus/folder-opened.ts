@@ -6,6 +6,10 @@ export class ElFolderOpenedSvg extends TypeSvgSvg {
     super();
     this.className = 'ElFolderOpenedSvg';
     this.addAttrObj({
+      name: 'folder-opened',
+      title: 'folder-opened'
+    });
+    this.addAttrObj({
       viewBox: '0 0 1024 1024',
     });
     this.resetSize(24, 24);

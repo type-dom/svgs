@@ -6,6 +6,10 @@ export class ElWalletSvg extends TypeSvgSvg {
     super();
     this.className = 'ElWalletSvg';
     this.addAttrObj({
+      name: 'wallet',
+      title: 'wallet'
+    });
+    this.addAttrObj({
       viewBox: '0 0 1024 1024',
     });
     this.resetSize(24, 24);

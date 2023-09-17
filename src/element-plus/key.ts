@@ -6,6 +6,10 @@ export class ElKeySvg extends TypeSvgSvg {
     super();
     this.className = 'ElKeySvg';
     this.addAttrObj({
+      name: 'key',
+      title: 'key'
+    });
+    this.addAttrObj({
       viewBox: '0 0 1024 1024',
     });
     this.resetSize(24, 24);

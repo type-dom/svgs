@@ -6,6 +6,10 @@ export class ElHeadsetSvg extends TypeSvgSvg {
     super();
     this.className = 'ElHeadsetSvg';
     this.addAttrObj({
+      name: 'headset',
+      title: 'headset'
+    });
+    this.addAttrObj({
       viewBox: '0 0 1024 1024',
     });
     this.resetSize(24, 24);

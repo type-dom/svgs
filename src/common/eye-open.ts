@@ -6,6 +6,10 @@ export class TdEyeOpenSvg extends TypeSvgSvg {
     super();
     this.className = 'TdEyeOpenSvg';
     this.addAttrObj({
+      name: 'eye-open',
+      title: 'eye-open'
+    });
+    this.addAttrObj({
       viewBox: '0 0 1024 1024',
     });
     this.resetSize(24, 24);

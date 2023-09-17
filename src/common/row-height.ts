@@ -6,6 +6,10 @@ export class TdRowHeightSvg extends TypeSvgSvg {
     super();
     this.className = 'TdRowHeightSvg';
     this.addAttrObj({
+      name: 'row-height',
+      title: 'row-height'
+    });
+    this.addAttrObj({
       viewBox: '0 0 1024 1024',
     });
     this.resetSize(24, 24);

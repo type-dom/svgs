@@ -6,6 +6,10 @@ export class ElLightningSvg extends TypeSvgSvg {
     super();
     this.className = 'ElLightningSvg';
     this.addAttrObj({
+      name: 'lightning',
+      title: 'lightning'
+    });
+    this.addAttrObj({
       viewBox: '0 0 1024 1024',
     });
     this.resetSize(24, 24);

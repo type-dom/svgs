@@ -6,6 +6,10 @@ export class ElSuccessFilledSvg extends TypeSvgSvg {
     super();
     this.className = 'ElSuccessFilledSvg';
     this.addAttrObj({
+      name: 'success-filled',
+      title: 'success-filled'
+    });
+    this.addAttrObj({
       viewBox: '0 0 1024 1024',
     });
     this.resetSize(24, 24);

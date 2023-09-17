@@ -6,6 +6,10 @@ export class ElEditPenSvg extends TypeSvgSvg {
     super();
     this.className = 'ElEditPenSvg';
     this.addAttrObj({
+      name: 'edit-pen',
+      title: 'edit-pen'
+    });
+    this.addAttrObj({
       viewBox: '0 0 1024 1024',
     });
     this.resetSize(24, 24);
