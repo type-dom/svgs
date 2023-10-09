@@ -6,8 +6,8 @@ export class ElDeleteFilledSvg extends TypeSvgSvg {
     super();
     this.className = 'ElDeleteFilledSvg';
     this.addAttrObj({
-      name: 'delete-filled',
-      title: 'delete-filled'
+      name: 'ElDeleteFilledSvg',
+      title: 'ElDeleteFilledSvg'
     });
     this.addAttrObj({
       viewBox: '0 0 1024 1024',

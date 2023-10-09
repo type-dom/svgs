@@ -6,8 +6,8 @@ export class TdIconVerticalAlignMiddlSvg extends TypeSvgSvg {
     super();
     this.className = 'TdIconVerticalAlignMiddlSvg';
     this.addAttrObj({
-      name: 'icon-vertical-align-middl',
-      title: 'icon-vertical-align-middl'
+      name: 'TdIconVerticalAlignMiddlSvg',
+      title: 'TdIconVerticalAlignMiddlSvg'
     });
     this.addAttrObj({
       viewBox: '0 0 1068 1024',

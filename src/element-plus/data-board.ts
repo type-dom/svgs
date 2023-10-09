@@ -6,8 +6,8 @@ export class ElDataBoardSvg extends TypeSvgSvg {
     super();
     this.className = 'ElDataBoardSvg';
     this.addAttrObj({
-      name: 'data-board',
-      title: 'data-board'
+      name: 'ElDataBoardSvg',
+      title: 'ElDataBoardSvg'
     });
     this.addAttrObj({
       viewBox: '0 0 1024 1024',

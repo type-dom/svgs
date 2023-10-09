@@ -6,8 +6,8 @@ export class TdNumericalSvg extends TypeSvgSvg {
     super();
     this.className = 'TdNumericalSvg';
     this.addAttrObj({
-      name: 'numerical',
-      title: 'numerical'
+      name: 'TdNumericalSvg',
+      title: 'TdNumericalSvg'
     });
     this.addAttrObj({
       viewBox: '0 0 1073 1024',

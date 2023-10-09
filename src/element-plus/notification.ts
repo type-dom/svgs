@@ -6,8 +6,8 @@ export class ElNotificationSvg extends TypeSvgSvg {
     super();
     this.className = 'ElNotificationSvg';
     this.addAttrObj({
-      name: 'notification',
-      title: 'notification'
+      name: 'ElNotificationSvg',
+      title: 'ElNotificationSvg'
     });
     this.addAttrObj({
       viewBox: '0 0 1024 1024',

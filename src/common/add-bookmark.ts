@@ -6,8 +6,8 @@ export class TdAddBookmarkSvg extends TypeSvgSvg {
     super();
     this.className = 'TdAddBookmarkSvg';
     this.addAttrObj({
-      name: 'add-bookmark',
-      title: 'add-bookmark'
+      name: 'TdAddBookmarkSvg',
+      title: 'TdAddBookmarkSvg'
     });
     this.addAttrObj({
       viewBox: '0 0 1024 1024',

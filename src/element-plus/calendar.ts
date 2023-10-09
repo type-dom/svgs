@@ -6,8 +6,8 @@ export class ElCalendarSvg extends TypeSvgSvg {
     super();
     this.className = 'ElCalendarSvg';
     this.addAttrObj({
-      name: 'calendar',
-      title: 'calendar'
+      name: 'ElCalendarSvg',
+      title: 'ElCalendarSvg'
     });
     this.addAttrObj({
       viewBox: '0 0 1024 1024',

@@ -6,8 +6,8 @@ export class ElMagnetSvg extends TypeSvgSvg {
     super();
     this.className = 'ElMagnetSvg';
     this.addAttrObj({
-      name: 'magnet',
-      title: 'magnet'
+      name: 'ElMagnetSvg',
+      title: 'ElMagnetSvg'
     });
     this.addAttrObj({
       viewBox: '0 0 1024 1024',

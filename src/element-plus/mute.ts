@@ -6,8 +6,8 @@ export class ElMuteSvg extends TypeSvgSvg {
     super();
     this.className = 'ElMuteSvg';
     this.addAttrObj({
-      name: 'mute',
-      title: 'mute'
+      name: 'ElMuteSvg',
+      title: 'ElMuteSvg'
     });
     this.addAttrObj({
       viewBox: '0 0 1024 1024',

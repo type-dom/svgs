@@ -6,8 +6,8 @@ export class TdTdQRCodeSvg extends TypeSvgSvg {
     super();
     this.className = 'TdTdQRCodeSvg';
     this.addAttrObj({
-      name: 'tdQRCode',
-      title: 'tdQRCode'
+      name: 'TdTdQRCodeSvg',
+      title: 'TdTdQRCodeSvg'
     });
     this.addAttrObj({
       viewBox: '50 50 974 974',

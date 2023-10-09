@@ -6,8 +6,8 @@ export class ElPresentSvg extends TypeSvgSvg {
     super();
     this.className = 'ElPresentSvg';
     this.addAttrObj({
-      name: 'present',
-      title: 'present'
+      name: 'ElPresentSvg',
+      title: 'ElPresentSvg'
     });
     this.addAttrObj({
       viewBox: '0 0 1024 1024',

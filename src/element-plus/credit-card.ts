@@ -6,8 +6,8 @@ export class ElCreditCardSvg extends TypeSvgSvg {
     super();
     this.className = 'ElCreditCardSvg';
     this.addAttrObj({
-      name: 'credit-card',
-      title: 'credit-card'
+      name: 'ElCreditCardSvg',
+      title: 'ElCreditCardSvg'
     });
     this.addAttrObj({
       viewBox: '0 0 1024 1024',

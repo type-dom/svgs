@@ -6,8 +6,8 @@ export class TdAlignScatterSvg extends TypeSvgSvg {
     super();
     this.className = 'TdAlignScatterSvg';
     this.addAttrObj({
-      name: 'align-scatter',
-      title: 'align-scatter'
+      name: 'TdAlignScatterSvg',
+      title: 'TdAlignScatterSvg'
     });
     this.addAttrObj({
       viewBox: '0 0 1024 1024',

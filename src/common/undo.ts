@@ -6,8 +6,8 @@ export class TdUndoSvg extends TypeSvgSvg {
     super();
     this.className = 'TdUndoSvg';
     this.addAttrObj({
-      name: 'undo',
-      title: 'undo'
+      name: 'TdUndoSvg',
+      title: 'TdUndoSvg'
     });
     this.addAttrObj({
       viewBox: '0 0 1024 1024',

@@ -6,8 +6,8 @@ export class TdSingleInputSvg extends TypeSvgSvg {
     super();
     this.className = 'TdSingleInputSvg';
     this.addAttrObj({
-      name: 'single-input',
-      title: 'single-input'
+      name: 'TdSingleInputSvg',
+      title: 'TdSingleInputSvg'
     });
     this.addAttrObj({
       viewBox: '0 0 1024 1024',

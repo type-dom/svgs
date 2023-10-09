@@ -6,8 +6,8 @@ export class ElCircleCloseFilledSvg extends TypeSvgSvg {
     super();
     this.className = 'ElCircleCloseFilledSvg';
     this.addAttrObj({
-      name: 'circle-close-filled',
-      title: 'circle-close-filled'
+      name: 'ElCircleCloseFilledSvg',
+      title: 'ElCircleCloseFilledSvg'
     });
     this.addAttrObj({
       viewBox: '0 0 1024 1024',

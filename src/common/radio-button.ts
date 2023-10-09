@@ -6,8 +6,8 @@ export class TdRadioButtonSvg extends TypeSvgSvg {
     super();
     this.className = 'TdRadioButtonSvg';
     this.addAttrObj({
-      name: 'radio-button',
-      title: 'radio-button'
+      name: 'TdRadioButtonSvg',
+      title: 'TdRadioButtonSvg'
     });
     this.addAttrObj({
       viewBox: '0 0 1024 1024',

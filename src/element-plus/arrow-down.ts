@@ -6,8 +6,8 @@ export class ElArrowDownSvg extends TypeSvgSvg {
     super();
     this.className = 'ElArrowDownSvg';
     this.addAttrObj({
-      name: 'arrow-down',
-      title: 'arrow-down'
+      name: 'ElArrowDownSvg',
+      title: 'ElArrowDownSvg'
     });
     this.addAttrObj({
       viewBox: '0 0 1024 1024',

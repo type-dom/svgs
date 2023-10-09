@@ -6,8 +6,8 @@ export class ElQuartzWatchSvg extends TypeSvgSvg {
     super();
     this.className = 'ElQuartzWatchSvg';
     this.addAttrObj({
-      name: 'quartz-watch',
-      title: 'quartz-watch'
+      name: 'ElQuartzWatchSvg',
+      title: 'ElQuartzWatchSvg'
     });
     this.addAttrObj({
       viewBox: '0 0 1024 1024',

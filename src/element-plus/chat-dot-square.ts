@@ -6,8 +6,8 @@ export class ElChatDotSquareSvg extends TypeSvgSvg {
     super();
     this.className = 'ElChatDotSquareSvg';
     this.addAttrObj({
-      name: 'chat-dot-square',
-      title: 'chat-dot-square'
+      name: 'ElChatDotSquareSvg',
+      title: 'ElChatDotSquareSvg'
     });
     this.addAttrObj({
       viewBox: '0 0 1024 1024',

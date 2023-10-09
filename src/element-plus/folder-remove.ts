@@ -6,8 +6,8 @@ export class ElFolderRemoveSvg extends TypeSvgSvg {
     super();
     this.className = 'ElFolderRemoveSvg';
     this.addAttrObj({
-      name: 'folder-remove',
-      title: 'folder-remove'
+      name: 'ElFolderRemoveSvg',
+      title: 'ElFolderRemoveSvg'
     });
     this.addAttrObj({
       viewBox: '0 0 1024 1024',

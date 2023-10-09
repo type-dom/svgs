@@ -6,8 +6,8 @@ export class TdStrikethroughSvg extends TypeSvgSvg {
     super();
     this.className = 'TdStrikethroughSvg';
     this.addAttrObj({
-      name: 'strikethrough',
-      title: 'strikethrough'
+      name: 'TdStrikethroughSvg',
+      title: 'TdStrikethroughSvg'
     });
     this.addAttrObj({
       viewBox: '0 0 1024 1024',

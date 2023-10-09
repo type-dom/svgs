@@ -6,8 +6,8 @@ export class TdMergeCellSvg extends TypeSvgSvg {
     super();
     this.className = 'TdMergeCellSvg';
     this.addAttrObj({
-      name: 'merge-cell',
-      title: 'merge-cell'
+      name: 'TdMergeCellSvg',
+      title: 'TdMergeCellSvg'
     });
     this.addAttrObj({
       viewBox: '0 0 1024 1024',

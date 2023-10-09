@@ -6,8 +6,8 @@ export class ElUmbrellaSvg extends TypeSvgSvg {
     super();
     this.className = 'ElUmbrellaSvg';
     this.addAttrObj({
-      name: 'umbrella',
-      title: 'umbrella'
+      name: 'ElUmbrellaSvg',
+      title: 'ElUmbrellaSvg'
     });
     this.addAttrObj({
       viewBox: '0 0 1024 1024',

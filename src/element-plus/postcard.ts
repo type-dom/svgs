@@ -6,8 +6,8 @@ export class ElPostcardSvg extends TypeSvgSvg {
     super();
     this.className = 'ElPostcardSvg';
     this.addAttrObj({
-      name: 'postcard',
-      title: 'postcard'
+      name: 'ElPostcardSvg',
+      title: 'ElPostcardSvg'
     });
     this.addAttrObj({
       viewBox: '0 0 1024 1024',

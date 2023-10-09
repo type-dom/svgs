@@ -6,8 +6,8 @@ export class TdTreeShapeSvg extends TypeSvgSvg {
     super();
     this.className = 'TdTreeShapeSvg';
     this.addAttrObj({
-      name: 'tree-shape',
-      title: 'tree-shape'
+      name: 'TdTreeShapeSvg',
+      title: 'TdTreeShapeSvg'
     });
     this.addAttrObj({
       viewBox: '0 0 1024 1024',

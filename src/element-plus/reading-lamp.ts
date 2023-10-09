@@ -6,8 +6,8 @@ export class ElReadingLampSvg extends TypeSvgSvg {
     super();
     this.className = 'ElReadingLampSvg';
     this.addAttrObj({
-      name: 'reading-lamp',
-      title: 'reading-lamp'
+      name: 'ElReadingLampSvg',
+      title: 'ElReadingLampSvg'
     });
     this.addAttrObj({
       viewBox: '0 0 1024 1024',

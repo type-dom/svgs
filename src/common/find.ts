@@ -6,8 +6,8 @@ export class TdFindSvg extends TypeSvgSvg {
     super();
     this.className = 'TdFindSvg';
     this.addAttrObj({
-      name: 'find',
-      title: 'find'
+      name: 'TdFindSvg',
+      title: 'TdFindSvg'
     });
     this.addAttrObj({
       viewBox: '0 0 1165 1024',

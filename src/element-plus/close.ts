@@ -6,8 +6,8 @@ export class ElCloseSvg extends TypeSvgSvg {
     super();
     this.className = 'ElCloseSvg';
     this.addAttrObj({
-      name: 'close',
-      title: 'close'
+      name: 'ElCloseSvg',
+      title: 'ElCloseSvg'
     });
     this.addAttrObj({
       viewBox: '0 0 1024 1024',

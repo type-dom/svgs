@@ -6,8 +6,8 @@ export class ElElemeFilledSvg extends TypeSvgSvg {
     super();
     this.className = 'ElElemeFilledSvg';
     this.addAttrObj({
-      name: 'eleme-filled',
-      title: 'eleme-filled'
+      name: 'ElElemeFilledSvg',
+      title: 'ElElemeFilledSvg'
     });
     this.addAttrObj({
       viewBox: '0 0 1024 1024',

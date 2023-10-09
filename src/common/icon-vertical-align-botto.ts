@@ -6,8 +6,8 @@ export class TdIconVerticalAlignBottoSvg extends TypeSvgSvg {
     super();
     this.className = 'TdIconVerticalAlignBottoSvg';
     this.addAttrObj({
-      name: 'icon-vertical-align-botto',
-      title: 'icon-vertical-align-botto'
+      name: 'TdIconVerticalAlignBottoSvg',
+      title: 'TdIconVerticalAlignBottoSvg'
     });
     this.addAttrObj({
       viewBox: '0 0 1291 1024',

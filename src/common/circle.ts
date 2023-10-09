@@ -6,8 +6,8 @@ export class TdCircleSvg extends TypeSvgSvg {
     super();
     this.className = 'TdCircleSvg';
     this.addAttrObj({
-      name: 'circle',
-      title: 'circle'
+      name: 'TdCircleSvg',
+      title: 'TdCircleSvg'
     });
     this.addAttrObj({
       viewBox: '0 0 1024 1024',

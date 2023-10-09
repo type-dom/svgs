@@ -6,8 +6,8 @@ export class TdFormQRCodeSvg extends TypeSvgSvg {
     super();
     this.className = 'TdFormQRCodeSvg';
     this.addAttrObj({
-      name: 'formQRCode',
-      title: 'formQRCode'
+      name: 'TdFormQRCodeSvg',
+      title: 'TdFormQRCodeSvg'
     });
     this.addAttrObj({
       viewBox: '50 50 974 974',

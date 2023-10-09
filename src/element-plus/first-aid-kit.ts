@@ -6,8 +6,8 @@ export class ElFirstAidKitSvg extends TypeSvgSvg {
     super();
     this.className = 'ElFirstAidKitSvg';
     this.addAttrObj({
-      name: 'first-aid-kit',
-      title: 'first-aid-kit'
+      name: 'ElFirstAidKitSvg',
+      title: 'ElFirstAidKitSvg'
     });
     this.addAttrObj({
       viewBox: '0 0 1024 1024',

@@ -6,8 +6,8 @@ export class ElDocumentCopySvg extends TypeSvgSvg {
     super();
     this.className = 'ElDocumentCopySvg';
     this.addAttrObj({
-      name: 'document-copy',
-      title: 'document-copy'
+      name: 'ElDocumentCopySvg',
+      title: 'ElDocumentCopySvg'
     });
     this.addAttrObj({
       viewBox: '0 0 1024 1024',

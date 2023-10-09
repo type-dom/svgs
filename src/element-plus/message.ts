@@ -6,8 +6,8 @@ export class ElMessageSvg extends TypeSvgSvg {
     super();
     this.className = 'ElMessageSvg';
     this.addAttrObj({
-      name: 'message',
-      title: 'message'
+      name: 'ElMessageSvg',
+      title: 'ElMessageSvg'
     });
     this.addAttrObj({
       viewBox: '0 0 1024 1024',

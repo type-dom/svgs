@@ -6,8 +6,8 @@ export class TdDropdownBoxSvg extends TypeSvgSvg {
     super();
     this.className = 'TdDropdownBoxSvg';
     this.addAttrObj({
-      name: 'dropdown-box',
-      title: 'dropdown-box'
+      name: 'TdDropdownBoxSvg',
+      title: 'TdDropdownBoxSvg'
     });
     this.addAttrObj({
       viewBox: '0 0 1024 1024',

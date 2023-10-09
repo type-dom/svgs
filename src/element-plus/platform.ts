@@ -6,8 +6,8 @@ export class ElPlatformSvg extends TypeSvgSvg {
     super();
     this.className = 'ElPlatformSvg';
     this.addAttrObj({
-      name: 'platform',
-      title: 'platform'
+      name: 'ElPlatformSvg',
+      title: 'ElPlatformSvg'
     });
     this.addAttrObj({
       viewBox: '0 0 1024 1024',

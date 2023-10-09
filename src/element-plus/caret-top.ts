@@ -6,8 +6,8 @@ export class ElCaretTopSvg extends TypeSvgSvg {
     super();
     this.className = 'ElCaretTopSvg';
     this.addAttrObj({
-      name: 'caret-top',
-      title: 'caret-top'
+      name: 'ElCaretTopSvg',
+      title: 'ElCaretTopSvg'
     });
     this.addAttrObj({
       viewBox: '0 0 1024 1024',

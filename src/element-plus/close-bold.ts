@@ -6,8 +6,8 @@ export class ElCloseBoldSvg extends TypeSvgSvg {
     super();
     this.className = 'ElCloseBoldSvg';
     this.addAttrObj({
-      name: 'close-bold',
-      title: 'close-bold'
+      name: 'ElCloseBoldSvg',
+      title: 'ElCloseBoldSvg'
     });
     this.addAttrObj({
       viewBox: '0 0 1024 1024',

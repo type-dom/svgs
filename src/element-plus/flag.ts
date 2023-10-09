@@ -6,8 +6,8 @@ export class ElFlagSvg extends TypeSvgSvg {
     super();
     this.className = 'ElFlagSvg';
     this.addAttrObj({
-      name: 'flag',
-      title: 'flag'
+      name: 'ElFlagSvg',
+      title: 'ElFlagSvg'
     });
     this.addAttrObj({
       viewBox: '0 0 1024 1024',

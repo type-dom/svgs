@@ -6,8 +6,8 @@ export class ElQuestionFilledSvg extends TypeSvgSvg {
     super();
     this.className = 'ElQuestionFilledSvg';
     this.addAttrObj({
-      name: 'question-filled',
-      title: 'question-filled'
+      name: 'ElQuestionFilledSvg',
+      title: 'ElQuestionFilledSvg'
     });
     this.addAttrObj({
       viewBox: '0 0 1024 1024',

@@ -6,8 +6,8 @@ export class ElReadingSvg extends TypeSvgSvg {
     super();
     this.className = 'ElReadingSvg';
     this.addAttrObj({
-      name: 'reading',
-      title: 'reading'
+      name: 'ElReadingSvg',
+      title: 'ElReadingSvg'
     });
     this.addAttrObj({
       viewBox: '0 0 1024 1024',

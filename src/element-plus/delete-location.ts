@@ -6,8 +6,8 @@ export class ElDeleteLocationSvg extends TypeSvgSvg {
     super();
     this.className = 'ElDeleteLocationSvg';
     this.addAttrObj({
-      name: 'delete-location',
-      title: 'delete-location'
+      name: 'ElDeleteLocationSvg',
+      title: 'ElDeleteLocationSvg'
     });
     this.addAttrObj({
       viewBox: '0 0 1024 1024',

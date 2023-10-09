@@ -6,8 +6,8 @@ export class TdWechatSvg extends TypeSvgSvg {
     super();
     this.className = 'TdWechatSvg';
     this.addAttrObj({
-      name: 'wechat',
-      title: 'wechat'
+      name: 'TdWechatSvg',
+      title: 'TdWechatSvg'
     });
     this.addAttrObj({
       viewBox: '0 0 128 110',

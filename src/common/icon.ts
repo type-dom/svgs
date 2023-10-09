@@ -6,8 +6,8 @@ export class TdIconSvg extends TypeSvgSvg {
     super();
     this.className = 'TdIconSvg';
     this.addAttrObj({
-      name: 'icon',
-      title: 'icon'
+      name: 'TdIconSvg',
+      title: 'TdIconSvg'
     });
     this.addAttrObj({
       viewBox: '0 0 128 128',

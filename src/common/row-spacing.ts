@@ -6,8 +6,8 @@ export class TdRowSpacingSvg extends TypeSvgSvg {
     super();
     this.className = 'TdRowSpacingSvg';
     this.addAttrObj({
-      name: 'row-spacing',
-      title: 'row-spacing'
+      name: 'TdRowSpacingSvg',
+      title: 'TdRowSpacingSvg'
     });
     this.addAttrObj({
       viewBox: '0 0 1097 1024',

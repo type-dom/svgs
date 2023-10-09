@@ -6,8 +6,8 @@ export class TdPdfSvg extends TypeSvgSvg {
     super();
     this.className = 'TdPdfSvg';
     this.addAttrObj({
-      name: 'pdf',
-      title: 'pdf'
+      name: 'TdPdfSvg',
+      title: 'TdPdfSvg'
     });
     this.addAttrObj({
       viewBox: '0 0 1024 1024',

@@ -6,8 +6,8 @@ export class ElMoonSvg extends TypeSvgSvg {
     super();
     this.className = 'ElMoonSvg';
     this.addAttrObj({
-      name: 'moon',
-      title: 'moon'
+      name: 'ElMoonSvg',
+      title: 'ElMoonSvg'
     });
     this.addAttrObj({
       viewBox: '0 0 1024 1024',

@@ -6,8 +6,8 @@ export class ElWindPowerSvg extends TypeSvgSvg {
     super();
     this.className = 'ElWindPowerSvg';
     this.addAttrObj({
-      name: 'wind-power',
-      title: 'wind-power'
+      name: 'ElWindPowerSvg',
+      title: 'ElWindPowerSvg'
     });
     this.addAttrObj({
       viewBox: '0 0 1024 1024',

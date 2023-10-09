@@ -6,8 +6,8 @@ export class ElWarnTriangleFilledSvg extends TypeSvgSvg {
     super();
     this.className = 'ElWarnTriangleFilledSvg';
     this.addAttrObj({
-      name: 'warn-triangle-filled',
-      title: 'warn-triangle-filled'
+      name: 'ElWarnTriangleFilledSvg',
+      title: 'ElWarnTriangleFilledSvg'
     });
     this.addAttrObj({
       viewBox: '0 0 1024 1024',

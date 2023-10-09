@@ -6,8 +6,8 @@ export class TdAlignJustifiedSvg extends TypeSvgSvg {
     super();
     this.className = 'TdAlignJustifiedSvg';
     this.addAttrObj({
-      name: 'align-justified',
-      title: 'align-justified'
+      name: 'TdAlignJustifiedSvg',
+      title: 'TdAlignJustifiedSvg'
     });
     this.addAttrObj({
       viewBox: '0 0 1024 1024',

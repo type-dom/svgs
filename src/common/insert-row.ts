@@ -6,8 +6,8 @@ export class TdInsertRowSvg extends TypeSvgSvg {
     super();
     this.className = 'TdInsertRowSvg';
     this.addAttrObj({
-      name: 'insert-row',
-      title: 'insert-row'
+      name: 'TdInsertRowSvg',
+      title: 'TdInsertRowSvg'
     });
     this.addAttrObj({
       viewBox: '0 0 1378 1024',

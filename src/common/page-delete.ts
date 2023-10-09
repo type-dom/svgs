@@ -6,8 +6,8 @@ export class TdPageDeleteSvg extends TypeSvgSvg {
     super();
     this.className = 'TdPageDeleteSvg';
     this.addAttrObj({
-      name: 'page-delete',
-      title: 'page-delete'
+      name: 'TdPageDeleteSvg',
+      title: 'TdPageDeleteSvg'
     });
     this.addAttrObj({
       viewBox: '0 0 1024 1024',

@@ -6,8 +6,8 @@ export class ElStampSvg extends TypeSvgSvg {
     super();
     this.className = 'ElStampSvg';
     this.addAttrObj({
-      name: 'stamp',
-      title: 'stamp'
+      name: 'ElStampSvg',
+      title: 'ElStampSvg'
     });
     this.addAttrObj({
       viewBox: '0 0 1024 1024',

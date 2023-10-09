@@ -6,8 +6,8 @@ export class TdRectangleSvg extends TypeSvgSvg {
     super();
     this.className = 'TdRectangleSvg';
     this.addAttrObj({
-      name: 'rectangle',
-      title: 'rectangle'
+      name: 'TdRectangleSvg',
+      title: 'TdRectangleSvg'
     });
     this.addAttrObj({
       viewBox: '0 0 1024 1024',

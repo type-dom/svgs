@@ -6,8 +6,8 @@ export class ElDocumentRemoveSvg extends TypeSvgSvg {
     super();
     this.className = 'ElDocumentRemoveSvg';
     this.addAttrObj({
-      name: 'document-remove',
-      title: 'document-remove'
+      name: 'ElDocumentRemoveSvg',
+      title: 'ElDocumentRemoveSvg'
     });
     this.addAttrObj({
       viewBox: '0 0 1024 1024',

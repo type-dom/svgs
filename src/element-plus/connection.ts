@@ -6,8 +6,8 @@ export class ElConnectionSvg extends TypeSvgSvg {
     super();
     this.className = 'ElConnectionSvg';
     this.addAttrObj({
-      name: 'connection',
-      title: 'connection'
+      name: 'ElConnectionSvg',
+      title: 'ElConnectionSvg'
     });
     this.addAttrObj({
       viewBox: '0 0 1024 1024',

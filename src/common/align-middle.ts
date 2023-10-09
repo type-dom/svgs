@@ -6,8 +6,8 @@ export class TdAlignMiddleSvg extends TypeSvgSvg {
     super();
     this.className = 'TdAlignMiddleSvg';
     this.addAttrObj({
-      name: 'align-middle',
-      title: 'align-middle'
+      name: 'TdAlignMiddleSvg',
+      title: 'TdAlignMiddleSvg'
     });
     this.addAttrObj({
       viewBox: '0 0 1024 1024',

@@ -6,8 +6,8 @@ export class ElFullScreenSvg extends TypeSvgSvg {
     super();
     this.className = 'ElFullScreenSvg';
     this.addAttrObj({
-      name: 'full-screen',
-      title: 'full-screen'
+      name: 'ElFullScreenSvg',
+      title: 'ElFullScreenSvg'
     });
     this.addAttrObj({
       viewBox: '0 0 1024 1024',

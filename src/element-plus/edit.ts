@@ -6,8 +6,8 @@ export class ElEditSvg extends TypeSvgSvg {
     super();
     this.className = 'ElEditSvg';
     this.addAttrObj({
-      name: 'edit',
-      title: 'edit'
+      name: 'ElEditSvg',
+      title: 'ElEditSvg'
     });
     this.addAttrObj({
       viewBox: '0 0 1024 1024',

@@ -6,8 +6,8 @@ export class ElPriceTagSvg extends TypeSvgSvg {
     super();
     this.className = 'ElPriceTagSvg';
     this.addAttrObj({
-      name: 'price-tag',
-      title: 'price-tag'
+      name: 'ElPriceTagSvg',
+      title: 'ElPriceTagSvg'
     });
     this.addAttrObj({
       viewBox: '0 0 1024 1024',

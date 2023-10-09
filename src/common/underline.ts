@@ -6,8 +6,8 @@ export class TdUnderlineSvg extends TypeSvgSvg {
     super();
     this.className = 'TdUnderlineSvg';
     this.addAttrObj({
-      name: 'underline',
-      title: 'underline'
+      name: 'TdUnderlineSvg',
+      title: 'TdUnderlineSvg'
     });
     this.addAttrObj({
       viewBox: '0 0 1024 1024',

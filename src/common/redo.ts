@@ -6,8 +6,8 @@ export class TdRedoSvg extends TypeSvgSvg {
     super();
     this.className = 'TdRedoSvg';
     this.addAttrObj({
-      name: 'redo',
-      title: 'redo'
+      name: 'TdRedoSvg',
+      title: 'TdRedoSvg'
     });
     this.addAttrObj({
       viewBox: '0 0 1024 1024',

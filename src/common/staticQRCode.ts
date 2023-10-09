@@ -6,8 +6,8 @@ export class TdStaticQRCodeSvg extends TypeSvgSvg {
     super();
     this.className = 'TdStaticQRCodeSvg';
     this.addAttrObj({
-      name: 'staticQRCode',
-      title: 'staticQRCode'
+      name: 'TdStaticQRCodeSvg',
+      title: 'TdStaticQRCodeSvg'
     });
     this.addAttrObj({
       viewBox: '0 0 1024 1024',

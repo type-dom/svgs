@@ -6,8 +6,8 @@ export class ElAppleSvg extends TypeSvgSvg {
     super();
     this.className = 'ElAppleSvg';
     this.addAttrObj({
-      name: 'apple',
-      title: 'apple'
+      name: 'ElAppleSvg',
+      title: 'ElAppleSvg'
     });
     this.addAttrObj({
       viewBox: '0 0 1024 1024',

@@ -6,8 +6,8 @@ export class ElSunsetSvg extends TypeSvgSvg {
     super();
     this.className = 'ElSunsetSvg';
     this.addAttrObj({
-      name: 'sunset',
-      title: 'sunset'
+      name: 'ElSunsetSvg',
+      title: 'ElSunsetSvg'
     });
     this.addAttrObj({
       viewBox: '0 0 1024 1024',

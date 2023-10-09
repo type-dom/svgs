@@ -6,8 +6,8 @@ export class ElManagementSvg extends TypeSvgSvg {
     super();
     this.className = 'ElManagementSvg';
     this.addAttrObj({
-      name: 'management',
-      title: 'management'
+      name: 'ElManagementSvg',
+      title: 'ElManagementSvg'
     });
     this.addAttrObj({
       viewBox: '0 0 1024 1024',

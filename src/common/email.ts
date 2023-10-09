@@ -6,8 +6,8 @@ export class TdEmailSvg extends TypeSvgSvg {
     super();
     this.className = 'TdEmailSvg';
     this.addAttrObj({
-      name: 'email',
-      title: 'email'
+      name: 'TdEmailSvg',
+      title: 'TdEmailSvg'
     });
     this.addAttrObj({
       viewBox: '0 0 128 96',

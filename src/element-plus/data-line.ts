@@ -6,8 +6,8 @@ export class ElDataLineSvg extends TypeSvgSvg {
     super();
     this.className = 'ElDataLineSvg';
     this.addAttrObj({
-      name: 'data-line',
-      title: 'data-line'
+      name: 'ElDataLineSvg',
+      title: 'ElDataLineSvg'
     });
     this.addAttrObj({
       viewBox: '0 0 1024 1024',

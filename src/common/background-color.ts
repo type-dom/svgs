@@ -6,8 +6,8 @@ export class TdBackgroundColorSvg extends TypeSvgSvg {
     super();
     this.className = 'TdBackgroundColorSvg';
     this.addAttrObj({
-      name: 'background-color',
-      title: 'background-color'
+      name: 'TdBackgroundColorSvg',
+      title: 'TdBackgroundColorSvg'
     });
     this.addAttrObj({
       viewBox: '0 0 1024 1024',

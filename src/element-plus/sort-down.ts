@@ -6,8 +6,8 @@ export class ElSortDownSvg extends TypeSvgSvg {
     super();
     this.className = 'ElSortDownSvg';
     this.addAttrObj({
-      name: 'sort-down',
-      title: 'sort-down'
+      name: 'ElSortDownSvg',
+      title: 'ElSortDownSvg'
     });
     this.addAttrObj({
       viewBox: '0 0 1024 1024',

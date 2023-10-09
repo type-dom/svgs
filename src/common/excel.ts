@@ -6,8 +6,8 @@ export class TdExcelSvg extends TypeSvgSvg {
     super();
     this.className = 'TdExcelSvg';
     this.addAttrObj({
-      name: 'excel',
-      title: 'excel'
+      name: 'TdExcelSvg',
+      title: 'TdExcelSvg'
     });
     this.addAttrObj({
       viewBox: '0 0 128 128',

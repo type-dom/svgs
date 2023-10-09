@@ -6,8 +6,8 @@ export class ElClockSvg extends TypeSvgSvg {
     super();
     this.className = 'ElClockSvg';
     this.addAttrObj({
-      name: 'clock',
-      title: 'clock'
+      name: 'ElClockSvg',
+      title: 'ElClockSvg'
     });
     this.addAttrObj({
       viewBox: '0 0 1024 1024',

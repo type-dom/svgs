@@ -6,8 +6,8 @@ export class ElStopwatchSvg extends TypeSvgSvg {
     super();
     this.className = 'ElStopwatchSvg';
     this.addAttrObj({
-      name: 'stopwatch',
-      title: 'stopwatch'
+      name: 'ElStopwatchSvg',
+      title: 'ElStopwatchSvg'
     });
     this.addAttrObj({
       viewBox: '0 0 1024 1024',

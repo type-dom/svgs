@@ -6,8 +6,8 @@ export class TdLanguageSvg extends TypeSvgSvg {
     super();
     this.className = 'TdLanguageSvg';
     this.addAttrObj({
-      name: 'language',
-      title: 'language'
+      name: 'TdLanguageSvg',
+      title: 'TdLanguageSvg'
     });
     this.addAttrObj({
       viewBox: '0 0 128 128',

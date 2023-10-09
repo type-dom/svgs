@@ -6,8 +6,8 @@ export class TdSortSvg extends TypeSvgSvg {
     super();
     this.className = 'TdSortSvg';
     this.addAttrObj({
-      name: 'sort',
-      title: 'sort'
+      name: 'TdSortSvg',
+      title: 'TdSortSvg'
     });
     this.addAttrObj({
       viewBox: '0 0 1024 1024',

@@ -6,8 +6,8 @@ export class ElMagicStickSvg extends TypeSvgSvg {
     super();
     this.className = 'ElMagicStickSvg';
     this.addAttrObj({
-      name: 'magic-stick',
-      title: 'magic-stick'
+      name: 'ElMagicStickSvg',
+      title: 'ElMagicStickSvg'
     });
     this.addAttrObj({
       viewBox: '0 0 1024 1024',

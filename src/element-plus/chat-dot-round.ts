@@ -6,8 +6,8 @@ export class ElChatDotRoundSvg extends TypeSvgSvg {
     super();
     this.className = 'ElChatDotRoundSvg';
     this.addAttrObj({
-      name: 'chat-dot-round',
-      title: 'chat-dot-round'
+      name: 'ElChatDotRoundSvg',
+      title: 'ElChatDotRoundSvg'
     });
     this.addAttrObj({
       viewBox: '0 0 1024 1024',

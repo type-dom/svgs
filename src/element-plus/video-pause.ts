@@ -6,8 +6,8 @@ export class ElVideoPauseSvg extends TypeSvgSvg {
     super();
     this.className = 'ElVideoPauseSvg';
     this.addAttrObj({
-      name: 'video-pause',
-      title: 'video-pause'
+      name: 'ElVideoPauseSvg',
+      title: 'ElVideoPauseSvg'
     });
     this.addAttrObj({
       viewBox: '0 0 1024 1024',

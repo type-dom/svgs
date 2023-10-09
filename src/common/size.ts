@@ -6,8 +6,8 @@ export class TdSizeSvg extends TypeSvgSvg {
     super();
     this.className = 'TdSizeSvg';
     this.addAttrObj({
-      name: 'size',
-      title: 'size'
+      name: 'TdSizeSvg',
+      title: 'TdSizeSvg'
     });
     this.addAttrObj({
       viewBox: '0 0 128 128',

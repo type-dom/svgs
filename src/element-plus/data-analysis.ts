@@ -6,8 +6,8 @@ export class ElDataAnalysisSvg extends TypeSvgSvg {
     super();
     this.className = 'ElDataAnalysisSvg';
     this.addAttrObj({
-      name: 'data-analysis',
-      title: 'data-analysis'
+      name: 'ElDataAnalysisSvg',
+      title: 'ElDataAnalysisSvg'
     });
     this.addAttrObj({
       viewBox: '0 0 1024 1024',

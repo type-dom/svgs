@@ -6,8 +6,8 @@ export class TdCloseSvg extends TypeSvgSvg {
     super();
     this.className = 'TdCloseSvg';
     this.addAttrObj({
-      name: 'close',
-      title: 'close'
+      name: 'TdCloseSvg',
+      title: 'TdCloseSvg'
     });
     this.addAttrObj({
       viewBox: '0 0 1024 1024',

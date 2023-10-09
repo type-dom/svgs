@@ -6,8 +6,8 @@ export class TdFullscreenSvg extends TypeSvgSvg {
     super();
     this.className = 'TdFullscreenSvg';
     this.addAttrObj({
-      name: 'fullscreen',
-      title: 'fullscreen'
+      name: 'TdFullscreenSvg',
+      title: 'TdFullscreenSvg'
     });
     this.addAttrObj({
       viewBox: '0 0 128 128',

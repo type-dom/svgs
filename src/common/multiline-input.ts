@@ -6,8 +6,8 @@ export class TdMultilineInputSvg extends TypeSvgSvg {
     super();
     this.className = 'TdMultilineInputSvg';
     this.addAttrObj({
-      name: 'multiline-input',
-      title: 'multiline-input'
+      name: 'TdMultilineInputSvg',
+      title: 'TdMultilineInputSvg'
     });
     this.addAttrObj({
       viewBox: '0 0 1024 1024',

@@ -6,8 +6,8 @@ export class ElOdometerSvg extends TypeSvgSvg {
     super();
     this.className = 'ElOdometerSvg';
     this.addAttrObj({
-      name: 'odometer',
-      title: 'odometer'
+      name: 'ElOdometerSvg',
+      title: 'ElOdometerSvg'
     });
     this.addAttrObj({
       viewBox: '0 0 1024 1024',

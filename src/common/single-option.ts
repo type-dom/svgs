@@ -6,8 +6,8 @@ export class TdSingleOptionSvg extends TypeSvgSvg {
     super();
     this.className = 'TdSingleOptionSvg';
     this.addAttrObj({
-      name: 'single-option',
-      title: 'single-option'
+      name: 'TdSingleOptionSvg',
+      title: 'TdSingleOptionSvg'
     });
     this.addAttrObj({
       viewBox: '0 0 1024 1024',

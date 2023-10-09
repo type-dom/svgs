@@ -6,8 +6,8 @@ export class ElFolderAddSvg extends TypeSvgSvg {
     super();
     this.className = 'ElFolderAddSvg';
     this.addAttrObj({
-      name: 'folder-add',
-      title: 'folder-add'
+      name: 'ElFolderAddSvg',
+      title: 'ElFolderAddSvg'
     });
     this.addAttrObj({
       viewBox: '0 0 1024 1024',

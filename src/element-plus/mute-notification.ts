@@ -6,8 +6,8 @@ export class ElMuteNotificationSvg extends TypeSvgSvg {
     super();
     this.className = 'ElMuteNotificationSvg';
     this.addAttrObj({
-      name: 'mute-notification',
-      title: 'mute-notification'
+      name: 'ElMuteNotificationSvg',
+      title: 'ElMuteNotificationSvg'
     });
     this.addAttrObj({
       viewBox: '0 0 1024 1024',

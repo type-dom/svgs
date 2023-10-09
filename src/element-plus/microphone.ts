@@ -6,8 +6,8 @@ export class ElMicrophoneSvg extends TypeSvgSvg {
     super();
     this.className = 'ElMicrophoneSvg';
     this.addAttrObj({
-      name: 'microphone',
-      title: 'microphone'
+      name: 'ElMicrophoneSvg',
+      title: 'ElMicrophoneSvg'
     });
     this.addAttrObj({
       viewBox: '0 0 1024 1024',

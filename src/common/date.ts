@@ -6,8 +6,8 @@ export class TdDateSvg extends TypeSvgSvg {
     super();
     this.className = 'TdDateSvg';
     this.addAttrObj({
-      name: 'date',
-      title: 'date'
+      name: 'TdDateSvg',
+      title: 'TdDateSvg'
     });
     this.addAttrObj({
       viewBox: '0 0 1024 1024',

@@ -6,8 +6,8 @@ export class ElTurnOffSvg extends TypeSvgSvg {
     super();
     this.className = 'ElTurnOffSvg';
     this.addAttrObj({
-      name: 'turn-off',
-      title: 'turn-off'
+      name: 'ElTurnOffSvg',
+      title: 'ElTurnOffSvg'
     });
     this.addAttrObj({
       viewBox: '0 0 1024 1024',

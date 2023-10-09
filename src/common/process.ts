@@ -6,8 +6,8 @@ export class TdProcessSvg extends TypeSvgSvg {
     super();
     this.className = 'TdProcessSvg';
     this.addAttrObj({
-      name: 'process',
-      title: 'process'
+      name: 'TdProcessSvg',
+      title: 'TdProcessSvg'
     });
     this.addAttrObj({
       viewBox: '0 0 1024 1024',

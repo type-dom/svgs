@@ -6,8 +6,8 @@ export class ElPromotionSvg extends TypeSvgSvg {
     super();
     this.className = 'ElPromotionSvg';
     this.addAttrObj({
-      name: 'promotion',
-      title: 'promotion'
+      name: 'ElPromotionSvg',
+      title: 'ElPromotionSvg'
     });
     this.addAttrObj({
       viewBox: '0 0 1024 1024',

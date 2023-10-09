@@ -6,8 +6,8 @@ export class TdAddRestrictedEditSvg extends TypeSvgSvg {
     super();
     this.className = 'TdAddRestrictedEditSvg';
     this.addAttrObj({
-      name: 'add-restricted-edit',
-      title: 'add-restricted-edit'
+      name: 'TdAddRestrictedEditSvg',
+      title: 'TdAddRestrictedEditSvg'
     });
     this.addAttrObj({
       viewBox: '0 0 1024 1024',

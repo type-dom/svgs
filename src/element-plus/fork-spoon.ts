@@ -6,8 +6,8 @@ export class ElForkSpoonSvg extends TypeSvgSvg {
     super();
     this.className = 'ElForkSpoonSvg';
     this.addAttrObj({
-      name: 'fork-spoon',
-      title: 'fork-spoon'
+      name: 'ElForkSpoonSvg',
+      title: 'ElForkSpoonSvg'
     });
     this.addAttrObj({
       viewBox: '0 0 1024 1024',

@@ -6,8 +6,8 @@ export class ElMinusSvg extends TypeSvgSvg {
     super();
     this.className = 'ElMinusSvg';
     this.addAttrObj({
-      name: 'minus',
-      title: 'minus'
+      name: 'ElMinusSvg',
+      title: 'ElMinusSvg'
     });
     this.addAttrObj({
       viewBox: '0 0 1024 1024',

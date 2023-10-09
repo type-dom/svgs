@@ -6,8 +6,8 @@ export class TdLinkSvg extends TypeSvgSvg {
     super();
     this.className = 'TdLinkSvg';
     this.addAttrObj({
-      name: 'link',
-      title: 'link'
+      name: 'TdLinkSvg',
+      title: 'TdLinkSvg'
     });
     this.addAttrObj({
       viewBox: '0 0 128 128',

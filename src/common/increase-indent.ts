@@ -6,8 +6,8 @@ export class TdIncreaseIndentSvg extends TypeSvgSvg {
     super();
     this.className = 'TdIncreaseIndentSvg';
     this.addAttrObj({
-      name: 'increase-indent',
-      title: 'increase-indent'
+      name: 'TdIncreaseIndentSvg',
+      title: 'TdIncreaseIndentSvg'
     });
     this.addAttrObj({
       viewBox: '0 0 1024 1024',

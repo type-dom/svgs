@@ -6,8 +6,8 @@ export class ElGridSvg extends TypeSvgSvg {
     super();
     this.className = 'ElGridSvg';
     this.addAttrObj({
-      name: 'grid',
-      title: 'grid'
+      name: 'ElGridSvg',
+      title: 'ElGridSvg'
     });
     this.addAttrObj({
       viewBox: '0 0 1024 1024',

@@ -6,8 +6,8 @@ export class ElPrinterSvg extends TypeSvgSvg {
     super();
     this.className = 'ElPrinterSvg';
     this.addAttrObj({
-      name: 'printer',
-      title: 'printer'
+      name: 'ElPrinterSvg',
+      title: 'ElPrinterSvg'
     });
     this.addAttrObj({
       viewBox: '0 0 1024 1024',

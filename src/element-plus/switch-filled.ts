@@ -6,8 +6,8 @@ export class ElSwitchFilledSvg extends TypeSvgSvg {
     super();
     this.className = 'ElSwitchFilledSvg';
     this.addAttrObj({
-      name: 'switch-filled',
-      title: 'switch-filled'
+      name: 'ElSwitchFilledSvg',
+      title: 'ElSwitchFilledSvg'
     });
     this.addAttrObj({
       viewBox: '0 0 1024 1024',

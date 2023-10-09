@@ -6,8 +6,8 @@ export class TdAlignBottomSvg extends TypeSvgSvg {
     super();
     this.className = 'TdAlignBottomSvg';
     this.addAttrObj({
-      name: 'align-bottom',
-      title: 'align-bottom'
+      name: 'TdAlignBottomSvg',
+      title: 'TdAlignBottomSvg'
     });
     this.addAttrObj({
       viewBox: '0 0 1024 1024',

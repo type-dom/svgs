@@ -6,8 +6,8 @@ export class ElBriefcaseSvg extends TypeSvgSvg {
     super();
     this.className = 'ElBriefcaseSvg';
     this.addAttrObj({
-      name: 'briefcase',
-      title: 'briefcase'
+      name: 'ElBriefcaseSvg',
+      title: 'ElBriefcaseSvg'
     });
     this.addAttrObj({
       viewBox: '0 0 1024 1024',

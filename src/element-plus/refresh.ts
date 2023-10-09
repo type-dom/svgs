@@ -6,8 +6,8 @@ export class ElRefreshSvg extends TypeSvgSvg {
     super();
     this.className = 'ElRefreshSvg';
     this.addAttrObj({
-      name: 'refresh',
-      title: 'refresh'
+      name: 'ElRefreshSvg',
+      title: 'ElRefreshSvg'
     });
     this.addAttrObj({
       viewBox: '0 0 1024 1024',

@@ -6,8 +6,8 @@ export class ElGobletSquareFullSvg extends TypeSvgSvg {
     super();
     this.className = 'ElGobletSquareFullSvg';
     this.addAttrObj({
-      name: 'goblet-square-full',
-      title: 'goblet-square-full'
+      name: 'ElGobletSquareFullSvg',
+      title: 'ElGobletSquareFullSvg'
     });
     this.addAttrObj({
       viewBox: '0 0 1024 1024',

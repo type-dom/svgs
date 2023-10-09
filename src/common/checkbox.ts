@@ -6,8 +6,8 @@ export class TdCheckboxSvg extends TypeSvgSvg {
     super();
     this.className = 'TdCheckboxSvg';
     this.addAttrObj({
-      name: 'checkbox',
-      title: 'checkbox'
+      name: 'TdCheckboxSvg',
+      title: 'TdCheckboxSvg'
     });
     this.addAttrObj({
       viewBox: '0 0 1024 1024',

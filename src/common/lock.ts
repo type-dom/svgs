@@ -6,8 +6,8 @@ export class TdLockSvg extends TypeSvgSvg {
     super();
     this.className = 'TdLockSvg';
     this.addAttrObj({
-      name: 'lock',
-      title: 'lock'
+      name: 'TdLockSvg',
+      title: 'TdLockSvg'
     });
     this.addAttrObj({
       viewBox: '0 0 128 128',

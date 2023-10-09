@@ -6,8 +6,8 @@ export class ElPaperclipSvg extends TypeSvgSvg {
     super();
     this.className = 'ElPaperclipSvg';
     this.addAttrObj({
-      name: 'paperclip',
-      title: 'paperclip'
+      name: 'ElPaperclipSvg',
+      title: 'ElPaperclipSvg'
     });
     this.addAttrObj({
       viewBox: '0 0 1024 1024',

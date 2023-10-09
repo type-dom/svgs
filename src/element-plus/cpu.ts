@@ -6,8 +6,8 @@ export class ElCpuSvg extends TypeSvgSvg {
     super();
     this.className = 'ElCpuSvg';
     this.addAttrObj({
-      name: 'cpu',
-      title: 'cpu'
+      name: 'ElCpuSvg',
+      title: 'ElCpuSvg'
     });
     this.addAttrObj({
       viewBox: '0 0 1024 1024',

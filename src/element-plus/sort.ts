@@ -6,8 +6,8 @@ export class ElSortSvg extends TypeSvgSvg {
     super();
     this.className = 'ElSortSvg';
     this.addAttrObj({
-      name: 'sort',
-      title: 'sort'
+      name: 'ElSortSvg',
+      title: 'ElSortSvg'
     });
     this.addAttrObj({
       viewBox: '0 0 1024 1024',

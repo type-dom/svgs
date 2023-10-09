@@ -6,8 +6,8 @@ export class ElHideSvg extends TypeSvgSvg {
     super();
     this.className = 'ElHideSvg';
     this.addAttrObj({
-      name: 'hide',
-      title: 'hide'
+      name: 'ElHideSvg',
+      title: 'ElHideSvg'
     });
     this.addAttrObj({
       viewBox: '0 0 1024 1024',

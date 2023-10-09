@@ -6,8 +6,8 @@ export class ElDocumentDeleteSvg extends TypeSvgSvg {
     super();
     this.className = 'ElDocumentDeleteSvg';
     this.addAttrObj({
-      name: 'document-delete',
-      title: 'document-delete'
+      name: 'ElDocumentDeleteSvg',
+      title: 'ElDocumentDeleteSvg'
     });
     this.addAttrObj({
       viewBox: '0 0 1024 1024',

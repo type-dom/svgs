@@ -6,8 +6,8 @@ export class TdSplitCellSvg extends TypeSvgSvg {
     super();
     this.className = 'TdSplitCellSvg';
     this.addAttrObj({
-      name: 'split-cell',
-      title: 'split-cell'
+      name: 'TdSplitCellSvg',
+      title: 'TdSplitCellSvg'
     });
     this.addAttrObj({
       viewBox: '0 0 1024 1024',

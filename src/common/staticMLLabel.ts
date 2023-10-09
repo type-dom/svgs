@@ -6,8 +6,8 @@ export class TdStaticMLLabelSvg extends TypeSvgSvg {
     super();
     this.className = 'TdStaticMLLabelSvg';
     this.addAttrObj({
-      name: 'staticMLLabel',
-      title: 'staticMLLabel'
+      name: 'TdStaticMLLabelSvg',
+      title: 'TdStaticMLLabelSvg'
     });
     this.addAttrObj({
       viewBox: '0 0 1190 1024',

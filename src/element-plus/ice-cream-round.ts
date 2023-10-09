@@ -6,8 +6,8 @@ export class ElIceCreamRoundSvg extends TypeSvgSvg {
     super();
     this.className = 'ElIceCreamRoundSvg';
     this.addAttrObj({
-      name: 'ice-cream-round',
-      title: 'ice-cream-round'
+      name: 'ElIceCreamRoundSvg',
+      title: 'ElIceCreamRoundSvg'
     });
     this.addAttrObj({
       viewBox: '0 0 1024 1024',

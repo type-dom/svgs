@@ -6,8 +6,8 @@ export class TdConnectionSvg extends TypeSvgSvg {
     super();
     this.className = 'TdConnectionSvg';
     this.addAttrObj({
-      name: 'connection',
-      title: 'connection'
+      name: 'TdConnectionSvg',
+      title: 'TdConnectionSvg'
     });
     this.addAttrObj({
       viewBox: '0 0 1024 1024',

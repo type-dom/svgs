@@ -6,8 +6,8 @@ export class ElSearchSvg extends TypeSvgSvg {
     super();
     this.className = 'ElSearchSvg';
     this.addAttrObj({
-      name: 'search',
-      title: 'search'
+      name: 'ElSearchSvg',
+      title: 'ElSearchSvg'
     });
     this.addAttrObj({
       viewBox: '0 0 1024 1024',

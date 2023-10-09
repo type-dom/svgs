@@ -6,8 +6,8 @@ export class ElCircleCheckSvg extends TypeSvgSvg {
     super();
     this.className = 'ElCircleCheckSvg';
     this.addAttrObj({
-      name: 'circle-check',
-      title: 'circle-check'
+      name: 'ElCircleCheckSvg',
+      title: 'ElCircleCheckSvg'
     });
     this.addAttrObj({
       viewBox: '0 0 1024 1024',

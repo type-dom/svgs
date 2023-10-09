@@ -6,8 +6,8 @@ export class TdThumbnailPageSvg extends TypeSvgSvg {
     super();
     this.className = 'TdThumbnailPageSvg';
     this.addAttrObj({
-      name: 'thumbnail-page',
-      title: 'thumbnail-page'
+      name: 'TdThumbnailPageSvg',
+      title: 'TdThumbnailPageSvg'
     });
     this.addAttrObj({
       viewBox: '0 0 1024 1024',

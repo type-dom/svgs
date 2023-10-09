@@ -6,8 +6,8 @@ export class ElBrushFilledSvg extends TypeSvgSvg {
     super();
     this.className = 'ElBrushFilledSvg';
     this.addAttrObj({
-      name: 'brush-filled',
-      title: 'brush-filled'
+      name: 'ElBrushFilledSvg',
+      title: 'ElBrushFilledSvg'
     });
     this.addAttrObj({
       viewBox: '0 0 1024 1024',

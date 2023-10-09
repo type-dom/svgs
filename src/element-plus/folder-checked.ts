@@ -6,8 +6,8 @@ export class ElFolderCheckedSvg extends TypeSvgSvg {
     super();
     this.className = 'ElFolderCheckedSvg';
     this.addAttrObj({
-      name: 'folder-checked',
-      title: 'folder-checked'
+      name: 'ElFolderCheckedSvg',
+      title: 'ElFolderCheckedSvg'
     });
     this.addAttrObj({
       viewBox: '0 0 1024 1024',

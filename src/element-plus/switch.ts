@@ -6,8 +6,8 @@ export class ElSwitchSvg extends TypeSvgSvg {
     super();
     this.className = 'ElSwitchSvg';
     this.addAttrObj({
-      name: 'switch',
-      title: 'switch'
+      name: 'ElSwitchSvg',
+      title: 'ElSwitchSvg'
     });
     this.addAttrObj({
       viewBox: '0 0 1024 1024',

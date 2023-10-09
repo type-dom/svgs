@@ -6,8 +6,8 @@ export class TdDatepickerSvg extends TypeSvgSvg {
     super();
     this.className = 'TdDatepickerSvg';
     this.addAttrObj({
-      name: 'datepicker',
-      title: 'datepicker'
+      name: 'TdDatepickerSvg',
+      title: 'TdDatepickerSvg'
     });
     this.addAttrObj({
       viewBox: '0 0 1025 1024',

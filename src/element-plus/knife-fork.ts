@@ -6,8 +6,8 @@ export class ElKnifeForkSvg extends TypeSvgSvg {
     super();
     this.className = 'ElKnifeForkSvg';
     this.addAttrObj({
-      name: 'knife-fork',
-      title: 'knife-fork'
+      name: 'ElKnifeForkSvg',
+      title: 'ElKnifeForkSvg'
     });
     this.addAttrObj({
       viewBox: '0 0 1024 1024',

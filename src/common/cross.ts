@@ -6,8 +6,8 @@ export class TdCrossSvg extends TypeSvgSvg {
     super();
     this.className = 'TdCrossSvg';
     this.addAttrObj({
-      name: 'cross',
-      title: 'cross'
+      name: 'TdCrossSvg',
+      title: 'TdCrossSvg'
     });
     this.addAttrObj({
       viewBox: '0 0 1024 1024',

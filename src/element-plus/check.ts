@@ -6,8 +6,8 @@ export class ElCheckSvg extends TypeSvgSvg {
     super();
     this.className = 'ElCheckSvg';
     this.addAttrObj({
-      name: 'check',
-      title: 'check'
+      name: 'ElCheckSvg',
+      title: 'ElCheckSvg'
     });
     this.addAttrObj({
       viewBox: '0 0 1024 1024',

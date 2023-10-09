@@ -6,8 +6,8 @@ export class ElRankSvg extends TypeSvgSvg {
     super();
     this.className = 'ElRankSvg';
     this.addAttrObj({
-      name: 'rank',
-      title: 'rank'
+      name: 'ElRankSvg',
+      title: 'ElRankSvg'
     });
     this.addAttrObj({
       viewBox: '0 0 1024 1024',

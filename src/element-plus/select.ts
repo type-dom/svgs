@@ -6,8 +6,8 @@ export class ElSelectSvg extends TypeSvgSvg {
     super();
     this.className = 'ElSelectSvg';
     this.addAttrObj({
-      name: 'select',
-      title: 'select'
+      name: 'ElSelectSvg',
+      title: 'ElSelectSvg'
     });
     this.addAttrObj({
       viewBox: '0 0 1024 1024',

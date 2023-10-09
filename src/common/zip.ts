@@ -6,8 +6,8 @@ export class TdZipSvg extends TypeSvgSvg {
     super();
     this.className = 'TdZipSvg';
     this.addAttrObj({
-      name: 'zip',
-      title: 'zip'
+      name: 'TdZipSvg',
+      title: 'TdZipSvg'
     });
     this.addAttrObj({
       viewBox: '0 0 128 128',

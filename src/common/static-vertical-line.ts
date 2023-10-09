@@ -6,8 +6,8 @@ export class TdStaticVerticalLineSvg extends TypeSvgSvg {
     super();
     this.className = 'TdStaticVerticalLineSvg';
     this.addAttrObj({
-      name: 'static-vertical-line',
-      title: 'static-vertical-line'
+      name: 'TdStaticVerticalLineSvg',
+      title: 'TdStaticVerticalLineSvg'
     });
     this.addAttrObj({
       viewBox: '0 0 1024 1024',

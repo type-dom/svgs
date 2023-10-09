@@ -6,8 +6,8 @@ export class TdFormImageSvg extends TypeSvgSvg {
     super();
     this.className = 'TdFormImageSvg';
     this.addAttrObj({
-      name: 'formImage',
-      title: 'formImage'
+      name: 'TdFormImageSvg',
+      title: 'TdFormImageSvg'
     });
     this.addAttrObj({
       viewBox: '0 0 1024 1024',

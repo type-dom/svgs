@@ -6,8 +6,8 @@ export class TdPageMarginSvg extends TypeSvgSvg {
     super();
     this.className = 'TdPageMarginSvg';
     this.addAttrObj({
-      name: 'page-margin',
-      title: 'page-margin'
+      name: 'TdPageMarginSvg',
+      title: 'TdPageMarginSvg'
     });
     this.addAttrObj({
       viewBox: '0 0 1024 1024',

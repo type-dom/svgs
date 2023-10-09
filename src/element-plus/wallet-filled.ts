@@ -6,8 +6,8 @@ export class ElWalletFilledSvg extends TypeSvgSvg {
     super();
     this.className = 'ElWalletFilledSvg';
     this.addAttrObj({
-      name: 'wallet-filled',
-      title: 'wallet-filled'
+      name: 'ElWalletFilledSvg',
+      title: 'ElWalletFilledSvg'
     });
     this.addAttrObj({
       viewBox: '0 0 1024 1024',

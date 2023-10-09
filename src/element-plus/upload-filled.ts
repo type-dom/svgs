@@ -6,8 +6,8 @@ export class ElUploadFilledSvg extends TypeSvgSvg {
     super();
     this.className = 'ElUploadFilledSvg';
     this.addAttrObj({
-      name: 'upload-filled',
-      title: 'upload-filled'
+      name: 'ElUploadFilledSvg',
+      title: 'ElUploadFilledSvg'
     });
     this.addAttrObj({
       viewBox: '0 0 1024 1024',

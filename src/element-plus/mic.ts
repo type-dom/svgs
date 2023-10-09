@@ -6,8 +6,8 @@ export class ElMicSvg extends TypeSvgSvg {
     super();
     this.className = 'ElMicSvg';
     this.addAttrObj({
-      name: 'mic',
-      title: 'mic'
+      name: 'ElMicSvg',
+      title: 'ElMicSvg'
     });
     this.addAttrObj({
       viewBox: '0 0 1024 1024',

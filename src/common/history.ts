@@ -6,8 +6,8 @@ export class TdHistorySvg extends TypeSvgSvg {
     super();
     this.className = 'TdHistorySvg';
     this.addAttrObj({
-      name: 'history',
-      title: 'history'
+      name: 'TdHistorySvg',
+      title: 'TdHistorySvg'
     });
     this.addAttrObj({
       viewBox: '0 0 1024 1024',

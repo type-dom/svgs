@@ -6,8 +6,8 @@ export class ElScaleToOriginalSvg extends TypeSvgSvg {
     super();
     this.className = 'ElScaleToOriginalSvg';
     this.addAttrObj({
-      name: 'scale-to-original',
-      title: 'scale-to-original'
+      name: 'ElScaleToOriginalSvg',
+      title: 'ElScaleToOriginalSvg'
     });
     this.addAttrObj({
       viewBox: '0 0 1024 1024',

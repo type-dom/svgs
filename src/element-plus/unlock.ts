@@ -6,8 +6,8 @@ export class ElUnlockSvg extends TypeSvgSvg {
     super();
     this.className = 'ElUnlockSvg';
     this.addAttrObj({
-      name: 'unlock',
-      title: 'unlock'
+      name: 'ElUnlockSvg',
+      title: 'ElUnlockSvg'
     });
     this.addAttrObj({
       viewBox: '0 0 1024 1024',

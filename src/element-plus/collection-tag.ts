@@ -6,8 +6,8 @@ export class ElCollectionTagSvg extends TypeSvgSvg {
     super();
     this.className = 'ElCollectionTagSvg';
     this.addAttrObj({
-      name: 'collection-tag',
-      title: 'collection-tag'
+      name: 'ElCollectionTagSvg',
+      title: 'ElCollectionTagSvg'
     });
     this.addAttrObj({
       viewBox: '0 0 1024 1024',
