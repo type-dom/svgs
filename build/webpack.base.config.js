@@ -94,9 +94,6 @@ module.exports = {
             options: {
               importLoaders: 1
             }
-          },
-          {
-            loader: 'postcss-loader'
           }
         ]
       },
@@ -111,7 +108,6 @@ module.exports = {
             }
           },
           'css-loader',
-          'postcss-loader',   // 处理css兼容性
           'less-loader'
         ]
       },
@@ -129,7 +125,6 @@ module.exports = {
               importLoaders: 2
             }
           },
-          'postcss-loader',   // 处理css兼容性
           {
             loader: 'sass-loader' // 将 Sass 编译成 CSS
           }
@@ -169,10 +164,6 @@ module.exports = {
     ]
   },
   plugins: [
-    //  Error: clean-webpack-plugin only accepts an options object. See:
-    // https://github.com/johnagan/clean-webpack-plugin#options-and-defaults-optional
-    // at new CleanWebpackPlugin (D:\SVN\end\form-editor\node_modules\clean-webpack-plugin\dist\clean-webpack-plugin.js:
-    // new CleanWebpackPlugin(),
     // 多个html页面
     new HtmlWebpackPlugin({
       template: './public/svgs-view.html', // 把哪个html文件打包到dist目录中

@@ -6,7 +6,8 @@ fromEvent(document, 'DOMContentLoaded').subscribe(() => {
   const uiEl = document.querySelector('#svg-view-ref') as HTMLElement;
   console.log('uiEl is ', uiEl);
   if (uiEl) {
-    const view = new SVGSRoot(uiEl);
+    const view = new SVGSRoot({ el: uiEl });
+    view.render();
     console.log('view is ', view);
   }
 });
