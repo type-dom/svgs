@@ -1,11 +1,11 @@
-import { Br, TypeRoot } from 'type-dom.ts';
+import { Br, ITypeRootOption, TypeRoot } from 'type-dom.ts';
 import { CommonSvgList } from './common-svg-list';
 import { ElementPlusSvgList } from './element-plus-svg-list';
 import { OtherSvgList } from './other-svg-list';
 export class SVGSRoot extends TypeRoot {
   className: 'SVGSRoot';
-  constructor(editorEl: HTMLElement) {
-    super(editorEl);
+  constructor(option: ITypeRootOption) {
+    super(option);
     console.log('SVGSView constructor . ');
     this.className = 'SVGSRoot';
     this.addStyleObj({
