@@ -1,5 +1,5 @@
 import { IStyle, TypeDiv } from 'type-dom.ts';
-import { SVGSRoot } from './svgs-root';
+import { AppElement } from './app-element';
 import {
   Td404Svg,
   TdAPlusSvg,
@@ -198,7 +198,7 @@ import {
 } from '../src';
 export class CommonSvgList extends TypeDiv {
   className: 'CommonSvgList';
-  constructor(public parent: SVGSRoot) {
+  constructor(public parent: AppElement) {
     super();
     console.log('CommonSvgList constructor . ');
     this.className = 'CommonSvgList';

@@ -1,5 +1,5 @@
 import { IStyle, TypeDiv } from 'type-dom.ts';
-import { SVGSRoot } from './svgs-root';
+import { AppElement } from './app-element';
 import {
   ElAddLocationSvg,
   ElAimSvg,
@@ -297,7 +297,7 @@ import {
 } from '../src';
 export class ElementPlusSvgList extends TypeDiv {
   className: 'ElementPlusSvgList';
-  constructor(public parent: SVGSRoot) {
+  constructor(public parent: AppElement) {
     super();
     console.log('ElementPlusSvgList constructor . ');
     this.className = 'ElementPlusSvgList';
