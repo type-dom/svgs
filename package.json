@@ -2,8 +2,7 @@
   "name": "type-dom-svgs",
   "version": "0.0.8",
   "description": "type dom svg components . ",
-  "main": "dist/index.js",
-  "types": "dist/index.d.js",
+  "main": "src/index.ts",
   "scripts": {
     "serve": "webpack-dev-server --mode=development --config ./build/webpack.config.js",
     "build": "tsc",
@@ -84,10 +83,7 @@
     "debug": true,
     "detail": true,
     "ignoreCatch": true,
-    "ignoreFiles": [
-      "demo1/*.ts",
-      "demo2/foo.ts"
-    ],
+    "ignoreFiles": [],
     "project": "tsconfig.json",
     "strict": true,
     "suppressError": true,
