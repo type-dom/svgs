@@ -15,12 +15,12 @@ npm install type-dom-svgs
 // Typescript Webpack
 import {Br, Division, TypeRoot, TextNode} from 'type-dom.ts';
 import {AddSvg} from 'type-dom-svgs';
-// app-root.ts 项目根节点
-export class AppRoot extends TypeRoot {
-  className: 'AppRoot';
+// app-element.ts 项目根节点
+export class AppElement extends TypeRoot {
+  className: 'AppElement';
   constructor(editorEl: HTMLElement) {
     super(editorEl);
-    this.className = 'AppRoot'; 
+    this.className = 'AppElement'; 
     this.addAttrObj({ // 设置根节点的属性
       name: 'app-root'
     })
@@ -47,11 +47,11 @@ export class AppRoot extends TypeRoot {
 
 // main.ts 项目主程序
 import {fromEvent} from 'rxjs';
-import {AppRoot} from "./app-root";
+import {AppElement} from "./app-root";
 fromEvent(document, 'DOMContentLoaded').subscribe(() => {
   const uiEl = document.querySelector('#example-ref') as HTMLElement;
   if (uiEl) {
-    const view = new AppRoot(uiEl);
+    const view = new AppElement(uiEl);
   }
 });
 ```

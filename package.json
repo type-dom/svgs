@@ -3,7 +3,6 @@
   "version": "0.0.8",
   "description": "type dom svg components . ",
   "main": "src/index.ts",
-  "types": "dist/index.d.js",
   "scripts": {
     "serve": "webpack-dev-server --mode=development --config ./build/webpack.config.js",
     "build": "tsc",
