@@ -1,4 +1,4 @@
-import { Br, ITypeRootOption, TypeRoot } from '@type-dom/framework';
+import { Br, ITypeRootOption, TypeRoot } from 'type-dom.ts';
 import { CommonSvgList } from './common-svg-list';
 import { ElementPlusSvgList } from './element-plus-svg-list';
 import { OtherSvgList } from './other-svg-list';

@@ -1,4 +1,4 @@
-import { SvgPath, TypeHtml, TypeSvgSvg } from '@type-dom/framework';
+import { SvgPath, TypeHtml, TypeSvgSvg } from 'type-dom.ts';
 export class TdSave2Svg extends TypeSvgSvg {
   className: 'TdSave2Svg';
   childNodes: SvgPath[];

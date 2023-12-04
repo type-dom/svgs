@@ -1,4 +1,4 @@
-import { IStyle, TypeDiv } from '@type-dom/framework';
+import { IStyle, TypeDiv } from 'type-dom.ts';
 import { AppElement } from './app-element';
 import {
   Td404Svg,
