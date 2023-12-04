@@ -15,7 +15,7 @@ npm install type-dom-svgs
 // Typescript Webpack
 import {Br, Division, TypeRoot, TextNode} from 'type-dom.ts';
 import {AddSvg} from 'type-dom-svgs';
-// app-element.ts 项目根节点
+// svgs-root.ts 项目根节点
 export class AppElement extends TypeRoot {
   className: 'AppElement';
   constructor(editorEl: HTMLElement) {
