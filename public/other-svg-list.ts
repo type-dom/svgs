@@ -1,4 +1,4 @@
-import { IStyle, TypeDiv } from 'type-dom.ts';
+import { IStyle, TypeDiv } from '@type-dom/framework';
 import { AppElement } from './app-element';
 import {
   ArrangementBottomSvg,

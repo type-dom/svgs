@@ -1,4 +1,4 @@
-import { SvgPath, TypeHtml, TypeSvgSvg } from 'type-dom.ts';
+import { SvgPath, TypeHtml, TypeSvgSvg } from '@type-dom/framework';
 export class ElArrowLeftBoldSvg extends TypeSvgSvg {
   className: 'ElArrowLeftBoldSvg';
   childNodes: SvgPath[];

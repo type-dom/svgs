@@ -1,4 +1,4 @@
-import { SvgPath, TypeHtml, TypeSvgSvg } from 'type-dom.ts';
+import { SvgPath, TypeHtml, TypeSvgSvg } from '@type-dom/framework';
 export class TdAlignRightSvg extends TypeSvgSvg {
   className: 'TdAlignRightSvg';
   childNodes: SvgPath[];

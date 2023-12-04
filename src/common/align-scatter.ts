@@ -1,4 +1,4 @@
-import { SvgPath, TypeHtml, TypeSvgSvg } from 'type-dom.ts';
+import { SvgPath, TypeHtml, TypeSvgSvg } from '@type-dom/framework';
 export class TdAlignScatterSvg extends TypeSvgSvg {
   className: 'TdAlignScatterSvg';
   childNodes: SvgPath[];
