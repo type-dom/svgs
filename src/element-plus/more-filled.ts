@@ -1,8 +1,8 @@
-import { SvgPath, TypeHtml, TypeSvgSvg } from 'type-dom.ts';
+import { ITypeConfig, SvgPath, TypeSvgSvg } from '@type-dom/framework';
 export class ElMoreFilledSvg extends TypeSvgSvg {
   className: 'ElMoreFilledSvg';
   childNodes: SvgPath[];
-  constructor(public parent: TypeHtml) {
+  constructor(config?: Partial<ITypeConfig>) {
     super();
     this.className = 'ElMoreFilledSvg';
     this.addAttrObj({
@@ -14,10 +14,11 @@ export class ElMoreFilledSvg extends TypeSvgSvg {
     });
     this.resetSize(24, 24);
     this.childNodes = [];
-    const path0 = new SvgPath(this);
+    const path0 = new SvgPath({ parent: this });
     path0.setData(
       'M176 416a112 112 0 1 1 0 224 112 112 0 0 1 0-224zm336 0a112 112 0 1 1 0 224 112 112 0 0 1 0-224zm336 0a112 112 0 1 1 0 224 112 112 0 0 1 0-224z',
     );
     this.childNodes.push(path0);
+    this.setConfig(config);
   }
 }

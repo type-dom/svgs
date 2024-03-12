@@ -1,8 +1,8 @@
-import { SvgPath, TypeHtml, TypeSvgSvg } from 'type-dom.ts';
+import { ITypeConfig, SvgPath, TypeSvgSvg } from '@type-dom/framework';
 export class BarcodeSvg extends TypeSvgSvg {
   className: 'BarcodeSvg';
   childNodes: [SvgPath];
-  constructor(public parent: TypeHtml) {
+  constructor(config?: ITypeConfig) {
     super();
     this.className = 'BarcodeSvg';
     this.addAttrObj({
@@ -10,7 +10,7 @@ export class BarcodeSvg extends TypeSvgSvg {
       name: 'barcode-svg',
     });
     this.resetSize(24, 24);
-    const path = new SvgPath(this);
+    const path = new SvgPath({ parent: this });
     path.setData('M64 127.808l115.84 0 0 768.384-115.84 0 0-768.384Z',
       'M217.6 127.808l54.464 0 0 768.384-54.464 0 0-768.384Z',
       'M342.912 127.808l68.544 0 0 768.384-68.544 0 0-768.384Z',
@@ -18,5 +18,6 @@ export class BarcodeSvg extends TypeSvgSvg {
       'M688.064 127.808l44.992 0 0 768.384-44.992 0 0-768.384Z',
       'M803.968 127.808l156.032 0 0 768.384-156.032 0 0-768.384Z');
     this.childNodes = [path];
+    this.setConfig(config);
   }
 }

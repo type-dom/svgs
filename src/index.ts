@@ -1,3 +1,3 @@
-export * from './common';
-export * from './element-plus';
-export * from './other';
+export * from './common/index';
+export * from './element-plus/index';
+export * from './other/index';

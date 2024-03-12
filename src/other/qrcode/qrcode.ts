@@ -1,8 +1,8 @@
-import { SvgPath, TypeHtml, TypeSvgSvg } from 'type-dom.ts';
+import { ITypeConfig, SvgPath, TypeSvgSvg } from '@type-dom/framework';
 export class QrcodeSvg extends TypeSvgSvg {
   className: 'QrcodeSvg';
   childNodes: [SvgPath];
-  constructor(public parent: TypeHtml) {
+  constructor(config?: ITypeConfig) {
     super();
     this.className = 'QrcodeSvg';
     this.addAttrObj({
@@ -10,7 +10,7 @@ export class QrcodeSvg extends TypeSvgSvg {
       name: 'qrcode-svg',
     });
     this.resetSize(24, 24);
-    const path = new SvgPath(this);
+    const path = new SvgPath({ parent: this });
     path.setData('M477.098667 546.901333V896H128v-349.098667h349.098667z',
       ' m279.253333 279.253334V896H686.506667v-69.845333h69.845333z',
       ' m139.648 0V896h-69.845333v-69.845333H896z',
@@ -21,5 +21,6 @@ export class QrcodeSvg extends TypeSvgSvg {
       ' m418.901334 0h-209.450667v209.493333h209.493333v-209.493333zM337.493333 267.648v69.802667H267.648V267.648h69.802667z',
       ' m418.901334 0v69.802667H686.506667V267.648h69.845333z');
     this.childNodes = [path];
+    this.setConfig(config);
   }
 }

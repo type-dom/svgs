@@ -1,8 +1,8 @@
-import { SvgPath, TypeHtml, TypeSvgSvg } from 'type-dom.ts';
+import { ITypeConfig, SvgPath, TypeSvgSvg } from '@type-dom/framework';
 export class ElFilmSvg extends TypeSvgSvg {
   className: 'ElFilmSvg';
   childNodes: SvgPath[];
-  constructor(public parent: TypeHtml) {
+  constructor(config?: Partial<ITypeConfig>) {
     super();
     this.className = 'ElFilmSvg';
     this.addAttrObj({
@@ -14,15 +14,16 @@ export class ElFilmSvg extends TypeSvgSvg {
     });
     this.resetSize(24, 24);
     this.childNodes = [];
-    const path0 = new SvgPath(this);
+    const path0 = new SvgPath({ parent: this });
     path0.setData(
       'M160 160v704h704V160H160zm-32-64h768a32 32 0 0 1 32 32v768a32 32 0 0 1-32 32H128a32 32 0 0 1-32-32V128a32 32 0 0 1 32-32z',
     );
     this.childNodes.push(path0);
-    const path1 = new SvgPath(this);
+    const path1 = new SvgPath({ parent: this });
     path1.setData(
       'M320 288V128h64v352h256V128h64v160h160v64H704v128h160v64H704v128h160v64H704v160h-64V544H384v352h-64V736H128v-64h192V544H128v-64h192V352H128v-64h192z',
     );
     this.childNodes.push(path1);
+    this.setConfig(config);
   }
 }

@@ -1,8 +1,8 @@
-import { SvgPath, TypeHtml, TypeSvgSvg } from 'type-dom.ts';
+import { ITypeConfig, SvgPath, TypeHtml, TypeSvgSvg } from '@type-dom/framework';
 export class ImageSvg extends TypeSvgSvg {
   className: 'ImageSvg';
   childNodes: [SvgPath];
-  constructor(public parent: TypeHtml) {
+  constructor(config?: ITypeConfig) {
     super();
     this.className = 'ImageSvg';
     this.addAttrObj({
@@ -10,11 +10,12 @@ export class ImageSvg extends TypeSvgSvg {
       name: 'image-svg',
     });
     this.resetSize(24, 24);
-    const path = new SvgPath(this);
+    const path = new SvgPath({ parent: this });
     path.setData('M64.285706 148.246369l0 727.507262 895.429611 0L959.715317 148.246369 64.285706 148.246369z',
       'M903.750455 819.791062 120.249545 819.791062 120.249545 204.208938l783.50091 0L903.750455 819.791062z',
       'M679.893052 344.114338c0-46.362934 37.58246-83.942831 83.94627-83.942831 46.362787 0 83.94627 37.58092 83.94627 83.942831 0 46.360887-37.584507 83.942831-83.94627 83.942831C717.475512 428.057169 679.893052 390.474202 679.893052 344.114338z',
       'M847.786616 763.829516l-671.572209 0 167.893564-447.696462 223.857403 279.8108 111.928701-83.942831L847.786616 763.829516z');
     this.childNodes = [path];
+    this.setConfig(config);
   }
 }

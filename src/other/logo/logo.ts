@@ -1,8 +1,8 @@
-import { SvgPath, TypeHtml, TypeSvgSvg } from 'type-dom.ts';
+import { SvgPath, ITypeConfig, TypeSvgSvg } from '@type-dom/framework';
 export class LogoSvg extends TypeSvgSvg {
   className: 'LogoSvg';
   childNodes: [SvgPath];
-  constructor(public parent: TypeHtml) {
+  constructor(config?: ITypeConfig) {
     super();
     this.className = 'LogoSvg';
     this.addAttrObj({
@@ -11,7 +11,7 @@ export class LogoSvg extends TypeSvgSvg {
       height: '212',
       viewBox: '0 0 212 212',
     });
-    const path = new SvgPath(this);
+    const path = new SvgPath({ parent: this });
     path.addAttrObj({
       fill: '#192d79',
       opacity: '1.0',
@@ -23,5 +23,6 @@ export class LogoSvg extends TypeSvgSvg {
       'M 120.38 187.06 C 120.01 178.13 128.33 170.53 137.11 170.95 C 141.80 170.99 146.18 173.06 149.59 176.20 C 148.18 177.85 146.77 179.50 145.39 181.18 C 142.10 178.08 137.30 175.82 132.86 177.92 C 125.43 181.13 125.27 193.11 132.45 196.68 C 136.93 199.23 142.18 196.80 145.55 193.55 C 146.99 195.02 148.43 196.48 149.89 197.95 C 146.18 201.57 141.30 204.25 135.95 203.74 C 127.25 203.91 119.65 195.73 120.38 187.06 Z',
       'M 163.85 171.33 C 165.80 171.33 167.76 171.33 169.71 171.34 C 174.34 182.00 178.95 192.68 183.73 203.29 C 181.35 203.27 178.98 203.27 176.61 203.27 C 175.42 200.88 174.97 197.87 173.06 195.98 C 168.68 195.60 164.27 195.96 159.89 195.86 C 158.84 198.32 157.79 200.78 156.79 203.26 C 154.43 203.27 152.07 203.27 149.72 203.29 C 154.69 192.76 159.13 181.98 163.85 171.33 M 166.83 179.90 C 165.24 183.15 163.79 186.48 162.36 189.81 C 165.26 189.83 168.15 189.83 171.04 189.75 C 169.55 186.50 168.14 183.22 166.83 179.90 Z');
     this.childNodes = [path];
+    this.setConfig(config);
   }
 }

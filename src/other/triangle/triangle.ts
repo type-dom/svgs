@@ -1,9 +1,9 @@
-import { SvgPath, TypeHtml, TypeSvgSvg } from 'type-dom.ts';
+import { ITypeConfig, SvgPath, TypeSvgSvg } from '@type-dom/framework';
 export class TriangleSvg extends TypeSvgSvg {
   className: 'TriangleSvg';
   childNodes: [SvgPath];
 
-  constructor(public parent: TypeHtml) {
+  constructor(config?: ITypeConfig) {
     super();
     this.className = 'TriangleSvg';
     this.addAttrObj({
@@ -19,11 +19,12 @@ export class TriangleSvg extends TypeSvgSvg {
     //   marginBottom: '6px',
     //   marginRight: '10px',
     // });
-    const path = new SvgPath(this);
+    const path = new SvgPath({ parent: this });
     // path.addAttrObj({
     //   fill: '#000'
     // });
     path.setData('M819.2 955.6992L1547.3664 45.4656H91.136z');
     this.childNodes = [path];
+    this.setConfig(config);
   }
 }

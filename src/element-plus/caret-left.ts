@@ -1,8 +1,8 @@
-import { SvgPath, TypeHtml, TypeSvgSvg } from 'type-dom.ts';
+import { ITypeConfig, SvgPath, TypeSvgSvg } from '@type-dom/framework';
 export class ElCaretLeftSvg extends TypeSvgSvg {
   className: 'ElCaretLeftSvg';
   childNodes: SvgPath[];
-  constructor(public parent: TypeHtml) {
+  constructor(config?: Partial<ITypeConfig>) {
     super();
     this.className = 'ElCaretLeftSvg';
     this.addAttrObj({
@@ -14,10 +14,11 @@ export class ElCaretLeftSvg extends TypeSvgSvg {
     });
     this.resetSize(24, 24);
     this.childNodes = [];
-    const path0 = new SvgPath(this);
+    const path0 = new SvgPath({ parent: this });
     path0.setData(
       'M672 192 288 511.936 672 832z',
     );
     this.childNodes.push(path0);
+    this.setConfig(config);
   }
 }

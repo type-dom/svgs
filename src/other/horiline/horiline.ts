@@ -1,8 +1,8 @@
-import { SvgPath, TypeHtml, TypeSvgSvg } from 'type-dom.ts';
+import { ITypeConfig, SvgPath, TypeSvgSvg } from '@type-dom/framework';
 export class HorilineSvg extends TypeSvgSvg {
   className: 'HorilineSvg';
   childNodes: [SvgPath];
-  constructor(public parent: TypeHtml) {
+  constructor(config?: ITypeConfig) {
     super();
     this.className = 'HorilineSvg';
     this.addAttrObj({
@@ -10,8 +10,9 @@ export class HorilineSvg extends TypeSvgSvg {
       name: 'horiline-svg',
     });
     this.resetSize(24, 24);
-    const path = new SvgPath(this);
+    const path = new SvgPath({ parent: this });
     path.setData('M1024.11855074 543.8035417l-1024.18760401 0-0.00141421-63.91821038 1024.18972533-0.00070711z');
     this.childNodes = [path];
+    this.setConfig(config);
   }
 }
