@@ -29,7 +29,7 @@ export class AppElement extends TypeRoot {
       border: '20px solid #dddddd'
     });
     this.addChild(
-      new Division({ // 子节点
+      new Div({ // 子节点
         childNodes: [
           new AddSvg(), // 加号图标
         ]
