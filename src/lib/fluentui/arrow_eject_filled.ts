@@ -1,0 +1,24 @@
+import { ITypeConfig, SvgPath, TypeSvgSvg } from '@type-dom/framework';
+export class FlArrowEjectFilledSvg extends TypeSvgSvg {
+  className: 'FlArrowEjectFilledSvg';
+  override childNodes: SvgPath[];
+  constructor(params: ITypeConfig = {}) {
+    super();
+    this.className = 'FlArrowEjectFilledSvg';
+    this.attr.addObj({
+      name: 'FlArrowEjectFilledSvg',
+      title: 'FlArrowEjectFilledSvg'
+    });
+    this.attr.addObj({
+      viewBox: '0 0 20 20',
+    });
+    this.resetSize(24, 24);
+    this.childNodes = [];
+    const path0 = new SvgPath({ attrObj: { fill: 'currentColor' }});
+    path0.setData(
+      'M11.1987 4.60035C10.5986 3.79975 9.39784 3.79991 8.79797 4.60067L4.30222 10.6019C3.56136 11.5909 4.26704 13.0013 5.50272 13.0013H14.4967C15.7325 13.0013 16.4382 11.5905 15.6969 10.6016L11.1987 4.60035ZM4 15C3.72386 15 3.5 15.2239 3.5 15.5C3.5 15.7761 3.72386 16 4 16H16C16.2761 16 16.5 15.7761 16.5 15.5C16.5 15.2239 16.2761 15 16 15H4Z',
+    );
+    this.addChild(path0);
+    this.useParams(params);
+  }
+}

@@ -1,0 +1,24 @@
+import { ITypeConfig, SvgPath, TypeSvgSvg } from '@type-dom/framework';
+export class FlTextTRegularSvg extends TypeSvgSvg {
+  className: 'FlTextTRegularSvg';
+  override childNodes: SvgPath[];
+  constructor(params: ITypeConfig = {}) {
+    super();
+    this.className = 'FlTextTRegularSvg';
+    this.attr.addObj({
+      name: 'FlTextTRegularSvg',
+      title: 'FlTextTRegularSvg'
+    });
+    this.attr.addObj({
+      viewBox: '0 0 20 20',
+    });
+    this.resetSize(24, 24);
+    this.childNodes = [];
+    const path0 = new SvgPath({ attrObj: { fill: 'currentColor' }});
+    path0.setData(
+      'M4 3.5C4 3.22386 4.22386 3 4.5 3H14.5C14.7761 3 15 3.22386 15 3.5V5.5C15 5.77614 14.7761 6 14.5 6C14.2239 6 14 5.77614 14 5.5V4H10V16H11.5C11.7761 16 12 16.2239 12 16.5C12 16.7761 11.7761 17 11.5 17H7.5C7.22386 17 7 16.7761 7 16.5C7 16.2239 7.22386 16 7.5 16H9V4H5V5.5C5 5.77614 4.77614 6 4.5 6C4.22386 6 4 5.77614 4 5.5V3.5Z',
+    );
+    this.addChild(path0);
+    this.useParams(params);
+  }
+}

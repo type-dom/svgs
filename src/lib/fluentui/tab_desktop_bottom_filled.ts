@@ -1,0 +1,24 @@
+import { ITypeConfig, SvgPath, TypeSvgSvg } from '@type-dom/framework';
+export class FlTabDesktopBottomFilledSvg extends TypeSvgSvg {
+  className: 'FlTabDesktopBottomFilledSvg';
+  override childNodes: SvgPath[];
+  constructor(params: ITypeConfig = {}) {
+    super();
+    this.className = 'FlTabDesktopBottomFilledSvg';
+    this.attr.addObj({
+      name: 'FlTabDesktopBottomFilledSvg',
+      title: 'FlTabDesktopBottomFilledSvg'
+    });
+    this.attr.addObj({
+      viewBox: '0 0 20 20',
+    });
+    this.resetSize(24, 24);
+    this.childNodes = [];
+    const path0 = new SvgPath({ attrObj: { fill: 'currentColor' }});
+    path0.setData(
+      'M14.5029 17C15.8836 17 17.0029 15.8807 17.0029 14.5L17.0029 5.5C17.0029 4.11929 15.8836 3 14.5029 3L5.50293 3C4.12222 3 3.00293 4.11929 3.00293 5.5L3.00293 13L10.5029 13C11.3314 13 12.0029 13.6716 12.0029 14.5V17H14.5029ZM11.0029 17V14.5C11.0029 14.2239 10.7791 14 10.5029 14L3.00293 14L3.00293 14.5C3.00293 15.8807 4.12222 17 5.50293 17L11.0029 17Z',
+    );
+    this.addChild(path0);
+    this.useParams(params);
+  }
+}

@@ -21,10 +21,10 @@ export class AppElement extends TypeRoot {
   constructor(editorEl: HTMLElement) {
     super();
     this.className = 'AppElement'; 
-    this.addAttrObj({ // 设置根节点的属性
+    this.attr.addObj({ // 设置根节点的属性
       name: 'app-root'
     })
-    this.addStyleObj({ // 设置根节点样式
+    this.style.addObj({ // 设置根节点样式
       padding: '30px',
       border: '20px solid #dddddd'
     });
@@ -36,20 +36,25 @@ export class AppElement extends TypeRoot {
       }),
       new Br()
     );
-    this.render(); // 渲染
+    this.mount(); // 渲染
   }
 }
 
 // main.ts 项目主程序
-import {fromEvent} from 'rxjs';
-import {AppElement} from "./app-root";
-fromEvent(document, 'DOMContentLoaded').subscribe(() => {
+// 监听 DOMContentLoaded 事件
+document.addEventListener('DOMContentLoaded', function() {
+  // 获取页面中的某个特定元素
   const uiEl = document.querySelector('#example-ref') as HTMLElement;
   if (uiEl) {
+    // 实例化 AppElement 组件
     const view = new AppElement(uiEl);
+  } else {
+    console.error('#example-ref 元素未找到');
   }
 });
+
 ```
+
 ```html
 // index.html
 <!DOCTYPE html>

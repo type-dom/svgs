@@ -2,23 +2,23 @@ import { ITypeConfig, SvgPath, TypeSvgSvg } from '@type-dom/framework';
 export class ElBellFilledSvg extends TypeSvgSvg {
   className: 'ElBellFilledSvg';
   override childNodes: SvgPath[];
-  constructor(config?: Partial<ITypeConfig>) {
+  constructor(params: ITypeConfig = {}) {
     super();
     this.className = 'ElBellFilledSvg';
-    this.addAttrObj({
+    this.attr.addObj({
       name: 'ElBellFilledSvg',
       title: 'ElBellFilledSvg'
     });
-    this.addAttrObj({
+    this.attr.addObj({
       viewBox: '0 0 1024 1024',
     });
     this.resetSize(24, 24);
     this.childNodes = [];
-    const path0 = new SvgPath({ parent: this });
+    const path0 = new SvgPath({ attrObj: { fill: 'currentColor' }});
     path0.setData(
       'M640 832a128 128 0 0 1-256 0h256zm192-64H134.4a38.4 38.4 0 0 1 0-76.8H192V448c0-154.88 110.08-284.16 256.32-313.6a64 64 0 1 1 127.36 0A320.128 320.128 0 0 1 832 448v243.2h57.6a38.4 38.4 0 0 1 0 76.8H832z',
     );
-    this.childNodes.push(path0);
-    this.setConfig(config);
+    this.addChild(path0);
+    this.useParams(params);
   }
 }

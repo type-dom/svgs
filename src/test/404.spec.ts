@@ -1,5 +1,6 @@
 import { Td404Svg } from '../lib/common/404';
 import { Div } from '@type-dom/framework';
+
 describe('Td404Svg', () => {
   it('should work', () => {
     const div = new Div();

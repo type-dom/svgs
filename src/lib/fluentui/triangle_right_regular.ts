@@ -1,0 +1,24 @@
+import { ITypeConfig, SvgPath, TypeSvgSvg } from '@type-dom/framework';
+export class FlTriangleRightRegularSvg extends TypeSvgSvg {
+  className: 'FlTriangleRightRegularSvg';
+  override childNodes: SvgPath[];
+  constructor(params: ITypeConfig = {}) {
+    super();
+    this.className = 'FlTriangleRightRegularSvg';
+    this.attr.addObj({
+      name: 'FlTriangleRightRegularSvg',
+      title: 'FlTriangleRightRegularSvg'
+    });
+    this.attr.addObj({
+      viewBox: '0 0 20 20',
+    });
+    this.resetSize(24, 24);
+    this.childNodes = [];
+    const path0 = new SvgPath({ attrObj: { fill: 'currentColor' }});
+    path0.setData(
+      'M17.215 11.3182C18.2624 10.7509 18.2624 9.24775 17.215 8.68038L5.2164 2.18092C4.21695 1.63953 3.00195 2.36318 3.00195 3.49985V16.4988C3.00195 17.6354 4.21695 18.3591 5.2164 17.8177L17.215 11.3182ZM16.7387 9.55966C17.0878 9.74879 17.0878 10.2498 16.7387 10.439L4.7401 16.9384C4.40695 17.1189 4.00195 16.8777 4.00195 16.4988V3.49985C4.00195 3.12096 4.40695 2.87974 4.7401 3.0602L16.7387 9.55966Z',
+    );
+    this.addChild(path0);
+    this.useParams(params);
+  }
+}

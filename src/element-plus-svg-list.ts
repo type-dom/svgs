@@ -1,5 +1,5 @@
 import { TypeDiv } from '@type-dom/framework';
-import type { IStyle } from '@type-dom/framework';
+import type { IStyle } from '@type-dom/css-type';
 import {
   ElAddLocationSvg,
   ElAimSvg,
@@ -294,14 +294,14 @@ import {
   ElWindPowerSvg,
   ElZoomInSvg,
   ElZoomOutSvg,
-} from '@type-dom/svgs';
+} from './index';
 export class ElementPlusSvgList extends TypeDiv {
   className: 'ElementPlusSvgList';
   constructor() {
     super();
     console.log('ElementPlusSvgList constructor . ');
     this.className = 'ElementPlusSvgList';
-    const $svgStyle: Partial<IStyle> = {
+    const $svgStyle: IStyle = {
       padding: '10px',
       border: '1px solid #ddd'
     };

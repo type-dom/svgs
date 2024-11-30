@@ -1,0 +1,24 @@
+import { ITypeConfig, SvgPath, TypeSvgSvg } from '@type-dom/framework';
+export class FlArrowStepInLeftFilledSvg extends TypeSvgSvg {
+  className: 'FlArrowStepInLeftFilledSvg';
+  override childNodes: SvgPath[];
+  constructor(params: ITypeConfig = {}) {
+    super();
+    this.className = 'FlArrowStepInLeftFilledSvg';
+    this.attr.addObj({
+      name: 'FlArrowStepInLeftFilledSvg',
+      title: 'FlArrowStepInLeftFilledSvg'
+    });
+    this.attr.addObj({
+      viewBox: '0 0 20 20',
+    });
+    this.resetSize(24, 24);
+    this.childNodes = [];
+    const path0 = new SvgPath({ attrObj: { fill: 'currentColor' }});
+    path0.setData(
+      'M4 12C2.89543 12 2 11.1046 2 10C2 8.89543 2.89543 8 4 8C5.10457 8 6 8.89543 6 10C6 11.1046 5.10457 12 4 12ZM18 10C18 10.2761 17.7761 10.5 17.5 10.5H9.70711L12.8536 13.6464C13.0488 13.8417 13.0488 14.1583 12.8536 14.3536C12.6583 14.5488 12.3417 14.5488 12.1464 14.3536L8.14645 10.3536C7.95118 10.1583 7.95118 9.84171 8.14645 9.64645L12.1464 5.64645C12.3417 5.45118 12.6583 5.45118 12.8536 5.64645C13.0488 5.84171 13.0488 6.15829 12.8536 6.35355L9.70711 9.5H17.5C17.7761 9.5 18 9.72386 18 10Z',
+    );
+    this.addChild(path0);
+    this.useParams(params);
+  }
+}

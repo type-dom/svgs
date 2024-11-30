@@ -1,0 +1,24 @@
+import { ITypeConfig, SvgPath, TypeSvgSvg } from '@type-dom/framework';
+export class FlDualScreenPaginationFilledSvg extends TypeSvgSvg {
+  className: 'FlDualScreenPaginationFilledSvg';
+  override childNodes: SvgPath[];
+  constructor(params: ITypeConfig = {}) {
+    super();
+    this.className = 'FlDualScreenPaginationFilledSvg';
+    this.attr.addObj({
+      name: 'FlDualScreenPaginationFilledSvg',
+      title: 'FlDualScreenPaginationFilledSvg'
+    });
+    this.attr.addObj({
+      viewBox: '0 0 20 20',
+    });
+    this.resetSize(24, 24);
+    this.childNodes = [];
+    const path0 = new SvgPath({ attrObj: { fill: 'currentColor' }});
+    path0.setData(
+      'M16 16H10.5V4H16C17.1046 4 18 4.89543 18 6V14C18 15.1046 17.1046 16 16 16ZM4 4H9.5V16H4C2.89543 16 2 15.1046 2 14V6C2 4.89543 2.89543 4 4 4ZM12.5 14C12.7761 14 13 13.7761 13 13.5C13 13.2239 12.7761 13 12.5 13C12.2239 13 12 13.2239 12 13.5C12 13.7761 12.2239 14 12.5 14ZM15 13.5C15 13.2239 14.7761 13 14.5 13C14.2239 13 14 13.2239 14 13.5C14 13.7761 14.2239 14 14.5 14C14.7761 14 15 13.7761 15 13.5ZM16.5 14C16.7761 14 17 13.7761 17 13.5C17 13.2239 16.7761 13 16.5 13C16.2239 13 16 13.2239 16 13.5C16 13.7761 16.2239 14 16.5 14Z',
+    );
+    this.addChild(path0);
+    this.useParams(params);
+  }
+}

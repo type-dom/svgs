@@ -2,28 +2,28 @@ import { ITypeConfig, SvgPath, TypeSvgSvg } from '@type-dom/framework';
 export class ElLocationSvg extends TypeSvgSvg {
   className: 'ElLocationSvg';
   override childNodes: SvgPath[];
-  constructor(config?: Partial<ITypeConfig>) {
+  constructor(params: ITypeConfig = {}) {
     super();
     this.className = 'ElLocationSvg';
-    this.addAttrObj({
+    this.attr.addObj({
       name: 'ElLocationSvg',
       title: 'ElLocationSvg'
     });
-    this.addAttrObj({
+    this.attr.addObj({
       viewBox: '0 0 1024 1024',
     });
     this.resetSize(24, 24);
     this.childNodes = [];
-    const path0 = new SvgPath({ parent: this });
+    const path0 = new SvgPath({ attrObj: { fill: 'currentColor' }});
     path0.setData(
       'M800 416a288 288 0 1 0-576 0c0 118.144 94.528 272.128 288 456.576C705.472 688.128 800 534.144 800 416zM512 960C277.312 746.688 160 565.312 160 416a352 352 0 0 1 704 0c0 149.312-117.312 330.688-352 544z',
     );
-    this.childNodes.push(path0);
-    const path1 = new SvgPath({ parent: this });
+    this.addChild(path0);
+    const path1 = new SvgPath({ attrObj: { fill: 'currentColor' }});
     path1.setData(
       'M512 512a96 96 0 1 0 0-192 96 96 0 0 0 0 192zm0 64a160 160 0 1 1 0-320 160 160 0 0 1 0 320z',
     );
-    this.childNodes.push(path1);
-    this.setConfig(config);
+    this.addChild(path1);
+    this.useParams(params);
   }
 }

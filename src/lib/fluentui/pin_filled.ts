@@ -1,0 +1,24 @@
+import { ITypeConfig, SvgPath, TypeSvgSvg } from '@type-dom/framework';
+export class FlPinFilledSvg extends TypeSvgSvg {
+  className: 'FlPinFilledSvg';
+  override childNodes: SvgPath[];
+  constructor(params: ITypeConfig = {}) {
+    super();
+    this.className = 'FlPinFilledSvg';
+    this.attr.addObj({
+      name: 'FlPinFilledSvg',
+      title: 'FlPinFilledSvg'
+    });
+    this.attr.addObj({
+      viewBox: '0 0 20 20',
+    });
+    this.resetSize(24, 24);
+    this.childNodes = [];
+    const path0 = new SvgPath({ attrObj: { fill: 'currentColor' }});
+    path0.setData(
+      'M13.3251 2.61737C12.3599 1.65208 10.7326 1.91616 10.1221 3.13715L8.39285 6.5956C8.22855 6.92419 7.94939 7.18106 7.60829 7.3175L4.01834 8.75348C3.35177 9.02011 3.17498 9.88142 3.68262 10.3891L6.29289 12.9993L3 16.2922V16.9993H3.70711L7 13.7064L9.61027 16.3167C10.1179 16.8244 10.9792 16.6476 11.2459 15.981L12.6818 12.391C12.8183 12.0499 13.0751 11.7708 13.4037 11.6065L16.8622 9.87726C18.0832 9.26676 18.3472 7.63947 17.382 6.67419L13.3251 2.61737Z',
+    );
+    this.addChild(path0);
+    this.useParams(params);
+  }
+}

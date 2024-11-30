@@ -1,0 +1,24 @@
+import { ITypeConfig, SvgPath, TypeSvgSvg } from '@type-dom/framework';
+export class FlDeviceMeetingRoomRegularSvg extends TypeSvgSvg {
+  className: 'FlDeviceMeetingRoomRegularSvg';
+  override childNodes: SvgPath[];
+  constructor(params: ITypeConfig = {}) {
+    super();
+    this.className = 'FlDeviceMeetingRoomRegularSvg';
+    this.attr.addObj({
+      name: 'FlDeviceMeetingRoomRegularSvg',
+      title: 'FlDeviceMeetingRoomRegularSvg'
+    });
+    this.attr.addObj({
+      viewBox: '0 0 20 20',
+    });
+    this.resetSize(24, 24);
+    this.childNodes = [];
+    const path0 = new SvgPath({ attrObj: { fill: 'currentColor' }});
+    path0.setData(
+      'M6.09587 3C4.92862 3 3.91672 3.80773 3.65804 4.94595L2.06713 11.9459C1.71158 13.5104 2.90066 15 4.50496 15H15.4939C17.0982 15 18.2872 13.5104 17.9317 11.9459L16.3408 4.94595C16.0821 3.80773 15.0702 3 13.903 3H6.09587ZM4.63317 5.16757C4.78838 4.48464 5.39552 4 6.09587 4H13.903C14.6033 4 15.2104 4.48464 15.3657 5.16757L16.9566 12.1676C17.1699 13.1062 16.4564 14 15.4939 14H4.50496C3.54238 14 2.82893 13.1062 3.04226 12.1676L4.63317 5.16757ZM5.49951 16C5.22337 16 4.99951 16.2239 4.99951 16.5C4.99951 16.7761 5.22337 17 5.49951 17H14.4995C14.7757 17 14.9995 16.7761 14.9995 16.5C14.9995 16.2239 14.7757 16 14.4995 16H5.49951Z',
+    );
+    this.addChild(path0);
+    this.useParams(params);
+  }
+}

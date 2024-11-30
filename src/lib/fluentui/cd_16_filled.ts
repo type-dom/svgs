@@ -1,0 +1,24 @@
+import { ITypeConfig, SvgPath, TypeSvgSvg } from '@type-dom/framework';
+export class FlCd16FilledSvg extends TypeSvgSvg {
+  className: 'FlCd16FilledSvg';
+  override childNodes: SvgPath[];
+  constructor(params: ITypeConfig = {}) {
+    super();
+    this.className = 'FlCd16FilledSvg';
+    this.attr.addObj({
+      name: 'FlCd16FilledSvg',
+      title: 'FlCd16FilledSvg'
+    });
+    this.attr.addObj({
+      viewBox: '0 0 16 16',
+    });
+    this.resetSize(24, 24);
+    this.childNodes = [];
+    const path0 = new SvgPath({ attrObj: { fill: 'currentColor' }});
+    path0.setData(
+      'M8 6C9.105 6 10 6.895 10 8C10 9.105 9.105 10 8 10C6.895 10 6 9.105 6 8C6 6.895 6.895 6 8 6ZM8 9C7.448 9 7 8.552 7 8C7 7.448 7.448 7 8 7C8.552 7 9 7.448 9 8C9 8.552 8.552 9 8 9ZM8 2C4.686 2 2 4.686 2 8C2 11.314 4.686 14 8 14C11.314 14 14 11.314 14 8C14 4.686 11.314 2 8 2Z',
+    );
+    this.addChild(path0);
+    this.useParams(params);
+  }
+}

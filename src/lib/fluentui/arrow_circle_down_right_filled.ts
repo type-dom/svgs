@@ -1,0 +1,24 @@
+import { ITypeConfig, SvgPath, TypeSvgSvg } from '@type-dom/framework';
+export class FlArrowCircleDownRightFilledSvg extends TypeSvgSvg {
+  className: 'FlArrowCircleDownRightFilledSvg';
+  override childNodes: SvgPath[];
+  constructor(params: ITypeConfig = {}) {
+    super();
+    this.className = 'FlArrowCircleDownRightFilledSvg';
+    this.attr.addObj({
+      name: 'FlArrowCircleDownRightFilledSvg',
+      title: 'FlArrowCircleDownRightFilledSvg'
+    });
+    this.attr.addObj({
+      viewBox: '0 0 20 20',
+    });
+    this.resetSize(24, 24);
+    this.childNodes = [];
+    const path0 = new SvgPath({ attrObj: { fill: 'currentColor' }});
+    path0.setData(
+      'M10 2C5.58172 2 2 5.58172 2 10C2 14.4183 5.58172 18 10 18C14.4183 18 18 14.4183 18 10C18 5.58172 14.4183 2 10 2ZM12.8514 12.8557C12.804 12.9026 12.7495 12.938 12.6914 12.9621C12.6324 12.9865 12.5678 13 12.5 13H7.5C7.22386 13 7 12.7761 7 12.5C7 12.2239 7.22386 12 7.5 12H11.2929L7.14645 7.85355C6.95118 7.65829 6.95118 7.34171 7.14645 7.14645C7.34171 6.95118 7.65829 6.95118 7.85355 7.14645L12 11.2929L12 7.5C12 7.22386 12.2239 7 12.5 7C12.7761 7 13 7.22386 13 7.5V12.5C13 12.5678 12.9865 12.6324 12.9621 12.6914C12.938 12.7495 12.9026 12.804 12.8557 12.8514L12.8514 12.8557Z',
+    );
+    this.addChild(path0);
+    this.useParams(params);
+  }
+}

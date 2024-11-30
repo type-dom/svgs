@@ -1,0 +1,24 @@
+import { ITypeConfig, SvgPath, TypeSvgSvg } from '@type-dom/framework';
+export class FlCameraFilledSvg extends TypeSvgSvg {
+  className: 'FlCameraFilledSvg';
+  override childNodes: SvgPath[];
+  constructor(params: ITypeConfig = {}) {
+    super();
+    this.className = 'FlCameraFilledSvg';
+    this.attr.addObj({
+      name: 'FlCameraFilledSvg',
+      title: 'FlCameraFilledSvg'
+    });
+    this.attr.addObj({
+      viewBox: '0 0 20 20',
+    });
+    this.resetSize(24, 24);
+    this.childNodes = [];
+    const path0 = new SvgPath({ attrObj: { fill: 'currentColor' }});
+    path0.setData(
+      'M7.00018 10C7.00018 8.34315 8.34333 7 10.0002 7C11.657 7 13.0002 8.34315 13.0002 10C13.0002 11.6569 11.657 13 10.0002 13C8.34333 13 7.00018 11.6569 7.00018 10ZM6.78386 2.82643C7.03849 2.31977 7.55707 2 8.12412 2H11.8883C12.4565 2 12.976 2.32106 13.23 2.8293L13.8149 3.9994H15.5049C16.8856 3.9994 18.0049 5.11869 18.0049 6.4994V14.5C18.0049 15.8807 16.8856 17 15.5049 17H4.50488C3.12417 17 2.00488 15.8807 2.00488 14.5V6.4994C2.00488 5.11868 3.12417 3.9994 4.50488 3.9994H6.19437L6.78386 2.82643ZM10.0002 6C7.79104 6 6.00018 7.79086 6.00018 10C6.00018 12.2091 7.79104 14 10.0002 14C12.2093 14 14.0002 12.2091 14.0002 10C14.0002 7.79086 12.2093 6 10.0002 6Z',
+    );
+    this.addChild(path0);
+    this.useParams(params);
+  }
+}

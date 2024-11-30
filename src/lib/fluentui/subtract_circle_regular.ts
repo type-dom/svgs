@@ -1,0 +1,24 @@
+import { ITypeConfig, SvgPath, TypeSvgSvg } from '@type-dom/framework';
+export class FlSubtractCircleRegularSvg extends TypeSvgSvg {
+  className: 'FlSubtractCircleRegularSvg';
+  override childNodes: SvgPath[];
+  constructor(params: ITypeConfig = {}) {
+    super();
+    this.className = 'FlSubtractCircleRegularSvg';
+    this.attr.addObj({
+      name: 'FlSubtractCircleRegularSvg',
+      title: 'FlSubtractCircleRegularSvg'
+    });
+    this.attr.addObj({
+      viewBox: '0 0 20 20',
+    });
+    this.resetSize(24, 24);
+    this.childNodes = [];
+    const path0 = new SvgPath({ attrObj: { fill: 'currentColor' }});
+    path0.setData(
+      'M6 10C6 9.72386 6.22386 9.5 6.5 9.5C10.7032 9.5 8.98852 9.5 13.5 9.5C13.7761 9.5 14 9.72386 14 10C14 10.2761 13.7761 10.5 13.5 10.5C9.29954 10.5 11.0162 10.5 6.5 10.5C6.22386 10.5 6 10.2761 6 10ZM10 18C14.4183 18 18 14.4183 18 10C18 5.58172 14.4183 2 10 2C5.58172 2 2 5.58172 2 10C2 14.4183 5.58172 18 10 18ZM10 17C6.13401 17 3 13.866 3 10C3 6.13401 6.13401 3 10 3C13.866 3 17 6.13401 17 10C17 13.866 13.866 17 10 17Z',
+    );
+    this.addChild(path0);
+    this.useParams(params);
+  }
+}

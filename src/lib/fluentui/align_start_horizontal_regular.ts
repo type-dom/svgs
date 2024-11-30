@@ -1,0 +1,29 @@
+import { ITypeConfig, SvgPath, TypeSvgSvg } from '@type-dom/framework';
+export class FlAlignStartHorizontalRegularSvg extends TypeSvgSvg {
+  className: 'FlAlignStartHorizontalRegularSvg';
+  override childNodes: SvgPath[];
+  constructor(params: ITypeConfig = {}) {
+    super();
+    this.className = 'FlAlignStartHorizontalRegularSvg';
+    this.attr.addObj({
+      name: 'FlAlignStartHorizontalRegularSvg',
+      title: 'FlAlignStartHorizontalRegularSvg'
+    });
+    this.attr.addObj({
+      viewBox: '0 0 20 20',
+    });
+    this.resetSize(24, 24);
+    this.childNodes = [];
+    const path0 = new SvgPath({ attrObj: { fill: 'currentColor' }});
+    path0.setData(
+      'M3.5 18C3.22386 18 3 17.7761 3 17.5V2.5C3 2.22386 3.22386 2 3.5 2C3.77614 2 4 2.22386 4 2.5V17.5C4 17.7761 3.77614 18 3.5 18Z',
+    );
+    this.addChild(path0);
+    const path1 = new SvgPath({ attrObj: { fill: 'currentColor' }});
+    path1.setData(
+      'M8 4C6.89543 4 6 4.89543 6 6V14C6 15.1046 6.89543 16 8 16H10C11.1046 16 12 15.1046 12 14V6C12 4.89543 11.1046 4 10 4H8ZM7 6C7 5.44772 7.44772 5 8 5H10C10.5523 5 11 5.44772 11 6V14C11 14.5523 10.5523 15 10 15H8C7.44772 15 7 14.5523 7 14V6Z',
+    );
+    this.addChild(path1);
+    this.useParams(params);
+  }
+}

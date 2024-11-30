@@ -1,0 +1,24 @@
+import { ITypeConfig, SvgPath, TypeSvgSvg } from '@type-dom/framework';
+export class FlDataBarHorizontalFilledSvg extends TypeSvgSvg {
+  className: 'FlDataBarHorizontalFilledSvg';
+  override childNodes: SvgPath[];
+  constructor(params: ITypeConfig = {}) {
+    super();
+    this.className = 'FlDataBarHorizontalFilledSvg';
+    this.attr.addObj({
+      name: 'FlDataBarHorizontalFilledSvg',
+      title: 'FlDataBarHorizontalFilledSvg'
+    });
+    this.attr.addObj({
+      viewBox: '0 0 20 20',
+    });
+    this.resetSize(24, 24);
+    this.childNodes = [];
+    const path0 = new SvgPath({ attrObj: { fill: 'currentColor' }});
+    path0.setData(
+      'M4 2C2.89543 2 2 2.89543 2 4C2 5.10457 2.89543 6 4 6H9C10.1046 6 11 5.10457 11 4C11 2.89543 10.1046 2 9 2H4ZM4 8C2.89543 8 2 8.89543 2 10C2 11.1046 2.89543 12 4 12H12C13.1046 12 14 11.1046 14 10C14 8.89543 13.1046 8 12 8H4ZM4 14C2.89543 14 2 14.8954 2 16C2 17.1046 2.89543 18 4 18H16C17.1046 18 18 17.1046 18 16C18 14.8954 17.1046 14 16 14H4Z',
+    );
+    this.addChild(path0);
+    this.useParams(params);
+  }
+}

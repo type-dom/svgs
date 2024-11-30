@@ -1,0 +1,24 @@
+import { ITypeConfig, SvgPath, TypeSvgSvg } from '@type-dom/framework';
+export class FlArrowCircleLeftFilledSvg extends TypeSvgSvg {
+  className: 'FlArrowCircleLeftFilledSvg';
+  override childNodes: SvgPath[];
+  constructor(params: ITypeConfig = {}) {
+    super();
+    this.className = 'FlArrowCircleLeftFilledSvg';
+    this.attr.addObj({
+      name: 'FlArrowCircleLeftFilledSvg',
+      title: 'FlArrowCircleLeftFilledSvg'
+    });
+    this.attr.addObj({
+      viewBox: '0 0 20 20',
+    });
+    this.resetSize(24, 24);
+    this.childNodes = [];
+    const path0 = new SvgPath({ attrObj: { fill: 'currentColor' }});
+    path0.setData(
+      'M10 18C5.58172 18 2 14.4183 2 10C2 5.58172 5.58172 2 10 2C14.4183 2 18 5.58172 18 10C18 14.4183 14.4183 18 10 18ZM9.14645 13.3536C9.34171 13.5488 9.65829 13.5488 9.85355 13.3536C10.0488 13.1583 10.0488 12.8417 9.85355 12.6464L7.70711 10.5H13.5C13.7761 10.5 14 10.2761 14 10C14 9.72386 13.7761 9.5 13.5 9.5H7.70711L9.85355 7.35355C10.0488 7.15829 10.0488 6.84171 9.85355 6.64645C9.65829 6.45118 9.34171 6.45118 9.14645 6.64645L6.14645 9.64645C5.95118 9.84171 5.95118 10.1583 6.14645 10.3536L9.14645 13.3536Z',
+    );
+    this.addChild(path0);
+    this.useParams(params);
+  }
+}

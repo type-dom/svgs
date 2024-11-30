@@ -1,0 +1,24 @@
+import { ITypeConfig, SvgPath, TypeSvgSvg } from '@type-dom/framework';
+export class FlArrowTurnRightUpFilledSvg extends TypeSvgSvg {
+  className: 'FlArrowTurnRightUpFilledSvg';
+  override childNodes: SvgPath[];
+  constructor(params: ITypeConfig = {}) {
+    super();
+    this.className = 'FlArrowTurnRightUpFilledSvg';
+    this.attr.addObj({
+      name: 'FlArrowTurnRightUpFilledSvg',
+      title: 'FlArrowTurnRightUpFilledSvg'
+    });
+    this.attr.addObj({
+      viewBox: '0 0 20 20',
+    });
+    this.resetSize(24, 24);
+    this.childNodes = [];
+    const path0 = new SvgPath({ attrObj: { fill: 'currentColor' }});
+    path0.setData(
+      'M16.7803 9.28033C17.0732 8.98744 17.0732 8.51256 16.7803 8.21967L12.7803 4.21967C12.4874 3.92678 12.0126 3.92678 11.7197 4.21967L7.71967 8.21967C7.42678 8.51256 7.42678 8.98744 7.71967 9.28033C8.01256 9.57322 8.48744 9.57322 8.78033 9.28033L11.5 6.56066V13C11.5 13.8284 10.8284 14.5 10 14.5H3.75C3.33579 14.5 3 14.8358 3 15.25C3 15.6642 3.33579 16 3.75 16H10C11.6569 16 13 14.6569 13 13V6.56066L15.7197 9.28033C16.0126 9.57322 16.4874 9.57322 16.7803 9.28033Z',
+    );
+    this.addChild(path0);
+    this.useParams(params);
+  }
+}

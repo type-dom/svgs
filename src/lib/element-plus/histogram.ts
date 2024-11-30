@@ -2,23 +2,23 @@ import { ITypeConfig, SvgPath, TypeSvgSvg } from '@type-dom/framework';
 export class ElHistogramSvg extends TypeSvgSvg {
   className: 'ElHistogramSvg';
   override childNodes: SvgPath[];
-  constructor(config?: Partial<ITypeConfig>) {
+  constructor(params: ITypeConfig = {}) {
     super();
     this.className = 'ElHistogramSvg';
-    this.addAttrObj({
+    this.attr.addObj({
       name: 'ElHistogramSvg',
       title: 'ElHistogramSvg'
     });
-    this.addAttrObj({
+    this.attr.addObj({
       viewBox: '0 0 1024 1024',
     });
     this.resetSize(24, 24);
     this.childNodes = [];
-    const path0 = new SvgPath({ parent: this });
+    const path0 = new SvgPath({ attrObj: { fill: 'currentColor' }});
     path0.setData(
       'M416 896V128h192v768H416zm-288 0V448h192v448H128zm576 0V320h192v576H704z',
     );
-    this.childNodes.push(path0);
-    this.setConfig(config);
+    this.addChild(path0);
+    this.useParams(params);
   }
 }

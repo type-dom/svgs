@@ -1,0 +1,24 @@
+import { ITypeConfig, SvgPath, TypeSvgSvg } from '@type-dom/framework';
+export class FlCheckmarkUnderlineCircleFilledSvg extends TypeSvgSvg {
+  className: 'FlCheckmarkUnderlineCircleFilledSvg';
+  override childNodes: SvgPath[];
+  constructor(params: ITypeConfig = {}) {
+    super();
+    this.className = 'FlCheckmarkUnderlineCircleFilledSvg';
+    this.attr.addObj({
+      name: 'FlCheckmarkUnderlineCircleFilledSvg',
+      title: 'FlCheckmarkUnderlineCircleFilledSvg'
+    });
+    this.attr.addObj({
+      viewBox: '0 0 20 20',
+    });
+    this.resetSize(24, 24);
+    this.childNodes = [];
+    const path0 = new SvgPath({ attrObj: { fill: 'currentColor' }});
+    path0.setData(
+      'M10 18C14.4183 18 18 14.4183 18 10C18 5.58172 14.4183 2 10 2C5.58172 2 2 5.58172 2 10C2 14.4183 5.58172 18 10 18ZM13.8536 6.14645C14.0488 6.34171 14.0488 6.65829 13.8536 6.85355L9.85355 10.8536C9.65829 11.0488 9.34171 11.0488 9.14645 10.8536L7.14645 8.85355C6.95118 8.65829 6.95118 8.34171 7.14645 8.14645C7.34171 7.95118 7.65829 7.95118 7.85355 8.14645L9.5 9.79289L13.1464 6.14645C13.3417 5.95118 13.6583 5.95118 13.8536 6.14645ZM7.5 13H12.4983C12.7744 13 12.9983 13.2239 12.9983 13.5C12.9983 13.7761 12.7744 14 12.4983 14H7.5C7.22386 14 7 13.7761 7 13.5C7 13.2239 7.22386 13 7.5 13Z',
+    );
+    this.addChild(path0);
+    this.useParams(params);
+  }
+}

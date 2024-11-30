@@ -1,0 +1,24 @@
+import { ITypeConfig, SvgPath, TypeSvgSvg } from '@type-dom/framework';
+export class FlTextboxAlignMiddleRotate90FilledSvg extends TypeSvgSvg {
+  className: 'FlTextboxAlignMiddleRotate90FilledSvg';
+  override childNodes: SvgPath[];
+  constructor(params: ITypeConfig = {}) {
+    super();
+    this.className = 'FlTextboxAlignMiddleRotate90FilledSvg';
+    this.attr.addObj({
+      name: 'FlTextboxAlignMiddleRotate90FilledSvg',
+      title: 'FlTextboxAlignMiddleRotate90FilledSvg'
+    });
+    this.attr.addObj({
+      viewBox: '0 0 20 20',
+    });
+    this.resetSize(24, 24);
+    this.childNodes = [];
+    const path0 = new SvgPath({ attrObj: { fill: 'currentColor' }});
+    path0.setData(
+      'M17 5.5C17 4.11929 15.8807 3 14.5 3H5.5C4.11929 3 3 4.11929 3 5.5V14.5C3 15.8807 4.11929 17 5.5 17H14.5C15.8807 17 17 15.8807 17 14.5V5.5ZM12 6.5V13.5C12 13.7761 11.7761 14 11.5 14C11.2239 14 11 13.7761 11 13.5V6.5C11 6.22386 11.2239 6 11.5 6C11.7761 6 12 6.22386 12 6.5ZM9 6.5V13.5C9 13.7761 8.77614 14 8.5 14C8.22386 14 8 13.7761 8 13.5V6.5C8 6.22386 8.22386 6 8.5 6C8.77614 6 9 6.22386 9 6.5Z',
+    );
+    this.addChild(path0);
+    this.useParams(params);
+  }
+}
