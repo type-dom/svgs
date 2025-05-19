@@ -1,0 +1,24 @@
+import { TypeProps, SvgPath, TypeSvgSvg } from '@type-dom/framework';
+export class FlCropRegularSvg extends TypeSvgSvg {
+  className: 'FlCropRegularSvg';
+  override childNodes: SvgPath[];
+  constructor(params: TypeProps = {}) {
+    super();
+    this.className = 'FlCropRegularSvg';
+    this.attr.addObj({
+      name: 'FlCropRegularSvg',
+      title: 'FlCropRegularSvg'
+    });
+    this.attr.addObj({
+      viewBox: '0 0 20 20',
+    });
+    this.resetSize(24, 24);
+    this.childNodes = [];
+    const path0 = new SvgPath({ attrObj: { fill: 'currentColor' }});
+    path0.setData(
+      'M6 2.5C6 2.22386 5.77614 2 5.5 2C5.22386 2 5 2.22386 5 2.5V5H2.5C2.22386 5 2 5.22386 2 5.5C2 5.77614 2.22386 6 2.5 6H5V12.5C5 13.8807 6.11929 15 7.5 15H14V17.5C14 17.7761 14.2239 18 14.5 18C14.7761 18 15 17.7761 15 17.5V15H17.5C17.7761 15 18 14.7761 18 14.5C18 14.2239 17.7761 14 17.5 14H7.5C6.67157 14 6 13.3284 6 12.5V2.5ZM14 7.5V13H15V7.5C15 6.11929 13.8807 5 12.5 5H7V6H12.5C13.3284 6 14 6.67157 14 7.5Z',
+    );
+    this.addChild(path0);
+    this.useParams(params);
+  }
+}

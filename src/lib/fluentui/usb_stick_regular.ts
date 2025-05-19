@@ -1,0 +1,24 @@
+import { TypeProps, SvgPath, TypeSvgSvg } from '@type-dom/framework';
+export class FlUsbStickRegularSvg extends TypeSvgSvg {
+  className: 'FlUsbStickRegularSvg';
+  override childNodes: SvgPath[];
+  constructor(params: TypeProps = {}) {
+    super();
+    this.className = 'FlUsbStickRegularSvg';
+    this.attr.addObj({
+      name: 'FlUsbStickRegularSvg',
+      title: 'FlUsbStickRegularSvg'
+    });
+    this.attr.addObj({
+      viewBox: '0 0 20 20',
+    });
+    this.resetSize(24, 24);
+    this.childNodes = [];
+    const path0 = new SvgPath({ attrObj: { fill: 'currentColor' }});
+    path0.setData(
+      'M7.5 2H12.5C12.7761 2 13 2.22386 13 2.5V6C14.1046 6 15 6.89543 15 8V16C15 17.1046 14.1046 18 13 18H7C5.89543 18 5 17.1046 5 16V8C5 6.89543 5.89543 6 7 6V2.5C7 2.22386 7.22386 2 7.5 2ZM12 6V3H8V6H12ZM7 7C6.44772 7 6 7.44772 6 8V16C6 16.5523 6.44772 17 7 17H13C13.5523 17 14 16.5523 14 16V8C14 7.44772 13.5523 7 13 7H7Z',
+    );
+    this.addChild(path0);
+    this.useParams(params);
+  }
+}

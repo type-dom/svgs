@@ -1,0 +1,24 @@
+import { TypeProps, SvgPath, TypeSvgSvg } from '@type-dom/framework';
+export class FlNextFrameFilledSvg extends TypeSvgSvg {
+  className: 'FlNextFrameFilledSvg';
+  override childNodes: SvgPath[];
+  constructor(params: TypeProps = {}) {
+    super();
+    this.className = 'FlNextFrameFilledSvg';
+    this.attr.addObj({
+      name: 'FlNextFrameFilledSvg',
+      title: 'FlNextFrameFilledSvg'
+    });
+    this.attr.addObj({
+      viewBox: '0 0 20 20',
+    });
+    this.resetSize(24, 24);
+    this.childNodes = [];
+    const path0 = new SvgPath({ attrObj: { fill: 'currentColor' }});
+    path0.setData(
+      'M4.5 3C4.77614 3 5 3.22386 5 3.5V16.5C5 16.7761 4.77614 17 4.5 17C4.22386 17 4 16.7761 4 16.5V3.5C4 3.22386 4.22386 3 4.5 3ZM9.94683 3.21436C9.11642 2.65676 8 3.25186 8 4.25211V15.7521C8 16.7562 9.12422 17.3505 9.954 16.785L18.4533 10.9921C19.1843 10.4938 19.1806 9.41464 18.4461 8.92144L9.94683 3.21436Z',
+    );
+    this.addChild(path0);
+    this.useParams(params);
+  }
+}

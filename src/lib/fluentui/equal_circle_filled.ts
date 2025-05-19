@@ -1,0 +1,24 @@
+import { TypeProps, SvgPath, TypeSvgSvg } from '@type-dom/framework';
+export class FlEqualCircleFilledSvg extends TypeSvgSvg {
+  className: 'FlEqualCircleFilledSvg';
+  override childNodes: SvgPath[];
+  constructor(params: TypeProps = {}) {
+    super();
+    this.className = 'FlEqualCircleFilledSvg';
+    this.attr.addObj({
+      name: 'FlEqualCircleFilledSvg',
+      title: 'FlEqualCircleFilledSvg'
+    });
+    this.attr.addObj({
+      viewBox: '0 0 20 20',
+    });
+    this.resetSize(24, 24);
+    this.childNodes = [];
+    const path0 = new SvgPath({ attrObj: { fill: 'currentColor' }});
+    path0.setData(
+      'M10 2C14.4183 2 18 5.58172 18 10C18 14.4183 14.4183 18 10 18C5.58172 18 2 14.4183 2 10C2 5.58172 5.58172 2 10 2ZM13.5 9C13.7761 9 14 8.77614 14 8.5C14 8.22386 13.7761 8 13.5 8H6.5C6.22386 8 6 8.22386 6 8.5C6 8.77614 6.22386 9 6.5 9H13.5ZM13.5 12C13.7761 12 14 11.7761 14 11.5C14 11.2239 13.7761 11 13.5 11H6.5C6.22386 11 6 11.2239 6 11.5C6 11.7761 6.22386 12 6.5 12H13.5Z',
+    );
+    this.addChild(path0);
+    this.useParams(params);
+  }
+}

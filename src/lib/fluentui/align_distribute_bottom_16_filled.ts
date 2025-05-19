@@ -1,0 +1,24 @@
+import { TypeProps, SvgPath, TypeSvgSvg } from '@type-dom/framework';
+export class FlAlignDistributeBottom16FilledSvg extends TypeSvgSvg {
+  className: 'FlAlignDistributeBottom16FilledSvg';
+  override childNodes: SvgPath[];
+  constructor(params: TypeProps = {}) {
+    super();
+    this.className = 'FlAlignDistributeBottom16FilledSvg';
+    this.attr.addObj({
+      name: 'FlAlignDistributeBottom16FilledSvg',
+      title: 'FlAlignDistributeBottom16FilledSvg'
+    });
+    this.attr.addObj({
+      viewBox: '0 0 16 16',
+    });
+    this.resetSize(24, 24);
+    this.childNodes = [];
+    const path0 = new SvgPath({ attrObj: { fill: 'currentColor' }});
+    path0.setData(
+      'M14.5 15C14.7761 15 15 14.7761 15 14.5C15 14.2239 14.7761 14 14.5 14H1.5C1.22386 14 1 14.2239 1 14.5C1 14.7761 1.22386 15 1.5 15L14.5 15ZM14.5 8C14.7761 8 15 7.77614 15 7.5C15 7.22386 14.7761 7 14.5 7L1.5 7C1.22386 7 1 7.22386 1 7.5C1 7.77614 1.22386 8 1.5 8L14.5 8ZM3 3.5C3 2.67157 3.67157 2 4.5 2L11.5 2C12.3284 2 13 2.67157 13 3.5V4.5C13 5.32843 12.3284 6 11.5 6L4.5 6C3.67157 6 3 5.32843 3 4.5V3.5ZM6.5 9C5.67157 9 5 9.67157 5 10.5V11.5C5 12.3284 5.67157 13 6.5 13H9.5C10.3284 13 11 12.3284 11 11.5V10.5C11 9.67157 10.3284 9 9.5 9H6.5Z',
+    );
+    this.addChild(path0);
+    this.useParams(params);
+  }
+}

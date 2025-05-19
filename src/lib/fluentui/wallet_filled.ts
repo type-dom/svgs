@@ -1,0 +1,24 @@
+import { TypeProps, SvgPath, TypeSvgSvg } from '@type-dom/framework';
+export class FlWalletFilledSvg extends TypeSvgSvg {
+  className: 'FlWalletFilledSvg';
+  override childNodes: SvgPath[];
+  constructor(params: TypeProps = {}) {
+    super();
+    this.className = 'FlWalletFilledSvg';
+    this.attr.addObj({
+      name: 'FlWalletFilledSvg',
+      title: 'FlWalletFilledSvg'
+    });
+    this.attr.addObj({
+      viewBox: '0 0 20 20',
+    });
+    this.resetSize(24, 24);
+    this.childNodes = [];
+    const path0 = new SvgPath({ attrObj: { fill: 'currentColor' }});
+    path0.setData(
+      'M4.5 3C3.67157 3 3 3.67157 3 4.5V14.5C3 15.8807 4.11929 17 5.5 17H15C16.1046 17 17 16.1046 17 15V7C17 6.25972 16.5978 5.61337 16 5.26756V5C16 3.89543 15.1046 3 14 3H4.5ZM15 5H4.5C4.22386 5 4 4.77614 4 4.5C4 4.22386 4.22386 4 4.5 4H14C14.5523 4 15 4.44772 15 5ZM13.5 11H14.5C14.7761 11 15 11.2239 15 11.5C15 11.7761 14.7761 12 14.5 12H13.5C13.2239 12 13 11.7761 13 11.5C13 11.2239 13.2239 11 13.5 11Z',
+    );
+    this.addChild(path0);
+    this.useParams(params);
+  }
+}

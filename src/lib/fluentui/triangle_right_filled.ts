@@ -1,0 +1,24 @@
+import { TypeProps, SvgPath, TypeSvgSvg } from '@type-dom/framework';
+export class FlTriangleRightFilledSvg extends TypeSvgSvg {
+  className: 'FlTriangleRightFilledSvg';
+  override childNodes: SvgPath[];
+  constructor(params: TypeProps = {}) {
+    super();
+    this.className = 'FlTriangleRightFilledSvg';
+    this.attr.addObj({
+      name: 'FlTriangleRightFilledSvg',
+      title: 'FlTriangleRightFilledSvg'
+    });
+    this.attr.addObj({
+      viewBox: '0 0 20 20',
+    });
+    this.resetSize(24, 24);
+    this.childNodes = [];
+    const path0 = new SvgPath({ attrObj: { fill: 'currentColor' }});
+    path0.setData(
+      'M17.215 8.68038C18.2624 9.24775 18.2624 10.7509 17.215 11.3182L5.2164 17.8177C4.21695 18.3591 3.00195 17.6354 3.00195 16.4988V3.49985C3.00195 2.36318 4.21695 1.63953 5.2164 2.18092L17.215 8.68038Z',
+    );
+    this.addChild(path0);
+    this.useParams(params);
+  }
+}

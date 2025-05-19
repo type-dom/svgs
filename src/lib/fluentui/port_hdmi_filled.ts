@@ -1,0 +1,24 @@
+import { TypeProps, SvgPath, TypeSvgSvg } from '@type-dom/framework';
+export class FlPortHdmiFilledSvg extends TypeSvgSvg {
+  className: 'FlPortHdmiFilledSvg';
+  override childNodes: SvgPath[];
+  constructor(params: TypeProps = {}) {
+    super();
+    this.className = 'FlPortHdmiFilledSvg';
+    this.attr.addObj({
+      name: 'FlPortHdmiFilledSvg',
+      title: 'FlPortHdmiFilledSvg'
+    });
+    this.attr.addObj({
+      viewBox: '0 0 20 20',
+    });
+    this.resetSize(24, 24);
+    this.childNodes = [];
+    const path0 = new SvgPath({ attrObj: { fill: 'currentColor' }});
+    path0.setData(
+      'M4.85355 7.43934C5.13486 7.15804 5.51639 7 5.91421 7H14.0858C14.4836 7 14.8651 7.15804 15.1464 7.43934L17.5607 9.85355C17.842 10.1349 18 10.5164 18 10.9142V11.5C18 12.3284 17.3284 13 16.5 13H3.5C2.67157 13 2 12.3284 2 11.5V10.9142C2 10.5164 2.15804 10.1349 2.43934 9.85355L4.85355 7.43934ZM6.5 9.5C6.22386 9.5 6 9.72386 6 10C6 10.2761 6.22386 10.5 6.5 10.5H13.5C13.7761 10.5 14 10.2761 14 10C14 9.72386 13.7761 9.5 13.5 9.5H6.5Z',
+    );
+    this.addChild(path0);
+    this.useParams(params);
+  }
+}

@@ -1,0 +1,29 @@
+import { TypeProps, SvgPath, TypeSvgSvg } from '@type-dom/framework';
+export class FlAlignSpaceBetweenVerticalFilledSvg extends TypeSvgSvg {
+  className: 'FlAlignSpaceBetweenVerticalFilledSvg';
+  override childNodes: SvgPath[];
+  constructor(params: TypeProps = {}) {
+    super();
+    this.className = 'FlAlignSpaceBetweenVerticalFilledSvg';
+    this.attr.addObj({
+      name: 'FlAlignSpaceBetweenVerticalFilledSvg',
+      title: 'FlAlignSpaceBetweenVerticalFilledSvg'
+    });
+    this.attr.addObj({
+      viewBox: '0 0 20 20',
+    });
+    this.resetSize(24, 24);
+    this.childNodes = [];
+    const path0 = new SvgPath({ attrObj: { fill: 'currentColor' }});
+    path0.setData(
+      'M3 4C1.89543 4 1 4.89543 1 6V14C1 15.1046 1.89543 16 3 16H4C5.10457 16 6 15.1046 6 14V6C6 4.89543 5.10457 4 4 4H3Z',
+    );
+    this.addChild(path0);
+    const path1 = new SvgPath({ attrObj: { fill: 'currentColor' }});
+    path1.setData(
+      'M16 4C14.8954 4 14 4.89543 14 6V14C14 15.1046 14.8954 16 16 16H17C18.1046 16 19 15.1046 19 14V6C19 4.89543 18.1046 4 17 4H16Z',
+    );
+    this.addChild(path1);
+    this.useParams(params);
+  }
+}

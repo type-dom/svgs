@@ -1,0 +1,34 @@
+import { TypeProps, SvgPath, TypeSvgSvg } from '@type-dom/framework';
+export class FlCenterHorizontalRegularSvg extends TypeSvgSvg {
+  className: 'FlCenterHorizontalRegularSvg';
+  override childNodes: SvgPath[];
+  constructor(params: TypeProps = {}) {
+    super();
+    this.className = 'FlCenterHorizontalRegularSvg';
+    this.attr.addObj({
+      name: 'FlCenterHorizontalRegularSvg',
+      title: 'FlCenterHorizontalRegularSvg'
+    });
+    this.attr.addObj({
+      viewBox: '0 0 20 20',
+    });
+    this.resetSize(24, 24);
+    this.childNodes = [];
+    const path0 = new SvgPath({ attrObj: { fill: 'currentColor' }});
+    path0.setData(
+      'M3.5 18C3.22386 18 3 17.7761 3 17.5V2.5C3 2.22386 3.22386 2 3.5 2C3.77614 2 4 2.22386 4 2.5V17.5C4 17.7761 3.77614 18 3.5 18Z',
+    );
+    this.addChild(path0);
+    const path1 = new SvgPath({ attrObj: { fill: 'currentColor' }});
+    path1.setData(
+      'M16 17.5C16 17.7761 16.2239 18 16.5 18C16.7761 18 17 17.7761 17 17.5V2.5C17 2.22386 16.7761 2 16.5 2C16.2239 2 16 2.22386 16 2.5V17.5Z',
+    );
+    this.addChild(path1);
+    const path2 = new SvgPath({ attrObj: { fill: 'currentColor' }});
+    path2.setData(
+      'M9 4C7.89543 4 7 4.89543 7 6V14C7 15.1046 7.89543 16 9 16H11C12.1046 16 13 15.1046 13 14V6C13 4.89543 12.1046 4 11 4H9ZM8 6C8 5.44772 8.44772 5 9 5H11C11.5523 5 12 5.44772 12 6V14C12 14.5523 11.5523 15 11 15H9C8.44772 15 8 14.5523 8 14V6Z',
+    );
+    this.addChild(path2);
+    this.useParams(params);
+  }
+}

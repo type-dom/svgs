@@ -1,0 +1,24 @@
+import { TypeProps, SvgPath, TypeSvgSvg } from '@type-dom/framework';
+export class FlLineThicknessFilledSvg extends TypeSvgSvg {
+  className: 'FlLineThicknessFilledSvg';
+  override childNodes: SvgPath[];
+  constructor(params: TypeProps = {}) {
+    super();
+    this.className = 'FlLineThicknessFilledSvg';
+    this.attr.addObj({
+      name: 'FlLineThicknessFilledSvg',
+      title: 'FlLineThicknessFilledSvg'
+    });
+    this.attr.addObj({
+      viewBox: '0 0 20 20',
+    });
+    this.resetSize(24, 24);
+    this.childNodes = [];
+    const path0 = new SvgPath({ attrObj: { fill: 'currentColor' }});
+    path0.setData(
+      'M2.75 4C2.33579 4 2 4.33579 2 4.75C2 5.16421 2.33579 5.5 2.75 5.5H17.25C17.6642 5.5 18 5.16421 18 4.75C18 4.33579 17.6642 4 17.25 4H2.75ZM2 9.25C2 8.55964 2.55964 8 3.25 8H16.75C17.4404 8 18 8.55964 18 9.25C18 9.94036 17.4404 10.5 16.75 10.5H3.25C2.55964 10.5 2 9.94036 2 9.25ZM2 14.75C2 13.7835 2.7835 13 3.75 13H16.25C17.2165 13 18 13.7835 18 14.75C18 15.7165 17.2165 16.5 16.25 16.5H3.75C2.7835 16.5 2 15.7165 2 14.75Z',
+    );
+    this.addChild(path0);
+    this.useParams(params);
+  }
+}

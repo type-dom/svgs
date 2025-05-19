@@ -1,24 +1,24 @@
-import { ITypeConfig, SvgPath, TypeSvgSvg } from '@type-dom/framework';
+import { TypeProps, SvgPath, TypeSvgSvg } from '@type-dom/framework';
 export class ElVideoPlaySvg extends TypeSvgSvg {
   className: 'ElVideoPlaySvg';
   override childNodes: SvgPath[];
-  constructor(config?: Partial<ITypeConfig>) {
+  constructor(params: TypeProps = {}) {
     super();
     this.className = 'ElVideoPlaySvg';
-    this.addAttrObj({
+    this.attr.addObj({
       name: 'ElVideoPlaySvg',
       title: 'ElVideoPlaySvg'
     });
-    this.addAttrObj({
+    this.attr.addObj({
       viewBox: '0 0 1024 1024',
     });
     this.resetSize(24, 24);
     this.childNodes = [];
-    const path0 = new SvgPath({ parent: this });
+    const path0 = new SvgPath({ attrObj: { fill: 'currentColor' }});
     path0.setData(
       'M512 64a448 448 0 1 1 0 896 448 448 0 0 1 0-896zm0 832a384 384 0 0 0 0-768 384 384 0 0 0 0 768zm-48-247.616L668.608 512 464 375.616v272.768zm10.624-342.656 249.472 166.336a48 48 0 0 1 0 79.872L474.624 718.272A48 48 0 0 1 400 678.336V345.6a48 48 0 0 1 74.624-39.936z',
     );
-    this.childNodes.push(path0);
-    this.setConfig(config);
+    this.addChild(path0);
+    this.useParams(params);
   }
 }

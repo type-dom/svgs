@@ -1,0 +1,24 @@
+import { TypeProps, SvgPath, TypeSvgSvg } from '@type-dom/framework';
+export class FlArrowSquareDownRegularSvg extends TypeSvgSvg {
+  className: 'FlArrowSquareDownRegularSvg';
+  override childNodes: SvgPath[];
+  constructor(params: TypeProps = {}) {
+    super();
+    this.className = 'FlArrowSquareDownRegularSvg';
+    this.attr.addObj({
+      name: 'FlArrowSquareDownRegularSvg',
+      title: 'FlArrowSquareDownRegularSvg'
+    });
+    this.attr.addObj({
+      viewBox: '0 0 20 20',
+    });
+    this.resetSize(24, 24);
+    this.childNodes = [];
+    const path0 = new SvgPath({ attrObj: { fill: 'currentColor' }});
+    path0.setData(
+      'M10.4999 6.5C10.4999 6.22386 10.276 6 9.99988 6C9.72374 6 9.49988 6.22386 9.49988 6.5V12.2929L6.85343 9.64645C6.65817 9.45118 6.34159 9.45118 6.14632 9.64645C5.95106 9.84171 5.95106 10.1583 6.14632 10.3536L9.64632 13.8536C9.84159 14.0488 10.1582 14.0488 10.3534 13.8536L13.8534 10.3536C14.0487 10.1583 14.0487 9.84171 13.8534 9.64645C13.6582 9.45118 13.3416 9.45118 13.1463 9.64645L10.4999 12.2929V6.5ZM5 3C3.89543 3 3 3.89543 3 5V15C3 16.1046 3.89543 17 5 17H15C16.1046 17 17 16.1046 17 15V5C17 3.89543 16.1046 3 15 3H5ZM4 5C4 4.44772 4.44772 4 5 4H15C15.5523 4 16 4.44772 16 5V15C16 15.5523 15.5523 16 15 16H5C4.44772 16 4 15.5523 4 15V5Z',
+    );
+    this.addChild(path0);
+    this.useParams(params);
+  }
+}

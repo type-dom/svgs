@@ -1,0 +1,24 @@
+import { TypeProps, SvgPath, TypeSvgSvg } from '@type-dom/framework';
+export class FlHourglassHalfFilledSvg extends TypeSvgSvg {
+  className: 'FlHourglassHalfFilledSvg';
+  override childNodes: SvgPath[];
+  constructor(params: TypeProps = {}) {
+    super();
+    this.className = 'FlHourglassHalfFilledSvg';
+    this.attr.addObj({
+      name: 'FlHourglassHalfFilledSvg',
+      title: 'FlHourglassHalfFilledSvg'
+    });
+    this.attr.addObj({
+      viewBox: '0 0 20 20',
+    });
+    this.resetSize(24, 24);
+    this.childNodes = [];
+    const path0 = new SvgPath({ attrObj: { fill: 'currentColor' }});
+    path0.setData(
+      'M9.94 10C9.9414 10.367 9.85933 10.7294 9.7 11.06C9.54611 11.3918 9.32073 11.6855 9.04 11.92L7.22 13.44C6.83544 13.753 6.52759 14.1497 6.32 14.6C6.11516 15.0387 6.00608 15.5159 6 16H14C13.9947 15.5169 13.8891 15.0402 13.69 14.6C13.476 14.1509 13.1652 13.7548 12.78 13.44L11 11.91C10.7234 11.678 10.5014 11.3878 10.35 11.06C10.1733 10.7336 10.0741 10.3709 10.06 10H9.94Z',
+    );
+    this.addChild(path0);
+    this.useParams(params);
+  }
+}

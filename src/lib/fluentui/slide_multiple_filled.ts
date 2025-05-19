@@ -1,0 +1,24 @@
+import { TypeProps, SvgPath, TypeSvgSvg } from '@type-dom/framework';
+export class FlSlideMultipleFilledSvg extends TypeSvgSvg {
+  className: 'FlSlideMultipleFilledSvg';
+  override childNodes: SvgPath[];
+  constructor(params: TypeProps = {}) {
+    super();
+    this.className = 'FlSlideMultipleFilledSvg';
+    this.attr.addObj({
+      name: 'FlSlideMultipleFilledSvg',
+      title: 'FlSlideMultipleFilledSvg'
+    });
+    this.attr.addObj({
+      viewBox: '0 0 20 20',
+    });
+    this.resetSize(24, 24);
+    this.childNodes = [];
+    const path0 = new SvgPath({ attrObj: { fill: 'currentColor' }});
+    path0.setData(
+      'M6 3C3.79086 3 2 4.79086 2 7V12C2 13.1046 2.89543 14 4 14L4 8C4 6.34315 5.34315 5 7 5H15C15 3.89543 14.1046 3 13 3H6ZM7 6C5.89543 6 5 6.89543 5 8V15C5 16.1046 5.89543 17 7 17H16C17.1046 17 18 16.1046 18 15V8C18 6.89543 17.1046 6 16 6H7Z',
+    );
+    this.addChild(path0);
+    this.useParams(params);
+  }
+}

@@ -1,9 +1,12 @@
 import { TypeDiv } from '@type-dom/framework';
-import type { IStyle } from '@type-dom/framework';  
+import type { IStyle } from '@type-dom/css-type';
 import {
   Td404Svg,
   TdAPlusSvg,
   TdAMinusSvg,
+  TdQRCodeSvg,
+  TdShrinkOutlinedSvg,
+  TdUnfoldedOutlinedSvg,
   TdAdaptiveWidthSvg,
   TdAddBookmarkSvg,
   TdAddCommentsSvg,
@@ -64,11 +67,11 @@ import {
   TdFontColorSvg,
   TdForbidEditSvg,
   TdFormSvg,
-  TdFormatBrushNewSvg,
-  TdFormatBrushSvg,
   TdFormImageSvg,
   TdFormQRCodeSvg,
   TdFormTextSvg,
+  TdFormatBrushNewSvg,
+  TdFormatBrushSvg,
   TdFullscreenSvg,
   TdGuideSvg,
   TdHSvg,
@@ -94,13 +97,13 @@ import {
   TdLinkSvg,
   TdListSvg,
   TdLockSvg,
+  TdMPageSvg,
   TdMergeCellSvg,
   TdMessageSvg,
   TdMiddleLineSvg,
   TdMinusSvg,
   TdModuleSvg,
   TdMoneySvg,
-  TdMPageSvg,
   TdMultilineInputSvg,
   TdMultipleOptionsSvg,
   TdNestedSvg,
@@ -130,6 +133,7 @@ import {
   TdRestrictedEditListSvg,
   TdRowHeightSvg,
   TdRowSpacingSvg,
+  TdSPageSvg,
   TdSave2Svg,
   TdSaveSvg,
   TdSdTagSvg,
@@ -139,7 +143,6 @@ import {
   TdShapeSvg,
   TdShoppingCardSvg,
   TdShoppingSvg,
-  TdShrinkOutlinedSvg,
   TdSignSvg,
   TdSignatureSvg,
   TdSingleInputSvg,
@@ -148,7 +151,6 @@ import {
   TdSkillSvg,
   TdSortValueSvg,
   TdSortSvg,
-  TdSPageSvg,
   TdSplitCellSvg,
   TdStarSvg,
   TdStaticCatalogSvg,
@@ -173,10 +175,9 @@ import {
   TdTableSvg,
   TdTaskSvg,
   TdTdImageSvg,
-  TdTdTextSvg,
-  TdTdQRCodeSvg,
   TdTemplatesSvg,
   TdTextIndentSvg,
+  TdTextSvg,
   TdThemeSvg,
   TdThreeDotsSvg,
   TdThumbnailPageSvg,
@@ -189,13 +190,13 @@ import {
   TdUnderlineSvg,
   TdUndoSvg,
   TdUnfoldSvg,
-  TdUnfoldedOutlinedSvg,
   TdUserSvg,
+  TdViewCodeSvg,
   TdWatermarkSvg,
   TdWechatSvg,
   TdWorkflowSvg,
   TdZipSvg,
-} from '@type-dom/svgs';
+} from './index';
 export class CommonSvgList extends TypeDiv {
   className: 'CommonSvgList';
   constructor() {
@@ -222,6 +223,27 @@ export class CommonSvgList extends TypeDiv {
         styleObj: $svgStyle
       }),
       new TdAMinusSvg({
+        attrObj: {
+          width: '2em',
+          height: '2em',
+        },
+        styleObj: $svgStyle
+      }),
+      new TdQRCodeSvg({
+        attrObj: {
+          width: '2em',
+          height: '2em',
+        },
+        styleObj: $svgStyle
+      }),
+      new TdShrinkOutlinedSvg({
+        attrObj: {
+          width: '2em',
+          height: '2em',
+        },
+        styleObj: $svgStyle
+      }),
+      new TdUnfoldedOutlinedSvg({
         attrObj: {
           width: '2em',
           height: '2em',
@@ -648,20 +670,6 @@ export class CommonSvgList extends TypeDiv {
         },
         styleObj: $svgStyle
       }),
-      new TdFormatBrushNewSvg({
-        attrObj: {
-          width: '2em',
-          height: '2em',
-        },
-        styleObj: $svgStyle
-      }),
-      new TdFormatBrushSvg({
-        attrObj: {
-          width: '2em',
-          height: '2em',
-        },
-        styleObj: $svgStyle
-      }),
       new TdFormImageSvg({
         attrObj: {
           width: '2em',
@@ -677,6 +685,20 @@ export class CommonSvgList extends TypeDiv {
         styleObj: $svgStyle
       }),
       new TdFormTextSvg({
+        attrObj: {
+          width: '2em',
+          height: '2em',
+        },
+        styleObj: $svgStyle
+      }),
+      new TdFormatBrushNewSvg({
+        attrObj: {
+          width: '2em',
+          height: '2em',
+        },
+        styleObj: $svgStyle
+      }),
+      new TdFormatBrushSvg({
         attrObj: {
           width: '2em',
           height: '2em',
@@ -858,6 +880,13 @@ export class CommonSvgList extends TypeDiv {
         },
         styleObj: $svgStyle
       }),
+      new TdMPageSvg({
+        attrObj: {
+          width: '2em',
+          height: '2em',
+        },
+        styleObj: $svgStyle
+      }),
       new TdMergeCellSvg({
         attrObj: {
           width: '2em',
@@ -894,13 +923,6 @@ export class CommonSvgList extends TypeDiv {
         styleObj: $svgStyle
       }),
       new TdMoneySvg({
-        attrObj: {
-          width: '2em',
-          height: '2em',
-        },
-        styleObj: $svgStyle
-      }),
-      new TdMPageSvg({
         attrObj: {
           width: '2em',
           height: '2em',
@@ -1110,6 +1132,13 @@ export class CommonSvgList extends TypeDiv {
         },
         styleObj: $svgStyle
       }),
+      new TdSPageSvg({
+        attrObj: {
+          width: '2em',
+          height: '2em',
+        },
+        styleObj: $svgStyle
+      }),
       new TdSave2Svg({
         attrObj: {
           width: '2em',
@@ -1173,13 +1202,6 @@ export class CommonSvgList extends TypeDiv {
         },
         styleObj: $svgStyle
       }),
-      new TdShrinkOutlinedSvg({
-        attrObj: {
-          width: '2em',
-          height: '2em',
-        },
-        styleObj: $svgStyle
-      }),
       new TdSignSvg({
         attrObj: {
           width: '2em',
@@ -1230,13 +1252,6 @@ export class CommonSvgList extends TypeDiv {
         styleObj: $svgStyle
       }),
       new TdSortSvg({
-        attrObj: {
-          width: '2em',
-          height: '2em',
-        },
-        styleObj: $svgStyle
-      }),
-      new TdSPageSvg({
         attrObj: {
           width: '2em',
           height: '2em',
@@ -1411,20 +1426,6 @@ export class CommonSvgList extends TypeDiv {
         },
         styleObj: $svgStyle
       }),
-      new TdTdTextSvg({
-        attrObj: {
-          width: '2em',
-          height: '2em',
-        },
-        styleObj: $svgStyle
-      }),
-      new TdTdQRCodeSvg({
-        attrObj: {
-          width: '2em',
-          height: '2em',
-        },
-        styleObj: $svgStyle
-      }),
       new TdTemplatesSvg({
         attrObj: {
           width: '2em',
@@ -1433,6 +1434,13 @@ export class CommonSvgList extends TypeDiv {
         styleObj: $svgStyle
       }),
       new TdTextIndentSvg({
+        attrObj: {
+          width: '2em',
+          height: '2em',
+        },
+        styleObj: $svgStyle
+      }),
+      new TdTextSvg({
         attrObj: {
           width: '2em',
           height: '2em',
@@ -1523,14 +1531,14 @@ export class CommonSvgList extends TypeDiv {
         },
         styleObj: $svgStyle
       }),
-      new TdUnfoldedOutlinedSvg({
+      new TdUserSvg({
         attrObj: {
           width: '2em',
           height: '2em',
         },
         styleObj: $svgStyle
       }),
-      new TdUserSvg({
+      new TdViewCodeSvg({
         attrObj: {
           width: '2em',
           height: '2em',

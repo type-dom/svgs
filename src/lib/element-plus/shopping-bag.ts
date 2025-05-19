@@ -1,29 +1,29 @@
-import { ITypeConfig, SvgPath, TypeSvgSvg } from '@type-dom/framework';
+import { TypeProps, SvgPath, TypeSvgSvg } from '@type-dom/framework';
 export class ElShoppingBagSvg extends TypeSvgSvg {
   className: 'ElShoppingBagSvg';
   override childNodes: SvgPath[];
-  constructor(config?: Partial<ITypeConfig>) {
+  constructor(params: TypeProps = {}) {
     super();
     this.className = 'ElShoppingBagSvg';
-    this.addAttrObj({
+    this.attr.addObj({
       name: 'ElShoppingBagSvg',
       title: 'ElShoppingBagSvg'
     });
-    this.addAttrObj({
+    this.attr.addObj({
       viewBox: '0 0 1024 1024',
     });
     this.resetSize(24, 24);
     this.childNodes = [];
-    const path0 = new SvgPath({ parent: this });
+    const path0 = new SvgPath({ attrObj: { fill: 'currentColor' }});
     path0.setData(
       'M704 320v96a32 32 0 0 1-32 32h-32V320H384v128h-32a32 32 0 0 1-32-32v-96H192v576h640V320H704zm-384-64a192 192 0 1 1 384 0h160a32 32 0 0 1 32 32v640a32 32 0 0 1-32 32H160a32 32 0 0 1-32-32V288a32 32 0 0 1 32-32h160zm64 0h256a128 128 0 1 0-256 0z',
     );
-    this.childNodes.push(path0);
-    const path1 = new SvgPath({ parent: this });
+    this.addChild(path0);
+    const path1 = new SvgPath({ attrObj: { fill: 'currentColor' }});
     path1.setData(
       'M192 704h640v64H192z',
     );
-    this.childNodes.push(path1);
-    this.setConfig(config);
+    this.addChild(path1);
+    this.useParams(params);
   }
 }

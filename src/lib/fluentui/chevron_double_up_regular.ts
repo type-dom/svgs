@@ -1,0 +1,24 @@
+import { TypeProps, SvgPath, TypeSvgSvg } from '@type-dom/framework';
+export class FlChevronDoubleUpRegularSvg extends TypeSvgSvg {
+  className: 'FlChevronDoubleUpRegularSvg';
+  override childNodes: SvgPath[];
+  constructor(params: TypeProps = {}) {
+    super();
+    this.className = 'FlChevronDoubleUpRegularSvg';
+    this.attr.addObj({
+      name: 'FlChevronDoubleUpRegularSvg',
+      title: 'FlChevronDoubleUpRegularSvg'
+    });
+    this.attr.addObj({
+      viewBox: '0 0 20 20',
+    });
+    this.resetSize(24, 24);
+    this.childNodes = [];
+    const path0 = new SvgPath({ attrObj: { fill: 'currentColor' }});
+    path0.setData(
+      'M4.14581 9.64619C3.95091 9.84179 3.95147 10.1584 4.14707 10.3533C4.34266 10.5482 4.65922 10.5476 4.85413 10.352L10 5.18752L15.1459 10.352C15.3408 10.5476 15.6573 10.5482 15.8529 10.3533C16.0485 10.1584 16.0491 9.84179 15.8542 9.64619L10.3896 4.16178C10.1746 3.94607 9.82536 3.94607 9.61042 4.16178L4.14581 9.64619ZM4.14581 14.6471C3.95091 14.8427 3.95147 15.1593 4.14707 15.3542C4.34266 15.5491 4.65922 15.5485 4.85413 15.3529L10 10.1884L15.1459 15.3529C15.3408 15.5485 15.6573 15.5491 15.8529 15.3542C16.0485 15.1593 16.0491 14.8427 15.8542 14.6471L10.3896 9.16269C10.1746 8.94698 9.82536 8.94698 9.61042 9.16269L4.14581 14.6471Z',
+    );
+    this.addChild(path0);
+    this.useParams(params);
+  }
+}

@@ -1,0 +1,24 @@
+import { TypeProps, SvgPath, TypeSvgSvg } from '@type-dom/framework';
+export class FlFlagRegularSvg extends TypeSvgSvg {
+  className: 'FlFlagRegularSvg';
+  override childNodes: SvgPath[];
+  constructor(params: TypeProps = {}) {
+    super();
+    this.className = 'FlFlagRegularSvg';
+    this.attr.addObj({
+      name: 'FlFlagRegularSvg',
+      title: 'FlFlagRegularSvg'
+    });
+    this.attr.addObj({
+      viewBox: '0 0 20 20',
+    });
+    this.resetSize(24, 24);
+    this.childNodes = [];
+    const path0 = new SvgPath({ attrObj: { fill: 'currentColor' }});
+    path0.setData(
+      'M5 13H16.5C16.8993 13 17.1375 12.5549 16.916 12.2226L14.1009 8L16.916 3.77735C17.1375 3.44507 16.8993 3 16.5 3H4.5C4.22386 3 4 3.22386 4 3.5V17.5C4 17.7761 4.22386 18 4.5 18C4.77614 18 5 17.7761 5 17.5V13ZM5 12V4H15.5657L13.084 7.72265C12.972 7.8906 12.972 8.1094 13.084 8.27735L15.5657 12H5Z',
+    );
+    this.addChild(path0);
+    this.useParams(params);
+  }
+}
