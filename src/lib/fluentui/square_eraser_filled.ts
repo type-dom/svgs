@@ -1,8 +1,8 @@
-import { ITypeConfig, SvgPath, TypeSvgSvg } from '@type-dom/framework';
+import { TypeProps, SvgPath, TypeSvgSvg } from '@type-dom/framework';
 export class FlSquareEraserFilledSvg extends TypeSvgSvg {
   className: 'FlSquareEraserFilledSvg';
   override childNodes: SvgPath[];
-  constructor(params: ITypeConfig = {}) {
+  constructor(params: TypeProps = {}) {
     super();
     this.className = 'FlSquareEraserFilledSvg';
     this.attr.addObj({

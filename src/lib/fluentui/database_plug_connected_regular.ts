@@ -1,8 +1,8 @@
-import { ITypeConfig, SvgPath, TypeSvgSvg } from '@type-dom/framework';
+import { TypeProps, SvgPath, TypeSvgSvg } from '@type-dom/framework';
 export class FlDatabasePlugConnectedRegularSvg extends TypeSvgSvg {
   className: 'FlDatabasePlugConnectedRegularSvg';
   override childNodes: SvgPath[];
-  constructor(params: ITypeConfig = {}) {
+  constructor(params: TypeProps = {}) {
     super();
     this.className = 'FlDatabasePlugConnectedRegularSvg';
     this.attr.addObj({

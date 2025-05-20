@@ -1,8 +1,8 @@
-import { ITypeConfig, SvgPath, TypeSvgSvg } from '@type-dom/framework';
+import { TypeProps, SvgPath, TypeSvgSvg } from '@type-dom/framework';
 export class FlTextHeader3LinesRegularSvg extends TypeSvgSvg {
   className: 'FlTextHeader3LinesRegularSvg';
   override childNodes: SvgPath[];
-  constructor(params: ITypeConfig = {}) {
+  constructor(params: TypeProps = {}) {
     super();
     this.className = 'FlTextHeader3LinesRegularSvg';
     this.attr.addObj({

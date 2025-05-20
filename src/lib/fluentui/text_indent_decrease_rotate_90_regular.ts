@@ -1,8 +1,8 @@
-import { ITypeConfig, SvgPath, TypeSvgSvg } from '@type-dom/framework';
+import { TypeProps, SvgPath, TypeSvgSvg } from '@type-dom/framework';
 export class FlTextIndentDecreaseRotate90RegularSvg extends TypeSvgSvg {
   className: 'FlTextIndentDecreaseRotate90RegularSvg';
   override childNodes: SvgPath[];
-  constructor(params: ITypeConfig = {}) {
+  constructor(params: TypeProps = {}) {
     super();
     this.className = 'FlTextIndentDecreaseRotate90RegularSvg';
     this.attr.addObj({

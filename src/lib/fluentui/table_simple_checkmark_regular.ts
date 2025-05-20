@@ -1,8 +1,8 @@
-import { ITypeConfig, SvgPath, TypeSvgSvg } from '@type-dom/framework';
+import { TypeProps, SvgPath, TypeSvgSvg } from '@type-dom/framework';
 export class FlTableSimpleCheckmarkRegularSvg extends TypeSvgSvg {
   className: 'FlTableSimpleCheckmarkRegularSvg';
   override childNodes: SvgPath[];
-  constructor(params: ITypeConfig = {}) {
+  constructor(params: TypeProps = {}) {
     super();
     this.className = 'FlTableSimpleCheckmarkRegularSvg';
     this.attr.addObj({

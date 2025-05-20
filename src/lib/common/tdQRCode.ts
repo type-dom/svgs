@@ -1,10 +1,10 @@
-import { ITypeConfig, SvgPath, TypeSvgSvg } from '@type-dom/framework';
+import { TypeProps, SvgPath, TypeSvgSvg } from '@type-dom/framework';
 
 export class TdQRCodeSvg extends TypeSvgSvg {
   className: 'TdTdQRCodeSvg';
   override childNodes: SvgPath[];
 
-  constructor(params?: ITypeConfig) {
+  constructor(params?: TypeProps) {
     super();
     this.className = 'TdTdQRCodeSvg';
     this.attr.addObj({

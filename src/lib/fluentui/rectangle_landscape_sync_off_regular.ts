@@ -1,8 +1,8 @@
-import { ITypeConfig, SvgPath, TypeSvgSvg } from '@type-dom/framework';
+import { TypeProps, SvgPath, TypeSvgSvg } from '@type-dom/framework';
 export class FlRectangleLandscapeSyncOffRegularSvg extends TypeSvgSvg {
   className: 'FlRectangleLandscapeSyncOffRegularSvg';
   override childNodes: SvgPath[];
-  constructor(params: ITypeConfig = {}) {
+  constructor(params: TypeProps = {}) {
     super();
     this.className = 'FlRectangleLandscapeSyncOffRegularSvg';
     this.attr.addObj({

@@ -1,8 +1,8 @@
-import { ITypeConfig, SvgPath, TypeSvgSvg } from '@type-dom/framework';
+import { TypeProps, SvgPath, TypeSvgSvg } from '@type-dom/framework';
 export class FlAlignDistributeLeft16FilledSvg extends TypeSvgSvg {
   className: 'FlAlignDistributeLeft16FilledSvg';
   override childNodes: SvgPath[];
-  constructor(params: ITypeConfig = {}) {
+  constructor(params: TypeProps = {}) {
     super();
     this.className = 'FlAlignDistributeLeft16FilledSvg';
     this.attr.addObj({

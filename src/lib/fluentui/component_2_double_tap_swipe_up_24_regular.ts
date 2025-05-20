@@ -1,8 +1,8 @@
-import { ITypeConfig, SvgPath, TypeSvgSvg } from '@type-dom/framework';
+import { TypeProps, SvgPath, TypeSvgSvg } from '@type-dom/framework';
 export class FlComponent2DoubleTapSwipeUp24RegularSvg extends TypeSvgSvg {
   className: 'FlComponent2DoubleTapSwipeUp24RegularSvg';
   override childNodes: SvgPath[];
-  constructor(params: ITypeConfig = {}) {
+  constructor(params: TypeProps = {}) {
     super();
     this.className = 'FlComponent2DoubleTapSwipeUp24RegularSvg';
     this.attr.addObj({

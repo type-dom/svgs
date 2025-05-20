@@ -1,8 +1,8 @@
-import { ITypeConfig, SvgPath, TypeSvgSvg } from '@type-dom/framework';
+import { TypeProps, SvgPath, TypeSvgSvg } from '@type-dom/framework';
 export class FlErrorCircleSettingsFilledSvg extends TypeSvgSvg {
   className: 'FlErrorCircleSettingsFilledSvg';
   override childNodes: SvgPath[];
-  constructor(params: ITypeConfig = {}) {
+  constructor(params: TypeProps = {}) {
     super();
     this.className = 'FlErrorCircleSettingsFilledSvg';
     this.attr.addObj({

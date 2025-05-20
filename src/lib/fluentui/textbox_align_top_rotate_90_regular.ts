@@ -1,8 +1,8 @@
-import { ITypeConfig, SvgPath, TypeSvgSvg } from '@type-dom/framework';
+import { TypeProps, SvgPath, TypeSvgSvg } from '@type-dom/framework';
 export class FlTextboxAlignTopRotate90RegularSvg extends TypeSvgSvg {
   className: 'FlTextboxAlignTopRotate90RegularSvg';
   override childNodes: SvgPath[];
-  constructor(params: ITypeConfig = {}) {
+  constructor(params: TypeProps = {}) {
     super();
     this.className = 'FlTextboxAlignTopRotate90RegularSvg';
     this.attr.addObj({

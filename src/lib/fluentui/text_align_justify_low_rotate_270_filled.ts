@@ -1,8 +1,8 @@
-import { ITypeConfig, SvgPath, TypeSvgSvg } from '@type-dom/framework';
+import { TypeProps, SvgPath, TypeSvgSvg } from '@type-dom/framework';
 export class FlTextAlignJustifyLowRotate270FilledSvg extends TypeSvgSvg {
   className: 'FlTextAlignJustifyLowRotate270FilledSvg';
   override childNodes: SvgPath[];
-  constructor(params: ITypeConfig = {}) {
+  constructor(params: TypeProps = {}) {
     super();
     this.className = 'FlTextAlignJustifyLowRotate270FilledSvg';
     this.attr.addObj({

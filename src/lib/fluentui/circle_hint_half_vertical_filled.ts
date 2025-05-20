@@ -1,8 +1,8 @@
-import { ITypeConfig, SvgPath, TypeSvgSvg } from '@type-dom/framework';
+import { TypeProps, SvgPath, TypeSvgSvg } from '@type-dom/framework';
 export class FlCircleHintHalfVerticalFilledSvg extends TypeSvgSvg {
   className: 'FlCircleHintHalfVerticalFilledSvg';
   override childNodes: SvgPath[];
-  constructor(params: ITypeConfig = {}) {
+  constructor(params: TypeProps = {}) {
     super();
     this.className = 'FlCircleHintHalfVerticalFilledSvg';
     this.attr.addObj({

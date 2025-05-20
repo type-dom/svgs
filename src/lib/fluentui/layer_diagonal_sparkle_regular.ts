@@ -1,8 +1,8 @@
-import { ITypeConfig, SvgPath, TypeSvgSvg } from '@type-dom/framework';
+import { TypeProps, SvgPath, TypeSvgSvg } from '@type-dom/framework';
 export class FlLayerDiagonalSparkleRegularSvg extends TypeSvgSvg {
   className: 'FlLayerDiagonalSparkleRegularSvg';
   override childNodes: SvgPath[];
-  constructor(params: ITypeConfig = {}) {
+  constructor(params: TypeProps = {}) {
     super();
     this.className = 'FlLayerDiagonalSparkleRegularSvg';
     this.attr.addObj({

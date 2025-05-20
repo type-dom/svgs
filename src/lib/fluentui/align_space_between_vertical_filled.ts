@@ -1,8 +1,8 @@
-import { ITypeConfig, SvgPath, TypeSvgSvg } from '@type-dom/framework';
+import { TypeProps, SvgPath, TypeSvgSvg } from '@type-dom/framework';
 export class FlAlignSpaceBetweenVerticalFilledSvg extends TypeSvgSvg {
   className: 'FlAlignSpaceBetweenVerticalFilledSvg';
   override childNodes: SvgPath[];
-  constructor(params: ITypeConfig = {}) {
+  constructor(params: TypeProps = {}) {
     super();
     this.className = 'FlAlignSpaceBetweenVerticalFilledSvg';
     this.attr.addObj({

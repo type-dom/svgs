@@ -1,8 +1,8 @@
-import { ITypeConfig, SvgPath, TypeSvgSvg } from '@type-dom/framework';
+import { TypeProps, SvgPath, TypeSvgSvg } from '@type-dom/framework';
 export class FlLayoutColumnTwoSplitRightFocusLeftFilledSvg extends TypeSvgSvg {
   className: 'FlLayoutColumnTwoSplitRightFocusLeftFilledSvg';
   override childNodes: SvgPath[];
-  constructor(params: ITypeConfig = {}) {
+  constructor(params: TypeProps = {}) {
     super();
     this.className = 'FlLayoutColumnTwoSplitRightFocusLeftFilledSvg';
     this.attr.addObj({

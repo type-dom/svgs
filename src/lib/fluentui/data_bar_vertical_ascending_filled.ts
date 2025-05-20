@@ -1,8 +1,8 @@
-import { ITypeConfig, SvgPath, TypeSvgSvg } from '@type-dom/framework';
+import { TypeProps, SvgPath, TypeSvgSvg } from '@type-dom/framework';
 export class FlDataBarVerticalAscendingFilledSvg extends TypeSvgSvg {
   className: 'FlDataBarVerticalAscendingFilledSvg';
   override childNodes: SvgPath[];
-  constructor(params: ITypeConfig = {}) {
+  constructor(params: TypeProps = {}) {
     super();
     this.className = 'FlDataBarVerticalAscendingFilledSvg';
     this.attr.addObj({

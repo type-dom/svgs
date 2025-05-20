@@ -1,10 +1,10 @@
-import { ITypeConfig, SvgPath, TypeSvgSvg } from '@type-dom/framework';
+import { TypeProps, SvgPath, TypeSvgSvg } from '@type-dom/framework';
 
 export class FileSvg extends TypeSvgSvg {
   className: 'FileSvg';
   path: SvgPath;
 
-  constructor(params: ITypeConfig = {}) {
+  constructor(params: TypeProps = {}) {
     super();
     this.className = 'FileSvg';
     this.attr.addObj({

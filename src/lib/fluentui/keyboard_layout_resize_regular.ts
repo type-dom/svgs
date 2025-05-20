@@ -1,8 +1,8 @@
-import { ITypeConfig, SvgPath, TypeSvgSvg } from '@type-dom/framework';
+import { TypeProps, SvgPath, TypeSvgSvg } from '@type-dom/framework';
 export class FlKeyboardLayoutResizeRegularSvg extends TypeSvgSvg {
   className: 'FlKeyboardLayoutResizeRegularSvg';
   override childNodes: SvgPath[];
-  constructor(params: ITypeConfig = {}) {
+  constructor(params: TypeProps = {}) {
     super();
     this.className = 'FlKeyboardLayoutResizeRegularSvg';
     this.attr.addObj({

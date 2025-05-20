@@ -3,9 +3,8 @@ import {
   ElCircleCloseFilledSvg, ElCircleCloseSvg,
   ElCloseSvg,
   ElInfoFilledSvg, ElLoadingSvg,
-  ElSuccessFilledSvg,
-  ElWarningFilledSvg
-} from '@type-dom/svgs';
+  ElSuccessFilledSvg, ElWarningFilledSvg
+} from './element-plus-index';
 
 export const CloseComponents = {
   Close: ElCloseSvg

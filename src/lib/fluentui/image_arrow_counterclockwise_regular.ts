@@ -1,8 +1,8 @@
-import { ITypeConfig, SvgPath, TypeSvgSvg } from '@type-dom/framework';
+import { TypeProps, SvgPath, TypeSvgSvg } from '@type-dom/framework';
 export class FlImageArrowCounterclockwiseRegularSvg extends TypeSvgSvg {
   className: 'FlImageArrowCounterclockwiseRegularSvg';
   override childNodes: SvgPath[];
-  constructor(params: ITypeConfig = {}) {
+  constructor(params: TypeProps = {}) {
     super();
     this.className = 'FlImageArrowCounterclockwiseRegularSvg';
     this.attr.addObj({

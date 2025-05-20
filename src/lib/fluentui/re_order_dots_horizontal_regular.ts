@@ -1,8 +1,8 @@
-import { ITypeConfig, SvgPath, TypeSvgSvg } from '@type-dom/framework';
+import { TypeProps, SvgPath, TypeSvgSvg } from '@type-dom/framework';
 export class FlReOrderDotsHorizontalRegularSvg extends TypeSvgSvg {
   className: 'FlReOrderDotsHorizontalRegularSvg';
   override childNodes: SvgPath[];
-  constructor(params: ITypeConfig = {}) {
+  constructor(params: TypeProps = {}) {
     super();
     this.className = 'FlReOrderDotsHorizontalRegularSvg';
     this.attr.addObj({

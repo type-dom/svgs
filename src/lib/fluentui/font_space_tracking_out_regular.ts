@@ -1,8 +1,8 @@
-import { ITypeConfig, SvgPath, TypeSvgSvg } from '@type-dom/framework';
+import { TypeProps, SvgPath, TypeSvgSvg } from '@type-dom/framework';
 export class FlFontSpaceTrackingOutRegularSvg extends TypeSvgSvg {
   className: 'FlFontSpaceTrackingOutRegularSvg';
   override childNodes: SvgPath[];
-  constructor(params: ITypeConfig = {}) {
+  constructor(params: TypeProps = {}) {
     super();
     this.className = 'FlFontSpaceTrackingOutRegularSvg';
     this.attr.addObj({

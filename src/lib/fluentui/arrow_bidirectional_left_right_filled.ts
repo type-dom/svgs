@@ -1,8 +1,8 @@
-import { ITypeConfig, SvgPath, TypeSvgSvg } from '@type-dom/framework';
+import { TypeProps, SvgPath, TypeSvgSvg } from '@type-dom/framework';
 export class FlArrowBidirectionalLeftRightFilledSvg extends TypeSvgSvg {
   className: 'FlArrowBidirectionalLeftRightFilledSvg';
   override childNodes: SvgPath[];
-  constructor(params: ITypeConfig = {}) {
+  constructor(params: TypeProps = {}) {
     super();
     this.className = 'FlArrowBidirectionalLeftRightFilledSvg';
     this.attr.addObj({

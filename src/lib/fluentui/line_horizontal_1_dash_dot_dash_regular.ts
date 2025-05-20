@@ -1,8 +1,8 @@
-import { ITypeConfig, SvgPath, TypeSvgSvg } from '@type-dom/framework';
+import { TypeProps, SvgPath, TypeSvgSvg } from '@type-dom/framework';
 export class FlLineHorizontal1DashDotDashRegularSvg extends TypeSvgSvg {
   className: 'FlLineHorizontal1DashDotDashRegularSvg';
   override childNodes: SvgPath[];
-  constructor(params: ITypeConfig = {}) {
+  constructor(params: TypeProps = {}) {
     super();
     this.className = 'FlLineHorizontal1DashDotDashRegularSvg';
     this.attr.addObj({
