@@ -17,13 +17,13 @@
     /* lib用于指定要包含在编译中的库文件 */
     /* Specify library files to be included in the compilation. */
     "lib": [
-//      "es5",
-//      "es2015",
-//      "es2016",
-//      "es2017",
-//      "es2018",
+
       "es2021",
-      "es2022",
+      "es2022",      "es5",
+      "es2015",
+      "es2016",
+      "es2017",
+      "es2018",
       "dom",
       "ESNext"
     ],
