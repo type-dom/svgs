@@ -120,6 +120,62 @@ npm install @type-dom/svgs
   npm install @type-dom/framework
   ```
 
+#### **按需导入（推荐）**
+
+支持多种按需导入方式，优化打包体积：
+
+```typescript
+// 1. 导入单个 SVG 组件
+import { TdAddSvg } from '@type-dom/svgs/common/add';
+
+// 2. 从分类索引导入（会包含整个分类）
+import { TdAddSvg, TdCloseSvg } from '@type-dom/svgs/common';
+
+// 3. 从主入口导入（不推荐，会导入所有组件）
+import { TdAddSvg } from '@type-dom/svgs';
+```
+
+**示例：使用单个 SVG 组件**
+
+```typescript
+import { Division, TypeRoot } from '@type-dom/framework';
+import { TdAddSvg } from '@type-dom/svgs/common/add'; // 按需导入
+
+export class AppElement extends TypeRoot {
+  className: 'AppElement';
+  
+  constructor() {
+    super();
+    this.className = 'AppElement';
+    
+    this.addChild(
+      new Division({
+        children: [
+          new TdAddSvg() // 只导入需要的图标
+        ]
+      })
+    );
+  }
+}
+```
+
+**不同分类的按需导入：**
+
+```typescript
+// Common 分类
+import { Td404Svg } from '@type-dom/svgs/common/404';
+import { TdUserSvg } from '@type-dom/svgs/common/user';
+
+// Element Plus 分类
+import { TdSomeSvg } from '@type-dom/svgs/element-plus/some-icon';
+
+// FluentUI 分类
+import { TdFluentIcon } from '@type-dom/svgs/fluentui/icon-name';
+
+// Other 分类
+import { TdOtherSvg } from '@type-dom/svgs/other/icon-name';
+```
+
 ---
 
 ### **5. 技术细节**
