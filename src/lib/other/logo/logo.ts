@@ -1,19 +1,19 @@
-import { SvgPath, TypeProps, TypeSvgSvg } from '@type-dom/framework';
+import { SvgProps, SvgPath, TypeSvgSvg, addAttrObj } from '@type-dom/framework';
 
 export class LogoSvg extends TypeSvgSvg {
   className: 'LogoSvg';
   path: SvgPath;
-  constructor(params: TypeProps = {}) {
-    super();
+  constructor(params: SvgProps = {}) {
+    super(params);
     this.className = 'LogoSvg';
-    this.attr.addObj({
+    addAttrObj(this, {
       name: 'logo-svg',
       width: '212',
       height: '212',
       viewBox: '0 0 212 212',
     });
     this.path = new SvgPath();
-    this.path.attr.addObj({
+    addAttrObj(this.path, {
       fill: '#192d79',
       opacity: '1.0',
     });
@@ -26,6 +26,5 @@ export class LogoSvg extends TypeSvgSvg {
       'M 163.85 171.33 C 165.80 171.33 167.76 171.33 169.71 171.34 C 174.34 182.00 178.95 192.68 183.73 203.29 C 181.35 203.27 178.98 203.27 176.61 203.27 C 175.42 200.88 174.97 197.87 173.06 195.98 C 168.68 195.60 164.27 195.96 159.89 195.86 C 158.84 198.32 157.79 200.78 156.79 203.26 C 154.43 203.27 152.07 203.27 149.72 203.29 C 154.69 192.76 159.13 181.98 163.85 171.33 M 166.83 179.90 C 165.24 183.15 163.79 186.48 162.36 189.81 C 165.26 189.83 168.15 189.83 171.04 189.75 C 169.55 186.50 168.14 183.22 166.83 179.90 Z'
     );
     this.addChild(this.path);
-    this.useParams(params);
   }
 }

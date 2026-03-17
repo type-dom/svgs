@@ -1,15 +1,14 @@
-import { TypeProps, SvgPath, TypeSvgSvg } from '@type-dom/framework';
+import { SvgProps, SvgPath, TypeSvgSvg, addAttrObj } from '@type-dom/framework';
 export class TdQRCodeSvg extends TypeSvgSvg {
   className: 'TdQRCodeSvg';
   override childNodes: SvgPath[];
-  constructor(params: TypeProps = {}) {
-    super();
+  constructor(params: SvgProps = {}) {
+    super(params);
     this.className = 'TdQRCodeSvg';
-    this.attr.addObj({
-      name: 'TdQRCodeSvg',
-      title: 'TdQRCodeSvg'
+    addAttrObj(this, {
+      name: 'TdQRCodeSvg'
     });
-    this.attr.addObj({
+    addAttrObj(this, {
       viewBox: '50 50 974 974',
     });
     this.resetSize(24, 24);
@@ -34,6 +33,5 @@ export class TdQRCodeSvg extends TypeSvgSvg {
       'M548.571 109.714V475.43h365.715V109.714H548.57z m292.572 292.572H621.714V182.857h219.429v219.429z',
     );
     this.addChild(path3);
-    this.useParams(params);
   }
 }

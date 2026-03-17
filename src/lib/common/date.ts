@@ -1,15 +1,14 @@
-import { TypeProps, SvgPath, TypeSvgSvg } from '@type-dom/framework';
+import { SvgProps, SvgPath, TypeSvgSvg, addAttrObj } from '@type-dom/framework';
 export class TdDateSvg extends TypeSvgSvg {
   className: 'TdDateSvg';
   override childNodes: SvgPath[];
-  constructor(params: TypeProps = {}) {
-    super();
+  constructor(params: SvgProps = {}) {
+    super(params);
     this.className = 'TdDateSvg';
-    this.attr.addObj({
-      name: 'TdDateSvg',
-      title: 'TdDateSvg'
+    addAttrObj(this, {
+      name: 'TdDateSvg'
     });
-    this.attr.addObj({
+    addAttrObj(this, {
       viewBox: '0 0 1024 1024',
     });
     this.resetSize(24, 24);
@@ -24,6 +23,5 @@ export class TdDateSvg extends TypeSvgSvg {
       'M470.373984 671.566396q43.069051-14.041843 43.124553-55.112846v-46.954146a48.508184 48.508184 0 0 0-27.750678-46.010624A137.865366 137.865366 0 0 0 420.422764 508.836423q-92.96477 0-92.964769 60.551978V627.165312h73.927804v-57.277399q0-10.267751 15.595881-10.26775t15.096369 10.26775v60.551979c0 13.375827-5.550136 20.035989-29.526721 20.035989v38.850948c13.764336 0 16.983415 1.609539 22.200542 4.88412s7.548184 9.43523 7.548184 18.481951v79.200433q0 12.654309-15.096368 12.654309t-15.096369-12.654309V715.96748H325.515447v76.036856q0 64.881084 95.184824 64.881084Q514.775068 856.996423 514.775068 785.732683v-50.78374q0-51.782764-44.401084-63.382547zM626.610298 511.944499a43.069051 43.069051 0 0 1-12.487805 27.417669 39.350461 39.350461 0 0 1-30.636748 14.097344v49.95122h31.746775v250.644119h83.252033V511.944499z',
     );
     this.addChild(path1);
-    this.useParams(params);
   }
 }

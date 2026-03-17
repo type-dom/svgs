@@ -1,15 +1,14 @@
-import { TypeProps, SvgPath, TypeSvgSvg } from '@type-dom/framework';
+import { SvgProps, SvgPath, TypeSvgSvg, addAttrObj } from '@type-dom/framework';
 export class FlLayoutColumnTwoSplitLeftFilledSvg extends TypeSvgSvg {
   className: 'FlLayoutColumnTwoSplitLeftFilledSvg';
   override childNodes: SvgPath[];
-  constructor(params: TypeProps = {}) {
-    super();
+  constructor(params: SvgProps = {}) {
+    super(params);
     this.className = 'FlLayoutColumnTwoSplitLeftFilledSvg';
-    this.attr.addObj({
-      name: 'FlLayoutColumnTwoSplitLeftFilledSvg',
-      title: 'FlLayoutColumnTwoSplitLeftFilledSvg'
+   addAttrObj(this, {
+      name: 'FlLayoutColumnTwoSplitLeftFilledSvg'
     });
-    this.attr.addObj({
+   addAttrObj(this, {
       viewBox: '0 0 20 20',
     });
     this.resetSize(24, 24);
@@ -19,6 +18,5 @@ export class FlLayoutColumnTwoSplitLeftFilledSvg extends TypeSvgSvg {
       'M14 17H10.5V3H14C15.6569 3 17 4.34315 17 6V14C17 15.6569 15.6569 17 14 17ZM6 3H9.5V9.5H3V6C3 4.34315 4.34315 3 6 3ZM3 10.5V14C3 15.6569 4.34315 17 6 17H9.5V10.5H3Z',
     );
     this.addChild(path0);
-    this.useParams(params);
   }
 }

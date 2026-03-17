@@ -1,12 +1,12 @@
-import { TypeProps, SvgPath, TypeSvgSvg } from '@type-dom/framework';
+import { SvgProps, SvgPath, TypeSvgSvg, addAttrObj } from '@type-dom/framework';
 
 export class TriangleSvg extends TypeSvgSvg {
   className: 'TriangleSvg';
   path: SvgPath;
-  constructor(params: TypeProps = {}) {
-    super();
+  constructor(params: SvgProps = {}) {
+    super(params);
     this.className = 'TriangleSvg';
-    this.attr.addObj({
+    addAttrObj(this, {
       viewBox: '0 0 1638 1024',
       width: '24',
       height: '30',
@@ -20,11 +20,10 @@ export class TriangleSvg extends TypeSvgSvg {
     //   marginRight: '10px',
     // });
     this.path = new SvgPath();
-    // path.attr.addObj({
+    // addAttrObj(path, {
     //   fill: '#000'
     // });
     this.path.setData('M819.2 955.6992L1547.3664 45.4656H91.136z');
     this.addChild(this.path);
-    this.useParams(params);
   }
 }

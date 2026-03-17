@@ -1,15 +1,14 @@
-import { TypeProps, SvgPath, TypeSvgSvg } from '@type-dom/framework';
+import { SvgProps, SvgPath, TypeSvgSvg, addAttrObj } from '@type-dom/framework';
 export class TdRadioButtonSvg extends TypeSvgSvg {
   className: 'TdRadioButtonSvg';
   override childNodes: SvgPath[];
-  constructor(params: TypeProps = {}) {
-    super();
+  constructor(params: SvgProps = {}) {
+    super(params);
     this.className = 'TdRadioButtonSvg';
-    this.attr.addObj({
-      name: 'TdRadioButtonSvg',
-      title: 'TdRadioButtonSvg'
+    addAttrObj(this, {
+      name: 'TdRadioButtonSvg'
     });
-    this.attr.addObj({
+    addAttrObj(this, {
       viewBox: '0 0 1024 1024',
     });
     this.resetSize(24, 24);
@@ -24,6 +23,5 @@ export class TdRadioButtonSvg extends TypeSvgSvg {
       'M512 512m-196.672 0a3.073 3.073 0 1 0 393.344 0 3.073 3.073 0 1 0-393.344 0Z',
     );
     this.addChild(path1);
-    this.useParams(params);
   }
 }

@@ -1,15 +1,14 @@
-import { TypeProps, SvgPath, TypeSvgSvg } from '@type-dom/framework';
+import { SvgProps, SvgPath, TypeSvgSvg, addAttrObj } from '@type-dom/framework';
 export class ElPictureRoundedSvg extends TypeSvgSvg {
   className: 'ElPictureRoundedSvg';
   override childNodes: SvgPath[];
-  constructor(params: TypeProps = {}) {
-    super();
+  constructor(params: SvgProps = {}) {
+    super(params);
     this.className = 'ElPictureRoundedSvg';
-    this.attr.addObj({
-      name: 'ElPictureRoundedSvg',
-      title: 'ElPictureRoundedSvg'
+   addAttrObj(this, {
+      name: 'ElPictureRoundedSvg'
     });
-    this.attr.addObj({
+   addAttrObj(this, {
       viewBox: '0 0 1024 1024',
     });
     this.resetSize(24, 24);
@@ -24,6 +23,5 @@ export class ElPictureRoundedSvg extends TypeSvgSvg {
       'M640 288q64 0 64 64t-64 64q-64 0-64-64t64-64zM214.656 790.656l-45.312-45.312 185.664-185.6a96 96 0 0 1 123.712-10.24l138.24 98.688a32 32 0 0 0 39.872-2.176L906.688 422.4l42.624 47.744L699.52 693.696a96 96 0 0 1-119.808 6.592l-138.24-98.752a32 32 0 0 0-41.152 3.456l-185.664 185.6z',
     );
     this.addChild(path1);
-    this.useParams(params);
   }
 }

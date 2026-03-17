@@ -1,15 +1,14 @@
-import { TypeProps, SvgPath, TypeSvgSvg } from '@type-dom/framework';
+import { SvgProps, SvgPath, TypeSvgSvg, addAttrObj } from '@type-dom/framework';
 export class ElChromeFilledSvg extends TypeSvgSvg {
   className: 'ElChromeFilledSvg';
   override childNodes: SvgPath[];
-  constructor(params: TypeProps = {}) {
-    super();
+  constructor(params: SvgProps = {}) {
+    super(params);
     this.className = 'ElChromeFilledSvg';
-    this.attr.addObj({
-      name: 'ElChromeFilledSvg',
-      title: 'ElChromeFilledSvg'
+   addAttrObj(this, {
+      name: 'ElChromeFilledSvg'
     });
-    this.attr.addObj({
+   addAttrObj(this, {
       viewBox: '0 0 1024 1024',
     });
     this.resetSize(24, 24);
@@ -29,6 +28,5 @@ export class ElChromeFilledSvg extends TypeSvgSvg {
       'M394.45 333.96A213.336 213.336 0 0 1 512 298.67h369.58A426.503 426.503 0 0 0 512 85.34a425.598 425.598 0 0 0-171.74 35.98 425.644 425.644 0 0 0-142.62 102.22l118.14 204.63a213.397 213.397 0 0 1 78.67-94.21zm117.56 604.72H512zm-97.25-236.73a213.284 213.284 0 0 1-89.54-86.81L142.48 298.6c-36.35 62.81-57.13 135.68-57.13 213.42 0 203.81 142.93 374.22 333.95 416.55h.04l118.19-204.71a213.315 213.315 0 0 1-122.77-21.91z',
     );
     this.addChild(path2);
-    this.useParams(params);
   }
 }

@@ -1,15 +1,14 @@
-import { TypeProps, SvgPath, TypeSvgSvg } from '@type-dom/framework';
+import { SvgProps, SvgPath, TypeSvgSvg, addAttrObj } from '@type-dom/framework';
 export class ElSwitchButtonSvg extends TypeSvgSvg {
   className: 'ElSwitchButtonSvg';
   override childNodes: SvgPath[];
-  constructor(params: TypeProps = {}) {
-    super();
+  constructor(params: SvgProps = {}) {
+    super(params);
     this.className = 'ElSwitchButtonSvg';
-    this.attr.addObj({
-      name: 'ElSwitchButtonSvg',
-      title: 'ElSwitchButtonSvg'
+   addAttrObj(this, {
+      name: 'ElSwitchButtonSvg'
     });
-    this.attr.addObj({
+   addAttrObj(this, {
       viewBox: '0 0 1024 1024',
     });
     this.resetSize(24, 24);
@@ -24,6 +23,5 @@ export class ElSwitchButtonSvg extends TypeSvgSvg {
       'M512 64q32 0 32 32v320q0 32-32 32t-32-32V96q0-32 32-32z',
     );
     this.addChild(path1);
-    this.useParams(params);
   }
 }

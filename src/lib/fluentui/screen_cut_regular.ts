@@ -1,15 +1,14 @@
-import { TypeProps, SvgPath, TypeSvgSvg } from '@type-dom/framework';
+import { SvgProps, SvgPath, TypeSvgSvg, addAttrObj } from '@type-dom/framework';
 export class FlScreenCutRegularSvg extends TypeSvgSvg {
   className: 'FlScreenCutRegularSvg';
   override childNodes: SvgPath[];
-  constructor(params: TypeProps = {}) {
-    super();
+  constructor(params: SvgProps = {}) {
+    super(params);
     this.className = 'FlScreenCutRegularSvg';
-    this.attr.addObj({
-      name: 'FlScreenCutRegularSvg',
-      title: 'FlScreenCutRegularSvg'
+   addAttrObj(this, {
+      name: 'FlScreenCutRegularSvg'
     });
-    this.attr.addObj({
+   addAttrObj(this, {
       viewBox: '0 0 20 20',
     });
     this.resetSize(24, 24);
@@ -64,6 +63,5 @@ export class FlScreenCutRegularSvg extends TypeSvgSvg {
       'M10.5989 10.4514L11.1999 11.3528L12.9157 8.77906C13.0689 8.5493 13.0063 8.23965 12.7759 8.08743C12.5455 7.93522 12.2345 7.99808 12.0814 8.22784L10.5989 10.4514Z',
     );
     this.addChild(path9);
-    this.useParams(params);
   }
 }

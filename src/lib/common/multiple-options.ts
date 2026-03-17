@@ -1,15 +1,14 @@
-import { TypeProps, SvgPath, TypeSvgSvg } from '@type-dom/framework';
+import { SvgProps, SvgPath, TypeSvgSvg, addAttrObj } from '@type-dom/framework';
 export class TdMultipleOptionsSvg extends TypeSvgSvg {
   className: 'TdMultipleOptionsSvg';
   override childNodes: SvgPath[];
-  constructor(params: TypeProps = {}) {
-    super();
+  constructor(params: SvgProps = {}) {
+    super(params);
     this.className = 'TdMultipleOptionsSvg';
-    this.attr.addObj({
-      name: 'TdMultipleOptionsSvg',
-      title: 'TdMultipleOptionsSvg'
+    addAttrObj(this, {
+      name: 'TdMultipleOptionsSvg'
     });
-    this.attr.addObj({
+    addAttrObj(this, {
       viewBox: '0 0 1026 1024',
     });
     this.resetSize(24, 24);
@@ -24,6 +23,5 @@ export class TdMultipleOptionsSvg extends TypeSvgSvg {
       'M317.553778 563.825778 243.370667 628.963556 500.110222 919.381333 998.001778 409.884444 936.96 350.094222 501.248 785.464889Z',
     );
     this.addChild(path1);
-    this.useParams(params);
   }
 }

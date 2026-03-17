@@ -1,15 +1,14 @@
-import { TypeProps, SvgPath, TypeSvgSvg } from '@type-dom/framework';
+import { SvgProps, SvgPath, TypeSvgSvg, addAttrObj } from '@type-dom/framework';
 export class TdThumbnailSvg extends TypeSvgSvg {
   className: 'TdThumbnailSvg';
   override childNodes: SvgPath[];
-  constructor(params: TypeProps = {}) {
-    super();
+  constructor(params: SvgProps = {}) {
+    super(params);
     this.className = 'TdThumbnailSvg';
-    this.attr.addObj({
-      name: 'TdThumbnailSvg',
-      title: 'TdThumbnailSvg'
+    addAttrObj(this, {
+      name: 'TdThumbnailSvg'
     });
-    this.attr.addObj({
+    addAttrObj(this, {
       viewBox: '0 0 1024 1024',
     });
     this.resetSize(24, 24);
@@ -19,6 +18,5 @@ export class TdThumbnailSvg extends TypeSvgSvg {
       'M703.98 703.994H896V896H703.98V703.994z m0-287.974H896v192H703.98v-192z m0-288.02H896v192H703.98V128zM415.987 703.994h191.987V896H415.987V703.994z m0-287.974h191.987v192H415.987v-192z m0-288.02h191.987v192H415.987V128zM128 703.994h191.98V896H128V703.994z m0-287.974h191.98v192H128v-192zM128 128h191.98v192H128V128z',
     );
     this.addChild(path0);
-    this.useParams(params);
   }
 }

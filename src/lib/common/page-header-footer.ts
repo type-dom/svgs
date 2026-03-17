@@ -1,15 +1,14 @@
-import { TypeProps, SvgPath, TypeSvgSvg } from '@type-dom/framework';
+import { SvgProps, SvgPath, TypeSvgSvg, addAttrObj } from '@type-dom/framework';
 export class TdPageHeaderFooterSvg extends TypeSvgSvg {
   className: 'TdPageHeaderFooterSvg';
   override childNodes: SvgPath[];
-  constructor(params: TypeProps = {}) {
-    super();
+  constructor(params: SvgProps = {}) {
+    super(params);
     this.className = 'TdPageHeaderFooterSvg';
-    this.attr.addObj({
-      name: 'TdPageHeaderFooterSvg',
-      title: 'TdPageHeaderFooterSvg'
+    addAttrObj(this, {
+      name: 'TdPageHeaderFooterSvg'
     });
-    this.attr.addObj({
+    addAttrObj(this, {
       viewBox: '0 0 1024 1024',
     });
     this.resetSize(24, 24);
@@ -44,6 +43,5 @@ export class TdPageHeaderFooterSvg extends TypeSvgSvg {
       'M235.488013 498.076771m15.699201 0l188.39041 0q15.699201 0 15.699201 15.699201l0 23.548801q0 15.699201-15.699201 15.699201l-188.39041 0q-15.699201 0-15.699201-15.699201l0-23.548801q0-15.699201 15.699201-15.699201Z',
     );
     this.addChild(path5);
-    this.useParams(params);
   }
 }

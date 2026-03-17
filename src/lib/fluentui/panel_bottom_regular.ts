@@ -1,15 +1,14 @@
-import { TypeProps, SvgPath, TypeSvgSvg } from '@type-dom/framework';
+import { SvgProps, SvgPath, TypeSvgSvg, addAttrObj } from '@type-dom/framework';
 export class FlPanelBottomRegularSvg extends TypeSvgSvg {
   className: 'FlPanelBottomRegularSvg';
   override childNodes: SvgPath[];
-  constructor(params: TypeProps = {}) {
-    super();
+  constructor(params: SvgProps = {}) {
+    super(params);
     this.className = 'FlPanelBottomRegularSvg';
-    this.attr.addObj({
-      name: 'FlPanelBottomRegularSvg',
-      title: 'FlPanelBottomRegularSvg'
+   addAttrObj(this, {
+      name: 'FlPanelBottomRegularSvg'
     });
-    this.attr.addObj({
+   addAttrObj(this, {
       viewBox: '0 0 20 20',
     });
     this.resetSize(24, 24);
@@ -19,6 +18,5 @@ export class FlPanelBottomRegularSvg extends TypeSvgSvg {
       'M5 3C3.34315 3 2 4.34315 2 6V13C2 14.6569 3.34315 16 5 16H15C16.6569 16 18 14.6569 18 13V6C18 4.34315 16.6569 3 15 3H5ZM3 6C3 4.89543 3.89543 4 5 4H15C16.1046 4 17 4.89543 17 6V11H3V6ZM3 12H17V13C17 14.1046 16.1046 15 15 15H5C3.89543 15 3 14.1046 3 13V12Z',
     );
     this.addChild(path0);
-    this.useParams(params);
   }
 }

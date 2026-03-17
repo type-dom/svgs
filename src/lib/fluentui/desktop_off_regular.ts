@@ -1,15 +1,14 @@
-import { TypeProps, SvgPath, TypeSvgSvg } from '@type-dom/framework';
+import { SvgProps, SvgPath, TypeSvgSvg, addAttrObj } from '@type-dom/framework';
 export class FlDesktopOffRegularSvg extends TypeSvgSvg {
   className: 'FlDesktopOffRegularSvg';
   override childNodes: SvgPath[];
-  constructor(params: TypeProps = {}) {
-    super();
+  constructor(params: SvgProps = {}) {
+    super(params);
     this.className = 'FlDesktopOffRegularSvg';
-    this.attr.addObj({
-      name: 'FlDesktopOffRegularSvg',
-      title: 'FlDesktopOffRegularSvg'
+   addAttrObj(this, {
+      name: 'FlDesktopOffRegularSvg'
     });
-    this.attr.addObj({
+   addAttrObj(this, {
       viewBox: '0 0 20 20',
     });
     this.resetSize(24, 24);
@@ -19,6 +18,5 @@ export class FlDesktopOffRegularSvg extends TypeSvgSvg {
       'M2.27691 2.98402L2.14645 2.85355C1.95118 2.65829 1.95118 2.34171 2.14645 2.14645C2.34171 1.95118 2.65829 1.95118 2.85355 2.14645L17.8536 17.1464C18.0488 17.3417 18.0488 17.6583 17.8536 17.8536C17.6583 18.0488 17.3417 18.0488 17.1464 17.8536L14.2929 15H13V17H14.5C14.7761 17 15 17.2239 15 17.5C15 17.7761 14.7761 18 14.5 18H5.5C5.22386 18 5 17.7761 5 17.5C5 17.2239 5.22386 17 5.5 17H7V15H4C2.89543 15 2 14.1046 2 13V4C2 3.6291 2.10096 3.28177 2.27691 2.98402ZM13.2929 14L3.03387 3.74098C3.01178 3.82359 3 3.91042 3 4V13C3 13.5523 3.44772 14 4 14H13.2929ZM17 13C17 13.5135 16.613 13.9365 16.1148 13.9935L16.9052 14.7839C17.5549 14.4536 18 13.7788 18 13V4C18 2.89543 17.1046 2 16 2H4.12134L5.12134 3H16C16.5523 3 17 3.44772 17 4V13ZM12 15H8V17H12V15Z',
     );
     this.addChild(path0);
-    this.useParams(params);
   }
 }

@@ -1,15 +1,14 @@
-import { TypeProps, SvgPath, TypeSvgSvg } from '@type-dom/framework';
+import { SvgProps, SvgPath, TypeSvgSvg, addAttrObj } from '@type-dom/framework';
 export class TdMultilineInputSvg extends TypeSvgSvg {
   className: 'TdMultilineInputSvg';
   override childNodes: SvgPath[];
-  constructor(params: TypeProps = {}) {
-    super();
+  constructor(params: SvgProps = {}) {
+    super(params);
     this.className = 'TdMultilineInputSvg';
-    this.attr.addObj({
-      name: 'TdMultilineInputSvg',
-      title: 'TdMultilineInputSvg'
+    addAttrObj(this, {
+      name: 'TdMultilineInputSvg'
     });
-    this.attr.addObj({
+    addAttrObj(this, {
       viewBox: '0 0 1024 1024',
     });
     this.resetSize(24, 24);
@@ -24,6 +23,5 @@ export class TdMultilineInputSvg extends TypeSvgSvg {
       'M224 288c-19.2 0-32 12.8-32 32v256c0 16 12.8 32 32 32s32-12.8 32-32V320c0-16-12.8-32-32-32z m608 480c19.2 0 32-12.8 32-32V608L704 768h128z',
     );
     this.addChild(path1);
-    this.useParams(params);
   }
 }

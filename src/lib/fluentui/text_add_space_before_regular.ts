@@ -1,15 +1,14 @@
-import { TypeProps, SvgPath, TypeSvgSvg } from '@type-dom/framework';
+import { SvgProps, SvgPath, TypeSvgSvg, addAttrObj } from '@type-dom/framework';
 export class FlTextAddSpaceBeforeRegularSvg extends TypeSvgSvg {
   className: 'FlTextAddSpaceBeforeRegularSvg';
   override childNodes: SvgPath[];
-  constructor(params: TypeProps = {}) {
-    super();
+  constructor(params: SvgProps = {}) {
+    super(params);
     this.className = 'FlTextAddSpaceBeforeRegularSvg';
-    this.attr.addObj({
-      name: 'FlTextAddSpaceBeforeRegularSvg',
-      title: 'FlTextAddSpaceBeforeRegularSvg'
+   addAttrObj(this, {
+      name: 'FlTextAddSpaceBeforeRegularSvg'
     });
-    this.attr.addObj({
+   addAttrObj(this, {
       viewBox: '0 0 20 20',
     });
     this.resetSize(24, 24);
@@ -19,6 +18,5 @@ export class FlTextAddSpaceBeforeRegularSvg extends TypeSvgSvg {
       'M8.14645 5.85355C7.95118 5.65829 7.95118 5.34171 8.14645 5.14645C8.34171 4.95118 8.65829 4.95118 8.85355 5.14645L10 6.29289L11.1464 5.14645C11.3417 4.95118 11.6583 4.95118 11.8536 5.14645C12.0488 5.34171 12.0488 5.65829 11.8536 5.85355L10.3536 7.35355C10.1583 7.54882 9.84171 7.54882 9.64645 7.35355L8.14645 5.85355ZM3 10.5C3 10.2239 3.22386 10 3.5 10H16.5C16.7761 10 17 10.2239 17 10.5C17 10.7761 16.7761 11 16.5 11H3.5C3.22386 11 3 10.7761 3 10.5ZM3 14.5C3 14.2239 3.22386 14 3.5 14H16.5C16.7761 14 17 14.2239 17 14.5C17 14.7761 16.7761 15 16.5 15H3.5C3.22386 15 3 14.7761 3 14.5Z',
     );
     this.addChild(path0);
-    this.useParams(params);
   }
 }

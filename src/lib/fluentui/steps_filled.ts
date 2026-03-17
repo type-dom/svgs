@@ -1,15 +1,14 @@
-import { TypeProps, SvgPath, TypeSvgSvg } from '@type-dom/framework';
+import { SvgProps, SvgPath, TypeSvgSvg, addAttrObj } from '@type-dom/framework';
 export class FlStepsFilledSvg extends TypeSvgSvg {
   className: 'FlStepsFilledSvg';
   override childNodes: SvgPath[];
-  constructor(params: TypeProps = {}) {
-    super();
+  constructor(params: SvgProps = {}) {
+    super(params);
     this.className = 'FlStepsFilledSvg';
-    this.attr.addObj({
-      name: 'FlStepsFilledSvg',
-      title: 'FlStepsFilledSvg'
+   addAttrObj(this, {
+      name: 'FlStepsFilledSvg'
     });
-    this.attr.addObj({
+   addAttrObj(this, {
       viewBox: '0 0 20 20',
     });
     this.resetSize(24, 24);
@@ -19,6 +18,5 @@ export class FlStepsFilledSvg extends TypeSvgSvg {
       'M11 3C11 2.44772 11.4477 2 12 2H15C15.5523 2 16 2.44772 16 3V7H15V3H12V6C12 6.55228 11.5523 7 11 7H8V10C8 10.5523 7.55228 11 7 11H4V14H8V15H4C3.44772 15 3 14.5523 3 14V11C3 10.4477 3.44772 10 4 10H7V7C7 6.44772 7.44772 6 8 6H11V3ZM13 9C13 8.44772 13.4477 8 14 8H17C17.5523 8 18 8.44772 18 9V14.5C18 15.8807 16.8807 17 15.5 17H10C9.44772 17 9 16.5523 9 16V13C9 12.4477 9.44772 12 10 12H13V9Z',
     );
     this.addChild(path0);
-    this.useParams(params);
   }
 }

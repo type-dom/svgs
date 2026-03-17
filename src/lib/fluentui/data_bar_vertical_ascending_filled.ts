@@ -1,15 +1,14 @@
-import { TypeProps, SvgPath, TypeSvgSvg } from '@type-dom/framework';
+import { SvgProps, SvgPath, TypeSvgSvg, addAttrObj } from '@type-dom/framework';
 export class FlDataBarVerticalAscendingFilledSvg extends TypeSvgSvg {
   className: 'FlDataBarVerticalAscendingFilledSvg';
   override childNodes: SvgPath[];
-  constructor(params: TypeProps = {}) {
-    super();
+  constructor(params: SvgProps = {}) {
+    super(params);
     this.className = 'FlDataBarVerticalAscendingFilledSvg';
-    this.attr.addObj({
-      name: 'FlDataBarVerticalAscendingFilledSvg',
-      title: 'FlDataBarVerticalAscendingFilledSvg'
+   addAttrObj(this, {
+      name: 'FlDataBarVerticalAscendingFilledSvg'
     });
-    this.attr.addObj({
+   addAttrObj(this, {
       viewBox: '0 0 20 20',
     });
     this.resetSize(24, 24);
@@ -19,6 +18,5 @@ export class FlDataBarVerticalAscendingFilledSvg extends TypeSvgSvg {
       'M15 3C16.1046 3 17 3.89543 17 5V15C17 16.1046 16.1046 17 15 17C13.8954 17 13 16.1046 13 15V5C13 3.89543 13.8954 3 15 3ZM10 6C11.1046 6 12 6.89543 12 8V15C12 16.1046 11.1046 17 10 17C8.89543 17 8 16.1046 8 15V8C8 6.89543 8.89543 6 10 6ZM5 9C6.10457 9 7 9.89543 7 11V15C7 16.1046 6.10457 17 5 17C3.89543 17 3 16.1046 3 15V11C3 9.89543 3.89543 9 5 9Z',
     );
     this.addChild(path0);
-    this.useParams(params);
   }
 }

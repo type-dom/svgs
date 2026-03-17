@@ -1,15 +1,14 @@
-import { TypeProps, SvgPath, TypeSvgSvg } from '@type-dom/framework';
+import { SvgProps, SvgPath, TypeSvgSvg, addAttrObj } from '@type-dom/framework';
 export class FlSmartwatchFilledSvg extends TypeSvgSvg {
   className: 'FlSmartwatchFilledSvg';
   override childNodes: SvgPath[];
-  constructor(params: TypeProps = {}) {
-    super();
+  constructor(params: SvgProps = {}) {
+    super(params);
     this.className = 'FlSmartwatchFilledSvg';
-    this.attr.addObj({
-      name: 'FlSmartwatchFilledSvg',
-      title: 'FlSmartwatchFilledSvg'
+   addAttrObj(this, {
+      name: 'FlSmartwatchFilledSvg'
     });
-    this.attr.addObj({
+   addAttrObj(this, {
       viewBox: '0 0 20 20',
     });
     this.resetSize(24, 24);
@@ -19,6 +18,5 @@ export class FlSmartwatchFilledSvg extends TypeSvgSvg {
       'M8 2C6.89542 2 6 2.89551 6 4V4.17065C6.31277 4.06006 6.64935 4 7 4H13C13.3506 4 13.6872 4.06006 14 4.17065V4C14 2.89551 13.1046 2 12 2H8ZM7 5C5.89543 5 5 5.89543 5 7V13C5 14.1046 5.89543 15 7 15H13C14.1046 15 15 14.1046 15 13V11C15.5523 11 16 10.5523 16 10V9C16 8.44772 15.5523 8 15 8V7C15 5.89543 14.1046 5 13 5H7ZM7 16C6.64935 16 6.31277 15.9399 6 15.8293V16C6 17.1045 6.89542 18 8 18H12C13.1046 18 14 17.1045 14 16V15.8293C13.6872 15.9399 13.3506 16 13 16H7Z',
     );
     this.addChild(path0);
-    this.useParams(params);
   }
 }

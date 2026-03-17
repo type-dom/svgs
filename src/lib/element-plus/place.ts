@@ -1,15 +1,14 @@
-import { TypeProps, SvgPath, TypeSvgSvg } from '@type-dom/framework';
+import { SvgProps, SvgPath, TypeSvgSvg, addAttrObj } from '@type-dom/framework';
 export class ElPlaceSvg extends TypeSvgSvg {
   className: 'ElPlaceSvg';
   override childNodes: SvgPath[];
-  constructor(params: TypeProps = {}) {
-    super();
+  constructor(params: SvgProps = {}) {
+    super(params);
     this.className = 'ElPlaceSvg';
-    this.attr.addObj({
-      name: 'ElPlaceSvg',
-      title: 'ElPlaceSvg'
+   addAttrObj(this, {
+      name: 'ElPlaceSvg'
     });
-    this.attr.addObj({
+   addAttrObj(this, {
       viewBox: '0 0 1024 1024',
     });
     this.resetSize(24, 24);
@@ -29,6 +28,5 @@ export class ElPlaceSvg extends TypeSvgSvg {
       'M384 649.088v64.96C269.76 732.352 192 771.904 192 800c0 37.696 139.904 96 320 96s320-58.304 320-96c0-28.16-77.76-67.648-192-85.952v-64.96C789.12 671.04 896 730.368 896 800c0 88.32-171.904 160-384 160s-384-71.68-384-160c0-69.696 106.88-128.96 256-150.912z',
     );
     this.addChild(path2);
-    this.useParams(params);
   }
 }

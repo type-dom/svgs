@@ -1,15 +1,14 @@
-import { TypeProps, SvgPath, TypeSvgSvg } from '@type-dom/framework';
+import { SvgProps, SvgPath, TypeSvgSvg, addAttrObj } from '@type-dom/framework';
 export class FlCoinMultipleColorSvg extends TypeSvgSvg {
   className: 'FlCoinMultipleColorSvg';
   override childNodes: SvgPath[];
-  constructor(params: TypeProps = {}) {
-    super();
+  constructor(params: SvgProps = {}) {
+    super(params);
     this.className = 'FlCoinMultipleColorSvg';
-    this.attr.addObj({
-      name: 'FlCoinMultipleColorSvg',
-      title: 'FlCoinMultipleColorSvg'
+   addAttrObj(this, {
+      name: 'FlCoinMultipleColorSvg'
     });
-    this.attr.addObj({
+   addAttrObj(this, {
       viewBox: '0 0 20 20',
     });
     this.resetSize(24, 24);
@@ -44,6 +43,5 @@ export class FlCoinMultipleColorSvg extends TypeSvgSvg {
       'M16 5.5C16 7.433 13.3137 9 10 9C6.68629 9 4 7.433 4 5.5C4 3.567 6.68629 2 10 2C13.3137 2 16 3.567 16 5.5Z',
     );
     this.addChild(path5);
-    this.useParams(params);
   }
 }

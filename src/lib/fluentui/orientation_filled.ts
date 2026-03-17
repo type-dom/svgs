@@ -1,15 +1,14 @@
-import { TypeProps, SvgPath, TypeSvgSvg } from '@type-dom/framework';
+import { SvgProps, SvgPath, TypeSvgSvg, addAttrObj } from '@type-dom/framework';
 export class FlOrientationFilledSvg extends TypeSvgSvg {
   className: 'FlOrientationFilledSvg';
   override childNodes: SvgPath[];
-  constructor(params: TypeProps = {}) {
-    super();
+  constructor(params: SvgProps = {}) {
+    super(params);
     this.className = 'FlOrientationFilledSvg';
-    this.attr.addObj({
-      name: 'FlOrientationFilledSvg',
-      title: 'FlOrientationFilledSvg'
+   addAttrObj(this, {
+      name: 'FlOrientationFilledSvg'
     });
-    this.attr.addObj({
+   addAttrObj(this, {
       viewBox: '0 0 20 20',
     });
     this.resetSize(24, 24);
@@ -44,6 +43,5 @@ export class FlOrientationFilledSvg extends TypeSvgSvg {
       'M3 7.5C3 7.22386 2.77614 7 2.5 7C2.22386 7 2 7.22386 2 7.5V8.5C2 8.77614 2.22386 9 2.5 9C2.77614 9 3 8.77614 3 8.5V7.5Z',
     );
     this.addChild(path5);
-    this.useParams(params);
   }
 }

@@ -1,15 +1,14 @@
-import { TypeProps, SvgPath, TypeSvgSvg } from '@type-dom/framework';
+import { SvgProps, SvgPath, TypeSvgSvg, addAttrObj } from '@type-dom/framework';
 export class TdThreeDotsSvg extends TypeSvgSvg {
   className: 'TdThreeDotsSvg';
   override childNodes: SvgPath[];
-  constructor(params: TypeProps = {}) {
-    super();
+  constructor(params: SvgProps = {}) {
+    super(params);
     this.className = 'TdThreeDotsSvg';
-    this.attr.addObj({
-      name: 'TdThreeDotsSvg',
-      title: 'TdThreeDotsSvg'
+    addAttrObj(this, {
+      name: 'TdThreeDotsSvg'
     });
-    this.attr.addObj({
+    addAttrObj(this, {
       viewBox: '0 0 1024 1024',
     });
     this.resetSize(24, 24);
@@ -19,6 +18,5 @@ export class TdThreeDotsSvg extends TypeSvgSvg {
       'M0 512c0-59.733333 46.933333-106.666667 106.666667-106.666667s106.666667 46.933333 106.666666 106.666667-46.933333 106.666667-106.666666 106.666667-106.666667-46.933333-106.666667-106.666667zM810.666667 512c0-59.733333 46.933333-106.666667 106.666666-106.666667s106.666667 46.933333 106.666667 106.666667-46.933333 106.666667-106.666667 106.666667-106.666667-46.933333-106.666666-106.666667zM405.333333 512c0-59.733333 46.933333-106.666667 106.666667-106.666667s106.666667 46.933333 106.666667 106.666667-46.933333 106.666667-106.666667 106.666667-106.666667-46.933333-106.666667-106.666667z',
     );
     this.addChild(path0);
-    this.useParams(params);
   }
 }

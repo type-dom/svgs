@@ -1,15 +1,14 @@
-import { TypeProps, SvgPath, TypeSvgSvg } from '@type-dom/framework';
+import { SvgProps, SvgPath, TypeSvgSvg, addAttrObj } from '@type-dom/framework';
 export class FlLockClosedFilledSvg extends TypeSvgSvg {
   className: 'FlLockClosedFilledSvg';
   override childNodes: SvgPath[];
-  constructor(params: TypeProps = {}) {
-    super();
+  constructor(params: SvgProps = {}) {
+    super(params);
     this.className = 'FlLockClosedFilledSvg';
-    this.attr.addObj({
-      name: 'FlLockClosedFilledSvg',
-      title: 'FlLockClosedFilledSvg'
+   addAttrObj(this, {
+      name: 'FlLockClosedFilledSvg'
     });
-    this.attr.addObj({
+   addAttrObj(this, {
       viewBox: '0 0 20 20',
     });
     this.resetSize(24, 24);
@@ -19,6 +18,5 @@ export class FlLockClosedFilledSvg extends TypeSvgSvg {
       'M10 2C8.34315 2 7 3.34315 7 5V6H6C4.34315 6 3 7.34315 3 9V15C3 16.6569 4.34315 18 6 18H14C15.6569 18 17 16.6569 17 15V9C17 7.34315 15.6569 6 14 6H13V5C13 3.34315 11.6569 2 10 2ZM8 5C8 3.89543 8.89543 3 10 3C11.1046 3 12 3.89543 12 5V6H8V5ZM10 13C9.44772 13 9 12.5523 9 12C9 11.4477 9.44772 11 10 11C10.5523 11 11 11.4477 11 12C11 12.5523 10.5523 13 10 13Z',
     );
     this.addChild(path0);
-    this.useParams(params);
   }
 }

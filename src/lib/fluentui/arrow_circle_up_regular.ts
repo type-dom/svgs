@@ -1,15 +1,14 @@
-import { TypeProps, SvgPath, TypeSvgSvg } from '@type-dom/framework';
+import { SvgProps, SvgPath, TypeSvgSvg, addAttrObj } from '@type-dom/framework';
 export class FlArrowCircleUpRegularSvg extends TypeSvgSvg {
   className: 'FlArrowCircleUpRegularSvg';
   override childNodes: SvgPath[];
-  constructor(params: TypeProps = {}) {
-    super();
+  constructor(params: SvgProps = {}) {
+    super(params);
     this.className = 'FlArrowCircleUpRegularSvg';
-    this.attr.addObj({
-      name: 'FlArrowCircleUpRegularSvg',
-      title: 'FlArrowCircleUpRegularSvg'
+   addAttrObj(this, {
+      name: 'FlArrowCircleUpRegularSvg'
     });
-    this.attr.addObj({
+   addAttrObj(this, {
       viewBox: '0 0 20 20',
     });
     this.resetSize(24, 24);
@@ -19,6 +18,5 @@ export class FlArrowCircleUpRegularSvg extends TypeSvgSvg {
       'M6.64645 9.14645L9.64645 6.14645C9.84171 5.95118 10.1583 5.95118 10.3536 6.14645L13.3536 9.14645C13.5488 9.34171 13.5488 9.65829 13.3536 9.85355C13.1583 10.0488 12.8417 10.0488 12.6464 9.85355L10.5 7.70711V13.5C10.5 13.7761 10.2761 14 10 14C9.72386 14 9.5 13.7761 9.5 13.5V7.70711L7.35355 9.85355C7.15829 10.0488 6.84171 10.0488 6.64645 9.85355C6.45118 9.65829 6.45118 9.34171 6.64645 9.14645ZM10 2C5.58172 2 2 5.58172 2 10C2 14.4183 5.58172 18 10 18C14.4183 18 18 14.4183 18 10C18 5.58172 14.4183 2 10 2ZM3 10C3 6.13401 6.13401 3 10 3C13.866 3 17 6.13401 17 10C17 13.866 13.866 17 10 17C6.13401 17 3 13.866 3 10Z',
     );
     this.addChild(path0);
-    this.useParams(params);
   }
 }

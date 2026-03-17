@@ -1,15 +1,14 @@
-import { TypeProps, SvgPath, TypeSvgSvg } from '@type-dom/framework';
+import { SvgProps, SvgPath, TypeSvgSvg, addAttrObj } from '@type-dom/framework';
 export class FlAlignSpaceBetweenVerticalRegularSvg extends TypeSvgSvg {
   className: 'FlAlignSpaceBetweenVerticalRegularSvg';
   override childNodes: SvgPath[];
-  constructor(params: TypeProps = {}) {
-    super();
+  constructor(params: SvgProps = {}) {
+    super(params);
     this.className = 'FlAlignSpaceBetweenVerticalRegularSvg';
-    this.attr.addObj({
-      name: 'FlAlignSpaceBetweenVerticalRegularSvg',
-      title: 'FlAlignSpaceBetweenVerticalRegularSvg'
+   addAttrObj(this, {
+      name: 'FlAlignSpaceBetweenVerticalRegularSvg'
     });
-    this.attr.addObj({
+   addAttrObj(this, {
       viewBox: '0 0 20 20',
     });
     this.resetSize(24, 24);
@@ -24,6 +23,5 @@ export class FlAlignSpaceBetweenVerticalRegularSvg extends TypeSvgSvg {
       'M16 4C14.8954 4 14 4.89543 14 6V14C14 15.1046 14.8954 16 16 16H17C18.1046 16 19 15.1046 19 14V6C19 4.89543 18.1046 4 17 4H16ZM15 6C15 5.44772 15.4477 5 16 5H17C17.5523 5 18 5.44772 18 6V14C18 14.5523 17.5523 15 17 15H16C15.4477 15 15 14.5523 15 14V6Z',
     );
     this.addChild(path1);
-    this.useParams(params);
   }
 }

@@ -1,15 +1,14 @@
-import { TypeProps, SvgPath, TypeSvgSvg } from '@type-dom/framework';
+import { SvgProps, SvgPath, TypeSvgSvg, addAttrObj } from '@type-dom/framework';
 export class TdCheckboxSvg extends TypeSvgSvg {
   className: 'TdCheckboxSvg';
   override childNodes: SvgPath[];
-  constructor(params: TypeProps = {}) {
-    super();
+  constructor(params: SvgProps = {}) {
+    super(params);
     this.className = 'TdCheckboxSvg';
-    this.attr.addObj({
-      name: 'TdCheckboxSvg',
-      title: 'TdCheckboxSvg'
+    addAttrObj(this, {
+      name: 'TdCheckboxSvg'
     });
-    this.attr.addObj({
+    addAttrObj(this, {
       viewBox: '0 0 1024 1024',
     });
     this.resetSize(24, 24);
@@ -29,6 +28,5 @@ export class TdCheckboxSvg extends TypeSvgSvg {
       'M402.22 670.33L283.05 551.16c-17.41-17.41-17.41-45.64 0-63.05 17.41-17.41 45.64-17.41 63.05 0l119.17 119.17c17.41 17.41 17.41 45.64 0 63.05-17.41 17.41-45.64 17.41-63.05 0z',
     );
     this.addChild(path2);
-    this.useParams(params);
   }
 }

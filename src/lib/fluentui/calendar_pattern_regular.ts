@@ -1,15 +1,14 @@
-import { TypeProps, SvgPath, TypeSvgSvg } from '@type-dom/framework';
+import { SvgProps, SvgPath, TypeSvgSvg, addAttrObj } from '@type-dom/framework';
 export class FlCalendarPatternRegularSvg extends TypeSvgSvg {
   className: 'FlCalendarPatternRegularSvg';
   override childNodes: SvgPath[];
-  constructor(params: TypeProps = {}) {
-    super();
+  constructor(params: SvgProps = {}) {
+    super(params);
     this.className = 'FlCalendarPatternRegularSvg';
-    this.attr.addObj({
-      name: 'FlCalendarPatternRegularSvg',
-      title: 'FlCalendarPatternRegularSvg'
+   addAttrObj(this, {
+      name: 'FlCalendarPatternRegularSvg'
     });
-    this.attr.addObj({
+   addAttrObj(this, {
       viewBox: '0 0 20 20',
     });
     this.resetSize(24, 24);
@@ -19,6 +18,5 @@ export class FlCalendarPatternRegularSvg extends TypeSvgSvg {
       'M5.5 3H14.5C15.8807 3 17 4.11929 17 5.5V14.5C17 15.8807 15.8807 17 14.5 17H5.5C4.11929 17 3 15.8807 3 14.5V5.5C3 4.11929 4.11929 3 5.5 3ZM4 5.5V7H16V5.5C16 4.67157 15.3284 4 14.5 4H5.5C4.67157 4 4 4.67157 4 5.5ZM14.7071 8L10.7071 12H13.2929L16 9.29289V8H14.7071ZM13.2929 8H10.7071L6.70711 12H9.29289L13.2929 8ZM5.29289 12L9.29289 8H6.70711L4 10.7071V12H5.29289ZM4 9.29289L5.29289 8H4V9.29289ZM14.7071 12H16V10.7071L14.7071 12Z',
     );
     this.addChild(path0);
-    this.useParams(params);
   }
 }

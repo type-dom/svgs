@@ -1,15 +1,14 @@
-import { TypeProps, SvgPath, TypeSvgSvg } from '@type-dom/framework';
+import { SvgProps, SvgPath, TypeSvgSvg, addAttrObj } from '@type-dom/framework';
 export class FlReorderFilledSvg extends TypeSvgSvg {
   className: 'FlReorderFilledSvg';
   override childNodes: SvgPath[];
-  constructor(params: TypeProps = {}) {
-    super();
+  constructor(params: SvgProps = {}) {
+    super(params);
     this.className = 'FlReorderFilledSvg';
-    this.attr.addObj({
-      name: 'FlReorderFilledSvg',
-      title: 'FlReorderFilledSvg'
+   addAttrObj(this, {
+      name: 'FlReorderFilledSvg'
     });
-    this.attr.addObj({
+   addAttrObj(this, {
       viewBox: '0 0 20 20',
     });
     this.resetSize(24, 24);
@@ -19,6 +18,5 @@ export class FlReorderFilledSvg extends TypeSvgSvg {
       'M2.75 7.75C2.33579 7.75 2 8.08579 2 8.5C2 8.91421 2.33579 9.25 2.75 9.25H17.25C17.6642 9.25 18 8.91421 18 8.5C18 8.08579 17.6642 7.75 17.25 7.75H2.75ZM2.75 10.75C2.33579 10.75 2 11.0858 2 11.5C2 11.9142 2.33579 12.25 2.75 12.25H17.25C17.6642 12.25 18 11.9142 18 11.5C18 11.0858 17.6642 10.75 17.25 10.75H2.75Z',
     );
     this.addChild(path0);
-    this.useParams(params);
   }
 }

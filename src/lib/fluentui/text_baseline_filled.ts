@@ -1,15 +1,14 @@
-import { TypeProps, SvgPath, TypeSvgSvg } from '@type-dom/framework';
+import { SvgProps, SvgPath, TypeSvgSvg, addAttrObj } from '@type-dom/framework';
 export class FlTextBaselineFilledSvg extends TypeSvgSvg {
   className: 'FlTextBaselineFilledSvg';
   override childNodes: SvgPath[];
-  constructor(params: TypeProps = {}) {
-    super();
+  constructor(params: SvgProps = {}) {
+    super(params);
     this.className = 'FlTextBaselineFilledSvg';
-    this.attr.addObj({
-      name: 'FlTextBaselineFilledSvg',
-      title: 'FlTextBaselineFilledSvg'
+   addAttrObj(this, {
+      name: 'FlTextBaselineFilledSvg'
     });
-    this.attr.addObj({
+   addAttrObj(this, {
       viewBox: '0 0 20 20',
     });
     this.resetSize(24, 24);
@@ -24,6 +23,5 @@ export class FlTextBaselineFilledSvg extends TypeSvgSvg {
       'M2.5 16C2.22386 16 2 16.2239 2 16.5C2 16.7761 2.22386 17 2.5 17H17.5C17.7761 17 18 16.7761 18 16.5C18 16.2239 17.7761 16 17.5 16H2.5Z',
     );
     this.addChild(path1);
-    this.useParams(params);
   }
 }

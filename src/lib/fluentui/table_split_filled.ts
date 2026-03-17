@@ -1,15 +1,14 @@
-import { TypeProps, SvgPath, TypeSvgSvg } from '@type-dom/framework';
+import { SvgProps, SvgPath, TypeSvgSvg, addAttrObj } from '@type-dom/framework';
 export class FlTableSplitFilledSvg extends TypeSvgSvg {
   className: 'FlTableSplitFilledSvg';
   override childNodes: SvgPath[];
-  constructor(params: TypeProps = {}) {
-    super();
+  constructor(params: SvgProps = {}) {
+    super(params);
     this.className = 'FlTableSplitFilledSvg';
-    this.attr.addObj({
-      name: 'FlTableSplitFilledSvg',
-      title: 'FlTableSplitFilledSvg'
+   addAttrObj(this, {
+      name: 'FlTableSplitFilledSvg'
     });
-    this.attr.addObj({
+   addAttrObj(this, {
       viewBox: '0 0 20 20',
     });
     this.resetSize(24, 24);
@@ -19,6 +18,5 @@ export class FlTableSplitFilledSvg extends TypeSvgSvg {
       'M8 6L12 6V2H8L8 6ZM7 2H3.5C3.22386 2 3 2.22386 3 2.5V4C3 5.10457 3.89543 6 5 6H7L7 2ZM13 6H15C16.1046 6 17 5.10457 17 4V2.5C17 2.22386 16.7761 2 16.5 2H13V6ZM17 17.5C17 17.7761 16.7761 18 16.5 18H13V14H15C16.1046 14 17 14.8954 17 16V17.5ZM12 14V18H8V14L12 14ZM3.5 18H7V14H5C3.89543 14 3 14.8954 3 16L3 17.5C3 17.7761 3.22386 18 3.5 18ZM2.5 9.5H17.5054C17.7837 9.5 18.0084 9.72719 18.0054 10.0054C18.0024 10.2794 17.7794 10.5 17.5054 10.5H2.5C2.22386 10.5 2 10.2761 2 10C2 9.72386 2.22386 9.5 2.5 9.5Z',
     );
     this.addChild(path0);
-    this.useParams(params);
   }
 }

@@ -1,15 +1,14 @@
-import { TypeProps, SvgPath, TypeSvgSvg } from '@type-dom/framework';
+import { SvgProps, SvgPath, TypeSvgSvg, addAttrObj } from '@type-dom/framework';
 export class FlDocumentOnePageColumnsFilledSvg extends TypeSvgSvg {
   className: 'FlDocumentOnePageColumnsFilledSvg';
   override childNodes: SvgPath[];
-  constructor(params: TypeProps = {}) {
-    super();
+  constructor(params: SvgProps = {}) {
+    super(params);
     this.className = 'FlDocumentOnePageColumnsFilledSvg';
-    this.attr.addObj({
-      name: 'FlDocumentOnePageColumnsFilledSvg',
-      title: 'FlDocumentOnePageColumnsFilledSvg'
+   addAttrObj(this, {
+      name: 'FlDocumentOnePageColumnsFilledSvg'
     });
-    this.attr.addObj({
+   addAttrObj(this, {
       viewBox: '0 0 20 20',
     });
     this.resetSize(24, 24);
@@ -19,6 +18,5 @@ export class FlDocumentOnePageColumnsFilledSvg extends TypeSvgSvg {
       'M4 4C4 2.89543 4.89543 2 6 2H14C15.1046 2 16 2.89543 16 4V16C16 17.1046 15.1046 18 14 18H6C4.89543 18 4 17.1046 4 16V4ZM7.5 5C7.22386 5 7 5.22386 7 5.5V14.5C7 14.7761 7.22386 15 7.5 15C7.77614 15 8 14.7761 8 14.5V5.5C8 5.22386 7.77614 5 7.5 5ZM13 5.5C13 5.22386 12.7761 5 12.5 5C12.2239 5 12 5.22386 12 5.5V14.5C12 14.7761 12.2239 15 12.5 15C12.7761 15 13 14.7761 13 14.5V5.5Z',
     );
     this.addChild(path0);
-    this.useParams(params);
   }
 }

@@ -1,15 +1,14 @@
-import { TypeProps, SvgPath, TypeSvgSvg } from '@type-dom/framework';
+import { SvgProps, SvgPath, TypeSvgSvg, addAttrObj } from '@type-dom/framework';
 export class TdShrinkOutlinedSvg extends TypeSvgSvg {
   className: 'TdShrinkOutlinedSvg';
   override childNodes: SvgPath[];
-  constructor(params: TypeProps = {}) {
-    super();
+  constructor(params: SvgProps = {}) {
+    super(params);
     this.className = 'TdShrinkOutlinedSvg';
-    this.attr.addObj({
-      name: 'TdShrinkOutlinedSvg',
-      title: 'TdShrinkOutlinedSvg'
+    addAttrObj(this, {
+      name: 'TdShrinkOutlinedSvg'
     });
-    this.attr.addObj({
+    addAttrObj(this, {
       viewBox: '0 0 1024 1024',
     });
     this.resetSize(24, 24);
@@ -19,6 +18,5 @@ export class TdShrinkOutlinedSvg extends TypeSvgSvg {
       'M848 128A48 48 0 0 1 896 176v672a48 48 0 0 1-48 48h-672A48 48 0 0 1 128 848v-672A48 48 0 0 1 176 128h672zM832 192H192v640h640V192z m-128 288a32 32 0 0 1 0 64H320a32 32 0 0 1 0-64h384z',
     );
     this.addChild(path0);
-    this.useParams(params);
   }
 }

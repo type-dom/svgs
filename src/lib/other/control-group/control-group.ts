@@ -1,12 +1,12 @@
-import { TypeProps, SvgPath, TypeSvgSvg } from '@type-dom/framework';
+import { SvgProps, SvgPath, TypeSvgSvg, addAttrObj } from '@type-dom/framework';
 
 export class ControlGroupSvg extends TypeSvgSvg {
   className: 'ControlGroupSvg';
   path: SvgPath;
-  constructor(params: TypeProps = {}) {
-    super();
+  constructor(params: SvgProps = {}) {
+    super(params);
     this.className = 'ControlGroupSvg';
-    this.attr.addObj({
+    addAttrObj(this, {
       viewBox: '0 0 1024 1024',
       name: 'control-group-svg',
     });
@@ -19,6 +19,5 @@ export class ControlGroupSvg extends TypeSvgSvg {
       'M546.56 512a128 128 0 1 1 128 128 128 128 0 0 1-128-128z m78.72 0a49.28 49.28 0 1 0 49.28-49.28 49.28 49.28 0 0 0-49.28 49.28z'
     );
     this.addChild(this.path);
-    this.useParams(params);
   }
 }

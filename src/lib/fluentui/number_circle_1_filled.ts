@@ -1,15 +1,14 @@
-import { TypeProps, SvgPath, TypeSvgSvg } from '@type-dom/framework';
+import { SvgProps, SvgPath, TypeSvgSvg, addAttrObj } from '@type-dom/framework';
 export class FlNumberCircle1FilledSvg extends TypeSvgSvg {
   className: 'FlNumberCircle1FilledSvg';
   override childNodes: SvgPath[];
-  constructor(params: TypeProps = {}) {
-    super();
+  constructor(params: SvgProps = {}) {
+    super(params);
     this.className = 'FlNumberCircle1FilledSvg';
-    this.attr.addObj({
-      name: 'FlNumberCircle1FilledSvg',
-      title: 'FlNumberCircle1FilledSvg'
+   addAttrObj(this, {
+      name: 'FlNumberCircle1FilledSvg'
     });
-    this.attr.addObj({
+   addAttrObj(this, {
       viewBox: '0 0 20 20',
     });
     this.resetSize(24, 24);
@@ -19,6 +18,5 @@ export class FlNumberCircle1FilledSvg extends TypeSvgSvg {
       'M10 18C14.4183 18 18 14.4183 18 10C18 5.58172 14.4183 2 10 2C5.58172 2 2 5.58172 2 10C2 14.4183 5.58172 18 10 18ZM11.0001 6.49997V13.5C11.0001 13.7761 10.7762 14 10.5001 14C10.2239 14 10.0001 13.7761 10.0001 13.5V8.47675C9.62181 8.96065 9.18228 9.39608 8.7774 9.666C8.54764 9.81918 8.2372 9.75709 8.08403 9.52732C7.93085 9.29756 7.99294 8.98713 8.2227 8.83395C8.53619 8.62496 8.93439 8.23336 9.28755 7.76248C9.64181 7.29013 9.91244 6.78889 10.015 6.37871C10.0762 6.13373 10.3105 5.97287 10.5611 6.00372C10.8118 6.03457 11.0001 6.24746 11.0001 6.49997Z',
     );
     this.addChild(path0);
-    this.useParams(params);
   }
 }

@@ -1,15 +1,14 @@
-import { TypeProps, SvgPath, TypeSvgSvg } from '@type-dom/framework';
+import { SvgProps, SvgPath, TypeSvgSvg, addAttrObj } from '@type-dom/framework';
 export class TdBackgroundColorSvg extends TypeSvgSvg {
   className: 'TdBackgroundColorSvg';
   override childNodes: SvgPath[];
-  constructor(params: TypeProps = {}) {
-    super();
+  constructor(params: SvgProps = {}) {
+    super(params);
     this.className = 'TdBackgroundColorSvg';
-    this.attr.addObj({
-      name: 'TdBackgroundColorSvg',
-      title: 'TdBackgroundColorSvg'
+    addAttrObj(this, {
+      name: 'TdBackgroundColorSvg'
     });
-    this.attr.addObj({
+    addAttrObj(this, {
       viewBox: '0 0 1024 1024',
     });
     this.resetSize(24, 24);
@@ -34,6 +33,5 @@ export class TdBackgroundColorSvg extends TypeSvgSvg {
       'M879.7244897959183 725.8350340136054c0 32.25085034013605-26.143707482993193 58.39455782312924-58.39455782312924 58.39455782312924S762.9353741496599 758.0858843537414 762.9353741496599 725.8350340136054s58.39455782312924-110.60629251700679 58.39455782312924-110.60629251700679 58.39455782312924 78.35629251700679 58.39455782312924 110.60629251700679z',
     );
     this.addChild(path3);
-    this.useParams(params);
   }
 }

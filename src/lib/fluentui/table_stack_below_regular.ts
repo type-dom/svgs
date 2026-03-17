@@ -1,15 +1,14 @@
-import { TypeProps, SvgPath, TypeSvgSvg } from '@type-dom/framework';
+import { SvgProps, SvgPath, TypeSvgSvg, addAttrObj } from '@type-dom/framework';
 export class FlTableStackBelowRegularSvg extends TypeSvgSvg {
   className: 'FlTableStackBelowRegularSvg';
   override childNodes: SvgPath[];
-  constructor(params: TypeProps = {}) {
-    super();
+  constructor(params: SvgProps = {}) {
+    super(params);
     this.className = 'FlTableStackBelowRegularSvg';
-    this.attr.addObj({
-      name: 'FlTableStackBelowRegularSvg',
-      title: 'FlTableStackBelowRegularSvg'
+   addAttrObj(this, {
+      name: 'FlTableStackBelowRegularSvg'
     });
-    this.attr.addObj({
+   addAttrObj(this, {
       viewBox: '0 0 20 20',
     });
     this.resetSize(24, 24);
@@ -19,6 +18,5 @@ export class FlTableStackBelowRegularSvg extends TypeSvgSvg {
       'M17 16.5C17 16.7761 16.7761 17 16.5 17L3.5 17C3.22386 17 3 16.7761 3 16.5C3 16.2239 3.22386 16 3.5 16L16.5 16C16.7761 16 17 16.2239 17 16.5ZM17 11.5C17 11.7761 16.7761 12 16.5 12L3.5 12C3.22386 12 3 11.7761 3 11.5L3 5C3 3.89543 3.89543 3 5 3L15 3C16.1046 3 17 3.89543 17 5L17 11.5ZM16 7V5C16 4.44772 15.5523 4 15 4L13 4V7L16 7ZM8 4V7H12V4L8 4ZM7 4L5 4C4.44772 4 4 4.44772 4 5L4 7H7V4ZM7 8H4L4 11H7L7 8ZM8 11L12 11V8H8L8 11ZM16 11V8L13 8V11H16Z',
     );
     this.addChild(path0);
-    this.useParams(params);
   }
 }

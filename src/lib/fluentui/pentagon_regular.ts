@@ -1,15 +1,14 @@
-import { TypeProps, SvgPath, TypeSvgSvg } from '@type-dom/framework';
+import { SvgProps, SvgPath, TypeSvgSvg, addAttrObj } from '@type-dom/framework';
 export class FlPentagonRegularSvg extends TypeSvgSvg {
   className: 'FlPentagonRegularSvg';
   override childNodes: SvgPath[];
-  constructor(params: TypeProps = {}) {
-    super();
+  constructor(params: SvgProps = {}) {
+    super(params);
     this.className = 'FlPentagonRegularSvg';
-    this.attr.addObj({
-      name: 'FlPentagonRegularSvg',
-      title: 'FlPentagonRegularSvg'
+   addAttrObj(this, {
+      name: 'FlPentagonRegularSvg'
     });
-    this.attr.addObj({
+   addAttrObj(this, {
       viewBox: '0 0 20 20',
     });
     this.resetSize(24, 24);
@@ -19,6 +18,5 @@ export class FlPentagonRegularSvg extends TypeSvgSvg {
       'M8.39185 1.64806C9.34873 0.780344 10.8091 0.78447 11.7611 1.65758L17.1918 6.63854C17.9205 7.30682 18.1868 8.34174 17.8713 9.27874L15.8448 15.2972C15.5023 16.3143 14.5488 16.9994 13.4755 16.9994H6.64918C5.59607 16.9994 4.65588 16.3395 4.29798 15.349L2.14889 9.40165C1.80437 8.44821 2.06974 7.38111 2.82072 6.7001L8.39185 1.64806ZM11.0851 2.39455C10.514 1.87068 9.63773 1.86821 9.0636 2.38884L3.49247 7.44088C3.04188 7.84948 2.88266 8.48974 3.08938 9.0618L5.23846 15.0092C5.4532 15.6034 6.01731 15.9994 6.64918 15.9994H13.4755C14.1195 15.9994 14.6916 15.5884 14.8971 14.9781L16.9236 8.95963C17.1129 8.39743 16.9531 7.77648 16.5159 7.37551L11.0851 2.39455Z',
     );
     this.addChild(path0);
-    this.useParams(params);
   }
 }

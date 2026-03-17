@@ -1,15 +1,14 @@
-import { TypeProps, SvgPath, TypeSvgSvg } from '@type-dom/framework';
+import { SvgProps, SvgPath, TypeSvgSvg, addAttrObj } from '@type-dom/framework';
 export class TdForbidEditSvg extends TypeSvgSvg {
   className: 'TdForbidEditSvg';
   override childNodes: SvgPath[];
-  constructor(params: TypeProps = {}) {
-    super();
+  constructor(params: SvgProps = {}) {
+    super(params);
     this.className = 'TdForbidEditSvg';
-    this.attr.addObj({
-      name: 'TdForbidEditSvg',
-      title: 'TdForbidEditSvg'
+    addAttrObj(this, {
+      name: 'TdForbidEditSvg'
     });
-    this.attr.addObj({
+    addAttrObj(this, {
       viewBox: '0 0 1024 1024',
     });
     this.resetSize(24, 24);
@@ -24,6 +23,5 @@ export class TdForbidEditSvg extends TypeSvgSvg {
       'M757.888 808.512L214.848 265.472a16 16 0 0 1 0-22.656l25.472-25.408a16 16 0 0 1 22.592 0l543.04 543.04a16 16 0 0 1 0 22.592l-25.408 25.472a16 16 0 0 1-22.656 0z',
     );
     this.addChild(path1);
-    this.useParams(params);
   }
 }

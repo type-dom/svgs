@@ -1,15 +1,14 @@
-import { TypeProps, SvgPath, TypeSvgSvg } from '@type-dom/framework';
+import { SvgProps, SvgPath, TypeSvgSvg, addAttrObj } from '@type-dom/framework';
 export class FlDualScreenTabletFilledSvg extends TypeSvgSvg {
   className: 'FlDualScreenTabletFilledSvg';
   override childNodes: SvgPath[];
-  constructor(params: TypeProps = {}) {
-    super();
+  constructor(params: SvgProps = {}) {
+    super(params);
     this.className = 'FlDualScreenTabletFilledSvg';
-    this.attr.addObj({
-      name: 'FlDualScreenTabletFilledSvg',
-      title: 'FlDualScreenTabletFilledSvg'
+   addAttrObj(this, {
+      name: 'FlDualScreenTabletFilledSvg'
     });
-    this.attr.addObj({
+   addAttrObj(this, {
       viewBox: '0 0 20 20',
     });
     this.resetSize(24, 24);
@@ -19,6 +18,5 @@ export class FlDualScreenTabletFilledSvg extends TypeSvgSvg {
       'M4 5C4 3.89543 4.89543 3 6 3H16C17.1046 3 18 3.89543 18 5V11C18 12.1046 17.1046 13 16 13H13V11H13.5C13.7761 11 14 10.7761 14 10.5C14 10.2239 13.7761 10 13.5 10H13V9C13 7.34315 11.6569 6 10 6H4V5ZM10 17H7.5V7H10C11.1046 7 12 7.89543 12 9V15C12 16.1046 11.1046 17 10 17ZM4 7H6.5V17H4C2.89543 17 2 16.1046 2 15V9C2 7.89543 2.89543 7 4 7ZM9.5 14C9.22386 14 9 14.2239 9 14.5C9 14.7761 9.22386 15 9.5 15H10C10.2761 15 10.5 14.7761 10.5 14.5C10.5 14.2239 10.2761 14 10 14H9.5ZM3.5 14.5C3.5 14.7761 3.72386 15 4 15H4.5C4.77614 15 5 14.7761 5 14.5C5 14.2239 4.77614 14 4.5 14H4C3.72386 14 3.5 14.2239 3.5 14.5Z',
     );
     this.addChild(path0);
-    this.useParams(params);
   }
 }

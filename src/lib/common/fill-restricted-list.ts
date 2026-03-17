@@ -1,15 +1,14 @@
-import { TypeProps, SvgPath, TypeSvgSvg } from '@type-dom/framework';
+import { SvgProps, SvgPath, TypeSvgSvg, addAttrObj } from '@type-dom/framework';
 export class TdFillRestrictedListSvg extends TypeSvgSvg {
   className: 'TdFillRestrictedListSvg';
   override childNodes: SvgPath[];
-  constructor(params: TypeProps = {}) {
-    super();
+  constructor(params: SvgProps = {}) {
+    super(params);
     this.className = 'TdFillRestrictedListSvg';
-    this.attr.addObj({
-      name: 'TdFillRestrictedListSvg',
-      title: 'TdFillRestrictedListSvg'
+    addAttrObj(this, {
+      name: 'TdFillRestrictedListSvg'
     });
-    this.attr.addObj({
+    addAttrObj(this, {
       viewBox: '0 0 1024 1024',
     });
     this.resetSize(24, 24);
@@ -29,6 +28,5 @@ export class TdFillRestrictedListSvg extends TypeSvgSvg {
       'M302.8 319.7c-3 0-6.1 1.6-7.6 4.8l-14.3 29c-1.2 2.5-3.6 4.3-6.4 4.7l-32 4.6c-7 1-9.8 9.6-4.7 14.5l23.1 22.6c2 2 2.9 4.8 2.5 7.5l-5.5 31.8c-0.9 5.5 3.4 10 8.4 10 1.3 0 2.7-0.3 4-1l28.6-15c1.2-0.7 2.6-1 4-1s2.7 0.3 4 1l28.6 15c1.3 0.7 2.7 1 4 1 5 0 9.3-4.5 8.4-10l-5.5-31.8c-0.5-2.8 0.4-5.6 2.5-7.5l23.1-22.6c5.1-4.9 2.3-13.5-4.7-14.5l-32-4.6c-2.8-0.4-5.2-2.1-6.4-4.7l-14.3-29c-1.7-3.2-4.7-4.8-7.8-4.8zM302.8 509.7c-3 0-6.1 1.6-7.6 4.8l-14.3 29c-1.2 2.5-3.6 4.3-6.4 4.7l-32 4.6c-7 1-9.8 9.6-4.7 14.5l23.1 22.6c2 2 2.9 4.8 2.5 7.5l-5.5 31.8c-0.9 5.5 3.4 10 8.4 10 1.3 0 2.7-0.3 4-1l28.6-15c1.2-0.7 2.6-1 4-1s2.7 0.3 4 1l28.6 15c1.3 0.7 2.7 1 4 1 5 0 9.3-4.5 8.4-10l-5.5-31.8c-0.5-2.8 0.4-5.6 2.5-7.5l23.1-22.6c5.1-4.9 2.3-13.5-4.7-14.5l-32-4.6c-2.8-0.4-5.2-2.1-6.4-4.7l-14.3-29c-1.7-3.2-4.7-4.8-7.8-4.8zM302.8 699.7c-3 0-6.1 1.6-7.6 4.8l-14.3 29c-1.2 2.5-3.6 4.3-6.4 4.7l-32 4.6c-7 1-9.8 9.6-4.7 14.5l23.1 22.6c2 2 2.9 4.8 2.5 7.5l-5.5 31.8c-0.9 5.5 3.4 10 8.4 10 1.3 0 2.7-0.3 4-1l28.6-15c1.2-0.7 2.6-1 4-1s2.7 0.3 4 1l28.6 15c1.3 0.7 2.7 1 4 1 5 0 9.3-4.5 8.4-10l-5.5-31.8c-0.5-2.8 0.4-5.6 2.5-7.5l23.1-22.6c5.1-4.9 2.3-13.5-4.7-14.5l-32-4.6c-2.8-0.4-5.2-2.1-6.4-4.7l-14.3-29c-1.7-3.2-4.7-4.8-7.8-4.8z',
     );
     this.addChild(path2);
-    this.useParams(params);
   }
 }

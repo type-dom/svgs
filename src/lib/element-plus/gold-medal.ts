@@ -1,15 +1,14 @@
-import { TypeProps, SvgPath, TypeSvgSvg } from '@type-dom/framework';
+import { SvgProps, SvgPath, TypeSvgSvg, addAttrObj } from '@type-dom/framework';
 export class ElGoldMedalSvg extends TypeSvgSvg {
   className: 'ElGoldMedalSvg';
   override childNodes: SvgPath[];
-  constructor(params: TypeProps = {}) {
-    super();
+  constructor(params: SvgProps = {}) {
+    super(params);
     this.className = 'ElGoldMedalSvg';
-    this.attr.addObj({
-      name: 'ElGoldMedalSvg',
-      title: 'ElGoldMedalSvg'
+   addAttrObj(this, {
+      name: 'ElGoldMedalSvg'
     });
-    this.attr.addObj({
+   addAttrObj(this, {
       viewBox: '0 0 1024 1024',
     });
     this.resetSize(24, 24);
@@ -24,6 +23,5 @@ export class ElGoldMedalSvg extends TypeSvgSvg {
       'M544 480H416v64h64v192h-64v64h192v-64h-64z',
     );
     this.addChild(path1);
-    this.useParams(params);
   }
 }

@@ -1,15 +1,14 @@
-import { TypeProps, SvgPath, TypeSvgSvg } from '@type-dom/framework';
+import { SvgProps, SvgPath, TypeSvgSvg, addAttrObj } from '@type-dom/framework';
 export class TdBookmarkListSvg extends TypeSvgSvg {
   className: 'TdBookmarkListSvg';
   override childNodes: SvgPath[];
-  constructor(params: TypeProps = {}) {
-    super();
+  constructor(params: SvgProps = {}) {
+    super(params);
     this.className = 'TdBookmarkListSvg';
-    this.attr.addObj({
-      name: 'TdBookmarkListSvg',
-      title: 'TdBookmarkListSvg'
+    addAttrObj(this, {
+      name: 'TdBookmarkListSvg'
     });
-    this.attr.addObj({
+    addAttrObj(this, {
       viewBox: '0 0 1024 1024',
     });
     this.resetSize(24, 24);
@@ -19,6 +18,5 @@ export class TdBookmarkListSvg extends TypeSvgSvg {
       'M896 0a42.666667 42.666667 0 0 1 42.666667 42.666667v938.666666a42.666667 42.666667 0 0 1-42.666667 42.666667H128a42.666667 42.666667 0 0 1-42.666667-42.666667V42.666667a42.666667 42.666667 0 0 1 42.666667-42.666667h768z m-42.666667 85.333333h-85.333333v426.666667l-128-85.333333-128 85.333333V85.333333H170.666667v853.333334h682.666666V85.333333z m-170.666666 0h-85.333334v267.178667l42.666667-28.416 42.666667 28.416V85.333333z',
     );
     this.addChild(path0);
-    this.useParams(params);
   }
 }

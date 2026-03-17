@@ -1,15 +1,14 @@
-import { TypeProps, SvgPath, TypeSvgSvg } from '@type-dom/framework';
+import { SvgProps, SvgPath, TypeSvgSvg, addAttrObj } from '@type-dom/framework';
 export class FlPhonePaginationFilledSvg extends TypeSvgSvg {
   className: 'FlPhonePaginationFilledSvg';
   override childNodes: SvgPath[];
-  constructor(params: TypeProps = {}) {
-    super();
+  constructor(params: SvgProps = {}) {
+    super(params);
     this.className = 'FlPhonePaginationFilledSvg';
-    this.attr.addObj({
-      name: 'FlPhonePaginationFilledSvg',
-      title: 'FlPhonePaginationFilledSvg'
+   addAttrObj(this, {
+      name: 'FlPhonePaginationFilledSvg'
     });
-    this.attr.addObj({
+   addAttrObj(this, {
       viewBox: '0 0 20 20',
     });
     this.resetSize(24, 24);
@@ -19,6 +18,5 @@ export class FlPhonePaginationFilledSvg extends TypeSvgSvg {
       'M5 4C5 2.89543 5.89543 2 7 2H13C14.1046 2 15 2.89543 15 4V16C15 17.1046 14.1046 18 13 18H7C5.89543 18 5 17.1046 5 16V4ZM8 15C8.27614 15 8.5 14.7761 8.5 14.5C8.5 14.2239 8.27614 14 8 14C7.72386 14 7.5 14.2239 7.5 14.5C7.5 14.7761 7.72386 15 8 15ZM10 15C10.2761 15 10.5 14.7761 10.5 14.5C10.5 14.2239 10.2761 14 10 14C9.72386 14 9.5 14.2239 9.5 14.5C9.5 14.7761 9.72386 15 10 15ZM12.5 14.5C12.5 14.2239 12.2761 14 12 14C11.7239 14 11.5 14.2239 11.5 14.5C11.5 14.7761 11.7239 15 12 15C12.2761 15 12.5 14.7761 12.5 14.5Z',
     );
     this.addChild(path0);
-    this.useParams(params);
   }
 }

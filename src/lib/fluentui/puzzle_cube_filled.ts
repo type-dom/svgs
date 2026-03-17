@@ -1,15 +1,14 @@
-import { TypeProps, SvgPath, TypeSvgSvg } from '@type-dom/framework';
+import { SvgProps, SvgPath, TypeSvgSvg, addAttrObj } from '@type-dom/framework';
 export class FlPuzzleCubeFilledSvg extends TypeSvgSvg {
   className: 'FlPuzzleCubeFilledSvg';
   override childNodes: SvgPath[];
-  constructor(params: TypeProps = {}) {
-    super();
+  constructor(params: SvgProps = {}) {
+    super(params);
     this.className = 'FlPuzzleCubeFilledSvg';
-    this.attr.addObj({
-      name: 'FlPuzzleCubeFilledSvg',
-      title: 'FlPuzzleCubeFilledSvg'
+   addAttrObj(this, {
+      name: 'FlPuzzleCubeFilledSvg'
     });
-    this.attr.addObj({
+   addAttrObj(this, {
       viewBox: '0 0 20 20',
     });
     this.resetSize(24, 24);
@@ -19,6 +18,5 @@ export class FlPuzzleCubeFilledSvg extends TypeSvgSvg {
       'M13 17H14.5C15.8807 17 17 15.8807 17 14.5V13H13V17ZM13 12V8H17V12H13ZM12 12H8V8H12V12ZM8 13H12V17H8V13ZM7 12V8H3V12H7ZM3 13H7V17H5.5C4.11929 17 3 15.8807 3 14.5V13ZM13 7H17V5.5C17 4.11929 15.8807 3 14.5 3H13V7ZM12 3V7H8V3H12Z',
     );
     this.addChild(path0);
-    this.useParams(params);
   }
 }

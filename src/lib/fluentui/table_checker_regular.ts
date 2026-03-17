@@ -1,15 +1,14 @@
-import { TypeProps, SvgPath, TypeSvgSvg } from '@type-dom/framework';
+import { SvgProps, SvgPath, TypeSvgSvg, addAttrObj } from '@type-dom/framework';
 export class FlTableCheckerRegularSvg extends TypeSvgSvg {
   className: 'FlTableCheckerRegularSvg';
   override childNodes: SvgPath[];
-  constructor(params: TypeProps = {}) {
-    super();
+  constructor(params: SvgProps = {}) {
+    super(params);
     this.className = 'FlTableCheckerRegularSvg';
-    this.attr.addObj({
-      name: 'FlTableCheckerRegularSvg',
-      title: 'FlTableCheckerRegularSvg'
+   addAttrObj(this, {
+      name: 'FlTableCheckerRegularSvg'
     });
-    this.attr.addObj({
+   addAttrObj(this, {
       viewBox: '0 0 20 20',
     });
     this.resetSize(24, 24);
@@ -19,6 +18,5 @@ export class FlTableCheckerRegularSvg extends TypeSvgSvg {
       'M16 5.5V11H17V5.5C17 4.11929 15.8807 3 14.5 3H9V4H14.5C15.3284 4 16 4.67157 16 5.5ZM3 9V14.5C3 15.8807 4.11929 17 5.5 17H11V16H5.5C4.67157 16 4 15.3284 4 14.5V9H3ZM5.5 3H8V7H13V12H17V14.5C17 15.8807 15.8807 17 14.5 17H12V13H7V8H3V5.5C3 4.11929 4.11929 3 5.5 3ZM14.5 16C15.2797 16 15.9204 15.4051 15.9931 14.6445L16 14.5V13H13V16H14.5ZM12 8H8V12H12V8ZM4 7H7V4H5.5C4.7203 4 4.07955 4.59489 4.00687 5.35554L4 5.5V7Z',
     );
     this.addChild(path0);
-    this.useParams(params);
   }
 }

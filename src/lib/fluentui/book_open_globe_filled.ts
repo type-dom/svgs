@@ -1,15 +1,14 @@
-import { TypeProps, SvgPath, TypeSvgSvg } from '@type-dom/framework';
+import { SvgProps, SvgPath, TypeSvgSvg, addAttrObj } from '@type-dom/framework';
 export class FlBookOpenGlobeFilledSvg extends TypeSvgSvg {
   className: 'FlBookOpenGlobeFilledSvg';
   override childNodes: SvgPath[];
-  constructor(params: TypeProps = {}) {
-    super();
+  constructor(params: SvgProps = {}) {
+    super(params);
     this.className = 'FlBookOpenGlobeFilledSvg';
-    this.attr.addObj({
-      name: 'FlBookOpenGlobeFilledSvg',
-      title: 'FlBookOpenGlobeFilledSvg'
+   addAttrObj(this, {
+      name: 'FlBookOpenGlobeFilledSvg'
     });
-    this.attr.addObj({
+   addAttrObj(this, {
       viewBox: '0 0 20 20',
     });
     this.resetSize(24, 24);
@@ -49,6 +48,5 @@ export class FlBookOpenGlobeFilledSvg extends TypeSvgSvg {
       'M10.0275 15C10.2128 16.6766 11.3192 18.0756 12.8295 18.6798C12.7548 18.5346 12.6855 18.3811 12.6215 18.2212C12.2767 17.3591 12.0566 16.2336 12.0095 15H10.0275Z',
     );
     this.addChild(path6);
-    this.useParams(params);
   }
 }

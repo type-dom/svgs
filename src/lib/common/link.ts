@@ -1,15 +1,14 @@
-import { TypeProps, SvgPath, TypeSvgSvg } from '@type-dom/framework';
+import { SvgProps, SvgPath, TypeSvgSvg, addAttrObj } from '@type-dom/framework';
 export class TdLinkSvg extends TypeSvgSvg {
   className: 'TdLinkSvg';
   override childNodes: SvgPath[];
-  constructor(params: TypeProps = {}) {
-    super();
+  constructor(params: SvgProps = {}) {
+    super(params);
     this.className = 'TdLinkSvg';
-    this.attr.addObj({
-      name: 'TdLinkSvg',
-      title: 'TdLinkSvg'
+    addAttrObj(this, {
+      name: 'TdLinkSvg'
     });
-    this.attr.addObj({
+    addAttrObj(this, {
       viewBox: '0 0 128 128',
     });
     this.resetSize(24, 24);
@@ -29,6 +28,5 @@ export class TdLinkSvg extends TypeSvgSvg {
       'M127.893 37.982h-12.375V12.375H88.706V0h39.187z',
     );
     this.addChild(path2);
-    this.useParams(params);
   }
 }

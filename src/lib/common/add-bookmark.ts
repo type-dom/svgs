@@ -1,15 +1,14 @@
-import { TypeProps, SvgPath, TypeSvgSvg } from '@type-dom/framework';
+import { SvgProps, SvgPath, TypeSvgSvg, addAttrObj } from '@type-dom/framework';
 export class TdAddBookmarkSvg extends TypeSvgSvg {
   className: 'TdAddBookmarkSvg';
   override childNodes: SvgPath[];
-  constructor(params: TypeProps = {}) {
-    super();
+  constructor(params: SvgProps = {}) {
+    super(params);
     this.className = 'TdAddBookmarkSvg';
-    this.attr.addObj({
-      name: 'TdAddBookmarkSvg',
-      title: 'TdAddBookmarkSvg'
+    addAttrObj(this, {
+      name: 'TdAddBookmarkSvg'
     });
-    this.attr.addObj({
+    addAttrObj(this, {
       viewBox: '0 0 1024 1024',
     });
     this.resetSize(24, 24);
@@ -24,6 +23,5 @@ export class TdAddBookmarkSvg extends TypeSvgSvg {
       'M703.488 373.248a22.3232 22.3232 0 0 0-9.728-9.728 35.84 35.84 0 0 0-15.36-4.096h-135.168V224.256a42.9056 42.9056 0 0 0-4.096-15.36 22.3232 22.3232 0 0 0-9.728-9.728 42.9056 42.9056 0 0 0-15.36-4.096 42.9056 42.9056 0 0 0-15.36 4.096 22.3232 22.3232 0 0 0-9.728 9.728 42.9056 42.9056 0 0 0-4.096 15.36v135.168H350.208a42.9056 42.9056 0 0 0-15.36 4.096 22.3232 22.3232 0 0 0-9.728 9.728 42.9056 42.9056 0 0 0-4.096 15.36 42.9056 42.9056 0 0 0 4.096 15.36 22.3232 22.3232 0 0 0 9.728 9.728 35.84 35.84 0 0 0 15.36 4.096h135.168V552.96a42.9056 42.9056 0 0 0 4.096 15.36 22.3232 22.3232 0 0 0 9.728 9.728 42.9056 42.9056 0 0 0 15.36 4.096 42.9056 42.9056 0 0 0 15.36-4.096 22.3232 22.3232 0 0 0 9.728-9.728 35.84 35.84 0 0 0 4.096-15.36V417.792h135.168a42.9056 42.9056 0 0 0 15.36-4.096 22.3232 22.3232 0 0 0 9.728-9.728 35.84 35.84 0 0 0 4.096-15.36 44.032 44.032 0 0 0-4.608-15.36z',
     );
     this.addChild(path1);
-    this.useParams(params);
   }
 }

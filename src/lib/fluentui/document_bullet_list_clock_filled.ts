@@ -1,15 +1,14 @@
-import { TypeProps, SvgPath, TypeSvgSvg } from '@type-dom/framework';
+import { SvgProps, SvgPath, TypeSvgSvg, addAttrObj } from '@type-dom/framework';
 export class FlDocumentBulletListClockFilledSvg extends TypeSvgSvg {
   className: 'FlDocumentBulletListClockFilledSvg';
   override childNodes: SvgPath[];
-  constructor(params: TypeProps = {}) {
-    super();
+  constructor(params: SvgProps = {}) {
+    super(params);
     this.className = 'FlDocumentBulletListClockFilledSvg';
-    this.attr.addObj({
-      name: 'FlDocumentBulletListClockFilledSvg',
-      title: 'FlDocumentBulletListClockFilledSvg'
+   addAttrObj(this, {
+      name: 'FlDocumentBulletListClockFilledSvg'
     });
-    this.attr.addObj({
+   addAttrObj(this, {
       viewBox: '0 0 20 20',
     });
     this.resetSize(24, 24);
@@ -29,6 +28,5 @@ export class FlDocumentBulletListClockFilledSvg extends TypeSvgSvg {
       'M19 14.5C19 16.9853 16.9853 19 14.5 19C12.0147 19 10 16.9853 10 14.5C10 12.0147 12.0147 10 14.5 10C16.9853 10 19 12.0147 19 14.5ZM15 11.5C15 11.2239 14.7761 11 14.5 11C14.2239 11 14 11.2239 14 11.5V14.5C14 14.7761 14.2239 15 14.5 15H16.5C16.7761 15 17 14.7761 17 14.5C17 14.2239 16.7761 14 16.5 14H15V11.5Z',
     );
     this.addChild(path2);
-    this.useParams(params);
   }
 }

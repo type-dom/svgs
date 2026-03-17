@@ -1,15 +1,14 @@
-import { TypeProps, SvgPath, TypeSvgSvg } from '@type-dom/framework';
+import { SvgProps, SvgPath, TypeSvgSvg, addAttrObj } from '@type-dom/framework';
 export class FlCalligraphyPenCheckmarkRegularSvg extends TypeSvgSvg {
   className: 'FlCalligraphyPenCheckmarkRegularSvg';
   override childNodes: SvgPath[];
-  constructor(params: TypeProps = {}) {
-    super();
+  constructor(params: SvgProps = {}) {
+    super(params);
     this.className = 'FlCalligraphyPenCheckmarkRegularSvg';
-    this.attr.addObj({
-      name: 'FlCalligraphyPenCheckmarkRegularSvg',
-      title: 'FlCalligraphyPenCheckmarkRegularSvg'
+   addAttrObj(this, {
+      name: 'FlCalligraphyPenCheckmarkRegularSvg'
     });
-    this.attr.addObj({
+   addAttrObj(this, {
       viewBox: '0 0 20 20',
     });
     this.resetSize(24, 24);
@@ -24,6 +23,5 @@ export class FlCalligraphyPenCheckmarkRegularSvg extends TypeSvgSvg {
       'M14.8451 10.9894C14.731 10.9964 14.6159 11 14.5 11C14.249 11 14.0018 10.9832 13.7597 10.9506L10.5 16.5113V10.8662C10.7989 10.6933 11 10.3701 11 10C11 9.89778 10.9847 9.79913 10.9562 9.70625C10.8592 9.3902 10.6098 9.14082 10.2938 9.04384C10.2009 9.01534 10.1022 9 10 9C9.44772 9 9 9.44772 9 10C9 10.3701 9.2011 10.6933 9.5 10.8662V16.5113L6.21603 10.9093C5.96513 10.4813 5.94209 9.9569 6.15447 9.50854L7.81641 6H9.02242C9.00758 5.83532 9 5.66854 9 5.5C9 5.33146 9.00758 5.16468 9.02242 5H6.5C6.22386 5 6 4.77614 6 4.5V2.5C6 2.22386 5.77614 2 5.5 2C5.22386 2 5 2.22386 5 2.5V4.5C5 5.32843 5.67157 6 6.5 6H6.70989L5.25073 9.08046C4.89676 9.82771 4.93517 10.7016 5.35333 11.415L8.81578 17.3215C9.06215 17.7418 9.51282 18 9.99999 18C10.4872 18 10.9378 17.7418 11.1842 17.3215L14.6467 11.415C14.7268 11.2783 14.7929 11.1358 14.8451 10.9894Z',
     );
     this.addChild(path1);
-    this.useParams(params);
   }
 }

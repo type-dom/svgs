@@ -1,12 +1,12 @@
-import { TypeProps, SvgPath, TypeSvgSvg } from '@type-dom/framework';
+import { SvgProps, SvgPath, TypeSvgSvg, addAttrObj } from '@type-dom/framework';
 
 export class OutlineSvg extends TypeSvgSvg {
   className: 'OutlineSvg';
   path: SvgPath;
-  constructor(params: TypeProps = {}) {
-    super();
+  constructor(params: SvgProps = {}) {
+    super(params);
     this.className = 'OutlineSvg';
-    this.attr.addObj({
+    addAttrObj(this, {
       viewBox: '0 0 1024 1024',
       name: 'outline-svg',
     });
@@ -19,6 +19,5 @@ export class OutlineSvg extends TypeSvgSvg {
       'M64 192h64v704H64z'
     );
     this.addChild(this.path);
-    this.useParams(params);
   }
 }

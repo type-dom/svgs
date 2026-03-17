@@ -1,15 +1,14 @@
-import { TypeProps, SvgPath, TypeSvgSvg } from '@type-dom/framework';
+import { SvgProps, SvgPath, TypeSvgSvg, addAttrObj } from '@type-dom/framework';
 export class FlDataBarVerticalAscendingColorSvg extends TypeSvgSvg {
   className: 'FlDataBarVerticalAscendingColorSvg';
   override childNodes: SvgPath[];
-  constructor(params: TypeProps = {}) {
-    super();
+  constructor(params: SvgProps = {}) {
+    super(params);
     this.className = 'FlDataBarVerticalAscendingColorSvg';
-    this.attr.addObj({
-      name: 'FlDataBarVerticalAscendingColorSvg',
-      title: 'FlDataBarVerticalAscendingColorSvg'
+   addAttrObj(this, {
+      name: 'FlDataBarVerticalAscendingColorSvg'
     });
-    this.attr.addObj({
+   addAttrObj(this, {
       viewBox: '0 0 20 20',
     });
     this.resetSize(24, 24);
@@ -29,6 +28,5 @@ export class FlDataBarVerticalAscendingColorSvg extends TypeSvgSvg {
       'M7 11C7 9.89543 6.10457 9 5 9C3.89543 9 3 9.89543 3 11V15C3 16.1046 3.89543 17 5 17C6.10457 17 7 16.1046 7 15V11Z',
     );
     this.addChild(path2);
-    this.useParams(params);
   }
 }

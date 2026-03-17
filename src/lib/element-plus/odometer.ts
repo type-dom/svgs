@@ -1,15 +1,14 @@
-import { TypeProps, SvgPath, TypeSvgSvg } from '@type-dom/framework';
+import { SvgProps, SvgPath, TypeSvgSvg, addAttrObj } from '@type-dom/framework';
 export class ElOdometerSvg extends TypeSvgSvg {
   className: 'ElOdometerSvg';
   override childNodes: SvgPath[];
-  constructor(params: TypeProps = {}) {
-    super();
+  constructor(params: SvgProps = {}) {
+    super(params);
     this.className = 'ElOdometerSvg';
-    this.attr.addObj({
-      name: 'ElOdometerSvg',
-      title: 'ElOdometerSvg'
+   addAttrObj(this, {
+      name: 'ElOdometerSvg'
     });
-    this.attr.addObj({
+   addAttrObj(this, {
       viewBox: '0 0 1024 1024',
     });
     this.resetSize(24, 24);
@@ -29,6 +28,5 @@ export class ElOdometerSvg extends TypeSvgSvg {
       'M570.432 627.84A96 96 0 1 1 509.568 608l60.992-187.776A32 32 0 1 1 631.424 440l-60.992 187.776zM502.08 734.464a32 32 0 1 0 19.84-60.928 32 32 0 0 0-19.84 60.928z',
     );
     this.addChild(path2);
-    this.useParams(params);
   }
 }

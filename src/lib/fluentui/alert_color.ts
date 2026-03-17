@@ -1,15 +1,14 @@
-import { TypeProps, SvgPath, TypeSvgSvg } from '@type-dom/framework';
+import { SvgProps, SvgPath, TypeSvgSvg, addAttrObj } from '@type-dom/framework';
 export class FlAlertColorSvg extends TypeSvgSvg {
   className: 'FlAlertColorSvg';
   override childNodes: SvgPath[];
-  constructor(params: TypeProps = {}) {
-    super();
+  constructor(params: SvgProps = {}) {
+    super(params);
     this.className = 'FlAlertColorSvg';
-    this.attr.addObj({
-      name: 'FlAlertColorSvg',
-      title: 'FlAlertColorSvg'
+   addAttrObj(this, {
+      name: 'FlAlertColorSvg'
     });
-    this.attr.addObj({
+   addAttrObj(this, {
       viewBox: '0 0 20 20',
     });
     this.resetSize(24, 24);
@@ -24,6 +23,5 @@ export class FlAlertColorSvg extends TypeSvgSvg {
       'M9.98833 2C13.1374 2 15.7324 4.33497 15.973 7.35561L15.9864 7.57783L15.9909 7.80236L15.9899 11.4084L16.9437 13.9956L16.9693 14.0801L16.9848 14.1669L16.99 14.255C16.99 14.5701 16.7943 14.8455 16.468 14.9623L16.3545 14.9952L16.24 15.005H3.74181C3.65331 15.005 3.5655 14.9894 3.48246 14.9588C3.19555 14.8531 3.00678 14.5869 3 14.2427L3.00459 14.1251L3.03804 13.9957L3.98946 11.4114L3.99055 7.79302L3.99485 7.56845C4.11747 4.45124 6.76159 2 9.98833 2Z',
     );
     this.addChild(path1);
-    this.useParams(params);
   }
 }

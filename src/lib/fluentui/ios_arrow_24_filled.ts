@@ -1,15 +1,14 @@
-import { TypeProps, SvgPath, TypeSvgSvg } from '@type-dom/framework';
+import { SvgProps, SvgPath, TypeSvgSvg, addAttrObj } from '@type-dom/framework';
 export class FlIosArrow24FilledSvg extends TypeSvgSvg {
   className: 'FlIosArrow24FilledSvg';
   override childNodes: SvgPath[];
-  constructor(params: TypeProps = {}) {
-    super();
+  constructor(params: SvgProps = {}) {
+    super(params);
     this.className = 'FlIosArrow24FilledSvg';
-    this.attr.addObj({
-      name: 'FlIosArrow24FilledSvg',
-      title: 'FlIosArrow24FilledSvg'
+   addAttrObj(this, {
+      name: 'FlIosArrow24FilledSvg'
     });
-    this.attr.addObj({
+   addAttrObj(this, {
       viewBox: '0 0 24 24',
     });
     this.resetSize(24, 24);
@@ -19,6 +18,5 @@ export class FlIosArrow24FilledSvg extends TypeSvgSvg {
       'M12.7268 3.68664C13.106 3.28513 13.088 2.65222 12.6865 2.273C12.2849 1.89378 11.652 1.91185 11.2728 2.31337L2.77251 11.3134C2.40853 11.6987 2.40851 12.3012 2.77246 12.6866L11.2728 21.688C11.652 22.0896 12.2849 22.1077 12.6864 21.7285C13.0879 21.3493 13.1061 20.7164 12.7269 20.3149L4.87497 12.0001L12.7268 3.68664Z',
     );
     this.addChild(path0);
-    this.useParams(params);
   }
 }

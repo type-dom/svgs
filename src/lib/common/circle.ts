@@ -1,15 +1,14 @@
-import { TypeProps, SvgPath, TypeSvgSvg } from '@type-dom/framework';
+import { SvgProps, SvgPath, TypeSvgSvg, addAttrObj } from '@type-dom/framework';
 export class TdCircleSvg extends TypeSvgSvg {
   className: 'TdCircleSvg';
   override childNodes: SvgPath[];
-  constructor(params: TypeProps = {}) {
-    super();
+  constructor(params: SvgProps = {}) {
+    super(params);
     this.className = 'TdCircleSvg';
-    this.attr.addObj({
-      name: 'TdCircleSvg',
-      title: 'TdCircleSvg'
+    addAttrObj(this, {
+      name: 'TdCircleSvg'
     });
-    this.attr.addObj({
+    addAttrObj(this, {
       viewBox: '0 0 1024 1024',
     });
     this.resetSize(24, 24);
@@ -19,6 +18,5 @@ export class TdCircleSvg extends TypeSvgSvg {
       'M62 512c0 248.528 201.472 450 450 450s450-201.472 450-450c0-248.528-201.472-450-450-450-248.528 0-450 201.472-450 450z',
     );
     this.addChild(path0);
-    this.useParams(params);
   }
 }

@@ -1,15 +1,14 @@
-import { TypeProps, SvgPath, TypeSvgSvg } from '@type-dom/framework';
+import { SvgProps, SvgPath, TypeSvgSvg, addAttrObj } from '@type-dom/framework';
 export class FlListFilledSvg extends TypeSvgSvg {
   className: 'FlListFilledSvg';
   override childNodes: SvgPath[];
-  constructor(params: TypeProps = {}) {
-    super();
+  constructor(params: SvgProps = {}) {
+    super(params);
     this.className = 'FlListFilledSvg';
-    this.attr.addObj({
-      name: 'FlListFilledSvg',
-      title: 'FlListFilledSvg'
+   addAttrObj(this, {
+      name: 'FlListFilledSvg'
     });
-    this.attr.addObj({
+   addAttrObj(this, {
       viewBox: '0 0 20 20',
     });
     this.resetSize(24, 24);
@@ -19,6 +18,5 @@ export class FlListFilledSvg extends TypeSvgSvg {
       'M2 4.75C2 4.33579 2.33579 4 2.75 4H13.25C13.6642 4 14 4.33579 14 4.75C14 5.16421 13.6642 5.5 13.25 5.5H2.75C2.33579 5.5 2 5.16421 2 4.75ZM2 14.75C2 14.3358 2.33579 14 2.75 14H12.25C12.6642 14 13 14.3358 13 14.75C13 15.1642 12.6642 15.5 12.25 15.5H2.75C2.33579 15.5 2 15.1642 2 14.75ZM2.75 9C2.33579 9 2 9.33579 2 9.75C2 10.1642 2.33579 10.5 2.75 10.5H17.25C17.6642 10.5 18 10.1642 18 9.75C18 9.33579 17.6642 9 17.25 9H2.75Z',
     );
     this.addChild(path0);
-    this.useParams(params);
   }
 }

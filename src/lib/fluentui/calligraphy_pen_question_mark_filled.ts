@@ -1,15 +1,14 @@
-import { TypeProps, SvgPath, TypeSvgSvg } from '@type-dom/framework';
+import { SvgProps, SvgPath, TypeSvgSvg, addAttrObj } from '@type-dom/framework';
 export class FlCalligraphyPenQuestionMarkFilledSvg extends TypeSvgSvg {
   className: 'FlCalligraphyPenQuestionMarkFilledSvg';
   override childNodes: SvgPath[];
-  constructor(params: TypeProps = {}) {
-    super();
+  constructor(params: SvgProps = {}) {
+    super(params);
     this.className = 'FlCalligraphyPenQuestionMarkFilledSvg';
-    this.attr.addObj({
-      name: 'FlCalligraphyPenQuestionMarkFilledSvg',
-      title: 'FlCalligraphyPenQuestionMarkFilledSvg'
+   addAttrObj(this, {
+      name: 'FlCalligraphyPenQuestionMarkFilledSvg'
     });
-    this.attr.addObj({
+   addAttrObj(this, {
       viewBox: '0 0 20 20',
     });
     this.resetSize(24, 24);
@@ -29,6 +28,5 @@ export class FlCalligraphyPenQuestionMarkFilledSvg extends TypeSvgSvg {
       'M9 5.5C9 6.85015 9.4865 8.08668 10.2938 9.04384C10.2009 9.01534 10.1022 9 10 9C9.44772 9 9 9.44772 9 10C9 10.3701 9.2011 10.6933 9.5 10.8662V17.9096C9.21288 17.7999 8.96604 17.595 8.80571 17.3215L5.34326 11.415C4.9251 10.7016 4.88669 9.82771 5.24066 9.08045L6.69982 6L6.5 6C5.67157 6 5 5.32843 5 4.5V2.5C5 2.22386 5.22386 2 5.5 2C5.77614 2 6 2.22386 6 2.5V4.5C6 4.77614 6.22386 5 6.5 5H9.02242C9.00758 5.16468 9 5.33146 9 5.5Z',
     );
     this.addChild(path2);
-    this.useParams(params);
   }
 }

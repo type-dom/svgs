@@ -1,15 +1,14 @@
-import { TypeProps, SvgPath, TypeSvgSvg } from '@type-dom/framework';
+import { SvgProps, SvgPath, TypeSvgSvg, addAttrObj } from '@type-dom/framework';
 export class FlLineThicknessRegularSvg extends TypeSvgSvg {
   className: 'FlLineThicknessRegularSvg';
   override childNodes: SvgPath[];
-  constructor(params: TypeProps = {}) {
-    super();
+  constructor(params: SvgProps = {}) {
+    super(params);
     this.className = 'FlLineThicknessRegularSvg';
-    this.attr.addObj({
-      name: 'FlLineThicknessRegularSvg',
-      title: 'FlLineThicknessRegularSvg'
+   addAttrObj(this, {
+      name: 'FlLineThicknessRegularSvg'
     });
-    this.attr.addObj({
+   addAttrObj(this, {
       viewBox: '0 0 20 20',
     });
     this.resetSize(24, 24);
@@ -19,6 +18,5 @@ export class FlLineThicknessRegularSvg extends TypeSvgSvg {
       'M2 4.5C2 4.22386 2.22386 4 2.5 4H17.5C17.7761 4 18 4.22386 18 4.5C18 4.77614 17.7761 5 17.5 5H2.5C2.22386 5 2 4.77614 2 4.5ZM2 14.5C2 13.6716 2.67157 13 3.5 13H16.5C17.3284 13 18 13.6716 18 14.5C18 15.3284 17.3284 16 16.5 16H3.5C2.67157 16 2 15.3284 2 14.5ZM3 8C2.44772 8 2 8.44772 2 9C2 9.55228 2.44772 10 3 10H17C17.5523 10 18 9.55228 18 9C18 8.44772 17.5523 8 17 8H3Z',
     );
     this.addChild(path0);
-    this.useParams(params);
   }
 }

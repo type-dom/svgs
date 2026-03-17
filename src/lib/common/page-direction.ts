@@ -1,15 +1,14 @@
-import { TypeProps, SvgPath, TypeSvgSvg } from '@type-dom/framework';
+import { SvgProps, SvgPath, TypeSvgSvg, addAttrObj } from '@type-dom/framework';
 export class TdPageDirectionSvg extends TypeSvgSvg {
   className: 'TdPageDirectionSvg';
   override childNodes: SvgPath[];
-  constructor(params: TypeProps = {}) {
-    super();
+  constructor(params: SvgProps = {}) {
+    super(params);
     this.className = 'TdPageDirectionSvg';
-    this.attr.addObj({
-      name: 'TdPageDirectionSvg',
-      title: 'TdPageDirectionSvg'
+    addAttrObj(this, {
+      name: 'TdPageDirectionSvg'
     });
-    this.attr.addObj({
+    addAttrObj(this, {
       viewBox: '0 0 1080 1024',
     });
     this.resetSize(24, 24);
@@ -39,6 +38,5 @@ export class TdPageDirectionSvg extends TypeSvgSvg {
       'M1080.888889 56.888889v142.222222a28.444444 28.444444 0 0 1-56.888889 0V56.888889h-142.222222a28.444444 28.444444 0 0 1 0-56.888889H1080.888889v56.888889zM199.111111 1024H0v-28.444444-170.951112a28.444444 28.444444 0 0 1 56.888889 0V967.111111h142.222222a28.444444 28.444444 0 0 1 0 56.888889z',
     );
     this.addChild(path4);
-    this.useParams(params);
   }
 }

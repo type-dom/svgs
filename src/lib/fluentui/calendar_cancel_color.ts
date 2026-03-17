@@ -1,15 +1,14 @@
-import { TypeProps, SvgPath, TypeSvgSvg } from '@type-dom/framework';
+import { SvgProps, SvgPath, TypeSvgSvg, addAttrObj } from '@type-dom/framework';
 export class FlCalendarCancelColorSvg extends TypeSvgSvg {
   className: 'FlCalendarCancelColorSvg';
   override childNodes: SvgPath[];
-  constructor(params: TypeProps = {}) {
-    super();
+  constructor(params: SvgProps = {}) {
+    super(params);
     this.className = 'FlCalendarCancelColorSvg';
-    this.attr.addObj({
-      name: 'FlCalendarCancelColorSvg',
-      title: 'FlCalendarCancelColorSvg'
+   addAttrObj(this, {
+      name: 'FlCalendarCancelColorSvg'
     });
-    this.attr.addObj({
+   addAttrObj(this, {
       viewBox: '0 0 20 20',
     });
     this.resetSize(24, 24);
@@ -44,6 +43,5 @@ export class FlCalendarCancelColorSvg extends TypeSvgSvg {
       'M12.6464 12.6464C12.8417 12.4512 13.1583 12.4512 13.3536 12.6464L14.5 13.7929L15.6464 12.6464C15.8417 12.4512 16.1583 12.4512 16.3536 12.6464C16.5488 12.8417 16.5488 13.1583 16.3536 13.3536L15.2071 14.5L16.3536 15.6464C16.5488 15.8417 16.5488 16.1583 16.3536 16.3536C16.1583 16.5488 15.8417 16.5488 15.6464 16.3536L14.5 15.2071L13.3536 16.3536C13.1583 16.5488 12.8417 16.5488 12.6464 16.3536C12.4512 16.1583 12.4512 15.8417 12.6464 15.6464L13.7929 14.5L12.6464 13.3536C12.4512 13.1583 12.4512 12.8417 12.6464 12.6464Z',
     );
     this.addChild(path5);
-    this.useParams(params);
   }
 }

@@ -1,15 +1,14 @@
-import { TypeProps, SvgPath, TypeSvgSvg } from '@type-dom/framework';
+import { SvgProps, SvgPath, TypeSvgSvg, addAttrObj } from '@type-dom/framework';
 export class FlGlobeShieldColorSvg extends TypeSvgSvg {
   className: 'FlGlobeShieldColorSvg';
   override childNodes: SvgPath[];
-  constructor(params: TypeProps = {}) {
-    super();
+  constructor(params: SvgProps = {}) {
+    super(params);
     this.className = 'FlGlobeShieldColorSvg';
-    this.attr.addObj({
-      name: 'FlGlobeShieldColorSvg',
-      title: 'FlGlobeShieldColorSvg'
+   addAttrObj(this, {
+      name: 'FlGlobeShieldColorSvg'
     });
-    this.attr.addObj({
+   addAttrObj(this, {
       viewBox: '0 0 20 20',
     });
     this.resetSize(24, 24);
@@ -39,6 +38,5 @@ export class FlGlobeShieldColorSvg extends TypeSvgSvg {
       'M14 18.5244C12.8247 17.9211 11.0292 16.5787 11.0006 14C11.0004 13.9793 11.0003 13.9584 11.0003 13.9375L11 11.4376C11 11.1614 11.2252 10.9407 11.4987 10.9022C12.8695 10.7091 13.9844 9.76837 14.5647 9.17677C14.6803 9.05892 14.8401 9 14.9999 9C15.1597 9 15.3197 9.05892 15.4353 9.17677C16.0156 9.76837 17.1305 10.7091 18.5013 10.9022C18.7748 10.9407 19 11.1614 19 11.4376L18.9997 13.9375C18.9997 13.9584 18.9996 13.9793 18.9994 14C18.9708 16.5787 17.1753 17.9211 16 18.5244C15.6162 18.7214 15.2987 18.8398 15.1304 18.8965C15.0872 18.911 15.0436 18.9182 15 18.9182C14.9564 18.9182 14.9128 18.911 14.8696 18.8965C14.7013 18.8398 14.3838 18.7214 14 18.5244Z',
     );
     this.addChild(path4);
-    this.useParams(params);
   }
 }

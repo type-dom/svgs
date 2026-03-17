@@ -1,15 +1,14 @@
-import { TypeProps, SvgPath, TypeSvgSvg } from '@type-dom/framework';
+import { SvgProps, SvgPath, TypeSvgSvg, addAttrObj } from '@type-dom/framework';
 export class TdIncreaseIndentSvg extends TypeSvgSvg {
   className: 'TdIncreaseIndentSvg';
   override childNodes: SvgPath[];
-  constructor(params: TypeProps = {}) {
-    super();
+  constructor(params: SvgProps = {}) {
+    super(params);
     this.className = 'TdIncreaseIndentSvg';
-    this.attr.addObj({
-      name: 'TdIncreaseIndentSvg',
-      title: 'TdIncreaseIndentSvg'
+    addAttrObj(this, {
+      name: 'TdIncreaseIndentSvg'
     });
-    this.attr.addObj({
+    addAttrObj(this, {
       viewBox: '0 0 1024 1024',
     });
     this.resetSize(24, 24);
@@ -24,6 +23,5 @@ export class TdIncreaseIndentSvg extends TypeSvgSvg {
       'M62.8 704l137.8-128H1.3V448h199.1L62.7 320h114.8L384 512.1 177.6 704z',
     );
     this.addChild(path1);
-    this.useParams(params);
   }
 }

@@ -1,15 +1,14 @@
-import { TypeProps, SvgPath, TypeSvgSvg } from '@type-dom/framework';
+import { SvgProps, SvgPath, TypeSvgSvg, addAttrObj } from '@type-dom/framework';
 export class TdDeleteSvg extends TypeSvgSvg {
   className: 'TdDeleteSvg';
   override childNodes: SvgPath[];
-  constructor(params: TypeProps = {}) {
-    super();
+  constructor(params: SvgProps = {}) {
+    super(params);
     this.className = 'TdDeleteSvg';
-    this.attr.addObj({
-      name: 'TdDeleteSvg',
-      title: 'TdDeleteSvg'
+    addAttrObj(this, {
+      name: 'TdDeleteSvg'
     });
-    this.attr.addObj({
+    addAttrObj(this, {
       viewBox: '0 0 1024 1024',
     });
     this.resetSize(24, 24);
@@ -34,6 +33,5 @@ export class TdDeleteSvg extends TypeSvgSvg {
       'M736.128 960 288.064 960c-52.928 0-96-43.072-96-96L192.064 383.52c0-17.664 14.336-32 32-32s32 14.336 32 32L256.064 864c0 17.664 14.368 32 32 32l448.064 0c17.664 0 32-14.336 32-32L768.128 384.832c0-17.664 14.304-32 32-32s32 14.336 32 32L832.128 864C832.128 916.928 789.056 960 736.128 960z',
     );
     this.addChild(path3);
-    this.useParams(params);
   }
 }

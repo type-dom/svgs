@@ -1,15 +1,14 @@
-import { TypeProps, SvgPath, TypeSvgSvg } from '@type-dom/framework';
+import { SvgProps, SvgPath, TypeSvgSvg, addAttrObj } from '@type-dom/framework';
 export class TdDatepickerSvg extends TypeSvgSvg {
   className: 'TdDatepickerSvg';
   override childNodes: SvgPath[];
-  constructor(params: TypeProps = {}) {
-    super();
+  constructor(params: SvgProps = {}) {
+    super(params);
     this.className = 'TdDatepickerSvg';
-    this.attr.addObj({
-      name: 'TdDatepickerSvg',
-      title: 'TdDatepickerSvg'
+    addAttrObj(this, {
+      name: 'TdDatepickerSvg'
     });
-    this.attr.addObj({
+    addAttrObj(this, {
       viewBox: '0 0 1025 1024',
     });
     this.resetSize(24, 24);
@@ -24,6 +23,5 @@ export class TdDatepickerSvg extends TypeSvgSvg {
       'M704.411195 575.158837H491.487765a39.985621 39.985621 0 0 1-39.985621-39.98562V184.299394a39.985621 39.985621 0 0 1 79.971242 0v310.888202h172.937809a39.985621 39.985621 0 0 1 0 79.971241zM125.619334 556.165668H57.643779a39.985621 39.985621 0 0 1 0-79.971242h67.975555a39.985621 39.985621 0 0 1 0 79.971242zM967.316652 556.165668h-67.975555a39.985621 39.985621 0 0 1 0-79.971242h67.975555a39.985621 39.985621 0 0 1 0 79.971242zM513.479856 1020.998509a39.985621 39.985621 0 0 1-39.985621-39.98562v-72.973758a39.985621 39.985621 0 0 1 79.971242 0v72.973758a39.985621 39.985621 0 0 1-39.985621 39.98562z',
     );
     this.addChild(path1);
-    this.useParams(params);
   }
 }

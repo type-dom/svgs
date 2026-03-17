@@ -1,15 +1,14 @@
-import { TypeProps, SvgPath, TypeSvgSvg } from '@type-dom/framework';
+import { SvgProps, SvgPath, TypeSvgSvg, addAttrObj } from '@type-dom/framework';
 export class ElTurnOffSvg extends TypeSvgSvg {
   className: 'ElTurnOffSvg';
   override childNodes: SvgPath[];
-  constructor(params: TypeProps = {}) {
-    super();
+  constructor(params: SvgProps = {}) {
+    super(params);
     this.className = 'ElTurnOffSvg';
-    this.attr.addObj({
-      name: 'ElTurnOffSvg',
-      title: 'ElTurnOffSvg'
+   addAttrObj(this, {
+      name: 'ElTurnOffSvg'
     });
-    this.attr.addObj({
+   addAttrObj(this, {
       viewBox: '0 0 1024 1024',
     });
     this.resetSize(24, 24);
@@ -24,6 +23,5 @@ export class ElTurnOffSvg extends TypeSvgSvg {
       'M329.956 621.227a109.227 109.227 0 1 0 0-218.454 109.227 109.227 0 0 0 0 218.454zm0 72.817a182.044 182.044 0 1 1 0-364.088 182.044 182.044 0 0 1 0 364.088z',
     );
     this.addChild(path1);
-    this.useParams(params);
   }
 }

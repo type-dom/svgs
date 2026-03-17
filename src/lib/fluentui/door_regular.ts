@@ -1,15 +1,14 @@
-import { TypeProps, SvgPath, TypeSvgSvg } from '@type-dom/framework';
+import { SvgProps, SvgPath, TypeSvgSvg, addAttrObj } from '@type-dom/framework';
 export class FlDoorRegularSvg extends TypeSvgSvg {
   className: 'FlDoorRegularSvg';
   override childNodes: SvgPath[];
-  constructor(params: TypeProps = {}) {
-    super();
+  constructor(params: SvgProps = {}) {
+    super(params);
     this.className = 'FlDoorRegularSvg';
-    this.attr.addObj({
-      name: 'FlDoorRegularSvg',
-      title: 'FlDoorRegularSvg'
+   addAttrObj(this, {
+      name: 'FlDoorRegularSvg'
     });
-    this.attr.addObj({
+   addAttrObj(this, {
       viewBox: '0 0 20 20',
     });
     this.resetSize(24, 24);
@@ -19,6 +18,5 @@ export class FlDoorRegularSvg extends TypeSvgSvg {
       'M7 11C7.55228 11 8 10.5523 8 10C8 9.44771 7.55228 9 7 9C6.44772 9 6 9.44771 6 10C6 10.5523 6.44772 11 7 11ZM4 4C4 2.89543 4.89543 2 6 2H14C15.1046 2 16 2.89543 16 4V16C16 17.1046 15.1046 18 14 18H6C4.89543 18 4 17.1046 4 16V4ZM6 17H14C14.5523 17 15 16.5523 15 16V4C15 3.44772 14.5523 3 14 3H6C5.44772 3 5 3.44772 5 4V16C5 16.5523 5.44772 17 6 17Z',
     );
     this.addChild(path0);
-    this.useParams(params);
   }
 }

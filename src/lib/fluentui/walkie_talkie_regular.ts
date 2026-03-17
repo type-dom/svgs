@@ -1,15 +1,14 @@
-import { TypeProps, SvgPath, TypeSvgSvg } from '@type-dom/framework';
+import { SvgProps, SvgPath, TypeSvgSvg, addAttrObj } from '@type-dom/framework';
 export class FlWalkieTalkieRegularSvg extends TypeSvgSvg {
   className: 'FlWalkieTalkieRegularSvg';
   override childNodes: SvgPath[];
-  constructor(params: TypeProps = {}) {
-    super();
+  constructor(params: SvgProps = {}) {
+    super(params);
     this.className = 'FlWalkieTalkieRegularSvg';
-    this.attr.addObj({
-      name: 'FlWalkieTalkieRegularSvg',
-      title: 'FlWalkieTalkieRegularSvg'
+   addAttrObj(this, {
+      name: 'FlWalkieTalkieRegularSvg'
     });
-    this.attr.addObj({
+   addAttrObj(this, {
       viewBox: '0 0 20 20',
     });
     this.resetSize(24, 24);
@@ -29,6 +28,5 @@ export class FlWalkieTalkieRegularSvg extends TypeSvgSvg {
       'M8 1.5C8 1.22386 7.77614 1 7.5 1C7.22386 1 7 1.22386 7 1.5V3H5.5C4.67157 3 4 3.67157 4 4.5V11.5C4 11.5987 4.02922 11.6952 4.08397 11.7774L6 14.6514V16.5C6 17.3284 6.67157 18 7.5 18H12.5C13.3284 18 14 17.3284 14 16.5V14.6514L15.916 11.7774C15.9708 11.6952 16 11.5987 16 11.5V4.5C16 3.67157 15.3284 3 14.5 3H8V1.5ZM5.5 4H14.5C14.7761 4 15 4.22386 15 4.5V11.3486L13.084 14.2226C13.0292 14.3048 13 14.4013 13 14.5V16.5C13 16.7761 12.7761 17 12.5 17H7.5C7.22386 17 7 16.7761 7 16.5V14.5C7 14.4013 6.97078 14.3048 6.91603 14.2226L5 11.3486V4.5C5 4.22386 5.22386 4 5.5 4Z',
     );
     this.addChild(path2);
-    this.useParams(params);
   }
 }

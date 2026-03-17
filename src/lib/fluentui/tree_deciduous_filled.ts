@@ -1,15 +1,14 @@
-import { TypeProps, SvgPath, TypeSvgSvg } from '@type-dom/framework';
+import { SvgProps, SvgPath, TypeSvgSvg, addAttrObj } from '@type-dom/framework';
 export class FlTreeDeciduousFilledSvg extends TypeSvgSvg {
   className: 'FlTreeDeciduousFilledSvg';
   override childNodes: SvgPath[];
-  constructor(params: TypeProps = {}) {
-    super();
+  constructor(params: SvgProps = {}) {
+    super(params);
     this.className = 'FlTreeDeciduousFilledSvg';
-    this.attr.addObj({
-      name: 'FlTreeDeciduousFilledSvg',
-      title: 'FlTreeDeciduousFilledSvg'
+   addAttrObj(this, {
+      name: 'FlTreeDeciduousFilledSvg'
     });
-    this.attr.addObj({
+   addAttrObj(this, {
       viewBox: '0 0 20 20',
     });
     this.resetSize(24, 24);
@@ -19,6 +18,5 @@ export class FlTreeDeciduousFilledSvg extends TypeSvgSvg {
       'M10 2C8.37308 2 7.00613 3.10962 6.61339 4.61339C5.10962 5.00613 4 6.37308 4 8C4 8.20189 4.01715 8.40009 4.05013 8.59311C3.11593 9.22095 2.5 10.2882 2.5 11.5C2.5 13.433 4.067 15 6 15H8V16.75C8 17.4404 8.55964 18 9.25 18H10.75C11.4404 18 12 17.4404 12 16.75V15H14C15.933 15 17.5 13.433 17.5 11.5C17.5 10.2882 16.8841 9.22095 15.9499 8.59311C15.9829 8.40009 16 8.20189 16 8C16 6.37308 14.8904 5.00614 13.3866 4.6134C12.9939 3.10962 11.6269 2 10 2ZM9 15H11V16.75C11 16.8881 10.8881 17 10.75 17H9.25C9.11193 17 9 16.8881 9 16.75V15Z',
     );
     this.addChild(path0);
-    this.useParams(params);
   }
 }

@@ -1,15 +1,14 @@
-import { TypeProps, SvgPath, TypeSvgSvg } from '@type-dom/framework';
+import { SvgProps, SvgPath, TypeSvgSvg, addAttrObj } from '@type-dom/framework';
 export class FlSquareShadowFilledSvg extends TypeSvgSvg {
   className: 'FlSquareShadowFilledSvg';
   override childNodes: SvgPath[];
-  constructor(params: TypeProps = {}) {
-    super();
+  constructor(params: SvgProps = {}) {
+    super(params);
     this.className = 'FlSquareShadowFilledSvg';
-    this.attr.addObj({
-      name: 'FlSquareShadowFilledSvg',
-      title: 'FlSquareShadowFilledSvg'
+   addAttrObj(this, {
+      name: 'FlSquareShadowFilledSvg'
     });
-    this.attr.addObj({
+   addAttrObj(this, {
       viewBox: '0 0 20 20',
     });
     this.resetSize(24, 24);
@@ -19,6 +18,5 @@ export class FlSquareShadowFilledSvg extends TypeSvgSvg {
       'M4.5 2C3.11929 2 2 3.11929 2 4.5V11.5C2 12.8807 3.11929 14 4.5 14H6V15.5C6 16.8807 7.11929 18 8.5 18H15.5C16.8807 18 18 16.8807 18 15.5V8.5C18 7.11929 16.8807 6 15.5 6H14V4.5C14 3.11929 12.8807 2 11.5 2H4.5ZM3.5 4.5C3.5 3.94772 3.94772 3.5 4.5 3.5H11.5C12.0523 3.5 12.5 3.94772 12.5 4.5V11.5C12.5 12.0523 12.0523 12.5 11.5 12.5H4.5C3.94772 12.5 3.5 12.0523 3.5 11.5V4.5Z',
     );
     this.addChild(path0);
-    this.useParams(params);
   }
 }

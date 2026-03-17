@@ -1,15 +1,14 @@
-import { TypeProps, SvgPath, TypeSvgSvg } from '@type-dom/framework';
+import { SvgProps, SvgPath, TypeSvgSvg, addAttrObj } from '@type-dom/framework';
 export class FlCalendarColorSvg extends TypeSvgSvg {
   className: 'FlCalendarColorSvg';
   override childNodes: SvgPath[];
-  constructor(params: TypeProps = {}) {
-    super();
+  constructor(params: SvgProps = {}) {
+    super(params);
     this.className = 'FlCalendarColorSvg';
-    this.attr.addObj({
-      name: 'FlCalendarColorSvg',
-      title: 'FlCalendarColorSvg'
+   addAttrObj(this, {
+      name: 'FlCalendarColorSvg'
     });
-    this.attr.addObj({
+   addAttrObj(this, {
       viewBox: '0 0 20 20',
     });
     this.resetSize(24, 24);
@@ -29,6 +28,5 @@ export class FlCalendarColorSvg extends TypeSvgSvg {
       'M17 5.5C17 4.11929 15.8807 3 14.5 3H5.5C4.11929 3 3 4.11929 3 5.5V7H17V5.5Z',
     );
     this.addChild(path2);
-    this.useParams(params);
   }
 }

@@ -1,32 +1,36 @@
-import {
-  ElCircleCheckSvg,
-  ElCircleCloseFilledSvg, ElCircleCloseSvg,
-  ElCloseSvg,
-  ElInfoFilledSvg, ElLoadingSvg,
-  ElSuccessFilledSvg, ElWarningFilledSvg
-} from './element-plus-index';
-
-export const CloseComponents = {
-  Close: ElCloseSvg
-};
-
-export const TypeComponents = {
-  Close: ElCloseSvg,
-  SuccessFilled: ElSuccessFilledSvg,
-  InfoFilled: ElInfoFilledSvg,
-  WarningFilled: ElWarningFilledSvg,
-  CircleCloseFilled: ElCircleCloseFilledSvg
-};
-
-export const TypeComponentsMap = {
-  success: ElSuccessFilledSvg,
-  warning: ElWarningFilledSvg,
-  error: ElCircleCloseFilledSvg,
-  info: ElInfoFilledSvg
-};
-
-export const ValidateComponentsMap = {
-  validating: ElLoadingSvg,
-  success: ElCircleCheckSvg,
-  error: ElCircleCloseSvg
-};
+// import {
+//   ElCircleCheckSvg,
+//   ElCircleCloseFilledSvg,
+//   ElCircleCloseSvg,
+//   ElCloseSvg,
+//   ElInfoFilledSvg,
+//   ElLoadingSvg,
+//   ElSuccessFilledSvg,
+//   ElWarningFilledSvg
+// } from './element-plus-index';
+//
+// export const CloseComponents = {
+//   Close: ElCloseSvg
+// };
+//
+// export const TypeComponents = {
+//   Close: ElCloseSvg,
+//   SuccessFilled: ElSuccessFilledSvg,
+//   InfoFilled: ElInfoFilledSvg,
+//   WarningFilled: ElWarningFilledSvg,
+//   CircleCloseFilled: ElCircleCloseFilledSvg
+// };
+//
+// export const TypeComponentsMap = {
+//   primary: ElInfoFilledSvg,
+//   success: ElSuccessFilledSvg,
+//   warning: ElWarningFilledSvg,
+//   error: ElCircleCloseFilledSvg,
+//   info: ElInfoFilledSvg
+// };
+//
+// export const ValidateComponentsMap = {
+//   validating: ElLoadingSvg,
+//   success: ElCircleCheckSvg,
+//   error: ElCircleCloseSvg
+// };

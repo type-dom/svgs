@@ -1,15 +1,14 @@
-import { TypeProps, SvgPath, TypeSvgSvg } from '@type-dom/framework';
+import { SvgProps, SvgPath, TypeSvgSvg, addAttrObj } from '@type-dom/framework';
 export class FlSearchVisualColorSvg extends TypeSvgSvg {
   className: 'FlSearchVisualColorSvg';
   override childNodes: SvgPath[];
-  constructor(params: TypeProps = {}) {
-    super();
+  constructor(params: SvgProps = {}) {
+    super(params);
     this.className = 'FlSearchVisualColorSvg';
-    this.attr.addObj({
-      name: 'FlSearchVisualColorSvg',
-      title: 'FlSearchVisualColorSvg'
+   addAttrObj(this, {
+      name: 'FlSearchVisualColorSvg'
     });
-    this.attr.addObj({
+   addAttrObj(this, {
       viewBox: '0 0 20 20',
     });
     this.resetSize(24, 24);
@@ -24,6 +23,5 @@ export class FlSearchVisualColorSvg extends TypeSvgSvg {
       'M10 12C11.1046 12 12 11.1046 12 10C12 8.89543 11.1046 8 10 8C8.89543 8 8 8.89543 8 10C8 11.1046 8.89543 12 10 12ZM7 8C7.55228 8 8 7.55228 8 7C8 6.44772 7.55228 6 7 6C6.44772 6 6 6.44772 6 7C6 7.55228 6.44772 8 7 8Z',
     );
     this.addChild(path1);
-    this.useParams(params);
   }
 }

@@ -1,15 +1,14 @@
-import { TypeProps, SvgPath, TypeSvgSvg } from '@type-dom/framework';
+import { SvgProps, SvgPath, TypeSvgSvg, addAttrObj } from '@type-dom/framework';
 export class TdCreateFillRestrictionSvg extends TypeSvgSvg {
   className: 'TdCreateFillRestrictionSvg';
   override childNodes: SvgPath[];
-  constructor(params: TypeProps = {}) {
-    super();
+  constructor(params: SvgProps = {}) {
+    super(params);
     this.className = 'TdCreateFillRestrictionSvg';
-    this.attr.addObj({
-      name: 'TdCreateFillRestrictionSvg',
-      title: 'TdCreateFillRestrictionSvg'
+    addAttrObj(this, {
+      name: 'TdCreateFillRestrictionSvg'
     });
-    this.attr.addObj({
+    addAttrObj(this, {
       viewBox: '0 0 1024 1024',
     });
     this.resetSize(24, 24);
@@ -39,6 +38,5 @@ export class TdCreateFillRestrictionSvg extends TypeSvgSvg {
       'M448.387193 570.317197 285.958824 570.317197c-16.066931 0-29.096688 13.43294-29.096688 29.999245 0 16.57756 13.029758 30.010501 29.096688 30.010501l162.42837 0c16.065907 0 29.091572-13.43294 29.091572-30.010501C477.478765 583.751161 464.453101 570.317197 448.387193 570.317197L448.387193 570.317197zM448.387193 570.317197',
     );
     this.addChild(path4);
-    this.useParams(params);
   }
 }

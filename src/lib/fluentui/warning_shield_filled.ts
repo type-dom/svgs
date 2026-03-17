@@ -1,15 +1,14 @@
-import { TypeProps, SvgPath, TypeSvgSvg } from '@type-dom/framework';
+import { SvgProps, SvgPath, TypeSvgSvg, addAttrObj } from '@type-dom/framework';
 export class FlWarningShieldFilledSvg extends TypeSvgSvg {
   className: 'FlWarningShieldFilledSvg';
   override childNodes: SvgPath[];
-  constructor(params: TypeProps = {}) {
-    super();
+  constructor(params: SvgProps = {}) {
+    super(params);
     this.className = 'FlWarningShieldFilledSvg';
-    this.attr.addObj({
-      name: 'FlWarningShieldFilledSvg',
-      title: 'FlWarningShieldFilledSvg'
+   addAttrObj(this, {
+      name: 'FlWarningShieldFilledSvg'
     });
-    this.attr.addObj({
+   addAttrObj(this, {
       viewBox: '0 0 20 20',
     });
     this.resetSize(24, 24);
@@ -24,6 +23,5 @@ export class FlWarningShieldFilledSvg extends TypeSvgSvg {
       'M17 10.3473C16.6556 10.2026 16.3225 10.0086 16 9.76463C15.7552 9.57943 15.5165 9.36548 15.2837 9.12256C15.1276 8.9596 14.8741 8.95945 14.7178 9.12223C13.7233 10.1578 12.6234 10.6669 11.4 10.6669C11.1791 10.6669 11 10.8535 11 11.0836V13.5846L11.0044 13.85C11.0309 14.6468 11.1783 15.3643 11.4447 16.0002C11.5953 16.3597 11.7839 16.6932 12.0102 17.0002C12.2847 17.3727 12.6146 17.7062 12.9995 18.0002C13.5231 18.4003 14.1482 18.727 14.8735 18.9789C14.9556 19.0074 15.0444 19.0074 15.1265 18.9789C17.687 18.0898 19 16.2666 19 13.5846V11.0836L18.9919 10.9996C18.9546 10.8097 18.7933 10.6669 18.6 10.6669C18.3966 10.6669 18.1966 10.6529 18 10.6247C17.6565 10.5755 17.3233 10.4832 17 10.3473Z',
     );
     this.addChild(path1);
-    this.useParams(params);
   }
 }

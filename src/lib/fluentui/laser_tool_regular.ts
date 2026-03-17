@@ -1,15 +1,14 @@
-import { TypeProps, SvgPath, TypeSvgSvg } from '@type-dom/framework';
+import { SvgProps, SvgPath, TypeSvgSvg, addAttrObj } from '@type-dom/framework';
 export class FlLaserToolRegularSvg extends TypeSvgSvg {
   className: 'FlLaserToolRegularSvg';
   override childNodes: SvgPath[];
-  constructor(params: TypeProps = {}) {
-    super();
+  constructor(params: SvgProps = {}) {
+    super(params);
     this.className = 'FlLaserToolRegularSvg';
-    this.attr.addObj({
-      name: 'FlLaserToolRegularSvg',
-      title: 'FlLaserToolRegularSvg'
+   addAttrObj(this, {
+      name: 'FlLaserToolRegularSvg'
     });
-    this.attr.addObj({
+   addAttrObj(this, {
       viewBox: '0 0 20 20',
     });
     this.resetSize(24, 24);
@@ -49,6 +48,5 @@ export class FlLaserToolRegularSvg extends TypeSvgSvg {
       'M11.1464 15.1464C10.9512 15.3417 10.9512 15.6583 11.1464 15.8536L12.6464 17.3536C12.8417 17.5488 13.1583 17.5488 13.3536 17.3536C13.5488 17.1583 13.5488 16.8417 13.3536 16.6464L11.8536 15.1464C11.6583 14.9512 11.3417 14.9512 11.1464 15.1464Z',
     );
     this.addChild(path6);
-    this.useParams(params);
   }
 }

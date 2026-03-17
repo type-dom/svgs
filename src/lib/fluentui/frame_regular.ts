@@ -1,15 +1,14 @@
-import { TypeProps, SvgPath, TypeSvgSvg } from '@type-dom/framework';
+import { SvgProps, SvgPath, TypeSvgSvg, addAttrObj } from '@type-dom/framework';
 export class FlFrameRegularSvg extends TypeSvgSvg {
   className: 'FlFrameRegularSvg';
   override childNodes: SvgPath[];
-  constructor(params: TypeProps = {}) {
-    super();
+  constructor(params: SvgProps = {}) {
+    super(params);
     this.className = 'FlFrameRegularSvg';
-    this.attr.addObj({
-      name: 'FlFrameRegularSvg',
-      title: 'FlFrameRegularSvg'
+   addAttrObj(this, {
+      name: 'FlFrameRegularSvg'
     });
-    this.attr.addObj({
+   addAttrObj(this, {
       viewBox: '0 0 20 20',
     });
     this.resetSize(24, 24);
@@ -19,6 +18,5 @@ export class FlFrameRegularSvg extends TypeSvgSvg {
       'M5 2.5C5 2.22386 4.77614 2 4.5 2C4.22386 2 4 2.22386 4 2.5V4H2.5C2.22386 4 2 4.22386 2 4.5C2 4.77614 2.22386 5 2.5 5H4V15H2.5C2.22386 15 2 15.2239 2 15.5C2 15.7761 2.22386 16 2.5 16H4V17.5C4 17.7761 4.22386 18 4.5 18C4.77614 18 5 17.7761 5 17.5V16H15V17.5C15 17.7761 15.2239 18 15.5 18C15.7761 18 16 17.7761 16 17.5V16H17.5C17.7761 16 18 15.7761 18 15.5C18 15.2239 17.7761 15 17.5 15H16V5H17.5C17.7761 5 18 4.77614 18 4.5C18 4.22386 17.7761 4 17.5 4H16V2.5C16 2.22386 15.7761 2 15.5 2C15.2239 2 15 2.22386 15 2.5V4H5V2.5ZM15 5V15H5V5H15Z',
     );
     this.addChild(path0);
-    this.useParams(params);
   }
 }

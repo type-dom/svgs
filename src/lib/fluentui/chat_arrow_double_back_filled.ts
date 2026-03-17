@@ -1,19 +1,17 @@
-import { TypeProps, SvgPath, TypeSvgSvg } from '@type-dom/framework';
+import { SvgProps, SvgPath, TypeSvgSvg, addAttrObj } from '@type-dom/framework';
 export class FlChatArrowDoubleBackFilledSvg extends TypeSvgSvg {
   className: 'FlChatArrowDoubleBackFilledSvg';
   override childNodes: SvgPath[];
-  constructor(params: TypeProps = {}) {
-    super();
+  constructor(params: SvgProps = {}) {
+    super(params);
     this.className = 'FlChatArrowDoubleBackFilledSvg';
-    this.attr.addObj({
-      name: 'FlChatArrowDoubleBackFilledSvg',
-      title: 'FlChatArrowDoubleBackFilledSvg'
+   addAttrObj(this, {
+      name: 'FlChatArrowDoubleBackFilledSvg'
     });
-    this.attr.addObj({
+   addAttrObj(this, {
       viewBox: '0 0 20 20',
     });
     this.resetSize(24, 24);
     this.childNodes = [];
-    this.useParams(params);
   }
 }

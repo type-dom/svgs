@@ -1,12 +1,12 @@
-import { TypeProps, SvgPath, TypeSvgSvg } from '@type-dom/framework';
+import { SvgProps, SvgPath, TypeSvgSvg, addAttrObj } from '@type-dom/framework';
 
 export class FoldSvg extends TypeSvgSvg {
   className: 'FoldSvg';
   path: SvgPath;
-  constructor(params: TypeProps = {}) {
-    super();
+  constructor(params: SvgProps = {}) {
+    super(params);
     this.className = 'FoldSvg';
-    this.attr.addObj({
+    addAttrObj(this, {
       viewBox: '0 0 1024 1024',
       name: 'fold-svg',
     });
@@ -17,6 +17,5 @@ export class FoldSvg extends TypeSvgSvg {
       'M832 192H192v640h640V192z m-128 288a32 32 0 0 1 0 64H320a32 32 0 0 1 0-64h384z'
     );
     this.addChild(this.path);
-    this.useParams(params);
   }
 }

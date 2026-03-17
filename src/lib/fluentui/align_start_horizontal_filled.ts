@@ -1,15 +1,14 @@
-import { TypeProps, SvgPath, TypeSvgSvg } from '@type-dom/framework';
+import { SvgProps, SvgPath, TypeSvgSvg, addAttrObj } from '@type-dom/framework';
 export class FlAlignStartHorizontalFilledSvg extends TypeSvgSvg {
   className: 'FlAlignStartHorizontalFilledSvg';
   override childNodes: SvgPath[];
-  constructor(params: TypeProps = {}) {
-    super();
+  constructor(params: SvgProps = {}) {
+    super(params);
     this.className = 'FlAlignStartHorizontalFilledSvg';
-    this.attr.addObj({
-      name: 'FlAlignStartHorizontalFilledSvg',
-      title: 'FlAlignStartHorizontalFilledSvg'
+   addAttrObj(this, {
+      name: 'FlAlignStartHorizontalFilledSvg'
     });
-    this.attr.addObj({
+   addAttrObj(this, {
       viewBox: '0 0 20 20',
     });
     this.resetSize(24, 24);
@@ -24,6 +23,5 @@ export class FlAlignStartHorizontalFilledSvg extends TypeSvgSvg {
       'M8 4C6.89543 4 6 4.89543 6 6V14C6 15.1046 6.89543 16 8 16H10C11.1046 16 12 15.1046 12 14V6C12 4.89543 11.1046 4 10 4H8Z',
     );
     this.addChild(path1);
-    this.useParams(params);
   }
 }

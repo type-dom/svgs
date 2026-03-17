@@ -1,15 +1,14 @@
-import { TypeProps, SvgPath, TypeSvgSvg } from '@type-dom/framework';
+import { SvgProps, SvgPath, TypeSvgSvg, addAttrObj } from '@type-dom/framework';
 export class TdPageMarginSvg extends TypeSvgSvg {
   className: 'TdPageMarginSvg';
   override childNodes: SvgPath[];
-  constructor(params: TypeProps = {}) {
-    super();
+  constructor(params: SvgProps = {}) {
+    super(params);
     this.className = 'TdPageMarginSvg';
-    this.attr.addObj({
-      name: 'TdPageMarginSvg',
-      title: 'TdPageMarginSvg'
+    addAttrObj(this, {
+      name: 'TdPageMarginSvg'
     });
-    this.attr.addObj({
+    addAttrObj(this, {
       viewBox: '0 0 1024 1024',
     });
     this.resetSize(24, 24);
@@ -29,6 +28,5 @@ export class TdPageMarginSvg extends TypeSvgSvg {
       'M940.651163 190.511628h-119.069768v619.162791H940.651163a23.813953 23.813953 0 1 1 0 47.627907h-119.069768v119.069767a23.813953 23.813953 0 0 1-47.627907 0V857.302326h-523.906976v119.069767a23.813953 23.813953 0 0 1-47.627907 0V857.302326H83.348837a23.813953 23.813953 0 1 1 0-47.627907h119.069768V190.511628H83.348837a23.813953 23.813953 0 0 1 0-47.627907h119.069768V71.44186a23.813953 23.813953 0 0 1 47.627907 0V142.883721h523.906976V71.44186a23.813953 23.813953 0 0 1 47.627907 0V142.883721H940.651163a23.813953 23.813953 0 0 1 0 47.627907z m-166.697675 0h-523.906976v619.162791h523.906976V190.511628z',
     );
     this.addChild(path2);
-    this.useParams(params);
   }
 }

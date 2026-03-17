@@ -1,15 +1,14 @@
-import { TypeProps, SvgPath, TypeSvgSvg } from '@type-dom/framework';
+import { SvgProps, SvgPath, TypeSvgSvg, addAttrObj } from '@type-dom/framework';
 export class FlCheckboxPersonColorSvg extends TypeSvgSvg {
   className: 'FlCheckboxPersonColorSvg';
   override childNodes: SvgPath[];
-  constructor(params: TypeProps = {}) {
-    super();
+  constructor(params: SvgProps = {}) {
+    super(params);
     this.className = 'FlCheckboxPersonColorSvg';
-    this.attr.addObj({
-      name: 'FlCheckboxPersonColorSvg',
-      title: 'FlCheckboxPersonColorSvg'
+   addAttrObj(this, {
+      name: 'FlCheckboxPersonColorSvg'
     });
-    this.attr.addObj({
+   addAttrObj(this, {
       viewBox: '0 0 20 20',
     });
     this.resetSize(24, 24);
@@ -49,6 +48,5 @@ export class FlCheckboxPersonColorSvg extends TypeSvgSvg {
       'M17.5 12C17.5 13.1046 16.6046 14 15.5 14C14.3954 14 13.5 13.1046 13.5 12C13.5 10.8954 14.3954 10 15.5 10C16.6046 10 17.5 10.8954 17.5 12Z',
     );
     this.addChild(path6);
-    this.useParams(params);
   }
 }

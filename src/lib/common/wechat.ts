@@ -1,15 +1,14 @@
-import { TypeProps, SvgPath, TypeSvgSvg } from '@type-dom/framework';
+import { SvgProps, SvgPath, TypeSvgSvg, addAttrObj } from '@type-dom/framework';
 export class TdWechatSvg extends TypeSvgSvg {
   className: 'TdWechatSvg';
   override childNodes: SvgPath[];
-  constructor(params: TypeProps = {}) {
-    super();
+  constructor(params: SvgProps = {}) {
+    super(params);
     this.className = 'TdWechatSvg';
-    this.attr.addObj({
-      name: 'TdWechatSvg',
-      title: 'TdWechatSvg'
+    addAttrObj(this, {
+      name: 'TdWechatSvg'
     });
-    this.attr.addObj({
+    addAttrObj(this, {
       viewBox: '0 0 128 110',
     });
     this.resetSize(24, 24);
@@ -24,6 +23,5 @@ export class TdWechatSvg extends TypeSvgSvg {
       'M127.945 70.52c0-19.075-18.108-34.623-38.448-34.623-21.537 0-38.5 15.548-38.5 34.623 0 19.108 16.963 34.622 38.5 34.622 4.508 0 9.058-1.2 13.584-2.395l12.414 7.167-3.404-11.923c9.087-7.184 15.854-16.712 15.854-27.471zm-50.928-5.97c-2.254 0-4.53-2.362-4.53-4.773 0-2.378 2.276-4.771 4.53-4.771 3.422 0 5.665 2.393 5.665 4.771 0 2.41-2.243 4.773-5.665 4.773zm24.897 0c-2.24 0-4.498-2.362-4.498-4.773 0-2.378 2.258-4.771 4.498-4.771 3.392 0 5.665 2.393 5.665 4.771 0 2.41-2.273 4.773-5.665 4.773z',
     );
     this.addChild(path1);
-    this.useParams(params);
   }
 }

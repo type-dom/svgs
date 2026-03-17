@@ -1,15 +1,14 @@
-import { TypeProps, SvgPath, TypeSvgSvg } from '@type-dom/framework';
+import { SvgProps, SvgPath, TypeSvgSvg, addAttrObj } from '@type-dom/framework';
 export class FlAlignSpaceEvenlyHorizontalFilledSvg extends TypeSvgSvg {
   className: 'FlAlignSpaceEvenlyHorizontalFilledSvg';
   override childNodes: SvgPath[];
-  constructor(params: TypeProps = {}) {
-    super();
+  constructor(params: SvgProps = {}) {
+    super(params);
     this.className = 'FlAlignSpaceEvenlyHorizontalFilledSvg';
-    this.attr.addObj({
-      name: 'FlAlignSpaceEvenlyHorizontalFilledSvg',
-      title: 'FlAlignSpaceEvenlyHorizontalFilledSvg'
+   addAttrObj(this, {
+      name: 'FlAlignSpaceEvenlyHorizontalFilledSvg'
     });
-    this.attr.addObj({
+   addAttrObj(this, {
       viewBox: '0 0 20 20',
     });
     this.resetSize(24, 24);
@@ -29,6 +28,5 @@ export class FlAlignSpaceEvenlyHorizontalFilledSvg extends TypeSvgSvg {
       'M16 16C17.1046 16 18 15.1046 18 14V6C18 4.89543 17.1046 4 16 4H15C13.8954 4 13 4.89543 13 6V14C13 15.1046 13.8954 16 15 16H16Z',
     );
     this.addChild(path2);
-    this.useParams(params);
   }
 }

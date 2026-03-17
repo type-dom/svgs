@@ -1,12 +1,12 @@
-import { TypeProps, SvgPath, TypeSvgSvg } from '@type-dom/framework';
+import { SvgProps, SvgPath, TypeSvgSvg, addAttrObj } from '@type-dom/framework';
 
 export class SignStampSvg extends TypeSvgSvg {
   className: 'SignStampSvg';
   path: SvgPath;
-  constructor(params: TypeProps = {}) {
-    super();
+  constructor(params: SvgProps = {}) {
+    super(params);
     this.className = 'SignStampSvg';
-    this.attr.addObj({
+    addAttrObj(this, {
       viewBox: '0 0 1052 1024',
       name: 'signstamp-svg',
     });
@@ -17,10 +17,9 @@ export class SignStampSvg extends TypeSvgSvg {
       ' m-407.210666 227.271111H834.56v52.138666H208.611556v-52.138666z'
     );
     // path.setFill('#333333');
-    this.path.attr.addObj({
+    addAttrObj(this.path, {
       fill: '#333333',
     });
     this.addChild(this.path);
-    this.useParams(params);
   }
 }

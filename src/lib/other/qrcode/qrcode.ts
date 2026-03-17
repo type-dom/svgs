@@ -1,12 +1,12 @@
-import { TypeProps, SvgPath, TypeSvgSvg } from '@type-dom/framework';
+import { SvgProps, SvgPath, TypeSvgSvg, addAttrObj } from '@type-dom/framework';
 
 export class QrcodeSvg extends TypeSvgSvg {
   className: 'QrcodeSvg';
   path: SvgPath;
-  constructor(params: TypeProps = {}) {
-    super();
+  constructor(params: SvgProps = {}) {
+    super(params);
     this.className = 'QrcodeSvg';
-    this.attr.addObj({
+    addAttrObj(this, {
       viewBox: '0 0 1024 1024',
       name: 'qrcode-svg',
     });
@@ -24,6 +24,5 @@ export class QrcodeSvg extends TypeSvgSvg {
       ' m418.901334 0v69.802667H686.506667V267.648h69.845333z'
     );
     this.addChild(this.path);
-    this.useParams(params);
   }
 }

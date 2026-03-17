@@ -1,15 +1,14 @@
-import { TypeProps, SvgPath, TypeSvgSvg } from '@type-dom/framework';
+import { SvgProps, SvgPath, TypeSvgSvg, addAttrObj } from '@type-dom/framework';
 export class FlTextboxAlignTopCenterRegularSvg extends TypeSvgSvg {
   className: 'FlTextboxAlignTopCenterRegularSvg';
   override childNodes: SvgPath[];
-  constructor(params: TypeProps = {}) {
-    super();
+  constructor(params: SvgProps = {}) {
+    super(params);
     this.className = 'FlTextboxAlignTopCenterRegularSvg';
-    this.attr.addObj({
-      name: 'FlTextboxAlignTopCenterRegularSvg',
-      title: 'FlTextboxAlignTopCenterRegularSvg'
+   addAttrObj(this, {
+      name: 'FlTextboxAlignTopCenterRegularSvg'
     });
-    this.attr.addObj({
+   addAttrObj(this, {
       viewBox: '0 0 20 20',
     });
     this.resetSize(24, 24);
@@ -19,6 +18,5 @@ export class FlTextboxAlignTopCenterRegularSvg extends TypeSvgSvg {
       'M5.5 3C4.11929 3 3 4.11929 3 5.5V14.5C3 15.8807 4.11929 17 5.5 17H14.5C15.8807 17 17 15.8807 17 14.5V5.5C17 4.11929 15.8807 3 14.5 3H5.5ZM4 5.5C4 4.67157 4.67157 4 5.5 4H14.5C15.3284 4 16 4.67157 16 5.5V14.5C16 15.3284 15.3284 16 14.5 16H5.5C4.67157 16 4 15.3284 4 14.5V5.5ZM6.5 6C6.22386 6 6 6.22386 6 6.5C6 6.77614 6.22386 7 6.5 7H13.5C13.7761 7 14 6.77614 14 6.5C14 6.22386 13.7761 6 13.5 6H6.5ZM7.5 9C7.22386 9 7 9.22386 7 9.5C7 9.77614 7.22386 10 7.5 10H12.5C12.7761 10 13 9.77614 13 9.5C13 9.22386 12.7761 9 12.5 9H7.5Z',
     );
     this.addChild(path0);
-    this.useParams(params);
   }
 }

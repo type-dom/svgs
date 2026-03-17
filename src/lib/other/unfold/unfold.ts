@@ -1,12 +1,12 @@
-import { TypeProps, SvgPath, TypeSvgSvg } from '@type-dom/framework';
+import { SvgProps, SvgPath, TypeSvgSvg, addAttrObj } from '@type-dom/framework';
 
 export class UnfoldSvg extends TypeSvgSvg {
   className: 'UnfoldSvg';
   path: SvgPath;
-  constructor(params: TypeProps = {}) {
-    super();
+  constructor(params: SvgProps = {}) {
+    super(params);
     this.className = 'UnfoldSvg';
-    this.attr.addObj({
+    addAttrObj(this, {
       viewBox: '0 0 1024 1024',
       name: 'unfold-svg',
     });
@@ -17,6 +17,5 @@ export class UnfoldSvg extends TypeSvgSvg {
       'M832 192H192v640h640V192zM512 288a32 32 0 0 1 32 32v160h160a32 32 0 0 1 0 64h-160v160a32 32 0 0 1-64 0v-160h-160a32 32 0 0 1 0-64h160v-160a32 32 0 0 1 32-32z'
     );
     this.addChild(this.path);
-    this.useParams(params);
   }
 }

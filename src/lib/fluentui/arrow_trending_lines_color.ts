@@ -1,15 +1,14 @@
-import { TypeProps, SvgPath, TypeSvgSvg } from '@type-dom/framework';
+import { SvgProps, SvgPath, TypeSvgSvg, addAttrObj } from '@type-dom/framework';
 export class FlArrowTrendingLinesColorSvg extends TypeSvgSvg {
   className: 'FlArrowTrendingLinesColorSvg';
   override childNodes: SvgPath[];
-  constructor(params: TypeProps = {}) {
-    super();
+  constructor(params: SvgProps = {}) {
+    super(params);
     this.className = 'FlArrowTrendingLinesColorSvg';
-    this.attr.addObj({
-      name: 'FlArrowTrendingLinesColorSvg',
-      title: 'FlArrowTrendingLinesColorSvg'
+   addAttrObj(this, {
+      name: 'FlArrowTrendingLinesColorSvg'
     });
-    this.attr.addObj({
+   addAttrObj(this, {
       viewBox: '0 0 20 20',
     });
     this.resetSize(24, 24);
@@ -39,6 +38,5 @@ export class FlArrowTrendingLinesColorSvg extends TypeSvgSvg {
       'M14 4C13.4477 4 13 3.55228 13 3C13 2.44772 13.4477 2 14 2H17C17.5523 2 18 2.44772 18 3V6C18 6.55228 17.5523 7 17 7C16.4477 7 16 6.55228 16 6V5.41421L12.2071 9.20711C11.8166 9.59763 11.1834 9.59763 10.7929 9.20711L8.5 6.91421L4.20711 11.2071C3.81658 11.5976 3.18342 11.5976 2.79289 11.2071C2.40237 10.8166 2.40237 10.1834 2.79289 9.79289L7.79289 4.79289C8.18342 4.40237 8.81658 4.40237 9.20711 4.79289L11.5 7.08579L14.5858 4H14Z',
     );
     this.addChild(path4);
-    this.useParams(params);
   }
 }

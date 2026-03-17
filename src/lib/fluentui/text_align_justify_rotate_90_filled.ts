@@ -1,15 +1,14 @@
-import { TypeProps, SvgPath, TypeSvgSvg } from '@type-dom/framework';
+import { SvgProps, SvgPath, TypeSvgSvg, addAttrObj } from '@type-dom/framework';
 export class FlTextAlignJustifyRotate90FilledSvg extends TypeSvgSvg {
   className: 'FlTextAlignJustifyRotate90FilledSvg';
   override childNodes: SvgPath[];
-  constructor(params: TypeProps = {}) {
-    super();
+  constructor(params: SvgProps = {}) {
+    super(params);
     this.className = 'FlTextAlignJustifyRotate90FilledSvg';
-    this.attr.addObj({
-      name: 'FlTextAlignJustifyRotate90FilledSvg',
-      title: 'FlTextAlignJustifyRotate90FilledSvg'
+   addAttrObj(this, {
+      name: 'FlTextAlignJustifyRotate90FilledSvg'
     });
-    this.attr.addObj({
+   addAttrObj(this, {
       viewBox: '0 0 20 20',
     });
     this.resetSize(24, 24);
@@ -19,6 +18,5 @@ export class FlTextAlignJustifyRotate90FilledSvg extends TypeSvgSvg {
       'M15.75 2C16.1642 2 16.5 2.33579 16.5 2.75V17.25C16.5 17.6642 16.1642 18 15.75 18C15.3358 18 15 17.6642 15 17.25V2.75C15 2.33579 15.3358 2 15.75 2ZM10.75 2C11.1642 2 11.5 2.33579 11.5 2.75V17.25C11.5 17.6642 11.1642 18 10.75 18C10.3358 18 10 17.6642 10 17.25V2.75C10 2.33579 10.3358 2 10.75 2ZM6.5 2.75C6.5 2.33579 6.16421 2 5.75 2C5.33579 2 5 2.33579 5 2.75V17.25C5 17.6642 5.33579 18 5.75 18C6.16421 18 6.5 17.6642 6.5 17.25V2.75Z',
     );
     this.addChild(path0);
-    this.useParams(params);
   }
 }

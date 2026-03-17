@@ -1,15 +1,14 @@
-import { TypeProps, SvgPath, TypeSvgSvg } from '@type-dom/framework';
+import { SvgProps, SvgPath, TypeSvgSvg, addAttrObj } from '@type-dom/framework';
 export class TdPageDeleteSvg extends TypeSvgSvg {
   className: 'TdPageDeleteSvg';
   override childNodes: SvgPath[];
-  constructor(params: TypeProps = {}) {
-    super();
+  constructor(params: SvgProps = {}) {
+    super(params);
     this.className = 'TdPageDeleteSvg';
-    this.attr.addObj({
-      name: 'TdPageDeleteSvg',
-      title: 'TdPageDeleteSvg'
+    addAttrObj(this, {
+      name: 'TdPageDeleteSvg'
     });
-    this.attr.addObj({
+    addAttrObj(this, {
       viewBox: '0 0 1024 1024',
     });
     this.resetSize(24, 24);
@@ -24,6 +23,5 @@ export class TdPageDeleteSvg extends TypeSvgSvg {
       'M720.507336 382.343011c-131.567501 0-238.235916 106.667392-238.235916 238.248196 0 131.567501 106.667392 238.208287 238.235916 238.208287 131.539872 0 238.208287-106.640786 238.208287-238.208287C958.715623 489.010403 852.047208 382.343011 720.507336 382.343011zM890.818233 625.604384c-0.026606 14.685467-9.781784 24.410969-24.410969 24.410969 0 0-260.127506 0-292.559149-0.013303-13.601786 0-23.652699-9.984399-23.680329-23.626094-0.026606-3.52222-0.026606-5.107321-0.054235-5.838985 0 1.680269 0-1.692548 0 0 0.026606-0.717338 0.026606-2.302439 0.054235-5.824659 0.026606-13.493316 10.078543-23.476691 23.626094-23.476691 32.295544-0.026606 292.585755-0.026606 292.585755-0.026606 14.656815 0 24.410969 9.754155 24.438599 24.425296 0 2.8847 0 4.212952 0 4.985548 0.026606-2.384303 0.026606 2.369977 0 0C890.818233 621.391433 890.818233 622.718661 890.818233 625.604384z',
     );
     this.addChild(path1);
-    this.useParams(params);
   }
 }

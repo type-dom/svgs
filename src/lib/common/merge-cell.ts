@@ -1,15 +1,14 @@
-import { TypeProps, SvgPath, TypeSvgSvg } from '@type-dom/framework';
+import { SvgProps, SvgPath, TypeSvgSvg, addAttrObj } from '@type-dom/framework';
 export class TdMergeCellSvg extends TypeSvgSvg {
   className: 'TdMergeCellSvg';
   override childNodes: SvgPath[];
-  constructor(params: TypeProps = {}) {
-    super();
+  constructor(params: SvgProps = {}) {
+    super(params);
     this.className = 'TdMergeCellSvg';
-    this.attr.addObj({
-      name: 'TdMergeCellSvg',
-      title: 'TdMergeCellSvg'
+    addAttrObj(this, {
+      name: 'TdMergeCellSvg'
     });
-    this.attr.addObj({
+    addAttrObj(this, {
       viewBox: '0 0 1024 1024',
     });
     this.resetSize(24, 24);
@@ -24,6 +23,5 @@ export class TdMergeCellSvg extends TypeSvgSvg {
       'M485.052632 484.513684L367.023158 366.484211l-38.265263 38.265263L409.061053 485.052632H161.684211v53.894736h247.376842L328.757895 619.250526l38.265263 38.265263L485.052632 539.486316 484.513684 538.947368H485.052632V485.052632h-0.538948zM862.315789 485.052632h-247.376842l80.303158-80.303158-38.265263-38.265263L538.947368 484.513684l0.538948 0.538948H538.947368v53.894736h0.538948l-0.538948 0.538948 118.029474 118.029473 38.265263-38.265263L614.938947 538.947368H862.315789z',
     );
     this.addChild(path1);
-    this.useParams(params);
   }
 }

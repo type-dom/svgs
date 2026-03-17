@@ -1,12 +1,12 @@
-import { TypeProps, SvgPath, TypeSvgSvg } from '@type-dom/framework';
+import { SvgProps, SvgPath, TypeSvgSvg, addAttrObj } from '@type-dom/framework';
 
 export class LabelSvg extends TypeSvgSvg {
   className: 'LabelSvg';
   path: SvgPath;
-  constructor(params: TypeProps = {}) {
-    super();
+  constructor(params: SvgProps = {}) {
+    super(params);
     this.className = 'LabelSvg';
-    this.attr.addObj({
+    addAttrObj(this, {
       viewBox: '0 0 1024 1024',
       name: 'label-svg',
     });
@@ -19,6 +19,5 @@ export class LabelSvg extends TypeSvgSvg {
       'M958.122667 584.362667'
     );
     this.addChild(this.path);
-    this.useParams(params);
   }
 }

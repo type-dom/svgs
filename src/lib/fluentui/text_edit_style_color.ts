@@ -1,15 +1,14 @@
-import { TypeProps, SvgPath, TypeSvgSvg } from '@type-dom/framework';
+import { SvgProps, SvgPath, TypeSvgSvg, addAttrObj } from '@type-dom/framework';
 export class FlTextEditStyleColorSvg extends TypeSvgSvg {
   className: 'FlTextEditStyleColorSvg';
   override childNodes: SvgPath[];
-  constructor(params: TypeProps = {}) {
-    super();
+  constructor(params: SvgProps = {}) {
+    super(params);
     this.className = 'FlTextEditStyleColorSvg';
-    this.attr.addObj({
-      name: 'FlTextEditStyleColorSvg',
-      title: 'FlTextEditStyleColorSvg'
+   addAttrObj(this, {
+      name: 'FlTextEditStyleColorSvg'
     });
-    this.attr.addObj({
+   addAttrObj(this, {
       viewBox: '0 0 20 20',
     });
     this.resetSize(24, 24);
@@ -49,6 +48,5 @@ export class FlTextEditStyleColorSvg extends TypeSvgSvg {
       'M15.3535 11.8561L16.5853 10.6228C16.5853 10.6228 15.6347 10.7294 14.4521 9.54679C13.2695 8.36419 13.3795 7.41013 13.3795 7.41013L12.1411 8.64797C12.1411 8.64797 12.0605 9.62586 13.2299 10.7953C14.3993 11.9647 15.3535 11.8561 15.3535 11.8561Z',
     );
     this.addChild(path6);
-    this.useParams(params);
   }
 }

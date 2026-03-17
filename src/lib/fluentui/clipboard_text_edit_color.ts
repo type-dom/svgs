@@ -1,15 +1,14 @@
-import { TypeProps, SvgPath, TypeSvgSvg } from '@type-dom/framework';
+import { SvgProps, SvgPath, TypeSvgSvg, addAttrObj } from '@type-dom/framework';
 export class FlClipboardTextEditColorSvg extends TypeSvgSvg {
   className: 'FlClipboardTextEditColorSvg';
   override childNodes: SvgPath[];
-  constructor(params: TypeProps = {}) {
-    super();
+  constructor(params: SvgProps = {}) {
+    super(params);
     this.className = 'FlClipboardTextEditColorSvg';
-    this.attr.addObj({
-      name: 'FlClipboardTextEditColorSvg',
-      title: 'FlClipboardTextEditColorSvg'
+   addAttrObj(this, {
+      name: 'FlClipboardTextEditColorSvg'
     });
-    this.attr.addObj({
+   addAttrObj(this, {
       viewBox: '0 0 20 20',
     });
     this.resetSize(24, 24);
@@ -69,6 +68,5 @@ export class FlClipboardTextEditColorSvg extends TypeSvgSvg {
       'M18.0015 13.6466C16.6814 13.3563 15.6408 12.3191 15.3442 11L14.3452 12.0001C14.6418 13.3192 15.6824 14.3563 17.0026 14.6466L18.0015 13.6466Z',
     );
     this.addChild(path10);
-    this.useParams(params);
   }
 }

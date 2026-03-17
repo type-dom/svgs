@@ -1,15 +1,14 @@
-import { TypeProps, SvgPath, TypeSvgSvg } from '@type-dom/framework';
+import { SvgProps, SvgPath, TypeSvgSvg, addAttrObj } from '@type-dom/framework';
 export class TdSensitiveInfoSvg extends TypeSvgSvg {
   className: 'TdSensitiveInfoSvg';
   override childNodes: SvgPath[];
-  constructor(params: TypeProps = {}) {
-    super();
+  constructor(params: SvgProps = {}) {
+    super(params);
     this.className = 'TdSensitiveInfoSvg';
-    this.attr.addObj({
-      name: 'TdSensitiveInfoSvg',
-      title: 'TdSensitiveInfoSvg'
+    addAttrObj(this, {
+      name: 'TdSensitiveInfoSvg'
     });
-    this.attr.addObj({
+    addAttrObj(this, {
       viewBox: '0 0 1088 1024',
     });
     this.resetSize(24, 24);
@@ -24,6 +23,5 @@ export class TdSensitiveInfoSvg extends TypeSvgSvg {
       'M536.192 1024a512 512 0 1 0 0-1024 512 512 0 0 0 0 1024m0-71.488a440.512 440.512 0 1 1 0-881.088 440.576 440.576 0 1 1 0 881.088',
     );
     this.addChild(path1);
-    this.useParams(params);
   }
 }

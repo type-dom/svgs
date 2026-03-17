@@ -1,15 +1,14 @@
-import { TypeProps, SvgPath, TypeSvgSvg } from '@type-dom/framework';
+import { SvgProps, SvgPath, TypeSvgSvg, addAttrObj } from '@type-dom/framework';
 export class FlAlignEndVerticalRegularSvg extends TypeSvgSvg {
   className: 'FlAlignEndVerticalRegularSvg';
   override childNodes: SvgPath[];
-  constructor(params: TypeProps = {}) {
-    super();
+  constructor(params: SvgProps = {}) {
+    super(params);
     this.className = 'FlAlignEndVerticalRegularSvg';
-    this.attr.addObj({
-      name: 'FlAlignEndVerticalRegularSvg',
-      title: 'FlAlignEndVerticalRegularSvg'
+   addAttrObj(this, {
+      name: 'FlAlignEndVerticalRegularSvg'
     });
-    this.attr.addObj({
+   addAttrObj(this, {
       viewBox: '0 0 20 20',
     });
     this.resetSize(24, 24);
@@ -24,6 +23,5 @@ export class FlAlignEndVerticalRegularSvg extends TypeSvgSvg {
       'M2 16.5C2 16.2239 2.22386 16 2.5 16H17.5C17.7761 16 18 16.2239 18 16.5C18 16.7761 17.7761 17 17.5 17H2.5C2.22386 17 2 16.7761 2 16.5Z',
     );
     this.addChild(path1);
-    this.useParams(params);
   }
 }

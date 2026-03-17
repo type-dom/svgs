@@ -1,15 +1,14 @@
-import { TypeProps, SvgPath, TypeSvgSvg } from '@type-dom/framework';
+import { SvgProps, SvgPath, TypeSvgSvg, addAttrObj } from '@type-dom/framework';
 export class FlInkingToolAccentFilledSvg extends TypeSvgSvg {
   className: 'FlInkingToolAccentFilledSvg';
   override childNodes: SvgPath[];
-  constructor(params: TypeProps = {}) {
-    super();
+  constructor(params: SvgProps = {}) {
+    super(params);
     this.className = 'FlInkingToolAccentFilledSvg';
-    this.attr.addObj({
-      name: 'FlInkingToolAccentFilledSvg',
-      title: 'FlInkingToolAccentFilledSvg'
+   addAttrObj(this, {
+      name: 'FlInkingToolAccentFilledSvg'
     });
-    this.attr.addObj({
+   addAttrObj(this, {
       viewBox: '0 0 20 20',
     });
     this.resetSize(24, 24);
@@ -19,6 +18,5 @@ export class FlInkingToolAccentFilledSvg extends TypeSvgSvg {
       'M17 6V3H3V6C3 6.27614 3.22386 6.5 3.5 6.5H16.5C16.7761 6.5 17 6.27614 17 6ZM12.4462 7L10.058 11.7764C9.89175 12.1088 10.1335 12.5 10.5052 12.5C10.6946 12.5 10.8677 12.393 10.9524 12.2236L13.5642 7L13 6.5L12.4462 7ZM10 17.5C10.5523 17.5 11 16.8284 11 16C11 15.1716 10.5523 14.5 10 14.5C9.44772 14.5 9 15.1716 9 16C9 16.8284 9.44772 17.5 10 17.5Z',
     );
     this.addChild(path0);
-    this.useParams(params);
   }
 }

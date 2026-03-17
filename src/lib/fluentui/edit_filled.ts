@@ -1,15 +1,14 @@
-import { TypeProps, SvgPath, TypeSvgSvg } from '@type-dom/framework';
+import { SvgProps, SvgPath, TypeSvgSvg, addAttrObj } from '@type-dom/framework';
 export class FlEditFilledSvg extends TypeSvgSvg {
   className: 'FlEditFilledSvg';
   override childNodes: SvgPath[];
-  constructor(params: TypeProps = {}) {
-    super();
+  constructor(params: SvgProps = {}) {
+    super(params);
     this.className = 'FlEditFilledSvg';
-    this.attr.addObj({
-      name: 'FlEditFilledSvg',
-      title: 'FlEditFilledSvg'
+   addAttrObj(this, {
+      name: 'FlEditFilledSvg'
     });
-    this.attr.addObj({
+   addAttrObj(this, {
       viewBox: '0 0 20 20',
     });
     this.resetSize(24, 24);
@@ -19,6 +18,5 @@ export class FlEditFilledSvg extends TypeSvgSvg {
       'M12.9203 2.87317C14.1027 1.69077 16.0271 1.71505 17.1794 2.92689C18.2913 4.09631 18.2681 5.93899 17.1271 7.08003L16.4581 7.74902L12.2512 3.54217L12.9203 2.87317ZM11.5441 4.24927L3.54545 12.2475C3.21763 12.5754 2.99008 12.9899 2.88953 13.4424L2.01191 17.3923C1.97483 17.5592 2.02559 17.7335 2.14649 17.8544C2.26739 17.9753 2.44166 18.026 2.60855 17.9889L6.53494 17.1157C7.00237 17.0118 7.43048 16.7767 7.76907 16.4381L15.751 8.45613L11.5441 4.24927Z',
     );
     this.addChild(path0);
-    this.useParams(params);
   }
 }

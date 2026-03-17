@@ -1,15 +1,14 @@
-import { TypeProps, SvgPath, TypeSvgSvg } from '@type-dom/framework';
+import { SvgProps, SvgPath, TypeSvgSvg, addAttrObj } from '@type-dom/framework';
 export class ElChatLineRoundSvg extends TypeSvgSvg {
   className: 'ElChatLineRoundSvg';
   override childNodes: SvgPath[];
-  constructor(params: TypeProps = {}) {
-    super();
+  constructor(params: SvgProps = {}) {
+    super(params);
     this.className = 'ElChatLineRoundSvg';
-    this.attr.addObj({
-      name: 'ElChatLineRoundSvg',
-      title: 'ElChatLineRoundSvg'
+   addAttrObj(this, {
+      name: 'ElChatLineRoundSvg'
     });
-    this.attr.addObj({
+   addAttrObj(this, {
       viewBox: '0 0 1024 1024',
     });
     this.resetSize(24, 24);
@@ -24,6 +23,5 @@ export class ElChatLineRoundSvg extends TypeSvgSvg {
       'M352 576h320q32 0 32 32t-32 32H352q-32 0-32-32t32-32zm32-192h256q32 0 32 32t-32 32H384q-32 0-32-32t32-32z',
     );
     this.addChild(path1);
-    this.useParams(params);
   }
 }

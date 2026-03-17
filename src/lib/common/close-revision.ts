@@ -1,15 +1,14 @@
-import { TypeProps, SvgPath, TypeSvgSvg } from '@type-dom/framework';
+import { SvgProps, SvgPath, TypeSvgSvg, addAttrObj } from '@type-dom/framework';
 export class TdCloseRevisionSvg extends TypeSvgSvg {
   className: 'TdCloseRevisionSvg';
   override childNodes: SvgPath[];
-  constructor(params: TypeProps = {}) {
-    super();
+  constructor(params: SvgProps = {}) {
+    super(params);
     this.className = 'TdCloseRevisionSvg';
-    this.attr.addObj({
-      name: 'TdCloseRevisionSvg',
-      title: 'TdCloseRevisionSvg'
+    addAttrObj(this, {
+      name: 'TdCloseRevisionSvg'
     });
-    this.attr.addObj({
+    addAttrObj(this, {
       viewBox: '0 0 1024 1024',
     });
     this.resetSize(24, 24);
@@ -24,6 +23,5 @@ export class TdCloseRevisionSvg extends TypeSvgSvg {
       'M282.7 228h210c22 0 40 18 40 40s-18 40-40 40h-210c-22 0-40-18-40-40s18-40 40-40zM278.7 412h288c19.8 0 36 18 36 40s-16.2 40-36 40h-288c-19.8 0-36-18-36-40s16.2-40 36-40zM362.7 829.1h-80c-22 0-40-18-40-40s18-40 40-40h80c22 0 40 18 40 40s-18 40-40 40z',
     );
     this.addChild(path1);
-    this.useParams(params);
   }
 }

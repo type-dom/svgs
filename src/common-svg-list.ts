@@ -1,5 +1,4 @@
-import { TypeDiv } from '@type-dom/framework';
-import type { IStyle } from '@type-dom/css-type';
+import { TypeDiv, CSSProperties } from '@type-dom/framework';
 import {
   Td404Svg,
   TdAPlusSvg,
@@ -201,9 +200,9 @@ export class CommonSvgList extends TypeDiv {
   className: 'CommonSvgList';
   constructor() {
     super();
-    console.log('CommonSvgList constructor . ');
+    // console.log('CommonSvgList constructor . ');
     this.className = 'CommonSvgList';
-    const $svgStyle: Partial<IStyle> = {
+    const $svgStyle: Partial<CSSProperties> = {
       padding: '10px',
       border: '1px solid #ddd'
     };

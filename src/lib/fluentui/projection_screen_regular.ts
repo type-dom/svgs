@@ -1,15 +1,14 @@
-import { TypeProps, SvgPath, TypeSvgSvg } from '@type-dom/framework';
+import { SvgProps, SvgPath, TypeSvgSvg, addAttrObj } from '@type-dom/framework';
 export class FlProjectionScreenRegularSvg extends TypeSvgSvg {
   className: 'FlProjectionScreenRegularSvg';
   override childNodes: SvgPath[];
-  constructor(params: TypeProps = {}) {
-    super();
+  constructor(params: SvgProps = {}) {
+    super(params);
     this.className = 'FlProjectionScreenRegularSvg';
-    this.attr.addObj({
-      name: 'FlProjectionScreenRegularSvg',
-      title: 'FlProjectionScreenRegularSvg'
+   addAttrObj(this, {
+      name: 'FlProjectionScreenRegularSvg'
     });
-    this.attr.addObj({
+   addAttrObj(this, {
       viewBox: '0 0 20 20',
     });
     this.resetSize(24, 24);
@@ -19,6 +18,5 @@ export class FlProjectionScreenRegularSvg extends TypeSvgSvg {
       'M3 3C2.44772 3 2 3.44772 2 4C2 4.55228 2.44772 5 3 5V11C3 12.6569 4.34315 14 6 14H9.5V16H7.5C7.22386 16 7 16.2239 7 16.5C7 16.7761 7.22386 17 7.5 17H12.5C12.7761 17 13 16.7761 13 16.5C13 16.2239 12.7761 16 12.5 16H10.5V14H14C15.6569 14 17 12.6569 17 11V5C17.5523 5 18 4.55228 18 4C18 3.44772 17.5523 3 17 3H3ZM4 5H16V11C16 12.1046 15.1046 13 14 13H6C4.89543 13 4 12.1046 4 11V5Z',
     );
     this.addChild(path0);
-    this.useParams(params);
   }
 }

@@ -1,15 +1,14 @@
-import { TypeProps, SvgPath, TypeSvgSvg } from '@type-dom/framework';
+import { SvgProps, SvgPath, TypeSvgSvg, addAttrObj } from '@type-dom/framework';
 export class ElReadingLampSvg extends TypeSvgSvg {
   className: 'ElReadingLampSvg';
   override childNodes: SvgPath[];
-  constructor(params: TypeProps = {}) {
-    super();
+  constructor(params: SvgProps = {}) {
+    super(params);
     this.className = 'ElReadingLampSvg';
-    this.attr.addObj({
-      name: 'ElReadingLampSvg',
-      title: 'ElReadingLampSvg'
+   addAttrObj(this, {
+      name: 'ElReadingLampSvg'
     });
-    this.attr.addObj({
+   addAttrObj(this, {
       viewBox: '0 0 1024 1024',
     });
     this.resetSize(24, 24);
@@ -24,6 +23,5 @@ export class ElReadingLampSvg extends TypeSvgSvg {
       'M672 576q32 0 32 32v128q0 32-32 32t-32-32V608q0-32 32-32zm-192-.064h64V960h-64z',
     );
     this.addChild(path1);
-    this.useParams(params);
   }
 }

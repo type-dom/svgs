@@ -1,12 +1,12 @@
-import { TypeProps, SvgPath, TypeSvgSvg } from '@type-dom/framework';
+import { SvgProps, SvgPath, TypeSvgSvg, addAttrObj } from '@type-dom/framework';
 
 export class HorilineSvg extends TypeSvgSvg {
   className: 'HorilineSvg';
   path: SvgPath;
-  constructor(params: TypeProps = {}) {
-    super();
+  constructor(params: SvgProps = {}) {
+    super(params);
     this.className = 'HorilineSvg';
-    this.attr.addObj({
+    addAttrObj(this, {
       viewBox: '0 0 1024 1024',
       name: 'horiline-svg',
     });
@@ -16,6 +16,5 @@ export class HorilineSvg extends TypeSvgSvg {
       'M1024.11855074 543.8035417l-1024.18760401 0-0.00141421-63.91821038 1024.18972533-0.00070711z'
     );
     this.addChild(this.path);
-    this.useParams(params);
   }
 }

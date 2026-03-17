@@ -1,15 +1,14 @@
-import { TypeProps, SvgPath, TypeSvgSvg } from '@type-dom/framework';
+import { SvgProps, SvgPath, TypeSvgSvg, addAttrObj } from '@type-dom/framework';
 export class ElStopwatchSvg extends TypeSvgSvg {
   className: 'ElStopwatchSvg';
   override childNodes: SvgPath[];
-  constructor(params: TypeProps = {}) {
-    super();
+  constructor(params: SvgProps = {}) {
+    super(params);
     this.className = 'ElStopwatchSvg';
-    this.attr.addObj({
-      name: 'ElStopwatchSvg',
-      title: 'ElStopwatchSvg'
+   addAttrObj(this, {
+      name: 'ElStopwatchSvg'
     });
-    this.attr.addObj({
+   addAttrObj(this, {
       viewBox: '0 0 1024 1024',
     });
     this.resetSize(24, 24);
@@ -24,6 +23,5 @@ export class ElStopwatchSvg extends TypeSvgSvg {
       'M672 234.88c-39.168 174.464-80 298.624-122.688 372.48-64 110.848-202.624 30.848-138.624-80C453.376 453.44 540.48 355.968 672 234.816z',
     );
     this.addChild(path1);
-    this.useParams(params);
   }
 }

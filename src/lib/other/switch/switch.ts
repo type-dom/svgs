@@ -1,12 +1,12 @@
-import { TypeProps, SvgPath, TypeSvgSvg } from '@type-dom/framework';
+import { SvgProps, SvgPath, TypeSvgSvg, addAttrObj } from '@type-dom/framework';
 
 export class SwitchSvg extends TypeSvgSvg {
   className: 'SwitchSvg';
   path: SvgPath;
-  constructor(params: TypeProps = {}) {
-    super();
+  constructor(params: SvgProps = {}) {
+    super(params);
     this.className = 'SwitchSvg';
-    this.attr.addObj({
+    addAttrObj(this, {
       viewBox: '0 0 1536 1024',
       name: 'switch-svg',
     });
@@ -18,6 +18,5 @@ export class SwitchSvg extends TypeSvgSvg {
       'M512 512m-320 0a320 320 0 1 0 640 0 320 320 0 1 0-640 0Z'
     );
     this.addChild(this.path);
-    this.useParams(params);
   }
 }

@@ -1,12 +1,12 @@
-import { TypeProps, SvgPath, TypeSvgSvg } from '@type-dom/framework';
+import { SvgProps, SvgPath, TypeSvgSvg, addAttrObj } from '@type-dom/framework';
 
 export class BarcodeSvg extends TypeSvgSvg {
   className: 'BarcodeSvg';
   path: SvgPath;
-  constructor(params: TypeProps = {}) {
-    super();
+  constructor(params: SvgProps = {}) {
+    super(params);
     this.className = 'BarcodeSvg';
-    this.attr.addObj({
+    addAttrObj(this, {
       viewBox: '0 0 1024 1024',
       name: 'barcode-svg',
     });
@@ -21,6 +21,5 @@ export class BarcodeSvg extends TypeSvgSvg {
       'M803.968 127.808l156.032 0 0 768.384-156.032 0 0-768.384Z'
     );
     this.addChild(this.path);
-    this.useParams(params);
   }
 }

@@ -1,15 +1,14 @@
-import { TypeProps, SvgPath, TypeSvgSvg } from '@type-dom/framework';
+import { SvgProps, SvgPath, TypeSvgSvg, addAttrObj } from '@type-dom/framework';
 export class FlTableFreezeColumnFilledSvg extends TypeSvgSvg {
   className: 'FlTableFreezeColumnFilledSvg';
   override childNodes: SvgPath[];
-  constructor(params: TypeProps = {}) {
-    super();
+  constructor(params: SvgProps = {}) {
+    super(params);
     this.className = 'FlTableFreezeColumnFilledSvg';
-    this.attr.addObj({
-      name: 'FlTableFreezeColumnFilledSvg',
-      title: 'FlTableFreezeColumnFilledSvg'
+   addAttrObj(this, {
+      name: 'FlTableFreezeColumnFilledSvg'
     });
-    this.attr.addObj({
+   addAttrObj(this, {
       viewBox: '0 0 20 20',
     });
     this.resetSize(24, 24);
@@ -19,6 +18,5 @@ export class FlTableFreezeColumnFilledSvg extends TypeSvgSvg {
       'M16 14.5C16 15.3284 15.3284 16 14.5 16H12V13H8V17H14.5C15.8807 17 17 15.8807 17 14.5V5.5C17 4.11929 15.8807 3 14.5 3L8 3V7H12V4H14.5C15.3284 4 16 4.67157 16 5.5V14.5ZM5.5 3H7V7H3V5.5C3 4.11929 4.11929 3 5.5 3ZM7 12V8H3V12H7ZM12 8H8V12H12V8ZM3 13H7V17H5.5C4.11929 17 3 15.8807 3 14.5V13Z',
     );
     this.addChild(path0);
-    this.useParams(params);
   }
 }

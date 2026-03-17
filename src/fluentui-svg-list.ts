@@ -1,6 +1,7 @@
-import { TypeDiv } from '@type-dom/framework';
-import type { IStyle } from '@type-dom/css-type';
+import { TypeDiv, CSSProperties } from '@type-dom/framework';
 import {
+  FlAccessTimeFilledSvg,
+  FlAccessTimeRegularSvg,
   FlAccessibilityCheckmarkFilledSvg,
   FlAccessibilityCheckmarkRegularSvg,
   FlAccessibilityErrorFilledSvg,
@@ -11,8 +12,6 @@ import {
   FlAccessibilityQuestionMarkFilledSvg,
   FlAccessibilityQuestionMarkRegularSvg,
   FlAccessibilityRegularSvg,
-  FlAccessTimeFilledSvg,
-  FlAccessTimeRegularSvg,
   FlAddCircleColorSvg,
   FlAddCircleFilledSvg,
   FlAddCircleRegularSvg,
@@ -107,6 +106,16 @@ import {
   FlAnimalRabbitRegularSvg,
   FlAnimalTurtleFilledSvg,
   FlAnimalTurtleRegularSvg,
+  FlAppFolderFilledSvg,
+  FlAppFolderRegularSvg,
+  FlAppGenericFilledSvg,
+  FlAppGenericRegularSvg,
+  FlAppRecentFilledSvg,
+  FlAppRecentRegularSvg,
+  FlAppStore24FilledSvg,
+  FlAppStore24RegularSvg,
+  FlAppTitleFilledSvg,
+  FlAppTitleRegularSvg,
   FlApprovalsAppColorSvg,
   FlApprovalsAppFilledSvg,
   FlApprovalsAppRegularSvg,
@@ -123,16 +132,6 @@ import {
   FlAppsSettingsRegularSvg,
   FlAppsShieldFilledSvg,
   FlAppsShieldRegularSvg,
-  FlAppFolderFilledSvg,
-  FlAppFolderRegularSvg,
-  FlAppGenericFilledSvg,
-  FlAppGenericRegularSvg,
-  FlAppRecentFilledSvg,
-  FlAppRecentRegularSvg,
-  FlAppStore24FilledSvg,
-  FlAppStore24RegularSvg,
-  FlAppTitleFilledSvg,
-  FlAppTitleRegularSvg,
   FlArchiveArrowBackFilledSvg,
   FlArchiveArrowBackRegularSvg,
   FlArchiveFilledSvg,
@@ -141,8 +140,6 @@ import {
   FlArchiveRegularSvg,
   FlArchiveSettingsFilledSvg,
   FlArchiveSettingsRegularSvg,
-  FlArrowsBidirectionalFilledSvg,
-  FlArrowsBidirectionalRegularSvg,
   FlArrowAutofitContentFilledSvg,
   FlArrowAutofitContentRegularSvg,
   FlArrowAutofitDownFilledSvg,
@@ -209,10 +206,6 @@ import {
   FlArrowCurveUpLeftRegularSvg,
   FlArrowCurveUpRightFilledSvg,
   FlArrowCurveUpRightRegularSvg,
-  FlArrowDownloadFilledSvg,
-  FlArrowDownloadOffFilledSvg,
-  FlArrowDownloadOffRegularSvg,
-  FlArrowDownloadRegularSvg,
   FlArrowDownExclamationFilledSvg,
   FlArrowDownExclamationRegularSvg,
   FlArrowDownFilledSvg,
@@ -221,6 +214,10 @@ import {
   FlArrowDownRegularSvg,
   FlArrowDownRightFilledSvg,
   FlArrowDownRightRegularSvg,
+  FlArrowDownloadFilledSvg,
+  FlArrowDownloadOffFilledSvg,
+  FlArrowDownloadOffRegularSvg,
+  FlArrowDownloadRegularSvg,
   FlArrowEjectFilledSvg,
   FlArrowEjectRegularSvg,
   FlArrowEnterFilledSvg,
@@ -414,8 +411,6 @@ import {
   FlArrowTurnUpLeftRegularSvg,
   FlArrowUndoFilledSvg,
   FlArrowUndoRegularSvg,
-  FlArrowUploadFilledSvg,
-  FlArrowUploadRegularSvg,
   FlArrowUpExclamationFilledSvg,
   FlArrowUpExclamationRegularSvg,
   FlArrowUpFilledSvg,
@@ -426,26 +421,30 @@ import {
   FlArrowUpRightDashesRegularSvg,
   FlArrowUpRightFilledSvg,
   FlArrowUpRightRegularSvg,
+  FlArrowUploadFilledSvg,
+  FlArrowUploadRegularSvg,
   FlArrowWrapFilledSvg,
   FlArrowWrapOffFilledSvg,
   FlArrowWrapOffRegularSvg,
   FlArrowWrapRegularSvg,
   FlArrowWrapUpToDownFilledSvg,
   FlArrowWrapUpToDownRegularSvg,
+  FlArrowsBidirectionalFilledSvg,
+  FlArrowsBidirectionalRegularSvg,
   FlAttachArrowRightFilledSvg,
   FlAttachArrowRightRegularSvg,
   FlAttachFilledSvg,
   FlAttachRegularSvg,
   FlAttachTextFilledSvg,
   FlAttachTextRegularSvg,
-  FlAutocorrectFilledSvg,
-  FlAutocorrectRegularSvg,
-  FlAutosumFilledSvg,
-  FlAutosumRegularSvg,
   FlAutoFitHeightFilledSvg,
   FlAutoFitHeightRegularSvg,
   FlAutoFitWidthFilledSvg,
   FlAutoFitWidthRegularSvg,
+  FlAutocorrectFilledSvg,
+  FlAutocorrectRegularSvg,
+  FlAutosumFilledSvg,
+  FlAutosumRegularSvg,
   FlBackpackAddFilledSvg,
   FlBackpackAddRegularSvg,
   FlBackpackFilledSvg,
@@ -509,14 +508,14 @@ import {
   FlBenchRegularSvg,
   FlBezierCurveSquareFilledSvg,
   FlBezierCurveSquareRegularSvg,
-  FlBinderTriangleFilledSvg,
-  FlBinderTriangleRegularSvg,
   FlBinFullFilledSvg,
   FlBinFullRegularSvg,
   FlBinRecycleFilledSvg,
   FlBinRecycleFullFilledSvg,
   FlBinRecycleFullRegularSvg,
   FlBinRecycleRegularSvg,
+  FlBinderTriangleFilledSvg,
+  FlBinderTriangleRegularSvg,
   FlBluetoothConnectedFilledSvg,
   FlBluetoothConnectedRegularSvg,
   FlBluetoothDisabledFilledSvg,
@@ -535,16 +534,6 @@ import {
   FlBoardRegularSvg,
   FlBoardSplitFilledSvg,
   FlBoardSplitRegularSvg,
-  FlBookmarkAddFilledSvg,
-  FlBookmarkAddRegularSvg,
-  FlBookmarkFilledSvg,
-  FlBookmarkMultipleFilledSvg,
-  FlBookmarkMultipleRegularSvg,
-  FlBookmarkOffFilledSvg,
-  FlBookmarkOffRegularSvg,
-  FlBookmarkRegularSvg,
-  FlBookmarkSearchFilledSvg,
-  FlBookmarkSearchRegularSvg,
   FlBookAddFilledSvg,
   FlBookAddRegularSvg,
   FlBookArrowClockwiseFilledSvg,
@@ -596,6 +585,16 @@ import {
   FlBookThetaRegularSvg,
   FlBookToolboxFilledSvg,
   FlBookToolboxRegularSvg,
+  FlBookmarkAddFilledSvg,
+  FlBookmarkAddRegularSvg,
+  FlBookmarkFilledSvg,
+  FlBookmarkMultipleFilledSvg,
+  FlBookmarkMultipleRegularSvg,
+  FlBookmarkOffFilledSvg,
+  FlBookmarkOffRegularSvg,
+  FlBookmarkRegularSvg,
+  FlBookmarkSearchFilledSvg,
+  FlBookmarkSearchRegularSvg,
   FlBorderAllFilledSvg,
   FlBorderAllRegularSvg,
   FlBorderBottomDoubleFilledSvg,
@@ -632,12 +631,12 @@ import {
   FlBotRegularSvg,
   FlBotSparkleFilledSvg,
   FlBotSparkleRegularSvg,
+  FlBowTieFilledSvg,
+  FlBowTieRegularSvg,
   FlBowlChopsticksFilledSvg,
   FlBowlChopsticksRegularSvg,
   FlBowlSaladFilledSvg,
   FlBowlSaladRegularSvg,
-  FlBowTieFilledSvg,
-  FlBowTieRegularSvg,
   FlBoxArrowLeftFilledSvg,
   FlBoxArrowLeftRegularSvg,
   FlBoxArrowUpFilledSvg,
@@ -869,14 +868,6 @@ import {
   FlCalendarWeekStartRegularSvg,
   FlCalendarWorkWeekFilledSvg,
   FlCalendarWorkWeekRegularSvg,
-  FlCalligraphyPenCheckmarkFilledSvg,
-  FlCalligraphyPenCheckmarkRegularSvg,
-  FlCalligraphyPenErrorFilledSvg,
-  FlCalligraphyPenErrorRegularSvg,
-  FlCalligraphyPenFilledSvg,
-  FlCalligraphyPenQuestionMarkFilledSvg,
-  FlCalligraphyPenQuestionMarkRegularSvg,
-  FlCalligraphyPenRegularSvg,
   FlCallAddFilledSvg,
   FlCallAddRegularSvg,
   FlCallCheckmarkFilledSvg,
@@ -909,6 +900,14 @@ import {
   FlCallTransferRegularSvg,
   FlCallWarningFilledSvg,
   FlCallWarningRegularSvg,
+  FlCalligraphyPenCheckmarkFilledSvg,
+  FlCalligraphyPenCheckmarkRegularSvg,
+  FlCalligraphyPenErrorFilledSvg,
+  FlCalligraphyPenErrorRegularSvg,
+  FlCalligraphyPenFilledSvg,
+  FlCalligraphyPenQuestionMarkFilledSvg,
+  FlCalligraphyPenQuestionMarkRegularSvg,
+  FlCalligraphyPenRegularSvg,
   FlCameraAddFilledSvg,
   FlCameraAddRegularSvg,
   FlCameraArrowUpFilledSvg,
@@ -1035,6 +1034,8 @@ import {
   FlChatVideoRegularSvg,
   FlChatWarningFilledSvg,
   FlChatWarningRegularSvg,
+  FlCheckFilledSvg,
+  FlCheckRegularSvg,
   FlCheckbox1FilledSvg,
   FlCheckbox1RegularSvg,
   FlCheckbox2FilledSvg,
@@ -1074,8 +1075,6 @@ import {
   FlCheckmarkStarburstRegularSvg,
   FlCheckmarkUnderlineCircleFilledSvg,
   FlCheckmarkUnderlineCircleRegularSvg,
-  FlCheckFilledSvg,
-  FlCheckRegularSvg,
   FlChessFilledSvg,
   FlChessRegularSvg,
   FlChevronCircleDownFilledSvg,
@@ -1134,10 +1133,10 @@ import {
   FlCircleSmallRegularSvg,
   FlCityFilledSvg,
   FlCityRegularSvg,
-  FlClassificationFilledSvg,
-  FlClassificationRegularSvg,
   FlClassFilledSvg,
   FlClassRegularSvg,
+  FlClassificationFilledSvg,
+  FlClassificationRegularSvg,
   FlClearFormattingFilledSvg,
   FlClearFormattingRegularSvg,
   FlClipboard3DayFilledSvg,
@@ -1306,10 +1305,10 @@ import {
   FlColorBackgroundAccentRegularSvg,
   FlColorBackgroundFilledSvg,
   FlColorBackgroundRegularSvg,
-  FlColorFilledSvg,
   FlColorFillAccentRegularSvg,
   FlColorFillFilledSvg,
   FlColorFillRegularSvg,
+  FlColorFilledSvg,
   FlColorLineAccentRegularSvg,
   FlColorLineFilledSvg,
   FlColorLineRegularSvg,
@@ -1480,32 +1479,6 @@ import {
   FlCutRegularSvg,
   FlDarkThemeFilledSvg,
   FlDarkThemeRegularSvg,
-  FlDatabaseArrowDownFilledSvg,
-  FlDatabaseArrowDownRegularSvg,
-  FlDatabaseArrowRightFilledSvg,
-  FlDatabaseArrowRightRegularSvg,
-  FlDatabaseArrowUpFilledSvg,
-  FlDatabaseArrowUpRegularSvg,
-  FlDatabaseFilledSvg,
-  FlDatabaseLightningFilledSvg,
-  FlDatabaseLightningRegularSvg,
-  FlDatabaseLinkFilledSvg,
-  FlDatabaseLinkRegularSvg,
-  FlDatabaseMultipleFilledSvg,
-  FlDatabaseMultipleRegularSvg,
-  FlDatabasePersonFilledSvg,
-  FlDatabasePersonRegularSvg,
-  FlDatabasePlugConnectedFilledSvg,
-  FlDatabasePlugConnectedRegularSvg,
-  FlDatabaseRegularSvg,
-  FlDatabaseSearchFilledSvg,
-  FlDatabaseSearchRegularSvg,
-  FlDatabaseSwitchFilledSvg,
-  FlDatabaseSwitchRegularSvg,
-  FlDatabaseWarningFilledSvg,
-  FlDatabaseWarningRegularSvg,
-  FlDatabaseWindowFilledSvg,
-  FlDatabaseWindowRegularSvg,
   FlDataAreaFilledSvg,
   FlDataAreaRegularSvg,
   FlDataBarHorizontalFilledSvg,
@@ -1551,6 +1524,32 @@ import {
   FlDataWaterfallRegularSvg,
   FlDataWhiskerFilledSvg,
   FlDataWhiskerRegularSvg,
+  FlDatabaseArrowDownFilledSvg,
+  FlDatabaseArrowDownRegularSvg,
+  FlDatabaseArrowRightFilledSvg,
+  FlDatabaseArrowRightRegularSvg,
+  FlDatabaseArrowUpFilledSvg,
+  FlDatabaseArrowUpRegularSvg,
+  FlDatabaseFilledSvg,
+  FlDatabaseLightningFilledSvg,
+  FlDatabaseLightningRegularSvg,
+  FlDatabaseLinkFilledSvg,
+  FlDatabaseLinkRegularSvg,
+  FlDatabaseMultipleFilledSvg,
+  FlDatabaseMultipleRegularSvg,
+  FlDatabasePersonFilledSvg,
+  FlDatabasePersonRegularSvg,
+  FlDatabasePlugConnectedFilledSvg,
+  FlDatabasePlugConnectedRegularSvg,
+  FlDatabaseRegularSvg,
+  FlDatabaseSearchFilledSvg,
+  FlDatabaseSearchRegularSvg,
+  FlDatabaseSwitchFilledSvg,
+  FlDatabaseSwitchRegularSvg,
+  FlDatabaseWarningFilledSvg,
+  FlDatabaseWarningRegularSvg,
+  FlDatabaseWindowFilledSvg,
+  FlDatabaseWindowRegularSvg,
   FlDecimalArrowLeftFilledSvg,
   FlDecimalArrowLeftRegularSvg,
   FlDecimalArrowRightFilledSvg,
@@ -1569,6 +1568,8 @@ import {
   FlDentistRegularSvg,
   FlDesignIdeasFilledSvg,
   FlDesignIdeasRegularSvg,
+  FlDeskFilledSvg,
+  FlDeskRegularSvg,
   FlDesktopArrowDownFilledSvg,
   FlDesktopArrowDownRegularSvg,
   FlDesktopArrowRightFilledSvg,
@@ -1603,8 +1604,6 @@ import {
   FlDesktopToolboxRegularSvg,
   FlDesktopTowerFilledSvg,
   FlDesktopTowerRegularSvg,
-  FlDeskFilledSvg,
-  FlDeskRegularSvg,
   FlDeveloperBoardFilledSvg,
   FlDeveloperBoardLightningFilledSvg,
   FlDeveloperBoardLightningRegularSvg,
@@ -1698,14 +1697,14 @@ import {
   FlDocumentCssRegularSvg,
   FlDocumentCubeFilledSvg,
   FlDocumentCubeRegularSvg,
-  FlDocumentDatabaseFilledSvg,
-  FlDocumentDatabaseRegularSvg,
   FlDocumentDataFilledSvg,
   FlDocumentDataLinkFilledSvg,
   FlDocumentDataLinkRegularSvg,
   FlDocumentDataLockFilledSvg,
   FlDocumentDataLockRegularSvg,
   FlDocumentDataRegularSvg,
+  FlDocumentDatabaseFilledSvg,
+  FlDocumentDatabaseRegularSvg,
   FlDocumentDismissFilledSvg,
   FlDocumentDismissRegularSvg,
   FlDocumentEditFilledSvg,
@@ -1742,10 +1741,10 @@ import {
   FlDocumentHeartRegularSvg,
   FlDocumentImageFilledSvg,
   FlDocumentImageRegularSvg,
-  FlDocumentJavascriptFilledSvg,
-  FlDocumentJavascriptRegularSvg,
   FlDocumentJavaFilledSvg,
   FlDocumentJavaRegularSvg,
+  FlDocumentJavascriptFilledSvg,
+  FlDocumentJavascriptRegularSvg,
   FlDocumentKeyFilledSvg,
   FlDocumentKeyRegularSvg,
   FlDocumentLandscapeDataFilledSvg,
@@ -1894,6 +1893,12 @@ import {
   FlDraftsRegularSvg,
   FlDragFilledSvg,
   FlDragRegularSvg,
+  FlDrawImageFilledSvg,
+  FlDrawImageRegularSvg,
+  FlDrawShapeFilledSvg,
+  FlDrawShapeRegularSvg,
+  FlDrawTextFilledSvg,
+  FlDrawTextRegularSvg,
   FlDrawerAddFilledSvg,
   FlDrawerAddRegularSvg,
   FlDrawerArrowDownloadFilledSvg,
@@ -1906,12 +1911,6 @@ import {
   FlDrawerRegularSvg,
   FlDrawerSubtractFilledSvg,
   FlDrawerSubtractRegularSvg,
-  FlDrawImageFilledSvg,
-  FlDrawImageRegularSvg,
-  FlDrawShapeFilledSvg,
-  FlDrawShapeRegularSvg,
-  FlDrawTextFilledSvg,
-  FlDrawTextRegularSvg,
   FlDrinkBeerFilledSvg,
   FlDrinkBeerRegularSvg,
   FlDrinkBottleFilledSvg,
@@ -2056,10 +2055,6 @@ import {
   FlExpandUpRightRegularSvg,
   FlExtendedDockFilledSvg,
   FlExtendedDockRegularSvg,
-  FlEyedropperFilledSvg,
-  FlEyedropperOffFilledSvg,
-  FlEyedropperOffRegularSvg,
-  FlEyedropperRegularSvg,
   FlEyeFilledSvg,
   FlEyeLinesFilledSvg,
   FlEyeLinesRegularSvg,
@@ -2070,6 +2065,12 @@ import {
   FlEyeTrackingOffFilledSvg,
   FlEyeTrackingOffRegularSvg,
   FlEyeTrackingRegularSvg,
+  FlEyedropperFilledSvg,
+  FlEyedropperOffFilledSvg,
+  FlEyedropperOffRegularSvg,
+  FlEyedropperRegularSvg,
+  FlFStopFilledSvg,
+  FlFStopRegularSvg,
   FlFastAccelerationFilledSvg,
   FlFastAccelerationRegularSvg,
   FlFastForwardFilledSvg,
@@ -2096,10 +2097,10 @@ import {
   FlFilterSyncRegularSvg,
   FlFingerprintFilledSvg,
   FlFingerprintRegularSvg,
-  FlFireplaceFilledSvg,
-  FlFireplaceRegularSvg,
   FlFireFilledSvg,
   FlFireRegularSvg,
+  FlFireplaceFilledSvg,
+  FlFireplaceRegularSvg,
   FlFixedWidthFilledSvg,
   FlFixedWidthRegularSvg,
   FlFlagCheckeredFilledSvg,
@@ -2114,10 +2115,6 @@ import {
   FlFlagPridePhiladelphiaFilledSvg,
   FlFlagPrideProgressFilledSvg,
   FlFlagRegularSvg,
-  FlFlashlightFilledSvg,
-  FlFlashlightOffFilledSvg,
-  FlFlashlightOffRegularSvg,
-  FlFlashlightRegularSvg,
   FlFlashAddFilledSvg,
   FlFlashAddRegularSvg,
   FlFlashAutoFilledSvg,
@@ -2136,16 +2133,20 @@ import {
   FlFlashSettingsRegularSvg,
   FlFlashSparkleFilledSvg,
   FlFlashSparkleRegularSvg,
+  FlFlashlightFilledSvg,
+  FlFlashlightOffFilledSvg,
+  FlFlashlightOffRegularSvg,
+  FlFlashlightRegularSvg,
   FlFlipHorizontalFilledSvg,
   FlFlipHorizontalRegularSvg,
   FlFlipVerticalFilledSvg,
   FlFlipVerticalRegularSvg,
+  FlFlowFilledSvg,
+  FlFlowRegularSvg,
   FlFlowchartCircleFilledSvg,
   FlFlowchartCircleRegularSvg,
   FlFlowchartFilledSvg,
   FlFlowchartRegularSvg,
-  FlFlowFilledSvg,
-  FlFlowRegularSvg,
   FlFluentFilledSvg,
   FlFluentRegularSvg,
   FlFluidFilledSvg,
@@ -2245,13 +2246,11 @@ import {
   FlFullScreenMaximizeRegularSvg,
   FlFullScreenMinimizeFilledSvg,
   FlFullScreenMinimizeRegularSvg,
-  FlFStopFilledSvg,
-  FlFStopRegularSvg,
-  FlGamesFilledSvg,
-  FlGamesRegularSvg,
   FlGameChatColorSvg,
   FlGameChatFilledSvg,
   FlGameChatRegularSvg,
+  FlGamesFilledSvg,
+  FlGamesRegularSvg,
   FlGanttChartFilledSvg,
   FlGanttChartRegularSvg,
   FlGasFilledSvg,
@@ -2270,6 +2269,8 @@ import {
   FlGavelRegularSvg,
   FlGestureFilledSvg,
   FlGestureRegularSvg,
+  FlGifFilledSvg,
+  FlGifRegularSvg,
   FlGiftCardAddFilledSvg,
   FlGiftCardAddRegularSvg,
   FlGiftCardArrowRightFilledSvg,
@@ -2284,8 +2285,6 @@ import {
   FlGiftOpenFilledSvg,
   FlGiftOpenRegularSvg,
   FlGiftRegularSvg,
-  FlGifFilledSvg,
-  FlGifRegularSvg,
   FlGlanceFilledSvg,
   FlGlanceHorizontalFilledSvg,
   FlGlanceHorizontalRegularSvg,
@@ -2355,8 +2354,6 @@ import {
   FlGuestRegularSvg,
   FlGuitarFilledSvg,
   FlGuitarRegularSvg,
-  FlHandshakeFilledSvg,
-  FlHandshakeRegularSvg,
   FlHandDrawFilledSvg,
   FlHandDrawRegularSvg,
   FlHandLeftChatFilledSvg,
@@ -2373,6 +2370,8 @@ import {
   FlHandRightRegularSvg,
   FlHandWaveFilledSvg,
   FlHandWaveRegularSvg,
+  FlHandshakeFilledSvg,
+  FlHandshakeRegularSvg,
   FlHapticStrongFilledSvg,
   FlHapticStrongRegularSvg,
   FlHapticWeakFilledSvg,
@@ -2385,12 +2384,12 @@ import {
   FlHatGraduationRegularSvg,
   FlHatGraduationSparkleFilledSvg,
   FlHatGraduationSparkleRegularSvg,
+  FlHdFilledSvg,
+  FlHdRegularSvg,
   FlHdrFilledSvg,
   FlHdrOffFilledSvg,
   FlHdrOffRegularSvg,
   FlHdrRegularSvg,
-  FlHdFilledSvg,
-  FlHdRegularSvg,
   FlHeadphonesColorSvg,
   FlHeadphonesFilledSvg,
   FlHeadphonesRegularSvg,
@@ -2522,15 +2521,15 @@ import {
   FlInfoRegularSvg,
   FlInfoShieldFilledSvg,
   FlInfoShieldRegularSvg,
-  FlInkingToolAccentFilledSvg,
-  FlInkingToolFilledSvg,
-  FlInkingToolRegularSvg,
   FlInkStrokeArrowDownFilledSvg,
   FlInkStrokeArrowDownRegularSvg,
   FlInkStrokeArrowUpDownFilledSvg,
   FlInkStrokeArrowUpDownRegularSvg,
   FlInkStrokeFilledSvg,
   FlInkStrokeRegularSvg,
+  FlInkingToolAccentFilledSvg,
+  FlInkingToolFilledSvg,
+  FlInkingToolRegularSvg,
   FlInprivateAccountFilledSvg,
   FlInprivateAccountRegularSvg,
   FlInsertFilledSvg,
@@ -2551,6 +2550,14 @@ import {
   FlJavascriptRegularSvg,
   FlJoystickFilledSvg,
   FlJoystickRegularSvg,
+  FlKeyCommandFilledSvg,
+  FlKeyCommandRegularSvg,
+  FlKeyFilledSvg,
+  FlKeyMultipleFilledSvg,
+  FlKeyMultipleRegularSvg,
+  FlKeyRegularSvg,
+  FlKeyResetFilledSvg,
+  FlKeyResetRegularSvg,
   FlKeyboard123FilledSvg,
   FlKeyboard123RegularSvg,
   FlKeyboardDockFilledSvg,
@@ -2571,14 +2578,6 @@ import {
   FlKeyboardShiftUppercaseRegularSvg,
   FlKeyboardTabFilledSvg,
   FlKeyboardTabRegularSvg,
-  FlKeyCommandFilledSvg,
-  FlKeyCommandRegularSvg,
-  FlKeyFilledSvg,
-  FlKeyMultipleFilledSvg,
-  FlKeyMultipleRegularSvg,
-  FlKeyRegularSvg,
-  FlKeyResetFilledSvg,
-  FlKeyResetRegularSvg,
   FlKiosk24FilledSvg,
   FlKiosk24RegularSvg,
   FlLaptopBriefcaseFilledSvg,
@@ -2702,10 +2701,10 @@ import {
   FlLineFilledSvg,
   FlLineFlowDiagonalUpRightFilledSvg,
   FlLineFlowDiagonalUpRightRegularSvg,
-  FlLineHorizontal1DashesFilledSvg,
-  FlLineHorizontal1DashesRegularSvg,
   FlLineHorizontal1DashDotDashFilledSvg,
   FlLineHorizontal1DashDotDashRegularSvg,
+  FlLineHorizontal1DashesFilledSvg,
+  FlLineHorizontal1DashesRegularSvg,
   FlLineHorizontal1DotFilledSvg,
   FlLineHorizontal1DotRegularSvg,
   FlLineHorizontal1FilledSvg,
@@ -2803,8 +2802,6 @@ import {
   FlLotteryRegularSvg,
   FlLuggageFilledSvg,
   FlLuggageRegularSvg,
-  FlMailboxFilledSvg,
-  FlMailboxRegularSvg,
   FlMailAddFilledSvg,
   FlMailAddRegularSvg,
   FlMailAlertFilledSvg,
@@ -2889,6 +2886,8 @@ import {
   FlMailUnreadRegularSvg,
   FlMailWarningFilledSvg,
   FlMailWarningRegularSvg,
+  FlMailboxFilledSvg,
+  FlMailboxRegularSvg,
   FlMapDriveFilledSvg,
   FlMapDriveRegularSvg,
   FlMapFilledSvg,
@@ -2927,8 +2926,6 @@ import {
   FlMentionRegularSvg,
   FlMergeFilledSvg,
   FlMergeRegularSvg,
-  FlMicroscopeFilledSvg,
-  FlMicroscopeRegularSvg,
   FlMicColorSvg,
   FlMicFilledSvg,
   FlMicLinkFilledSvg,
@@ -2950,6 +2947,8 @@ import {
   FlMicSparkleRegularSvg,
   FlMicSyncFilledSvg,
   FlMicSyncRegularSvg,
+  FlMicroscopeFilledSvg,
+  FlMicroscopeRegularSvg,
   FlMidiFilledSvg,
   FlMidiRegularSvg,
   FlMobileOptimizedFilledSvg,
@@ -2984,14 +2983,14 @@ import {
   FlMountainTrailRegularSvg,
   FlMoviesAndTvFilledSvg,
   FlMoviesAndTvRegularSvg,
-  FlMultiplier1xFilledSvg,
-  FlMultiplier1xRegularSvg,
   FlMultiplier12xFilledSvg,
   FlMultiplier12xRegularSvg,
   FlMultiplier15xFilledSvg,
   FlMultiplier15xRegularSvg,
   FlMultiplier18xFilledSvg,
   FlMultiplier18xRegularSvg,
+  FlMultiplier1xFilledSvg,
+  FlMultiplier1xRegularSvg,
   FlMultiplier2xFilledSvg,
   FlMultiplier2xRegularSvg,
   FlMultiplier5xFilledSvg,
@@ -3028,14 +3027,22 @@ import {
   FlNetworkAdapter16RegularSvg,
   FlNetworkCheckFilledSvg,
   FlNetworkCheckRegularSvg,
-  FlNewsFilledSvg,
-  FlNewsRegularSvg,
   FlNewFilledSvg,
   FlNewRegularSvg,
+  FlNewsFilledSvg,
+  FlNewsRegularSvg,
   FlNextFilledSvg,
   FlNextFrameFilledSvg,
   FlNextFrameRegularSvg,
   FlNextRegularSvg,
+  FlNoteAddFilledSvg,
+  FlNoteAddRegularSvg,
+  FlNoteEditFilledSvg,
+  FlNoteEditRegularSvg,
+  FlNoteFilledSvg,
+  FlNotePinFilledSvg,
+  FlNotePinRegularSvg,
+  FlNoteRegularSvg,
   FlNotebookAddFilledSvg,
   FlNotebookAddRegularSvg,
   FlNotebookArrowCurveDownFilledSvg,
@@ -3066,14 +3073,6 @@ import {
   FlNotepadRegularSvg,
   FlNotepadSparkleFilledSvg,
   FlNotepadSparkleRegularSvg,
-  FlNoteAddFilledSvg,
-  FlNoteAddRegularSvg,
-  FlNoteEditFilledSvg,
-  FlNoteEditRegularSvg,
-  FlNoteFilledSvg,
-  FlNotePinFilledSvg,
-  FlNotePinRegularSvg,
-  FlNoteRegularSvg,
   FlNumberCircle0FilledSvg,
   FlNumberCircle0RegularSvg,
   FlNumberCircle1FilledSvg,
@@ -3110,11 +3109,11 @@ import {
   FlOpenRegularSvg,
   FlOptionsFilledSvg,
   FlOptionsRegularSvg,
+  FlOrgColorSvg,
   FlOrganizationFilledSvg,
   FlOrganizationHorizontalFilledSvg,
   FlOrganizationHorizontalRegularSvg,
   FlOrganizationRegularSvg,
-  FlOrgColorSvg,
   FlOrientationFilledSvg,
   FlOrientationRegularSvg,
   FlOvalFilledSvg,
@@ -3212,8 +3211,6 @@ import {
   FlPaymentRegularSvg,
   FlPaymentWirelessFilledSvg,
   FlPaymentWirelessRegularSvg,
-  FlPentagonFilledSvg,
-  FlPentagonRegularSvg,
   FlPenDismissFilledSvg,
   FlPenDismissRegularSvg,
   FlPenFilledSvg,
@@ -3226,6 +3223,8 @@ import {
   FlPenSparkleRegularSvg,
   FlPenSyncFilledSvg,
   FlPenSyncRegularSvg,
+  FlPentagonFilledSvg,
+  FlPentagonRegularSvg,
   FlPeopleAddFilledSvg,
   FlPeopleAddRegularSvg,
   FlPeopleAudienceFilledSvg,
@@ -3377,10 +3376,10 @@ import {
   FlPersonSquareCheckmarkRegularSvg,
   FlPersonSquareFilledSvg,
   FlPersonSquareRegularSvg,
-  FlPersonStarburstFilledSvg,
-  FlPersonStarburstRegularSvg,
   FlPersonStarFilledSvg,
   FlPersonStarRegularSvg,
+  FlPersonStarburstFilledSvg,
+  FlPersonStarburstRegularSvg,
   FlPersonSubtractFilledSvg,
   FlPersonSubtractRegularSvg,
   FlPersonSupportFilledSvg,
@@ -3461,6 +3460,8 @@ import {
   FlPhoneVibrateRegularSvg,
   FlPhotoFilterFilledSvg,
   FlPhotoFilterRegularSvg,
+  FlPiFilledSvg,
+  FlPiRegularSvg,
   FlPictureInPictureEnterFilledSvg,
   FlPictureInPictureEnterRegularSvg,
   FlPictureInPictureExitFilledSvg,
@@ -3486,16 +3487,12 @@ import {
   FlPipelineRegularSvg,
   FlPivotFilledSvg,
   FlPivotRegularSvg,
-  FlPiFilledSvg,
-  FlPiRegularSvg,
   FlPlantCattailFilledSvg,
   FlPlantCattailRegularSvg,
   FlPlantGrassFilledSvg,
   FlPlantGrassRegularSvg,
   FlPlantRagweedFilledSvg,
   FlPlantRagweedRegularSvg,
-  FlPlayingCardsFilledSvg,
-  FlPlayingCardsRegularSvg,
   FlPlayCircleFilledSvg,
   FlPlayCircleHintFilledSvg,
   FlPlayCircleHintRegularSvg,
@@ -3506,6 +3503,8 @@ import {
   FlPlayRegularSvg,
   FlPlaySettingsFilledSvg,
   FlPlaySettingsRegularSvg,
+  FlPlayingCardsFilledSvg,
+  FlPlayingCardsRegularSvg,
   FlPlugConnectedAddFilledSvg,
   FlPlugConnectedAddRegularSvg,
   FlPlugConnectedCheckmarkFilledSvg,
@@ -3630,14 +3629,20 @@ import {
   FlRatingMatureRegularSvg,
   FlRatioOneToOneFilledSvg,
   FlRatioOneToOneRegularSvg,
+  FlReOrderDotsHorizontalFilledSvg,
+  FlReOrderDotsHorizontalRegularSvg,
+  FlReOrderDotsVerticalFilledSvg,
+  FlReOrderDotsVerticalRegularSvg,
+  FlReOrderFilledSvg,
+  FlReOrderRegularSvg,
+  FlReadAloudFilledSvg,
+  FlReadAloudRegularSvg,
   FlReadingListAddFilledSvg,
   FlReadingListAddRegularSvg,
   FlReadingListFilledSvg,
   FlReadingListRegularSvg,
   FlReadingModeMobileFilledSvg,
   FlReadingModeMobileRegularSvg,
-  FlReadAloudFilledSvg,
-  FlReadAloudRegularSvg,
   FlRealEstateFilledSvg,
   FlRealEstateRegularSvg,
   FlReceiptAddFilledSvg,
@@ -3702,12 +3707,6 @@ import {
   FlRewardRegularSvg,
   FlRewindFilledSvg,
   FlRewindRegularSvg,
-  FlReOrderDotsHorizontalFilledSvg,
-  FlReOrderDotsHorizontalRegularSvg,
-  FlReOrderDotsVerticalFilledSvg,
-  FlReOrderDotsVerticalRegularSvg,
-  FlReOrderFilledSvg,
-  FlReOrderRegularSvg,
   FlRhombusFilledSvg,
   FlRhombusRegularSvg,
   FlRibbonAddFilledSvg,
@@ -3758,12 +3757,12 @@ import {
   FlSaveSyncRegularSvg,
   FlSavingsFilledSvg,
   FlSavingsRegularSvg,
-  FlScalesFilledSvg,
-  FlScalesRegularSvg,
   FlScaleFillFilledSvg,
   FlScaleFillRegularSvg,
   FlScaleFitFilledSvg,
   FlScaleFitRegularSvg,
+  FlScalesFilledSvg,
+  FlScalesRegularSvg,
   FlScanCameraFilledSvg,
   FlScanCameraRegularSvg,
   FlScanDashFilledSvg,
@@ -3792,16 +3791,16 @@ import {
   FlScanTypeRegularSvg,
   FlScratchpadFilledSvg,
   FlScratchpadRegularSvg,
-  FlScreenshotFilledSvg,
-  FlScreenshotRecordFilledSvg,
-  FlScreenshotRecordRegularSvg,
-  FlScreenshotRegularSvg,
   FlScreenCutFilledSvg,
   FlScreenCutRegularSvg,
   FlScreenPersonFilledSvg,
   FlScreenPersonRegularSvg,
   FlScreenSearchFilledSvg,
   FlScreenSearchRegularSvg,
+  FlScreenshotFilledSvg,
+  FlScreenshotRecordFilledSvg,
+  FlScreenshotRecordRegularSvg,
+  FlScreenshotRegularSvg,
   FlScriptFilledSvg,
   FlScriptRegularSvg,
   FlSearchFilledSvg,
@@ -3863,8 +3862,6 @@ import {
   FlSettingsCogMultipleRegularSvg,
   FlSettingsFilledSvg,
   FlSettingsRegularSvg,
-  FlShapesFilledSvg,
-  FlShapesRegularSvg,
   FlShapeExcludeFilledSvg,
   FlShapeExcludeRegularSvg,
   FlShapeIntersectFilledSvg,
@@ -3875,6 +3872,8 @@ import {
   FlShapeSubtractRegularSvg,
   FlShapeUnionFilledSvg,
   FlShapeUnionRegularSvg,
+  FlShapesFilledSvg,
+  FlShapesRegularSvg,
   FlShareAndroidFilledSvg,
   FlShareAndroidRegularSvg,
   FlShareCloseTrayFilledSvg,
@@ -3980,10 +3979,10 @@ import {
   FlSidebarSearchRegularRtlSvg,
   FlSidebarSearchRtlFilledSvg,
   FlSidebarSearchRtlRegularSvg,
-  FlSignatureFilledSvg,
-  FlSignatureRegularSvg,
   FlSignOutFilledSvg,
   FlSignOutRegularSvg,
+  FlSignatureFilledSvg,
+  FlSignatureRegularSvg,
   FlSimFilledSvg,
   FlSimRegularSvg,
   FlSkipBack10FilledSvg,
@@ -4060,10 +4059,10 @@ import {
   FlSoundWaveCircleRegularSvg,
   FlSoundWaveCircleSparkleFilledSvg,
   FlSoundWaveCircleSparkleRegularSvg,
-  FlSpacebarFilledSvg,
-  FlSpacebarRegularSvg,
   FlSpace3dFilledSvg,
   FlSpace3dRegularSvg,
+  FlSpacebarFilledSvg,
+  FlSpacebarRegularSvg,
   FlSparkleCircleFilledSvg,
   FlSparkleCircleRegularSvg,
   FlSparkleFilledSvg,
@@ -4112,8 +4111,6 @@ import {
   FlSportSoccerRegularSvg,
   FlSprayCan16FilledSvg,
   FlSprayCan16RegularSvg,
-  FlSquaresNestedFilledSvg,
-  FlSquaresNestedRegularSvg,
   FlSquareAddFilledSvg,
   FlSquareAddRegularSvg,
   FlSquareArrowForwardFilledSvg,
@@ -4142,6 +4139,8 @@ import {
   FlSquareShadowRegularSvg,
   FlSquareTextArrowRepeatAllFilledSvg,
   FlSquareTextArrowRepeatAllRegularSvg,
+  FlSquaresNestedFilledSvg,
+  FlSquaresNestedRegularSvg,
   FlStackAddFilledSvg,
   FlStackAddRegularSvg,
   FlStackArrowForwardFilledSvg,
@@ -4189,10 +4188,10 @@ import {
   FlStarThreeQuarterRegularSvg,
   FlStatusFilledSvg,
   FlStatusRegularSvg,
-  FlStepsFilledSvg,
-  FlStepsRegularSvg,
   FlStepFilledSvg,
   FlStepRegularSvg,
+  FlStepsFilledSvg,
+  FlStepsRegularSvg,
   FlStethoscopeFilledSvg,
   FlStethoscopeRegularSvg,
   FlStickerAddFilledSvg,
@@ -4217,6 +4216,8 @@ import {
   FlStreetSignRegularSvg,
   FlStyleGuideFilledSvg,
   FlStyleGuideRegularSvg,
+  FlSubGridFilledSvg,
+  FlSubGridRegularSvg,
   FlSubtitlesFilledSvg,
   FlSubtitlesRegularSvg,
   FlSubtractCircleArrowBackFilledSvg,
@@ -4233,8 +4234,6 @@ import {
   FlSubtractSquareMultipleFilledSvg,
   FlSubtractSquareMultipleRegularSvg,
   FlSubtractSquareRegularSvg,
-  FlSubGridFilledSvg,
-  FlSubGridRegularSvg,
   FlSurfaceEarbudsFilledSvg,
   FlSurfaceEarbudsRegularSvg,
   FlSurfaceHubFilledSvg,
@@ -4255,12 +4254,50 @@ import {
   FlSyringeRegularSvg,
   FlSystemFilledSvg,
   FlSystemRegularSvg,
-  FlTabletFilledSvg,
-  FlTabletLaptopFilledSvg,
-  FlTabletLaptopRegularSvg,
-  FlTabletRegularSvg,
-  FlTabletSpeakerFilledSvg,
-  FlTabletSpeakerRegularSvg,
+  FlTabAddFilledSvg,
+  FlTabAddRegularSvg,
+  FlTabArrowLeftFilledSvg,
+  FlTabArrowLeftRegularSvg,
+  FlTabDesktopArrowClockwiseFilledSvg,
+  FlTabDesktopArrowClockwiseRegularSvg,
+  FlTabDesktopArrowLeftFilledSvg,
+  FlTabDesktopArrowLeftRegularSvg,
+  FlTabDesktopBottomFilledSvg,
+  FlTabDesktopBottomRegularSvg,
+  FlTabDesktopClockFilledSvg,
+  FlTabDesktopClockRegularSvg,
+  FlTabDesktopCopyFilledSvg,
+  FlTabDesktopCopyRegularSvg,
+  FlTabDesktopFilledSvg,
+  FlTabDesktopImageFilledSvg,
+  FlTabDesktopImageRegularSvg,
+  FlTabDesktopLinkFilledSvg,
+  FlTabDesktopLinkRegularSvg,
+  FlTabDesktopMultipleAddFilledSvg,
+  FlTabDesktopMultipleAddRegularSvg,
+  FlTabDesktopMultipleBottomFilledSvg,
+  FlTabDesktopMultipleBottomRegularSvg,
+  FlTabDesktopMultipleFilledSvg,
+  FlTabDesktopMultipleRegularSvg,
+  FlTabDesktopMultipleSparkleFilledSvg,
+  FlTabDesktopMultipleSparkleRegularSvg,
+  FlTabDesktopNewPageFilledSvg,
+  FlTabDesktopNewPageRegularSvg,
+  FlTabDesktopRegularSvg,
+  FlTabDesktopSearchFilledSvg,
+  FlTabDesktopSearchRegularSvg,
+  FlTabFilledSvg,
+  FlTabGroupFilledSvg,
+  FlTabGroupRegularSvg,
+  FlTabInPrivateFilledSvg,
+  FlTabInPrivateRegularSvg,
+  FlTabInprivateAccountFilledSvg,
+  FlTabInprivateAccountRegularSvg,
+  FlTabProhibitedFilledSvg,
+  FlTabProhibitedRegularSvg,
+  FlTabRegularSvg,
+  FlTabShieldDismissFilledSvg,
+  FlTabShieldDismissRegularSvg,
   FlTableAddFilledSvg,
   FlTableAddRegularSvg,
   FlTableArrowUpFilledSvg,
@@ -4269,12 +4306,12 @@ import {
   FlTableBottomRowRegularSvg,
   FlTableCalculatorFilledSvg,
   FlTableCalculatorRegularSvg,
+  FlTableCellEditFilledSvg,
+  FlTableCellEditRegularSvg,
   FlTableCellsMergeFilledSvg,
   FlTableCellsMergeRegularSvg,
   FlTableCellsSplitFilledSvg,
   FlTableCellsSplitRegularSvg,
-  FlTableCellEditFilledSvg,
-  FlTableCellEditRegularSvg,
   FlTableCheckerFilledSvg,
   FlTableCheckerRegularSvg,
   FlTableColumnTopBottomFilledSvg,
@@ -4361,52 +4398,14 @@ import {
   FlTableStackRightRegularSvg,
   FlTableSwitchFilledSvg,
   FlTableSwitchRegularSvg,
+  FlTabletFilledSvg,
+  FlTabletLaptopFilledSvg,
+  FlTabletLaptopRegularSvg,
+  FlTabletRegularSvg,
+  FlTabletSpeakerFilledSvg,
+  FlTabletSpeakerRegularSvg,
   FlTabsFilledSvg,
   FlTabsRegularSvg,
-  FlTabAddFilledSvg,
-  FlTabAddRegularSvg,
-  FlTabArrowLeftFilledSvg,
-  FlTabArrowLeftRegularSvg,
-  FlTabDesktopArrowClockwiseFilledSvg,
-  FlTabDesktopArrowClockwiseRegularSvg,
-  FlTabDesktopArrowLeftFilledSvg,
-  FlTabDesktopArrowLeftRegularSvg,
-  FlTabDesktopBottomFilledSvg,
-  FlTabDesktopBottomRegularSvg,
-  FlTabDesktopClockFilledSvg,
-  FlTabDesktopClockRegularSvg,
-  FlTabDesktopCopyFilledSvg,
-  FlTabDesktopCopyRegularSvg,
-  FlTabDesktopFilledSvg,
-  FlTabDesktopImageFilledSvg,
-  FlTabDesktopImageRegularSvg,
-  FlTabDesktopLinkFilledSvg,
-  FlTabDesktopLinkRegularSvg,
-  FlTabDesktopMultipleAddFilledSvg,
-  FlTabDesktopMultipleAddRegularSvg,
-  FlTabDesktopMultipleBottomFilledSvg,
-  FlTabDesktopMultipleBottomRegularSvg,
-  FlTabDesktopMultipleFilledSvg,
-  FlTabDesktopMultipleRegularSvg,
-  FlTabDesktopMultipleSparkleFilledSvg,
-  FlTabDesktopMultipleSparkleRegularSvg,
-  FlTabDesktopNewPageFilledSvg,
-  FlTabDesktopNewPageRegularSvg,
-  FlTabDesktopRegularSvg,
-  FlTabDesktopSearchFilledSvg,
-  FlTabDesktopSearchRegularSvg,
-  FlTabFilledSvg,
-  FlTabGroupFilledSvg,
-  FlTabGroupRegularSvg,
-  FlTabInprivateAccountFilledSvg,
-  FlTabInprivateAccountRegularSvg,
-  FlTabInPrivateFilledSvg,
-  FlTabInPrivateRegularSvg,
-  FlTabProhibitedFilledSvg,
-  FlTabProhibitedRegularSvg,
-  FlTabRegularSvg,
-  FlTabShieldDismissFilledSvg,
-  FlTabShieldDismissRegularSvg,
   FlTagCircleFilledSvg,
   FlTagCircleRegularSvg,
   FlTagDismissFilledSvg,
@@ -4442,8 +4441,6 @@ import {
   FlTargetEditRegularSvg,
   FlTargetFilledSvg,
   FlTargetRegularSvg,
-  FlTasksAppFilledSvg,
-  FlTasksAppRegularSvg,
   FlTaskListAddFilledSvg,
   FlTaskListAddRegularSvg,
   FlTaskListFilledLtrSvg,
@@ -4470,6 +4467,8 @@ import {
   FlTaskListSquareRtlRegularSvg,
   FlTaskListSquareSettingsFilledSvg,
   FlTaskListSquareSettingsRegularSvg,
+  FlTasksAppFilledSvg,
+  FlTasksAppRegularSvg,
   FlTeachingFilledSvg,
   FlTeachingRegularSvg,
   FlTeardropBottomRightFilledSvg,
@@ -4482,46 +4481,6 @@ import {
   FlTentRegularSvg,
   FlTetrisAppFilledSvg,
   FlTetrisAppRegularSvg,
-  FlTextboxAlignBottomCenterFilledSvg,
-  FlTextboxAlignBottomCenterRegularSvg,
-  FlTextboxAlignBottomFilledSvg,
-  FlTextboxAlignBottomLeftFilledSvg,
-  FlTextboxAlignBottomLeftRegularSvg,
-  FlTextboxAlignBottomRegularSvg,
-  FlTextboxAlignBottomRightFilledSvg,
-  FlTextboxAlignBottomRightRegularSvg,
-  FlTextboxAlignBottomRotate90FilledSvg,
-  FlTextboxAlignBottomRotate90RegularSvg,
-  FlTextboxAlignCenterFilledSvg,
-  FlTextboxAlignCenterRegularSvg,
-  FlTextboxAlignMiddleFilledSvg,
-  FlTextboxAlignMiddleLeftFilledSvg,
-  FlTextboxAlignMiddleLeftRegularSvg,
-  FlTextboxAlignMiddleRegularSvg,
-  FlTextboxAlignMiddleRightFilledSvg,
-  FlTextboxAlignMiddleRightRegularSvg,
-  FlTextboxAlignMiddleRotate90FilledSvg,
-  FlTextboxAlignMiddleRotate90RegularSvg,
-  FlTextboxAlignTopCenterFilledSvg,
-  FlTextboxAlignTopCenterRegularSvg,
-  FlTextboxAlignTopFilledSvg,
-  FlTextboxAlignTopLeftFilledSvg,
-  FlTextboxAlignTopLeftRegularSvg,
-  FlTextboxAlignTopRegularSvg,
-  FlTextboxAlignTopRightFilledSvg,
-  FlTextboxAlignTopRightRegularSvg,
-  FlTextboxAlignTopRotate90FilledSvg,
-  FlTextboxAlignTopRotate90RegularSvg,
-  FlTextboxCheckmarkFilledSvg,
-  FlTextboxCheckmarkRegularSvg,
-  FlTextboxFilledSvg,
-  FlTextboxMoreFilledSvg,
-  FlTextboxMoreRegularSvg,
-  FlTextboxRegularSvg,
-  FlTextboxRotate90FilledSvg,
-  FlTextboxRotate90RegularSvg,
-  FlTextboxSettingsFilledSvg,
-  FlTextboxSettingsRegularSvg,
   FlTextAddFilledSvg,
   FlTextAddRegularSvg,
   FlTextAddSpaceAfterFilledSvg,
@@ -4866,6 +4825,46 @@ import {
   FlTextWrapOffFilledSvg,
   FlTextWrapOffRegularSvg,
   FlTextWrapRegularSvg,
+  FlTextboxAlignBottomCenterFilledSvg,
+  FlTextboxAlignBottomCenterRegularSvg,
+  FlTextboxAlignBottomFilledSvg,
+  FlTextboxAlignBottomLeftFilledSvg,
+  FlTextboxAlignBottomLeftRegularSvg,
+  FlTextboxAlignBottomRegularSvg,
+  FlTextboxAlignBottomRightFilledSvg,
+  FlTextboxAlignBottomRightRegularSvg,
+  FlTextboxAlignBottomRotate90FilledSvg,
+  FlTextboxAlignBottomRotate90RegularSvg,
+  FlTextboxAlignCenterFilledSvg,
+  FlTextboxAlignCenterRegularSvg,
+  FlTextboxAlignMiddleFilledSvg,
+  FlTextboxAlignMiddleLeftFilledSvg,
+  FlTextboxAlignMiddleLeftRegularSvg,
+  FlTextboxAlignMiddleRegularSvg,
+  FlTextboxAlignMiddleRightFilledSvg,
+  FlTextboxAlignMiddleRightRegularSvg,
+  FlTextboxAlignMiddleRotate90FilledSvg,
+  FlTextboxAlignMiddleRotate90RegularSvg,
+  FlTextboxAlignTopCenterFilledSvg,
+  FlTextboxAlignTopCenterRegularSvg,
+  FlTextboxAlignTopFilledSvg,
+  FlTextboxAlignTopLeftFilledSvg,
+  FlTextboxAlignTopLeftRegularSvg,
+  FlTextboxAlignTopRegularSvg,
+  FlTextboxAlignTopRightFilledSvg,
+  FlTextboxAlignTopRightRegularSvg,
+  FlTextboxAlignTopRotate90FilledSvg,
+  FlTextboxAlignTopRotate90RegularSvg,
+  FlTextboxCheckmarkFilledSvg,
+  FlTextboxCheckmarkRegularSvg,
+  FlTextboxFilledSvg,
+  FlTextboxMoreFilledSvg,
+  FlTextboxMoreRegularSvg,
+  FlTextboxRegularSvg,
+  FlTextboxRotate90FilledSvg,
+  FlTextboxRotate90RegularSvg,
+  FlTextboxSettingsFilledSvg,
+  FlTextboxSettingsRegularSvg,
   FlThinkingFilledSvg,
   FlThinkingRegularSvg,
   FlThumbDislikeFilledSvg,
@@ -4878,6 +4877,10 @@ import {
   FlTicketDiagonalRegularSvg,
   FlTicketHorizontalFilledSvg,
   FlTicketHorizontalRegularSvg,
+  FlTimeAndWeatherFilledSvg,
+  FlTimeAndWeatherRegularSvg,
+  FlTimePickerFilledSvg,
+  FlTimePickerRegularSvg,
   FlTimelineFilledSvg,
   FlTimelineRegularSvg,
   FlTimer10FilledSvg,
@@ -4890,10 +4893,6 @@ import {
   FlTimerOffFilledSvg,
   FlTimerOffRegularSvg,
   FlTimerRegularSvg,
-  FlTimeAndWeatherFilledSvg,
-  FlTimeAndWeatherRegularSvg,
-  FlTimePickerFilledSvg,
-  FlTimePickerRegularSvg,
   FlToggleLeftFilledSvg,
   FlToggleLeftRegularSvg,
   FlToggleMultipleFilledSvg,
@@ -4961,10 +4960,10 @@ import {
   FlVehicleBicycleRegularSvg,
   FlVehicleBusFilledSvg,
   FlVehicleBusRegularSvg,
-  FlVehicleCableCarFilledSvg,
-  FlVehicleCableCarRegularSvg,
   FlVehicleCabFilledSvg,
   FlVehicleCabRegularSvg,
+  FlVehicleCableCarFilledSvg,
+  FlVehicleCableCarRegularSvg,
   FlVehicleCarCollisionFilledSvg,
   FlVehicleCarCollisionRegularSvg,
   FlVehicleCarFilledSvg,
@@ -5133,14 +5132,14 @@ import {
   FlWeatherRainShowersNightRegularSvg,
   FlWeatherRainSnowFilledSvg,
   FlWeatherRainSnowRegularSvg,
-  FlWeatherSnowflakeFilledSvg,
-  FlWeatherSnowflakeRegularSvg,
   FlWeatherSnowFilledSvg,
   FlWeatherSnowRegularSvg,
   FlWeatherSnowShowerDayFilledSvg,
   FlWeatherSnowShowerDayRegularSvg,
   FlWeatherSnowShowerNightFilledSvg,
   FlWeatherSnowShowerNightRegularSvg,
+  FlWeatherSnowflakeFilledSvg,
+  FlWeatherSnowflakeRegularSvg,
   FlWeatherSquallsFilledSvg,
   FlWeatherSquallsRegularSvg,
   FlWeatherSunnyFilledSvg,
@@ -5261,13 +5260,27 @@ export class FluentuiSvgList extends TypeDiv {
   className: 'FluentuiSvgList';
   constructor() {
     super();
-    console.log('FluentuiSvgList constructor . ');
+    // console.log('FluentuiSvgList constructor . ');
     this.className = 'FluentuiSvgList';
-    const $svgStyle: Partial<IStyle> = {
+    const $svgStyle: Partial<CSSProperties> = {
       padding: '10px',
       border: '1px solid #ddd'
     };
     this.addChildren(
+      new FlAccessTimeFilledSvg({
+        attrObj: {
+          width: '2em',
+          height: '2em',
+        },
+        styleObj: $svgStyle
+      }),
+      new FlAccessTimeRegularSvg({
+        attrObj: {
+          width: '2em',
+          height: '2em',
+        },
+        styleObj: $svgStyle
+      }),
       new FlAccessibilityCheckmarkFilledSvg({
         attrObj: {
           width: '2em',
@@ -5332,20 +5345,6 @@ export class FluentuiSvgList extends TypeDiv {
         styleObj: $svgStyle
       }),
       new FlAccessibilityRegularSvg({
-        attrObj: {
-          width: '2em',
-          height: '2em',
-        },
-        styleObj: $svgStyle
-      }),
-      new FlAccessTimeFilledSvg({
-        attrObj: {
-          width: '2em',
-          height: '2em',
-        },
-        styleObj: $svgStyle
-      }),
-      new FlAccessTimeRegularSvg({
         attrObj: {
           width: '2em',
           height: '2em',
@@ -6010,6 +6009,76 @@ export class FluentuiSvgList extends TypeDiv {
         },
         styleObj: $svgStyle
       }),
+      new FlAppFolderFilledSvg({
+        attrObj: {
+          width: '2em',
+          height: '2em',
+        },
+        styleObj: $svgStyle
+      }),
+      new FlAppFolderRegularSvg({
+        attrObj: {
+          width: '2em',
+          height: '2em',
+        },
+        styleObj: $svgStyle
+      }),
+      new FlAppGenericFilledSvg({
+        attrObj: {
+          width: '2em',
+          height: '2em',
+        },
+        styleObj: $svgStyle
+      }),
+      new FlAppGenericRegularSvg({
+        attrObj: {
+          width: '2em',
+          height: '2em',
+        },
+        styleObj: $svgStyle
+      }),
+      new FlAppRecentFilledSvg({
+        attrObj: {
+          width: '2em',
+          height: '2em',
+        },
+        styleObj: $svgStyle
+      }),
+      new FlAppRecentRegularSvg({
+        attrObj: {
+          width: '2em',
+          height: '2em',
+        },
+        styleObj: $svgStyle
+      }),
+      new FlAppStore24FilledSvg({
+        attrObj: {
+          width: '2em',
+          height: '2em',
+        },
+        styleObj: $svgStyle
+      }),
+      new FlAppStore24RegularSvg({
+        attrObj: {
+          width: '2em',
+          height: '2em',
+        },
+        styleObj: $svgStyle
+      }),
+      new FlAppTitleFilledSvg({
+        attrObj: {
+          width: '2em',
+          height: '2em',
+        },
+        styleObj: $svgStyle
+      }),
+      new FlAppTitleRegularSvg({
+        attrObj: {
+          width: '2em',
+          height: '2em',
+        },
+        styleObj: $svgStyle
+      }),
       new FlApprovalsAppColorSvg({
         attrObj: {
           width: '2em',
@@ -6122,76 +6191,6 @@ export class FluentuiSvgList extends TypeDiv {
         },
         styleObj: $svgStyle
       }),
-      new FlAppFolderFilledSvg({
-        attrObj: {
-          width: '2em',
-          height: '2em',
-        },
-        styleObj: $svgStyle
-      }),
-      new FlAppFolderRegularSvg({
-        attrObj: {
-          width: '2em',
-          height: '2em',
-        },
-        styleObj: $svgStyle
-      }),
-      new FlAppGenericFilledSvg({
-        attrObj: {
-          width: '2em',
-          height: '2em',
-        },
-        styleObj: $svgStyle
-      }),
-      new FlAppGenericRegularSvg({
-        attrObj: {
-          width: '2em',
-          height: '2em',
-        },
-        styleObj: $svgStyle
-      }),
-      new FlAppRecentFilledSvg({
-        attrObj: {
-          width: '2em',
-          height: '2em',
-        },
-        styleObj: $svgStyle
-      }),
-      new FlAppRecentRegularSvg({
-        attrObj: {
-          width: '2em',
-          height: '2em',
-        },
-        styleObj: $svgStyle
-      }),
-      new FlAppStore24FilledSvg({
-        attrObj: {
-          width: '2em',
-          height: '2em',
-        },
-        styleObj: $svgStyle
-      }),
-      new FlAppStore24RegularSvg({
-        attrObj: {
-          width: '2em',
-          height: '2em',
-        },
-        styleObj: $svgStyle
-      }),
-      new FlAppTitleFilledSvg({
-        attrObj: {
-          width: '2em',
-          height: '2em',
-        },
-        styleObj: $svgStyle
-      }),
-      new FlAppTitleRegularSvg({
-        attrObj: {
-          width: '2em',
-          height: '2em',
-        },
-        styleObj: $svgStyle
-      }),
       new FlArchiveArrowBackFilledSvg({
         attrObj: {
           width: '2em',
@@ -6242,20 +6241,6 @@ export class FluentuiSvgList extends TypeDiv {
         styleObj: $svgStyle
       }),
       new FlArchiveSettingsRegularSvg({
-        attrObj: {
-          width: '2em',
-          height: '2em',
-        },
-        styleObj: $svgStyle
-      }),
-      new FlArrowsBidirectionalFilledSvg({
-        attrObj: {
-          width: '2em',
-          height: '2em',
-        },
-        styleObj: $svgStyle
-      }),
-      new FlArrowsBidirectionalRegularSvg({
         attrObj: {
           width: '2em',
           height: '2em',
@@ -6724,34 +6709,6 @@ export class FluentuiSvgList extends TypeDiv {
         },
         styleObj: $svgStyle
       }),
-      new FlArrowDownloadFilledSvg({
-        attrObj: {
-          width: '2em',
-          height: '2em',
-        },
-        styleObj: $svgStyle
-      }),
-      new FlArrowDownloadOffFilledSvg({
-        attrObj: {
-          width: '2em',
-          height: '2em',
-        },
-        styleObj: $svgStyle
-      }),
-      new FlArrowDownloadOffRegularSvg({
-        attrObj: {
-          width: '2em',
-          height: '2em',
-        },
-        styleObj: $svgStyle
-      }),
-      new FlArrowDownloadRegularSvg({
-        attrObj: {
-          width: '2em',
-          height: '2em',
-        },
-        styleObj: $svgStyle
-      }),
       new FlArrowDownExclamationFilledSvg({
         attrObj: {
           width: '2em',
@@ -6802,6 +6759,34 @@ export class FluentuiSvgList extends TypeDiv {
         styleObj: $svgStyle
       }),
       new FlArrowDownRightRegularSvg({
+        attrObj: {
+          width: '2em',
+          height: '2em',
+        },
+        styleObj: $svgStyle
+      }),
+      new FlArrowDownloadFilledSvg({
+        attrObj: {
+          width: '2em',
+          height: '2em',
+        },
+        styleObj: $svgStyle
+      }),
+      new FlArrowDownloadOffFilledSvg({
+        attrObj: {
+          width: '2em',
+          height: '2em',
+        },
+        styleObj: $svgStyle
+      }),
+      new FlArrowDownloadOffRegularSvg({
+        attrObj: {
+          width: '2em',
+          height: '2em',
+        },
+        styleObj: $svgStyle
+      }),
+      new FlArrowDownloadRegularSvg({
         attrObj: {
           width: '2em',
           height: '2em',
@@ -8159,20 +8144,6 @@ export class FluentuiSvgList extends TypeDiv {
         },
         styleObj: $svgStyle
       }),
-      new FlArrowUploadFilledSvg({
-        attrObj: {
-          width: '2em',
-          height: '2em',
-        },
-        styleObj: $svgStyle
-      }),
-      new FlArrowUploadRegularSvg({
-        attrObj: {
-          width: '2em',
-          height: '2em',
-        },
-        styleObj: $svgStyle
-      }),
       new FlArrowUpExclamationFilledSvg({
         attrObj: {
           width: '2em',
@@ -8243,6 +8214,20 @@ export class FluentuiSvgList extends TypeDiv {
         },
         styleObj: $svgStyle
       }),
+      new FlArrowUploadFilledSvg({
+        attrObj: {
+          width: '2em',
+          height: '2em',
+        },
+        styleObj: $svgStyle
+      }),
+      new FlArrowUploadRegularSvg({
+        attrObj: {
+          width: '2em',
+          height: '2em',
+        },
+        styleObj: $svgStyle
+      }),
       new FlArrowWrapFilledSvg({
         attrObj: {
           width: '2em',
@@ -8279,6 +8264,20 @@ export class FluentuiSvgList extends TypeDiv {
         styleObj: $svgStyle
       }),
       new FlArrowWrapUpToDownRegularSvg({
+        attrObj: {
+          width: '2em',
+          height: '2em',
+        },
+        styleObj: $svgStyle
+      }),
+      new FlArrowsBidirectionalFilledSvg({
+        attrObj: {
+          width: '2em',
+          height: '2em',
+        },
+        styleObj: $svgStyle
+      }),
+      new FlArrowsBidirectionalRegularSvg({
         attrObj: {
           width: '2em',
           height: '2em',
@@ -8327,34 +8326,6 @@ export class FluentuiSvgList extends TypeDiv {
         },
         styleObj: $svgStyle
       }),
-      new FlAutocorrectFilledSvg({
-        attrObj: {
-          width: '2em',
-          height: '2em',
-        },
-        styleObj: $svgStyle
-      }),
-      new FlAutocorrectRegularSvg({
-        attrObj: {
-          width: '2em',
-          height: '2em',
-        },
-        styleObj: $svgStyle
-      }),
-      new FlAutosumFilledSvg({
-        attrObj: {
-          width: '2em',
-          height: '2em',
-        },
-        styleObj: $svgStyle
-      }),
-      new FlAutosumRegularSvg({
-        attrObj: {
-          width: '2em',
-          height: '2em',
-        },
-        styleObj: $svgStyle
-      }),
       new FlAutoFitHeightFilledSvg({
         attrObj: {
           width: '2em',
@@ -8377,6 +8348,34 @@ export class FluentuiSvgList extends TypeDiv {
         styleObj: $svgStyle
       }),
       new FlAutoFitWidthRegularSvg({
+        attrObj: {
+          width: '2em',
+          height: '2em',
+        },
+        styleObj: $svgStyle
+      }),
+      new FlAutocorrectFilledSvg({
+        attrObj: {
+          width: '2em',
+          height: '2em',
+        },
+        styleObj: $svgStyle
+      }),
+      new FlAutocorrectRegularSvg({
+        attrObj: {
+          width: '2em',
+          height: '2em',
+        },
+        styleObj: $svgStyle
+      }),
+      new FlAutosumFilledSvg({
+        attrObj: {
+          width: '2em',
+          height: '2em',
+        },
+        styleObj: $svgStyle
+      }),
+      new FlAutosumRegularSvg({
         attrObj: {
           width: '2em',
           height: '2em',
@@ -8824,20 +8823,6 @@ export class FluentuiSvgList extends TypeDiv {
         },
         styleObj: $svgStyle
       }),
-      new FlBinderTriangleFilledSvg({
-        attrObj: {
-          width: '2em',
-          height: '2em',
-        },
-        styleObj: $svgStyle
-      }),
-      new FlBinderTriangleRegularSvg({
-        attrObj: {
-          width: '2em',
-          height: '2em',
-        },
-        styleObj: $svgStyle
-      }),
       new FlBinFullFilledSvg({
         attrObj: {
           width: '2em',
@@ -8874,6 +8859,20 @@ export class FluentuiSvgList extends TypeDiv {
         styleObj: $svgStyle
       }),
       new FlBinRecycleRegularSvg({
+        attrObj: {
+          width: '2em',
+          height: '2em',
+        },
+        styleObj: $svgStyle
+      }),
+      new FlBinderTriangleFilledSvg({
+        attrObj: {
+          width: '2em',
+          height: '2em',
+        },
+        styleObj: $svgStyle
+      }),
+      new FlBinderTriangleRegularSvg({
         attrObj: {
           width: '2em',
           height: '2em',
@@ -9000,76 +8999,6 @@ export class FluentuiSvgList extends TypeDiv {
         styleObj: $svgStyle
       }),
       new FlBoardSplitRegularSvg({
-        attrObj: {
-          width: '2em',
-          height: '2em',
-        },
-        styleObj: $svgStyle
-      }),
-      new FlBookmarkAddFilledSvg({
-        attrObj: {
-          width: '2em',
-          height: '2em',
-        },
-        styleObj: $svgStyle
-      }),
-      new FlBookmarkAddRegularSvg({
-        attrObj: {
-          width: '2em',
-          height: '2em',
-        },
-        styleObj: $svgStyle
-      }),
-      new FlBookmarkFilledSvg({
-        attrObj: {
-          width: '2em',
-          height: '2em',
-        },
-        styleObj: $svgStyle
-      }),
-      new FlBookmarkMultipleFilledSvg({
-        attrObj: {
-          width: '2em',
-          height: '2em',
-        },
-        styleObj: $svgStyle
-      }),
-      new FlBookmarkMultipleRegularSvg({
-        attrObj: {
-          width: '2em',
-          height: '2em',
-        },
-        styleObj: $svgStyle
-      }),
-      new FlBookmarkOffFilledSvg({
-        attrObj: {
-          width: '2em',
-          height: '2em',
-        },
-        styleObj: $svgStyle
-      }),
-      new FlBookmarkOffRegularSvg({
-        attrObj: {
-          width: '2em',
-          height: '2em',
-        },
-        styleObj: $svgStyle
-      }),
-      new FlBookmarkRegularSvg({
-        attrObj: {
-          width: '2em',
-          height: '2em',
-        },
-        styleObj: $svgStyle
-      }),
-      new FlBookmarkSearchFilledSvg({
-        attrObj: {
-          width: '2em',
-          height: '2em',
-        },
-        styleObj: $svgStyle
-      }),
-      new FlBookmarkSearchRegularSvg({
         attrObj: {
           width: '2em',
           height: '2em',
@@ -9433,6 +9362,76 @@ export class FluentuiSvgList extends TypeDiv {
         },
         styleObj: $svgStyle
       }),
+      new FlBookmarkAddFilledSvg({
+        attrObj: {
+          width: '2em',
+          height: '2em',
+        },
+        styleObj: $svgStyle
+      }),
+      new FlBookmarkAddRegularSvg({
+        attrObj: {
+          width: '2em',
+          height: '2em',
+        },
+        styleObj: $svgStyle
+      }),
+      new FlBookmarkFilledSvg({
+        attrObj: {
+          width: '2em',
+          height: '2em',
+        },
+        styleObj: $svgStyle
+      }),
+      new FlBookmarkMultipleFilledSvg({
+        attrObj: {
+          width: '2em',
+          height: '2em',
+        },
+        styleObj: $svgStyle
+      }),
+      new FlBookmarkMultipleRegularSvg({
+        attrObj: {
+          width: '2em',
+          height: '2em',
+        },
+        styleObj: $svgStyle
+      }),
+      new FlBookmarkOffFilledSvg({
+        attrObj: {
+          width: '2em',
+          height: '2em',
+        },
+        styleObj: $svgStyle
+      }),
+      new FlBookmarkOffRegularSvg({
+        attrObj: {
+          width: '2em',
+          height: '2em',
+        },
+        styleObj: $svgStyle
+      }),
+      new FlBookmarkRegularSvg({
+        attrObj: {
+          width: '2em',
+          height: '2em',
+        },
+        styleObj: $svgStyle
+      }),
+      new FlBookmarkSearchFilledSvg({
+        attrObj: {
+          width: '2em',
+          height: '2em',
+        },
+        styleObj: $svgStyle
+      }),
+      new FlBookmarkSearchRegularSvg({
+        attrObj: {
+          width: '2em',
+          height: '2em',
+        },
+        styleObj: $svgStyle
+      }),
       new FlBorderAllFilledSvg({
         attrObj: {
           width: '2em',
@@ -9685,6 +9684,20 @@ export class FluentuiSvgList extends TypeDiv {
         },
         styleObj: $svgStyle
       }),
+      new FlBowTieFilledSvg({
+        attrObj: {
+          width: '2em',
+          height: '2em',
+        },
+        styleObj: $svgStyle
+      }),
+      new FlBowTieRegularSvg({
+        attrObj: {
+          width: '2em',
+          height: '2em',
+        },
+        styleObj: $svgStyle
+      }),
       new FlBowlChopsticksFilledSvg({
         attrObj: {
           width: '2em',
@@ -9707,20 +9720,6 @@ export class FluentuiSvgList extends TypeDiv {
         styleObj: $svgStyle
       }),
       new FlBowlSaladRegularSvg({
-        attrObj: {
-          width: '2em',
-          height: '2em',
-        },
-        styleObj: $svgStyle
-      }),
-      new FlBowTieFilledSvg({
-        attrObj: {
-          width: '2em',
-          height: '2em',
-        },
-        styleObj: $svgStyle
-      }),
-      new FlBowTieRegularSvg({
         attrObj: {
           width: '2em',
           height: '2em',
@@ -11344,62 +11343,6 @@ export class FluentuiSvgList extends TypeDiv {
         },
         styleObj: $svgStyle
       }),
-      new FlCalligraphyPenCheckmarkFilledSvg({
-        attrObj: {
-          width: '2em',
-          height: '2em',
-        },
-        styleObj: $svgStyle
-      }),
-      new FlCalligraphyPenCheckmarkRegularSvg({
-        attrObj: {
-          width: '2em',
-          height: '2em',
-        },
-        styleObj: $svgStyle
-      }),
-      new FlCalligraphyPenErrorFilledSvg({
-        attrObj: {
-          width: '2em',
-          height: '2em',
-        },
-        styleObj: $svgStyle
-      }),
-      new FlCalligraphyPenErrorRegularSvg({
-        attrObj: {
-          width: '2em',
-          height: '2em',
-        },
-        styleObj: $svgStyle
-      }),
-      new FlCalligraphyPenFilledSvg({
-        attrObj: {
-          width: '2em',
-          height: '2em',
-        },
-        styleObj: $svgStyle
-      }),
-      new FlCalligraphyPenQuestionMarkFilledSvg({
-        attrObj: {
-          width: '2em',
-          height: '2em',
-        },
-        styleObj: $svgStyle
-      }),
-      new FlCalligraphyPenQuestionMarkRegularSvg({
-        attrObj: {
-          width: '2em',
-          height: '2em',
-        },
-        styleObj: $svgStyle
-      }),
-      new FlCalligraphyPenRegularSvg({
-        attrObj: {
-          width: '2em',
-          height: '2em',
-        },
-        styleObj: $svgStyle
-      }),
       new FlCallAddFilledSvg({
         attrObj: {
           width: '2em',
@@ -11618,6 +11561,62 @@ export class FluentuiSvgList extends TypeDiv {
         styleObj: $svgStyle
       }),
       new FlCallWarningRegularSvg({
+        attrObj: {
+          width: '2em',
+          height: '2em',
+        },
+        styleObj: $svgStyle
+      }),
+      new FlCalligraphyPenCheckmarkFilledSvg({
+        attrObj: {
+          width: '2em',
+          height: '2em',
+        },
+        styleObj: $svgStyle
+      }),
+      new FlCalligraphyPenCheckmarkRegularSvg({
+        attrObj: {
+          width: '2em',
+          height: '2em',
+        },
+        styleObj: $svgStyle
+      }),
+      new FlCalligraphyPenErrorFilledSvg({
+        attrObj: {
+          width: '2em',
+          height: '2em',
+        },
+        styleObj: $svgStyle
+      }),
+      new FlCalligraphyPenErrorRegularSvg({
+        attrObj: {
+          width: '2em',
+          height: '2em',
+        },
+        styleObj: $svgStyle
+      }),
+      new FlCalligraphyPenFilledSvg({
+        attrObj: {
+          width: '2em',
+          height: '2em',
+        },
+        styleObj: $svgStyle
+      }),
+      new FlCalligraphyPenQuestionMarkFilledSvg({
+        attrObj: {
+          width: '2em',
+          height: '2em',
+        },
+        styleObj: $svgStyle
+      }),
+      new FlCalligraphyPenQuestionMarkRegularSvg({
+        attrObj: {
+          width: '2em',
+          height: '2em',
+        },
+        styleObj: $svgStyle
+      }),
+      new FlCalligraphyPenRegularSvg({
         attrObj: {
           width: '2em',
           height: '2em',
@@ -12506,6 +12505,20 @@ export class FluentuiSvgList extends TypeDiv {
         },
         styleObj: $svgStyle
       }),
+      new FlCheckFilledSvg({
+        attrObj: {
+          width: '2em',
+          height: '2em',
+        },
+        styleObj: $svgStyle
+      }),
+      new FlCheckRegularSvg({
+        attrObj: {
+          width: '2em',
+          height: '2em',
+        },
+        styleObj: $svgStyle
+      }),
       new FlCheckbox1FilledSvg({
         attrObj: {
           width: '2em',
@@ -12773,20 +12786,6 @@ export class FluentuiSvgList extends TypeDiv {
         styleObj: $svgStyle
       }),
       new FlCheckmarkUnderlineCircleRegularSvg({
-        attrObj: {
-          width: '2em',
-          height: '2em',
-        },
-        styleObj: $svgStyle
-      }),
-      new FlCheckFilledSvg({
-        attrObj: {
-          width: '2em',
-          height: '2em',
-        },
-        styleObj: $svgStyle
-      }),
-      new FlCheckRegularSvg({
         attrObj: {
           width: '2em',
           height: '2em',
@@ -13199,20 +13198,6 @@ export class FluentuiSvgList extends TypeDiv {
         },
         styleObj: $svgStyle
       }),
-      new FlClassificationFilledSvg({
-        attrObj: {
-          width: '2em',
-          height: '2em',
-        },
-        styleObj: $svgStyle
-      }),
-      new FlClassificationRegularSvg({
-        attrObj: {
-          width: '2em',
-          height: '2em',
-        },
-        styleObj: $svgStyle
-      }),
       new FlClassFilledSvg({
         attrObj: {
           width: '2em',
@@ -13221,6 +13206,20 @@ export class FluentuiSvgList extends TypeDiv {
         styleObj: $svgStyle
       }),
       new FlClassRegularSvg({
+        attrObj: {
+          width: '2em',
+          height: '2em',
+        },
+        styleObj: $svgStyle
+      }),
+      new FlClassificationFilledSvg({
+        attrObj: {
+          width: '2em',
+          height: '2em',
+        },
+        styleObj: $svgStyle
+      }),
+      new FlClassificationRegularSvg({
         attrObj: {
           width: '2em',
           height: '2em',
@@ -14403,13 +14402,6 @@ export class FluentuiSvgList extends TypeDiv {
         },
         styleObj: $svgStyle
       }),
-      new FlColorFilledSvg({
-        attrObj: {
-          width: '2em',
-          height: '2em',
-        },
-        styleObj: $svgStyle
-      }),
       new FlColorFillAccentRegularSvg({
         attrObj: {
           width: '2em',
@@ -14425,6 +14417,13 @@ export class FluentuiSvgList extends TypeDiv {
         styleObj: $svgStyle
       }),
       new FlColorFillRegularSvg({
+        attrObj: {
+          width: '2em',
+          height: '2em',
+        },
+        styleObj: $svgStyle
+      }),
+      new FlColorFilledSvg({
         attrObj: {
           width: '2em',
           height: '2em',
@@ -15621,188 +15620,6 @@ export class FluentuiSvgList extends TypeDiv {
         },
         styleObj: $svgStyle
       }),
-      new FlDatabaseArrowDownFilledSvg({
-        attrObj: {
-          width: '2em',
-          height: '2em',
-        },
-        styleObj: $svgStyle
-      }),
-      new FlDatabaseArrowDownRegularSvg({
-        attrObj: {
-          width: '2em',
-          height: '2em',
-        },
-        styleObj: $svgStyle
-      }),
-      new FlDatabaseArrowRightFilledSvg({
-        attrObj: {
-          width: '2em',
-          height: '2em',
-        },
-        styleObj: $svgStyle
-      }),
-      new FlDatabaseArrowRightRegularSvg({
-        attrObj: {
-          width: '2em',
-          height: '2em',
-        },
-        styleObj: $svgStyle
-      }),
-      new FlDatabaseArrowUpFilledSvg({
-        attrObj: {
-          width: '2em',
-          height: '2em',
-        },
-        styleObj: $svgStyle
-      }),
-      new FlDatabaseArrowUpRegularSvg({
-        attrObj: {
-          width: '2em',
-          height: '2em',
-        },
-        styleObj: $svgStyle
-      }),
-      new FlDatabaseFilledSvg({
-        attrObj: {
-          width: '2em',
-          height: '2em',
-        },
-        styleObj: $svgStyle
-      }),
-      new FlDatabaseLightningFilledSvg({
-        attrObj: {
-          width: '2em',
-          height: '2em',
-        },
-        styleObj: $svgStyle
-      }),
-      new FlDatabaseLightningRegularSvg({
-        attrObj: {
-          width: '2em',
-          height: '2em',
-        },
-        styleObj: $svgStyle
-      }),
-      new FlDatabaseLinkFilledSvg({
-        attrObj: {
-          width: '2em',
-          height: '2em',
-        },
-        styleObj: $svgStyle
-      }),
-      new FlDatabaseLinkRegularSvg({
-        attrObj: {
-          width: '2em',
-          height: '2em',
-        },
-        styleObj: $svgStyle
-      }),
-      new FlDatabaseMultipleFilledSvg({
-        attrObj: {
-          width: '2em',
-          height: '2em',
-        },
-        styleObj: $svgStyle
-      }),
-      new FlDatabaseMultipleRegularSvg({
-        attrObj: {
-          width: '2em',
-          height: '2em',
-        },
-        styleObj: $svgStyle
-      }),
-      new FlDatabasePersonFilledSvg({
-        attrObj: {
-          width: '2em',
-          height: '2em',
-        },
-        styleObj: $svgStyle
-      }),
-      new FlDatabasePersonRegularSvg({
-        attrObj: {
-          width: '2em',
-          height: '2em',
-        },
-        styleObj: $svgStyle
-      }),
-      new FlDatabasePlugConnectedFilledSvg({
-        attrObj: {
-          width: '2em',
-          height: '2em',
-        },
-        styleObj: $svgStyle
-      }),
-      new FlDatabasePlugConnectedRegularSvg({
-        attrObj: {
-          width: '2em',
-          height: '2em',
-        },
-        styleObj: $svgStyle
-      }),
-      new FlDatabaseRegularSvg({
-        attrObj: {
-          width: '2em',
-          height: '2em',
-        },
-        styleObj: $svgStyle
-      }),
-      new FlDatabaseSearchFilledSvg({
-        attrObj: {
-          width: '2em',
-          height: '2em',
-        },
-        styleObj: $svgStyle
-      }),
-      new FlDatabaseSearchRegularSvg({
-        attrObj: {
-          width: '2em',
-          height: '2em',
-        },
-        styleObj: $svgStyle
-      }),
-      new FlDatabaseSwitchFilledSvg({
-        attrObj: {
-          width: '2em',
-          height: '2em',
-        },
-        styleObj: $svgStyle
-      }),
-      new FlDatabaseSwitchRegularSvg({
-        attrObj: {
-          width: '2em',
-          height: '2em',
-        },
-        styleObj: $svgStyle
-      }),
-      new FlDatabaseWarningFilledSvg({
-        attrObj: {
-          width: '2em',
-          height: '2em',
-        },
-        styleObj: $svgStyle
-      }),
-      new FlDatabaseWarningRegularSvg({
-        attrObj: {
-          width: '2em',
-          height: '2em',
-        },
-        styleObj: $svgStyle
-      }),
-      new FlDatabaseWindowFilledSvg({
-        attrObj: {
-          width: '2em',
-          height: '2em',
-        },
-        styleObj: $svgStyle
-      }),
-      new FlDatabaseWindowRegularSvg({
-        attrObj: {
-          width: '2em',
-          height: '2em',
-        },
-        styleObj: $svgStyle
-      }),
       new FlDataAreaFilledSvg({
         attrObj: {
           width: '2em',
@@ -16118,6 +15935,188 @@ export class FluentuiSvgList extends TypeDiv {
         },
         styleObj: $svgStyle
       }),
+      new FlDatabaseArrowDownFilledSvg({
+        attrObj: {
+          width: '2em',
+          height: '2em',
+        },
+        styleObj: $svgStyle
+      }),
+      new FlDatabaseArrowDownRegularSvg({
+        attrObj: {
+          width: '2em',
+          height: '2em',
+        },
+        styleObj: $svgStyle
+      }),
+      new FlDatabaseArrowRightFilledSvg({
+        attrObj: {
+          width: '2em',
+          height: '2em',
+        },
+        styleObj: $svgStyle
+      }),
+      new FlDatabaseArrowRightRegularSvg({
+        attrObj: {
+          width: '2em',
+          height: '2em',
+        },
+        styleObj: $svgStyle
+      }),
+      new FlDatabaseArrowUpFilledSvg({
+        attrObj: {
+          width: '2em',
+          height: '2em',
+        },
+        styleObj: $svgStyle
+      }),
+      new FlDatabaseArrowUpRegularSvg({
+        attrObj: {
+          width: '2em',
+          height: '2em',
+        },
+        styleObj: $svgStyle
+      }),
+      new FlDatabaseFilledSvg({
+        attrObj: {
+          width: '2em',
+          height: '2em',
+        },
+        styleObj: $svgStyle
+      }),
+      new FlDatabaseLightningFilledSvg({
+        attrObj: {
+          width: '2em',
+          height: '2em',
+        },
+        styleObj: $svgStyle
+      }),
+      new FlDatabaseLightningRegularSvg({
+        attrObj: {
+          width: '2em',
+          height: '2em',
+        },
+        styleObj: $svgStyle
+      }),
+      new FlDatabaseLinkFilledSvg({
+        attrObj: {
+          width: '2em',
+          height: '2em',
+        },
+        styleObj: $svgStyle
+      }),
+      new FlDatabaseLinkRegularSvg({
+        attrObj: {
+          width: '2em',
+          height: '2em',
+        },
+        styleObj: $svgStyle
+      }),
+      new FlDatabaseMultipleFilledSvg({
+        attrObj: {
+          width: '2em',
+          height: '2em',
+        },
+        styleObj: $svgStyle
+      }),
+      new FlDatabaseMultipleRegularSvg({
+        attrObj: {
+          width: '2em',
+          height: '2em',
+        },
+        styleObj: $svgStyle
+      }),
+      new FlDatabasePersonFilledSvg({
+        attrObj: {
+          width: '2em',
+          height: '2em',
+        },
+        styleObj: $svgStyle
+      }),
+      new FlDatabasePersonRegularSvg({
+        attrObj: {
+          width: '2em',
+          height: '2em',
+        },
+        styleObj: $svgStyle
+      }),
+      new FlDatabasePlugConnectedFilledSvg({
+        attrObj: {
+          width: '2em',
+          height: '2em',
+        },
+        styleObj: $svgStyle
+      }),
+      new FlDatabasePlugConnectedRegularSvg({
+        attrObj: {
+          width: '2em',
+          height: '2em',
+        },
+        styleObj: $svgStyle
+      }),
+      new FlDatabaseRegularSvg({
+        attrObj: {
+          width: '2em',
+          height: '2em',
+        },
+        styleObj: $svgStyle
+      }),
+      new FlDatabaseSearchFilledSvg({
+        attrObj: {
+          width: '2em',
+          height: '2em',
+        },
+        styleObj: $svgStyle
+      }),
+      new FlDatabaseSearchRegularSvg({
+        attrObj: {
+          width: '2em',
+          height: '2em',
+        },
+        styleObj: $svgStyle
+      }),
+      new FlDatabaseSwitchFilledSvg({
+        attrObj: {
+          width: '2em',
+          height: '2em',
+        },
+        styleObj: $svgStyle
+      }),
+      new FlDatabaseSwitchRegularSvg({
+        attrObj: {
+          width: '2em',
+          height: '2em',
+        },
+        styleObj: $svgStyle
+      }),
+      new FlDatabaseWarningFilledSvg({
+        attrObj: {
+          width: '2em',
+          height: '2em',
+        },
+        styleObj: $svgStyle
+      }),
+      new FlDatabaseWarningRegularSvg({
+        attrObj: {
+          width: '2em',
+          height: '2em',
+        },
+        styleObj: $svgStyle
+      }),
+      new FlDatabaseWindowFilledSvg({
+        attrObj: {
+          width: '2em',
+          height: '2em',
+        },
+        styleObj: $svgStyle
+      }),
+      new FlDatabaseWindowRegularSvg({
+        attrObj: {
+          width: '2em',
+          height: '2em',
+        },
+        styleObj: $svgStyle
+      }),
       new FlDecimalArrowLeftFilledSvg({
         attrObj: {
           width: '2em',
@@ -16238,6 +16237,20 @@ export class FluentuiSvgList extends TypeDiv {
         styleObj: $svgStyle
       }),
       new FlDesignIdeasRegularSvg({
+        attrObj: {
+          width: '2em',
+          height: '2em',
+        },
+        styleObj: $svgStyle
+      }),
+      new FlDeskFilledSvg({
+        attrObj: {
+          width: '2em',
+          height: '2em',
+        },
+        styleObj: $svgStyle
+      }),
+      new FlDeskRegularSvg({
         attrObj: {
           width: '2em',
           height: '2em',
@@ -16476,20 +16489,6 @@ export class FluentuiSvgList extends TypeDiv {
         styleObj: $svgStyle
       }),
       new FlDesktopTowerRegularSvg({
-        attrObj: {
-          width: '2em',
-          height: '2em',
-        },
-        styleObj: $svgStyle
-      }),
-      new FlDeskFilledSvg({
-        attrObj: {
-          width: '2em',
-          height: '2em',
-        },
-        styleObj: $svgStyle
-      }),
-      new FlDeskRegularSvg({
         attrObj: {
           width: '2em',
           height: '2em',
@@ -17147,20 +17146,6 @@ export class FluentuiSvgList extends TypeDiv {
         },
         styleObj: $svgStyle
       }),
-      new FlDocumentDatabaseFilledSvg({
-        attrObj: {
-          width: '2em',
-          height: '2em',
-        },
-        styleObj: $svgStyle
-      }),
-      new FlDocumentDatabaseRegularSvg({
-        attrObj: {
-          width: '2em',
-          height: '2em',
-        },
-        styleObj: $svgStyle
-      }),
       new FlDocumentDataFilledSvg({
         attrObj: {
           width: '2em',
@@ -17197,6 +17182,20 @@ export class FluentuiSvgList extends TypeDiv {
         styleObj: $svgStyle
       }),
       new FlDocumentDataRegularSvg({
+        attrObj: {
+          width: '2em',
+          height: '2em',
+        },
+        styleObj: $svgStyle
+      }),
+      new FlDocumentDatabaseFilledSvg({
+        attrObj: {
+          width: '2em',
+          height: '2em',
+        },
+        styleObj: $svgStyle
+      }),
+      new FlDocumentDatabaseRegularSvg({
         attrObj: {
           width: '2em',
           height: '2em',
@@ -17455,20 +17454,6 @@ export class FluentuiSvgList extends TypeDiv {
         },
         styleObj: $svgStyle
       }),
-      new FlDocumentJavascriptFilledSvg({
-        attrObj: {
-          width: '2em',
-          height: '2em',
-        },
-        styleObj: $svgStyle
-      }),
-      new FlDocumentJavascriptRegularSvg({
-        attrObj: {
-          width: '2em',
-          height: '2em',
-        },
-        styleObj: $svgStyle
-      }),
       new FlDocumentJavaFilledSvg({
         attrObj: {
           width: '2em',
@@ -17477,6 +17462,20 @@ export class FluentuiSvgList extends TypeDiv {
         styleObj: $svgStyle
       }),
       new FlDocumentJavaRegularSvg({
+        attrObj: {
+          width: '2em',
+          height: '2em',
+        },
+        styleObj: $svgStyle
+      }),
+      new FlDocumentJavascriptFilledSvg({
+        attrObj: {
+          width: '2em',
+          height: '2em',
+        },
+        styleObj: $svgStyle
+      }),
+      new FlDocumentJavascriptRegularSvg({
         attrObj: {
           width: '2em',
           height: '2em',
@@ -18519,6 +18518,48 @@ export class FluentuiSvgList extends TypeDiv {
         },
         styleObj: $svgStyle
       }),
+      new FlDrawImageFilledSvg({
+        attrObj: {
+          width: '2em',
+          height: '2em',
+        },
+        styleObj: $svgStyle
+      }),
+      new FlDrawImageRegularSvg({
+        attrObj: {
+          width: '2em',
+          height: '2em',
+        },
+        styleObj: $svgStyle
+      }),
+      new FlDrawShapeFilledSvg({
+        attrObj: {
+          width: '2em',
+          height: '2em',
+        },
+        styleObj: $svgStyle
+      }),
+      new FlDrawShapeRegularSvg({
+        attrObj: {
+          width: '2em',
+          height: '2em',
+        },
+        styleObj: $svgStyle
+      }),
+      new FlDrawTextFilledSvg({
+        attrObj: {
+          width: '2em',
+          height: '2em',
+        },
+        styleObj: $svgStyle
+      }),
+      new FlDrawTextRegularSvg({
+        attrObj: {
+          width: '2em',
+          height: '2em',
+        },
+        styleObj: $svgStyle
+      }),
       new FlDrawerAddFilledSvg({
         attrObj: {
           width: '2em',
@@ -18597,48 +18638,6 @@ export class FluentuiSvgList extends TypeDiv {
         styleObj: $svgStyle
       }),
       new FlDrawerSubtractRegularSvg({
-        attrObj: {
-          width: '2em',
-          height: '2em',
-        },
-        styleObj: $svgStyle
-      }),
-      new FlDrawImageFilledSvg({
-        attrObj: {
-          width: '2em',
-          height: '2em',
-        },
-        styleObj: $svgStyle
-      }),
-      new FlDrawImageRegularSvg({
-        attrObj: {
-          width: '2em',
-          height: '2em',
-        },
-        styleObj: $svgStyle
-      }),
-      new FlDrawShapeFilledSvg({
-        attrObj: {
-          width: '2em',
-          height: '2em',
-        },
-        styleObj: $svgStyle
-      }),
-      new FlDrawShapeRegularSvg({
-        attrObj: {
-          width: '2em',
-          height: '2em',
-        },
-        styleObj: $svgStyle
-      }),
-      new FlDrawTextFilledSvg({
-        attrObj: {
-          width: '2em',
-          height: '2em',
-        },
-        styleObj: $svgStyle
-      }),
-      new FlDrawTextRegularSvg({
         attrObj: {
           width: '2em',
           height: '2em',
@@ -19653,34 +19652,6 @@ export class FluentuiSvgList extends TypeDiv {
         },
         styleObj: $svgStyle
       }),
-      new FlEyedropperFilledSvg({
-        attrObj: {
-          width: '2em',
-          height: '2em',
-        },
-        styleObj: $svgStyle
-      }),
-      new FlEyedropperOffFilledSvg({
-        attrObj: {
-          width: '2em',
-          height: '2em',
-        },
-        styleObj: $svgStyle
-      }),
-      new FlEyedropperOffRegularSvg({
-        attrObj: {
-          width: '2em',
-          height: '2em',
-        },
-        styleObj: $svgStyle
-      }),
-      new FlEyedropperRegularSvg({
-        attrObj: {
-          width: '2em',
-          height: '2em',
-        },
-        styleObj: $svgStyle
-      }),
       new FlEyeFilledSvg({
         attrObj: {
           width: '2em',
@@ -19745,6 +19716,48 @@ export class FluentuiSvgList extends TypeDiv {
         styleObj: $svgStyle
       }),
       new FlEyeTrackingRegularSvg({
+        attrObj: {
+          width: '2em',
+          height: '2em',
+        },
+        styleObj: $svgStyle
+      }),
+      new FlEyedropperFilledSvg({
+        attrObj: {
+          width: '2em',
+          height: '2em',
+        },
+        styleObj: $svgStyle
+      }),
+      new FlEyedropperOffFilledSvg({
+        attrObj: {
+          width: '2em',
+          height: '2em',
+        },
+        styleObj: $svgStyle
+      }),
+      new FlEyedropperOffRegularSvg({
+        attrObj: {
+          width: '2em',
+          height: '2em',
+        },
+        styleObj: $svgStyle
+      }),
+      new FlEyedropperRegularSvg({
+        attrObj: {
+          width: '2em',
+          height: '2em',
+        },
+        styleObj: $svgStyle
+      }),
+      new FlFStopFilledSvg({
+        attrObj: {
+          width: '2em',
+          height: '2em',
+        },
+        styleObj: $svgStyle
+      }),
+      new FlFStopRegularSvg({
         attrObj: {
           width: '2em',
           height: '2em',
@@ -19933,20 +19946,6 @@ export class FluentuiSvgList extends TypeDiv {
         },
         styleObj: $svgStyle
       }),
-      new FlFireplaceFilledSvg({
-        attrObj: {
-          width: '2em',
-          height: '2em',
-        },
-        styleObj: $svgStyle
-      }),
-      new FlFireplaceRegularSvg({
-        attrObj: {
-          width: '2em',
-          height: '2em',
-        },
-        styleObj: $svgStyle
-      }),
       new FlFireFilledSvg({
         attrObj: {
           width: '2em',
@@ -19955,6 +19954,20 @@ export class FluentuiSvgList extends TypeDiv {
         styleObj: $svgStyle
       }),
       new FlFireRegularSvg({
+        attrObj: {
+          width: '2em',
+          height: '2em',
+        },
+        styleObj: $svgStyle
+      }),
+      new FlFireplaceFilledSvg({
+        attrObj: {
+          width: '2em',
+          height: '2em',
+        },
+        styleObj: $svgStyle
+      }),
+      new FlFireplaceRegularSvg({
         attrObj: {
           width: '2em',
           height: '2em',
@@ -20053,34 +20066,6 @@ export class FluentuiSvgList extends TypeDiv {
         styleObj: $svgStyle
       }),
       new FlFlagRegularSvg({
-        attrObj: {
-          width: '2em',
-          height: '2em',
-        },
-        styleObj: $svgStyle
-      }),
-      new FlFlashlightFilledSvg({
-        attrObj: {
-          width: '2em',
-          height: '2em',
-        },
-        styleObj: $svgStyle
-      }),
-      new FlFlashlightOffFilledSvg({
-        attrObj: {
-          width: '2em',
-          height: '2em',
-        },
-        styleObj: $svgStyle
-      }),
-      new FlFlashlightOffRegularSvg({
-        attrObj: {
-          width: '2em',
-          height: '2em',
-        },
-        styleObj: $svgStyle
-      }),
-      new FlFlashlightRegularSvg({
         attrObj: {
           width: '2em',
           height: '2em',
@@ -20213,6 +20198,34 @@ export class FluentuiSvgList extends TypeDiv {
         },
         styleObj: $svgStyle
       }),
+      new FlFlashlightFilledSvg({
+        attrObj: {
+          width: '2em',
+          height: '2em',
+        },
+        styleObj: $svgStyle
+      }),
+      new FlFlashlightOffFilledSvg({
+        attrObj: {
+          width: '2em',
+          height: '2em',
+        },
+        styleObj: $svgStyle
+      }),
+      new FlFlashlightOffRegularSvg({
+        attrObj: {
+          width: '2em',
+          height: '2em',
+        },
+        styleObj: $svgStyle
+      }),
+      new FlFlashlightRegularSvg({
+        attrObj: {
+          width: '2em',
+          height: '2em',
+        },
+        styleObj: $svgStyle
+      }),
       new FlFlipHorizontalFilledSvg({
         attrObj: {
           width: '2em',
@@ -20241,6 +20254,20 @@ export class FluentuiSvgList extends TypeDiv {
         },
         styleObj: $svgStyle
       }),
+      new FlFlowFilledSvg({
+        attrObj: {
+          width: '2em',
+          height: '2em',
+        },
+        styleObj: $svgStyle
+      }),
+      new FlFlowRegularSvg({
+        attrObj: {
+          width: '2em',
+          height: '2em',
+        },
+        styleObj: $svgStyle
+      }),
       new FlFlowchartCircleFilledSvg({
         attrObj: {
           width: '2em',
@@ -20263,20 +20290,6 @@ export class FluentuiSvgList extends TypeDiv {
         styleObj: $svgStyle
       }),
       new FlFlowchartRegularSvg({
-        attrObj: {
-          width: '2em',
-          height: '2em',
-        },
-        styleObj: $svgStyle
-      }),
-      new FlFlowFilledSvg({
-        attrObj: {
-          width: '2em',
-          height: '2em',
-        },
-        styleObj: $svgStyle
-      }),
-      new FlFlowRegularSvg({
         attrObj: {
           width: '2em',
           height: '2em',
@@ -20976,34 +20989,6 @@ export class FluentuiSvgList extends TypeDiv {
         },
         styleObj: $svgStyle
       }),
-      new FlFStopFilledSvg({
-        attrObj: {
-          width: '2em',
-          height: '2em',
-        },
-        styleObj: $svgStyle
-      }),
-      new FlFStopRegularSvg({
-        attrObj: {
-          width: '2em',
-          height: '2em',
-        },
-        styleObj: $svgStyle
-      }),
-      new FlGamesFilledSvg({
-        attrObj: {
-          width: '2em',
-          height: '2em',
-        },
-        styleObj: $svgStyle
-      }),
-      new FlGamesRegularSvg({
-        attrObj: {
-          width: '2em',
-          height: '2em',
-        },
-        styleObj: $svgStyle
-      }),
       new FlGameChatColorSvg({
         attrObj: {
           width: '2em',
@@ -21019,6 +21004,20 @@ export class FluentuiSvgList extends TypeDiv {
         styleObj: $svgStyle
       }),
       new FlGameChatRegularSvg({
+        attrObj: {
+          width: '2em',
+          height: '2em',
+        },
+        styleObj: $svgStyle
+      }),
+      new FlGamesFilledSvg({
+        attrObj: {
+          width: '2em',
+          height: '2em',
+        },
+        styleObj: $svgStyle
+      }),
+      new FlGamesRegularSvg({
         attrObj: {
           width: '2em',
           height: '2em',
@@ -21151,6 +21150,20 @@ export class FluentuiSvgList extends TypeDiv {
         },
         styleObj: $svgStyle
       }),
+      new FlGifFilledSvg({
+        attrObj: {
+          width: '2em',
+          height: '2em',
+        },
+        styleObj: $svgStyle
+      }),
+      new FlGifRegularSvg({
+        attrObj: {
+          width: '2em',
+          height: '2em',
+        },
+        styleObj: $svgStyle
+      }),
       new FlGiftCardAddFilledSvg({
         attrObj: {
           width: '2em',
@@ -21243,20 +21256,6 @@ export class FluentuiSvgList extends TypeDiv {
         styleObj: $svgStyle
       }),
       new FlGiftRegularSvg({
-        attrObj: {
-          width: '2em',
-          height: '2em',
-        },
-        styleObj: $svgStyle
-      }),
-      new FlGifFilledSvg({
-        attrObj: {
-          width: '2em',
-          height: '2em',
-        },
-        styleObj: $svgStyle
-      }),
-      new FlGifRegularSvg({
         attrObj: {
           width: '2em',
           height: '2em',
@@ -21746,20 +21745,6 @@ export class FluentuiSvgList extends TypeDiv {
         },
         styleObj: $svgStyle
       }),
-      new FlHandshakeFilledSvg({
-        attrObj: {
-          width: '2em',
-          height: '2em',
-        },
-        styleObj: $svgStyle
-      }),
-      new FlHandshakeRegularSvg({
-        attrObj: {
-          width: '2em',
-          height: '2em',
-        },
-        styleObj: $svgStyle
-      }),
       new FlHandDrawFilledSvg({
         attrObj: {
           width: '2em',
@@ -21872,6 +21857,20 @@ export class FluentuiSvgList extends TypeDiv {
         },
         styleObj: $svgStyle
       }),
+      new FlHandshakeFilledSvg({
+        attrObj: {
+          width: '2em',
+          height: '2em',
+        },
+        styleObj: $svgStyle
+      }),
+      new FlHandshakeRegularSvg({
+        attrObj: {
+          width: '2em',
+          height: '2em',
+        },
+        styleObj: $svgStyle
+      }),
       new FlHapticStrongFilledSvg({
         attrObj: {
           width: '2em',
@@ -21956,6 +21955,20 @@ export class FluentuiSvgList extends TypeDiv {
         },
         styleObj: $svgStyle
       }),
+      new FlHdFilledSvg({
+        attrObj: {
+          width: '2em',
+          height: '2em',
+        },
+        styleObj: $svgStyle
+      }),
+      new FlHdRegularSvg({
+        attrObj: {
+          width: '2em',
+          height: '2em',
+        },
+        styleObj: $svgStyle
+      }),
       new FlHdrFilledSvg({
         attrObj: {
           width: '2em',
@@ -21978,20 +21991,6 @@ export class FluentuiSvgList extends TypeDiv {
         styleObj: $svgStyle
       }),
       new FlHdrRegularSvg({
-        attrObj: {
-          width: '2em',
-          height: '2em',
-        },
-        styleObj: $svgStyle
-      }),
-      new FlHdFilledSvg({
-        attrObj: {
-          width: '2em',
-          height: '2em',
-        },
-        styleObj: $svgStyle
-      }),
-      new FlHdRegularSvg({
         attrObj: {
           width: '2em',
           height: '2em',
@@ -22915,27 +22914,6 @@ export class FluentuiSvgList extends TypeDiv {
         },
         styleObj: $svgStyle
       }),
-      new FlInkingToolAccentFilledSvg({
-        attrObj: {
-          width: '2em',
-          height: '2em',
-        },
-        styleObj: $svgStyle
-      }),
-      new FlInkingToolFilledSvg({
-        attrObj: {
-          width: '2em',
-          height: '2em',
-        },
-        styleObj: $svgStyle
-      }),
-      new FlInkingToolRegularSvg({
-        attrObj: {
-          width: '2em',
-          height: '2em',
-        },
-        styleObj: $svgStyle
-      }),
       new FlInkStrokeArrowDownFilledSvg({
         attrObj: {
           width: '2em',
@@ -22972,6 +22950,27 @@ export class FluentuiSvgList extends TypeDiv {
         styleObj: $svgStyle
       }),
       new FlInkStrokeRegularSvg({
+        attrObj: {
+          width: '2em',
+          height: '2em',
+        },
+        styleObj: $svgStyle
+      }),
+      new FlInkingToolAccentFilledSvg({
+        attrObj: {
+          width: '2em',
+          height: '2em',
+        },
+        styleObj: $svgStyle
+      }),
+      new FlInkingToolFilledSvg({
+        attrObj: {
+          width: '2em',
+          height: '2em',
+        },
+        styleObj: $svgStyle
+      }),
+      new FlInkingToolRegularSvg({
         attrObj: {
           width: '2em',
           height: '2em',
@@ -23118,6 +23117,62 @@ export class FluentuiSvgList extends TypeDiv {
         },
         styleObj: $svgStyle
       }),
+      new FlKeyCommandFilledSvg({
+        attrObj: {
+          width: '2em',
+          height: '2em',
+        },
+        styleObj: $svgStyle
+      }),
+      new FlKeyCommandRegularSvg({
+        attrObj: {
+          width: '2em',
+          height: '2em',
+        },
+        styleObj: $svgStyle
+      }),
+      new FlKeyFilledSvg({
+        attrObj: {
+          width: '2em',
+          height: '2em',
+        },
+        styleObj: $svgStyle
+      }),
+      new FlKeyMultipleFilledSvg({
+        attrObj: {
+          width: '2em',
+          height: '2em',
+        },
+        styleObj: $svgStyle
+      }),
+      new FlKeyMultipleRegularSvg({
+        attrObj: {
+          width: '2em',
+          height: '2em',
+        },
+        styleObj: $svgStyle
+      }),
+      new FlKeyRegularSvg({
+        attrObj: {
+          width: '2em',
+          height: '2em',
+        },
+        styleObj: $svgStyle
+      }),
+      new FlKeyResetFilledSvg({
+        attrObj: {
+          width: '2em',
+          height: '2em',
+        },
+        styleObj: $svgStyle
+      }),
+      new FlKeyResetRegularSvg({
+        attrObj: {
+          width: '2em',
+          height: '2em',
+        },
+        styleObj: $svgStyle
+      }),
       new FlKeyboard123FilledSvg({
         attrObj: {
           width: '2em',
@@ -23252,62 +23307,6 @@ export class FluentuiSvgList extends TypeDiv {
         styleObj: $svgStyle
       }),
       new FlKeyboardTabRegularSvg({
-        attrObj: {
-          width: '2em',
-          height: '2em',
-        },
-        styleObj: $svgStyle
-      }),
-      new FlKeyCommandFilledSvg({
-        attrObj: {
-          width: '2em',
-          height: '2em',
-        },
-        styleObj: $svgStyle
-      }),
-      new FlKeyCommandRegularSvg({
-        attrObj: {
-          width: '2em',
-          height: '2em',
-        },
-        styleObj: $svgStyle
-      }),
-      new FlKeyFilledSvg({
-        attrObj: {
-          width: '2em',
-          height: '2em',
-        },
-        styleObj: $svgStyle
-      }),
-      new FlKeyMultipleFilledSvg({
-        attrObj: {
-          width: '2em',
-          height: '2em',
-        },
-        styleObj: $svgStyle
-      }),
-      new FlKeyMultipleRegularSvg({
-        attrObj: {
-          width: '2em',
-          height: '2em',
-        },
-        styleObj: $svgStyle
-      }),
-      new FlKeyRegularSvg({
-        attrObj: {
-          width: '2em',
-          height: '2em',
-        },
-        styleObj: $svgStyle
-      }),
-      new FlKeyResetFilledSvg({
-        attrObj: {
-          width: '2em',
-          height: '2em',
-        },
-        styleObj: $svgStyle
-      }),
-      new FlKeyResetRegularSvg({
         attrObj: {
           width: '2em',
           height: '2em',
@@ -24175,20 +24174,6 @@ export class FluentuiSvgList extends TypeDiv {
         },
         styleObj: $svgStyle
       }),
-      new FlLineHorizontal1DashesFilledSvg({
-        attrObj: {
-          width: '2em',
-          height: '2em',
-        },
-        styleObj: $svgStyle
-      }),
-      new FlLineHorizontal1DashesRegularSvg({
-        attrObj: {
-          width: '2em',
-          height: '2em',
-        },
-        styleObj: $svgStyle
-      }),
       new FlLineHorizontal1DashDotDashFilledSvg({
         attrObj: {
           width: '2em',
@@ -24197,6 +24182,20 @@ export class FluentuiSvgList extends TypeDiv {
         styleObj: $svgStyle
       }),
       new FlLineHorizontal1DashDotDashRegularSvg({
+        attrObj: {
+          width: '2em',
+          height: '2em',
+        },
+        styleObj: $svgStyle
+      }),
+      new FlLineHorizontal1DashesFilledSvg({
+        attrObj: {
+          width: '2em',
+          height: '2em',
+        },
+        styleObj: $svgStyle
+      }),
+      new FlLineHorizontal1DashesRegularSvg({
         attrObj: {
           width: '2em',
           height: '2em',
@@ -24882,20 +24881,6 @@ export class FluentuiSvgList extends TypeDiv {
         },
         styleObj: $svgStyle
       }),
-      new FlMailboxFilledSvg({
-        attrObj: {
-          width: '2em',
-          height: '2em',
-        },
-        styleObj: $svgStyle
-      }),
-      new FlMailboxRegularSvg({
-        attrObj: {
-          width: '2em',
-          height: '2em',
-        },
-        styleObj: $svgStyle
-      }),
       new FlMailAddFilledSvg({
         attrObj: {
           width: '2em',
@@ -25484,6 +25469,20 @@ export class FluentuiSvgList extends TypeDiv {
         },
         styleObj: $svgStyle
       }),
+      new FlMailboxFilledSvg({
+        attrObj: {
+          width: '2em',
+          height: '2em',
+        },
+        styleObj: $svgStyle
+      }),
+      new FlMailboxRegularSvg({
+        attrObj: {
+          width: '2em',
+          height: '2em',
+        },
+        styleObj: $svgStyle
+      }),
       new FlMapDriveFilledSvg({
         attrObj: {
           width: '2em',
@@ -25750,20 +25749,6 @@ export class FluentuiSvgList extends TypeDiv {
         },
         styleObj: $svgStyle
       }),
-      new FlMicroscopeFilledSvg({
-        attrObj: {
-          width: '2em',
-          height: '2em',
-        },
-        styleObj: $svgStyle
-      }),
-      new FlMicroscopeRegularSvg({
-        attrObj: {
-          width: '2em',
-          height: '2em',
-        },
-        styleObj: $svgStyle
-      }),
       new FlMicColorSvg({
         attrObj: {
           width: '2em',
@@ -25905,6 +25890,20 @@ export class FluentuiSvgList extends TypeDiv {
         styleObj: $svgStyle
       }),
       new FlMicSyncRegularSvg({
+        attrObj: {
+          width: '2em',
+          height: '2em',
+        },
+        styleObj: $svgStyle
+      }),
+      new FlMicroscopeFilledSvg({
+        attrObj: {
+          width: '2em',
+          height: '2em',
+        },
+        styleObj: $svgStyle
+      }),
+      new FlMicroscopeRegularSvg({
         attrObj: {
           width: '2em',
           height: '2em',
@@ -26149,20 +26148,6 @@ export class FluentuiSvgList extends TypeDiv {
         },
         styleObj: $svgStyle
       }),
-      new FlMultiplier1xFilledSvg({
-        attrObj: {
-          width: '2em',
-          height: '2em',
-        },
-        styleObj: $svgStyle
-      }),
-      new FlMultiplier1xRegularSvg({
-        attrObj: {
-          width: '2em',
-          height: '2em',
-        },
-        styleObj: $svgStyle
-      }),
       new FlMultiplier12xFilledSvg({
         attrObj: {
           width: '2em',
@@ -26199,6 +26184,20 @@ export class FluentuiSvgList extends TypeDiv {
         styleObj: $svgStyle
       }),
       new FlMultiplier18xRegularSvg({
+        attrObj: {
+          width: '2em',
+          height: '2em',
+        },
+        styleObj: $svgStyle
+      }),
+      new FlMultiplier1xFilledSvg({
+        attrObj: {
+          width: '2em',
+          height: '2em',
+        },
+        styleObj: $svgStyle
+      }),
+      new FlMultiplier1xRegularSvg({
         attrObj: {
           width: '2em',
           height: '2em',
@@ -26457,20 +26456,6 @@ export class FluentuiSvgList extends TypeDiv {
         },
         styleObj: $svgStyle
       }),
-      new FlNewsFilledSvg({
-        attrObj: {
-          width: '2em',
-          height: '2em',
-        },
-        styleObj: $svgStyle
-      }),
-      new FlNewsRegularSvg({
-        attrObj: {
-          width: '2em',
-          height: '2em',
-        },
-        styleObj: $svgStyle
-      }),
       new FlNewFilledSvg({
         attrObj: {
           width: '2em',
@@ -26479,6 +26464,20 @@ export class FluentuiSvgList extends TypeDiv {
         styleObj: $svgStyle
       }),
       new FlNewRegularSvg({
+        attrObj: {
+          width: '2em',
+          height: '2em',
+        },
+        styleObj: $svgStyle
+      }),
+      new FlNewsFilledSvg({
+        attrObj: {
+          width: '2em',
+          height: '2em',
+        },
+        styleObj: $svgStyle
+      }),
+      new FlNewsRegularSvg({
         attrObj: {
           width: '2em',
           height: '2em',
@@ -26507,6 +26506,62 @@ export class FluentuiSvgList extends TypeDiv {
         styleObj: $svgStyle
       }),
       new FlNextRegularSvg({
+        attrObj: {
+          width: '2em',
+          height: '2em',
+        },
+        styleObj: $svgStyle
+      }),
+      new FlNoteAddFilledSvg({
+        attrObj: {
+          width: '2em',
+          height: '2em',
+        },
+        styleObj: $svgStyle
+      }),
+      new FlNoteAddRegularSvg({
+        attrObj: {
+          width: '2em',
+          height: '2em',
+        },
+        styleObj: $svgStyle
+      }),
+      new FlNoteEditFilledSvg({
+        attrObj: {
+          width: '2em',
+          height: '2em',
+        },
+        styleObj: $svgStyle
+      }),
+      new FlNoteEditRegularSvg({
+        attrObj: {
+          width: '2em',
+          height: '2em',
+        },
+        styleObj: $svgStyle
+      }),
+      new FlNoteFilledSvg({
+        attrObj: {
+          width: '2em',
+          height: '2em',
+        },
+        styleObj: $svgStyle
+      }),
+      new FlNotePinFilledSvg({
+        attrObj: {
+          width: '2em',
+          height: '2em',
+        },
+        styleObj: $svgStyle
+      }),
+      new FlNotePinRegularSvg({
+        attrObj: {
+          width: '2em',
+          height: '2em',
+        },
+        styleObj: $svgStyle
+      }),
+      new FlNoteRegularSvg({
         attrObj: {
           width: '2em',
           height: '2em',
@@ -26717,62 +26772,6 @@ export class FluentuiSvgList extends TypeDiv {
         styleObj: $svgStyle
       }),
       new FlNotepadSparkleRegularSvg({
-        attrObj: {
-          width: '2em',
-          height: '2em',
-        },
-        styleObj: $svgStyle
-      }),
-      new FlNoteAddFilledSvg({
-        attrObj: {
-          width: '2em',
-          height: '2em',
-        },
-        styleObj: $svgStyle
-      }),
-      new FlNoteAddRegularSvg({
-        attrObj: {
-          width: '2em',
-          height: '2em',
-        },
-        styleObj: $svgStyle
-      }),
-      new FlNoteEditFilledSvg({
-        attrObj: {
-          width: '2em',
-          height: '2em',
-        },
-        styleObj: $svgStyle
-      }),
-      new FlNoteEditRegularSvg({
-        attrObj: {
-          width: '2em',
-          height: '2em',
-        },
-        styleObj: $svgStyle
-      }),
-      new FlNoteFilledSvg({
-        attrObj: {
-          width: '2em',
-          height: '2em',
-        },
-        styleObj: $svgStyle
-      }),
-      new FlNotePinFilledSvg({
-        attrObj: {
-          width: '2em',
-          height: '2em',
-        },
-        styleObj: $svgStyle
-      }),
-      new FlNotePinRegularSvg({
-        attrObj: {
-          width: '2em',
-          height: '2em',
-        },
-        styleObj: $svgStyle
-      }),
-      new FlNoteRegularSvg({
         attrObj: {
           width: '2em',
           height: '2em',
@@ -27031,6 +27030,13 @@ export class FluentuiSvgList extends TypeDiv {
         },
         styleObj: $svgStyle
       }),
+      new FlOrgColorSvg({
+        attrObj: {
+          width: '2em',
+          height: '2em',
+        },
+        styleObj: $svgStyle
+      }),
       new FlOrganizationFilledSvg({
         attrObj: {
           width: '2em',
@@ -27053,13 +27059,6 @@ export class FluentuiSvgList extends TypeDiv {
         styleObj: $svgStyle
       }),
       new FlOrganizationRegularSvg({
-        attrObj: {
-          width: '2em',
-          height: '2em',
-        },
-        styleObj: $svgStyle
-      }),
-      new FlOrgColorSvg({
         attrObj: {
           width: '2em',
           height: '2em',
@@ -27745,20 +27744,6 @@ export class FluentuiSvgList extends TypeDiv {
         },
         styleObj: $svgStyle
       }),
-      new FlPentagonFilledSvg({
-        attrObj: {
-          width: '2em',
-          height: '2em',
-        },
-        styleObj: $svgStyle
-      }),
-      new FlPentagonRegularSvg({
-        attrObj: {
-          width: '2em',
-          height: '2em',
-        },
-        styleObj: $svgStyle
-      }),
       new FlPenDismissFilledSvg({
         attrObj: {
           width: '2em',
@@ -27837,6 +27822,20 @@ export class FluentuiSvgList extends TypeDiv {
         styleObj: $svgStyle
       }),
       new FlPenSyncRegularSvg({
+        attrObj: {
+          width: '2em',
+          height: '2em',
+        },
+        styleObj: $svgStyle
+      }),
+      new FlPentagonFilledSvg({
+        attrObj: {
+          width: '2em',
+          height: '2em',
+        },
+        styleObj: $svgStyle
+      }),
+      new FlPentagonRegularSvg({
         attrObj: {
           width: '2em',
           height: '2em',
@@ -28900,20 +28899,6 @@ export class FluentuiSvgList extends TypeDiv {
         },
         styleObj: $svgStyle
       }),
-      new FlPersonStarburstFilledSvg({
-        attrObj: {
-          width: '2em',
-          height: '2em',
-        },
-        styleObj: $svgStyle
-      }),
-      new FlPersonStarburstRegularSvg({
-        attrObj: {
-          width: '2em',
-          height: '2em',
-        },
-        styleObj: $svgStyle
-      }),
       new FlPersonStarFilledSvg({
         attrObj: {
           width: '2em',
@@ -28922,6 +28907,20 @@ export class FluentuiSvgList extends TypeDiv {
         styleObj: $svgStyle
       }),
       new FlPersonStarRegularSvg({
+        attrObj: {
+          width: '2em',
+          height: '2em',
+        },
+        styleObj: $svgStyle
+      }),
+      new FlPersonStarburstFilledSvg({
+        attrObj: {
+          width: '2em',
+          height: '2em',
+        },
+        styleObj: $svgStyle
+      }),
+      new FlPersonStarburstRegularSvg({
         attrObj: {
           width: '2em',
           height: '2em',
@@ -29488,6 +29487,20 @@ export class FluentuiSvgList extends TypeDiv {
         },
         styleObj: $svgStyle
       }),
+      new FlPiFilledSvg({
+        attrObj: {
+          width: '2em',
+          height: '2em',
+        },
+        styleObj: $svgStyle
+      }),
+      new FlPiRegularSvg({
+        attrObj: {
+          width: '2em',
+          height: '2em',
+        },
+        styleObj: $svgStyle
+      }),
       new FlPictureInPictureEnterFilledSvg({
         attrObj: {
           width: '2em',
@@ -29663,20 +29676,6 @@ export class FluentuiSvgList extends TypeDiv {
         },
         styleObj: $svgStyle
       }),
-      new FlPiFilledSvg({
-        attrObj: {
-          width: '2em',
-          height: '2em',
-        },
-        styleObj: $svgStyle
-      }),
-      new FlPiRegularSvg({
-        attrObj: {
-          width: '2em',
-          height: '2em',
-        },
-        styleObj: $svgStyle
-      }),
       new FlPlantCattailFilledSvg({
         attrObj: {
           width: '2em',
@@ -29713,20 +29712,6 @@ export class FluentuiSvgList extends TypeDiv {
         styleObj: $svgStyle
       }),
       new FlPlantRagweedRegularSvg({
-        attrObj: {
-          width: '2em',
-          height: '2em',
-        },
-        styleObj: $svgStyle
-      }),
-      new FlPlayingCardsFilledSvg({
-        attrObj: {
-          width: '2em',
-          height: '2em',
-        },
-        styleObj: $svgStyle
-      }),
-      new FlPlayingCardsRegularSvg({
         attrObj: {
           width: '2em',
           height: '2em',
@@ -29797,6 +29782,20 @@ export class FluentuiSvgList extends TypeDiv {
         styleObj: $svgStyle
       }),
       new FlPlaySettingsRegularSvg({
+        attrObj: {
+          width: '2em',
+          height: '2em',
+        },
+        styleObj: $svgStyle
+      }),
+      new FlPlayingCardsFilledSvg({
+        attrObj: {
+          width: '2em',
+          height: '2em',
+        },
+        styleObj: $svgStyle
+      }),
+      new FlPlayingCardsRegularSvg({
         attrObj: {
           width: '2em',
           height: '2em',
@@ -30671,6 +30670,62 @@ export class FluentuiSvgList extends TypeDiv {
         },
         styleObj: $svgStyle
       }),
+      new FlReOrderDotsHorizontalFilledSvg({
+        attrObj: {
+          width: '2em',
+          height: '2em',
+        },
+        styleObj: $svgStyle
+      }),
+      new FlReOrderDotsHorizontalRegularSvg({
+        attrObj: {
+          width: '2em',
+          height: '2em',
+        },
+        styleObj: $svgStyle
+      }),
+      new FlReOrderDotsVerticalFilledSvg({
+        attrObj: {
+          width: '2em',
+          height: '2em',
+        },
+        styleObj: $svgStyle
+      }),
+      new FlReOrderDotsVerticalRegularSvg({
+        attrObj: {
+          width: '2em',
+          height: '2em',
+        },
+        styleObj: $svgStyle
+      }),
+      new FlReOrderFilledSvg({
+        attrObj: {
+          width: '2em',
+          height: '2em',
+        },
+        styleObj: $svgStyle
+      }),
+      new FlReOrderRegularSvg({
+        attrObj: {
+          width: '2em',
+          height: '2em',
+        },
+        styleObj: $svgStyle
+      }),
+      new FlReadAloudFilledSvg({
+        attrObj: {
+          width: '2em',
+          height: '2em',
+        },
+        styleObj: $svgStyle
+      }),
+      new FlReadAloudRegularSvg({
+        attrObj: {
+          width: '2em',
+          height: '2em',
+        },
+        styleObj: $svgStyle
+      }),
       new FlReadingListAddFilledSvg({
         attrObj: {
           width: '2em',
@@ -30707,20 +30762,6 @@ export class FluentuiSvgList extends TypeDiv {
         styleObj: $svgStyle
       }),
       new FlReadingModeMobileRegularSvg({
-        attrObj: {
-          width: '2em',
-          height: '2em',
-        },
-        styleObj: $svgStyle
-      }),
-      new FlReadAloudFilledSvg({
-        attrObj: {
-          width: '2em',
-          height: '2em',
-        },
-        styleObj: $svgStyle
-      }),
-      new FlReadAloudRegularSvg({
         attrObj: {
           width: '2em',
           height: '2em',
@@ -31175,48 +31216,6 @@ export class FluentuiSvgList extends TypeDiv {
         },
         styleObj: $svgStyle
       }),
-      new FlReOrderDotsHorizontalFilledSvg({
-        attrObj: {
-          width: '2em',
-          height: '2em',
-        },
-        styleObj: $svgStyle
-      }),
-      new FlReOrderDotsHorizontalRegularSvg({
-        attrObj: {
-          width: '2em',
-          height: '2em',
-        },
-        styleObj: $svgStyle
-      }),
-      new FlReOrderDotsVerticalFilledSvg({
-        attrObj: {
-          width: '2em',
-          height: '2em',
-        },
-        styleObj: $svgStyle
-      }),
-      new FlReOrderDotsVerticalRegularSvg({
-        attrObj: {
-          width: '2em',
-          height: '2em',
-        },
-        styleObj: $svgStyle
-      }),
-      new FlReOrderFilledSvg({
-        attrObj: {
-          width: '2em',
-          height: '2em',
-        },
-        styleObj: $svgStyle
-      }),
-      new FlReOrderRegularSvg({
-        attrObj: {
-          width: '2em',
-          height: '2em',
-        },
-        styleObj: $svgStyle
-      }),
       new FlRhombusFilledSvg({
         attrObj: {
           width: '2em',
@@ -31567,20 +31566,6 @@ export class FluentuiSvgList extends TypeDiv {
         },
         styleObj: $svgStyle
       }),
-      new FlScalesFilledSvg({
-        attrObj: {
-          width: '2em',
-          height: '2em',
-        },
-        styleObj: $svgStyle
-      }),
-      new FlScalesRegularSvg({
-        attrObj: {
-          width: '2em',
-          height: '2em',
-        },
-        styleObj: $svgStyle
-      }),
       new FlScaleFillFilledSvg({
         attrObj: {
           width: '2em',
@@ -31603,6 +31588,20 @@ export class FluentuiSvgList extends TypeDiv {
         styleObj: $svgStyle
       }),
       new FlScaleFitRegularSvg({
+        attrObj: {
+          width: '2em',
+          height: '2em',
+        },
+        styleObj: $svgStyle
+      }),
+      new FlScalesFilledSvg({
+        attrObj: {
+          width: '2em',
+          height: '2em',
+        },
+        styleObj: $svgStyle
+      }),
+      new FlScalesRegularSvg({
         attrObj: {
           width: '2em',
           height: '2em',
@@ -31805,34 +31804,6 @@ export class FluentuiSvgList extends TypeDiv {
         },
         styleObj: $svgStyle
       }),
-      new FlScreenshotFilledSvg({
-        attrObj: {
-          width: '2em',
-          height: '2em',
-        },
-        styleObj: $svgStyle
-      }),
-      new FlScreenshotRecordFilledSvg({
-        attrObj: {
-          width: '2em',
-          height: '2em',
-        },
-        styleObj: $svgStyle
-      }),
-      new FlScreenshotRecordRegularSvg({
-        attrObj: {
-          width: '2em',
-          height: '2em',
-        },
-        styleObj: $svgStyle
-      }),
-      new FlScreenshotRegularSvg({
-        attrObj: {
-          width: '2em',
-          height: '2em',
-        },
-        styleObj: $svgStyle
-      }),
       new FlScreenCutFilledSvg({
         attrObj: {
           width: '2em',
@@ -31869,6 +31840,34 @@ export class FluentuiSvgList extends TypeDiv {
         styleObj: $svgStyle
       }),
       new FlScreenSearchRegularSvg({
+        attrObj: {
+          width: '2em',
+          height: '2em',
+        },
+        styleObj: $svgStyle
+      }),
+      new FlScreenshotFilledSvg({
+        attrObj: {
+          width: '2em',
+          height: '2em',
+        },
+        styleObj: $svgStyle
+      }),
+      new FlScreenshotRecordFilledSvg({
+        attrObj: {
+          width: '2em',
+          height: '2em',
+        },
+        styleObj: $svgStyle
+      }),
+      new FlScreenshotRecordRegularSvg({
+        attrObj: {
+          width: '2em',
+          height: '2em',
+        },
+        styleObj: $svgStyle
+      }),
+      new FlScreenshotRegularSvg({
         attrObj: {
           width: '2em',
           height: '2em',
@@ -32302,20 +32301,6 @@ export class FluentuiSvgList extends TypeDiv {
         },
         styleObj: $svgStyle
       }),
-      new FlShapesFilledSvg({
-        attrObj: {
-          width: '2em',
-          height: '2em',
-        },
-        styleObj: $svgStyle
-      }),
-      new FlShapesRegularSvg({
-        attrObj: {
-          width: '2em',
-          height: '2em',
-        },
-        styleObj: $svgStyle
-      }),
       new FlShapeExcludeFilledSvg({
         attrObj: {
           width: '2em',
@@ -32380,6 +32365,20 @@ export class FluentuiSvgList extends TypeDiv {
         styleObj: $svgStyle
       }),
       new FlShapeUnionRegularSvg({
+        attrObj: {
+          width: '2em',
+          height: '2em',
+        },
+        styleObj: $svgStyle
+      }),
+      new FlShapesFilledSvg({
+        attrObj: {
+          width: '2em',
+          height: '2em',
+        },
+        styleObj: $svgStyle
+      }),
+      new FlShapesRegularSvg({
         attrObj: {
           width: '2em',
           height: '2em',
@@ -33121,20 +33120,6 @@ export class FluentuiSvgList extends TypeDiv {
         },
         styleObj: $svgStyle
       }),
-      new FlSignatureFilledSvg({
-        attrObj: {
-          width: '2em',
-          height: '2em',
-        },
-        styleObj: $svgStyle
-      }),
-      new FlSignatureRegularSvg({
-        attrObj: {
-          width: '2em',
-          height: '2em',
-        },
-        styleObj: $svgStyle
-      }),
       new FlSignOutFilledSvg({
         attrObj: {
           width: '2em',
@@ -33143,6 +33128,20 @@ export class FluentuiSvgList extends TypeDiv {
         styleObj: $svgStyle
       }),
       new FlSignOutRegularSvg({
+        attrObj: {
+          width: '2em',
+          height: '2em',
+        },
+        styleObj: $svgStyle
+      }),
+      new FlSignatureFilledSvg({
+        attrObj: {
+          width: '2em',
+          height: '2em',
+        },
+        styleObj: $svgStyle
+      }),
+      new FlSignatureRegularSvg({
         attrObj: {
           width: '2em',
           height: '2em',
@@ -33681,20 +33680,6 @@ export class FluentuiSvgList extends TypeDiv {
         },
         styleObj: $svgStyle
       }),
-      new FlSpacebarFilledSvg({
-        attrObj: {
-          width: '2em',
-          height: '2em',
-        },
-        styleObj: $svgStyle
-      }),
-      new FlSpacebarRegularSvg({
-        attrObj: {
-          width: '2em',
-          height: '2em',
-        },
-        styleObj: $svgStyle
-      }),
       new FlSpace3dFilledSvg({
         attrObj: {
           width: '2em',
@@ -33703,6 +33688,20 @@ export class FluentuiSvgList extends TypeDiv {
         styleObj: $svgStyle
       }),
       new FlSpace3dRegularSvg({
+        attrObj: {
+          width: '2em',
+          height: '2em',
+        },
+        styleObj: $svgStyle
+      }),
+      new FlSpacebarFilledSvg({
+        attrObj: {
+          width: '2em',
+          height: '2em',
+        },
+        styleObj: $svgStyle
+      }),
+      new FlSpacebarRegularSvg({
         attrObj: {
           width: '2em',
           height: '2em',
@@ -34045,20 +34044,6 @@ export class FluentuiSvgList extends TypeDiv {
         },
         styleObj: $svgStyle
       }),
-      new FlSquaresNestedFilledSvg({
-        attrObj: {
-          width: '2em',
-          height: '2em',
-        },
-        styleObj: $svgStyle
-      }),
-      new FlSquaresNestedRegularSvg({
-        attrObj: {
-          width: '2em',
-          height: '2em',
-        },
-        styleObj: $svgStyle
-      }),
       new FlSquareAddFilledSvg({
         attrObj: {
           width: '2em',
@@ -34249,6 +34234,20 @@ export class FluentuiSvgList extends TypeDiv {
         styleObj: $svgStyle
       }),
       new FlSquareTextArrowRepeatAllRegularSvg({
+        attrObj: {
+          width: '2em',
+          height: '2em',
+        },
+        styleObj: $svgStyle
+      }),
+      new FlSquaresNestedFilledSvg({
+        attrObj: {
+          width: '2em',
+          height: '2em',
+        },
+        styleObj: $svgStyle
+      }),
+      new FlSquaresNestedRegularSvg({
         attrObj: {
           width: '2em',
           height: '2em',
@@ -34584,20 +34583,6 @@ export class FluentuiSvgList extends TypeDiv {
         },
         styleObj: $svgStyle
       }),
-      new FlStepsFilledSvg({
-        attrObj: {
-          width: '2em',
-          height: '2em',
-        },
-        styleObj: $svgStyle
-      }),
-      new FlStepsRegularSvg({
-        attrObj: {
-          width: '2em',
-          height: '2em',
-        },
-        styleObj: $svgStyle
-      }),
       new FlStepFilledSvg({
         attrObj: {
           width: '2em',
@@ -34606,6 +34591,20 @@ export class FluentuiSvgList extends TypeDiv {
         styleObj: $svgStyle
       }),
       new FlStepRegularSvg({
+        attrObj: {
+          width: '2em',
+          height: '2em',
+        },
+        styleObj: $svgStyle
+      }),
+      new FlStepsFilledSvg({
+        attrObj: {
+          width: '2em',
+          height: '2em',
+        },
+        styleObj: $svgStyle
+      }),
+      new FlStepsRegularSvg({
         attrObj: {
           width: '2em',
           height: '2em',
@@ -34780,6 +34779,20 @@ export class FluentuiSvgList extends TypeDiv {
         },
         styleObj: $svgStyle
       }),
+      new FlSubGridFilledSvg({
+        attrObj: {
+          width: '2em',
+          height: '2em',
+        },
+        styleObj: $svgStyle
+      }),
+      new FlSubGridRegularSvg({
+        attrObj: {
+          width: '2em',
+          height: '2em',
+        },
+        styleObj: $svgStyle
+      }),
       new FlSubtitlesFilledSvg({
         attrObj: {
           width: '2em',
@@ -34886,20 +34899,6 @@ export class FluentuiSvgList extends TypeDiv {
         styleObj: $svgStyle
       }),
       new FlSubtractSquareRegularSvg({
-        attrObj: {
-          width: '2em',
-          height: '2em',
-        },
-        styleObj: $svgStyle
-      }),
-      new FlSubGridFilledSvg({
-        attrObj: {
-          width: '2em',
-          height: '2em',
-        },
-        styleObj: $svgStyle
-      }),
-      new FlSubGridRegularSvg({
         attrObj: {
           width: '2em',
           height: '2em',
@@ -35046,42 +35045,308 @@ export class FluentuiSvgList extends TypeDiv {
         },
         styleObj: $svgStyle
       }),
-      new FlTabletFilledSvg({
+      new FlTabAddFilledSvg({
         attrObj: {
           width: '2em',
           height: '2em',
         },
         styleObj: $svgStyle
       }),
-      new FlTabletLaptopFilledSvg({
+      new FlTabAddRegularSvg({
         attrObj: {
           width: '2em',
           height: '2em',
         },
         styleObj: $svgStyle
       }),
-      new FlTabletLaptopRegularSvg({
+      new FlTabArrowLeftFilledSvg({
         attrObj: {
           width: '2em',
           height: '2em',
         },
         styleObj: $svgStyle
       }),
-      new FlTabletRegularSvg({
+      new FlTabArrowLeftRegularSvg({
         attrObj: {
           width: '2em',
           height: '2em',
         },
         styleObj: $svgStyle
       }),
-      new FlTabletSpeakerFilledSvg({
+      new FlTabDesktopArrowClockwiseFilledSvg({
         attrObj: {
           width: '2em',
           height: '2em',
         },
         styleObj: $svgStyle
       }),
-      new FlTabletSpeakerRegularSvg({
+      new FlTabDesktopArrowClockwiseRegularSvg({
+        attrObj: {
+          width: '2em',
+          height: '2em',
+        },
+        styleObj: $svgStyle
+      }),
+      new FlTabDesktopArrowLeftFilledSvg({
+        attrObj: {
+          width: '2em',
+          height: '2em',
+        },
+        styleObj: $svgStyle
+      }),
+      new FlTabDesktopArrowLeftRegularSvg({
+        attrObj: {
+          width: '2em',
+          height: '2em',
+        },
+        styleObj: $svgStyle
+      }),
+      new FlTabDesktopBottomFilledSvg({
+        attrObj: {
+          width: '2em',
+          height: '2em',
+        },
+        styleObj: $svgStyle
+      }),
+      new FlTabDesktopBottomRegularSvg({
+        attrObj: {
+          width: '2em',
+          height: '2em',
+        },
+        styleObj: $svgStyle
+      }),
+      new FlTabDesktopClockFilledSvg({
+        attrObj: {
+          width: '2em',
+          height: '2em',
+        },
+        styleObj: $svgStyle
+      }),
+      new FlTabDesktopClockRegularSvg({
+        attrObj: {
+          width: '2em',
+          height: '2em',
+        },
+        styleObj: $svgStyle
+      }),
+      new FlTabDesktopCopyFilledSvg({
+        attrObj: {
+          width: '2em',
+          height: '2em',
+        },
+        styleObj: $svgStyle
+      }),
+      new FlTabDesktopCopyRegularSvg({
+        attrObj: {
+          width: '2em',
+          height: '2em',
+        },
+        styleObj: $svgStyle
+      }),
+      new FlTabDesktopFilledSvg({
+        attrObj: {
+          width: '2em',
+          height: '2em',
+        },
+        styleObj: $svgStyle
+      }),
+      new FlTabDesktopImageFilledSvg({
+        attrObj: {
+          width: '2em',
+          height: '2em',
+        },
+        styleObj: $svgStyle
+      }),
+      new FlTabDesktopImageRegularSvg({
+        attrObj: {
+          width: '2em',
+          height: '2em',
+        },
+        styleObj: $svgStyle
+      }),
+      new FlTabDesktopLinkFilledSvg({
+        attrObj: {
+          width: '2em',
+          height: '2em',
+        },
+        styleObj: $svgStyle
+      }),
+      new FlTabDesktopLinkRegularSvg({
+        attrObj: {
+          width: '2em',
+          height: '2em',
+        },
+        styleObj: $svgStyle
+      }),
+      new FlTabDesktopMultipleAddFilledSvg({
+        attrObj: {
+          width: '2em',
+          height: '2em',
+        },
+        styleObj: $svgStyle
+      }),
+      new FlTabDesktopMultipleAddRegularSvg({
+        attrObj: {
+          width: '2em',
+          height: '2em',
+        },
+        styleObj: $svgStyle
+      }),
+      new FlTabDesktopMultipleBottomFilledSvg({
+        attrObj: {
+          width: '2em',
+          height: '2em',
+        },
+        styleObj: $svgStyle
+      }),
+      new FlTabDesktopMultipleBottomRegularSvg({
+        attrObj: {
+          width: '2em',
+          height: '2em',
+        },
+        styleObj: $svgStyle
+      }),
+      new FlTabDesktopMultipleFilledSvg({
+        attrObj: {
+          width: '2em',
+          height: '2em',
+        },
+        styleObj: $svgStyle
+      }),
+      new FlTabDesktopMultipleRegularSvg({
+        attrObj: {
+          width: '2em',
+          height: '2em',
+        },
+        styleObj: $svgStyle
+      }),
+      new FlTabDesktopMultipleSparkleFilledSvg({
+        attrObj: {
+          width: '2em',
+          height: '2em',
+        },
+        styleObj: $svgStyle
+      }),
+      new FlTabDesktopMultipleSparkleRegularSvg({
+        attrObj: {
+          width: '2em',
+          height: '2em',
+        },
+        styleObj: $svgStyle
+      }),
+      new FlTabDesktopNewPageFilledSvg({
+        attrObj: {
+          width: '2em',
+          height: '2em',
+        },
+        styleObj: $svgStyle
+      }),
+      new FlTabDesktopNewPageRegularSvg({
+        attrObj: {
+          width: '2em',
+          height: '2em',
+        },
+        styleObj: $svgStyle
+      }),
+      new FlTabDesktopRegularSvg({
+        attrObj: {
+          width: '2em',
+          height: '2em',
+        },
+        styleObj: $svgStyle
+      }),
+      new FlTabDesktopSearchFilledSvg({
+        attrObj: {
+          width: '2em',
+          height: '2em',
+        },
+        styleObj: $svgStyle
+      }),
+      new FlTabDesktopSearchRegularSvg({
+        attrObj: {
+          width: '2em',
+          height: '2em',
+        },
+        styleObj: $svgStyle
+      }),
+      new FlTabFilledSvg({
+        attrObj: {
+          width: '2em',
+          height: '2em',
+        },
+        styleObj: $svgStyle
+      }),
+      new FlTabGroupFilledSvg({
+        attrObj: {
+          width: '2em',
+          height: '2em',
+        },
+        styleObj: $svgStyle
+      }),
+      new FlTabGroupRegularSvg({
+        attrObj: {
+          width: '2em',
+          height: '2em',
+        },
+        styleObj: $svgStyle
+      }),
+      new FlTabInPrivateFilledSvg({
+        attrObj: {
+          width: '2em',
+          height: '2em',
+        },
+        styleObj: $svgStyle
+      }),
+      new FlTabInPrivateRegularSvg({
+        attrObj: {
+          width: '2em',
+          height: '2em',
+        },
+        styleObj: $svgStyle
+      }),
+      new FlTabInprivateAccountFilledSvg({
+        attrObj: {
+          width: '2em',
+          height: '2em',
+        },
+        styleObj: $svgStyle
+      }),
+      new FlTabInprivateAccountRegularSvg({
+        attrObj: {
+          width: '2em',
+          height: '2em',
+        },
+        styleObj: $svgStyle
+      }),
+      new FlTabProhibitedFilledSvg({
+        attrObj: {
+          width: '2em',
+          height: '2em',
+        },
+        styleObj: $svgStyle
+      }),
+      new FlTabProhibitedRegularSvg({
+        attrObj: {
+          width: '2em',
+          height: '2em',
+        },
+        styleObj: $svgStyle
+      }),
+      new FlTabRegularSvg({
+        attrObj: {
+          width: '2em',
+          height: '2em',
+        },
+        styleObj: $svgStyle
+      }),
+      new FlTabShieldDismissFilledSvg({
+        attrObj: {
+          width: '2em',
+          height: '2em',
+        },
+        styleObj: $svgStyle
+      }),
+      new FlTabShieldDismissRegularSvg({
         attrObj: {
           width: '2em',
           height: '2em',
@@ -35144,6 +35409,20 @@ export class FluentuiSvgList extends TypeDiv {
         },
         styleObj: $svgStyle
       }),
+      new FlTableCellEditFilledSvg({
+        attrObj: {
+          width: '2em',
+          height: '2em',
+        },
+        styleObj: $svgStyle
+      }),
+      new FlTableCellEditRegularSvg({
+        attrObj: {
+          width: '2em',
+          height: '2em',
+        },
+        styleObj: $svgStyle
+      }),
       new FlTableCellsMergeFilledSvg({
         attrObj: {
           width: '2em',
@@ -35166,20 +35445,6 @@ export class FluentuiSvgList extends TypeDiv {
         styleObj: $svgStyle
       }),
       new FlTableCellsSplitRegularSvg({
-        attrObj: {
-          width: '2em',
-          height: '2em',
-        },
-        styleObj: $svgStyle
-      }),
-      new FlTableCellEditFilledSvg({
-        attrObj: {
-          width: '2em',
-          height: '2em',
-        },
-        styleObj: $svgStyle
-      }),
-      new FlTableCellEditRegularSvg({
         attrObj: {
           width: '2em',
           height: '2em',
@@ -35788,6 +36053,48 @@ export class FluentuiSvgList extends TypeDiv {
         },
         styleObj: $svgStyle
       }),
+      new FlTabletFilledSvg({
+        attrObj: {
+          width: '2em',
+          height: '2em',
+        },
+        styleObj: $svgStyle
+      }),
+      new FlTabletLaptopFilledSvg({
+        attrObj: {
+          width: '2em',
+          height: '2em',
+        },
+        styleObj: $svgStyle
+      }),
+      new FlTabletLaptopRegularSvg({
+        attrObj: {
+          width: '2em',
+          height: '2em',
+        },
+        styleObj: $svgStyle
+      }),
+      new FlTabletRegularSvg({
+        attrObj: {
+          width: '2em',
+          height: '2em',
+        },
+        styleObj: $svgStyle
+      }),
+      new FlTabletSpeakerFilledSvg({
+        attrObj: {
+          width: '2em',
+          height: '2em',
+        },
+        styleObj: $svgStyle
+      }),
+      new FlTabletSpeakerRegularSvg({
+        attrObj: {
+          width: '2em',
+          height: '2em',
+        },
+        styleObj: $svgStyle
+      }),
       new FlTabsFilledSvg({
         attrObj: {
           width: '2em',
@@ -35796,314 +36103,6 @@ export class FluentuiSvgList extends TypeDiv {
         styleObj: $svgStyle
       }),
       new FlTabsRegularSvg({
-        attrObj: {
-          width: '2em',
-          height: '2em',
-        },
-        styleObj: $svgStyle
-      }),
-      new FlTabAddFilledSvg({
-        attrObj: {
-          width: '2em',
-          height: '2em',
-        },
-        styleObj: $svgStyle
-      }),
-      new FlTabAddRegularSvg({
-        attrObj: {
-          width: '2em',
-          height: '2em',
-        },
-        styleObj: $svgStyle
-      }),
-      new FlTabArrowLeftFilledSvg({
-        attrObj: {
-          width: '2em',
-          height: '2em',
-        },
-        styleObj: $svgStyle
-      }),
-      new FlTabArrowLeftRegularSvg({
-        attrObj: {
-          width: '2em',
-          height: '2em',
-        },
-        styleObj: $svgStyle
-      }),
-      new FlTabDesktopArrowClockwiseFilledSvg({
-        attrObj: {
-          width: '2em',
-          height: '2em',
-        },
-        styleObj: $svgStyle
-      }),
-      new FlTabDesktopArrowClockwiseRegularSvg({
-        attrObj: {
-          width: '2em',
-          height: '2em',
-        },
-        styleObj: $svgStyle
-      }),
-      new FlTabDesktopArrowLeftFilledSvg({
-        attrObj: {
-          width: '2em',
-          height: '2em',
-        },
-        styleObj: $svgStyle
-      }),
-      new FlTabDesktopArrowLeftRegularSvg({
-        attrObj: {
-          width: '2em',
-          height: '2em',
-        },
-        styleObj: $svgStyle
-      }),
-      new FlTabDesktopBottomFilledSvg({
-        attrObj: {
-          width: '2em',
-          height: '2em',
-        },
-        styleObj: $svgStyle
-      }),
-      new FlTabDesktopBottomRegularSvg({
-        attrObj: {
-          width: '2em',
-          height: '2em',
-        },
-        styleObj: $svgStyle
-      }),
-      new FlTabDesktopClockFilledSvg({
-        attrObj: {
-          width: '2em',
-          height: '2em',
-        },
-        styleObj: $svgStyle
-      }),
-      new FlTabDesktopClockRegularSvg({
-        attrObj: {
-          width: '2em',
-          height: '2em',
-        },
-        styleObj: $svgStyle
-      }),
-      new FlTabDesktopCopyFilledSvg({
-        attrObj: {
-          width: '2em',
-          height: '2em',
-        },
-        styleObj: $svgStyle
-      }),
-      new FlTabDesktopCopyRegularSvg({
-        attrObj: {
-          width: '2em',
-          height: '2em',
-        },
-        styleObj: $svgStyle
-      }),
-      new FlTabDesktopFilledSvg({
-        attrObj: {
-          width: '2em',
-          height: '2em',
-        },
-        styleObj: $svgStyle
-      }),
-      new FlTabDesktopImageFilledSvg({
-        attrObj: {
-          width: '2em',
-          height: '2em',
-        },
-        styleObj: $svgStyle
-      }),
-      new FlTabDesktopImageRegularSvg({
-        attrObj: {
-          width: '2em',
-          height: '2em',
-        },
-        styleObj: $svgStyle
-      }),
-      new FlTabDesktopLinkFilledSvg({
-        attrObj: {
-          width: '2em',
-          height: '2em',
-        },
-        styleObj: $svgStyle
-      }),
-      new FlTabDesktopLinkRegularSvg({
-        attrObj: {
-          width: '2em',
-          height: '2em',
-        },
-        styleObj: $svgStyle
-      }),
-      new FlTabDesktopMultipleAddFilledSvg({
-        attrObj: {
-          width: '2em',
-          height: '2em',
-        },
-        styleObj: $svgStyle
-      }),
-      new FlTabDesktopMultipleAddRegularSvg({
-        attrObj: {
-          width: '2em',
-          height: '2em',
-        },
-        styleObj: $svgStyle
-      }),
-      new FlTabDesktopMultipleBottomFilledSvg({
-        attrObj: {
-          width: '2em',
-          height: '2em',
-        },
-        styleObj: $svgStyle
-      }),
-      new FlTabDesktopMultipleBottomRegularSvg({
-        attrObj: {
-          width: '2em',
-          height: '2em',
-        },
-        styleObj: $svgStyle
-      }),
-      new FlTabDesktopMultipleFilledSvg({
-        attrObj: {
-          width: '2em',
-          height: '2em',
-        },
-        styleObj: $svgStyle
-      }),
-      new FlTabDesktopMultipleRegularSvg({
-        attrObj: {
-          width: '2em',
-          height: '2em',
-        },
-        styleObj: $svgStyle
-      }),
-      new FlTabDesktopMultipleSparkleFilledSvg({
-        attrObj: {
-          width: '2em',
-          height: '2em',
-        },
-        styleObj: $svgStyle
-      }),
-      new FlTabDesktopMultipleSparkleRegularSvg({
-        attrObj: {
-          width: '2em',
-          height: '2em',
-        },
-        styleObj: $svgStyle
-      }),
-      new FlTabDesktopNewPageFilledSvg({
-        attrObj: {
-          width: '2em',
-          height: '2em',
-        },
-        styleObj: $svgStyle
-      }),
-      new FlTabDesktopNewPageRegularSvg({
-        attrObj: {
-          width: '2em',
-          height: '2em',
-        },
-        styleObj: $svgStyle
-      }),
-      new FlTabDesktopRegularSvg({
-        attrObj: {
-          width: '2em',
-          height: '2em',
-        },
-        styleObj: $svgStyle
-      }),
-      new FlTabDesktopSearchFilledSvg({
-        attrObj: {
-          width: '2em',
-          height: '2em',
-        },
-        styleObj: $svgStyle
-      }),
-      new FlTabDesktopSearchRegularSvg({
-        attrObj: {
-          width: '2em',
-          height: '2em',
-        },
-        styleObj: $svgStyle
-      }),
-      new FlTabFilledSvg({
-        attrObj: {
-          width: '2em',
-          height: '2em',
-        },
-        styleObj: $svgStyle
-      }),
-      new FlTabGroupFilledSvg({
-        attrObj: {
-          width: '2em',
-          height: '2em',
-        },
-        styleObj: $svgStyle
-      }),
-      new FlTabGroupRegularSvg({
-        attrObj: {
-          width: '2em',
-          height: '2em',
-        },
-        styleObj: $svgStyle
-      }),
-      new FlTabInprivateAccountFilledSvg({
-        attrObj: {
-          width: '2em',
-          height: '2em',
-        },
-        styleObj: $svgStyle
-      }),
-      new FlTabInprivateAccountRegularSvg({
-        attrObj: {
-          width: '2em',
-          height: '2em',
-        },
-        styleObj: $svgStyle
-      }),
-      new FlTabInPrivateFilledSvg({
-        attrObj: {
-          width: '2em',
-          height: '2em',
-        },
-        styleObj: $svgStyle
-      }),
-      new FlTabInPrivateRegularSvg({
-        attrObj: {
-          width: '2em',
-          height: '2em',
-        },
-        styleObj: $svgStyle
-      }),
-      new FlTabProhibitedFilledSvg({
-        attrObj: {
-          width: '2em',
-          height: '2em',
-        },
-        styleObj: $svgStyle
-      }),
-      new FlTabProhibitedRegularSvg({
-        attrObj: {
-          width: '2em',
-          height: '2em',
-        },
-        styleObj: $svgStyle
-      }),
-      new FlTabRegularSvg({
-        attrObj: {
-          width: '2em',
-          height: '2em',
-        },
-        styleObj: $svgStyle
-      }),
-      new FlTabShieldDismissFilledSvg({
-        attrObj: {
-          width: '2em',
-          height: '2em',
-        },
-        styleObj: $svgStyle
-      }),
-      new FlTabShieldDismissRegularSvg({
         attrObj: {
           width: '2em',
           height: '2em',
@@ -36355,20 +36354,6 @@ export class FluentuiSvgList extends TypeDiv {
         },
         styleObj: $svgStyle
       }),
-      new FlTasksAppFilledSvg({
-        attrObj: {
-          width: '2em',
-          height: '2em',
-        },
-        styleObj: $svgStyle
-      }),
-      new FlTasksAppRegularSvg({
-        attrObj: {
-          width: '2em',
-          height: '2em',
-        },
-        styleObj: $svgStyle
-      }),
       new FlTaskListAddFilledSvg({
         attrObj: {
           width: '2em',
@@ -36551,6 +36536,20 @@ export class FluentuiSvgList extends TypeDiv {
         },
         styleObj: $svgStyle
       }),
+      new FlTasksAppFilledSvg({
+        attrObj: {
+          width: '2em',
+          height: '2em',
+        },
+        styleObj: $svgStyle
+      }),
+      new FlTasksAppRegularSvg({
+        attrObj: {
+          width: '2em',
+          height: '2em',
+        },
+        styleObj: $svgStyle
+      }),
       new FlTeachingFilledSvg({
         attrObj: {
           width: '2em',
@@ -36629,286 +36628,6 @@ export class FluentuiSvgList extends TypeDiv {
         styleObj: $svgStyle
       }),
       new FlTetrisAppRegularSvg({
-        attrObj: {
-          width: '2em',
-          height: '2em',
-        },
-        styleObj: $svgStyle
-      }),
-      new FlTextboxAlignBottomCenterFilledSvg({
-        attrObj: {
-          width: '2em',
-          height: '2em',
-        },
-        styleObj: $svgStyle
-      }),
-      new FlTextboxAlignBottomCenterRegularSvg({
-        attrObj: {
-          width: '2em',
-          height: '2em',
-        },
-        styleObj: $svgStyle
-      }),
-      new FlTextboxAlignBottomFilledSvg({
-        attrObj: {
-          width: '2em',
-          height: '2em',
-        },
-        styleObj: $svgStyle
-      }),
-      new FlTextboxAlignBottomLeftFilledSvg({
-        attrObj: {
-          width: '2em',
-          height: '2em',
-        },
-        styleObj: $svgStyle
-      }),
-      new FlTextboxAlignBottomLeftRegularSvg({
-        attrObj: {
-          width: '2em',
-          height: '2em',
-        },
-        styleObj: $svgStyle
-      }),
-      new FlTextboxAlignBottomRegularSvg({
-        attrObj: {
-          width: '2em',
-          height: '2em',
-        },
-        styleObj: $svgStyle
-      }),
-      new FlTextboxAlignBottomRightFilledSvg({
-        attrObj: {
-          width: '2em',
-          height: '2em',
-        },
-        styleObj: $svgStyle
-      }),
-      new FlTextboxAlignBottomRightRegularSvg({
-        attrObj: {
-          width: '2em',
-          height: '2em',
-        },
-        styleObj: $svgStyle
-      }),
-      new FlTextboxAlignBottomRotate90FilledSvg({
-        attrObj: {
-          width: '2em',
-          height: '2em',
-        },
-        styleObj: $svgStyle
-      }),
-      new FlTextboxAlignBottomRotate90RegularSvg({
-        attrObj: {
-          width: '2em',
-          height: '2em',
-        },
-        styleObj: $svgStyle
-      }),
-      new FlTextboxAlignCenterFilledSvg({
-        attrObj: {
-          width: '2em',
-          height: '2em',
-        },
-        styleObj: $svgStyle
-      }),
-      new FlTextboxAlignCenterRegularSvg({
-        attrObj: {
-          width: '2em',
-          height: '2em',
-        },
-        styleObj: $svgStyle
-      }),
-      new FlTextboxAlignMiddleFilledSvg({
-        attrObj: {
-          width: '2em',
-          height: '2em',
-        },
-        styleObj: $svgStyle
-      }),
-      new FlTextboxAlignMiddleLeftFilledSvg({
-        attrObj: {
-          width: '2em',
-          height: '2em',
-        },
-        styleObj: $svgStyle
-      }),
-      new FlTextboxAlignMiddleLeftRegularSvg({
-        attrObj: {
-          width: '2em',
-          height: '2em',
-        },
-        styleObj: $svgStyle
-      }),
-      new FlTextboxAlignMiddleRegularSvg({
-        attrObj: {
-          width: '2em',
-          height: '2em',
-        },
-        styleObj: $svgStyle
-      }),
-      new FlTextboxAlignMiddleRightFilledSvg({
-        attrObj: {
-          width: '2em',
-          height: '2em',
-        },
-        styleObj: $svgStyle
-      }),
-      new FlTextboxAlignMiddleRightRegularSvg({
-        attrObj: {
-          width: '2em',
-          height: '2em',
-        },
-        styleObj: $svgStyle
-      }),
-      new FlTextboxAlignMiddleRotate90FilledSvg({
-        attrObj: {
-          width: '2em',
-          height: '2em',
-        },
-        styleObj: $svgStyle
-      }),
-      new FlTextboxAlignMiddleRotate90RegularSvg({
-        attrObj: {
-          width: '2em',
-          height: '2em',
-        },
-        styleObj: $svgStyle
-      }),
-      new FlTextboxAlignTopCenterFilledSvg({
-        attrObj: {
-          width: '2em',
-          height: '2em',
-        },
-        styleObj: $svgStyle
-      }),
-      new FlTextboxAlignTopCenterRegularSvg({
-        attrObj: {
-          width: '2em',
-          height: '2em',
-        },
-        styleObj: $svgStyle
-      }),
-      new FlTextboxAlignTopFilledSvg({
-        attrObj: {
-          width: '2em',
-          height: '2em',
-        },
-        styleObj: $svgStyle
-      }),
-      new FlTextboxAlignTopLeftFilledSvg({
-        attrObj: {
-          width: '2em',
-          height: '2em',
-        },
-        styleObj: $svgStyle
-      }),
-      new FlTextboxAlignTopLeftRegularSvg({
-        attrObj: {
-          width: '2em',
-          height: '2em',
-        },
-        styleObj: $svgStyle
-      }),
-      new FlTextboxAlignTopRegularSvg({
-        attrObj: {
-          width: '2em',
-          height: '2em',
-        },
-        styleObj: $svgStyle
-      }),
-      new FlTextboxAlignTopRightFilledSvg({
-        attrObj: {
-          width: '2em',
-          height: '2em',
-        },
-        styleObj: $svgStyle
-      }),
-      new FlTextboxAlignTopRightRegularSvg({
-        attrObj: {
-          width: '2em',
-          height: '2em',
-        },
-        styleObj: $svgStyle
-      }),
-      new FlTextboxAlignTopRotate90FilledSvg({
-        attrObj: {
-          width: '2em',
-          height: '2em',
-        },
-        styleObj: $svgStyle
-      }),
-      new FlTextboxAlignTopRotate90RegularSvg({
-        attrObj: {
-          width: '2em',
-          height: '2em',
-        },
-        styleObj: $svgStyle
-      }),
-      new FlTextboxCheckmarkFilledSvg({
-        attrObj: {
-          width: '2em',
-          height: '2em',
-        },
-        styleObj: $svgStyle
-      }),
-      new FlTextboxCheckmarkRegularSvg({
-        attrObj: {
-          width: '2em',
-          height: '2em',
-        },
-        styleObj: $svgStyle
-      }),
-      new FlTextboxFilledSvg({
-        attrObj: {
-          width: '2em',
-          height: '2em',
-        },
-        styleObj: $svgStyle
-      }),
-      new FlTextboxMoreFilledSvg({
-        attrObj: {
-          width: '2em',
-          height: '2em',
-        },
-        styleObj: $svgStyle
-      }),
-      new FlTextboxMoreRegularSvg({
-        attrObj: {
-          width: '2em',
-          height: '2em',
-        },
-        styleObj: $svgStyle
-      }),
-      new FlTextboxRegularSvg({
-        attrObj: {
-          width: '2em',
-          height: '2em',
-        },
-        styleObj: $svgStyle
-      }),
-      new FlTextboxRotate90FilledSvg({
-        attrObj: {
-          width: '2em',
-          height: '2em',
-        },
-        styleObj: $svgStyle
-      }),
-      new FlTextboxRotate90RegularSvg({
-        attrObj: {
-          width: '2em',
-          height: '2em',
-        },
-        styleObj: $svgStyle
-      }),
-      new FlTextboxSettingsFilledSvg({
-        attrObj: {
-          width: '2em',
-          height: '2em',
-        },
-        styleObj: $svgStyle
-      }),
-      new FlTextboxSettingsRegularSvg({
         attrObj: {
           width: '2em',
           height: '2em',
@@ -39323,6 +39042,286 @@ export class FluentuiSvgList extends TypeDiv {
         },
         styleObj: $svgStyle
       }),
+      new FlTextboxAlignBottomCenterFilledSvg({
+        attrObj: {
+          width: '2em',
+          height: '2em',
+        },
+        styleObj: $svgStyle
+      }),
+      new FlTextboxAlignBottomCenterRegularSvg({
+        attrObj: {
+          width: '2em',
+          height: '2em',
+        },
+        styleObj: $svgStyle
+      }),
+      new FlTextboxAlignBottomFilledSvg({
+        attrObj: {
+          width: '2em',
+          height: '2em',
+        },
+        styleObj: $svgStyle
+      }),
+      new FlTextboxAlignBottomLeftFilledSvg({
+        attrObj: {
+          width: '2em',
+          height: '2em',
+        },
+        styleObj: $svgStyle
+      }),
+      new FlTextboxAlignBottomLeftRegularSvg({
+        attrObj: {
+          width: '2em',
+          height: '2em',
+        },
+        styleObj: $svgStyle
+      }),
+      new FlTextboxAlignBottomRegularSvg({
+        attrObj: {
+          width: '2em',
+          height: '2em',
+        },
+        styleObj: $svgStyle
+      }),
+      new FlTextboxAlignBottomRightFilledSvg({
+        attrObj: {
+          width: '2em',
+          height: '2em',
+        },
+        styleObj: $svgStyle
+      }),
+      new FlTextboxAlignBottomRightRegularSvg({
+        attrObj: {
+          width: '2em',
+          height: '2em',
+        },
+        styleObj: $svgStyle
+      }),
+      new FlTextboxAlignBottomRotate90FilledSvg({
+        attrObj: {
+          width: '2em',
+          height: '2em',
+        },
+        styleObj: $svgStyle
+      }),
+      new FlTextboxAlignBottomRotate90RegularSvg({
+        attrObj: {
+          width: '2em',
+          height: '2em',
+        },
+        styleObj: $svgStyle
+      }),
+      new FlTextboxAlignCenterFilledSvg({
+        attrObj: {
+          width: '2em',
+          height: '2em',
+        },
+        styleObj: $svgStyle
+      }),
+      new FlTextboxAlignCenterRegularSvg({
+        attrObj: {
+          width: '2em',
+          height: '2em',
+        },
+        styleObj: $svgStyle
+      }),
+      new FlTextboxAlignMiddleFilledSvg({
+        attrObj: {
+          width: '2em',
+          height: '2em',
+        },
+        styleObj: $svgStyle
+      }),
+      new FlTextboxAlignMiddleLeftFilledSvg({
+        attrObj: {
+          width: '2em',
+          height: '2em',
+        },
+        styleObj: $svgStyle
+      }),
+      new FlTextboxAlignMiddleLeftRegularSvg({
+        attrObj: {
+          width: '2em',
+          height: '2em',
+        },
+        styleObj: $svgStyle
+      }),
+      new FlTextboxAlignMiddleRegularSvg({
+        attrObj: {
+          width: '2em',
+          height: '2em',
+        },
+        styleObj: $svgStyle
+      }),
+      new FlTextboxAlignMiddleRightFilledSvg({
+        attrObj: {
+          width: '2em',
+          height: '2em',
+        },
+        styleObj: $svgStyle
+      }),
+      new FlTextboxAlignMiddleRightRegularSvg({
+        attrObj: {
+          width: '2em',
+          height: '2em',
+        },
+        styleObj: $svgStyle
+      }),
+      new FlTextboxAlignMiddleRotate90FilledSvg({
+        attrObj: {
+          width: '2em',
+          height: '2em',
+        },
+        styleObj: $svgStyle
+      }),
+      new FlTextboxAlignMiddleRotate90RegularSvg({
+        attrObj: {
+          width: '2em',
+          height: '2em',
+        },
+        styleObj: $svgStyle
+      }),
+      new FlTextboxAlignTopCenterFilledSvg({
+        attrObj: {
+          width: '2em',
+          height: '2em',
+        },
+        styleObj: $svgStyle
+      }),
+      new FlTextboxAlignTopCenterRegularSvg({
+        attrObj: {
+          width: '2em',
+          height: '2em',
+        },
+        styleObj: $svgStyle
+      }),
+      new FlTextboxAlignTopFilledSvg({
+        attrObj: {
+          width: '2em',
+          height: '2em',
+        },
+        styleObj: $svgStyle
+      }),
+      new FlTextboxAlignTopLeftFilledSvg({
+        attrObj: {
+          width: '2em',
+          height: '2em',
+        },
+        styleObj: $svgStyle
+      }),
+      new FlTextboxAlignTopLeftRegularSvg({
+        attrObj: {
+          width: '2em',
+          height: '2em',
+        },
+        styleObj: $svgStyle
+      }),
+      new FlTextboxAlignTopRegularSvg({
+        attrObj: {
+          width: '2em',
+          height: '2em',
+        },
+        styleObj: $svgStyle
+      }),
+      new FlTextboxAlignTopRightFilledSvg({
+        attrObj: {
+          width: '2em',
+          height: '2em',
+        },
+        styleObj: $svgStyle
+      }),
+      new FlTextboxAlignTopRightRegularSvg({
+        attrObj: {
+          width: '2em',
+          height: '2em',
+        },
+        styleObj: $svgStyle
+      }),
+      new FlTextboxAlignTopRotate90FilledSvg({
+        attrObj: {
+          width: '2em',
+          height: '2em',
+        },
+        styleObj: $svgStyle
+      }),
+      new FlTextboxAlignTopRotate90RegularSvg({
+        attrObj: {
+          width: '2em',
+          height: '2em',
+        },
+        styleObj: $svgStyle
+      }),
+      new FlTextboxCheckmarkFilledSvg({
+        attrObj: {
+          width: '2em',
+          height: '2em',
+        },
+        styleObj: $svgStyle
+      }),
+      new FlTextboxCheckmarkRegularSvg({
+        attrObj: {
+          width: '2em',
+          height: '2em',
+        },
+        styleObj: $svgStyle
+      }),
+      new FlTextboxFilledSvg({
+        attrObj: {
+          width: '2em',
+          height: '2em',
+        },
+        styleObj: $svgStyle
+      }),
+      new FlTextboxMoreFilledSvg({
+        attrObj: {
+          width: '2em',
+          height: '2em',
+        },
+        styleObj: $svgStyle
+      }),
+      new FlTextboxMoreRegularSvg({
+        attrObj: {
+          width: '2em',
+          height: '2em',
+        },
+        styleObj: $svgStyle
+      }),
+      new FlTextboxRegularSvg({
+        attrObj: {
+          width: '2em',
+          height: '2em',
+        },
+        styleObj: $svgStyle
+      }),
+      new FlTextboxRotate90FilledSvg({
+        attrObj: {
+          width: '2em',
+          height: '2em',
+        },
+        styleObj: $svgStyle
+      }),
+      new FlTextboxRotate90RegularSvg({
+        attrObj: {
+          width: '2em',
+          height: '2em',
+        },
+        styleObj: $svgStyle
+      }),
+      new FlTextboxSettingsFilledSvg({
+        attrObj: {
+          width: '2em',
+          height: '2em',
+        },
+        styleObj: $svgStyle
+      }),
+      new FlTextboxSettingsRegularSvg({
+        attrObj: {
+          width: '2em',
+          height: '2em',
+        },
+        styleObj: $svgStyle
+      }),
       new FlThinkingFilledSvg({
         attrObj: {
           width: '2em',
@@ -39407,6 +39406,34 @@ export class FluentuiSvgList extends TypeDiv {
         },
         styleObj: $svgStyle
       }),
+      new FlTimeAndWeatherFilledSvg({
+        attrObj: {
+          width: '2em',
+          height: '2em',
+        },
+        styleObj: $svgStyle
+      }),
+      new FlTimeAndWeatherRegularSvg({
+        attrObj: {
+          width: '2em',
+          height: '2em',
+        },
+        styleObj: $svgStyle
+      }),
+      new FlTimePickerFilledSvg({
+        attrObj: {
+          width: '2em',
+          height: '2em',
+        },
+        styleObj: $svgStyle
+      }),
+      new FlTimePickerRegularSvg({
+        attrObj: {
+          width: '2em',
+          height: '2em',
+        },
+        styleObj: $svgStyle
+      }),
       new FlTimelineFilledSvg({
         attrObj: {
           width: '2em',
@@ -39485,34 +39512,6 @@ export class FluentuiSvgList extends TypeDiv {
         styleObj: $svgStyle
       }),
       new FlTimerRegularSvg({
-        attrObj: {
-          width: '2em',
-          height: '2em',
-        },
-        styleObj: $svgStyle
-      }),
-      new FlTimeAndWeatherFilledSvg({
-        attrObj: {
-          width: '2em',
-          height: '2em',
-        },
-        styleObj: $svgStyle
-      }),
-      new FlTimeAndWeatherRegularSvg({
-        attrObj: {
-          width: '2em',
-          height: '2em',
-        },
-        styleObj: $svgStyle
-      }),
-      new FlTimePickerFilledSvg({
-        attrObj: {
-          width: '2em',
-          height: '2em',
-        },
-        styleObj: $svgStyle
-      }),
-      new FlTimePickerRegularSvg({
         attrObj: {
           width: '2em',
           height: '2em',
@@ -39988,20 +39987,6 @@ export class FluentuiSvgList extends TypeDiv {
         },
         styleObj: $svgStyle
       }),
-      new FlVehicleCableCarFilledSvg({
-        attrObj: {
-          width: '2em',
-          height: '2em',
-        },
-        styleObj: $svgStyle
-      }),
-      new FlVehicleCableCarRegularSvg({
-        attrObj: {
-          width: '2em',
-          height: '2em',
-        },
-        styleObj: $svgStyle
-      }),
       new FlVehicleCabFilledSvg({
         attrObj: {
           width: '2em',
@@ -40010,6 +39995,20 @@ export class FluentuiSvgList extends TypeDiv {
         styleObj: $svgStyle
       }),
       new FlVehicleCabRegularSvg({
+        attrObj: {
+          width: '2em',
+          height: '2em',
+        },
+        styleObj: $svgStyle
+      }),
+      new FlVehicleCableCarFilledSvg({
+        attrObj: {
+          width: '2em',
+          height: '2em',
+        },
+        styleObj: $svgStyle
+      }),
+      new FlVehicleCableCarRegularSvg({
         attrObj: {
           width: '2em',
           height: '2em',
@@ -41192,20 +41191,6 @@ export class FluentuiSvgList extends TypeDiv {
         },
         styleObj: $svgStyle
       }),
-      new FlWeatherSnowflakeFilledSvg({
-        attrObj: {
-          width: '2em',
-          height: '2em',
-        },
-        styleObj: $svgStyle
-      }),
-      new FlWeatherSnowflakeRegularSvg({
-        attrObj: {
-          width: '2em',
-          height: '2em',
-        },
-        styleObj: $svgStyle
-      }),
       new FlWeatherSnowFilledSvg({
         attrObj: {
           width: '2em',
@@ -41242,6 +41227,20 @@ export class FluentuiSvgList extends TypeDiv {
         styleObj: $svgStyle
       }),
       new FlWeatherSnowShowerNightRegularSvg({
+        attrObj: {
+          width: '2em',
+          height: '2em',
+        },
+        styleObj: $svgStyle
+      }),
+      new FlWeatherSnowflakeFilledSvg({
+        attrObj: {
+          width: '2em',
+          height: '2em',
+        },
+        styleObj: $svgStyle
+      }),
+      new FlWeatherSnowflakeRegularSvg({
         attrObj: {
           width: '2em',
           height: '2em',

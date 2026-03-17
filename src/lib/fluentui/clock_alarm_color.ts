@@ -1,15 +1,14 @@
-import { TypeProps, SvgPath, TypeSvgSvg } from '@type-dom/framework';
+import { SvgProps, SvgPath, TypeSvgSvg, addAttrObj } from '@type-dom/framework';
 export class FlClockAlarmColorSvg extends TypeSvgSvg {
   className: 'FlClockAlarmColorSvg';
   override childNodes: SvgPath[];
-  constructor(params: TypeProps = {}) {
-    super();
+  constructor(params: SvgProps = {}) {
+    super(params);
     this.className = 'FlClockAlarmColorSvg';
-    this.attr.addObj({
-      name: 'FlClockAlarmColorSvg',
-      title: 'FlClockAlarmColorSvg'
+   addAttrObj(this, {
+      name: 'FlClockAlarmColorSvg'
     });
-    this.attr.addObj({
+   addAttrObj(this, {
       viewBox: '0 0 20 20',
     });
     this.resetSize(24, 24);
@@ -59,6 +58,5 @@ export class FlClockAlarmColorSvg extends TypeSvgSvg {
       'M9.5 6C9.77614 6 10 6.22386 10 6.5V10H12.5C12.7761 10 13 10.2239 13 10.5C13 10.7761 12.7761 11 12.5 11H9.5C9.22386 11 9 10.7761 9 10.5V6.5C9 6.22386 9.22386 6 9.5 6Z',
     );
     this.addChild(path8);
-    this.useParams(params);
   }
 }

@@ -1,15 +1,14 @@
-import { TypeProps, SvgPath, TypeSvgSvg } from '@type-dom/framework';
+import { SvgProps, SvgPath, TypeSvgSvg, addAttrObj } from '@type-dom/framework';
 export class ElCircleCloseSvg extends TypeSvgSvg {
   className: 'ElCircleCloseSvg';
   override childNodes: SvgPath[];
-  constructor(params: TypeProps = {}) {
-    super();
+  constructor(params: SvgProps = {}) {
+    super(params);
     this.className = 'ElCircleCloseSvg';
-    this.attr.addObj({
-      name: 'ElCircleCloseSvg',
-      title: 'ElCircleCloseSvg'
+   addAttrObj(this, {
+      name: 'ElCircleCloseSvg'
     });
-    this.attr.addObj({
+   addAttrObj(this, {
       viewBox: '0 0 1024 1024',
     });
     this.resetSize(24, 24);
@@ -24,6 +23,5 @@ export class ElCircleCloseSvg extends TypeSvgSvg {
       'M512 896a384 384 0 1 0 0-768 384 384 0 0 0 0 768zm0 64a448 448 0 1 1 0-896 448 448 0 0 1 0 896z',
     );
     this.addChild(path1);
-    this.useParams(params);
   }
 }

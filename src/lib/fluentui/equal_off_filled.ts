@@ -1,15 +1,14 @@
-import { TypeProps, SvgPath, TypeSvgSvg } from '@type-dom/framework';
+import { SvgProps, SvgPath, TypeSvgSvg, addAttrObj } from '@type-dom/framework';
 export class FlEqualOffFilledSvg extends TypeSvgSvg {
   className: 'FlEqualOffFilledSvg';
   override childNodes: SvgPath[];
-  constructor(params: TypeProps = {}) {
-    super();
+  constructor(params: SvgProps = {}) {
+    super(params);
     this.className = 'FlEqualOffFilledSvg';
-    this.attr.addObj({
-      name: 'FlEqualOffFilledSvg',
-      title: 'FlEqualOffFilledSvg'
+   addAttrObj(this, {
+      name: 'FlEqualOffFilledSvg'
     });
-    this.attr.addObj({
+   addAttrObj(this, {
       viewBox: '0 0 20 20',
     });
     this.resetSize(24, 24);
@@ -19,6 +18,5 @@ export class FlEqualOffFilledSvg extends TypeSvgSvg {
       'M2.85355 2.14645C2.65829 1.95118 2.34171 1.95118 2.14645 2.14645C1.95118 2.34171 1.95118 2.65829 2.14645 2.85355L5.79289 6.5H3.75C3.33579 6.5 3 6.83579 3 7.25C3 7.66421 3.33579 8 3.75 8H7.29289L10.7929 11.5H3.75C3.33579 11.5 3 11.8358 3 12.25C3 12.6642 3.33579 13 3.75 13H12.2929L17.1464 17.8536C17.3417 18.0488 17.6583 18.0488 17.8536 17.8536C18.0488 17.6583 18.0488 17.3417 17.8536 17.1464L2.85355 2.14645ZM13.6213 11.5L15.1213 13H16.25C16.6642 13 17 12.6642 17 12.25C17 11.8358 16.6642 11.5 16.25 11.5H13.6213ZM8.62134 6.5L10.1213 8H16.25C16.6642 8 17 7.66421 17 7.25C17 6.83579 16.6642 6.5 16.25 6.5H8.62134Z',
     );
     this.addChild(path0);
-    this.useParams(params);
   }
 }

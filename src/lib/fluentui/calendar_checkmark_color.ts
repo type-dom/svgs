@@ -1,15 +1,14 @@
-import { TypeProps, SvgPath, TypeSvgSvg } from '@type-dom/framework';
+import { SvgProps, SvgPath, TypeSvgSvg, addAttrObj } from '@type-dom/framework';
 export class FlCalendarCheckmarkColorSvg extends TypeSvgSvg {
   className: 'FlCalendarCheckmarkColorSvg';
   override childNodes: SvgPath[];
-  constructor(params: TypeProps = {}) {
-    super();
+  constructor(params: SvgProps = {}) {
+    super(params);
     this.className = 'FlCalendarCheckmarkColorSvg';
-    this.attr.addObj({
-      name: 'FlCalendarCheckmarkColorSvg',
-      title: 'FlCalendarCheckmarkColorSvg'
+   addAttrObj(this, {
+      name: 'FlCalendarCheckmarkColorSvg'
     });
-    this.attr.addObj({
+   addAttrObj(this, {
       viewBox: '0 0 20 20',
     });
     this.resetSize(24, 24);
@@ -44,6 +43,5 @@ export class FlCalendarCheckmarkColorSvg extends TypeSvgSvg {
       'M16.8536 12.6464C17.0488 12.8417 17.0488 13.1583 16.8536 13.3536L13.8536 16.3536C13.6583 16.5488 13.3417 16.5488 13.1464 16.3536L12.1464 15.3536C11.9512 15.1583 11.9512 14.8417 12.1464 14.6464C12.3417 14.4512 12.6583 14.4512 12.8536 14.6464L13.5 15.2929L16.1464 12.6464C16.3417 12.4512 16.6583 12.4512 16.8536 12.6464Z',
     );
     this.addChild(path5);
-    this.useParams(params);
   }
 }

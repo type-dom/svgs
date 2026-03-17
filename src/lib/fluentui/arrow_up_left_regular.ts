@@ -1,15 +1,14 @@
-import { TypeProps, SvgPath, TypeSvgSvg } from '@type-dom/framework';
+import { SvgProps, SvgPath, TypeSvgSvg, addAttrObj } from '@type-dom/framework';
 export class FlArrowUpLeftRegularSvg extends TypeSvgSvg {
   className: 'FlArrowUpLeftRegularSvg';
   override childNodes: SvgPath[];
-  constructor(params: TypeProps = {}) {
-    super();
+  constructor(params: SvgProps = {}) {
+    super(params);
     this.className = 'FlArrowUpLeftRegularSvg';
-    this.attr.addObj({
-      name: 'FlArrowUpLeftRegularSvg',
-      title: 'FlArrowUpLeftRegularSvg'
+   addAttrObj(this, {
+      name: 'FlArrowUpLeftRegularSvg'
     });
-    this.attr.addObj({
+   addAttrObj(this, {
       viewBox: '0 0 20 20',
     });
     this.resetSize(24, 24);
@@ -19,6 +18,5 @@ export class FlArrowUpLeftRegularSvg extends TypeSvgSvg {
       'M11.5 4C11.7761 4 12 3.77614 12 3.5C12 3.22386 11.7761 3 11.5 3H3.5C3.22386 3 3 3.22386 3 3.5V11.5C3 11.7761 3.22386 12 3.5 12C3.77614 12 4 11.7761 4 11.5V4.7071L16.1465 16.8536C16.3418 17.0488 16.6584 17.0488 16.8536 16.8536C17.0489 16.6583 17.0489 16.3417 16.8536 16.1464L4.70711 4H11.5Z',
     );
     this.addChild(path0);
-    this.useParams(params);
   }
 }

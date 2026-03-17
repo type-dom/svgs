@@ -1,15 +1,14 @@
-import { TypeProps, SvgPath, TypeSvgSvg } from '@type-dom/framework';
+import { SvgProps, SvgPath, TypeSvgSvg, addAttrObj } from '@type-dom/framework';
 export class FlFormMultipleFilledSvg extends TypeSvgSvg {
   className: 'FlFormMultipleFilledSvg';
   override childNodes: SvgPath[];
-  constructor(params: TypeProps = {}) {
-    super();
+  constructor(params: SvgProps = {}) {
+    super(params);
     this.className = 'FlFormMultipleFilledSvg';
-    this.attr.addObj({
-      name: 'FlFormMultipleFilledSvg',
-      title: 'FlFormMultipleFilledSvg'
+   addAttrObj(this, {
+      name: 'FlFormMultipleFilledSvg'
     });
-    this.attr.addObj({
+   addAttrObj(this, {
       viewBox: '0 0 20 20',
     });
     this.resetSize(24, 24);
@@ -29,6 +28,5 @@ export class FlFormMultipleFilledSvg extends TypeSvgSvg {
       'M5.76392 16C6.31324 16.6138 7.11152 17 8.00002 17H12.5C14.9853 17 17 14.9853 17 12.5V8.00002C17 7.11152 16.6138 6.31324 16 5.76392V12.5C16 12.6208 15.9939 12.7402 15.982 12.8579C15.8027 14.6228 14.3122 16 12.5 16H5.76392Z',
     );
     this.addChild(path2);
-    this.useParams(params);
   }
 }

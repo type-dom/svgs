@@ -1,15 +1,14 @@
-import { TypeProps, SvgPath, TypeSvgSvg } from '@type-dom/framework';
+import { SvgProps, SvgPath, TypeSvgSvg, addAttrObj } from '@type-dom/framework';
 export class FlTableSearchFilledSvg extends TypeSvgSvg {
   className: 'FlTableSearchFilledSvg';
   override childNodes: SvgPath[];
-  constructor(params: TypeProps = {}) {
-    super();
+  constructor(params: SvgProps = {}) {
+    super(params);
     this.className = 'FlTableSearchFilledSvg';
-    this.attr.addObj({
-      name: 'FlTableSearchFilledSvg',
-      title: 'FlTableSearchFilledSvg'
+   addAttrObj(this, {
+      name: 'FlTableSearchFilledSvg'
     });
-    this.attr.addObj({
+   addAttrObj(this, {
       viewBox: '0 0 20 20',
     });
     this.resetSize(24, 24);
@@ -59,6 +58,5 @@ export class FlTableSearchFilledSvg extends TypeSvgSvg {
       'M4.5 17C5.2862 17 6.01185 16.7408 6.59615 16.3031L9.14644 18.8535C9.3417 19.0488 9.65828 19.0488 9.85355 18.8535C10.0488 18.6583 10.0488 18.3417 9.85356 18.1464L7.30324 15.596C7.74082 15.0117 8 14.2861 8 13.5C8 11.567 6.433 10 4.5 10C2.567 10 1 11.567 1 13.5C1 15.433 2.567 17 4.5 17ZM4.5 16C3.11929 16 2 14.8807 2 13.5C2 12.1193 3.11929 11 4.5 11C5.88071 11 7 12.1193 7 13.5C7 14.8807 5.88071 16 4.5 16Z',
     );
     this.addChild(path8);
-    this.useParams(params);
   }
 }

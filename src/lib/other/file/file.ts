@@ -1,13 +1,13 @@
-import { TypeProps, SvgPath, TypeSvgSvg } from '@type-dom/framework';
+import { SvgProps, SvgPath, TypeSvgSvg, addAttrObj } from '@type-dom/framework';
 
 export class FileSvg extends TypeSvgSvg {
   className: 'FileSvg';
   path: SvgPath;
 
-  constructor(params: TypeProps = {}) {
-    super();
+  constructor(params: SvgProps = {}) {
+    super(params);
     this.className = 'FileSvg';
-    this.attr.addObj({
+    addAttrObj(this, {
       viewBox: '0 0 1024 1024',
       name: 'file-svg',
     });
@@ -18,6 +18,5 @@ export class FileSvg extends TypeSvgSvg {
       'M371.2 660.48h133.12a40.96 40.96 0 0 0 0-81.92h-133.12a40.96 40.96 0 0 0 0 81.92zM650.24 696.32H363.52a40.96 40.96 0 0 0 0 81.92h286.72a40.96 40.96 0 0 0 0-81.92z'
     );
     this.addChild(this.path);
-    this.useParams(params);
   }
 }

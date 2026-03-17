@@ -1,15 +1,14 @@
-import { TypeProps, SvgPath, TypeSvgSvg } from '@type-dom/framework';
+import { SvgProps, SvgPath, TypeSvgSvg, addAttrObj } from '@type-dom/framework';
 export class FlLibraryColorSvg extends TypeSvgSvg {
   className: 'FlLibraryColorSvg';
   override childNodes: SvgPath[];
-  constructor(params: TypeProps = {}) {
-    super();
+  constructor(params: SvgProps = {}) {
+    super(params);
     this.className = 'FlLibraryColorSvg';
-    this.attr.addObj({
-      name: 'FlLibraryColorSvg',
-      title: 'FlLibraryColorSvg'
+   addAttrObj(this, {
+      name: 'FlLibraryColorSvg'
     });
-    this.attr.addObj({
+   addAttrObj(this, {
       viewBox: '0 0 20 20',
     });
     this.resetSize(24, 24);
@@ -44,6 +43,5 @@ export class FlLibraryColorSvg extends TypeSvgSvg {
       'M7 7H11V5H7V7Z',
     );
     this.addChild(path5);
-    this.useParams(params);
   }
 }

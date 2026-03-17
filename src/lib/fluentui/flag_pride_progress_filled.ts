@@ -1,15 +1,14 @@
-import { TypeProps, SvgPath, TypeSvgSvg } from '@type-dom/framework';
+import { SvgProps, SvgPath, TypeSvgSvg, addAttrObj } from '@type-dom/framework';
 export class FlFlagPrideProgressFilledSvg extends TypeSvgSvg {
   className: 'FlFlagPrideProgressFilledSvg';
   override childNodes: SvgPath[];
-  constructor(params: TypeProps = {}) {
-    super();
+  constructor(params: SvgProps = {}) {
+    super(params);
     this.className = 'FlFlagPrideProgressFilledSvg';
-    this.attr.addObj({
-      name: 'FlFlagPrideProgressFilledSvg',
-      title: 'FlFlagPrideProgressFilledSvg'
+   addAttrObj(this, {
+      name: 'FlFlagPrideProgressFilledSvg'
     });
-    this.attr.addObj({
+   addAttrObj(this, {
       viewBox: '0 0 20 20',
     });
     this.resetSize(24, 24);
@@ -69,6 +68,5 @@ export class FlFlagPrideProgressFilledSvg extends TypeSvgSvg {
       'M7.50049 12C7.50082 12 7.50016 12 7.50049 12H4L4 17.5C4 17.7761 3.77614 18 3.5 18C3.22386 18 3 17.7761 3 17.5V3.5C3 3.22386 3.22386 3 3.5 3H7.49991C7.49986 3 7.49997 3 7.49991 3H16.5C16.7761 3 17 3.22386 17 3.5V11.5C17 11.7761 16.7761 12 16.5 12H7.50049ZM7.29289 4H4V11H7.29289L10.7929 7.5L7.29289 4ZM8.70711 4L11.8536 7.14645C12.0488 7.34171 12.0488 7.65829 11.8536 7.85355L8.70711 11H16V4H8.70711Z',
     );
     this.addChild(path10);
-    this.useParams(params);
   }
 }

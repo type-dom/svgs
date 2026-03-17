@@ -1,15 +1,14 @@
-import { TypeProps, SvgPath, TypeSvgSvg } from '@type-dom/framework';
+import { SvgProps, SvgPath, TypeSvgSvg, addAttrObj } from '@type-dom/framework';
 export class FlChatMailFilledSvg extends TypeSvgSvg {
   className: 'FlChatMailFilledSvg';
   override childNodes: SvgPath[];
-  constructor(params: TypeProps = {}) {
-    super();
+  constructor(params: SvgProps = {}) {
+    super(params);
     this.className = 'FlChatMailFilledSvg';
-    this.attr.addObj({
-      name: 'FlChatMailFilledSvg',
-      title: 'FlChatMailFilledSvg'
+   addAttrObj(this, {
+      name: 'FlChatMailFilledSvg'
     });
-    this.attr.addObj({
+   addAttrObj(this, {
       viewBox: '0 0 20 20',
     });
     this.resetSize(24, 24);
@@ -24,6 +23,5 @@ export class FlChatMailFilledSvg extends TypeSvgSvg {
       'M12.2764 14.9472L9.87445 13.7462C10.3142 13.6243 10.7366 13.4605 11.137 13.2594L12.5 13.9409L17 11.6909V11C17 10.4477 16.5523 10 16 10H14.3264C14.4787 9.67933 14.6074 9.34525 14.7101 9H16C17.1046 9 18 9.89543 18 11V16C18 17.1046 17.1046 18 16 18H9C7.89543 18 7 17.1046 7 16V13.9291C7.3266 13.9758 7.66048 14 8 14V16C8 16.5523 8.44772 17 9 17H16C16.5523 17 17 16.5523 17 16V12.809L12.7236 14.9472C12.5828 15.0175 12.4171 15.0175 12.2764 14.9472Z',
     );
     this.addChild(path1);
-    this.useParams(params);
   }
 }

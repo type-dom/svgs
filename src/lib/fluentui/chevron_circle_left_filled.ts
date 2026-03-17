@@ -1,15 +1,14 @@
-import { TypeProps, SvgPath, TypeSvgSvg } from '@type-dom/framework';
+import { SvgProps, SvgPath, TypeSvgSvg, addAttrObj } from '@type-dom/framework';
 export class FlChevronCircleLeftFilledSvg extends TypeSvgSvg {
   className: 'FlChevronCircleLeftFilledSvg';
   override childNodes: SvgPath[];
-  constructor(params: TypeProps = {}) {
-    super();
+  constructor(params: SvgProps = {}) {
+    super(params);
     this.className = 'FlChevronCircleLeftFilledSvg';
-    this.attr.addObj({
-      name: 'FlChevronCircleLeftFilledSvg',
-      title: 'FlChevronCircleLeftFilledSvg'
+   addAttrObj(this, {
+      name: 'FlChevronCircleLeftFilledSvg'
     });
-    this.attr.addObj({
+   addAttrObj(this, {
       viewBox: '0 0 20 20',
     });
     this.resetSize(24, 24);
@@ -19,6 +18,5 @@ export class FlChevronCircleLeftFilledSvg extends TypeSvgSvg {
       'M10 2C14.4183 2 18 5.58172 18 10C18 14.4183 14.4183 18 10 18C5.58172 18 2 14.4183 2 10C2 5.58172 5.58172 2 10 2ZM11.8536 6.85355C12.0488 6.65829 12.0488 6.34171 11.8536 6.14645C11.6583 5.95118 11.3417 5.95118 11.1464 6.14645L7.64645 9.64645C7.55268 9.74021 7.5 9.86739 7.5 10C7.5 10.1326 7.55268 10.2598 7.64645 10.3536L11.1464 13.8536C11.3417 14.0488 11.6583 14.0488 11.8536 13.8536C12.0488 13.6583 12.0488 13.3417 11.8536 13.1464L8.70711 10L11.8536 6.85355Z',
     );
     this.addChild(path0);
-    this.useParams(params);
   }
 }

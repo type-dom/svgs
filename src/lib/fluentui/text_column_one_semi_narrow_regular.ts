@@ -1,15 +1,14 @@
-import { TypeProps, SvgPath, TypeSvgSvg } from '@type-dom/framework';
+import { SvgProps, SvgPath, TypeSvgSvg, addAttrObj } from '@type-dom/framework';
 export class FlTextColumnOneSemiNarrowRegularSvg extends TypeSvgSvg {
   className: 'FlTextColumnOneSemiNarrowRegularSvg';
   override childNodes: SvgPath[];
-  constructor(params: TypeProps = {}) {
-    super();
+  constructor(params: SvgProps = {}) {
+    super(params);
     this.className = 'FlTextColumnOneSemiNarrowRegularSvg';
-    this.attr.addObj({
-      name: 'FlTextColumnOneSemiNarrowRegularSvg',
-      title: 'FlTextColumnOneSemiNarrowRegularSvg'
+   addAttrObj(this, {
+      name: 'FlTextColumnOneSemiNarrowRegularSvg'
     });
-    this.attr.addObj({
+   addAttrObj(this, {
       viewBox: '0 0 20 20',
     });
     this.resetSize(24, 24);
@@ -19,6 +18,5 @@ export class FlTextColumnOneSemiNarrowRegularSvg extends TypeSvgSvg {
       'M6.5 5C6.22386 5 6 5.22386 6 5.5C6 5.77614 6.22386 6 6.5 6H13.5C13.7761 6 14 5.77614 14 5.5C14 5.22386 13.7761 5 13.5 5H6.5ZM6.5 8C6.22386 8 6 8.22386 6 8.5C6 8.77614 6.22386 9 6.5 9H13.5C13.7761 9 14 8.77614 14 8.5C14 8.22386 13.7761 8 13.5 8H6.5ZM6 11.5C6 11.2239 6.22386 11 6.5 11H13.5C13.7761 11 14 11.2239 14 11.5C14 11.7761 13.7761 12 13.5 12H6.5C6.22386 12 6 11.7761 6 11.5ZM6.5 14C6.22386 14 6 14.2239 6 14.5C6 14.7761 6.22386 15 6.5 15H13.5C13.7761 15 14 14.7761 14 14.5C14 14.2239 13.7761 14 13.5 14H6.5Z',
     );
     this.addChild(path0);
-    this.useParams(params);
   }
 }

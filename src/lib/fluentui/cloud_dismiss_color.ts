@@ -1,15 +1,14 @@
-import { TypeProps, SvgPath, TypeSvgSvg } from '@type-dom/framework';
+import { SvgProps, SvgPath, TypeSvgSvg, addAttrObj } from '@type-dom/framework';
 export class FlCloudDismissColorSvg extends TypeSvgSvg {
   className: 'FlCloudDismissColorSvg';
   override childNodes: SvgPath[];
-  constructor(params: TypeProps = {}) {
-    super();
+  constructor(params: SvgProps = {}) {
+    super(params);
     this.className = 'FlCloudDismissColorSvg';
-    this.attr.addObj({
-      name: 'FlCloudDismissColorSvg',
-      title: 'FlCloudDismissColorSvg'
+   addAttrObj(this, {
+      name: 'FlCloudDismissColorSvg'
     });
-    this.attr.addObj({
+   addAttrObj(this, {
       viewBox: '0 0 20 20',
     });
     this.resetSize(24, 24);
@@ -54,6 +53,5 @@ export class FlCloudDismissColorSvg extends TypeSvgSvg {
       'M11.6464 11.6464C11.8417 11.4512 12.1583 11.4512 12.3536 11.6464L13.5 12.7929L14.6464 11.6464C14.8417 11.4512 15.1583 11.4512 15.3536 11.6464C15.5488 11.8417 15.5488 12.1583 15.3536 12.3536L14.2071 13.5L15.3536 14.6464C15.5488 14.8417 15.5488 15.1583 15.3536 15.3536C15.1583 15.5488 14.8417 15.5488 14.6464 15.3536L13.5 14.2071L12.3536 15.3536C12.1583 15.5488 11.8417 15.5488 11.6464 15.3536C11.4512 15.1583 11.4512 14.8417 11.6464 14.6464L12.7929 13.5L11.6464 12.3536C11.4512 12.1583 11.4512 11.8417 11.6464 11.6464Z',
     );
     this.addChild(path7);
-    this.useParams(params);
   }
 }

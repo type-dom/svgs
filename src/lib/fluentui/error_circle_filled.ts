@@ -1,15 +1,14 @@
-import { TypeProps, SvgPath, TypeSvgSvg } from '@type-dom/framework';
+import { SvgProps, SvgPath, TypeSvgSvg, addAttrObj } from '@type-dom/framework';
 export class FlErrorCircleFilledSvg extends TypeSvgSvg {
   className: 'FlErrorCircleFilledSvg';
   override childNodes: SvgPath[];
-  constructor(params: TypeProps = {}) {
-    super();
+  constructor(params: SvgProps = {}) {
+    super(params);
     this.className = 'FlErrorCircleFilledSvg';
-    this.attr.addObj({
-      name: 'FlErrorCircleFilledSvg',
-      title: 'FlErrorCircleFilledSvg'
+   addAttrObj(this, {
+      name: 'FlErrorCircleFilledSvg'
     });
-    this.attr.addObj({
+   addAttrObj(this, {
       viewBox: '0 0 20 20',
     });
     this.resetSize(24, 24);
@@ -19,6 +18,5 @@ export class FlErrorCircleFilledSvg extends TypeSvgSvg {
       'M10 2C14.4183 2 18 5.58172 18 10C18 14.4183 14.4183 18 10 18C5.58172 18 2 14.4183 2 10C2 5.58172 5.58172 2 10 2ZM10 12.5C9.58579 12.5 9.25 12.8358 9.25 13.25C9.25 13.6642 9.58579 14 10 14C10.4142 14 10.75 13.6642 10.75 13.25C10.75 12.8358 10.4142 12.5 10 12.5ZM10 6C9.75454 6 9.55039 6.17688 9.50806 6.41012L9.5 6.5V11L9.50806 11.0899C9.55039 11.3231 9.75454 11.5 10 11.5C10.2455 11.5 10.4496 11.3231 10.4919 11.0899L10.5 11V6.5L10.4919 6.41012C10.4496 6.17688 10.2455 6 10 6Z',
     );
     this.addChild(path0);
-    this.useParams(params);
   }
 }
