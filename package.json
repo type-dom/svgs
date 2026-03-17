@@ -31,10 +31,14 @@
     "test": "vp test",
     "typecheck": "tsc --noEmit",
     "prepublishOnly": "npm run build",
-    "prepare": "vp config"
+    "prepare": "vp config",
+    "common-svgs": "node trans-svgs/common-svg.mjs",
+    "element-svgs": "node trans-svgs/element-svg.mjs",
+    "fluentui-svgs": "node trans-svgs/fluentui-svg.mjs"
   },
   "dependencies": {
-    "@type-dom/framework": "^0.5.0"
+    "@type-dom/framework": "^0.5.0",
+    "@type-dom/parser": "^0.0.3"
   },
   "devDependencies": {
     "@types/node": "^25.3.5",
