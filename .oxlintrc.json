@@ -5,7 +5,6 @@
     "es6": true
   },
   "rules": {
-    // Possible Errors
     "for-direction": "error",
     "no-async-promise-executor": "error",
     "no-case-declarations": "error",
@@ -51,7 +50,6 @@
     "use-isnan": "error",
     "valid-typeof": "error",
 
-    // Best Practices
     "default-case": "off",
     "eqeqeq": ["error", "always"],
     "no-eval": "error",
@@ -71,7 +69,6 @@
     "no-useless-return": "error",
     "radix": "error",
 
-    // Style
     "array-bracket-spacing": ["error", "never"],
     "block-spacing": ["error", "always"],
     "brace-style": ["error", "1tbs"],
@@ -104,7 +101,6 @@
     "spaced-comment": ["error", "always"],
     "switch-colon-spacing": ["error", { "after": true, "before": false }],
 
-    // ES6
     "arrow-body-style": "off",
     "arrow-parens": ["error", "as-needed"],
     "arrow-spacing": ["error", { "before": true, "after": true }],
@@ -112,7 +108,6 @@
     "generator-star-spacing": ["error", { "before": false, "after": true }],
     "no-confusing-arrow": "error",
     "no-duplicate-imports": "error",
-    "no-new-symbol": "error",
     "no-useless-computed-key": "error",
     "no-useless-constructor": "error",
     "no-var": "error",

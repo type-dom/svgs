@@ -1,7 +1,7 @@
+import { defineConfig } from 'vite-plus';
 import tsdownConfig from './tsdown.config.js';
 
-import { defineConfig } from 'vite-plus';
-
+// 模拟 @type-dom/framework 模块
 export default defineConfig({
   staged: {
     "*": "vp check --fix"
