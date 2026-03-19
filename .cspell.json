@@ -1,0 +1,127 @@
+{
+  "version": "0.9",
+  "language": "en-US,zh-CN",
+  "dictionaries": [
+    "en_US",
+    "zh_CN",
+    "typescript",
+    "node",
+    "software-terms"
+  ],
+  "words": [
+    "TypeDom",
+    "TypeScript",
+    "Vite",
+    "Vitest",
+    "Tsdown",
+    "TypeDoc",
+    "LingMa",
+    "通义灵码",
+    "RAG",
+    "ChromaDB",
+    "LangChain",
+    "Mermaid",
+    "frontmatter",
+    "backtick",
+    "AST",
+    "ESM",
+    "CDN",
+    "CLI",
+    "API",
+    "SVG",
+    "JSX",
+    "DOM",
+    "npmjs",
+    "githubusercontent",
+    "xjf",
+    "arialabel",
+    "viewbox",
+    "stroke-width",
+    "linecap",
+    "linejoin",
+    "currentColor",
+    "bumpp",
+    "changelogen",
+    "markdownlint",
+    "lychee",
+    "cspell",
+    "textlint",
+    "pre-commit",
+    "pre-push",
+    "post-merge",
+    "tree-shaking",
+    "on-demand",
+    "monorepo",
+    "ADR",
+    "CI/CD",
+    "E2E",
+    "TDD",
+    "BDD",
+    "OODA",
+    "W3C",
+    "Mermaid",
+    "Playwright",
+    "Happy-DOM",
+    "v8",
+    "codecov",
+    "SonarQube"
+  ],
+  "ignoreWords": [
+    "svg",
+    "svgs",
+    "classname",
+    "typeof",
+    "undefined",
+    "namespace",
+    "readonly",
+    "interface",
+    "impl",
+    "utils",
+    "config",
+    "docs"
+  ],
+  "flagWords": [],
+  "patterns": [
+    {
+      "name": "Markdown Code Blocks",
+      "pattern": "/^```[\\s\\S]*?^```/gm",
+      "description": "Ignore code blocks in markdown files"
+    },
+    {
+      "name": "Frontmatter",
+      "pattern": "/^---[\\s\\S]*?^---/",
+      "description": "Ignore frontmatter in markdown files"
+    },
+    {
+      "name": "URLs",
+      "pattern": "/https?:\\/\\/[^\\s]+/g",
+      "description": "Ignore URLs"
+    },
+    {
+      "name": "Email Addresses",
+      "pattern": "/[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}/g",
+      "description": "Ignore email addresses"
+    }
+  ],
+  "useGitignore": true,
+  "enableFiletypes": [
+    ".md",
+    ".markdown",
+    ".ts",
+    ".tsx",
+    ".js",
+    ".jsx"
+  ],
+  "caseSensitive": false,
+  "suggestCount": 5,
+  "showSuggestions": true,
+  "minWordLength": 4,
+  "maxDuplicateProblems": 5,
+  "checkLimit": 10000,
+  "reporters": [
+    {
+      "type": "console",
+      "output": "stdout"
+    }
+  ]
+}

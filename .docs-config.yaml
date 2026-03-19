@@ -1,0 +1,395 @@
+# Documentation Configuration
+# AI-First | Docs-as-Code | Code-as-Docs
+
+version: 0.4.0
+lastUpdated: 2026-03-19
+
+# =============================================================================
+# AI优先配置 (AI-First Configuration)
+# =============================================================================
+
+ai:
+  # RAG 知识库配置
+  rag:
+    enabled: true
+    vector_store: chromadb
+    embedding_model: BAAI/bge-m3
+    chunk_size: 500
+    chunk_overlap: 50
+    top_k: 5
+    rerank: true
+    
+  # Agent 技能集成
+  agent:
+    skills:
+      - code_generation
+      - test_generation
+      - documentation_generation
+      - code_review
+      - bug_fixing
+    context_management:
+      max_tokens: 7500
+      compression: true
+      priority_injection: true
+      
+  # 提示词模板
+  prompts:
+    templates_path: "00-索引与导航/AI-PROMPT-TEMPLATES.md"
+    auto_complete: true
+    context_aware: true
+
+# =============================================================================
+# 文档即代码配置 (Docs-as-Code Configuration)
+# =============================================================================
+
+docs_as_code:
+  # 版本控制
+  version_control:
+    system: git
+    repository: https://github.com/type-dom/svgs
+    branch: main
+    protected_branches: [main, develop]
+    
+  # CI/CD 自动化
+  ci_cd:
+    platform: GitHub Actions
+    workflows:
+      - name: docs-generation
+        trigger: push
+        files: ['src/**/*.ts', 'ai-docs/**/*.md']
+        tasks:
+          - typedoc
+          - changelog
+          - coverage
+          
+      - name: docs-quality-check
+        trigger: pull_request
+        files: ['ai-docs/**/*.md']
+        tasks:
+          - markdownlint
+          - lychee
+          - cspell
+          - textlint
+          
+  # 质量门禁
+  quality_gates:
+    markdownlint: error
+    link_validation: warning
+    spell_check: warning
+    ai_tag_verification: error
+    frontmatter_completeness: error
+    
+  # Git Hooks
+  hooks:
+    pre-commit:
+      - markdownlint --fix
+      - cspell
+    pre-push:
+      - npm run docs:check
+      - npm run docs:links
+    post-merge:
+      - npm run docs:sync
+
+# =============================================================================
+# 代码即文档配置 (Code-as-Docs Configuration)
+# =============================================================================
+
+code_as_docs:
+  # TypeScript JSDoc 要求
+  jsdoc:
+    required: true
+    style: google
+    include:
+      - descriptions
+      - param_types
+      - return_types
+      - examples
+      - see_links
+    exclude_private: true
+    exclude_protected: false
+    
+  # TypeDoc 配置
+  typedoc:
+    entry_points:
+      - src/index.ts
+      - src/lib/common-index.ts
+      - src/lib/element-plus-index.ts
+      - src/lib/fluentui-index.ts
+    output: GENERATED/api-extractor
+    theme: default
+    include_version: true
+    include_git_remote: true
+    
+  # 注释规范
+  comments:
+    style: JSDoc
+    language: bilingual # zh + en
+    auto_generate: true
+    update_on_change: true
+
+# =============================================================================
+# 文档结构配置 (Documentation Structure)
+# =============================================================================
+
+structure:
+  # 目录组织
+  directories:
+    - path: 00-索引与导航
+      purpose: index_navigation
+      priority: high
+      ai_tags: [index, navigation]
+      
+    - path: 01-项目概述
+      purpose: project_overview
+      priority: high
+      ai_tags: [overview, stack, architecture]
+      
+    - path: 02-开发规范
+      purpose: development_standards
+      priority: high
+      ai_tags: [standards, coding, testing]
+      
+    - path: 03-API 文档
+      purpose: api_documentation
+      priority: medium
+      ai_tags: [api, interfaces, types]
+      
+    - path: 04-业务文档
+      purpose: business_docs
+      priority: medium
+      ai_tags: [business, domain, workflow]
+      
+    - path: 05-测试文档
+      purpose: testing_docs
+      priority: medium
+      ai_tags: [testing, vitest, e2e]
+      
+    - path: 06-运维文档
+      purpose: operations_docs
+      priority: medium
+      ai_tags: [ops, deployment, cicd]
+      
+    - path: 07-AI 专项文档
+      purpose: ai_specific
+      priority: high
+      ai_tags: [ai-first, rag, agent]
+      
+    - path: 08-架构决策记录
+      purpose: architecture_decisions
+      priority: high
+      ai_tags: [adr, decisions, architecture]
+      
+    - path: GENERATED
+      purpose: auto_generated
+      priority: low
+      ai_tags: [auto-generated]
+      ignore_in_git: true
+      
+    - path: ARCHIVE
+      purpose: historical_archive
+      priority: low
+      ai_tags: [archive, history]
+
+# =============================================================================
+# Frontmatter 规范 (Frontmatter Specification)
+# =============================================================================
+
+frontmatter:
+  required_fields:
+    - title
+    - description
+    - version
+    - lastUpdated
+    - tags
+    - authors
+    
+  optional_fields:
+    - contributors
+    - relatedDocs
+    - status
+    - compliance
+    
+  field_formats:
+    title: string
+    description: string (max 200 chars)
+    version: semver
+    lastUpdated: ISO8601
+    tags: array[string]
+    authors: array[string]
+    contributors: array[string]
+    relatedDocs: array[string]
+    status: enum[active, deprecated, archived]
+    compliance: string
+
+# =============================================================================
+# 标签系统 (Tagging System)
+# =============================================================================
+
+tagging:
+  # AI 标签
+  ai_tags:
+    - AI-First
+    - Auto-Generated
+    - Human-Written
+    - Prompt-Template
+    - Quick-Start
+    - Code-As-Docs
+    - Docs-As-Code
+    
+  # 内容标签
+  content_tags:
+    - tutorial
+    - reference
+    - guide
+    - api
+    - concept
+    - example
+    
+  # 角色标签
+  role_tags:
+    - beginner
+    - intermediate
+    - advanced
+    - maintainer
+    - reviewer
+
+# =============================================================================
+# 质量指标 (Quality Metrics)
+# =============================================================================
+
+quality_metrics:
+  # 完整性指标
+  completeness:
+    target: 1.0
+    measurement: document_count / required_count
+    
+  # 准确性指标
+  accuracy:
+    target: 0.98
+    measurement: verified_documents / total_documents
+    
+  # 一致性指标
+  consistency:
+    target: 0.97
+    measurement: consistent_terminology / total_terms
+    
+  # 可搜索性指标
+  searchability:
+    target: 0.95
+    measurement: tagged_documents / total_documents
+    
+  # AI 友好性指标
+  ai_friendliness:
+    target: 0.96
+    measurement: structured_documents / total_documents
+    
+  # 机器可读性指标
+  machine_readability:
+    target: 0.88
+    measurement: machine_readable_documents / total_documents
+
+# =============================================================================
+# 自动化工具 (Automation Tools)
+# =============================================================================
+
+automation_tools:
+  # Markdown 检查
+  markdown:
+    linter: markdownlint
+    config: .markdownlint.json
+    rules:
+      MD013: false  # line-length
+      MD024: false  # no-duplicate-heading
+      
+  # 链接检查
+  links:
+    checker: lychee
+    config: .lycheerc
+    exclude:
+      - localhost
+      - example.com
+      
+  # 拼写检查
+  spelling:
+    checker: cspell
+    config: .cspell.json
+    dictionaries:
+      - en_US
+      - zh_CN
+      - typescript
+      
+  # 文法检查
+  grammar:
+    checker: textlint
+    config: .textlintrc
+    rules:
+      - ja-technical-writing
+      - zh-technical-writing
+
+# =============================================================================
+# 同步策略 (Synchronization Strategy)
+# =============================================================================
+
+sync:
+  # 代码→文档同步
+  code_to_docs:
+    enabled: true
+    triggers:
+      - api_change
+      - interface_change
+      - type_change
+    actions:
+      - update_typedoc
+      - update_examples
+      - update_related_docs
+      
+  # 文档→代码同步
+  docs_to_code:
+    enabled: true
+    triggers:
+      - spec_change
+      - requirement_change
+    actions:
+      - update_comments
+      - update_jsdoc
+      - create_tasks
+      
+  # 版本同步
+  version_sync:
+    enabled: true
+    source: package.json
+    targets:
+      - documentation-metadata.json
+      - "**/*.md (frontmatter.version)"
+
+# =============================================================================
+# 监控和报告 (Monitoring & Reporting)
+# =============================================================================
+
+monitoring:
+  # 文档健康度
+  health_check:
+    frequency: weekly
+    metrics:
+      - broken_links
+      - outdated_content
+      - missing_frontmatter
+      - inconsistent_tags
+    report_path: GENERATED/reports/docs-health.md
+    
+  # 使用分析
+  analytics:
+    enabled: true
+    metrics:
+      - page_views
+      - search_queries
+      - popular_docs
+      - ai_retrievals
+    dashboard: GENERATED/analytics/docs-usage.html
+    
+  # 改进建议
+  improvements:
+    ai_suggested: true
+    human_reviewed: true
+    priority_based: true
+    tracking_path: ai-docs/IMPROVEMENTS.md

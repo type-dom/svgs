@@ -1,0 +1,60 @@
+{
+  "$schema": "https://typedoc.org/schema.json",
+  
+  // ========== 入口配置 ==========
+  "entryPoints": [
+    "./src/index.ts",
+    "./src/lib/common-index.ts",
+    "./src/lib/element-plus-index.ts",
+    "./src/lib/fluentui-index.ts"
+  ],
+  
+  // ========== 输出配置 ==========
+  "out": "./GENERATED/api-extractor",
+  "theme": "default",
+  
+  // ========== 文档内容 ==========
+  "includeVersion": true,          // 包含版本号
+  "readme": "./README.md",         // 使用项目 README
+  "commentStyle": "all",           // 包含所有注释
+  
+  // ========== 过滤配置 ==========
+  "excludePrivate": true,          // 排除私有成员
+  "excludeProtected": false,       // 包含保护成员
+  "excludeExternals": true,        // 排除外部声明
+  "excludeInternal": true,         // 排除内部标记
+  
+  // ========== 显示配置 ==========
+  "visibilityFilters": {
+    "protected": true,
+    "private": false,
+    "inherited": true,
+    "external": false
+  },
+  
+  // ========== 插件配置 ==========
+  "plugin": [],
+  
+  // ========== 高级选项 ==========
+  "skipErrorChecking": true,       // 跳过错误检查 (加速)
+  "disableSources": false,         // 包含源码链接
+  "validation": {
+    "notExported": true,           // 验证未导出项
+    "invalidLink": true,           // 验证无效链接
+    "notDocumented": false         // 允许未文档化
+  },
+  
+  // ========== 输出格式 ==========
+  "json": "./GENERATED/api-extractor/typedoc.json",
+  "pretty": true,                  // 美化输出
+  
+  // ========== 导航配置 ==========
+  "navigationLinks": {
+    "GitHub": "https://github.com/type-dom/svgs",
+    "NPM": "https://www.npmjs.com/package/@type-dom/svgs"
+  },
+  
+  // ========== 日志配置 ==========
+  "logLevel": "Info",              // 日志级别：Verbose, Info, Warn, Error
+  "help": false                    // 不显示帮助
+}

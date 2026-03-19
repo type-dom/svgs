@@ -1,0 +1,40 @@
+{
+  "files": [
+    "ai-docs/**/*.md",
+    "*.md",
+    "README.md"
+  ],
+  "ignore": [
+    "node_modules/**",
+    "dist/**",
+    "GENERATED/**/!(*.md)",
+    "ARCHIVE/**"
+  ],
+  "http-headers": [
+    "User-Agent: lychee/1.0",
+    "Accept: text/html"
+  ],
+  "timeout": 30,
+  "retries": 3,
+  "retry-wait-time": 2,
+  "max-concurrency": 10,
+  "max-cache-age": 86400,
+  "exclude": [
+    "^file:///",
+    "localhost",
+    "127\\.0\\.0\\.1",
+    "example\\.com",
+    "example\\.org",
+    "githubusercontent.com.*\\.png$",
+    "githubusercontent.com.*\\.jpg$",
+    "type-dom.github.io"
+  ],
+  "accept": [
+    "200",
+    "429"
+  ],
+  "require-https": true,
+  "include-mail": true,
+  "verbose": false,
+  "no-progress": false
+}

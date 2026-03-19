@@ -19,6 +19,10 @@
   },
   "exports": {
     ".": "./dist/index.mjs",
+    "./common": "./dist/lib/common-index.mjs",
+    "./element-plus": "./dist/lib/element-plus-index.mjs",
+    "./fluentui": "./dist/lib/fluentui-index.mjs",
+    "./common/add": "./dist/lib/common/add.mjs",
     "./package.json": "./package.json"
   },
   "types": "./dist/index.d.ts",
@@ -30,11 +34,21 @@
     "dev": "vp pack --watch",
     "test": "vp test",
     "typecheck": "tsc --noEmit",
-    "prepublishOnly": "npm run build",
+    "docs:api": "typedoc",
+    "docs:watch": "typedoc --watch",
+    "prepublishOnly": "npm run build && npm run docs:api",
     "prepare": "vp config",
     "common-svgs": "node trans-svgs/common-svg.mjs",
     "element-svgs": "node trans-svgs/element-svg.mjs",
-    "fluentui-svgs": "node trans-svgs/fluentui-svg.mjs"
+    "fluentui-svgs": "node trans-svgs/fluentui-svg.mjs",
+    "docs:check": "markdownlint ai-docs/**/*.md && lychee ai-docs && cspell ai-docs/**/*.md",
+    "docs:fix": "markdownlint ai-docs/**/*.md --fix",
+    "docs:links": "lychee ai-docs/**/*.md --verbose",
+    "docs:sync": "node scripts/sync-docs-version.mjs",
+    "docs:stats": "node scripts/docs-statistics.mjs",
+    "docs:rag-build": "python scripts/build-rag-kb.py",
+    "docs:rag-index": "python scripts/index-rag-kb.py",
+    "docs:quality": "npm run docs:check && npm run docs:stats"
   },
   "dependencies": {
     "@type-dom/framework": "^0.5.0",
@@ -44,7 +58,13 @@
     "@types/node": "^25.3.5",
     "@typescript/native-preview": "7.0.0-dev.20260309.1",
     "bumpp": "^10.4.1",
+    "changelogen": "^0.5.5",
     "jest-extended": "^7.0.0",
+    "markdownlint-cli": "^0.39.0",
+    "lycheeverse": "^0.15.0",
+    "cspell": "^8.3.2",
+    "textlint": "^13.4.1",
+    "typedoc": "^0.27.0",
     "typescript": "^5.9.3",
     "vitest": "npm:@voidzero-dev/vite-plus-test@latest",
     "vite-plus": "latest"

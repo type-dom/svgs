@@ -1,0 +1,52 @@
+{
+  "rules": {
+    "preset": "ja-technical-writing",
+    "max-ten": {
+      "max": 3,
+      "severity": "warning"
+    },
+    "max-comma": {
+      "max": 5,
+      "severity": "warning"
+    },
+    "no-exclamation-question-mark": true,
+    "no-hankaku-kana": true,
+    "no-mixed-zenkaku-and-hankaku-alphabet": true,
+    "sentence-length": {
+      "max": 100,
+      "severity": "warning"
+    },
+    "zh-technical-writing": {
+      "comma-style": false,
+      "period-style": false,
+      "bracket-style": false,
+      "space-style": false
+    }
+  },
+  "filters": [
+    {
+      "name": "markdown",
+      "pattern": "/^```[\\s\\S]*?^```/gm"
+    },
+    {
+      "name": "frontmatter",
+      "pattern": "/^---[\\s\\S]*?^---/"
+    },
+    {
+      "name": "url",
+      "pattern": "/https?:\\/\\/[^\\s]+/g"
+    },
+    {
+      "name": "code",
+      "pattern": "/`[^`]+`/g"
+    }
+  ],
+  "config": {
+    "exclude": [
+      "node_modules/**",
+      "dist/**",
+      "GENERATED/**",
+      "ARCHIVE/**"
+    ]
+  }
+}
