@@ -1,21 +1,21 @@
-import { SvgProps, SvgPath, TypeSvgSvg, addAttrObj } from '@type-dom/framework';
+import { SvgProps, SvgPath, TypeSvgSvg, addAttrObj } from "@type-dom/framework";
 export class FlShapesRegularSvg extends TypeSvgSvg {
-  className: 'FlShapesRegularSvg';
+  className: "FlShapesRegularSvg";
   override childNodes: SvgPath[];
   constructor(params: SvgProps = {}) {
     super(params);
-    this.className = 'FlShapesRegularSvg';
-   addAttrObj(this, {
-      name: 'FlShapesRegularSvg'
+    this.className = "FlShapesRegularSvg";
+    addAttrObj(this, {
+      name: "FlShapesRegularSvg",
     });
-   addAttrObj(this, {
-      viewBox: '0 0 20 20',
+    addAttrObj(this, {
+      viewBox: "0 0 20 20",
     });
     this.resetSize(24, 24);
     this.childNodes = [];
-    const path0 = new SvgPath({ attrObj: { fill: 'currentColor' }});
+    const path0 = new SvgPath({ attrObj: { fill: "currentColor" } });
     path0.setData(
-      'M7.5 3C5.01472 3 3 5.01472 3 7.5C3 9.81628 4.75002 11.7238 7 11.9725V12.9776C4.19675 12.725 2 10.369 2 7.5C2 4.46243 4.46243 2 7.5 2C10.369 2 12.725 4.19675 12.9776 7H11.9725C11.7238 4.75002 9.81628 3 7.5 3ZM10.5 8C9.11929 8 8 9.11929 8 10.5V15.5C8 16.8807 9.11929 18 10.5 18H15.5C16.8807 18 18 16.8807 18 15.5V10.5C18 9.11929 16.8807 8 15.5 8H10.5ZM9 10.5C9 9.67157 9.67157 9 10.5 9H15.5C16.3284 9 17 9.67157 17 10.5V15.5C17 16.3284 16.3284 17 15.5 17H10.5C9.67157 17 9 16.3284 9 15.5V10.5Z',
+      "M7.5 3C5.01472 3 3 5.01472 3 7.5C3 9.81628 4.75002 11.7238 7 11.9725V12.9776C4.19675 12.725 2 10.369 2 7.5C2 4.46243 4.46243 2 7.5 2C10.369 2 12.725 4.19675 12.9776 7H11.9725C11.7238 4.75002 9.81628 3 7.5 3ZM10.5 8C9.11929 8 8 9.11929 8 10.5V15.5C8 16.8807 9.11929 18 10.5 18H15.5C16.8807 18 18 16.8807 18 15.5V10.5C18 9.11929 16.8807 8 15.5 8H10.5ZM9 10.5C9 9.67157 9.67157 9 10.5 9H15.5C16.3284 9 17 9.67157 17 10.5V15.5C17 16.3284 16.3284 17 15.5 17H10.5C9.67157 17 9 16.3284 9 15.5V10.5Z",
     );
     this.addChild(path0);
   }

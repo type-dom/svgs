@@ -1,21 +1,21 @@
-import { SvgProps, SvgPath, TypeSvgSvg, addAttrObj } from '@type-dom/framework';
+import { SvgProps, SvgPath, TypeSvgSvg, addAttrObj } from "@type-dom/framework";
 export class FlDataScatterFilledSvg extends TypeSvgSvg {
-  className: 'FlDataScatterFilledSvg';
+  className: "FlDataScatterFilledSvg";
   override childNodes: SvgPath[];
   constructor(params: SvgProps = {}) {
     super(params);
-    this.className = 'FlDataScatterFilledSvg';
-   addAttrObj(this, {
-      name: 'FlDataScatterFilledSvg'
+    this.className = "FlDataScatterFilledSvg";
+    addAttrObj(this, {
+      name: "FlDataScatterFilledSvg",
     });
-   addAttrObj(this, {
-      viewBox: '0 0 20 20',
+    addAttrObj(this, {
+      viewBox: "0 0 20 20",
     });
     this.resetSize(24, 24);
     this.childNodes = [];
-    const path0 = new SvgPath({ attrObj: { fill: 'currentColor' }});
+    const path0 = new SvgPath({ attrObj: { fill: "currentColor" } });
     path0.setData(
-      'M3 2.5C3 2.22386 2.77614 2 2.5 2C2.22386 2 2 2.22386 2 2.5V17.5C2 17.7761 2.22386 18 2.5 18H17.5C17.7761 18 18 17.7761 18 17.5C18 17.2239 17.7761 17 17.5 17H3V2.5ZM7.5 10C8.88071 10 10 8.88071 10 7.5C10 6.11929 8.88071 5 7.5 5C6.11929 5 5 6.11929 5 7.5C5 8.88071 6.11929 10 7.5 10ZM17 5.5C17 6.88071 15.8807 8 14.5 8C13.1193 8 12 6.88071 12 5.5C12 4.11929 13.1193 3 14.5 3C15.8807 3 17 4.11929 17 5.5ZM12.5 15C13.8807 15 15 13.8807 15 12.5C15 11.1193 13.8807 10 12.5 10C11.1193 10 10 11.1193 10 12.5C10 13.8807 11.1193 15 12.5 15Z',
+      "M3 2.5C3 2.22386 2.77614 2 2.5 2C2.22386 2 2 2.22386 2 2.5V17.5C2 17.7761 2.22386 18 2.5 18H17.5C17.7761 18 18 17.7761 18 17.5C18 17.2239 17.7761 17 17.5 17H3V2.5ZM7.5 10C8.88071 10 10 8.88071 10 7.5C10 6.11929 8.88071 5 7.5 5C6.11929 5 5 6.11929 5 7.5C5 8.88071 6.11929 10 7.5 10ZM17 5.5C17 6.88071 15.8807 8 14.5 8C13.1193 8 12 6.88071 12 5.5C12 4.11929 13.1193 3 14.5 3C15.8807 3 17 4.11929 17 5.5ZM12.5 15C13.8807 15 15 13.8807 15 12.5C15 11.1193 13.8807 10 12.5 10C11.1193 10 10 11.1193 10 12.5C10 13.8807 11.1193 15 12.5 15Z",
     );
     this.addChild(path0);
   }

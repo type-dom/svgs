@@ -1,20 +1,20 @@
-import { SvgProps, SvgPath, TypeSvgSvg, addAttrObj } from '@type-dom/framework';
+import { SvgProps, SvgPath, TypeSvgSvg, addAttrObj } from "@type-dom/framework";
 
 export class FoldSvg extends TypeSvgSvg {
-  className: 'FoldSvg';
+  className: "FoldSvg";
   path: SvgPath;
   constructor(params: SvgProps = {}) {
     super(params);
-    this.className = 'FoldSvg';
+    this.className = "FoldSvg";
     addAttrObj(this, {
-      viewBox: '0 0 1024 1024',
-      name: 'fold-svg',
+      viewBox: "0 0 1024 1024",
+      name: "fold-svg",
     });
     this.resetSize(16, 16);
     this.path = new SvgPath();
     this.path.setData(
-      'M848 128A48 48 0 0 1 896 176v672a48 48 0 0 1-48 48h-672A48 48 0 0 1 128 848v-672A48 48 0 0 1 176 128h672z',
-      'M832 192H192v640h640V192z m-128 288a32 32 0 0 1 0 64H320a32 32 0 0 1 0-64h384z'
+      "M848 128A48 48 0 0 1 896 176v672a48 48 0 0 1-48 48h-672A48 48 0 0 1 128 848v-672A48 48 0 0 1 176 128h672z",
+      "M832 192H192v640h640V192z m-128 288a32 32 0 0 1 0 64H320a32 32 0 0 1 0-64h384z",
     );
     this.addChild(this.path);
   }

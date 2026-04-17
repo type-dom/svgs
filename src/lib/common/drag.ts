@@ -1,21 +1,21 @@
-import { SvgProps, SvgPath, TypeSvgSvg, addAttrObj } from '@type-dom/framework';
+import { SvgProps, SvgPath, TypeSvgSvg, addAttrObj } from "@type-dom/framework";
 export class TdDragSvg extends TypeSvgSvg {
-  className: 'TdDragSvg';
+  className: "TdDragSvg";
   override childNodes: SvgPath[];
   constructor(params: SvgProps = {}) {
     super(params);
-    this.className = 'TdDragSvg';
+    this.className = "TdDragSvg";
     addAttrObj(this, {
-      name: 'TdDragSvg'
+      name: "TdDragSvg",
     });
     addAttrObj(this, {
-      viewBox: '0 0 128 128',
+      viewBox: "0 0 128 128",
     });
     this.resetSize(24, 24);
     this.childNodes = [];
-    const path0 = new SvgPath({ attrObj: { fill: 'currentColor' }});
+    const path0 = new SvgPath({ attrObj: { fill: "currentColor" } });
     path0.setData(
-      'M73.137 29.08h-9.209 29.7L63.886.093 34.373 29.08h20.49v27.035H27.238v17.948h27.625v27.133h18.274V74.063h27.41V56.115h-27.41V29.08zm-9.245 98.827l27.518-26.711H36.59l27.302 26.71zM.042 64.982l27.196 27.029V38.167L.042 64.982zm100.505-26.815V92.01l27.41-27.029-27.41-26.815z',
+      "M73.137 29.08h-9.209 29.7L63.886.093 34.373 29.08h20.49v27.035H27.238v17.948h27.625v27.133h18.274V74.063h27.41V56.115h-27.41V29.08zm-9.245 98.827l27.518-26.711H36.59l27.302 26.71zM.042 64.982l27.196 27.029V38.167L.042 64.982zm100.505-26.815V92.01l27.41-27.029-27.41-26.815z",
     );
     this.addChild(path0);
   }

@@ -1,26 +1,26 @@
-import { SvgProps, SvgPath, TypeSvgSvg, addAttrObj } from '@type-dom/framework';
+import { SvgProps, SvgPath, TypeSvgSvg, addAttrObj } from "@type-dom/framework";
 export class FlDismissCircleColorSvg extends TypeSvgSvg {
-  className: 'FlDismissCircleColorSvg';
+  className: "FlDismissCircleColorSvg";
   override childNodes: SvgPath[];
   constructor(params: SvgProps = {}) {
     super(params);
-    this.className = 'FlDismissCircleColorSvg';
-   addAttrObj(this, {
-      name: 'FlDismissCircleColorSvg'
+    this.className = "FlDismissCircleColorSvg";
+    addAttrObj(this, {
+      name: "FlDismissCircleColorSvg",
     });
-   addAttrObj(this, {
-      viewBox: '0 0 20 20',
+    addAttrObj(this, {
+      viewBox: "0 0 20 20",
     });
     this.resetSize(24, 24);
     this.childNodes = [];
-    const path0 = new SvgPath({ attrObj: { fill: 'currentColor' }});
+    const path0 = new SvgPath({ attrObj: { fill: "currentColor" } });
     path0.setData(
-      'M10 2C14.4183 2 18 5.58172 18 10C18 14.4183 14.4183 18 10 18C5.58172 18 2 14.4183 2 10C2 5.58172 5.58172 2 10 2Z',
+      "M10 2C14.4183 2 18 5.58172 18 10C18 14.4183 14.4183 18 10 18C5.58172 18 2 14.4183 2 10C2 5.58172 5.58172 2 10 2Z",
     );
     this.addChild(path0);
-    const path1 = new SvgPath({ attrObj: { fill: 'currentColor' }});
+    const path1 = new SvgPath({ attrObj: { fill: "currentColor" } });
     path1.setData(
-      'M7.14645 7.14645C7.34171 6.95118 7.65829 6.95118 7.85355 7.14645L10 9.29289L12.1464 7.14645C12.3417 6.95118 12.6583 6.95118 12.8536 7.14645C13.0488 7.34171 13.0488 7.65829 12.8536 7.85355L10.7071 10L12.8536 12.1464C13.0488 12.3417 13.0488 12.6583 12.8536 12.8536C12.6583 13.0488 12.3417 13.0488 12.1464 12.8536L10 10.7071L7.85355 12.8536C7.65829 13.0488 7.34171 13.0488 7.14645 12.8536C6.95118 12.6583 6.95118 12.3417 7.14645 12.1464L9.29289 10L7.14645 7.85355C6.95118 7.65829 6.95118 7.34171 7.14645 7.14645Z',
+      "M7.14645 7.14645C7.34171 6.95118 7.65829 6.95118 7.85355 7.14645L10 9.29289L12.1464 7.14645C12.3417 6.95118 12.6583 6.95118 12.8536 7.14645C13.0488 7.34171 13.0488 7.65829 12.8536 7.85355L10.7071 10L12.8536 12.1464C13.0488 12.3417 13.0488 12.6583 12.8536 12.8536C12.6583 13.0488 12.3417 13.0488 12.1464 12.8536L10 10.7071L7.85355 12.8536C7.65829 13.0488 7.34171 13.0488 7.14645 12.8536C6.95118 12.6583 6.95118 12.3417 7.14645 12.1464L9.29289 10L7.14645 7.85355C6.95118 7.65829 6.95118 7.34171 7.14645 7.14645Z",
     );
     this.addChild(path1);
   }

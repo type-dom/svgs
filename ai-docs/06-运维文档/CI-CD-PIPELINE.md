@@ -3,7 +3,7 @@
 **自动化构建、测试、部署和文档管理**
 
 **版本**: v0.4.0  
-**最后更新**: 2026-03-19  
+**最后更新**: 2026-03-19
 
 ---
 
@@ -92,22 +92,22 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
-      
+
       - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: '20'
-          cache: 'npm'
-      
+          node-version: "20"
+          cache: "npm"
+
       - name: Install dependencies
         run: npm ci
-      
+
       - name: Run type check
         run: npm run typecheck
-      
+
       - name: Run linter
         run: npm run lint
-      
+
       - name: Check formatting
         run: npx prettier --check .
 
@@ -118,19 +118,19 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
-      
+
       - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: '20'
-          cache: 'npm'
-      
+          node-version: "20"
+          cache: "npm"
+
       - name: Install dependencies
         run: npm ci
-      
+
       - name: Run unit tests
         run: npm test -- --coverage
-      
+
       - name: Upload coverage report
         uses: codecov/codecov-action@v3
         with:
@@ -144,25 +144,25 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
-      
+
       - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: '20'
-          cache: 'npm'
-      
+          node-version: "20"
+          cache: "npm"
+
       - name: Install dependencies
         run: npm ci
-      
+
       - name: Run production build
         run: npm run build
-      
+
       - name: Check build output
         run: |
           ls -lh dist/
           echo "Build size:"
           du -sh dist/
-      
+
       - name: Upload build artifacts
         uses: actions/upload-artifact@v3
         with:
@@ -177,25 +177,25 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
-      
+
       - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: '20'
-          cache: 'npm'
-      
+          node-version: "20"
+          cache: "npm"
+
       - name: Install dependencies
         run: npm ci
-      
+
       - name: Generate API documentation
         run: npx typedoc --out docs/api src/index.ts
-      
+
       - name: Validate documentation
         run: |
           # 检查文档完整性
           test -f docs/api/index.html
           test -f ai-docs/00-索引与导航/DOCUMENTATION-INDEX.md
-      
+
       - name: Deploy documentation
         uses: peaceiris/actions-gh-pages@v3
         with:
@@ -213,35 +213,35 @@ jobs:
         uses: actions/checkout@v3
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
-      
+
       - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: '20'
-          registry-url: 'https://registry.npmjs.org'
-          cache: 'npm'
-      
+          node-version: "20"
+          registry-url: "https://registry.npmjs.org"
+          cache: "npm"
+
       - name: Install dependencies
         run: npm ci
-      
+
       - name: Build package
         run: npm run build
-      
+
       - name: Check version and publish
         run: |
           CURRENT_VERSION=$(node -p "require('./package.json').version")
           PUBLISHED_VERSION=$(npm show @type-dom/svgs version || echo "0.0.0")
-          
+
           if [ "$CURRENT_VERSION" = "$PUBLISHED_VERSION" ]; then
             echo "❌ Version $CURRENT_VERSION already published"
             exit 1
           fi
-          
+
           echo "✅ Publishing version $CURRENT_VERSION"
           npm publish --access public
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
-      
+
       - name: Create GitHub Release
         uses: softprops/action-gh-release@v1
         with:
@@ -310,12 +310,13 @@ git push origin feature/my-new-icon
 // vite.config.ts
 export default defineConfig({
   staged: {
-    "*": "vp check --fix"  // Commit 前自动检查和修复
-  }
+    "*": "vp check --fix", // Commit 前自动检查和修复
+  },
 });
 ```
 
 **Git Hooks 执行流程**:
+
 ```
 git commit
     ↓
@@ -345,6 +346,7 @@ npm run typecheck
 ```
 
 **要求**:
+
 - ✅ 无编译错误
 - ✅ 无类型警告
 - ✅ 严格模式启用
@@ -356,6 +358,7 @@ npm run lint
 ```
 
 **要求**:
+
 - ✅ Oxlint 通过率 100%
 - ✅ 无 error 级别问题
 - ✅ warning 级别 < 10 个
@@ -367,6 +370,7 @@ npm test
 ```
 
 **要求**:
+
 - ✅ 所有测试通过
 - ✅ 测试覆盖率达标:
   - 语句覆盖率 ≥ 70%
@@ -381,6 +385,7 @@ npm run build
 ```
 
 **要求**:
+
 - ✅ 构建成功
 - ✅ 类型声明生成完整
 - ✅ 打包体积合理 (< 1MB)
@@ -540,6 +545,7 @@ feature/* (功能分支)
 ```
 
 **发布节奏**:
+
 - **Patch 版本**: 随时发布（Bug 修复）
 - **Minor 版本**: 每 2-4 周发布（新功能）
 - **Major 版本**: 按需发布（重大变更）
@@ -556,15 +562,15 @@ metrics:
   build_time:
     warning: 5m
     critical: 10m
-  
+
   test_duration:
     warning: 3m
     critical: 5m
-  
+
   bundle_size:
     warning: 800KB
     critical: 1MB
-  
+
   coverage:
     warning: 75%
     critical: 70%
@@ -579,17 +585,17 @@ alerts:
     condition: build.status == 'failed'
     notification:
       - email: team@example.com
-      - slack: '#ci-alerts'
-  
+      - slack: "#ci-alerts"
+
   - name: Test Coverage Drop
     condition: coverage.current < coverage.threshold
     notification:
       - email: dev@example.com
-  
+
   - name: Bundle Size Increase
     condition: bundle.size > bundle.limit
     notification:
-      - slack: '#performance-alerts'
+      - slack: "#performance-alerts"
 ```
 
 ---

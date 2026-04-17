@@ -1,21 +1,21 @@
-import { SvgProps, SvgPath, TypeSvgSvg, addAttrObj } from '@type-dom/framework';
+import { SvgProps, SvgPath, TypeSvgSvg, addAttrObj } from "@type-dom/framework";
 export class FlAlignSpaceAroundVerticalRegularSvg extends TypeSvgSvg {
-  className: 'FlAlignSpaceAroundVerticalRegularSvg';
+  className: "FlAlignSpaceAroundVerticalRegularSvg";
   override childNodes: SvgPath[];
   constructor(params: SvgProps = {}) {
     super(params);
-    this.className = 'FlAlignSpaceAroundVerticalRegularSvg';
-   addAttrObj(this, {
-      name: 'FlAlignSpaceAroundVerticalRegularSvg'
+    this.className = "FlAlignSpaceAroundVerticalRegularSvg";
+    addAttrObj(this, {
+      name: "FlAlignSpaceAroundVerticalRegularSvg",
     });
-   addAttrObj(this, {
-      viewBox: '0 0 20 20',
+    addAttrObj(this, {
+      viewBox: "0 0 20 20",
     });
     this.resetSize(24, 24);
     this.childNodes = [];
-    const path0 = new SvgPath({ attrObj: { fill: 'currentColor' }});
+    const path0 = new SvgPath({ attrObj: { fill: "currentColor" } });
     path0.setData(
-      'M6 4H7C8.10457 4 9 4.89543 9 6V14C9 15.1046 8.10457 16 7 16H6C4.89543 16 4 15.1046 4 14V6C4 4.89543 4.89543 4 6 4ZM5 6V14C5 14.5523 5.44772 15 6 15H7C7.55228 15 8 14.5523 8 14V6C8 5.44772 7.55228 5 7 5H6C5.44772 5 5 5.44772 5 6ZM13 4C11.8954 4 11 4.89543 11 6V14C11 15.1046 11.8954 16 13 16H14C15.1046 16 16 15.1046 16 14V6C16 4.89543 15.1046 4 14 4H13ZM12 6C12 5.44772 12.4477 5 13 5H14C14.5523 5 15 5.44772 15 6V14C15 14.5523 14.5523 15 14 15H13C12.4477 15 12 14.5523 12 14V6Z',
+      "M6 4H7C8.10457 4 9 4.89543 9 6V14C9 15.1046 8.10457 16 7 16H6C4.89543 16 4 15.1046 4 14V6C4 4.89543 4.89543 4 6 4ZM5 6V14C5 14.5523 5.44772 15 6 15H7C7.55228 15 8 14.5523 8 14V6C8 5.44772 7.55228 5 7 5H6C5.44772 5 5 5.44772 5 6ZM13 4C11.8954 4 11 4.89543 11 6V14C11 15.1046 11.8954 16 13 16H14C15.1046 16 16 15.1046 16 14V6C16 4.89543 15.1046 4 14 4H13ZM12 6C12 5.44772 12.4477 5 13 5H14C14.5523 5 15 5.44772 15 6V14C15 14.5523 14.5523 15 14 15H13C12.4477 15 12 14.5523 12 14V6Z",
     );
     this.addChild(path0);
   }

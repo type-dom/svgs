@@ -1,21 +1,21 @@
-import { SvgProps, SvgPath, TypeSvgSvg, addAttrObj } from '@type-dom/framework';
+import { SvgProps, SvgPath, TypeSvgSvg, addAttrObj } from "@type-dom/framework";
 export class FlXboxConsoleFilledSvg extends TypeSvgSvg {
-  className: 'FlXboxConsoleFilledSvg';
+  className: "FlXboxConsoleFilledSvg";
   override childNodes: SvgPath[];
   constructor(params: SvgProps = {}) {
     super(params);
-    this.className = 'FlXboxConsoleFilledSvg';
-   addAttrObj(this, {
-      name: 'FlXboxConsoleFilledSvg'
+    this.className = "FlXboxConsoleFilledSvg";
+    addAttrObj(this, {
+      name: "FlXboxConsoleFilledSvg",
     });
-   addAttrObj(this, {
-      viewBox: '0 0 20 20',
+    addAttrObj(this, {
+      viewBox: "0 0 20 20",
     });
     this.resetSize(24, 24);
     this.childNodes = [];
-    const path0 = new SvgPath({ attrObj: { fill: 'currentColor' }});
+    const path0 = new SvgPath({ attrObj: { fill: "currentColor" } });
     path0.setData(
-      'M4.5 2C4.22386 2 4 2.22386 4 2.5V17.5C4 17.7761 4.22386 18 4.5 18H7L7 9.5C7 9.22386 7.22386 9 7.5 9C7.77614 9 8 9.22386 8 9.5L8 18H15.5C15.7761 18 16 17.7761 16 17.5V2.5C16 2.22386 15.7761 2 15.5 2H4.5ZM7.5 6.5C7.08579 6.5 6.75 6.16421 6.75 5.75C6.75 5.33579 7.08579 5 7.5 5C7.91421 5 8.25 5.33579 8.25 5.75C8.25 6.16421 7.91421 6.5 7.5 6.5Z',
+      "M4.5 2C4.22386 2 4 2.22386 4 2.5V17.5C4 17.7761 4.22386 18 4.5 18H7L7 9.5C7 9.22386 7.22386 9 7.5 9C7.77614 9 8 9.22386 8 9.5L8 18H15.5C15.7761 18 16 17.7761 16 17.5V2.5C16 2.22386 15.7761 2 15.5 2H4.5ZM7.5 6.5C7.08579 6.5 6.75 6.16421 6.75 5.75C6.75 5.33579 7.08579 5 7.5 5C7.91421 5 8.25 5.33579 8.25 5.75C8.25 6.16421 7.91421 6.5 7.5 6.5Z",
     );
     this.addChild(path0);
   }

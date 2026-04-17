@@ -1,22 +1,20 @@
-import { SvgProps, SvgPath, TypeSvgSvg, addAttrObj } from '@type-dom/framework';
+import { SvgProps, SvgPath, TypeSvgSvg, addAttrObj } from "@type-dom/framework";
 export class TdStaticVerticalLineSvg extends TypeSvgSvg {
-  className: 'TdStaticVerticalLineSvg';
+  className: "TdStaticVerticalLineSvg";
   override childNodes: SvgPath[];
   constructor(params: SvgProps = {}) {
     super(params);
-    this.className = 'TdStaticVerticalLineSvg';
+    this.className = "TdStaticVerticalLineSvg";
     addAttrObj(this, {
-      name: 'TdStaticVerticalLineSvg'
+      name: "TdStaticVerticalLineSvg",
     });
     addAttrObj(this, {
-      viewBox: '0 0 1024 1024',
+      viewBox: "0 0 1024 1024",
     });
     this.resetSize(24, 24);
     this.childNodes = [];
-    const path0 = new SvgPath({ attrObj: { fill: 'currentColor' }});
-    path0.setData(
-      'M474.91 67h74.19v890h-74.19z',
-    );
+    const path0 = new SvgPath({ attrObj: { fill: "currentColor" } });
+    path0.setData("M474.91 67h74.19v890h-74.19z");
     this.addChild(path0);
   }
 }

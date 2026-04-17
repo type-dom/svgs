@@ -1,4 +1,4 @@
-import { TypeDiv, CSSProperties } from '@type-dom/framework';
+import { TypeDiv, CSSProperties } from "@type-dom/framework";
 import {
   Td404Svg,
   TdAPlusSvg,
@@ -195,1382 +195,1382 @@ import {
   TdWechatSvg,
   TdWorkflowSvg,
   TdZipSvg,
-} from './index';
+} from "./index";
 export class CommonSvgList extends TypeDiv {
-  className: 'CommonSvgList';
+  className: "CommonSvgList";
   constructor() {
     super();
     // console.log('CommonSvgList constructor . ');
-    this.className = 'CommonSvgList';
+    this.className = "CommonSvgList";
     const $svgStyle: Partial<CSSProperties> = {
-      padding: '10px',
-      border: '1px solid #ddd'
+      padding: "10px",
+      border: "1px solid #ddd",
     };
     this.addChildren(
       new Td404Svg({
         attrObj: {
-          width: '2em',
-          height: '2em',
+          width: "2em",
+          height: "2em",
         },
-        styleObj: $svgStyle
+        styleObj: $svgStyle,
       }),
       new TdAPlusSvg({
         attrObj: {
-          width: '2em',
-          height: '2em',
+          width: "2em",
+          height: "2em",
         },
-        styleObj: $svgStyle
+        styleObj: $svgStyle,
       }),
       new TdAMinusSvg({
         attrObj: {
-          width: '2em',
-          height: '2em',
+          width: "2em",
+          height: "2em",
         },
-        styleObj: $svgStyle
+        styleObj: $svgStyle,
       }),
       new TdQRCodeSvg({
         attrObj: {
-          width: '2em',
-          height: '2em',
+          width: "2em",
+          height: "2em",
         },
-        styleObj: $svgStyle
+        styleObj: $svgStyle,
       }),
       new TdShrinkOutlinedSvg({
         attrObj: {
-          width: '2em',
-          height: '2em',
+          width: "2em",
+          height: "2em",
         },
-        styleObj: $svgStyle
+        styleObj: $svgStyle,
       }),
       new TdUnfoldedOutlinedSvg({
         attrObj: {
-          width: '2em',
-          height: '2em',
+          width: "2em",
+          height: "2em",
         },
-        styleObj: $svgStyle
+        styleObj: $svgStyle,
       }),
       new TdAdaptiveWidthSvg({
         attrObj: {
-          width: '2em',
-          height: '2em',
+          width: "2em",
+          height: "2em",
         },
-        styleObj: $svgStyle
+        styleObj: $svgStyle,
       }),
       new TdAddBookmarkSvg({
         attrObj: {
-          width: '2em',
-          height: '2em',
+          width: "2em",
+          height: "2em",
         },
-        styleObj: $svgStyle
+        styleObj: $svgStyle,
       }),
       new TdAddCommentsSvg({
         attrObj: {
-          width: '2em',
-          height: '2em',
+          width: "2em",
+          height: "2em",
         },
-        styleObj: $svgStyle
+        styleObj: $svgStyle,
       }),
       new TdAddRestrictedEditSvg({
         attrObj: {
-          width: '2em',
-          height: '2em',
+          width: "2em",
+          height: "2em",
         },
-        styleObj: $svgStyle
+        styleObj: $svgStyle,
       }),
       new TdAddSvg({
         attrObj: {
-          width: '2em',
-          height: '2em',
+          width: "2em",
+          height: "2em",
         },
-        styleObj: $svgStyle
+        styleObj: $svgStyle,
       }),
       new TdAlignBottomSvg({
         attrObj: {
-          width: '2em',
-          height: '2em',
+          width: "2em",
+          height: "2em",
         },
-        styleObj: $svgStyle
+        styleObj: $svgStyle,
       }),
       new TdAlignCenterSvg({
         attrObj: {
-          width: '2em',
-          height: '2em',
+          width: "2em",
+          height: "2em",
         },
-        styleObj: $svgStyle
+        styleObj: $svgStyle,
       }),
       new TdAlignJustifiedSvg({
         attrObj: {
-          width: '2em',
-          height: '2em',
+          width: "2em",
+          height: "2em",
         },
-        styleObj: $svgStyle
+        styleObj: $svgStyle,
       }),
       new TdAlignLeftSvg({
         attrObj: {
-          width: '2em',
-          height: '2em',
+          width: "2em",
+          height: "2em",
         },
-        styleObj: $svgStyle
+        styleObj: $svgStyle,
       }),
       new TdAlignMiddleSvg({
         attrObj: {
-          width: '2em',
-          height: '2em',
+          width: "2em",
+          height: "2em",
         },
-        styleObj: $svgStyle
+        styleObj: $svgStyle,
       }),
       new TdAlignRightSvg({
         attrObj: {
-          width: '2em',
-          height: '2em',
+          width: "2em",
+          height: "2em",
         },
-        styleObj: $svgStyle
+        styleObj: $svgStyle,
       }),
       new TdAlignScatterSvg({
         attrObj: {
-          width: '2em',
-          height: '2em',
+          width: "2em",
+          height: "2em",
         },
-        styleObj: $svgStyle
+        styleObj: $svgStyle,
       }),
       new TdAlignTopSvg({
         attrObj: {
-          width: '2em',
-          height: '2em',
+          width: "2em",
+          height: "2em",
         },
-        styleObj: $svgStyle
+        styleObj: $svgStyle,
       }),
       new TdAttachmentSvg({
         attrObj: {
-          width: '2em',
-          height: '2em',
+          width: "2em",
+          height: "2em",
         },
-        styleObj: $svgStyle
+        styleObj: $svgStyle,
       }),
       new TdBackSvg({
         attrObj: {
-          width: '2em',
-          height: '2em',
+          width: "2em",
+          height: "2em",
         },
-        styleObj: $svgStyle
+        styleObj: $svgStyle,
       }),
       new TdBackgroundColorSvg({
         attrObj: {
-          width: '2em',
-          height: '2em',
+          width: "2em",
+          height: "2em",
         },
-        styleObj: $svgStyle
+        styleObj: $svgStyle,
       }),
       new TdBoldTSvg({
         attrObj: {
-          width: '2em',
-          height: '2em',
+          width: "2em",
+          height: "2em",
         },
-        styleObj: $svgStyle
+        styleObj: $svgStyle,
       }),
       new TdBoldSvg({
         attrObj: {
-          width: '2em',
-          height: '2em',
+          width: "2em",
+          height: "2em",
         },
-        styleObj: $svgStyle
+        styleObj: $svgStyle,
       }),
       new TdBookmarkListSvg({
         attrObj: {
-          width: '2em',
-          height: '2em',
+          width: "2em",
+          height: "2em",
         },
-        styleObj: $svgStyle
+        styleObj: $svgStyle,
       }),
       new TdBookmarkSvg({
         attrObj: {
-          width: '2em',
-          height: '2em',
+          width: "2em",
+          height: "2em",
         },
-        styleObj: $svgStyle
+        styleObj: $svgStyle,
       }),
       new TdBugSvg({
         attrObj: {
-          width: '2em',
-          height: '2em',
+          width: "2em",
+          height: "2em",
         },
-        styleObj: $svgStyle
+        styleObj: $svgStyle,
       }),
       new TdCatalogSvg({
         attrObj: {
-          width: '2em',
-          height: '2em',
+          width: "2em",
+          height: "2em",
         },
-        styleObj: $svgStyle
+        styleObj: $svgStyle,
       }),
       new TdChartSvg({
         attrObj: {
-          width: '2em',
-          height: '2em',
+          width: "2em",
+          height: "2em",
         },
-        styleObj: $svgStyle
+        styleObj: $svgStyle,
       }),
       new TdCheckSvg({
         attrObj: {
-          width: '2em',
-          height: '2em',
+          width: "2em",
+          height: "2em",
         },
-        styleObj: $svgStyle
+        styleObj: $svgStyle,
       }),
       new TdCheckboxSvg({
         attrObj: {
-          width: '2em',
-          height: '2em',
+          width: "2em",
+          height: "2em",
         },
-        styleObj: $svgStyle
+        styleObj: $svgStyle,
       }),
       new TdCircleSvg({
         attrObj: {
-          width: '2em',
-          height: '2em',
+          width: "2em",
+          height: "2em",
         },
-        styleObj: $svgStyle
+        styleObj: $svgStyle,
       }),
       new TdCleanSvg({
         attrObj: {
-          width: '2em',
-          height: '2em',
+          width: "2em",
+          height: "2em",
         },
-        styleObj: $svgStyle
+        styleObj: $svgStyle,
       }),
       new TdClipboardSvg({
         attrObj: {
-          width: '2em',
-          height: '2em',
+          width: "2em",
+          height: "2em",
         },
-        styleObj: $svgStyle
+        styleObj: $svgStyle,
       }),
       new TdCloseRevisionSvg({
         attrObj: {
-          width: '2em',
-          height: '2em',
+          width: "2em",
+          height: "2em",
         },
-        styleObj: $svgStyle
+        styleObj: $svgStyle,
       }),
       new TdCloseSvg({
         attrObj: {
-          width: '2em',
-          height: '2em',
+          width: "2em",
+          height: "2em",
         },
-        styleObj: $svgStyle
+        styleObj: $svgStyle,
       }),
       new TdComponentSvg({
         attrObj: {
-          width: '2em',
-          height: '2em',
+          width: "2em",
+          height: "2em",
         },
-        styleObj: $svgStyle
+        styleObj: $svgStyle,
       }),
       new TdConnectionSvg({
         attrObj: {
-          width: '2em',
-          height: '2em',
+          width: "2em",
+          height: "2em",
         },
-        styleObj: $svgStyle
+        styleObj: $svgStyle,
       }),
       new TdCreateFillRestrictionSvg({
         attrObj: {
-          width: '2em',
-          height: '2em',
+          width: "2em",
+          height: "2em",
         },
-        styleObj: $svgStyle
+        styleObj: $svgStyle,
       }),
       new TdCrossSvg({
         attrObj: {
-          width: '2em',
-          height: '2em',
+          width: "2em",
+          height: "2em",
         },
-        styleObj: $svgStyle
+        styleObj: $svgStyle,
       }),
       new TdDashboardSvg({
         attrObj: {
-          width: '2em',
-          height: '2em',
+          width: "2em",
+          height: "2em",
         },
-        styleObj: $svgStyle
+        styleObj: $svgStyle,
       }),
       new TdDateSvg({
         attrObj: {
-          width: '2em',
-          height: '2em',
+          width: "2em",
+          height: "2em",
         },
-        styleObj: $svgStyle
+        styleObj: $svgStyle,
       }),
       new TdDatepickerSvg({
         attrObj: {
-          width: '2em',
-          height: '2em',
+          width: "2em",
+          height: "2em",
         },
-        styleObj: $svgStyle
+        styleObj: $svgStyle,
       }),
       new TdDeleteSvg({
         attrObj: {
-          width: '2em',
-          height: '2em',
+          width: "2em",
+          height: "2em",
         },
-        styleObj: $svgStyle
+        styleObj: $svgStyle,
       }),
       new TdDocumentationSvg({
         attrObj: {
-          width: '2em',
-          height: '2em',
+          width: "2em",
+          height: "2em",
         },
-        styleObj: $svgStyle
+        styleObj: $svgStyle,
       }),
       new TdDragSvg({
         attrObj: {
-          width: '2em',
-          height: '2em',
+          width: "2em",
+          height: "2em",
         },
-        styleObj: $svgStyle
+        styleObj: $svgStyle,
       }),
       new TdDropdownBoxSvg({
         attrObj: {
-          width: '2em',
-          height: '2em',
+          width: "2em",
+          height: "2em",
         },
-        styleObj: $svgStyle
+        styleObj: $svgStyle,
       }),
       new TdEditSvg({
         attrObj: {
-          width: '2em',
-          height: '2em',
+          width: "2em",
+          height: "2em",
         },
-        styleObj: $svgStyle
+        styleObj: $svgStyle,
       }),
       new TdEducationSvg({
         attrObj: {
-          width: '2em',
-          height: '2em',
+          width: "2em",
+          height: "2em",
         },
-        styleObj: $svgStyle
+        styleObj: $svgStyle,
       }),
       new TdEmailSvg({
         attrObj: {
-          width: '2em',
-          height: '2em',
+          width: "2em",
+          height: "2em",
         },
-        styleObj: $svgStyle
+        styleObj: $svgStyle,
       }),
       new TdExampleSvg({
         attrObj: {
-          width: '2em',
-          height: '2em',
+          width: "2em",
+          height: "2em",
         },
-        styleObj: $svgStyle
+        styleObj: $svgStyle,
       }),
       new TdExcelSvg({
         attrObj: {
-          width: '2em',
-          height: '2em',
+          width: "2em",
+          height: "2em",
         },
-        styleObj: $svgStyle
+        styleObj: $svgStyle,
       }),
       new TdExitFullscreenSvg({
         attrObj: {
-          width: '2em',
-          height: '2em',
+          width: "2em",
+          height: "2em",
         },
-        styleObj: $svgStyle
+        styleObj: $svgStyle,
       }),
       new TdExportSvg({
         attrObj: {
-          width: '2em',
-          height: '2em',
+          width: "2em",
+          height: "2em",
         },
-        styleObj: $svgStyle
+        styleObj: $svgStyle,
       }),
       new TdEyeOpenSvg({
         attrObj: {
-          width: '2em',
-          height: '2em',
+          width: "2em",
+          height: "2em",
         },
-        styleObj: $svgStyle
+        styleObj: $svgStyle,
       }),
       new TdEyeSvg({
         attrObj: {
-          width: '2em',
-          height: '2em',
+          width: "2em",
+          height: "2em",
         },
-        styleObj: $svgStyle
+        styleObj: $svgStyle,
       }),
       new TdFileOpenSvg({
         attrObj: {
-          width: '2em',
-          height: '2em',
+          width: "2em",
+          height: "2em",
         },
-        styleObj: $svgStyle
+        styleObj: $svgStyle,
       }),
       new TdFileSvg({
         attrObj: {
-          width: '2em',
-          height: '2em',
+          width: "2em",
+          height: "2em",
         },
-        styleObj: $svgStyle
+        styleObj: $svgStyle,
       }),
       new TdFillRestrictedListSvg({
         attrObj: {
-          width: '2em',
-          height: '2em',
+          width: "2em",
+          height: "2em",
         },
-        styleObj: $svgStyle
+        styleObj: $svgStyle,
       }),
       new TdFindSvg({
         attrObj: {
-          width: '2em',
-          height: '2em',
+          width: "2em",
+          height: "2em",
         },
-        styleObj: $svgStyle
+        styleObj: $svgStyle,
       }),
       new TdFlowSvg({
         attrObj: {
-          width: '2em',
-          height: '2em',
+          width: "2em",
+          height: "2em",
         },
-        styleObj: $svgStyle
+        styleObj: $svgStyle,
       }),
       new TdFoldSvg({
         attrObj: {
-          width: '2em',
-          height: '2em',
+          width: "2em",
+          height: "2em",
         },
-        styleObj: $svgStyle
+        styleObj: $svgStyle,
       }),
       new TdFolderSvg({
         attrObj: {
-          width: '2em',
-          height: '2em',
+          width: "2em",
+          height: "2em",
         },
-        styleObj: $svgStyle
+        styleObj: $svgStyle,
       }),
       new TdFontColorSvg({
         attrObj: {
-          width: '2em',
-          height: '2em',
+          width: "2em",
+          height: "2em",
         },
-        styleObj: $svgStyle
+        styleObj: $svgStyle,
       }),
       new TdForbidEditSvg({
         attrObj: {
-          width: '2em',
-          height: '2em',
+          width: "2em",
+          height: "2em",
         },
-        styleObj: $svgStyle
+        styleObj: $svgStyle,
       }),
       new TdFormSvg({
         attrObj: {
-          width: '2em',
-          height: '2em',
+          width: "2em",
+          height: "2em",
         },
-        styleObj: $svgStyle
+        styleObj: $svgStyle,
       }),
       new TdFormImageSvg({
         attrObj: {
-          width: '2em',
-          height: '2em',
+          width: "2em",
+          height: "2em",
         },
-        styleObj: $svgStyle
+        styleObj: $svgStyle,
       }),
       new TdFormQRCodeSvg({
         attrObj: {
-          width: '2em',
-          height: '2em',
+          width: "2em",
+          height: "2em",
         },
-        styleObj: $svgStyle
+        styleObj: $svgStyle,
       }),
       new TdFormTextSvg({
         attrObj: {
-          width: '2em',
-          height: '2em',
+          width: "2em",
+          height: "2em",
         },
-        styleObj: $svgStyle
+        styleObj: $svgStyle,
       }),
       new TdFormatBrushNewSvg({
         attrObj: {
-          width: '2em',
-          height: '2em',
+          width: "2em",
+          height: "2em",
         },
-        styleObj: $svgStyle
+        styleObj: $svgStyle,
       }),
       new TdFormatBrushSvg({
         attrObj: {
-          width: '2em',
-          height: '2em',
+          width: "2em",
+          height: "2em",
         },
-        styleObj: $svgStyle
+        styleObj: $svgStyle,
       }),
       new TdFullscreenSvg({
         attrObj: {
-          width: '2em',
-          height: '2em',
+          width: "2em",
+          height: "2em",
         },
-        styleObj: $svgStyle
+        styleObj: $svgStyle,
       }),
       new TdGuideSvg({
         attrObj: {
-          width: '2em',
-          height: '2em',
+          width: "2em",
+          height: "2em",
         },
-        styleObj: $svgStyle
+        styleObj: $svgStyle,
       }),
       new TdHSvg({
         attrObj: {
-          width: '2em',
-          height: '2em',
+          width: "2em",
+          height: "2em",
         },
-        styleObj: $svgStyle
+        styleObj: $svgStyle,
       }),
       new TdHistorySvg({
         attrObj: {
-          width: '2em',
-          height: '2em',
+          width: "2em",
+          height: "2em",
         },
-        styleObj: $svgStyle
+        styleObj: $svgStyle,
       }),
       new TdHomepageSvg({
         attrObj: {
-          width: '2em',
-          height: '2em',
+          width: "2em",
+          height: "2em",
         },
-        styleObj: $svgStyle
+        styleObj: $svgStyle,
       }),
       new TdIconVerticalAlignBottoSvg({
         attrObj: {
-          width: '2em',
-          height: '2em',
+          width: "2em",
+          height: "2em",
         },
-        styleObj: $svgStyle
+        styleObj: $svgStyle,
       }),
       new TdIconVerticalAlignMiddlSvg({
         attrObj: {
-          width: '2em',
-          height: '2em',
+          width: "2em",
+          height: "2em",
         },
-        styleObj: $svgStyle
+        styleObj: $svgStyle,
       }),
       new TdIconVerticalAlignTopSvg({
         attrObj: {
-          width: '2em',
-          height: '2em',
+          width: "2em",
+          height: "2em",
         },
-        styleObj: $svgStyle
+        styleObj: $svgStyle,
       }),
       new TdIconSvg({
         attrObj: {
-          width: '2em',
-          height: '2em',
+          width: "2em",
+          height: "2em",
         },
-        styleObj: $svgStyle
+        styleObj: $svgStyle,
       }),
       new TdIdentifierSvg({
         attrObj: {
-          width: '2em',
-          height: '2em',
+          width: "2em",
+          height: "2em",
         },
-        styleObj: $svgStyle
+        styleObj: $svgStyle,
       }),
       new TdImageSvg({
         attrObj: {
-          width: '2em',
-          height: '2em',
+          width: "2em",
+          height: "2em",
         },
-        styleObj: $svgStyle
+        styleObj: $svgStyle,
       }),
       new TdImportSvg({
         attrObj: {
-          width: '2em',
-          height: '2em',
+          width: "2em",
+          height: "2em",
         },
-        styleObj: $svgStyle
+        styleObj: $svgStyle,
       }),
       new TdIncreaseIndentSvg({
         attrObj: {
-          width: '2em',
-          height: '2em',
+          width: "2em",
+          height: "2em",
         },
-        styleObj: $svgStyle
+        styleObj: $svgStyle,
       }),
       new TdIncreaseLineHeightSvg({
         attrObj: {
-          width: '2em',
-          height: '2em',
+          width: "2em",
+          height: "2em",
         },
-        styleObj: $svgStyle
+        styleObj: $svgStyle,
       }),
       new TdInsertColumnSvg({
         attrObj: {
-          width: '2em',
-          height: '2em',
+          width: "2em",
+          height: "2em",
         },
-        styleObj: $svgStyle
+        styleObj: $svgStyle,
       }),
       new TdInsertRowSvg({
         attrObj: {
-          width: '2em',
-          height: '2em',
+          width: "2em",
+          height: "2em",
         },
-        styleObj: $svgStyle
+        styleObj: $svgStyle,
       }),
       new TdInternationalSvg({
         attrObj: {
-          width: '2em',
-          height: '2em',
+          width: "2em",
+          height: "2em",
         },
-        styleObj: $svgStyle
+        styleObj: $svgStyle,
       }),
       new TdInventorySvg({
         attrObj: {
-          width: '2em',
-          height: '2em',
+          width: "2em",
+          height: "2em",
         },
-        styleObj: $svgStyle
+        styleObj: $svgStyle,
       }),
       new TdItalic1Svg({
         attrObj: {
-          width: '2em',
-          height: '2em',
+          width: "2em",
+          height: "2em",
         },
-        styleObj: $svgStyle
+        styleObj: $svgStyle,
       }),
       new TdItalicSvg({
         attrObj: {
-          width: '2em',
-          height: '2em',
+          width: "2em",
+          height: "2em",
         },
-        styleObj: $svgStyle
+        styleObj: $svgStyle,
       }),
       new TdLanguageSvg({
         attrObj: {
-          width: '2em',
-          height: '2em',
+          width: "2em",
+          height: "2em",
         },
-        styleObj: $svgStyle
+        styleObj: $svgStyle,
       }),
       new TdLineSvg({
         attrObj: {
-          width: '2em',
-          height: '2em',
+          width: "2em",
+          height: "2em",
         },
-        styleObj: $svgStyle
+        styleObj: $svgStyle,
       }),
       new TdLinkSvg({
         attrObj: {
-          width: '2em',
-          height: '2em',
+          width: "2em",
+          height: "2em",
         },
-        styleObj: $svgStyle
+        styleObj: $svgStyle,
       }),
       new TdListSvg({
         attrObj: {
-          width: '2em',
-          height: '2em',
+          width: "2em",
+          height: "2em",
         },
-        styleObj: $svgStyle
+        styleObj: $svgStyle,
       }),
       new TdLockSvg({
         attrObj: {
-          width: '2em',
-          height: '2em',
+          width: "2em",
+          height: "2em",
         },
-        styleObj: $svgStyle
+        styleObj: $svgStyle,
       }),
       new TdMPageSvg({
         attrObj: {
-          width: '2em',
-          height: '2em',
+          width: "2em",
+          height: "2em",
         },
-        styleObj: $svgStyle
+        styleObj: $svgStyle,
       }),
       new TdMergeCellSvg({
         attrObj: {
-          width: '2em',
-          height: '2em',
+          width: "2em",
+          height: "2em",
         },
-        styleObj: $svgStyle
+        styleObj: $svgStyle,
       }),
       new TdMessageSvg({
         attrObj: {
-          width: '2em',
-          height: '2em',
+          width: "2em",
+          height: "2em",
         },
-        styleObj: $svgStyle
+        styleObj: $svgStyle,
       }),
       new TdMiddleLineSvg({
         attrObj: {
-          width: '2em',
-          height: '2em',
+          width: "2em",
+          height: "2em",
         },
-        styleObj: $svgStyle
+        styleObj: $svgStyle,
       }),
       new TdMinusSvg({
         attrObj: {
-          width: '2em',
-          height: '2em',
+          width: "2em",
+          height: "2em",
         },
-        styleObj: $svgStyle
+        styleObj: $svgStyle,
       }),
       new TdModuleSvg({
         attrObj: {
-          width: '2em',
-          height: '2em',
+          width: "2em",
+          height: "2em",
         },
-        styleObj: $svgStyle
+        styleObj: $svgStyle,
       }),
       new TdMoneySvg({
         attrObj: {
-          width: '2em',
-          height: '2em',
+          width: "2em",
+          height: "2em",
         },
-        styleObj: $svgStyle
+        styleObj: $svgStyle,
       }),
       new TdMultilineInputSvg({
         attrObj: {
-          width: '2em',
-          height: '2em',
+          width: "2em",
+          height: "2em",
         },
-        styleObj: $svgStyle
+        styleObj: $svgStyle,
       }),
       new TdMultipleOptionsSvg({
         attrObj: {
-          width: '2em',
-          height: '2em',
+          width: "2em",
+          height: "2em",
         },
-        styleObj: $svgStyle
+        styleObj: $svgStyle,
       }),
       new TdNestedSvg({
         attrObj: {
-          width: '2em',
-          height: '2em',
+          width: "2em",
+          height: "2em",
         },
-        styleObj: $svgStyle
+        styleObj: $svgStyle,
       }),
       new TdNumericalInputSvg({
         attrObj: {
-          width: '2em',
-          height: '2em',
+          width: "2em",
+          height: "2em",
         },
-        styleObj: $svgStyle
+        styleObj: $svgStyle,
       }),
       new TdNumericalSvg({
         attrObj: {
-          width: '2em',
-          height: '2em',
+          width: "2em",
+          height: "2em",
         },
-        styleObj: $svgStyle
+        styleObj: $svgStyle,
       }),
       new TdOutlineSvg({
         attrObj: {
-          width: '2em',
-          height: '2em',
+          width: "2em",
+          height: "2em",
         },
-        styleObj: $svgStyle
+        styleObj: $svgStyle,
       }),
       new TdOverlineSvg({
         attrObj: {
-          width: '2em',
-          height: '2em',
+          width: "2em",
+          height: "2em",
         },
-        styleObj: $svgStyle
+        styleObj: $svgStyle,
       }),
       new TdPageAddSvg({
         attrObj: {
-          width: '2em',
-          height: '2em',
+          width: "2em",
+          height: "2em",
         },
-        styleObj: $svgStyle
+        styleObj: $svgStyle,
       }),
       new TdPageDeleteSvg({
         attrObj: {
-          width: '2em',
-          height: '2em',
+          width: "2em",
+          height: "2em",
         },
-        styleObj: $svgStyle
+        styleObj: $svgStyle,
       }),
       new TdPageDirectionSvg({
         attrObj: {
-          width: '2em',
-          height: '2em',
+          width: "2em",
+          height: "2em",
         },
-        styleObj: $svgStyle
+        styleObj: $svgStyle,
       }),
       new TdPageHeaderFooterSvg({
         attrObj: {
-          width: '2em',
-          height: '2em',
+          width: "2em",
+          height: "2em",
         },
-        styleObj: $svgStyle
+        styleObj: $svgStyle,
       }),
       new TdPageMarginSvg({
         attrObj: {
-          width: '2em',
-          height: '2em',
+          width: "2em",
+          height: "2em",
         },
-        styleObj: $svgStyle
+        styleObj: $svgStyle,
       }),
       new TdPaginateSvg({
         attrObj: {
-          width: '2em',
-          height: '2em',
+          width: "2em",
+          height: "2em",
         },
-        styleObj: $svgStyle
+        styleObj: $svgStyle,
       }),
       new TdPaginationSvg({
         attrObj: {
-          width: '2em',
-          height: '2em',
+          width: "2em",
+          height: "2em",
         },
-        styleObj: $svgStyle
+        styleObj: $svgStyle,
       }),
       new TdPagingSvg({
         attrObj: {
-          width: '2em',
-          height: '2em',
+          width: "2em",
+          height: "2em",
         },
-        styleObj: $svgStyle
+        styleObj: $svgStyle,
       }),
       new TdPasswordSvg({
         attrObj: {
-          width: '2em',
-          height: '2em',
+          width: "2em",
+          height: "2em",
         },
-        styleObj: $svgStyle
+        styleObj: $svgStyle,
       }),
       new TdPdfSvg({
         attrObj: {
-          width: '2em',
-          height: '2em',
+          width: "2em",
+          height: "2em",
         },
-        styleObj: $svgStyle
+        styleObj: $svgStyle,
       }),
       new TdPeopleSvg({
         attrObj: {
-          width: '2em',
-          height: '2em',
+          width: "2em",
+          height: "2em",
         },
-        styleObj: $svgStyle
+        styleObj: $svgStyle,
       }),
       new TdPeoplesSvg({
         attrObj: {
-          width: '2em',
-          height: '2em',
+          width: "2em",
+          height: "2em",
         },
-        styleObj: $svgStyle
+        styleObj: $svgStyle,
       }),
       new TdPlusSvg({
         attrObj: {
-          width: '2em',
-          height: '2em',
+          width: "2em",
+          height: "2em",
         },
-        styleObj: $svgStyle
+        styleObj: $svgStyle,
       }),
       new TdProcessSvg({
         attrObj: {
-          width: '2em',
-          height: '2em',
+          width: "2em",
+          height: "2em",
         },
-        styleObj: $svgStyle
+        styleObj: $svgStyle,
       }),
       new TdPropertySvg({
         attrObj: {
-          width: '2em',
-          height: '2em',
+          width: "2em",
+          height: "2em",
         },
-        styleObj: $svgStyle
+        styleObj: $svgStyle,
       }),
       new TdQqSvg({
         attrObj: {
-          width: '2em',
-          height: '2em',
+          width: "2em",
+          height: "2em",
         },
-        styleObj: $svgStyle
+        styleObj: $svgStyle,
       }),
       new TdRadioButtonSvg({
         attrObj: {
-          width: '2em',
-          height: '2em',
+          width: "2em",
+          height: "2em",
         },
-        styleObj: $svgStyle
+        styleObj: $svgStyle,
       }),
       new TdRectangleSvg({
         attrObj: {
-          width: '2em',
-          height: '2em',
+          width: "2em",
+          height: "2em",
         },
-        styleObj: $svgStyle
+        styleObj: $svgStyle,
       }),
       new TdRedoSvg({
         attrObj: {
-          width: '2em',
-          height: '2em',
+          width: "2em",
+          height: "2em",
         },
-        styleObj: $svgStyle
+        styleObj: $svgStyle,
       }),
       new TdRestrictedEditListSvg({
         attrObj: {
-          width: '2em',
-          height: '2em',
+          width: "2em",
+          height: "2em",
         },
-        styleObj: $svgStyle
+        styleObj: $svgStyle,
       }),
       new TdRowHeightSvg({
         attrObj: {
-          width: '2em',
-          height: '2em',
+          width: "2em",
+          height: "2em",
         },
-        styleObj: $svgStyle
+        styleObj: $svgStyle,
       }),
       new TdRowSpacingSvg({
         attrObj: {
-          width: '2em',
-          height: '2em',
+          width: "2em",
+          height: "2em",
         },
-        styleObj: $svgStyle
+        styleObj: $svgStyle,
       }),
       new TdSPageSvg({
         attrObj: {
-          width: '2em',
-          height: '2em',
+          width: "2em",
+          height: "2em",
         },
-        styleObj: $svgStyle
+        styleObj: $svgStyle,
       }),
       new TdSave2Svg({
         attrObj: {
-          width: '2em',
-          height: '2em',
+          width: "2em",
+          height: "2em",
         },
-        styleObj: $svgStyle
+        styleObj: $svgStyle,
       }),
       new TdSaveSvg({
         attrObj: {
-          width: '2em',
-          height: '2em',
+          width: "2em",
+          height: "2em",
         },
-        styleObj: $svgStyle
+        styleObj: $svgStyle,
       }),
       new TdSdTagSvg({
         attrObj: {
-          width: '2em',
-          height: '2em',
+          width: "2em",
+          height: "2em",
         },
-        styleObj: $svgStyle
+        styleObj: $svgStyle,
       }),
       new TdSearchSvg({
         attrObj: {
-          width: '2em',
-          height: '2em',
+          width: "2em",
+          height: "2em",
         },
-        styleObj: $svgStyle
+        styleObj: $svgStyle,
       }),
       new TdSelectSvg({
         attrObj: {
-          width: '2em',
-          height: '2em',
+          width: "2em",
+          height: "2em",
         },
-        styleObj: $svgStyle
+        styleObj: $svgStyle,
       }),
       new TdSensitiveInfoSvg({
         attrObj: {
-          width: '2em',
-          height: '2em',
+          width: "2em",
+          height: "2em",
         },
-        styleObj: $svgStyle
+        styleObj: $svgStyle,
       }),
       new TdShapeSvg({
         attrObj: {
-          width: '2em',
-          height: '2em',
+          width: "2em",
+          height: "2em",
         },
-        styleObj: $svgStyle
+        styleObj: $svgStyle,
       }),
       new TdShoppingCardSvg({
         attrObj: {
-          width: '2em',
-          height: '2em',
+          width: "2em",
+          height: "2em",
         },
-        styleObj: $svgStyle
+        styleObj: $svgStyle,
       }),
       new TdShoppingSvg({
         attrObj: {
-          width: '2em',
-          height: '2em',
+          width: "2em",
+          height: "2em",
         },
-        styleObj: $svgStyle
+        styleObj: $svgStyle,
       }),
       new TdSignSvg({
         attrObj: {
-          width: '2em',
-          height: '2em',
+          width: "2em",
+          height: "2em",
         },
-        styleObj: $svgStyle
+        styleObj: $svgStyle,
       }),
       new TdSignatureSvg({
         attrObj: {
-          width: '2em',
-          height: '2em',
+          width: "2em",
+          height: "2em",
         },
-        styleObj: $svgStyle
+        styleObj: $svgStyle,
       }),
       new TdSingleInputSvg({
         attrObj: {
-          width: '2em',
-          height: '2em',
+          width: "2em",
+          height: "2em",
         },
-        styleObj: $svgStyle
+        styleObj: $svgStyle,
       }),
       new TdSingleOptionSvg({
         attrObj: {
-          width: '2em',
-          height: '2em',
+          width: "2em",
+          height: "2em",
         },
-        styleObj: $svgStyle
+        styleObj: $svgStyle,
       }),
       new TdSizeSvg({
         attrObj: {
-          width: '2em',
-          height: '2em',
+          width: "2em",
+          height: "2em",
         },
-        styleObj: $svgStyle
+        styleObj: $svgStyle,
       }),
       new TdSkillSvg({
         attrObj: {
-          width: '2em',
-          height: '2em',
+          width: "2em",
+          height: "2em",
         },
-        styleObj: $svgStyle
+        styleObj: $svgStyle,
       }),
       new TdSortValueSvg({
         attrObj: {
-          width: '2em',
-          height: '2em',
+          width: "2em",
+          height: "2em",
         },
-        styleObj: $svgStyle
+        styleObj: $svgStyle,
       }),
       new TdSortSvg({
         attrObj: {
-          width: '2em',
-          height: '2em',
+          width: "2em",
+          height: "2em",
         },
-        styleObj: $svgStyle
+        styleObj: $svgStyle,
       }),
       new TdSplitCellSvg({
         attrObj: {
-          width: '2em',
-          height: '2em',
+          width: "2em",
+          height: "2em",
         },
-        styleObj: $svgStyle
+        styleObj: $svgStyle,
       }),
       new TdStarSvg({
         attrObj: {
-          width: '2em',
-          height: '2em',
+          width: "2em",
+          height: "2em",
         },
-        styleObj: $svgStyle
+        styleObj: $svgStyle,
       }),
       new TdStaticCatalogSvg({
         attrObj: {
-          width: '2em',
-          height: '2em',
+          width: "2em",
+          height: "2em",
         },
-        styleObj: $svgStyle
+        styleObj: $svgStyle,
       }),
       new TdStaticHorizontalLineSvg({
         attrObj: {
-          width: '2em',
-          height: '2em',
+          width: "2em",
+          height: "2em",
         },
-        styleObj: $svgStyle
+        styleObj: $svgStyle,
       }),
       new TdStaticImageSvg({
         attrObj: {
-          width: '2em',
-          height: '2em',
+          width: "2em",
+          height: "2em",
         },
-        styleObj: $svgStyle
+        styleObj: $svgStyle,
       }),
       new TdStaticVerticalLineSvg({
         attrObj: {
-          width: '2em',
-          height: '2em',
+          width: "2em",
+          height: "2em",
         },
-        styleObj: $svgStyle
+        styleObj: $svgStyle,
       }),
       new TdStaticHLineSvg({
         attrObj: {
-          width: '2em',
-          height: '2em',
+          width: "2em",
+          height: "2em",
         },
-        styleObj: $svgStyle
+        styleObj: $svgStyle,
       }),
       new TdStaticLabelSvg({
         attrObj: {
-          width: '2em',
-          height: '2em',
+          width: "2em",
+          height: "2em",
         },
-        styleObj: $svgStyle
+        styleObj: $svgStyle,
       }),
       new TdStaticMLLabelSvg({
         attrObj: {
-          width: '2em',
-          height: '2em',
+          width: "2em",
+          height: "2em",
         },
-        styleObj: $svgStyle
+        styleObj: $svgStyle,
       }),
       new TdStaticQRCodeSvg({
         attrObj: {
-          width: '2em',
-          height: '2em',
+          width: "2em",
+          height: "2em",
         },
-        styleObj: $svgStyle
+        styleObj: $svgStyle,
       }),
       new TdStaticSLLabelSvg({
         attrObj: {
-          width: '2em',
-          height: '2em',
+          width: "2em",
+          height: "2em",
         },
-        styleObj: $svgStyle
+        styleObj: $svgStyle,
       }),
       new TdStaticTableSvg({
         attrObj: {
-          width: '2em',
-          height: '2em',
+          width: "2em",
+          height: "2em",
         },
-        styleObj: $svgStyle
+        styleObj: $svgStyle,
       }),
       new TdStaticTextSvg({
         attrObj: {
-          width: '2em',
-          height: '2em',
+          width: "2em",
+          height: "2em",
         },
-        styleObj: $svgStyle
+        styleObj: $svgStyle,
       }),
       new TdStaticVLineSvg({
         attrObj: {
-          width: '2em',
-          height: '2em',
+          width: "2em",
+          height: "2em",
         },
-        styleObj: $svgStyle
+        styleObj: $svgStyle,
       }),
       new TdStrikethroughSvg({
         attrObj: {
-          width: '2em',
-          height: '2em',
+          width: "2em",
+          height: "2em",
         },
-        styleObj: $svgStyle
+        styleObj: $svgStyle,
       }),
       new TdSubmitSvg({
         attrObj: {
-          width: '2em',
-          height: '2em',
+          width: "2em",
+          height: "2em",
         },
-        styleObj: $svgStyle
+        styleObj: $svgStyle,
       }),
       new TdSvgSvg({
         attrObj: {
-          width: '2em',
-          height: '2em',
+          width: "2em",
+          height: "2em",
         },
-        styleObj: $svgStyle
+        styleObj: $svgStyle,
       }),
       new TdTabSvg({
         attrObj: {
-          width: '2em',
-          height: '2em',
+          width: "2em",
+          height: "2em",
         },
-        styleObj: $svgStyle
+        styleObj: $svgStyle,
       }),
       new TdTable1Svg({
         attrObj: {
-          width: '2em',
-          height: '2em',
+          width: "2em",
+          height: "2em",
         },
-        styleObj: $svgStyle
+        styleObj: $svgStyle,
       }),
       new TdTable2Svg({
         attrObj: {
-          width: '2em',
-          height: '2em',
+          width: "2em",
+          height: "2em",
         },
-        styleObj: $svgStyle
+        styleObj: $svgStyle,
       }),
       new TdTableNewSvg({
         attrObj: {
-          width: '2em',
-          height: '2em',
+          width: "2em",
+          height: "2em",
         },
-        styleObj: $svgStyle
+        styleObj: $svgStyle,
       }),
       new TdTableSvg({
         attrObj: {
-          width: '2em',
-          height: '2em',
+          width: "2em",
+          height: "2em",
         },
-        styleObj: $svgStyle
+        styleObj: $svgStyle,
       }),
       new TdTaskSvg({
         attrObj: {
-          width: '2em',
-          height: '2em',
+          width: "2em",
+          height: "2em",
         },
-        styleObj: $svgStyle
+        styleObj: $svgStyle,
       }),
       new TdTdImageSvg({
         attrObj: {
-          width: '2em',
-          height: '2em',
+          width: "2em",
+          height: "2em",
         },
-        styleObj: $svgStyle
+        styleObj: $svgStyle,
       }),
       new TdTemplatesSvg({
         attrObj: {
-          width: '2em',
-          height: '2em',
+          width: "2em",
+          height: "2em",
         },
-        styleObj: $svgStyle
+        styleObj: $svgStyle,
       }),
       new TdTextIndentSvg({
         attrObj: {
-          width: '2em',
-          height: '2em',
+          width: "2em",
+          height: "2em",
         },
-        styleObj: $svgStyle
+        styleObj: $svgStyle,
       }),
       new TdTextSvg({
         attrObj: {
-          width: '2em',
-          height: '2em',
+          width: "2em",
+          height: "2em",
         },
-        styleObj: $svgStyle
+        styleObj: $svgStyle,
       }),
       new TdThemeSvg({
         attrObj: {
-          width: '2em',
-          height: '2em',
+          width: "2em",
+          height: "2em",
         },
-        styleObj: $svgStyle
+        styleObj: $svgStyle,
       }),
       new TdThreeDotsSvg({
         attrObj: {
-          width: '2em',
-          height: '2em',
+          width: "2em",
+          height: "2em",
         },
-        styleObj: $svgStyle
+        styleObj: $svgStyle,
       }),
       new TdThumbnailPageSvg({
         attrObj: {
-          width: '2em',
-          height: '2em',
+          width: "2em",
+          height: "2em",
         },
-        styleObj: $svgStyle
+        styleObj: $svgStyle,
       }),
       new TdThumbnailSvg({
         attrObj: {
-          width: '2em',
-          height: '2em',
+          width: "2em",
+          height: "2em",
         },
-        styleObj: $svgStyle
+        styleObj: $svgStyle,
       }),
       new TdTimeSvg({
         attrObj: {
-          width: '2em',
-          height: '2em',
+          width: "2em",
+          height: "2em",
         },
-        styleObj: $svgStyle
+        styleObj: $svgStyle,
       }),
       new TdTransformSvg({
         attrObj: {
-          width: '2em',
-          height: '2em',
+          width: "2em",
+          height: "2em",
         },
-        styleObj: $svgStyle
+        styleObj: $svgStyle,
       }),
       new TdTreeShapeSvg({
         attrObj: {
-          width: '2em',
-          height: '2em',
+          width: "2em",
+          height: "2em",
         },
-        styleObj: $svgStyle
+        styleObj: $svgStyle,
       }),
       new TdTreeTableSvg({
         attrObj: {
-          width: '2em',
-          height: '2em',
+          width: "2em",
+          height: "2em",
         },
-        styleObj: $svgStyle
+        styleObj: $svgStyle,
       }),
       new TdTreeSvg({
         attrObj: {
-          width: '2em',
-          height: '2em',
+          width: "2em",
+          height: "2em",
         },
-        styleObj: $svgStyle
+        styleObj: $svgStyle,
       }),
       new TdUnderlineSvg({
         attrObj: {
-          width: '2em',
-          height: '2em',
+          width: "2em",
+          height: "2em",
         },
-        styleObj: $svgStyle
+        styleObj: $svgStyle,
       }),
       new TdUndoSvg({
         attrObj: {
-          width: '2em',
-          height: '2em',
+          width: "2em",
+          height: "2em",
         },
-        styleObj: $svgStyle
+        styleObj: $svgStyle,
       }),
       new TdUnfoldSvg({
         attrObj: {
-          width: '2em',
-          height: '2em',
+          width: "2em",
+          height: "2em",
         },
-        styleObj: $svgStyle
+        styleObj: $svgStyle,
       }),
       new TdUserSvg({
         attrObj: {
-          width: '2em',
-          height: '2em',
+          width: "2em",
+          height: "2em",
         },
-        styleObj: $svgStyle
+        styleObj: $svgStyle,
       }),
       new TdViewCodeSvg({
         attrObj: {
-          width: '2em',
-          height: '2em',
+          width: "2em",
+          height: "2em",
         },
-        styleObj: $svgStyle
+        styleObj: $svgStyle,
       }),
       new TdWatermarkSvg({
         attrObj: {
-          width: '2em',
-          height: '2em',
+          width: "2em",
+          height: "2em",
         },
-        styleObj: $svgStyle
+        styleObj: $svgStyle,
       }),
       new TdWechatSvg({
         attrObj: {
-          width: '2em',
-          height: '2em',
+          width: "2em",
+          height: "2em",
         },
-        styleObj: $svgStyle
+        styleObj: $svgStyle,
       }),
       new TdWorkflowSvg({
         attrObj: {
-          width: '2em',
-          height: '2em',
+          width: "2em",
+          height: "2em",
         },
-        styleObj: $svgStyle
+        styleObj: $svgStyle,
       }),
       new TdZipSvg({
         attrObj: {
-          width: '2em',
-          height: '2em',
+          width: "2em",
+          height: "2em",
         },
-        styleObj: $svgStyle
+        styleObj: $svgStyle,
       }),
     );
   }

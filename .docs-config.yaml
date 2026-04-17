@@ -18,7 +18,7 @@ ai:
     chunk_overlap: 50
     top_k: 5
     rerank: true
-    
+
   # Agent 技能集成
   agent:
     skills:
@@ -31,7 +31,7 @@ ai:
       max_tokens: 7500
       compression: true
       priority_injection: true
-      
+
   # 提示词模板
   prompts:
     templates_path: "00-索引与导航/AI-PROMPT-TEMPLATES.md"
@@ -49,28 +49,28 @@ docs_as_code:
     repository: https://github.com/type-dom/svgs
     branch: main
     protected_branches: [main, develop]
-    
+
   # CI/CD 自动化
   ci_cd:
     platform: GitHub Actions
     workflows:
       - name: docs-generation
         trigger: push
-        files: ['src/**/*.ts', 'ai-docs/**/*.md']
+        files: ["src/**/*.ts", "ai-docs/**/*.md"]
         tasks:
           - typedoc
           - changelog
           - coverage
-          
+
       - name: docs-quality-check
         trigger: pull_request
-        files: ['ai-docs/**/*.md']
+        files: ["ai-docs/**/*.md"]
         tasks:
           - markdownlint
           - lychee
           - cspell
           - textlint
-          
+
   # 质量门禁
   quality_gates:
     markdownlint: error
@@ -78,7 +78,7 @@ docs_as_code:
     spell_check: warning
     ai_tag_verification: error
     frontmatter_completeness: error
-    
+
   # Git Hooks
   hooks:
     pre-commit:
@@ -107,7 +107,7 @@ code_as_docs:
       - see_links
     exclude_private: true
     exclude_protected: false
-    
+
   # TypeDoc 配置
   typedoc:
     entry_points:
@@ -119,7 +119,7 @@ code_as_docs:
     theme: default
     include_version: true
     include_git_remote: true
-    
+
   # 注释规范
   comments:
     style: JSDoc
@@ -138,53 +138,53 @@ structure:
       purpose: index_navigation
       priority: high
       ai_tags: [index, navigation]
-      
+
     - path: 01-项目概述
       purpose: project_overview
       priority: high
       ai_tags: [overview, stack, architecture]
-      
+
     - path: 02-开发规范
       purpose: development_standards
       priority: high
       ai_tags: [standards, coding, testing]
-      
+
     - path: 03-API 文档
       purpose: api_documentation
       priority: medium
       ai_tags: [api, interfaces, types]
-      
+
     - path: 04-业务文档
       purpose: business_docs
       priority: medium
       ai_tags: [business, domain, workflow]
-      
+
     - path: 05-测试文档
       purpose: testing_docs
       priority: medium
       ai_tags: [testing, vitest, e2e]
-      
+
     - path: 06-运维文档
       purpose: operations_docs
       priority: medium
       ai_tags: [ops, deployment, cicd]
-      
+
     - path: 07-AI 专项文档
       purpose: ai_specific
       priority: high
       ai_tags: [ai-first, rag, agent]
-      
+
     - path: 08-架构决策记录
       purpose: architecture_decisions
       priority: high
       ai_tags: [adr, decisions, architecture]
-      
+
     - path: GENERATED
       purpose: auto_generated
       priority: low
       ai_tags: [auto-generated]
       ignore_in_git: true
-      
+
     - path: ARCHIVE
       purpose: historical_archive
       priority: low
@@ -202,13 +202,13 @@ frontmatter:
     - lastUpdated
     - tags
     - authors
-    
+
   optional_fields:
     - contributors
     - relatedDocs
     - status
     - compliance
-    
+
   field_formats:
     title: string
     description: string (max 200 chars)
@@ -235,7 +235,7 @@ tagging:
     - Quick-Start
     - Code-As-Docs
     - Docs-As-Code
-    
+
   # 内容标签
   content_tags:
     - tutorial
@@ -244,7 +244,7 @@ tagging:
     - api
     - concept
     - example
-    
+
   # 角色标签
   role_tags:
     - beginner
@@ -262,27 +262,27 @@ quality_metrics:
   completeness:
     target: 1.0
     measurement: document_count / required_count
-    
+
   # 准确性指标
   accuracy:
     target: 0.98
     measurement: verified_documents / total_documents
-    
+
   # 一致性指标
   consistency:
     target: 0.97
     measurement: consistent_terminology / total_terms
-    
+
   # 可搜索性指标
   searchability:
     target: 0.95
     measurement: tagged_documents / total_documents
-    
+
   # AI 友好性指标
   ai_friendliness:
     target: 0.96
     measurement: structured_documents / total_documents
-    
+
   # 机器可读性指标
   machine_readability:
     target: 0.88
@@ -298,9 +298,9 @@ automation_tools:
     linter: markdownlint
     config: .markdownlint.json
     rules:
-      MD013: false  # line-length
-      MD024: false  # no-duplicate-heading
-      
+      MD013: false # line-length
+      MD024: false # no-duplicate-heading
+
   # 链接检查
   links:
     checker: lychee
@@ -308,7 +308,7 @@ automation_tools:
     exclude:
       - localhost
       - example.com
-      
+
   # 拼写检查
   spelling:
     checker: cspell
@@ -317,7 +317,7 @@ automation_tools:
       - en_US
       - zh_CN
       - typescript
-      
+
   # 文法检查
   grammar:
     checker: textlint
@@ -342,7 +342,7 @@ sync:
       - update_typedoc
       - update_examples
       - update_related_docs
-      
+
   # 文档→代码同步
   docs_to_code:
     enabled: true
@@ -353,7 +353,7 @@ sync:
       - update_comments
       - update_jsdoc
       - create_tasks
-      
+
   # 版本同步
   version_sync:
     enabled: true
@@ -376,7 +376,7 @@ monitoring:
       - missing_frontmatter
       - inconsistent_tags
     report_path: GENERATED/reports/docs-health.md
-    
+
   # 使用分析
   analytics:
     enabled: true
@@ -386,7 +386,7 @@ monitoring:
       - popular_docs
       - ai_retrievals
     dashboard: GENERATED/analytics/docs-usage.html
-    
+
   # 改进建议
   improvements:
     ai_suggested: true

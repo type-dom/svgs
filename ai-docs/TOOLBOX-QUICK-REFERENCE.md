@@ -23,28 +23,28 @@ npm run docs:stats
 
 ### 质量检查 🔍
 
-| 命令 | 用途 | 耗时 | 输出 |
-|-----|------|------|------|
-| `npm run docs:check` | 运行所有检查 | ~2 分钟 | 控制台报告 |
-| `npm run docs:fix` | 自动修复问题 | ~30 秒 | 修复日志 |
-| `npm run docs:links` | 验证链接 | ~1 分钟 | 链接报告 |
-| `npm run docs:quality` | 全面评估 | ~3 分钟 | HTML 报告 |
+| 命令                   | 用途         | 耗时    | 输出       |
+| ---------------------- | ------------ | ------- | ---------- |
+| `npm run docs:check`   | 运行所有检查 | ~2 分钟 | 控制台报告 |
+| `npm run docs:fix`     | 自动修复问题 | ~30 秒  | 修复日志   |
+| `npm run docs:links`   | 验证链接     | ~1 分钟 | 链接报告   |
+| `npm run docs:quality` | 全面评估     | ~3 分钟 | HTML 报告  |
 
 ### 文档生成 📚
 
-| 命令 | 用途 | 耗时 | 输出 |
-|-----|------|------|------|
-| `npm run docs:api` | TypeDoc API 文档 | ~15 秒 | GENERATED/api-extractor/ |
-| `npm run docs:watch` | 监听模式 | 持续 | 实时更新 |
-| `npm run docs:sync` | 同步版本号 | ~5 秒 | 同步报告 |
-| `npm run docs:stats` | 统计分析 | ~10 秒 | HTML 可视化 |
+| 命令                 | 用途             | 耗时   | 输出                     |
+| -------------------- | ---------------- | ------ | ------------------------ |
+| `npm run docs:api`   | TypeDoc API 文档 | ~15 秒 | GENERATED/api-extractor/ |
+| `npm run docs:watch` | 监听模式         | 持续   | 实时更新                 |
+| `npm run docs:sync`  | 同步版本号       | ~5 秒  | 同步报告                 |
+| `npm run docs:stats` | 统计分析         | ~10 秒 | HTML 可视化              |
 
 ### RAG 知识库 🤖
 
-| 命令 | 用途 | 耗时 | 输出 |
-|-----|------|------|------|
+| 命令                     | 用途       | 耗时   | 输出     |
+| ------------------------ | ---------- | ------ | -------- |
 | `npm run docs:rag-build` | 构建向量库 | ~30 秒 | .rag-kb/ |
-| `npm run docs:rag-index` | 优化索引 | ~10 秒 | 索引文件 |
+| `npm run docs:rag-index` | 优化索引   | ~10 秒 | 索引文件 |
 
 ---
 
@@ -69,13 +69,15 @@ npm run docs:stats
 **触发**: Push/PR 到 main/develop  
 **运行**: ubuntu-latest  
 **步骤**:
+
 ```
-Checkout → Setup Node → Install → Build → 
-Generate API Docs → Sync Version → Generate Stats → 
+Checkout → Setup Node → Install → Build →
+Generate API Docs → Sync Version → Generate Stats →
 Upload Artifacts → Deploy (if main)
 ```
 
 **产出**:
+
 - ✅ API 文档 (artifact, 30 天)
 - ✅ 统计报告 (artifact, 30 天)
 - ✅ GitHub Pages 部署 (main 分支)
@@ -85,12 +87,14 @@ Upload Artifacts → Deploy (if main)
 **触发**: PR 含文档/Push 到 main  
 **运行**: ubuntu-latest  
 **步骤**:
+
 ```
-Checkout → Install → markdownlint → lychee → 
+Checkout → Install → markdownlint → lychee →
 cspell → Generate Report → Upload → Comment PR
 ```
 
 **产出**:
+
 - ✅ 质量报告 (artifact, 7 天)
 - ✅ PR 自动评论 (如果是 PR)
 
@@ -106,6 +110,7 @@ cspell → Generate Report → Upload → Comment PR
 **跳过**: 无 Frontmatter 的文件
 
 **示例输出**:
+
 ```
 📦 Syncing documentation to version v0.4.0 (2026-03-19)
 
@@ -128,6 +133,7 @@ Date: 2026-03-19
 
 **功能**: 生成文档统计和可视化报告  
 **分析**:
+
 - 文件总数和行数
 - Frontmatter 完整率
 - AI 标签分布
@@ -186,6 +192,7 @@ npm run prepublishOnly   # 发布前完整流程
 
 **症状**: 语法检查失败  
 **解决**:
+
 ```bash
 npx markdownlint ai-docs/**/*.md --fix
 ```
@@ -194,6 +201,7 @@ npx markdownlint ai-docs/**/*.md --fix
 
 **症状**: 发现坏链  
 **诊断**:
+
 ```bash
 npx lychee ai-docs/**/*.md --verbose
 ```
@@ -207,6 +215,7 @@ npx lychee ai-docs/**/*.md --verbose
 
 **症状**: 版本号不匹配  
 **检查**:
+
 ```bash
 cat package.json | grep version
 # 必须是语义化版本：x.y.z
@@ -218,18 +227,18 @@ cat package.json | grep version
 
 ### 当前状态
 
-| 指标 | 值 | 目标 | 状态 |
-|-----|----|-----|------|
-| 文档总数 | 45 | 45 | ✅ |
-| 机器可读率 | 88% | 90% | ⚠️ |
-| Frontmatter 完整 | 100% | 100% | ✅ |
-| AI 标签覆盖 | 100% | 100% | ✅ |
-| 自动化程度 | 90% | 95% | ⚠️ |
+| 指标             | 值   | 目标 | 状态 |
+| ---------------- | ---- | ---- | ---- |
+| 文档总数         | 45   | 45   | ✅   |
+| 机器可读率       | 88%  | 90%  | ⚠️   |
+| Frontmatter 完整 | 100% | 100% | ✅   |
+| AI 标签覆盖      | 100% | 100% | ✅   |
+| 自动化程度       | 90%  | 95%  | ⚠️   |
 
 ### 预期收益
 
-| 指标 | 提升 |
-|-----|------|
+| 指标     | 提升 |
+| -------- | ---- |
 | 检查时间 | -93% |
 | 同步时间 | -97% |
 | 部署时间 | -90% |
@@ -266,6 +275,7 @@ cat package.json | grep version
 ### Git Hooks 推荐
 
 **.husky/pre-commit**:
+
 ```bash
 #!/bin/sh
 npm run docs:check
@@ -273,6 +283,7 @@ npm run docs:fix
 ```
 
 **.husky/pre-push**:
+
 ```bash
 #!/bin/sh
 npm run docs:sync
@@ -282,6 +293,7 @@ npm run docs:stats
 ### CI/CD集成
 
 **.github/workflows/ci.yml** (片段):
+
 ```yaml
 jobs:
   docs:
@@ -296,12 +308,14 @@ jobs:
 ### 定期维护
 
 **每周**:
+
 ```bash
 # 查看统计报告
 open GENERATED/reports/docs-statistics.html
 ```
 
 **每月**:
+
 ```bash
 # 同步版本
 npm run docs:sync

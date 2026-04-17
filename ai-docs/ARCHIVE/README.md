@@ -1,7 +1,7 @@
 # Archive
 
 > **说明**: 此目录用于存放历史版本文档和已废弃的内容。
-> 
+>
 > **Note**: This directory stores historical version documentation and deprecated content.
 
 ---
@@ -59,6 +59,7 @@ Content that should be archived:
 ### v2.x 版本归档 / Version 2.x Archive
 
 **包含内容 / Contents**:
+
 - API 文档 (v2.x 版本)
 - 用户指南和教程
 - 示例代码
@@ -66,6 +67,7 @@ Content that should be archived:
 - 最终版本的 changelog
 
 **访问方式 / Access**:
+
 ```bash
 # 查看 v2.x API 文档
 open ai-docs/ARCHIVE/v2.x/api-docs/index.html
@@ -77,25 +79,30 @@ cat ai-docs/ARCHIVE/v2.x/migration-to-v3.md
 ### 废弃内容 / Deprecated Content
 
 **示例：废弃的组件**
-```markdown
+
+````markdown
 # @deprecated TdOldButtonSvg
 
 此组件已在 v3.0.0 中废弃，请使用新的 TdButtonSvg
 
 **替代方案**:
+
 ```typescript
 // ❌ 旧写法
-import { TdOldButtonSvg } from '@type-dom/svgs'
+import { TdOldButtonSvg } from "@type-dom/svgs";
 
 // ✅ 新写法
-import { TdButtonSvg } from '@type-dom/svgs/common'
+import { TdButtonSvg } from "@type-dom/svgs/common";
 ```
+````
 
 **移除时间线**:
+
 - v3.0.0: 标记为 deprecated
 - v3.2.0: 发出警告信息
 - v4.0.0: 完全移除
-```
+
+````
 
 ---
 
@@ -112,7 +119,7 @@ cat ARCHIVE/v2.x/components/TdAddSvg.md
 
 # 比较不同版本的差异
 diff ARCHIVE/v2.x/api.md ai-docs/03-API 文档/接口定义.md
-```
+````
 
 ### 引用历史内容 / Referencing Historical Content
 
@@ -122,6 +129,7 @@ When referencing archived content in documentation:
 
 ```markdown
 **历史版本参考**:
+
 - v2.x API: [查看归档](../ARCHIVE/v2.x/api-docs/)
 - 迁移指南：[v2 到 v3](../ARCHIVE/v2.x/migration-to-v3.md)
 - 废弃组件：[列表](../ARCHIVE/deprecated/components.md)
@@ -175,6 +183,7 @@ cp ARCHIVE/v2.x/guides/getting-started.md ai-docs/guides/
 ```
 
 **注意**: 恢复前请确认：
+
 - ✅ 确实需要旧版本文档
 - ✅ 了解与当前版本的差异
 - ✅ 更新相关引用和链接
@@ -208,11 +217,13 @@ ARCHIVE/
 ## 🔗 相关资源 / Related Resources
 
 ### 内部文档 / Internal Docs
+
 - [版本管理](../06-运维文档/CI-CD-PIPELINE.md) - 版本发布流程
 - [废弃策略](../02-开发规范/编码规范.md) - 如何标记废弃功能
 - [迁移指南模板](./deprecated/MIGRATION-TEMPLATE.md)
 
 ### 外部资源 / External Resources
+
 - [Semantic Versioning](https://semver.org/)
 - [Keep a Changelog](https://keepachangelog.com/)
 - [Deprecation Best Practices](https://dev.to/box/deprecation-best-practices-you-should-follow-3789)
@@ -221,8 +232,8 @@ ARCHIVE/
 
 ## 📝 更新日志 / Changelog
 
-| 日期 | 版本 | 更新内容 |
-|-----|------|---------|
+| 日期       | 版本   | 更新内容                     |
+| ---------- | ------ | ---------------------------- |
 | 2026-03-19 | v1.0.0 | 初始版本，定义归档结构和策略 |
 
 ---

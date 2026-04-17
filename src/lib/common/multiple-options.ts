@@ -1,26 +1,26 @@
-import { SvgProps, SvgPath, TypeSvgSvg, addAttrObj } from '@type-dom/framework';
+import { SvgProps, SvgPath, TypeSvgSvg, addAttrObj } from "@type-dom/framework";
 export class TdMultipleOptionsSvg extends TypeSvgSvg {
-  className: 'TdMultipleOptionsSvg';
+  className: "TdMultipleOptionsSvg";
   override childNodes: SvgPath[];
   constructor(params: SvgProps = {}) {
     super(params);
-    this.className = 'TdMultipleOptionsSvg';
+    this.className = "TdMultipleOptionsSvg";
     addAttrObj(this, {
-      name: 'TdMultipleOptionsSvg'
+      name: "TdMultipleOptionsSvg",
     });
     addAttrObj(this, {
-      viewBox: '0 0 1026 1024',
+      viewBox: "0 0 1026 1024",
     });
     this.resetSize(24, 24);
     this.childNodes = [];
-    const path0 = new SvgPath({ attrObj: { fill: 'currentColor' }});
+    const path0 = new SvgPath({ attrObj: { fill: "currentColor" } });
     path0.setData(
-      'M853.276444 1009.436444l-853.333333 0 0-853.333333 853.333333 0L853.276444 1009.436444zM56.832 952.547556l739.555556 0 0-739.555556-739.555556 0L56.832 952.547556z',
+      "M853.276444 1009.436444l-853.333333 0 0-853.333333 853.333333 0L853.276444 1009.436444zM56.832 952.547556l739.555556 0 0-739.555556-739.555556 0L56.832 952.547556z",
     );
     this.addChild(path0);
-    const path1 = new SvgPath({ attrObj: { fill: 'currentColor' }});
+    const path1 = new SvgPath({ attrObj: { fill: "currentColor" } });
     path1.setData(
-      'M317.553778 563.825778 243.370667 628.963556 500.110222 919.381333 998.001778 409.884444 936.96 350.094222 501.248 785.464889Z',
+      "M317.553778 563.825778 243.370667 628.963556 500.110222 919.381333 998.001778 409.884444 936.96 350.094222 501.248 785.464889Z",
     );
     this.addChild(path1);
   }

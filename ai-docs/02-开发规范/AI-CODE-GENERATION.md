@@ -3,7 +3,7 @@
 **如何高效使用通义灵码 Agent 生成高质量代码**
 
 **版本**: v0.4.0  
-**最后更新**: 2026-03-19  
+**最后更新**: 2026-03-19
 
 ---
 
@@ -40,6 +40,7 @@ Garbage In, Garbage Out (GIGO)
 【任务】创建 StarSvg 星星图标组件
 【参考】@技术栈.md @编码规范.md @命名约定.md
 【要求】
+
 - 继承 TypeSvgSvg 基类
 - className: 'StarSvg'
 - viewBox: '0 0 1024 1024'
@@ -47,7 +48,7 @@ Garbage In, Garbage Out (GIGO)
 - 支持 width, height, fill 自定义
 - 包含完整 JSDoc 注释
 - 生成单元测试
-【路径数据】M512 42.666667...
+  【路径数据】M512 42.666667...
 ```
 
 ### 2. 文档引用 → 规范一致
@@ -101,15 +102,15 @@ AI 生成 ≠ 直接使用
 version: "1.0"
 
 agent:
-  mode: "agentic"           # 必须：智能体模式
-  auto_perception: true     # 自动感知项目结构
-  tool_calling: true        # 允许调用工具
-  terminal_execution: true  # 允许执行终端命令
+  mode: "agentic" # 必须：智能体模式
+  auto_perception: true # 自动感知项目结构
+  tool_calling: true # 允许调用工具
+  terminal_execution: true # 允许执行终端命令
 
 knowledge_base:
-  enabled: true             # 启用知识库
-  auto_index: true          # 自动索引文档
-  doc_path: "./ai-docs"     # 文档路径
+  enabled: true # 启用知识库
+  auto_index: true # 自动索引文档
+  doc_path: "./ai-docs" # 文档路径
 ```
 
 ### IDE 插件设置
@@ -143,16 +144,19 @@ VS Code / JetBrains IDEs:
 [清晰、具体地描述需要完成的任务]
 
 【约束条件】
+
 - 必须遵循 [规范 1]
 - 必须符合 [标准 2]
 - 禁止使用 [技术/方法 3]
 
 【输出要求】
+
 1. [输出内容 1]
 2. [输出内容 2]
 3. [输出内容 3]
 
 【执行方式】
+
 - 分步骤执行
 - 每步确认后继续
 - 先给出方案，再实现代码
@@ -183,10 +187,10 @@ VS Code / JetBrains IDEs:
 
 ```markdown
 【参考文档】
-@ai-docs/01-项目概述/技术栈.md      # 了解技术栈
-@ai-docs/02-开发规范/编码规范.md    # 遵循编码规范
-@ai-docs/03-API 文档/接口定义.md     # 符合 API 设计
-@ai-docs/05-测试文档/测试规范.md    # 测试要求
+@ai-docs/01-项目概述/技术栈.md # 了解技术栈
+@ai-docs/02-开发规范/编码规范.md # 遵循编码规范
+@ai-docs/03-API 文档/接口定义.md # 符合 API 设计
+@ai-docs/05-测试文档/测试规范.md # 测试要求
 ```
 
 #### 2. 示例代码法
@@ -205,6 +209,7 @@ src/lib/common/close.ts - CloseSvg 组件
 ```markdown
 【项目背景】
 @type-dom/svgs 是基于 TypeDom Framework 的 SVG 组件库
+
 - TypeScript 5.9.3+ (严格模式)
 - 所有组件继承自 TypeSvgSvg
 - 统一使用 viewBox="0 0 1024 1024"
@@ -230,12 +235,14 @@ src/lib/common/close.ts - CloseSvg 组件
 【任务】创建 HeartSvg 心形图标组件
 
 【组件信息】
+
 - 组件名称：HeartSvg
 - 分类：common
 - 文件路径：src/lib/common/heart.ts
 - SVG 路径：[粘贴 path d 属性]
 
 【技术要求】
+
 1. 继承 TypeSvgSvg 基类
 2. className: 'HeartSvg'
 3. viewBox: '0 0 1024 1024'
@@ -246,6 +253,7 @@ src/lib/common/close.ts - CloseSvg 组件
 8. 完整的 JSDoc 注释
 
 【输出内容】
+
 1. 组件源码：src/lib/common/heart.ts
 2. 单元测试：tests/heart.spec.ts
 3. 导出配置：更新 src/lib/common-index.ts
@@ -254,6 +262,7 @@ src/lib/common/close.ts - CloseSvg 组件
 ```
 
 **预期输出**:
+
 - ✅ 完整的组件代码
 - ✅ 符合命名规范
 - ✅ 类型定义准确
@@ -272,15 +281,17 @@ src/lib/common/close.ts - CloseSvg 组件
 @ai-docs/01-项目概述/技术栈.md
 
 【重构目标】
-将所有组件构造函数参数从 `params: TypeProps = {}` 
+将所有组件构造函数参数从 `params: TypeProps = {}`
 改为 `params: SvgProps = {}`
 
 【影响范围】
-- 源文件：src/lib/**/*.ts (约 200 个文件)
-- 测试文件：tests/**/*.spec.ts
-- 类型定义：src/lib/*.d.ts
+
+- 源文件：src/lib/\*_/_.ts (约 200 个文件)
+- 测试文件：tests/\*_/_.spec.ts
+- 类型定义：src/lib/\*.d.ts
 
 【执行策略】
+
 1. 分析现有代码模式（找出所有变体）
 2. 制定详细重构方案
 3. 分批次执行（每批 20 个文件）
@@ -298,6 +309,7 @@ src/lib/common/close.ts - CloseSvg 组件
 ```
 
 **预期输出**:
+
 - ✅ 详细的重构计划
 - ✅ 分批执行脚本
 - ✅ 自动化测试验证
@@ -307,7 +319,7 @@ src/lib/common/close.ts - CloseSvg 组件
 
 ### 场景 3: 测试生成
 
-```markdown
+````markdown
 【角色】测试专家，专注于 Vitest 和 TypeDom 项目
 
 【参考文档】
@@ -316,22 +328,25 @@ src/lib/common/close.ts - CloseSvg 组件
 @ai-docs/05-测试文档/测试用例库.md
 
 【被测组件】
+
 ```typescript
-import { SvgProps, SvgPath, TypeSvgSvg } from '@type-dom/framework';
+import { SvgProps, SvgPath, TypeSvgSvg } from "@type-dom/framework";
 
 export class UserSvg extends TypeSvgSvg {
-  className: 'UserSvg';
+  className: "UserSvg";
   override childNodes: SvgPath[];
-  
+
   constructor(params: SvgProps = {}) {
     super(params);
-    this.className = 'UserSvg';
+    this.className = "UserSvg";
     // ... 实现代码
   }
 }
 ```
+````
 
 【测试要求】
+
 1. **基础功能测试**
    - 默认初始化
    - 自定义属性
@@ -353,7 +368,8 @@ export class UserSvg extends TypeSvgSvg {
    - 函数 ≥ 90%
 
 【输出】完整的测试文件 tests/user.spec.ts
-```
+
+````
 
 **预期输出**:
 - ✅ 全面的测试用例
@@ -391,9 +407,10 @@ export class UserSvg extends TypeSvgSvg {
 - 包含类型定义
 
 【输出】docs/api-common-svgs.md
-```
+````
 
 **预期输出**:
+
 - ✅ 结构清晰的文档
 - ✅ 完整的 API 说明
 - ✅ 丰富的使用示例
@@ -435,24 +452,24 @@ export class UserSvg extends TypeSvgSvg {
 ```typescript
 interface CodeQualityMetrics {
   // 规范符合性 (30%)
-  namingConvention: boolean;      // 命名规范
-  codeStyle: boolean;             // 代码风格
-  comments: boolean;              // 注释完整
-  
+  namingConvention: boolean; // 命名规范
+  codeStyle: boolean; // 代码风格
+  comments: boolean; // 注释完整
+
   // 类型安全 (30%)
-  typeDefinition: boolean;        // 类型定义
-  noExplicitAny: boolean;         // 无显式 any
-  genericsUsage: boolean;         // 泛型使用
-  
+  typeDefinition: boolean; // 类型定义
+  noExplicitAny: boolean; // 无显式 any
+  genericsUsage: boolean; // 泛型使用
+
   // 可维护性 (20%)
-  readability: number;            // 可读性评分 1-10
-  modularity: number;             // 模块化程度 1-10
-  complexity: number;             // 复杂度 1-10 (越低越好)
-  
+  readability: number; // 可读性评分 1-10
+  modularity: number; // 模块化程度 1-10
+  complexity: number; // 复杂度 1-10 (越低越好)
+
   // 测试覆盖 (20%)
-  statementCoverage: number;      // 语句覆盖率
-  branchCoverage: number;         // 分支覆盖率
-  functionCoverage: number;       // 函数覆盖率
+  statementCoverage: number; // 语句覆盖率
+  branchCoverage: number; // 分支覆盖率
+  functionCoverage: number; // 函数覆盖率
 }
 
 // 综合评分 ≥ 85 分才能合并
@@ -470,23 +487,23 @@ if (totalScore >= 85) {
 
 ### 个人效率提升
 
-| 任务类型 | 传统方式 | AI 辅助 | 提升幅度 |
-|---------|---------|--------|---------|
-| **SVG 组件开发** | 2 小时/个 | 15 分钟/个 | 8x |
-| **单元测试编写** | 1 小时/个 | 10 分钟/个 | 6x |
-| **文档编写** | 3 小时/篇 | 30 分钟/篇 | 6x |
-| **代码审查** | 30 分钟/次 | 5 分钟/次 | 6x |
-| **Bug 修复** | 1 小时/个 | 10 分钟/个 | 6x |
+| 任务类型         | 传统方式   | AI 辅助    | 提升幅度 |
+| ---------------- | ---------- | ---------- | -------- |
+| **SVG 组件开发** | 2 小时/个  | 15 分钟/个 | 8x       |
+| **单元测试编写** | 1 小时/个  | 10 分钟/个 | 6x       |
+| **文档编写**     | 3 小时/篇  | 30 分钟/篇 | 6x       |
+| **代码审查**     | 30 分钟/次 | 5 分钟/次  | 6x       |
+| **Bug 修复**     | 1 小时/个  | 10 分钟/个 | 6x       |
 
 ### 团队整体收益
 
-| 指标 | 实施前 | 实施后 | 提升 |
-|-----|-------|--------|------|
-| **迭代速度** | 2 周/版本 | 3 天/版本 | 4.6x |
-| **代码质量** | 70 分 | 92 分 | +31% |
-| **文档覆盖率** | 40% | 95% | +137% |
-| **新人上手** | 2 周 | 3 天 | 4.6x |
-| **团队满意度** | 3.5/5 | 4.7/5 | +34% |
+| 指标           | 实施前    | 实施后    | 提升  |
+| -------------- | --------- | --------- | ----- |
+| **迭代速度**   | 2 周/版本 | 3 天/版本 | 4.6x  |
+| **代码质量**   | 70 分     | 92 分     | +31%  |
+| **文档覆盖率** | 40%       | 95%       | +137% |
+| **新人上手**   | 2 周      | 3 天      | 4.6x  |
+| **团队满意度** | 3.5/5     | 4.7/5     | +34%  |
 
 ---
 
@@ -527,12 +544,13 @@ if (totalScore >= 85) {
 ```markdown
 ❌ 错误示例:
 "帮我重构整个项目，包括:
+
 - 修改目录结构
 - 重命名所有文件
 - 更新所有导入
 - 重写所有测试
 - 生成新文档
-现在就开始"
+  现在就开始"
 
 ✅ 正确示例:
 【长期目标】重构整个项目（预计 2 周完成）
@@ -555,17 +573,17 @@ AI 生成代码 → 直接提交
 
 ✅ 正确流程:
 AI 生成代码
-    ↓
+↓
 人工审核（逻辑、架构）
-    ↓
+↓
 类型检查（tsc --noEmit）
-    ↓
+↓
 单元测试（npm test）
-    ↓
+↓
 代码审查（vp check）
-    ↓
+↓
 性能测试（可选）
-    ↓
+↓
 提交合并
 ```
 

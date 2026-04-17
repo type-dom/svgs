@@ -1,21 +1,21 @@
-import { SvgProps, SvgPath, TypeSvgSvg, addAttrObj } from '@type-dom/framework';
+import { SvgProps, SvgPath, TypeSvgSvg, addAttrObj } from "@type-dom/framework";
 export class FlImageTableFilledSvg extends TypeSvgSvg {
-  className: 'FlImageTableFilledSvg';
+  className: "FlImageTableFilledSvg";
   override childNodes: SvgPath[];
   constructor(params: SvgProps = {}) {
     super(params);
-    this.className = 'FlImageTableFilledSvg';
-   addAttrObj(this, {
-      name: 'FlImageTableFilledSvg'
+    this.className = "FlImageTableFilledSvg";
+    addAttrObj(this, {
+      name: "FlImageTableFilledSvg",
     });
-   addAttrObj(this, {
-      viewBox: '0 0 20 20',
+    addAttrObj(this, {
+      viewBox: "0 0 20 20",
     });
     this.resetSize(24, 24);
     this.childNodes = [];
-    const path0 = new SvgPath({ attrObj: { fill: 'currentColor' }});
+    const path0 = new SvgPath({ attrObj: { fill: "currentColor" } });
     path0.setData(
-      'M6 3C4.34315 3 3 4.34315 3 6H6V3ZM3 7V13H6V7H3ZM7 6H13V3H7V6ZM14 3V6H17C17 4.34315 15.6569 3 14 3ZM17 7H14V13H17V7ZM17 14H14V17C15.6569 17 17 15.6569 17 14ZM13 17V14H7V17H13ZM6 17V14H3C3 15.6569 4.34315 17 6 17ZM7 7V13H7.29588L8.79796 11.4979C9.46186 10.834 10.5382 10.834 11.2021 11.4979L12.7042 13H13V7H7ZM11 8C11.5523 8 12 8.44772 12 9C12 9.55228 11.5523 10 11 10C10.4477 10 10 9.55228 10 9C10 8.44772 10.4477 8 11 8ZM11.29 13H8.71009L9.50507 12.205C9.77844 11.9317 10.2217 11.9317 10.495 12.205L11.29 13Z',
+      "M6 3C4.34315 3 3 4.34315 3 6H6V3ZM3 7V13H6V7H3ZM7 6H13V3H7V6ZM14 3V6H17C17 4.34315 15.6569 3 14 3ZM17 7H14V13H17V7ZM17 14H14V17C15.6569 17 17 15.6569 17 14ZM13 17V14H7V17H13ZM6 17V14H3C3 15.6569 4.34315 17 6 17ZM7 7V13H7.29588L8.79796 11.4979C9.46186 10.834 10.5382 10.834 11.2021 11.4979L12.7042 13H13V7H7ZM11 8C11.5523 8 12 8.44772 12 9C12 9.55228 11.5523 10 11 10C10.4477 10 10 9.55228 10 9C10 8.44772 10.4477 8 11 8ZM11.29 13H8.71009L9.50507 12.205C9.77844 11.9317 10.2217 11.9317 10.495 12.205L11.29 13Z",
     );
     this.addChild(path0);
   }

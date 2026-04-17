@@ -3,7 +3,7 @@
 **@type-dom/svgs 核心概念关系与业务规则**
 
 **版本**: v0.4.0  
-**最后更新**: 2026-03-19  
+**最后更新**: 2026-03-19
 
 ---
 
@@ -48,17 +48,20 @@
 **定义**: 基于 XML 的矢量图形描述语言
 
 **关键特性**:
+
 - ✅ 无限缩放不失真
 - ✅ 可通过 CSS/JS 控制样式和行为
 - ✅ 支持路径 (path)、形状 (shape)、文本 (text) 等元素
 - ✅ viewBox 坐标系统
 
 **在项目中的角色**:
+
 ```
 SVG 图形数据 → TypeDom 封装 → TypeScript 组件 → 应用程序
 ```
 
 **相关概念**:
+
 - [[viewBox]] - SVG 视口定义
 - [[path]] - SVG 路径元素
 - [[currentColor]] - SVG 颜色关键字
@@ -70,17 +73,19 @@ SVG 图形数据 → TypeDom 封装 → TypeScript 组件 → 应用程序
 **定义**: 基于 TypeScript 的前端框架，提供类型安全的组件开发体验
 
 **核心 API**:
+
 ```typescript
 import {
-  TypeRoot,        // 根组件
-  TypeSvgSvg,      // SVG 基类
-  TypeElement,     // 元素基类
-  SvgPath,         // 路径组件
-  SvgProps,        // SVG 属性接口
-} from '@type-dom/framework';
+  TypeRoot, // 根组件
+  TypeSvgSvg, // SVG 基类
+  TypeElement, // 元素基类
+  SvgPath, // 路径组件
+  SvgProps, // SVG 属性接口
+} from "@type-dom/framework";
 ```
 
 **继承体系**:
+
 ```
 TypeElement (抽象基类)
     ↓
@@ -92,6 +97,7 @@ TypeSvgSvg (<svg> 元素基类)
 ```
 
 **相关概念**:
+
 - [[虚拟 DOM]] - TypeDom 的核心机制
 - [[响应式]] - 数据变化自动更新视图
 - [[类型安全]] - TypeScript 提供的类型保障
@@ -103,32 +109,33 @@ TypeSvgSvg (<svg> 元素基类)
 **定义**: 使用 TypeDom 封装的可复用 SVG 图标组件
 
 **标准结构**:
+
 ```typescript
 export class TdAddSvg extends TypeSvgSvg {
-  className: 'TdAddSvg';              // 组件标识
-  override childNodes: SvgPath[];     // 子节点类型
-  
+  className: "TdAddSvg"; // 组件标识
+  override childNodes: SvgPath[]; // 子节点类型
+
   constructor(params: SvgProps = {}) {
     super(params);
-    
+
     // 1. 设置类名
-    this.className = 'TdAddSvg';
-    
+    this.className = "TdAddSvg";
+
     // 2. 设置属性
     addAttrObj(this, {
-      viewBox: '0 0 1024 1024',
-      name: 'TdAddSvg'
+      viewBox: "0 0 1024 1024",
+      name: "TdAddSvg",
     });
-    
+
     // 3. 设置尺寸
     this.resetSize(24, 24);
-    
+
     // 4. 创建路径
-    const path = new SvgPath({ 
-      attrObj: { fill: 'currentColor' }
+    const path = new SvgPath({
+      attrObj: { fill: "currentColor" },
     });
-    path.setData('M512...'); // SVG 路径数据
-    
+    path.setData("M512..."); // SVG 路径数据
+
     // 5. 添加子节点
     this.addChild(path);
     this.childNodes = [path];
@@ -137,6 +144,7 @@ export class TdAddSvg extends TypeSvgSvg {
 ```
 
 **组件特征**:
+
 - ✅ 继承自 `TypeSvgSvg`
 - ✅ 明确的 `className` 标识
 - ✅ 统一的 `viewBox` 坐标系统
@@ -144,6 +152,7 @@ export class TdAddSvg extends TypeSvgSvg {
 - ✅ 类型安全的子节点管理
 
 **相关概念**:
+
 - [[分类系统]] - 组件组织方式
 - [[按需导入]] - 使用方式
 - [[类型定义]] - 组件类型声明
@@ -155,6 +164,7 @@ export class TdAddSvg extends TypeSvgSvg {
 **定义**: 按来源和用途组织 SVG 组件的体系
 
 **分类结构**:
+
 ```
 @type-dom/svgs
 ├── Common (通用图标)
@@ -173,24 +183,27 @@ export class TdAddSvg extends TypeSvgSvg {
 ```
 
 **分类原则**:
+
 - ✅ **来源一致**: 同一设计体系的图标归为一类
 - ✅ **用途相关**: 功能相似的图标归为一类
 - ✅ **便于查找**: 符合开发者直觉
 
 **导入示例**:
+
 ```typescript
 // Common 分类
-import { TdAddSvg } from '@type-dom/svgs/common/add';
-import { CommonSvgs } from '@type-dom/svgs/common';
+import { TdAddSvg } from "@type-dom/svgs/common/add";
+import { CommonSvgs } from "@type-dom/svgs/common";
 
 // Element Plus 分类
-import { ElArrowDownSvg } from '@type-dom/svgs/element-plus/arrow-down';
+import { ElArrowDownSvg } from "@type-dom/svgs/element-plus/arrow-down";
 
 // FluentUI 分类
-import { FlAccessTimeSvg } from '@type-dom/svgs/fluentui/access-time';
+import { FlAccessTimeSvg } from "@type-dom/svgs/fluentui/access-time";
 ```
 
 **相关概念**:
+
 - [[索引机制]] - 导出和导入方式
 - [[命名约定]] - 组件命名规则
 - [[Tree Shaking]] - 按需加载优化
@@ -200,6 +213,7 @@ import { FlAccessTimeSvg } from '@type-dom/svgs/fluentui/access-time';
 ### 5. TypeScript 类型系统
 
 **核心类型定义**:
+
 ```typescript
 // SVG 属性接口
 interface SvgProps {
@@ -222,12 +236,14 @@ interface CommonSvgsExport {
 ```
 
 **类型安全保障**:
+
 - ✅ 编译时类型检查
 - ✅ IDE 智能提示
 - ✅ 自动补全
 - ✅ 重构安全性
 
 **相关概念**:
+
 - [[严格模式]] - TypeScript 编译选项
 - [[类型推断]] - 编译器自动推导类型
 - [[泛型]] - 参数化类型
@@ -431,13 +447,13 @@ export * from './lib/fluentui-index';
 
 ```typescript
 // ✅ 按需导入，减小打包体积
-import { TdAddSvg } from '@type-dom/svgs/common/add';
+import { TdAddSvg } from "@type-dom/svgs/common/add";
 
 // ❌ 全量导入，包含所有组件
-import { TdAddSvg } from '@type-dom/svgs';
+import { TdAddSvg } from "@type-dom/svgs";
 
 // ✅ 使用分类索引（中等体积）
-import { TdAddSvg, TdCloseSvg } from '@type-dom/svgs/common';
+import { TdAddSvg, TdCloseSvg } from "@type-dom/svgs/common";
 ```
 
 ### 实践 3: 类型安全
@@ -463,23 +479,23 @@ export class TdAddSvg extends TypeSvgSvg {
 
 ### 从传统前端到 TypeDom
 
-| 传统概念 | TypeDom 对应 | 说明 |
-|---------|-------------|------|
-| React Component | TypeDom Component | 组件化思想 |
-| JSX | TypeScript Class | 声明式语法 |
-| Props | SvgProps | 属性传递 |
-| State | Reactive Data | 响应式数据 |
-| Virtual DOM | TypeDom VDOM | 虚拟 DOM |
+| 传统概念          | TypeDom 对应      | 说明       |
+| ----------------- | ----------------- | ---------- |
+| React Component   | TypeDom Component | 组件化思想 |
+| JSX               | TypeScript Class  | 声明式语法 |
+| Props             | SvgProps          | 属性传递   |
+| State             | Reactive Data     | 响应式数据 |
+| Virtual DOM       | TypeDom VDOM      | 虚拟 DOM   |
 | ReactDOM.render() | component.mount() | 挂载到 DOM |
 
 ### 从普通 SVG 到 TypeDom SVG
 
-| 普通 SVG | TypeDom SVG | 优势 |
-|---------|------------|------|
-| `<svg>` 标签 | TypeSvgSvg 类 | 类型安全 |
-| inline 使用 | 组件化 | 可复用 |
-| 手动管理属性 | 属性对象 | 统一管理 |
-| 无类型检查 | TypeScript 检查 | 编译时安全 |
+| 普通 SVG     | TypeDom SVG     | 优势       |
+| ------------ | --------------- | ---------- |
+| `<svg>` 标签 | TypeSvgSvg 类   | 类型安全   |
+| inline 使用  | 组件化          | 可复用     |
+| 手动管理属性 | 属性对象        | 统一管理   |
+| 无类型检查   | TypeScript 检查 | 编译时安全 |
 
 ---
 
@@ -487,7 +503,8 @@ export class TdAddSvg extends TypeSvgSvg {
 
 ### Q1: 为什么使用 1024x1024 的 viewBox？
 
-**A**: 
+**A**:
+
 - ✅ 行业标准（Iconfont、FontAwesome 等使用）
 - ✅ 精度足够高，缩放不失真
 - ✅ 便于数学计算和路径转换
@@ -496,6 +513,7 @@ export class TdAddSvg extends TypeSvgSvg {
 ### Q2: 为什么要继承 TypeSvgSvg 而不是直接使用 SVG？
 
 **A**:
+
 - ✅ 获得 TypeDom 的响应式能力
 - ✅ 类型安全的属性和方法
 - ✅ 与其他 TypeDom 组件无缝集成
@@ -504,6 +522,7 @@ export class TdAddSvg extends TypeSvgSvg {
 ### Q3: currentColor 的工作原理是什么？
 
 **A**:
+
 ```css
 /* 父元素设置颜色 */
 .button {
@@ -512,24 +531,25 @@ export class TdAddSvg extends TypeSvgSvg {
 
 /* SVG 继承父元素颜色 */
 svg {
-  fill: currentColor;  /* 自动使用#ff0000 */
+  fill: currentColor; /* 自动使用#ff0000 */
 }
 ```
 
 ### Q4: 如何选择合适的导入方式？
 
 **A**:
+
 ```typescript
 // 场景 1: 只使用 1-2 个图标
-import { TdAddSvg } from '@type-dom/svgs/common/add';
+import { TdAddSvg } from "@type-dom/svgs/common/add";
 // ✅ 最小体积，完全 tree-shaking
 
 // 场景 2: 使用同一分类的多个图标
-import { TdAddSvg, TdCloseSvg } from '@type-dom/svgs/common';
+import { TdAddSvg, TdCloseSvg } from "@type-dom/svgs/common";
 // ⚠️ 中等体积，包含整个分类
 
 // 场景 3: 快速原型开发（不推荐生产使用）
-import { TdAddSvg } from '@type-dom/svgs';
+import { TdAddSvg } from "@type-dom/svgs";
 // ❌ 最大体积，包含所有组件
 ```
 

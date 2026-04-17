@@ -1,8 +1,6 @@
 {
   "default": true,
-  "extends": [
-    "markdownlint-config-recommended"
-  ],
+  "extends": ["markdownlint-config-recommended"],
   "rules": {
     "MD001": false,
     "MD003": {

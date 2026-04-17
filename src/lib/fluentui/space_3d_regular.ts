@@ -1,21 +1,21 @@
-import { SvgProps, SvgPath, TypeSvgSvg, addAttrObj } from '@type-dom/framework';
+import { SvgProps, SvgPath, TypeSvgSvg, addAttrObj } from "@type-dom/framework";
 export class FlSpace3dRegularSvg extends TypeSvgSvg {
-  className: 'FlSpace3dRegularSvg';
+  className: "FlSpace3dRegularSvg";
   override childNodes: SvgPath[];
   constructor(params: SvgProps = {}) {
     super(params);
-    this.className = 'FlSpace3dRegularSvg';
-   addAttrObj(this, {
-      name: 'FlSpace3dRegularSvg'
+    this.className = "FlSpace3dRegularSvg";
+    addAttrObj(this, {
+      name: "FlSpace3dRegularSvg",
     });
-   addAttrObj(this, {
-      viewBox: '0 0 20 20',
+    addAttrObj(this, {
+      viewBox: "0 0 20 20",
     });
     this.resetSize(24, 24);
     this.childNodes = [];
-    const path0 = new SvgPath({ attrObj: { fill: 'currentColor' }});
+    const path0 = new SvgPath({ attrObj: { fill: "currentColor" } });
     path0.setData(
-      'M3 6C3 4.34315 4.34315 3 6 3H14C15.6569 3 17 4.34315 17 6V14C17 15.6569 15.6569 17 14 17H6C4.34315 17 3 15.6569 3 14V6ZM16 6C16 4.89543 15.1046 4 14 4H6C4.89543 4 4 4.89543 4 6V9H16V6ZM4 11.9922L5.13838 10H4V11.9922ZM4.86159 12.4999H7.62285L8.33712 10H6.29013L4.86159 12.4999ZM4 13.4999V14C4 15.1046 4.89543 16 6 16H6.62283L7.33713 13.4999H4ZM8.37715 13.4999L7.66285 16H12.3372L11.6228 13.4999H8.37715ZM12.6629 13.4999L13.3772 16H14C15.1046 16 16 15.1046 16 14V13.4999H12.6629ZM15.1384 12.4999L13.7099 10H11.6629L12.3771 12.4999H15.1384ZM11.3371 12.4999L10.6229 10H9.37713L8.66286 12.4999H11.3371ZM16 11.9922V10H14.8616L16 11.9922Z',
+      "M3 6C3 4.34315 4.34315 3 6 3H14C15.6569 3 17 4.34315 17 6V14C17 15.6569 15.6569 17 14 17H6C4.34315 17 3 15.6569 3 14V6ZM16 6C16 4.89543 15.1046 4 14 4H6C4.89543 4 4 4.89543 4 6V9H16V6ZM4 11.9922L5.13838 10H4V11.9922ZM4.86159 12.4999H7.62285L8.33712 10H6.29013L4.86159 12.4999ZM4 13.4999V14C4 15.1046 4.89543 16 6 16H6.62283L7.33713 13.4999H4ZM8.37715 13.4999L7.66285 16H12.3372L11.6228 13.4999H8.37715ZM12.6629 13.4999L13.3772 16H14C15.1046 16 16 15.1046 16 14V13.4999H12.6629ZM15.1384 12.4999L13.7099 10H11.6629L12.3771 12.4999H15.1384ZM11.3371 12.4999L10.6229 10H9.37713L8.66286 12.4999H11.3371ZM16 11.9922V10H14.8616L16 11.9922Z",
     );
     this.addChild(path0);
   }

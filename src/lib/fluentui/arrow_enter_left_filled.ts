@@ -1,21 +1,21 @@
-import { SvgProps, SvgPath, TypeSvgSvg, addAttrObj } from '@type-dom/framework';
+import { SvgProps, SvgPath, TypeSvgSvg, addAttrObj } from "@type-dom/framework";
 export class FlArrowEnterLeftFilledSvg extends TypeSvgSvg {
-  className: 'FlArrowEnterLeftFilledSvg';
+  className: "FlArrowEnterLeftFilledSvg";
   override childNodes: SvgPath[];
   constructor(params: SvgProps = {}) {
     super(params);
-    this.className = 'FlArrowEnterLeftFilledSvg';
-   addAttrObj(this, {
-      name: 'FlArrowEnterLeftFilledSvg'
+    this.className = "FlArrowEnterLeftFilledSvg";
+    addAttrObj(this, {
+      name: "FlArrowEnterLeftFilledSvg",
     });
-   addAttrObj(this, {
-      viewBox: '0 0 20 20',
+    addAttrObj(this, {
+      viewBox: "0 0 20 20",
     });
     this.resetSize(24, 24);
     this.childNodes = [];
-    const path0 = new SvgPath({ attrObj: { fill: 'currentColor' }});
+    const path0 = new SvgPath({ attrObj: { fill: "currentColor" } });
     path0.setData(
-      'M4.64119 12.5L7.51402 15.2038C7.81565 15.4877 7.83004 15.9624 7.54615 16.264C7.26226 16.5657 6.78761 16.58 6.48598 16.2961L2.23598 12.2961C2.08539 12.1544 2 11.9568 2 11.75C2 11.5432 2.08539 11.3456 2.23598 11.2038L6.48598 7.20385C6.78761 6.91996 7.26226 6.93435 7.54615 7.23598C7.83004 7.53761 7.81565 8.01226 7.51402 8.29615L4.64118 11L14.75 11C15.7165 11 16.5 10.2165 16.5 9.25V4.75C16.5 4.33579 16.8358 4 17.25 4C17.6642 4 18 4.33579 18 4.75V9.25C18 11.0449 16.5449 12.5 14.75 12.5L4.64119 12.5Z',
+      "M4.64119 12.5L7.51402 15.2038C7.81565 15.4877 7.83004 15.9624 7.54615 16.264C7.26226 16.5657 6.78761 16.58 6.48598 16.2961L2.23598 12.2961C2.08539 12.1544 2 11.9568 2 11.75C2 11.5432 2.08539 11.3456 2.23598 11.2038L6.48598 7.20385C6.78761 6.91996 7.26226 6.93435 7.54615 7.23598C7.83004 7.53761 7.81565 8.01226 7.51402 8.29615L4.64118 11L14.75 11C15.7165 11 16.5 10.2165 16.5 9.25V4.75C16.5 4.33579 16.8358 4 17.25 4C17.6642 4 18 4.33579 18 4.75V9.25C18 11.0449 16.5449 12.5 14.75 12.5L4.64119 12.5Z",
     );
     this.addChild(path0);
   }

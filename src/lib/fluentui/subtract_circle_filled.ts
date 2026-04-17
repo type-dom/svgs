@@ -1,21 +1,21 @@
-import { SvgProps, SvgPath, TypeSvgSvg, addAttrObj } from '@type-dom/framework';
+import { SvgProps, SvgPath, TypeSvgSvg, addAttrObj } from "@type-dom/framework";
 export class FlSubtractCircleFilledSvg extends TypeSvgSvg {
-  className: 'FlSubtractCircleFilledSvg';
+  className: "FlSubtractCircleFilledSvg";
   override childNodes: SvgPath[];
   constructor(params: SvgProps = {}) {
     super(params);
-    this.className = 'FlSubtractCircleFilledSvg';
-   addAttrObj(this, {
-      name: 'FlSubtractCircleFilledSvg'
+    this.className = "FlSubtractCircleFilledSvg";
+    addAttrObj(this, {
+      name: "FlSubtractCircleFilledSvg",
     });
-   addAttrObj(this, {
-      viewBox: '0 0 20 20',
+    addAttrObj(this, {
+      viewBox: "0 0 20 20",
     });
     this.resetSize(24, 24);
     this.childNodes = [];
-    const path0 = new SvgPath({ attrObj: { fill: 'currentColor' }});
+    const path0 = new SvgPath({ attrObj: { fill: "currentColor" } });
     path0.setData(
-      'M18 10C18 14.4183 14.4183 18 10 18C5.58172 18 2 14.4183 2 10C2 5.58172 5.58172 2 10 2C14.4183 2 18 5.58172 18 10ZM6 10C6 10.2761 6.22386 10.5 6.5 10.5C11.0162 10.5 9.29954 10.5 13.5 10.5C13.7761 10.5 14 10.2761 14 10C14 9.72386 13.7761 9.5 13.5 9.5C9.29954 9.5 11.0162 9.5 6.5 9.5C6.22386 9.5 6 9.72386 6 10Z',
+      "M18 10C18 14.4183 14.4183 18 10 18C5.58172 18 2 14.4183 2 10C2 5.58172 5.58172 2 10 2C14.4183 2 18 5.58172 18 10ZM6 10C6 10.2761 6.22386 10.5 6.5 10.5C11.0162 10.5 9.29954 10.5 13.5 10.5C13.7761 10.5 14 10.2761 14 10C14 9.72386 13.7761 9.5 13.5 9.5C9.29954 9.5 11.0162 9.5 6.5 9.5C6.22386 9.5 6 9.72386 6 10Z",
     );
     this.addChild(path0);
   }

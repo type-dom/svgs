@@ -4,45 +4,45 @@ on:
   pull_request:
     branches: [main, develop]
     paths:
-      - 'ai-docs/**/*.md'
-      - '.markdownlint.json'
-      - '.lycheerc'
-      - '.cspell.json'
-      - '.textlintrc'
+      - "ai-docs/**/*.md"
+      - ".markdownlint.json"
+      - ".lycheerc"
+      - ".cspell.json"
+      - ".textlintrc"
   push:
     branches: [main]
     paths:
-      - 'ai-docs/**/*.md'
+      - "ai-docs/**/*.md"
 
 jobs:
   quality-check:
     runs-on: ubuntu-latest
-    
+
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
-      
+
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '20'
-          cache: 'npm'
-      
+          node-version: "20"
+          cache: "npm"
+
       - name: Install dependencies
         run: npm ci
-      
+
       - name: Run markdown lint
         run: npx markdownlint ai-docs/**/*.md
         continue-on-error: false
-      
+
       - name: Run link checker
         run: npx lychee ai-docs/**/*.md --verbose --config .lycheerc
         continue-on-error: true
-      
+
       - name: Run spell checker
         run: npx cspell ai-docs/**/*.md --config .cspell.json
         continue-on-error: false
-      
+
       - name: Generate quality report
         run: |
           echo "## Documentation Quality Report" > quality-report.md
@@ -57,14 +57,14 @@ jobs:
           echo "- ✅ Spell Check" >> quality-report.md
           echo "" >> quality-report.md
           echo "### Status: PASSED" >> quality-report.md
-      
+
       - name: Upload quality report
         uses: actions/upload-artifact@v4
         with:
           name: quality-report
           path: quality-report.md
           retention-days: 7
-      
+
       - name: Comment PR with results (if PR)
         if: github.event_name == 'pull_request'
         uses: actions/github-script@v7
@@ -72,7 +72,7 @@ jobs:
           script: |
             const fs = require('fs');
             const report = fs.readFileSync('quality-report.md', 'utf8');
-            
+
             github.rest.issues.createComment({
               issue_number: context.issue.number,
               owner: context.repo.owner,

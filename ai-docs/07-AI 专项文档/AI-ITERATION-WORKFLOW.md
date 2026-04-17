@@ -6,14 +6,14 @@ AI 迭代工作流描述了如何与 AI Agent 协作，通过多轮对话和持�
 
 ### 传统工作流 vs AI 迭代工作流
 
-| 维度 | 传统工作流 | AI 迭代工作流 | 提升 |
-|-----|-----------|-------------|------|
-| **需求理解** | 人工分析 (2-4 小时) | AI 辅助分析 (15 分钟) | **8x** ⬆️ |
-| **方案设计** | 独立设计 (1-2 天) | AI 生成 + 审查 (2 小时) | **4-8x** ⬆️ |
-| **代码实现** | 手工编码 (1-3 天) | AI 生成 + 调整 (2-4 小时) | **4-6x** ⬆️ |
-| **测试编写** | 手动编写 (0.5-1 天) | AI 自动生成 (30 分钟) | **4-8x** ⬆️ |
-| **文档撰写** | 最后补充 (2-4 小时) | 同步生成 (30 分钟) | **4-8x** ⬆️ |
-| **整体周期** | 5-10 天 | 1-2 天 | **5-7x** ⬆️ |
+| 维度         | 传统工作流          | AI 迭代工作流             | 提升        |
+| ------------ | ------------------- | ------------------------- | ----------- |
+| **需求理解** | 人工分析 (2-4 小时) | AI 辅助分析 (15 分钟)     | **8x** ⬆️   |
+| **方案设计** | 独立设计 (1-2 天)   | AI 生成 + 审查 (2 小时)   | **4-8x** ⬆️ |
+| **代码实现** | 手工编码 (1-3 天)   | AI 生成 + 调整 (2-4 小时) | **4-6x** ⬆️ |
+| **测试编写** | 手动编写 (0.5-1 天) | AI 自动生成 (30 分钟)     | **4-8x** ⬆️ |
+| **文档撰写** | 最后补充 (2-4 小时) | 同步生成 (30 分钟)        | **4-8x** ⬆️ |
+| **整体周期** | 5-10 天             | 1-2 天                    | **5-7x** ⬆️ |
 
 ---
 
@@ -58,12 +58,14 @@ AI 迭代工作流描述了如何与 AI Agent 协作，通过多轮对话和持�
 
 【Agent 澄清问题】
 为了更好地帮助您，请提供以下信息:
+
 1. 使用场景：主工具栏还是弹出菜单？
 2. 尺寸要求：默认 24px 还是需要多种尺寸？
 3. 样式偏好：线性 (outline) 还是面性 (filled)?
 4. 颜色方案：单色还是多色？
 
 【用户补充】
+
 1. 主工具栏使用
 2. 默认 24px，需要响应式
 3. 线性风格
@@ -77,12 +79,13 @@ AI 迭代工作流描述了如何与 AI Agent 协作，通过多轮对话和持�
 基于您的需求，我建议以下方案:
 
 **设计方案**:
+
 - 基础尺寸：24x24 viewBox
 - 线条粗细：1.5px (适合线性风格)
 - 路径简化：是 (优化文件大小)
 - 响应式：使用 em 单位
 
-**参考图标**: 
+**参考图标**:
 这是常见的"添加"图标设计 (+ 号)
 
 【展示预览图】
@@ -92,7 +95,7 @@ AI 迭代工作流描述了如何与 AI Agent 协作，通过多轮对话和持�
 
 #### 第 3 轮：代码生成 (3 分钟)
 
-```markdown
+````markdown
 【用户】设计方向正确，请生成代码
 
 【Agent 生成代码】
@@ -100,34 +103,38 @@ AI 迭代工作流描述了如何与 AI Agent 协作，通过多轮对话和持�
 
 ```typescript
 // src/lib/common/add.ts
-import { defineComponent, h } from '@type-dom/framework'
+import { defineComponent, h } from "@type-dom/framework";
 
 export const TdAddSvg = defineComponent({
-  name: 'TdAddSvg',
+  name: "TdAddSvg",
   props: {
     size: { type: [Number, String], default: 24 },
-    color: { type: String, default: 'currentColor' }
+    color: { type: String, default: "currentColor" },
   },
   render() {
-    const { size, color } = this.props
-    return h('svg', {
-      viewBox: '0 0 24 24',
-      width: typeof size === 'number' ? `${size}px` : size,
-      height: typeof size === 'number' ? `${size}px` : size,
-      fill: 'none',
-      stroke: color,
-      'stroke-width': '1.5',
-      'stroke-linecap': 'round',
-      'stroke-linejoin': 'round'
-    }, [
-      h('path', { d: 'M12 5v14M5 12h14' })
-    ])
-  }
-})
+    const { size, color } = this.props;
+    return h(
+      "svg",
+      {
+        viewBox: "0 0 24 24",
+        width: typeof size === "number" ? `${size}px` : size,
+        height: typeof size === "number" ? `${size}px` : size,
+        fill: "none",
+        stroke: color,
+        "stroke-width": "1.5",
+        "stroke-linecap": "round",
+        "stroke-linejoin": "round",
+      },
+      [h("path", { d: "M12 5v14M5 12h14" })],
+    );
+  },
+});
 ```
+````
 
 是否需要生成单元测试？
-```
+
+````
 
 #### 第 4 轮：测试生成 (3 分钟)
 
@@ -146,7 +153,7 @@ import { TdAddSvg } from '../src/lib/common/add'
 describe('TdAddSvg', () => {
   it('should render correctly with default props', () => {
     const { container } = render(<TdAddSvg />)
-    
+
     const svg = container.querySelector('svg')
     expect(svg).toBeInTheDocument()
     expect(svg?.getAttribute('width')).toBe('24px')
@@ -163,10 +170,11 @@ describe('TdAddSvg', () => {
     expect(container.querySelector('svg')?.getAttribute('stroke')).toBe('#ff0000')
   })
 })
-```
+````
 
 运行测试：所有测试通过 ✅
-```
+
+````
 
 #### 第 5 轮：代码审查 (2 分钟)
 
@@ -188,15 +196,16 @@ describe('TdAddSvg', () => {
 需要我改进这些点吗？
 
 【用户】加上 aria-label 和尺寸预设
-```
+````
 
 #### 第 6 轮：迭代改进 (3 分钟)
 
-```markdown
+````markdown
 【Agent 改进代码】
 ✅ 已根据反馈改进
 
 **改进点**:
+
 1. ✅ 添加 aria-label 支持无障碍访问
 2. ✅ 提供预设尺寸 (sm: 16px, md: 24px, lg: 32px)
 3. ✅ 添加 prop 验证
@@ -209,8 +218,8 @@ const SIZE_PRESETS = {
 } as const
 
 props: {
-  size: { 
-    type: [Number, String], 
+  size: {
+    type: [Number, String],
     default: 'md',
     validator: (value) => {
       if (typeof value === 'string') {
@@ -222,9 +231,11 @@ props: {
   ariaLabel: { type: String, default: 'Add' }
 }
 ```
+````
 
 完整代码已更新到文件。需要提交 commit 吗？
-```
+
+````
 
 #### 第 7 轮：完成收尾 (2 分钟)
 
@@ -234,7 +245,8 @@ props: {
 【Agent 生成】
 📝 Commit Message:
 
-```
+````
+
 feat(common): add TdAddSvg component with accessibility support
 
 - Add TdAddSvg component for toolbar usage
@@ -244,6 +256,7 @@ feat(common): add TdAddSvg component with accessibility support
 - Follow linear style guideline (1.5px stroke)
 
 Closes #123
+
 ```
 
 ✅ 任务完成！总耗时：~18 分钟
@@ -307,6 +320,7 @@ Closes #123
 ```markdown
 【第 1 轮 - 红】
 用户：为 User 服务生成测试用例，包含以下场景:
+
 - 正常注册
 - 邮箱重复
 - 密码强度不足
@@ -323,9 +337,10 @@ Agent: ✅ 实现 UserService 类
 【第 3 轮 - 重构】
 用户：审查代码并提出改进建议
 
-Agent: 
+Agent:
 ✅ 代码功能完整
 ⚠️ 可改进点:
+
 1. 添加缓存机制提升性能
 2. 使用依赖注入便于测试
 3. 添加日志记录
@@ -355,7 +370,7 @@ MVP (最小可行产品)
 【V1 - MVP】(10 分钟)
 用户：创建一个简单的 SVG 图标组件
 
-Agent: 
+Agent:
 ✅ 基础组件 (固定尺寸，单色)
 ✅ 1 个测试用例
 
@@ -406,6 +421,7 @@ Agent:
 【问题】构建完整的 SVG 图标库
 
 【分解】
+
 1. 子任务 1: 批量转换 SVG 文件 (15 分钟)
 2. 子任务 2: 生成 TypeScript 定义 (10 分钟)
 3. 子任务 3: 创建分类索引 (12 分钟)
@@ -444,6 +460,7 @@ How     - 有什么要求？(约束条件)
 
 ✅ 精确提问:
 "创建一个 SVG 图标组件用于主工具栏的添加按钮
+
 - 尺寸：默认 24px，支持 sm(16px)/lg(32px)
 - 样式：线性风格，1.5px 描边
 - 颜色：currentColor (跟随主题)
@@ -467,21 +484,24 @@ How     - 有什么要求？(约束条件)
 
 #### 方法 2: 代码示例
 
-```markdown
+````markdown
 【现有代码风格参考】
+
 ```typescript
 // 这是我们已有的组件示例
 export const TdCloseSvg = defineComponent({
   props: {
     size: { type: [Number, String], default: 24 },
-    color: { type: String, default: 'currentColor' }
+    color: { type: String, default: "currentColor" },
   },
   // ...
-})
+});
 ```
+````
 
 请按照相同风格创建添加图标组件...
-```
+
+````
 
 #### 方法 3: 约束条件列表
 
@@ -497,7 +517,7 @@ export const TdCloseSvg = defineComponent({
 💡 1. 提供预设尺寸
 💡 2. 支持暗色模式
 💡 3. 添加过渡动画
-```
+````
 
 ---
 
@@ -518,12 +538,14 @@ export const TdCloseSvg = defineComponent({
 用户：需要批量重命名 SVG 文件的功能
 
 Agent 澄清:
+
 1. 批量范围：单个文件夹还是递归子目录？
 2. 命名规则：kebab-case 还是 camelCase?
 3. 冲突处理：覆盖还是跳过？
 4. 干运行：是否先预览变更？
 
 用户确认:
+
 1. 递归子目录
 2. kebab-case (如 add-circle.svg)
 3. 跳过并警告
@@ -535,13 +557,14 @@ Agent 设计方案:
 
 **架构设计**:
 BatchRenamer (主类)
-├─ scanDirectory()      // 扫描文件
-├─ generateNewNames()   // 生成新名称
-├─ detectConflicts()    // 检测冲突
-├─ previewChanges()     // 预览
-└─ executeRename()      // 执行
+├─ scanDirectory() // 扫描文件
+├─ generateNewNames() // 生成新名称
+├─ detectConflicts() // 检测冲突
+├─ previewChanges() // 预览
+└─ executeRename() // 执行
 
 **算法流程**:
+
 1. 深度优先遍历目录
 2. 提取 SVG 文件名
 3. 转换为 kebab-case
@@ -570,11 +593,13 @@ Round 3 (5 分钟):
 Agent 自我审查:
 
 ✅ 代码质量:
+
 - 函数职责单一
 - 错误处理完整
 - 日志记录清晰
 
 ⚠️ 改进建议:
+
 1. 添加进度条显示
 2. 支持回滚操作
 3. 添加 dry-run 模式
@@ -596,6 +621,7 @@ Agent:
 ✅ 任务完成！
 总耗时：48 分钟
 交付物:
+
 - BatchRenamer 类 (完整实现)
 - 25 个单元测试 (覆盖率 96%)
 - 完整文档
@@ -611,17 +637,19 @@ Agent:
 
 **详细流程**:
 
-```markdown
+````markdown
 【步骤 1: 问题复现】(5 分钟)
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 用户：报告一个 Bug - TdAddSvg 在 Safari 上不显示
 
 Agent 调试:
+
 1. 请求更多信息：Safari 版本？控制台错误？
 2. 提供复现步骤
 3. 分析可能原因
 
 用户补充:
+
 - Safari 16.0
 - 控制台无错误
 - 其他浏览器正常
@@ -629,6 +657,7 @@ Agent 调试:
 
 Agent 分析:
 🔍 可能原因:
+
 1. viewBox 属性拼写错误
 2. 命名空间问题
 3. CSS 兼容性
@@ -657,6 +686,7 @@ Agent 提供修复:
     // ...
   })
 ```
+````
 
 用户：应用修复并测试
 
@@ -671,24 +701,29 @@ Agent:
 Agent 建议:
 
 **长期预防**:
+
 1. ✅ 添加 SVG 命名空间检查到 lint 规则
 2. ✅ 更新组件模板包含 xmlns
 3. ✅ 在 CI 中加入 Safari 测试
 
 **文档更新**:
+
 - 更新故障处理文档
 - 添加浏览器兼容性说明
 
 ✅ Bug 修复完成！
 总耗时：23 分钟
+
 ```
 
 ### 场景 3: 性能优化
 
 ```
+
 时间盒：40-60 分钟
 技能组合：Skill 4 + Skill 5 + Skill 7
-```
+
+````
 
 **详细流程**:
 
@@ -768,7 +803,7 @@ Agent 报告:
 
 ✅ 性能优化完成！
 总耗时：68 分钟
-```
+````
 
 ---
 
@@ -805,14 +840,15 @@ Agent 报告:
 
 ### 个人效率提升
 
-| 时间段 | 任务完成数 | 平均耗时 | 满意度 |
-|-------|----------|---------|--------|
-| **第 1 周** | 15 | 45 分钟/个 | 4.2/5 |
-| **第 2 周** | 28 | 30 分钟/个 | 4.5/5 |
-| **第 3 周** | 42 | 20 分钟/个 | 4.7/5 |
-| **第 4 周** | 55 | 15 分钟/个 | 4.8/5 |
+| 时间段      | 任务完成数 | 平均耗时   | 满意度 |
+| ----------- | ---------- | ---------- | ------ |
+| **第 1 周** | 15         | 45 分钟/个 | 4.2/5  |
+| **第 2 周** | 28         | 30 分钟/个 | 4.5/5  |
+| **第 3 周** | 42         | 20 分钟/个 | 4.7/5  |
+| **第 4 周** | 55         | 15 分钟/个 | 4.8/5  |
 
 **提升曲线**:
+
 ```
 效率提升：
 Week 1: ████░░░░░░ 1x (基线)
@@ -840,11 +876,13 @@ Bug 率 (个/千行)       12        4         3x ⬇️
 ## 🔗 相关资源
 
 ### 内部文档
+
 - [AGENT-SKILLS.md](./AGENT-SKILLS.md) - 9 大核心技能详解
 - [CONTEXT-MANAGEMENT.md](./CONTEXT-MANAGEMENT.md) - 上下文管理技巧
 - [AI-PROMPT-TEMPLATES.md](../00-索引与导航/AI-PROMPT-TEMPLATES.md) - 提示词模板
 
 ### 外部资源
+
 - [OODA Loop 理论](https://en.wikipedia.org/wiki/OODA_loop)
 - [Test-Driven Development](https://martinfowler.com/bliki/TestDrivenDevelopment.html)
 - [Agile Iteration Best Practices](https://www.agilealliance.org/)
@@ -853,6 +891,6 @@ Bug 率 (个/千行)       12        4         3x ⬇️
 
 ## 📝 更新日志
 
-| 日期 | 版本 | 更新内容 |
-|-----|------|---------|
+| 日期       | 版本   | 更新内容                           |
+| ---------- | ------ | ---------------------------------- |
 | 2026-03-19 | v1.0.0 | 初始版本，完整的 AI 迭代工作流指南 |

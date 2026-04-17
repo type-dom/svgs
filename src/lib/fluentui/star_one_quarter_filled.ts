@@ -1,21 +1,21 @@
-import { SvgProps, SvgPath, TypeSvgSvg, addAttrObj } from '@type-dom/framework';
+import { SvgProps, SvgPath, TypeSvgSvg, addAttrObj } from "@type-dom/framework";
 export class FlStarOneQuarterFilledSvg extends TypeSvgSvg {
-  className: 'FlStarOneQuarterFilledSvg';
+  className: "FlStarOneQuarterFilledSvg";
   override childNodes: SvgPath[];
   constructor(params: SvgProps = {}) {
     super(params);
-    this.className = 'FlStarOneQuarterFilledSvg';
-   addAttrObj(this, {
-      name: 'FlStarOneQuarterFilledSvg'
+    this.className = "FlStarOneQuarterFilledSvg";
+    addAttrObj(this, {
+      name: "FlStarOneQuarterFilledSvg",
     });
-   addAttrObj(this, {
-      viewBox: '0 0 20 20',
+    addAttrObj(this, {
+      viewBox: "0 0 20 20",
     });
     this.resetSize(24, 24);
     this.childNodes = [];
-    const path0 = new SvgPath({ attrObj: { fill: 'currentColor' }});
+    const path0 = new SvgPath({ attrObj: { fill: "currentColor" } });
     path0.setData(
-      'M8 5.13672L7.17389 6.8106L2.8573 7.43784C2.03708 7.55703 1.70956 8.565 2.30308 9.14354L5.4266 12.1882L4.68924 16.4874C4.5751 17.1528 5.1229 17.6896 5.72651 17.6572C5.8641 17.65 6.00459 17.6131 6.14082 17.5415L8 16.5641V5.13672Z',
+      "M8 5.13672L7.17389 6.8106L2.8573 7.43784C2.03708 7.55703 1.70956 8.565 2.30308 9.14354L5.4266 12.1882L4.68924 16.4874C4.5751 17.1528 5.1229 17.6896 5.72651 17.6572C5.8641 17.65 6.00459 17.6131 6.14082 17.5415L8 16.5641V5.13672Z",
     );
     this.addChild(path0);
   }

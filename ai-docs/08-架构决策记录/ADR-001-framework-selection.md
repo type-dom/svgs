@@ -2,7 +2,7 @@
 
 **日期**: 2026-03-01  
 **状态**: 已接受  
-**分类**: 技术选型  
+**分类**: 技术选型
 
 ---
 
@@ -27,6 +27,7 @@
 ### 选项 1: TypeDom Framework ⭐ (选中)
 
 **优势**:
+
 - ✅ TypeScript 原生支持，类型系统完善
 - ✅ 轻量级框架，学习成本低
 - ✅ 专为 SVG 设计的基类 (TypeSvgSvg)
@@ -34,6 +35,7 @@
 - ✅ 与项目"类型安全"目标高度一致
 
 **劣势**:
+
 - ❌ 社区相对较小
 - ❌ 生态资源有限
 - ❌ 文档不够丰富
@@ -41,11 +43,13 @@
 ### 选项 2: React + TypeScript
 
 **优势**:
+
 - ✅ 生态系统庞大
 - ✅ 社区活跃，资源丰富
 - ✅ 类型定义完善 (@types/react)
 
 **劣势**:
+
 - ❌ 相对重量级
 - ❌ SVG 处理需要额外封装
 - ❌ 学习曲线较陡
@@ -54,11 +58,13 @@
 ### 选项 3: Vue 3 + TypeScript
 
 **优势**:
+
 - ✅ TypeScript 支持良好
 - ✅ 响应式系统强大
 - ✅ 模板语法直观
 
 **劣势**:
+
 - ❌ 运行时复杂度较高
 - ❌ SVG 模板语法繁琐
 - ❌ 类型推导不如 TypeDom 直接
@@ -66,11 +72,13 @@
 ### 选项 4: 纯 Web Components
 
 **优势**:
+
 - ✅ 标准规范，无需框架
 - ✅ 浏览器原生支持
 - ✅ 真正的跨框架兼容
 
 **劣势**:
+
 - ❌ TypeScript 集成复杂
 - ❌ 样板代码较多
 - ❌ 工具链支持不足
@@ -112,14 +120,14 @@
 
 ## 📊 评估指标对比
 
-| 维度 | TypeDom | React | Vue 3 | Web Components |
-|-----|---------|-------|-------|----------------|
-| **类型安全** | ⭐⭐⭐⭐⭐ | ⭐⭐⭐⭐ | ⭐⭐⭐⭐ | ⭐⭐⭐ |
-| **学习曲线** | ⭐⭐⭐⭐⭐ | ⭐⭐⭐ | ⭐⭐⭐⭐ | ⭐⭐⭐ |
-| **SVG 支持** | ⭐⭐⭐⭐⭐ | ⭐⭐⭐ | ⭐⭐⭐ | ⭐⭐⭐⭐ |
-| **性能** | ⭐⭐⭐⭐⭐ | ⭐⭐⭐⭐ | ⭐⭐⭐⭐ | ⭐⭐⭐⭐⭐ |
-| **生态** | ⭐⭐ | ⭐⭐⭐⭐⭐ | ⭐⭐⭐⭐⭐ | ⭐⭐⭐ |
-| **总体匹配** | ⭐⭐⭐⭐⭐ | ⭐⭐⭐ | ⭐⭐⭐ | ⭐⭐⭐ |
+| 维度         | TypeDom    | React      | Vue 3      | Web Components |
+| ------------ | ---------- | ---------- | ---------- | -------------- |
+| **类型安全** | ⭐⭐⭐⭐⭐ | ⭐⭐⭐⭐   | ⭐⭐⭐⭐   | ⭐⭐⭐         |
+| **学习曲线** | ⭐⭐⭐⭐⭐ | ⭐⭐⭐     | ⭐⭐⭐⭐   | ⭐⭐⭐         |
+| **SVG 支持** | ⭐⭐⭐⭐⭐ | ⭐⭐⭐     | ⭐⭐⭐     | ⭐⭐⭐⭐       |
+| **性能**     | ⭐⭐⭐⭐⭐ | ⭐⭐⭐⭐   | ⭐⭐⭐⭐   | ⭐⭐⭐⭐⭐     |
+| **生态**     | ⭐⭐       | ⭐⭐⭐⭐⭐ | ⭐⭐⭐⭐⭐ | ⭐⭐⭐         |
+| **总体匹配** | ⭐⭐⭐⭐⭐ | ⭐⭐⭐     | ⭐⭐⭐     | ⭐⭐⭐         |
 
 ---
 
@@ -128,30 +136,30 @@
 ### 标准组件模式
 
 ```typescript
-import { SvgProps, SvgPath, TypeSvgSvg } from '@type-dom/framework';
+import { SvgProps, SvgPath, TypeSvgSvg } from "@type-dom/framework";
 
 export class TdAddSvg extends TypeSvgSvg {
-  className: 'TdAddSvg';
+  className: "TdAddSvg";
   override childNodes: SvgPath[];
-  
+
   constructor(params: SvgProps = {}) {
     super(params);
-    this.className = 'TdAddSvg';
-    
+    this.className = "TdAddSvg";
+
     // 设置属性
     addAttrObj(this, {
-      viewBox: '0 0 1024 1024'
+      viewBox: "0 0 1024 1024",
     });
-    
+
     // 设置尺寸
     this.resetSize(24, 24);
-    
+
     // 创建路径
-    const path = new SvgPath({ 
-      attrObj: { fill: 'currentColor' }
+    const path = new SvgPath({
+      attrObj: { fill: "currentColor" },
     });
-    path.setData('M512...');
-    
+    path.setData("M512...");
+
     // 添加子节点
     this.addChild(path);
     this.childNodes = [path];
@@ -163,17 +171,17 @@ export class TdAddSvg extends TypeSvgSvg {
 
 ```typescript
 // 按需导入
-import { TdAddSvg } from '@type-dom/svgs/common/add';
+import { TdAddSvg } from "@type-dom/svgs/common/add";
 
 // 创建实例
 const icon = new TdAddSvg({
   width: 32,
   height: 32,
-  fill: '#ff0000'
+  fill: "#ff0000",
 });
 
 // 挂载到 DOM
-icon.mount(document.getElementById('app'));
+icon.mount(document.getElementById("app"));
 ```
 
 ---
@@ -183,16 +191,19 @@ icon.mount(document.getElementById('app'));
 ### 积极影响
 
 ✅ **开发效率提升**
+
 - 组件开发时间从 2 小时/个 → 30 分钟/个
 - AI 辅助生成成功率 95%+
 - 类型错误在编译时发现
 
 ✅ **代码质量提升**
+
 - 类型安全减少运行时错误
 - 统一的继承体系便于维护
 - JSDoc 注释自动生成
 
 ✅ **性能优化**
+
 - 虚拟 DOM 减少实际 DOM 操作
 - Tree-shaking 减小打包体积
 - 按需导入优化加载
@@ -200,19 +211,23 @@ icon.mount(document.getElementById('app'));
 ### 潜在风险
 
 ⚠️ **依赖风险**
+
 - TypeDom 社区较小，长期维护存在不确定性
 - 版本更新可能不够频繁
 
 **缓解措施**:
+
 - 保持对 TypeDom 源码的关注
 - 建立内部专家团队
 - 准备迁移方案 (如必要)
 
 ⚠️ **人才风险**
+
 - TypeDom 开发者相对稀缺
 - 新人招聘难度增加
 
 **缓解措施**:
+
 - 完善的文档和培训材料
 - 降低学习门槛 (5 分钟快速上手)
 - 内部培养为主

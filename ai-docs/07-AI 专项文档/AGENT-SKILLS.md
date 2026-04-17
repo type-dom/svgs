@@ -3,7 +3,7 @@
 **通义灵码 Agent 在@type-dom/svgs 项目中的能力详解**
 
 **版本**: v0.4.0  
-**最后更新**: 2026-03-19  
+**最后更新**: 2026-03-19
 
 ---
 
@@ -70,16 +70,19 @@
 **能力描述**: 自动扫描和理解项目结构、模块组织、依赖关系
 
 **使用场景**:
+
 - 新成员快速了解项目
 - 识别模块间依赖
 - 发现架构问题
 - 准备重构前的分析
 
 **调用示例**:
+
 ```markdown
 【角色】代码分析专家
 【任务】分析当前项目的整体结构
 【要求】
+
 1. 扫描 src/目录结构
 2. 识别主要模块和包
 3. 分析模块间依赖关系
@@ -90,6 +93,7 @@
 ```
 
 **预期输出**:
+
 ```
 项目结构分析报告
 
@@ -115,6 +119,7 @@
 ```
 
 **能力边界**:
+
 - ✅ 能分析 TypeScript、JavaScript 项目
 - ✅ 能识别常见设计模式
 - ❌ 不能分析二进制文件
@@ -129,12 +134,14 @@
 **能力描述**: 根据 SVG 路径数据生成符合 TypeDom 规范的组件代码
 
 **使用场景**:
+
 - 批量创建 SVG 图标组件
 - 从 Iconfont 等平台导入 SVG
 - 统一组件风格
 - 快速原型开发
 
 **调用示例**:
+
 ```markdown
 【角色】TypeDom Framework 专家
 【任务】创建 StarSvg 星星图标组件
@@ -143,12 +150,14 @@
 @ai-docs/02-开发规范/命名约定.md
 
 【输入数据】
+
 - 组件名称：StarSvg
 - 分类：common
 - 路径数据：M512 42.666667...
 - 默认尺寸：24x24
 
 【技术要求】
+
 1. 继承 TypeSvgSvg 基类
 2. className: 'StarSvg'
 3. viewBox: '0 0 1024 1024'
@@ -160,13 +169,14 @@
 ```
 
 **预期输出**:
-```typescript
+
+````typescript
 // src/lib/common/star.ts
-import { SvgProps, SvgPath, TypeSvgSvg, addAttrObj } from '@type-dom/framework';
+import { SvgProps, SvgPath, TypeSvgSvg, addAttrObj } from "@type-dom/framework";
 
 /**
  * 星星图标组件
- * 
+ *
  * @example
  * ```typescript
  * const star = new StarSvg({
@@ -177,39 +187,40 @@ import { SvgProps, SvgPath, TypeSvgSvg, addAttrObj } from '@type-dom/framework';
  * ```
  */
 export class StarSvg extends TypeSvgSvg {
-  className: 'StarSvg';
+  className: "StarSvg";
   override childNodes: SvgPath[];
-  
+
   constructor(params: SvgProps = {}) {
     super(params);
-    this.className = 'StarSvg';
-    
+    this.className = "StarSvg";
+
     // 设置属性
     addAttrObj(this, {
-      name: 'StarSvg',
-      viewBox: '0 0 1024 1024'
+      name: "StarSvg",
+      viewBox: "0 0 1024 1024",
     });
-    
+
     // 设置默认尺寸
     this.resetSize(24, 24);
-    
+
     // 创建路径
     const path = new SvgPath({
-      attrObj: { fill: 'currentColor' }
+      attrObj: { fill: "currentColor" },
     });
-    
-    path.setData('M512 42.666667...');
-    
+
+    path.setData("M512 42.666667...");
+
     // 添加子节点
     this.addChild(path);
     this.childNodes = [path];
   }
 }
-```
+````
 
 **成功率**: 95%+ (在有明确规范的情况下)
 
 **能力边界**:
+
 - ✅ 能生成标准 TypeDom 组件
 - ✅ 能自动添加注释和类型
 - ✅ 能遵循命名规范
@@ -225,13 +236,15 @@ export class StarSvg extends TypeSvgSvg {
 **能力描述**: 为指定组件生成全面的单元测试用例
 
 **使用场景**:
+
 - 新组件完成后自动生成测试
 - 补充遗漏的测试用例
 - 提高测试覆盖率
 - 学习测试编写方法
 
 **调用示例**:
-```markdown
+
+````markdown
 【角色】测试专家，精通 Vitest 和 TypeDom
 【任务】为 HeartSvg 组件生成单元测试
 【参考】
@@ -239,6 +252,7 @@ export class StarSvg extends TypeSvgSvg {
 @ai-docs/05-测试文档/单元测试指南.md
 
 【被测组件】
+
 ```typescript
 export class HeartSvg extends TypeSvgSvg {
   className: 'HeartSvg';
@@ -246,15 +260,18 @@ export class HeartSvg extends TypeSvgSvg {
   constructor(params: SvgProps = {}) { ... }
 }
 ```
+````
 
 【测试要求】
+
 1. 基础功能测试 (初始化、属性)
 2. 边界条件测试 (零值、负值、undefined)
 3. DOM 操作测试 (mount、addChild)
 4. 覆盖率要求：语句≥80%, 分支≥75%
 
 请生成完整的测试文件。
-```
+
+````
 
 **预期输出**:
 ```typescript
@@ -265,21 +282,21 @@ import { TypeSvgSvg, SvgPath } from '@type-dom/framework';
 
 describe('HeartSvg', () => {
   let svg: HeartSvg;
-  
+
   beforeEach(() => {
     svg = new HeartSvg();
   });
-  
+
   describe('Initialization', () => {
     it('should create instance correctly', () => {
       expect(svg).toBeInstanceOf(TypeSvgSvg);
       expect(svg.className).toBe('HeartSvg');
     });
-    
+
     it('should have default viewBox', () => {
       expect(svg.viewBox).toBe('0 0 1024 1024');
     });
-    
+
     it('should accept custom props', () => {
       const custom = new HeartSvg({
         width: 32,
@@ -290,7 +307,7 @@ describe('HeartSvg', () => {
       expect(custom.height).toBe(32);
     });
   });
-  
+
   describe('Child Nodes', () => {
     it('should contain SvgPath instances', () => {
       expect(svg.childNodes.length).toBeGreaterThan(0);
@@ -299,14 +316,15 @@ describe('HeartSvg', () => {
       });
     });
   });
-  
+
   // ... 更多测试用例
 });
-```
+````
 
 **测试覆盖率**: 通常能达到 80-90%
 
 **能力边界**:
+
 - ✅ 能生成 Vitest/Jest测试
 - ✅ 能覆盖边界条件
 - ✅ 能 Mock 外部依赖
@@ -322,13 +340,15 @@ describe('HeartSvg', () => {
 **能力描述**: 全面审查代码质量，发现问题并提供改进建议
 
 **使用场景**:
+
 - Commit 前代码检查
 - Pull Request 审查
 - 代码质量评估
 - 学习和改进代码
 
 **调用示例**:
-```markdown
+
+````markdown
 【角色】高级代码审查专家
 【参考】
 @ai-docs/02-开发规范/编码规范.md
@@ -336,9 +356,11 @@ describe('HeartSvg', () => {
 @ai-docs/02-开发规范/AI-CODE-GENERATION.md
 
 【待审查代码】
+
 ```typescript
-[粘贴代码]
+[粘贴代码];
 ```
+````
 
 【审查维度】
 □ 命名规范 (PascalCase/camelCase)
@@ -349,29 +371,31 @@ describe('HeartSvg', () => {
 □ 潜在 Bug
 
 【输出要求】
+
 1. 问题列表 (按严重程度排序)
 2. 每个问题的修复建议
 3. 修复后的完整代码
 4. 预防类似问题的建议
 
 请开始审查。
+
 ```
 
 **预期输出结构**:
 ```
+
 代码审查报告
 
 🔴 严重问题 (必须修复)
+
 1. 第 15 行：使用了显式 any 类型
    建议：定义为具体类型 SvgPath[]
-   
-🟡 重要问题 (建议修复)
-2. 第 23 行：缺少 JSDoc 注释
-   建议：添加完整的函数注释
-   
-🟢 建议性问题 (可选优化)
-3. 第 30 行：可以提取为常量
-   建议：将魔法数字定义为具名常量
+
+🟡 重要问题 (建议修复) 2. 第 23 行：缺少 JSDoc 注释
+建议：添加完整的函数注释
+
+🟢 建议性问题 (可选优化) 3. 第 30 行：可以提取为常量
+建议：将魔法数字定义为具名常量
 
 修复后代码:
 [完整代码]
@@ -379,7 +403,8 @@ describe('HeartSvg', () => {
 预防措施:
 • 启用 ESLint no-explicit-any 规则
 • 配置 JSDoc 检查
-```
+
+````
 
 **准确率**: ~90% (在规范明确的情况下)
 
@@ -425,9 +450,10 @@ describe('HeartSvg', () => {
 □ 类型检查无误
 
 请先给出详细方案，经确认后分步执行。
-```
+````
 
 **预期输出**:
+
 ```
 重构方案
 
@@ -456,6 +482,7 @@ Step 4: 验证步骤
 **成功率**: 85-95% (取决于复杂度)
 
 **能力边界**:
+
 - ✅ 能处理大规模重构
 - ✅ 能保持风格一致
 - ✅ 能自动化重复任务
@@ -471,12 +498,14 @@ Step 4: 验证步骤
 **能力描述**: 自动生成各种技术文档
 
 **使用场景**:
+
 - API 文档编写
 - 使用教程创建
 - 最佳实践总结
 - Changelog 整理
 
 **调用示例**:
+
 ```markdown
 【角色】专业技术文档撰写专家
 【任务】为 CommonSvgs 模块生成 API 文档
@@ -487,6 +516,7 @@ Step 4: 验证步骤
 【文档类型】API 参考文档
 
 【内容要求】
+
 1. 模块说明 (功能、用途)
 2. 导出清单 (所有组件列表)
 3. 使用示例 (至少 3 个场景)
@@ -494,6 +524,7 @@ Step 4: 验证步骤
 5. 常见问题 (FAQ)
 
 【格式要求】
+
 - Markdown 格式
 - 清晰标题层级
 - 代码示例带语法高亮
@@ -503,7 +534,8 @@ Step 4: 验证步骤
 ```
 
 **预期输出**:
-```markdown
+
+````markdown
 # CommonSvgs API Reference
 
 ## 模块说明
@@ -513,46 +545,52 @@ CommonSvgs 提供通用图标组件集合，包含加号、关闭、用户等基
 ## 导出清单
 
 ### TdAddSvg
+
 加号图标组件
 
 **类型定义**:
+
 ```typescript
 class TdAddSvg extends TypeSvgSvg {
-  className: 'TdAddSvg';
+  className: "TdAddSvg";
   childNodes: SvgPath[];
   constructor(params: SvgProps = {});
 }
 ```
+````
 
 **使用示例**:
+
 ```typescript
-import { TdAddSvg } from '@type-dom/svgs/common/add';
+import { TdAddSvg } from "@type-dom/svgs/common/add";
 
 const addIcon = new TdAddSvg({
   width: 24,
-  height: 24
+  height: 24,
 });
 ```
 
 ## 按需导入策略
 
 推荐方式:
+
 ```typescript
 // ✅ 单个导入 (最小体积)
-import { TdAddSvg } from '@type-dom/svgs/common/add';
+import { TdAddSvg } from "@type-dom/svgs/common/add";
 
 // ⚠️ 分类导入 (中等体积)
-import { TdAddSvg, TdCloseSvg } from '@type-dom/svgs/common';
+import { TdAddSvg, TdCloseSvg } from "@type-dom/svgs/common";
 
 // ❌ 全量导入 (最大体积)
-import { TdAddSvg } from '@type-dom/svgs';
+import { TdAddSvg } from "@type-dom/svgs";
 ```
 
 ## FAQ
 
 Q: 如何自定义颜色？
 A: 使用 fill 属性或 CSS currentColor...
-```
+
+````
 
 **能力边界**:
 - ✅ 能生成结构化文档
@@ -582,39 +620,46 @@ A: 使用 fill 属性或 CSS currentColor...
 【环境】TypeScript 5.9.3, TypeDom ^0.5.0
 
 【错误信息】
-```
+````
+
 TypeError: Cannot read property 'childNodes' of undefined
-    at HeartSvg.mount (src/lib/common/heart.ts:25)
-```
+at HeartSvg.mount (src/lib/common/heart.ts:25)
+
+````
 
 【相关代码】
 ```typescript
 [粘贴 mount 方法代码]
-```
+````
 
 【已尝试】
+
 1. 检查类型定义 ✓
 2. 调试输出 ✓
 3. 对比其他正常组件 ✓
 
 【请求】
+
 1. 分析问题根源
 2. 提供修复方案
 3. 说明预防措施
 
 请诊断并修复问题。
+
 ```
 
 **预期输出**:
 ```
+
 问题分析报告
 
 🔍 根本原因
 第 25 行访问 this.childNodes 时，childNodes 尚未初始化。
 
 构造函数中:
+
 ```typescript
-this.childNodes = [];  // 第 30 行 - 在第 25 行之后
+this.childNodes = []; // 第 30 行 - 在第 25 行之后
 ```
 
 mount 方法在第 25 行就访问了 childNodes，但此时它还是 undefined。
@@ -622,6 +667,7 @@ mount 方法在第 25 行就访问了 childNodes，但此时它还是 undefined�
 ✅ 修复方案
 
 方案 1: 提前初始化
+
 ```typescript
 constructor(params: SvgProps = {}) {
   super(params);
@@ -631,6 +677,7 @@ constructor(params: SvgProps = {}) {
 ```
 
 方案 2: 空值检查
+
 ```typescript
 mount(container: HTMLElement) {
   if (!this.childNodes) return;
@@ -644,7 +691,8 @@ mount(container: HTMLElement) {
 • 在构造函数开头初始化所有属性
 • 启用 strictPropertyInitialization
 • 添加单元测试覆盖初始化场景
-```
+
+````
 
 **成功率**: ~85%
 
@@ -680,14 +728,16 @@ cat, less              # 查看文件内容
 rm, del                # 删除文件
 sudo                   # 提权命令
 wget, curl             # 下载文件 (除非明确允许)
-```
+````
 
 **调用示例**:
+
 ```markdown
 【任务】验证项目构建是否正常
 【权限】只读命令 + 构建命令
 
 请执行以下步骤:
+
 1. 检查项目结构
 2. 运行类型检查
 3. 执行生产构建
@@ -695,6 +745,7 @@ wget, curl             # 下载文件 (除非明确允许)
 ```
 
 **安全机制**:
+
 - ✅ 需要明确授权才能执行
 - ✅ 危险命令会拒绝执行
 - ✅ 执行前会告知用户
@@ -709,6 +760,7 @@ wget, curl             # 下载文件 (除非明确允许)
 **能力描述**: 读取和写入项目文件
 
 **读操作**:
+
 ```markdown
 【任务】读取 src/lib/common/index.ts 文件
 【目的】了解当前导出了哪些组件
@@ -717,16 +769,18 @@ wget, curl             # 下载文件 (除非明确允许)
 ```
 
 **写操作** (需确认):
+
 ```markdown
 【任务】创建新的 SVG 组件文件
 【文件路径】src/lib/common/star.ts
 【内容】[AI 生成的代码]
 
 ⚠️ 注意：即将写入文件，是否继续？
-[Y] 确认  [N] 取消
+[Y] 确认 [N] 取消
 ```
 
 **权限控制**:
+
 - ✅ 读取操作通常自动执行
 - ✅ 写入操作需要确认
 - ✅ 敏感文件禁止写入 (如 .env, package.json 等)
@@ -738,27 +792,27 @@ wget, curl             # 下载文件 (除非明确允许)
 
 ### 高频技能 (每天使用)
 
-| 技能 | 使用频率 | 平均节省时间 | 满意度 |
-|-----|---------|------------|--------|
-| SVG 组件生成 | 20-30 次/天 | 15 分钟/次 | 4.8/5 |
-| 单元测试生成 | 10-15 次/天 | 10 分钟/次 | 4.7/5 |
-| 代码审查 | 5-10 次/天 | 5 分钟/次 | 4.6/5 |
-| 提示词模板 | 30-50 次/天 | 3 分钟/次 | 4.9/5 |
+| 技能         | 使用频率    | 平均节省时间 | 满意度 |
+| ------------ | ----------- | ------------ | ------ |
+| SVG 组件生成 | 20-30 次/天 | 15 分钟/次   | 4.8/5  |
+| 单元测试生成 | 10-15 次/天 | 10 分钟/次   | 4.7/5  |
+| 代码审查     | 5-10 次/天  | 5 分钟/次    | 4.6/5  |
+| 提示词模板   | 30-50 次/天 | 3 分钟/次    | 4.9/5  |
 
 ### 中频技能 (每周使用)
 
-| 技能 | 使用频率 | 平均节省时间 | 满意度 |
-|-----|---------|------------|--------|
-| 代码重构 | 2-5 次/周 | 2 小时/次 | 4.5/5 |
-| Bug 修复 | 5-10 次/周 | 30 分钟/次 | 4.4/5 |
-| 文档生成 | 3-5 次/周 | 1 小时/次 | 4.6/5 |
+| 技能     | 使用频率   | 平均节省时间 | 满意度 |
+| -------- | ---------- | ------------ | ------ |
+| 代码重构 | 2-5 次/周  | 2 小时/次    | 4.5/5  |
+| Bug 修复 | 5-10 次/周 | 30 分钟/次   | 4.4/5  |
+| 文档生成 | 3-5 次/周  | 1 小时/次    | 4.6/5  |
 
 ### 低频技能 (每月使用)
 
-| 技能 | 使用频率 | 平均节省时间 | 满意度 |
-|-----|---------|------------|--------|
-| 项目分析 | 1-2 次/月 | 4 小时/次 | 4.7/5 |
-| 架构咨询 | 1-2 次/月 | 2 小时/次 | 4.3/5 |
+| 技能     | 使用频率  | 平均节省时间 | 满意度 |
+| -------- | --------- | ------------ | ------ |
+| 项目分析 | 1-2 次/月 | 4 小时/次    | 4.7/5  |
+| 架构咨询 | 1-2 次/月 | 2 小时/次    | 4.3/5  |
 
 ---
 

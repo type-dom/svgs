@@ -1,21 +1,21 @@
-import { SvgProps, SvgPath, TypeSvgSvg, addAttrObj } from '@type-dom/framework';
+import { SvgProps, SvgPath, TypeSvgSvg, addAttrObj } from "@type-dom/framework";
 export class FlPresenceAvailableFilledSvg extends TypeSvgSvg {
-  className: 'FlPresenceAvailableFilledSvg';
+  className: "FlPresenceAvailableFilledSvg";
   override childNodes: SvgPath[];
   constructor(params: SvgProps = {}) {
     super(params);
-    this.className = 'FlPresenceAvailableFilledSvg';
-   addAttrObj(this, {
-      name: 'FlPresenceAvailableFilledSvg'
+    this.className = "FlPresenceAvailableFilledSvg";
+    addAttrObj(this, {
+      name: "FlPresenceAvailableFilledSvg",
     });
-   addAttrObj(this, {
-      viewBox: '0 0 20 20',
+    addAttrObj(this, {
+      viewBox: "0 0 20 20",
     });
     this.resetSize(24, 24);
     this.childNodes = [];
-    const path0 = new SvgPath({ attrObj: { fill: 'currentColor' }});
+    const path0 = new SvgPath({ attrObj: { fill: "currentColor" } });
     path0.setData(
-      'M10 20C15.5228 20 20 15.5228 20 10C20 4.47715 15.5228 0 10 0C4.47715 0 0 4.47715 0 10C0 15.5228 4.47715 20 10 20ZM14.2071 8.2071L9.70714 12.7071C9.31662 13.0977 8.68345 13.0977 8.29293 12.7071L6.2929 10.7071C5.90237 10.3166 5.90237 9.68344 6.29289 9.29292C6.68341 8.90239 7.31658 8.90239 7.7071 9.29291L9.00002 10.5858L12.7929 6.7929C13.1834 6.40237 13.8166 6.40237 14.2071 6.79289C14.5976 7.18341 14.5976 7.81658 14.2071 8.2071Z',
+      "M10 20C15.5228 20 20 15.5228 20 10C20 4.47715 15.5228 0 10 0C4.47715 0 0 4.47715 0 10C0 15.5228 4.47715 20 10 20ZM14.2071 8.2071L9.70714 12.7071C9.31662 13.0977 8.68345 13.0977 8.29293 12.7071L6.2929 10.7071C5.90237 10.3166 5.90237 9.68344 6.29289 9.29292C6.68341 8.90239 7.31658 8.90239 7.7071 9.29291L9.00002 10.5858L12.7929 6.7929C13.1834 6.40237 13.8166 6.40237 14.2071 6.79289C14.5976 7.18341 14.5976 7.81658 14.2071 8.2071Z",
     );
     this.addChild(path0);
   }

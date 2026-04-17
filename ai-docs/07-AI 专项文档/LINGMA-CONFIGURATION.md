@@ -3,7 +3,7 @@
 **LingMa IDE 插件和 Agent 配置详解**
 
 **版本**: v0.4.0  
-**最后更新**: 2026-03-19  
+**最后更新**: 2026-03-19
 
 ---
 
@@ -22,21 +22,21 @@
 
 ### 最低要求
 
-| 组件 | 版本 | 说明 |
-|------|------|------|
-| **IDE** | VS Code 1.85+ / JetBrains 2023.3+ | 主流 IDE |
-| **通义灵码插件** | 2.5.4+ | 必须支持智能体模式 |
-| **Node.js** | 18.x+ | LTS 版本 |
-| **TypeScript** | 5.9.3+ | 项目要求 |
+| 组件             | 版本                              | 说明               |
+| ---------------- | --------------------------------- | ------------------ |
+| **IDE**          | VS Code 1.85+ / JetBrains 2023.3+ | 主流 IDE           |
+| **通义灵码插件** | 2.5.4+                            | 必须支持智能体模式 |
+| **Node.js**      | 18.x+                             | LTS 版本           |
+| **TypeScript**   | 5.9.3+                            | 项目要求           |
 
 ### 推荐配置
 
-| 组件 | 版本 | 说明 |
-|------|------|------|
-| **IDE** | VS Code 1.90+ / JetBrains 2024.1+ | 最新版本 |
-| **通义灵码插件** | 最新稳定版 | 获取最新功能 |
-| **Node.js** | 20.x+ | 最新 LTS |
-| **内存** | ≥ 8GB | 更好的 AI 体验 |
+| 组件             | 版本                              | 说明           |
+| ---------------- | --------------------------------- | -------------- |
+| **IDE**          | VS Code 1.90+ / JetBrains 2024.1+ | 最新版本       |
+| **通义灵码插件** | 最新稳定版                        | 获取最新功能   |
+| **Node.js**      | 20.x+                             | 最新 LTS       |
+| **内存**         | ≥ 8GB                             | 更好的 AI 体验 |
 
 ---
 
@@ -92,22 +92,22 @@
 # VS Code: 设置 → 通义灵码
 
 # ========== 智能体设置 ==========
-lingma.agent.mode: "agentic"          # 启用智能体模式
-lingma.agent.auto_perception: true    # 自动感知工程结构
-lingma.agent.tool_calling: true       # 允许调用工具
+lingma.agent.mode: "agentic" # 启用智能体模式
+lingma.agent.auto_perception: true # 自动感知工程结构
+lingma.agent.tool_calling: true # 允许调用工具
 lingma.agent.terminal_execution: true # 允许执行终端命令
 
 # ========== 代码补全 ==========
-lingma.completion.enabled: true       # 启用智能代码补全
+lingma.completion.enabled: true # 启用智能代码补全
 lingma.completion.trigger_mode: "auto" # 自动触发
 
 # ========== 对话设置 ==========
-lingma.chat.enabled: true             # 启用对话功能
-lingma.chat.auto_context: true        # 自动添加上下文
+lingma.chat.enabled: true # 启用对话功能
+lingma.chat.auto_context: true # 自动添加上下文
 
 # ========== 文件引用 ==========
-lingma.reference.enabled: true        # 启用@引用功能
-lingma.reference.max_files: 10        # 最多引用 10 个文件
+lingma.reference.enabled: true # 启用@引用功能
+lingma.reference.max_files: 10 # 最多引用 10 个文件
 ```
 
 ### 快捷键配置
@@ -157,85 +157,85 @@ project:
 
 # ========== Agent 配置 ==========
 agent:
-  mode: "agentic"                    # 智能体模式
-  auto_perception: true              # 自动工程感知
-  tool_calling: true                 # 工具调用
-  terminal_execution: true           # 终端命令执行
-  max_loops: 5                       # 最大迭代次数
-  
+  mode: "agentic" # 智能体模式
+  auto_perception: true # 自动工程感知
+  tool_calling: true # 工具调用
+  terminal_execution: true # 终端命令执行
+  max_loops: 5 # 最大迭代次数
+
   # 工具权限
   tools:
-    file_read: true                  # 读取文件
-    file_write: true                 # 写入文件（需确认）
-    terminal: true                   # 终端执行
-    web_search: false                # 网络搜索（可选）
+    file_read: true # 读取文件
+    file_write: true # 写入文件（需确认）
+    terminal: true # 终端执行
+    web_search: false # 网络搜索（可选）
 
 # ========== 知识库配置 ==========
 knowledge_base:
-  enabled: true                      # 启用知识库
-  auto_index: true                   # 自动索引
-  doc_path: "./ai-docs"              # 文档存储路径
-  vector_store: "local"              # 向量存储类型
-  chunk_size: 1000                   # 文档分块大小
-  overlap: 200                       # 重叠字符数
-  
+  enabled: true # 启用知识库
+  auto_index: true # 自动索引
+  doc_path: "./ai-docs" # 文档存储路径
+  vector_store: "local" # 向量存储类型
+  chunk_size: 1000 # 文档分块大小
+  overlap: 200 # 重叠字符数
+
   # 索引配置
   index:
     include:
-      - "ai-docs/**/*.md"            # 包含的文档
-      - "src/**/*.ts"                # 源码文件
-      - "README.md"                  # 项目说明
+      - "ai-docs/**/*.md" # 包含的文档
+      - "src/**/*.ts" # 源码文件
+      - "README.md" # 项目说明
     exclude:
-      - "node_modules/**"            # 排除依赖
-      - "dist/**"                    # 排除构建产物
-      - "*.spec.ts"                  # 排除测试文件
+      - "node_modules/**" # 排除依赖
+      - "dist/**" # 排除构建产物
+      - "*.spec.ts" # 排除测试文件
 
 # ========== 代码生成配置 ==========
 generation:
-  code_style: "typescript-strict"    # 代码风格
-  strict_mode: true                  # 严格模式
-  auto_import: true                  # 自动导入
-  generate_tests: true               # 生成测试
-  test_framework: "vitest"           # 测试框架
-  test_coverage_target: 80           # 测试覆盖率目标
-  
+  code_style: "typescript-strict" # 代码风格
+  strict_mode: true # 严格模式
+  auto_import: true # 自动导入
+  generate_tests: true # 生成测试
+  test_framework: "vitest" # 测试框架
+  test_coverage_target: 80 # 测试覆盖率目标
+
   # 注释规范
   comments:
-    jsdoc: true                      # JSDoc 注释
-    language: "zh-CN"                # 注释语言
-    detailed: true                   # 详细注释
+    jsdoc: true # JSDoc 注释
+    language: "zh-CN" # 注释语言
+    detailed: true # 详细注释
 
 # ========== 质量门禁 ==========
 quality_gate:
-  enabled: true                      # 启用质量门禁
-  type_check: true                   # 类型检查
-  lint_check: true                   # Lint 检查
-  test_required: true                # 必须测试
-  coverage_threshold: 70             # 覆盖率阈值
-  
+  enabled: true # 启用质量门禁
+  type_check: true # 类型检查
+  lint_check: true # Lint 检查
+  test_required: true # 必须测试
+  coverage_threshold: 70 # 覆盖率阈值
+
   # 审查规则
   review:
-    naming_convention: true          # 命名约定
-    code_complexity: true            # 代码复杂度
-    security_check: true             # 安全检查
+    naming_convention: true # 命名约定
+    code_complexity: true # 代码复杂度
+    security_check: true # 安全检查
 
 # ========== 上下文管理 ==========
 context:
-  max_tokens: 8192                   # 最大上下文长度
-  auto_summary: true                 # 自动摘要
-  history_enabled: true              # 启用历史记忆
-  session_timeout: 3600              # 会话超时（秒）
+  max_tokens: 8192 # 最大上下文长度
+  auto_summary: true # 自动摘要
+  history_enabled: true # 启用历史记忆
+  session_timeout: 3600 # 会话超时（秒）
 
 # ========== 日志和调试 ==========
 logging:
-  level: "info"                      # 日志级别：debug|info|warn|error
-  file: ".lingma/lingma.log"         # 日志文件路径
-  
+  level: "info" # 日志级别：debug|info|warn|error
+  file: ".lingma/lingma.log" # 日志文件路径
+
 # ========== 高级配置 ==========
 advanced:
-  experimental_features: false       # 实验性功能
-  custom_prompts: []                 # 自定义提示词
-  api_endpoint: ""                   # 自定义 API 端点（如有）
+  experimental_features: false # 实验性功能
+  custom_prompts: [] # 自定义提示词
+  api_endpoint: "" # 自定义 API 端点（如有）
 ```
 
 ---
@@ -290,38 +290,38 @@ skills:
   - name: "code_analysis"
     enabled: true
     description: "分析代码结构、依赖关系、设计模式"
-    
+
   - name: "architecture_detection"
     enabled: true
     description: "识别架构模式和分层结构"
-    
+
   # ========== 代码生成 ==========
   - name: "component_generation"
     enabled: true
     description: "生成 TypeDom 组件代码"
-    
+
   - name: "test_generation"
     enabled: true
     description: "生成单元测试代码"
-    
+
   - name: "documentation_generation"
     enabled: true
     description: "生成技术文档"
-    
+
   # ========== 代码优化 ==========
   - name: "refactoring"
     enabled: true
     description: "代码重构和优化"
-    
+
   - name: "bug_fixing"
     enabled: true
     description: "Bug 定位和修复"
-    
+
   # ========== 质量检查 ==========
   - name: "code_review"
     enabled: true
     description: "代码审查和质量评估"
-    
+
   - name: "security_audit"
     enabled: true
     description: "安全漏洞检测"
@@ -423,6 +423,7 @@ skills:
 **症状**: 通义灵码图标不显示，菜单项灰色
 
 **解决方案**:
+
 ```
 1. 检查 IDE 版本是否符合要求
 2. 重启 IDE
@@ -435,6 +436,7 @@ skills:
 **症状**: AI 不了解项目结构，回答不准确
 
 **解决方案**:
+
 ```
 1. 确保 .lingma-config.yaml 存在
 2. 检查 knowledge_base.enabled = true
@@ -447,6 +449,7 @@ skills:
 **症状**: 生成的代码风格不一致或有错误
 
 **解决方案**:
+
 ```
 1. 在提示词中明确引用相关文档
 2. 提供更具体的约束条件
@@ -459,6 +462,7 @@ skills:
 **症状**: 响应慢，卡頓
 
 **解决方案**:
+
 ```
 1. 减少单次引用的文档数量（3-5 个为宜）
 2. 避免过长的提示词
@@ -492,17 +496,17 @@ npx lingma-cli stats
 ```typescript
 interface LingmaQualityMetrics {
   // 代码生成质量
-  codeAccuracy: number;        // 代码准确率
+  codeAccuracy: number; // 代码准确率
   specificationCompliance: number; // 规范符合率
-  testCoverage: number;        // 测试覆盖率
-  
+  testCoverage: number; // 测试覆盖率
+
   // 效率提升
-  timeSaved: number;           // 节省时间（小时）
-  productivityGain: number;    // 生产力提升百分比
-  
+  timeSaved: number; // 节省时间（小时）
+  productivityGain: number; // 生产力提升百分比
+
   // 用户满意度
-  satisfaction: number;        // 满意度评分
-  adoptionRate: number;        // 使用率
+  satisfaction: number; // 满意度评分
+  adoptionRate: number; // 使用率
 }
 ```
 
@@ -528,6 +532,7 @@ interface LingmaQualityMetrics {
 
 ```markdown
 ✅ 正确做法:
+
 1. 引用 3-5 个核心文档
 2. 提供项目背景信息
 3. 说明技术栈和约束
@@ -553,6 +558,7 @@ interface LingmaQualityMetrics {
 
 ```markdown
 维护常用提示词模板:
+
 - 组件开发模板
 - 测试生成模板
 - 代码审查模板

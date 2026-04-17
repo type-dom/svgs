@@ -1,21 +1,21 @@
-import { SvgProps, SvgPath, TypeSvgSvg, addAttrObj } from '@type-dom/framework';
+import { SvgProps, SvgPath, TypeSvgSvg, addAttrObj } from "@type-dom/framework";
 export class FlPinOffFilledSvg extends TypeSvgSvg {
-  className: 'FlPinOffFilledSvg';
+  className: "FlPinOffFilledSvg";
   override childNodes: SvgPath[];
   constructor(params: SvgProps = {}) {
     super(params);
-    this.className = 'FlPinOffFilledSvg';
-   addAttrObj(this, {
-      name: 'FlPinOffFilledSvg'
+    this.className = "FlPinOffFilledSvg";
+    addAttrObj(this, {
+      name: "FlPinOffFilledSvg",
     });
-   addAttrObj(this, {
-      viewBox: '0 0 20 20',
+    addAttrObj(this, {
+      viewBox: "0 0 20 20",
     });
     this.resetSize(24, 24);
     this.childNodes = [];
-    const path0 = new SvgPath({ attrObj: { fill: 'currentColor' }});
+    const path0 = new SvgPath({ attrObj: { fill: "currentColor" } });
     path0.setData(
-      'M2.85355 2.14645C2.65829 1.95118 2.34171 1.95118 2.14645 2.14645C1.95118 2.34171 1.95118 2.65829 2.14645 2.85355L6.896 7.60309L4.01834 8.75415C3.35177 9.02078 3.17498 9.88209 3.68262 10.3897L6.29289 13L3 16.2929V17H3.70711L7 13.7071L9.61027 16.3174C10.1179 16.825 10.9792 16.6482 11.2459 15.9817L12.3969 13.104L17.1464 17.8536C17.3417 18.0488 17.6583 18.0488 17.8536 17.8536C18.0488 17.6583 18.0488 17.3417 17.8536 17.1464L2.85355 2.14645ZM16.8622 9.87793L13.6202 11.4989L8.5011 6.37977L10.1221 3.13783C10.7326 1.91683 12.3599 1.65275 13.3251 2.61804L17.382 6.67487C18.3473 7.64015 18.0832 9.26743 16.8622 9.87793Z',
+      "M2.85355 2.14645C2.65829 1.95118 2.34171 1.95118 2.14645 2.14645C1.95118 2.34171 1.95118 2.65829 2.14645 2.85355L6.896 7.60309L4.01834 8.75415C3.35177 9.02078 3.17498 9.88209 3.68262 10.3897L6.29289 13L3 16.2929V17H3.70711L7 13.7071L9.61027 16.3174C10.1179 16.825 10.9792 16.6482 11.2459 15.9817L12.3969 13.104L17.1464 17.8536C17.3417 18.0488 17.6583 18.0488 17.8536 17.8536C18.0488 17.6583 18.0488 17.3417 17.8536 17.1464L2.85355 2.14645ZM16.8622 9.87793L13.6202 11.4989L8.5011 6.37977L10.1221 3.13783C10.7326 1.91683 12.3599 1.65275 13.3251 2.61804L17.382 6.67487C18.3473 7.64015 18.0832 9.26743 16.8622 9.87793Z",
     );
     this.addChild(path0);
   }

@@ -22,20 +22,20 @@ Code-as-Docs:  代码本身就是文档
 
 ### 配置文件
 
-| 文件 | 用途 | 状态 |
-|-----|------|------|
-| `.docs-config.yaml` | AI-First 总配置 | ✅ 已创建 |
-| `documentation-metadata.json` | 机器可读元数据 | ✅ 已创建 |
+| 文件                          | 用途            | 状态      |
+| ----------------------------- | --------------- | --------- |
+| `.docs-config.yaml`           | AI-First 总配置 | ✅ 已创建 |
+| `documentation-metadata.json` | 机器可读元数据  | ✅ 已创建 |
 
 ### 待创建文件
 
-| 文件 | 用途 | 紧急度 |
-|-----|------|--------|
-| `scripts/sync-docs-version.mjs` | 版本同步 | 🔴 高 |
-| `scripts/docs-statistics.mjs` | 统计分析 | 🔴 高 |
-| `scripts/build-rag-kb.py` | RAG 构建 | 🟡 中 |
-| `.markdownlint.json` | Markdown 检查 | 🟡 中 |
-| `.lycheerc` | 链接检查 | 🟡 中 |
+| 文件                            | 用途          | 紧急度 |
+| ------------------------------- | ------------- | ------ |
+| `scripts/sync-docs-version.mjs` | 版本同步      | 🔴 高  |
+| `scripts/docs-statistics.mjs`   | 统计分析      | 🔴 高  |
+| `scripts/build-rag-kb.py`       | RAG 构建      | 🟡 中  |
+| `.markdownlint.json`            | Markdown 检查 | 🟡 中  |
+| `.lycheerc`                     | 链接检查      | 🟡 中  |
 
 ---
 
@@ -107,6 +107,7 @@ authors: [TypeDom Team]
 ### 2. AI 标签系统
 
 **7 大标签类别**:
+
 ```
 #AI-First       → AI优先设计的文档 (12 篇)
 #Auto-Generated → 自动生成的文档 (5 篇)
@@ -132,12 +133,14 @@ graph LR
 ### 4. RAG 知识库集成
 
 **检索流程**:
+
 ```
-用户提问 → Agent → RAG 检索 → Top 5 相关文档 
+用户提问 → Agent → RAG 检索 → Top 5 相关文档
 → 上下文注入 → LLM 生成 → 引用来源的回答
 ```
 
 **预期效果**:
+
 - AI 代码准确率：60% → **85%** (+42%)
 - 规范遵循度：45% → **78%** (+73%)
 - 幻觉率：25% → **5%** (-80%)
@@ -177,6 +180,7 @@ graph LR
 【任务】创建添加图标组件
 
 【要求】
+
 - 遵循编码规范
 - 包含单元测试
 - 符合无障碍标准
@@ -214,13 +218,13 @@ npm run test        # 单元测试
 
 ### 核心 KPI
 
-| 指标 | 当前值 | 目标值 | 状态 |
-|-----|-------|-------|------|
-| 文档完整性 | 100% | 100% | ✅ |
-| 机器可读率 | 88% | 90% | ⚠️ |
-| AI 标签覆盖 | 100% | 100% | ✅ |
-| 链接有效性 | 99% | 100% | ⚠️ |
-| 示例可运行 | 100% | 100% | ✅ |
+| 指标        | 当前值 | 目标值 | 状态 |
+| ----------- | ------ | ------ | ---- |
+| 文档完整性  | 100%   | 100%   | ✅   |
+| 机器可读率  | 88%    | 90%    | ⚠️   |
+| AI 标签覆盖 | 100%   | 100%   | ✅   |
+| 链接有效性  | 99%    | 100%   | ⚠️   |
+| 示例可运行  | 100%   | 100%   | ✅   |
 
 ### 监控命令
 
@@ -296,10 +300,10 @@ npm run docs:rag-index
 ```
 □ 配置通义灵码 (10 分钟)
   → 参考 LINGMA-CONFIGURATION.md
-  
+
 □ 学习提示词技巧 (10 分钟)
   → 参考 AI-PROMPT-TEMPLATES.md
-  
+
 □ 实战：创建 SVG 组件 (10 分钟)
   → 参考 AGENT-SKILLS.md
 ```
@@ -309,10 +313,10 @@ npm run docs:rag-index
 ```
 □ 理解 AI 迭代工作流 (20 分钟)
   → 参考 AI-ITERATION-WORKFLOW.md
-  
+
 □ 学习上下文管理 (20 分钟)
   → 参考 CONTEXT-MANAGEMENT.md
-  
+
 □ 探索 RAG 知识库 (20 分钟)
   → 参考 RAG-KNOWLEDGE-BASE.md
 ```
@@ -328,10 +332,11 @@ npm run docs:rag-index
 ```yaml
 # CI/CD 配置
 quality_gates:
-  code_docs_sync: error  # 代码文档不同步则失败
+  code_docs_sync: error # 代码文档不同步则失败
 ```
 
 **手动检查**:
+
 ```bash
 npm run docs:check  # 发现不一致
 npm run docs:sync   # 自动同步
@@ -344,13 +349,13 @@ npm run docs:sync   # 自动同步
 ```
 Layer 1: Git Hooks (pre-commit)
   → markdownlint, cspell
-  
+
 Layer 2: CI Checks (pull request)
   → markdownlint, lychee, cspell, textlint
-  
+
 Layer 3: Quality Gates (merge)
   → 所有检查必须通过
-  
+
 Layer 4: Periodic Audit (weekly)
   → 人工 + AI 联合审查
 ```
@@ -364,10 +369,11 @@ Layer 4: Periodic Audit (weekly)
 
 【系统】📚 RAG 知识库已启用
 找到 5 个相关文档:
+
 1. AI-CODE-GENERATION.md (92%)
 2. AGENT-SKILLS.md (88%)
 3. QUICK-START.md (85%)
-...
+   ...
 
 【Agent】基于项目文档，建议如下:
 ...

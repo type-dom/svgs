@@ -1,31 +1,29 @@
-import { SvgProps, SvgPath, TypeSvgSvg, addAttrObj } from '@type-dom/framework';
+import { SvgProps, SvgPath, TypeSvgSvg, addAttrObj } from "@type-dom/framework";
 export class ElBellSvg extends TypeSvgSvg {
-  className: 'ElBellSvg';
+  className: "ElBellSvg";
   override childNodes: SvgPath[];
   constructor(params: SvgProps = {}) {
     super(params);
-    this.className = 'ElBellSvg';
-   addAttrObj(this, {
-      name: 'ElBellSvg'
+    this.className = "ElBellSvg";
+    addAttrObj(this, {
+      name: "ElBellSvg",
     });
-   addAttrObj(this, {
-      viewBox: '0 0 1024 1024',
+    addAttrObj(this, {
+      viewBox: "0 0 1024 1024",
     });
     this.resetSize(24, 24);
     this.childNodes = [];
-    const path0 = new SvgPath({ attrObj: { fill: 'currentColor' }});
-    path0.setData(
-      'M512 64a64 64 0 0 1 64 64v64H448v-64a64 64 0 0 1 64-64z',
-    );
+    const path0 = new SvgPath({ attrObj: { fill: "currentColor" } });
+    path0.setData("M512 64a64 64 0 0 1 64 64v64H448v-64a64 64 0 0 1 64-64z");
     this.addChild(path0);
-    const path1 = new SvgPath({ attrObj: { fill: 'currentColor' }});
+    const path1 = new SvgPath({ attrObj: { fill: "currentColor" } });
     path1.setData(
-      'M256 768h512V448a256 256 0 1 0-512 0v320zm256-640a320 320 0 0 1 320 320v384H192V448a320 320 0 0 1 320-320z',
+      "M256 768h512V448a256 256 0 1 0-512 0v320zm256-640a320 320 0 0 1 320 320v384H192V448a320 320 0 0 1 320-320z",
     );
     this.addChild(path1);
-    const path2 = new SvgPath({ attrObj: { fill: 'currentColor' }});
+    const path2 = new SvgPath({ attrObj: { fill: "currentColor" } });
     path2.setData(
-      'M96 768h832q32 0 32 32t-32 32H96q-32 0-32-32t32-32zm352 128h128a64 64 0 0 1-128 0z',
+      "M96 768h832q32 0 32 32t-32 32H96q-32 0-32-32t32-32zm352 128h128a64 64 0 0 1-128 0z",
     );
     this.addChild(path2);
   }

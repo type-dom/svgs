@@ -99,10 +99,7 @@
       "machineReadable": true,
       "hasFrontmatter": true,
       "wordCount": 2800,
-      "relatedDocs": [
-        "00-索引与导航/QUICK-START.md",
-        "00-索引与导航/AI-PROMPT-TEMPLATES.md"
-      ]
+      "relatedDocs": ["00-索引与导航/QUICK-START.md", "00-索引与导航/AI-PROMPT-TEMPLATES.md"]
     },
     {
       "id": "DOC-002",
@@ -119,10 +116,7 @@
       "hasFrontmatter": true,
       "wordCount": 2200,
       "estimatedReadTime": "5 minutes",
-      "relatedDocs": [
-        "01-项目概述/项目背景.md",
-        "01-项目概述/技术栈.md"
-      ]
+      "relatedDocs": ["01-项目概述/项目背景.md", "01-项目概述/技术栈.md"]
     },
     {
       "id": "DOC-003",
@@ -139,10 +133,7 @@
       "hasJsonSchema": true,
       "wordCount": 3500,
       "templateCount": 10,
-      "relatedDocs": [
-        "07-AI 专项文档/LINGMA-CONFIGURATION.md",
-        "07-AI 专项文档/AGENT-SKILLS.md"
-      ]
+      "relatedDocs": ["07-AI 专项文档/LINGMA-CONFIGURATION.md", "07-AI 专项文档/AGENT-SKILLS.md"]
     }
   ],
   "automation": {

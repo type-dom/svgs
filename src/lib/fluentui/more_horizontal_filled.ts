@@ -1,21 +1,21 @@
-import { SvgProps, SvgPath, TypeSvgSvg, addAttrObj } from '@type-dom/framework';
+import { SvgProps, SvgPath, TypeSvgSvg, addAttrObj } from "@type-dom/framework";
 export class FlMoreHorizontalFilledSvg extends TypeSvgSvg {
-  className: 'FlMoreHorizontalFilledSvg';
+  className: "FlMoreHorizontalFilledSvg";
   override childNodes: SvgPath[];
   constructor(params: SvgProps = {}) {
     super(params);
-    this.className = 'FlMoreHorizontalFilledSvg';
-   addAttrObj(this, {
-      name: 'FlMoreHorizontalFilledSvg'
+    this.className = "FlMoreHorizontalFilledSvg";
+    addAttrObj(this, {
+      name: "FlMoreHorizontalFilledSvg",
     });
-   addAttrObj(this, {
-      viewBox: '0 0 20 20',
+    addAttrObj(this, {
+      viewBox: "0 0 20 20",
     });
     this.resetSize(24, 24);
     this.childNodes = [];
-    const path0 = new SvgPath({ attrObj: { fill: 'currentColor' }});
+    const path0 = new SvgPath({ attrObj: { fill: "currentColor" } });
     path0.setData(
-      'M6.75 10C6.75 10.9665 5.9665 11.75 5 11.75C4.0335 11.75 3.25 10.9665 3.25 10C3.25 9.0335 4.0335 8.25 5 8.25C5.9665 8.25 6.75 9.0335 6.75 10ZM11.75 10C11.75 10.9665 10.9665 11.75 10 11.75C9.0335 11.75 8.25 10.9665 8.25 10C8.25 9.0335 9.0335 8.25 10 8.25C10.9665 8.25 11.75 9.0335 11.75 10ZM15 11.75C15.9665 11.75 16.75 10.9665 16.75 10C16.75 9.0335 15.9665 8.25 15 8.25C14.0335 8.25 13.25 9.0335 13.25 10C13.25 10.9665 14.0335 11.75 15 11.75Z',
+      "M6.75 10C6.75 10.9665 5.9665 11.75 5 11.75C4.0335 11.75 3.25 10.9665 3.25 10C3.25 9.0335 4.0335 8.25 5 8.25C5.9665 8.25 6.75 9.0335 6.75 10ZM11.75 10C11.75 10.9665 10.9665 11.75 10 11.75C9.0335 11.75 8.25 10.9665 8.25 10C8.25 9.0335 9.0335 8.25 10 8.25C10.9665 8.25 11.75 9.0335 11.75 10ZM15 11.75C15.9665 11.75 16.75 10.9665 16.75 10C16.75 9.0335 15.9665 8.25 15 8.25C14.0335 8.25 13.25 9.0335 13.25 10C13.25 10.9665 14.0335 11.75 15 11.75Z",
     );
     this.addChild(path0);
   }

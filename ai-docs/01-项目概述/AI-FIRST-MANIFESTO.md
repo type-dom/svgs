@@ -3,7 +3,7 @@
 **@type-dom/svgs 项目的 AI 协作开发理念**
 
 **版本**: v0.4.0  
-**最后更新**: 2026-03-19  
+**最后更新**: 2026-03-19
 
 ---
 
@@ -60,12 +60,14 @@
 ### 转变 1: 从"手写代码"到"AI 生成 + 人工审核"
 
 **传统模式**:
+
 ```
 需求分析 → 设计方案 → 手写代码 → 手动测试 → 代码审查
 耗时：4-8 小时
 ```
 
 **AI 优先模式**:
+
 ```
 需求分析 → AI 提示词 → 生成代码 → 人工审核 → 自动化测试
 耗时：30-60 分钟
@@ -73,10 +75,11 @@
 ```
 
 **实践案例**:
+
 ```typescript
 // ❌ 传统方式：手动编写每个 SVG 组件
 export class AddSvg extends TypeSvgSvg {
-  className: 'AddSvg';
+  className: "AddSvg";
   constructor(params: SvgProps = {}) {
     super(params);
     // ... 50 行手动编写的代码
@@ -91,11 +94,13 @@ export class AddSvg extends TypeSvgSvg {
 ### 转变 2: 从"事后文档"到"文档驱动开发"
 
 **传统模式**:
+
 ```
 编码完成 → 测试通过 → (有时间才写文档) → 文档过时 → 无人维护
 ```
 
 **AI 优先模式**:
+
 ```
 文档模板 → AI 生成草稿 → 人工完善 → 代码实现 → 自动同步更新
         ↓
@@ -105,12 +110,14 @@ export class AddSvg extends TypeSvgSvg {
 ### 转变 3: 从"个人经验"到"集体智慧"
 
 **传统模式**:
+
 ```
 开发者 A 的经验 → 开发者 A 离职 → 经验丢失
 开发者 B 踩过的坑 → 未记录 → 开发者 C 继续踩坑
 ```
 
 **AI 优先模式**:
+
 ```
 个人经验 → 文档化 → AI 学习 → 团队共享 → 新人快速上手
     ↓                                ↓
@@ -132,17 +139,19 @@ export class AddSvg extends TypeSvgSvg {
 【任务】创建 StarSvg 星星图标组件
 【参考】@技术栈.md @编码规范.md
 【要求】
+
 - viewBox: 0 0 1024 1024
 - 默认尺寸：24x24
 - 支持自定义颜色
 - 包含单元测试
-【路径数据】M512 42.666667...
+  【路径数据】M512 42.666667...
 ```
 
 ### 原则 2: 上下文注入
 
 ```markdown
 ✅ 正确做法:
+
 1. 引用相关文档（@文档名.md）
 2. 提供项目背景信息
 3. 说明技术栈和约束条件
@@ -215,15 +224,15 @@ AI 生成 ≠ 直接使用
 # .lingma-config.yaml
 version: "1.0"
 agent:
-  mode: "agentic"           # 智能体模式
-  auto_perception: true     # 自动工程感知
-  tool_calling: true        # 工具调用
-  terminal_execution: true  # 终端执行
+  mode: "agentic" # 智能体模式
+  auto_perception: true # 自动工程感知
+  tool_calling: true # 工具调用
+  terminal_execution: true # 终端执行
 
 knowledge_base:
-  enabled: true             # 启用知识库
-  auto_index: true          # 自动索引
-  doc_path: "./ai-docs"     # 文档路径
+  enabled: true # 启用知识库
+  auto_index: true # 自动索引
+  doc_path: "./ai-docs" # 文档路径
 ```
 
 ### 2. 文档结构
@@ -254,24 +263,24 @@ ai-docs/
 
 ### 预期收益
 
-| 指标 | 无 AI | 基础 AI | AI 优先 | 提升幅度 |
-|-----|------|--------|--------|---------|
-| **开发效率** | 1x | 2x | 5-10x | +400-900% |
-| **代码质量** | 基准 | +20% | +40-60% | +40-60% |
-| **文档覆盖率** | 30% | 60% | 90%+ | +200% |
-| **返工率** | 35% | 20% | 8% | -77% |
-| **新人上手** | 2 周 | 1 周 | 3 天 | -80% |
+| 指标           | 无 AI | 基础 AI | AI 优先 | 提升幅度  |
+| -------------- | ----- | ------- | ------- | --------- |
+| **开发效率**   | 1x    | 2x      | 5-10x   | +400-900% |
+| **代码质量**   | 基准  | +20%    | +40-60% | +40-60%   |
+| **文档覆盖率** | 30%   | 60%     | 90%+    | +200%     |
+| **返工率**     | 35%   | 20%     | 8%      | -77%      |
+| **新人上手**   | 2 周  | 1 周    | 3 天    | -80%      |
 
 ### 实际测量方法
 
 ```typescript
 // 每周自动收集以下指标:
 const metrics = {
-  developmentTime: trackTime('feature-development'),
+  developmentTime: trackTime("feature-development"),
   codeQuality: runLintAndAnalysis(),
   testCoverage: getCoverageReport(),
   documentationCompleteness: checkDocCoverage(),
-  teamSatisfaction: survey()
+  teamSatisfaction: survey(),
 };
 
 // 生成改进报告
@@ -287,14 +296,17 @@ generateWeeklyReport(metrics);
 **挑战**: 需要创建 200+ 个 SVG 图标组件
 
 **传统方式预估**:
+
 - 单个组件：2 小时
 - 总计：400 小时 (约 10 人周)
 
 **AI 优先方式实际**:
+
 1. 创建通用模板 (1 小时)
 2. AI 批量生成 (30 分钟)
 3. 人工审核 + 微调 (4 小时)
 4. 自动化测试 (1 小时)
+
 - **总计：6.5 小时**
 - **效率提升：98%**
 
@@ -303,12 +315,14 @@ generateWeeklyReport(metrics);
 **目标**: 建立完整的 AI 文档体系
 
 **实施过程**:
+
 - Week 1: 文档结构规划 + AI 提示词模板
 - Week 2: AI 生成初稿 + 人工完善
 - Week 3: 持续迭代 + 团队培训
 - Week 4: 自动化集成 + 效果评估
 
 **成果**:
+
 - 43 篇文档 (12 篇 AI 生成，26 篇人工编写，5 篇自动生成)
 - 文档覆盖率 90%+
 - 新人上手时间从 2 周缩短到 3 天
@@ -363,18 +377,21 @@ generateWeeklyReport(metrics);
 ### 给团队成员
 
 #### 第 1 周：熟悉工具
+
 - [ ] 安装通义灵码插件
 - [ ] 阅读本宣言
 - [ ] 练习使用提示词模板
 - [ ] 尝试用 AI 完成简单任务
 
 #### 第 2 周：深度集成
+
 - [ ] 在日常开发中使用 AI 辅助
 - [ ] 参与文档建设
 - [ ] 分享使用心得
 - [ ] 帮助其他成员
 
 #### 第 3-4 周：持续改进
+
 - [ ] 优化个人工作流
 - [ ] 贡献新的提示词模板
 - [ ] 参与效果评估
@@ -383,12 +400,14 @@ generateWeeklyReport(metrics);
 ### 给团队领导者
 
 #### 战略规划
+
 - [ ] 制定 AI 优先战略
 - [ ] 提供资源支持
 - [ ] 建立激励机制
 - [ ] 定期评估效果
 
 #### 文化建设
+
 - [ ] 鼓励试错和创新
 - [ ] 分享成功案例
 - [ ] 组织培训和交流
@@ -444,8 +463,8 @@ generateWeeklyReport(metrics);
 
 ---
 
-**签署**: _______________  
-**日期**: 2026-___-___
+**签署**: **\*\***\_\_\_**\*\***  
+**日期**: 2026-**_-_**
 
 ---
 

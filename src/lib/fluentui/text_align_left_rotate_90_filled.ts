@@ -1,21 +1,21 @@
-import { SvgProps, SvgPath, TypeSvgSvg, addAttrObj } from '@type-dom/framework';
+import { SvgProps, SvgPath, TypeSvgSvg, addAttrObj } from "@type-dom/framework";
 export class FlTextAlignLeftRotate90FilledSvg extends TypeSvgSvg {
-  className: 'FlTextAlignLeftRotate90FilledSvg';
+  className: "FlTextAlignLeftRotate90FilledSvg";
   override childNodes: SvgPath[];
   constructor(params: SvgProps = {}) {
     super(params);
-    this.className = 'FlTextAlignLeftRotate90FilledSvg';
-   addAttrObj(this, {
-      name: 'FlTextAlignLeftRotate90FilledSvg'
+    this.className = "FlTextAlignLeftRotate90FilledSvg";
+    addAttrObj(this, {
+      name: "FlTextAlignLeftRotate90FilledSvg",
     });
-   addAttrObj(this, {
-      viewBox: '0 0 20 20',
+    addAttrObj(this, {
+      viewBox: "0 0 20 20",
     });
     this.resetSize(24, 24);
     this.childNodes = [];
-    const path0 = new SvgPath({ attrObj: { fill: 'currentColor' }});
+    const path0 = new SvgPath({ attrObj: { fill: "currentColor" } });
     path0.setData(
-      'M15.75 2C16.1642 2 16.5 2.33579 16.5 2.75V13.25C16.5 13.6642 16.1642 14 15.75 14C15.3358 14 15 13.6642 15 13.25V2.75C15 2.33579 15.3358 2 15.75 2ZM10.75 2C11.1642 2 11.5 2.33579 11.5 2.75V17.25C11.5 17.6642 11.1642 18 10.75 18C10.3358 18 10 17.6642 10 17.25V2.75C10 2.33579 10.3358 2 10.75 2ZM6.5 2.75C6.5 2.33579 6.16421 2 5.75 2C5.33579 2 5 2.33579 5 2.75V11.25C5 11.6642 5.33579 12 5.75 12C6.16421 12 6.5 11.6642 6.5 11.25V2.75Z',
+      "M15.75 2C16.1642 2 16.5 2.33579 16.5 2.75V13.25C16.5 13.6642 16.1642 14 15.75 14C15.3358 14 15 13.6642 15 13.25V2.75C15 2.33579 15.3358 2 15.75 2ZM10.75 2C11.1642 2 11.5 2.33579 11.5 2.75V17.25C11.5 17.6642 11.1642 18 10.75 18C10.3358 18 10 17.6642 10 17.25V2.75C10 2.33579 10.3358 2 10.75 2ZM6.5 2.75C6.5 2.33579 6.16421 2 5.75 2C5.33579 2 5 2.33579 5 2.75V11.25C5 11.6642 5.33579 12 5.75 12C6.16421 12 6.5 11.6642 6.5 11.25V2.75Z",
     );
     this.addChild(path0);
   }

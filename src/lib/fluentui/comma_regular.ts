@@ -1,21 +1,21 @@
-import { SvgProps, SvgPath, TypeSvgSvg, addAttrObj } from '@type-dom/framework';
+import { SvgProps, SvgPath, TypeSvgSvg, addAttrObj } from "@type-dom/framework";
 export class FlCommaRegularSvg extends TypeSvgSvg {
-  className: 'FlCommaRegularSvg';
+  className: "FlCommaRegularSvg";
   override childNodes: SvgPath[];
   constructor(params: SvgProps = {}) {
     super(params);
-    this.className = 'FlCommaRegularSvg';
-   addAttrObj(this, {
-      name: 'FlCommaRegularSvg'
+    this.className = "FlCommaRegularSvg";
+    addAttrObj(this, {
+      name: "FlCommaRegularSvg",
     });
-   addAttrObj(this, {
-      viewBox: '0 0 20 20',
+    addAttrObj(this, {
+      viewBox: "0 0 20 20",
     });
     this.resetSize(24, 24);
     this.childNodes = [];
-    const path0 = new SvgPath({ attrObj: { fill: 'currentColor' }});
+    const path0 = new SvgPath({ attrObj: { fill: "currentColor" } });
     path0.setData(
-      'M13.5 7.5C13.5 5.567 11.933 4 10 4C8.067 4 6.5 5.567 6.5 7.5C6.5 9.433 8.067 11 10 11C10.8423 11 11.6152 10.7024 12.2191 10.2067C11.9577 11.3737 11.5271 12.3397 10.9843 13.0884C10.0711 14.3478 8.83925 15 7.5 15C7.22386 15 7 15.2239 7 15.5C7 15.7761 7.22386 16 7.5 16C9.19831 16 10.7165 15.1613 11.7939 13.6754C12.8659 12.1968 13.5 10.0861 13.5 7.5Z',
+      "M13.5 7.5C13.5 5.567 11.933 4 10 4C8.067 4 6.5 5.567 6.5 7.5C6.5 9.433 8.067 11 10 11C10.8423 11 11.6152 10.7024 12.2191 10.2067C11.9577 11.3737 11.5271 12.3397 10.9843 13.0884C10.0711 14.3478 8.83925 15 7.5 15C7.22386 15 7 15.2239 7 15.5C7 15.7761 7.22386 16 7.5 16C9.19831 16 10.7165 15.1613 11.7939 13.6754C12.8659 12.1968 13.5 10.0861 13.5 7.5Z",
     );
     this.addChild(path0);
   }

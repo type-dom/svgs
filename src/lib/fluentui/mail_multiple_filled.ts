@@ -1,21 +1,21 @@
-import { SvgProps, SvgPath, TypeSvgSvg, addAttrObj } from '@type-dom/framework';
+import { SvgProps, SvgPath, TypeSvgSvg, addAttrObj } from "@type-dom/framework";
 export class FlMailMultipleFilledSvg extends TypeSvgSvg {
-  className: 'FlMailMultipleFilledSvg';
+  className: "FlMailMultipleFilledSvg";
   override childNodes: SvgPath[];
   constructor(params: SvgProps = {}) {
     super(params);
-    this.className = 'FlMailMultipleFilledSvg';
-   addAttrObj(this, {
-      name: 'FlMailMultipleFilledSvg'
+    this.className = "FlMailMultipleFilledSvg";
+    addAttrObj(this, {
+      name: "FlMailMultipleFilledSvg",
     });
-   addAttrObj(this, {
-      viewBox: '0 0 20 20',
+    addAttrObj(this, {
+      viewBox: "0 0 20 20",
     });
     this.resetSize(24, 24);
     this.childNodes = [];
-    const path0 = new SvgPath({ attrObj: { fill: 'currentColor' }});
+    const path0 = new SvgPath({ attrObj: { fill: "currentColor" } });
     path0.setData(
-      'M16.0001 12.5V6.373L9.25359 9.93097C9.09712 10.023 8.90304 10.023 8.74657 9.93097L2 6.373V12.5C2 13.8807 3.11937 15 4.50008 15H13.5001C14.8808 15 16.0001 13.8807 16.0001 12.5ZM15.9849 5.22293C15.847 3.9726 14.7871 3 13.5001 3H4.50008C3.21302 3 2.15312 3.9726 2.01526 5.22293L9.00008 8.91991L15.9849 5.22293ZM6.5 17C5.68209 17 4.95592 16.6072 4.49982 16H13.5C15.433 16 17 14.433 17 12.5V5.5C17.6072 5.9561 18 6.68209 18 7.5V12.5C18 14.9853 15.9853 17 13.5 17H6.5Z',
+      "M16.0001 12.5V6.373L9.25359 9.93097C9.09712 10.023 8.90304 10.023 8.74657 9.93097L2 6.373V12.5C2 13.8807 3.11937 15 4.50008 15H13.5001C14.8808 15 16.0001 13.8807 16.0001 12.5ZM15.9849 5.22293C15.847 3.9726 14.7871 3 13.5001 3H4.50008C3.21302 3 2.15312 3.9726 2.01526 5.22293L9.00008 8.91991L15.9849 5.22293ZM6.5 17C5.68209 17 4.95592 16.6072 4.49982 16H13.5C15.433 16 17 14.433 17 12.5V5.5C17.6072 5.9561 18 6.68209 18 7.5V12.5C18 14.9853 15.9853 17 13.5 17H6.5Z",
     );
     this.addChild(path0);
   }

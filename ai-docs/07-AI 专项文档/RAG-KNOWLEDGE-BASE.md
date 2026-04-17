@@ -6,13 +6,13 @@ RAG (Retrieval-Augmented Generation) 知识库通过将项目文档向量化，�
 
 ### 为什么需要 RAG?
 
-| 问题 | 传统 LLM | RAG 增强 |
-|-----|---------|---------|
+| 问题           | 传统 LLM                  | RAG 增强            |
+| -------------- | ------------------------- | ------------------- |
 | **知识时效性** | ❌ 训练数据截止某个时间点 | ✅ 实时更新最新文档 |
-| **领域专业性** | ❌ 通用知识，缺乏深度 | ✅ 包含项目特定知识 |
-| **准确性** | ❌ 可能产生幻觉 | ✅ 基于真实文档引用 |
-| **可追溯性** | ❌ 无法追溯信息来源 | ✅ 提供来源文档引用 |
-| **成本效益** | ❌ 需要频繁微调 | ✅ 只需更新向量库 |
+| **领域专业性** | ❌ 通用知识，缺乏深度     | ✅ 包含项目特定知识 |
+| **准确性**     | ❌ 可能产生幻觉           | ✅ 基于真实文档引用 |
+| **可追溯性**   | ❌ 无法追溯信息来源       | ✅ 提供来源文档引用 |
+| **成本效益**   | ❌ 需要频繁微调           | ✅ 只需更新向量库   |
 
 ---
 
@@ -151,6 +151,7 @@ ai-docs/
 ```
 
 **优先级分类**:
+
 ```python
 HIGH_PRIORITY = [
     "07-AI 专项文档/",      # AI 协作核心知识
@@ -199,7 +200,7 @@ def smart_chunk_document(file_path: str) -> List[Dict]:
     """
     with open(file_path, 'r', encoding='utf-8') as f:
         content = f.read()
-    
+
     # 识别文档类型
     if 'API' in file_path or '接口' in file_path:
         # API 文档：按函数/类分块
@@ -273,7 +274,7 @@ def enrich_metadata(chunk: Dict, file_path: str) -> Dict:
         "last_updated": get_file_mtime(file_path),
         "version": extract_version(chunk.text)     # 如果有版本号
     }
-    
+
     return {
         "text": chunk.text,
         "metadata": metadata
@@ -347,25 +348,25 @@ class RAGKnowledgeBaseBuilder:
     def __init__(self, docs_path: str, output_path: str):
         self.docs_path = Path(docs_path)
         self.output_path = Path(output_path)
-        
+
         # 初始化 embedding
         self.embeddings = HuggingFaceEmbeddings(
             model_name="BAAI/bge-m3",
             model_kwargs={'device': 'cpu'},
             encode_kwargs={'normalize_embeddings': True}
         )
-        
+
         # 初始化分块器
         self.text_splitter = RecursiveCharacterTextSplitter(
             chunk_size=500,
             chunk_overlap=50,
             length_function=len
         )
-    
+
     def load_documents(self):
         """加载所有文档"""
         print(f"Loading documents from {self.docs_path}")
-        
+
         # 按优先级分批加载
         high_priority_dirs = [
             "07-AI 专项文档",
@@ -374,9 +375,9 @@ class RAGKnowledgeBaseBuilder:
             "02-开发规范",
             "08-架构决策记录"
         ]
-        
+
         all_docs = []
-        
+
         # 高优先级文档
         for dir_name in high_priority_dirs:
             dir_path = self.docs_path / dir_name
@@ -389,7 +390,7 @@ class RAGKnowledgeBaseBuilder:
                 )
                 all_docs.extend(loader.load())
                 print(f"✓ Loaded {dir_name}: {len(all_docs)} docs")
-        
+
         # 其他文档
         other_loader = DirectoryLoader(
             str(self.docs_path),
@@ -398,39 +399,39 @@ class RAGKnowledgeBaseBuilder:
             loader_kwargs={'encoding': 'utf-8'}
         )
         all_docs.extend(other_loader.load())
-        
+
         print(f"Total documents loaded: {len(all_docs)}")
         return all_docs
-    
+
     def process_documents(self, documents):
         """处理文档：分块 + 元数据增强"""
         print("Processing documents...")
-        
+
         # 分块
         chunks = self.text_splitter.split_documents(documents)
         print(f"Created {len(chunks)} chunks")
-        
+
         # 元数据增强
         for chunk in chunks:
             chunk.metadata["category"] = self._extract_category(chunk.metadata["source"])
             chunk.metadata["priority"] = self._get_priority(chunk.metadata["source"])
-        
+
         return chunks
-    
+
     def build_vector_store(self, chunks):
         """构建向量库"""
         print("Building vector store...")
-        
+
         # 创建 ChromaDB
         vectorstore = Chroma.from_documents(
             documents=chunks,
             embedding=self.embeddings,
             persist_directory=str(self.output_path)
         )
-        
+
         print(f"Vector store built at {self.output_path}")
         return vectorstore
-    
+
     def _extract_category(self, source: str) -> str:
         """从路径提取类别"""
         parts = Path(source).parts
@@ -438,30 +439,30 @@ class RAGKnowledgeBaseBuilder:
             if part.startswith(tuple(str(i) for i in range(10))):
                 return part.split('-')[1]
         return "unknown"
-    
+
     def _get_priority(self, source: str) -> str:
         """从路径判断优先级"""
         high_priority_markers = ["07-AI", "00-索引", "01-项目", "02-开发", "08-架构"]
         if any(marker in source for marker in high_priority_markers):
             return "HIGH"
         return "MEDIUM"
-    
+
     def run(self):
         """执行完整流程"""
         documents = self.load_documents()
         chunks = self.process_documents(documents)
         vectorstore = self.build_vector_store(chunks)
-        
+
         # 测试检索
         query = "如何创建 SVG 组件？"
         results = vectorstore.similarity_search(query, k=3)
-        
+
         print(f"\nTest query: {query}")
         print(f"Top 3 results:")
         for i, result in enumerate(results, 1):
             print(f"{i}. {result.metadata['source']}")
             print(f"   Preview: {result.page_content[:100]}...\n")
-        
+
         return vectorstore
 
 # 使用示例
@@ -470,7 +471,7 @@ if __name__ == "__main__":
         docs_path="/Users/jianfengxu/Documents/MY-GIT/svgs/ai-docs",
         output_path="/Users/jianfengxu/Documents/MY-GIT/svgs/.rag-kb"
     )
-    
+
     vectorstore = builder.run()
     print("✅ RAG Knowledge Base built successfully!")
 ```
@@ -538,21 +539,21 @@ def multi_query_retrieval(query: str, vectorstore, k=10):
     """
     # 1. 原始查询
     results_1 = vectorstore.similarity_search(query, k=k)
-    
+
     # 2. 改写查询
     rewritten = rewrite_query(query)
     results_2 = vectorstore.similarity_search(rewritten, k=k)
-    
+
     # 3. 子查询分解
     sub_queries = generate_sub_queries(query)
     results_3 = []
     for sub_q in sub_queries[:2]:  # 最多 2 个子查询
         results_3.extend(vectorstore.similarity_search(sub_q, k=k//2))
-    
+
     # 合并并去重
     all_results = results_1 + results_2 + results_3
     unique_results = deduplicate_results(all_results)
-    
+
     return unique_results[:k]  # 返回 top-k
 ```
 
@@ -570,7 +571,7 @@ def evaluate_retrieval_quality(query: str, results: List[Dict]) -> Dict:
         "latency_ms": measure_latency(),          # 延迟
         "coverage": calculate_coverage(results)   # 类别覆盖率
     }
-    
+
     return metrics
 
 # 定期评估
@@ -608,7 +609,7 @@ def log_retrieval(query: str, results: List[Dict], feedback: str = None):
         "feedback": feedback  # 用户反馈 (thumbs up/down)
     }
     retrieval_log.append(log_entry)
-    
+
     # 定期保存到文件
     if len(retrieval_log) % 100 == 0:
         save_log(retrieval_log)
@@ -624,10 +625,10 @@ def incremental_update(new_docs: List[Dict], vectorstore):
     # 1. 处理新文档
     new_chunks = text_splitter.split_documents(new_docs)
     new_vectors = embeddings.embed_documents([c.text for c in new_chunks])
-    
+
     # 2. 添加到向量库
     vectorstore.add_documents(new_chunks)
-    
+
     # 3. 重新索引 (如果需要)
     if vectorstore._collection.count() > 10000:
         vectorstore.persist()
@@ -667,27 +668,27 @@ def retrieve_with_metrics(query: str):
 # .lingma/rag-config.yaml
 rag:
   enabled: true
-  
+
   vectorstore:
     type: chromadb
     path: ./.rag-kb
-    
+
   retrieval:
-    strategy: hybrid  # dense | sparse | hybrid
+    strategy: hybrid # dense | sparse | hybrid
     top_k: 5
     rerank: true
-    
+
   embedding:
     model: BAAI/bge-m3
     device: cpu
-    
+
   filters:
     priority: ["HIGH", "MEDIUM"]
     languages: ["zh", "en"]
-    
+
   cache:
     enabled: true
-    ttl: 3600  # 1 hour
+    ttl: 3600 # 1 hour
 ```
 
 ### 使用示例
@@ -700,6 +701,7 @@ rag:
 
 【Agent 检索】
 📚 找到 5 个相关文档:
+
 1. ai-docs/02-开发规范/AI-CODE-GENERATION.md (相关性：92%)
 2. ai-docs/07-AI 专项文档/AGENT-SKILLS.md (相关性：88%)
 3. ai-docs/00-索引与导航/QUICK-START.md (相关性：85%)
@@ -730,13 +732,13 @@ rag:
 
 ### 对比实验
 
-| 场景 | 无 RAG | 有 RAG | 提升 |
-|-----|-------|-------|------|
-| **代码生成准确率** | 60% | 85% | **+42%** |
-| **规范遵循度** | 45% | 78% | **+73%** |
-| **术语一致性** | 50% | 82% | **+64%** |
-| **回答专业度** | 3.5/5 | 4.6/5 | **+31%** |
-| **幻觉率** | 25% | 5% | **-80%** |
+| 场景               | 无 RAG | 有 RAG | 提升     |
+| ------------------ | ------ | ------ | -------- |
+| **代码生成准确率** | 60%    | 85%    | **+42%** |
+| **规范遵循度**     | 45%    | 78%    | **+73%** |
+| **术语一致性**     | 50%    | 82%    | **+64%** |
+| **回答专业度**     | 3.5/5  | 4.6/5  | **+31%** |
+| **幻觉率**         | 25%    | 5%     | **-80%** |
 
 ### 用户反馈
 
@@ -751,11 +753,13 @@ rag:
 ## 🔗 相关资源
 
 ### 内部文档
+
 - [AGENT-SKILLS.md](./AGENT-SKILLS.md) - AI Agent 技能清单
 - [CONTEXT-MANAGEMENT.md](./CONTEXT-MANAGEMENT.md) - 上下文管理技巧
 - [LINGMA-CONFIGURATION.md](./LINGMA-CONFIGURATION.md) - 通义灵码配置
 
 ### 外部资源
+
 - [LangChain 官方文档](https://python.langchain.com/)
 - [ChromaDB](https://www.trychroma.com/)
 - [RAG 最佳实践](https://arxiv.org/abs/2312.10997)
@@ -765,6 +769,6 @@ rag:
 
 ## 📝 更新日志
 
-| 日期 | 版本 | 更新内容 |
-|-----|------|---------|
+| 日期       | 版本   | 更新内容                            |
+| ---------- | ------ | ----------------------------------- |
 | 2026-03-19 | v1.0.0 | 初始版本，完整的 RAG 知识库构建指南 |

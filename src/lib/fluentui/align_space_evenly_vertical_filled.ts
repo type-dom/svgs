@@ -1,31 +1,31 @@
-import { SvgProps, SvgPath, TypeSvgSvg, addAttrObj } from '@type-dom/framework';
+import { SvgProps, SvgPath, TypeSvgSvg, addAttrObj } from "@type-dom/framework";
 export class FlAlignSpaceEvenlyVerticalFilledSvg extends TypeSvgSvg {
-  className: 'FlAlignSpaceEvenlyVerticalFilledSvg';
+  className: "FlAlignSpaceEvenlyVerticalFilledSvg";
   override childNodes: SvgPath[];
   constructor(params: SvgProps = {}) {
     super(params);
-    this.className = 'FlAlignSpaceEvenlyVerticalFilledSvg';
-   addAttrObj(this, {
-      name: 'FlAlignSpaceEvenlyVerticalFilledSvg'
+    this.className = "FlAlignSpaceEvenlyVerticalFilledSvg";
+    addAttrObj(this, {
+      name: "FlAlignSpaceEvenlyVerticalFilledSvg",
     });
-   addAttrObj(this, {
-      viewBox: '0 0 20 20',
+    addAttrObj(this, {
+      viewBox: "0 0 20 20",
     });
     this.resetSize(24, 24);
     this.childNodes = [];
-    const path0 = new SvgPath({ attrObj: { fill: 'currentColor' }});
+    const path0 = new SvgPath({ attrObj: { fill: "currentColor" } });
     path0.setData(
-      'M6 1C4.89543 1 4 1.89543 4 3V4C4 5.10457 4.89543 6 6 6H14C15.1046 6 16 5.10457 16 4V3C16 1.89543 15.1046 1 14 1H6Z',
+      "M6 1C4.89543 1 4 1.89543 4 3V4C4 5.10457 4.89543 6 6 6H14C15.1046 6 16 5.10457 16 4V3C16 1.89543 15.1046 1 14 1H6Z",
     );
     this.addChild(path0);
-    const path1 = new SvgPath({ attrObj: { fill: 'currentColor' }});
+    const path1 = new SvgPath({ attrObj: { fill: "currentColor" } });
     path1.setData(
-      'M6 13C4.89543 13 4 13.8954 4 15V16C4 17.1046 4.89543 18 6 18H14C15.1046 18 16 17.1046 16 16V15C16 13.8954 15.1046 13 14 13H6Z',
+      "M6 13C4.89543 13 4 13.8954 4 15V16C4 17.1046 4.89543 18 6 18H14C15.1046 18 16 17.1046 16 16V15C16 13.8954 15.1046 13 14 13H6Z",
     );
     this.addChild(path1);
-    const path2 = new SvgPath({ attrObj: { fill: 'currentColor' }});
+    const path2 = new SvgPath({ attrObj: { fill: "currentColor" } });
     path2.setData(
-      'M6 7C4.89543 7 4 7.89543 4 9V10C4 11.1046 4.89543 12 6 12H14C15.1046 12 16 11.1046 16 10V9C16 7.89543 15.1046 7 14 7H6Z',
+      "M6 7C4.89543 7 4 7.89543 4 9V10C4 11.1046 4.89543 12 6 12H14C15.1046 12 16 11.1046 16 10V9C16 7.89543 15.1046 7 14 7H6Z",
     );
     this.addChild(path2);
   }

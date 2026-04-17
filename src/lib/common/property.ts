@@ -1,42 +1,36 @@
-import { SvgProps, SvgPath, TypeSvgSvg, addAttrObj } from '@type-dom/framework';
+import { SvgProps, SvgPath, TypeSvgSvg, addAttrObj } from "@type-dom/framework";
 export class TdPropertySvg extends TypeSvgSvg {
-  className: 'TdPropertySvg';
+  className: "TdPropertySvg";
   override childNodes: SvgPath[];
   constructor(params: SvgProps = {}) {
     super(params);
-    this.className = 'TdPropertySvg';
+    this.className = "TdPropertySvg";
     addAttrObj(this, {
-      name: 'TdPropertySvg'
+      name: "TdPropertySvg",
     });
     addAttrObj(this, {
-      viewBox: '0 0 1024 1024',
+      viewBox: "0 0 1024 1024",
     });
     this.resetSize(24, 24);
     this.childNodes = [];
-    const path0 = new SvgPath({ attrObj: { fill: 'currentColor' }});
+    const path0 = new SvgPath({ attrObj: { fill: "currentColor" } });
     path0.setData(
-      'M190.111 129.928h704.137v63.794H190.111zM830.236 193.722h64.012v673.881h-64.012z',
+      "M190.111 129.928h704.137v63.794H190.111zM830.236 193.722h64.012v673.881h-64.012z",
     );
     this.addChild(path0);
-    const path1 = new SvgPath({ attrObj: { fill: 'currentColor' }});
-    path1.setData(
-      'M127.241 130.548l0.035 767.649h768.149v32.579-96.498H191.289v-703.73',
-    );
+    const path1 = new SvgPath({ attrObj: { fill: "currentColor" } });
+    path1.setData("M127.241 130.548l0.035 767.649h768.149v32.579-96.498H191.289v-703.73");
     this.addChild(path1);
-    const path2 = new SvgPath({ attrObj: { fill: 'currentColor' }});
-    path2.setData(
-      'M190.111 193.722h193.963v126.502H190.111z',
-    );
+    const path2 = new SvgPath({ attrObj: { fill: "currentColor" } });
+    path2.setData("M190.111 193.722h193.963v126.502H190.111z");
     this.addChild(path2);
-    const path3 = new SvgPath({ attrObj: { fill: 'currentColor' }});
+    const path3 = new SvgPath({ attrObj: { fill: "currentColor" } });
     path3.setData(
-      'M190.111 320.223h649.521v63.567H190.111zM320.062 512.127v191.811l192.037-0.055V512.099l-192.037 0.028z m129.369 127.838h-65.077v-63.919h65.077v63.919z',
+      "M190.111 320.223h649.521v63.567H190.111zM320.062 512.127v191.811l192.037-0.055V512.099l-192.037 0.028z m129.369 127.838h-65.077v-63.919h65.077v63.919z",
     );
     this.addChild(path3);
-    const path4 = new SvgPath({ attrObj: { fill: 'currentColor' }});
-    path4.setData(
-      'M256.05 576.046h70.978v63.919H256.05zM512 576.046h256.149v63.919H512z',
-    );
+    const path4 = new SvgPath({ attrObj: { fill: "currentColor" } });
+    path4.setData("M256.05 576.046h70.978v63.919H256.05zM512 576.046h256.149v63.919H512z");
     this.addChild(path4);
   }
 }

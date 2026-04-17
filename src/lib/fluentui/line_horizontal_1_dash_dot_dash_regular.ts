@@ -1,21 +1,21 @@
-import { SvgProps, SvgPath, TypeSvgSvg, addAttrObj } from '@type-dom/framework';
+import { SvgProps, SvgPath, TypeSvgSvg, addAttrObj } from "@type-dom/framework";
 export class FlLineHorizontal1DashDotDashRegularSvg extends TypeSvgSvg {
-  className: 'FlLineHorizontal1DashDotDashRegularSvg';
+  className: "FlLineHorizontal1DashDotDashRegularSvg";
   override childNodes: SvgPath[];
   constructor(params: SvgProps = {}) {
     super(params);
-    this.className = 'FlLineHorizontal1DashDotDashRegularSvg';
-   addAttrObj(this, {
-      name: 'FlLineHorizontal1DashDotDashRegularSvg'
+    this.className = "FlLineHorizontal1DashDotDashRegularSvg";
+    addAttrObj(this, {
+      name: "FlLineHorizontal1DashDotDashRegularSvg",
     });
-   addAttrObj(this, {
-      viewBox: '0 0 20 20',
+    addAttrObj(this, {
+      viewBox: "0 0 20 20",
     });
     this.resetSize(24, 24);
     this.childNodes = [];
-    const path0 = new SvgPath({ attrObj: { fill: 'currentColor' }});
+    const path0 = new SvgPath({ attrObj: { fill: "currentColor" } });
     path0.setData(
-      'M10 10.75C10.6904 10.75 11.25 10.1904 11.25 9.5C11.25 8.80964 10.6904 8.25 10 8.25C9.30964 8.25 8.75 8.80964 8.75 9.5C8.75 10.1904 9.30964 10.75 10 10.75ZM2 9.5C2 9.22386 2.22386 9 2.5 9H6.5C6.77614 9 7 9.22386 7 9.5C7 9.77614 6.77614 10 6.5 10H2.5C2.22386 10 2 9.77614 2 9.5ZM13 9.5C13 9.22386 13.2239 9 13.5 9H17.5C17.7761 9 18 9.22386 18 9.5C18 9.77614 17.7761 10 17.5 10H13.5C13.2239 10 13 9.77614 13 9.5Z',
+      "M10 10.75C10.6904 10.75 11.25 10.1904 11.25 9.5C11.25 8.80964 10.6904 8.25 10 8.25C9.30964 8.25 8.75 8.80964 8.75 9.5C8.75 10.1904 9.30964 10.75 10 10.75ZM2 9.5C2 9.22386 2.22386 9 2.5 9H6.5C6.77614 9 7 9.22386 7 9.5C7 9.77614 6.77614 10 6.5 10H2.5C2.22386 10 2 9.77614 2 9.5ZM13 9.5C13 9.22386 13.2239 9 13.5 9H17.5C17.7761 9 18 9.22386 18 9.5C18 9.77614 17.7761 10 17.5 10H13.5C13.2239 10 13 9.77614 13 9.5Z",
     );
     this.addChild(path0);
   }

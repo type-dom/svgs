@@ -1,21 +1,21 @@
-import { SvgProps, SvgPath, TypeSvgSvg, addAttrObj } from '@type-dom/framework';
+import { SvgProps, SvgPath, TypeSvgSvg, addAttrObj } from "@type-dom/framework";
 export class FlArrowWrapUpToDownRegularSvg extends TypeSvgSvg {
-  className: 'FlArrowWrapUpToDownRegularSvg';
+  className: "FlArrowWrapUpToDownRegularSvg";
   override childNodes: SvgPath[];
   constructor(params: SvgProps = {}) {
     super(params);
-    this.className = 'FlArrowWrapUpToDownRegularSvg';
-   addAttrObj(this, {
-      name: 'FlArrowWrapUpToDownRegularSvg'
+    this.className = "FlArrowWrapUpToDownRegularSvg";
+    addAttrObj(this, {
+      name: "FlArrowWrapUpToDownRegularSvg",
     });
-   addAttrObj(this, {
-      viewBox: '0 0 20 20',
+    addAttrObj(this, {
+      viewBox: "0 0 20 20",
     });
     this.resetSize(24, 24);
     this.childNodes = [];
-    const path0 = new SvgPath({ attrObj: { fill: 'currentColor' }});
+    const path0 = new SvgPath({ attrObj: { fill: "currentColor" } });
     path0.setData(
-      'M4 14C4 15.6569 5.34315 17 7 17C8.65685 17 10 15.6569 10 14L10 6C10 4.89543 10.8954 4 12 4C13.1046 4 14 4.89543 14 6L14 16.2929L13.3536 15.6464C13.1583 15.4512 12.8417 15.4512 12.6464 15.6464C12.4512 15.8417 12.4512 16.1583 12.6464 16.3536L14.1464 17.8536C14.3417 18.0488 14.6583 18.0488 14.8536 17.8536L16.3536 16.3536C16.5488 16.1583 16.5488 15.8417 16.3536 15.6464C16.1583 15.4512 15.8417 15.4512 15.6464 15.6464L15 16.2929L15 6C15 4.34315 13.6569 3 12 3C10.3431 3 9 4.34315 9 6L9 14C9 15.1046 8.10457 16 7 16C5.89543 16 5 15.1046 5 14L5 3.5C5 3.22386 4.77614 3 4.5 3C4.22386 3 4 3.22386 4 3.5L4 14Z',
+      "M4 14C4 15.6569 5.34315 17 7 17C8.65685 17 10 15.6569 10 14L10 6C10 4.89543 10.8954 4 12 4C13.1046 4 14 4.89543 14 6L14 16.2929L13.3536 15.6464C13.1583 15.4512 12.8417 15.4512 12.6464 15.6464C12.4512 15.8417 12.4512 16.1583 12.6464 16.3536L14.1464 17.8536C14.3417 18.0488 14.6583 18.0488 14.8536 17.8536L16.3536 16.3536C16.5488 16.1583 16.5488 15.8417 16.3536 15.6464C16.1583 15.4512 15.8417 15.4512 15.6464 15.6464L15 16.2929L15 6C15 4.34315 13.6569 3 12 3C10.3431 3 9 4.34315 9 6L9 14C9 15.1046 8.10457 16 7 16C5.89543 16 5 15.1046 5 14L5 3.5C5 3.22386 4.77614 3 4.5 3C4.22386 3 4 3.22386 4 3.5L4 14Z",
     );
     this.addChild(path0);
   }

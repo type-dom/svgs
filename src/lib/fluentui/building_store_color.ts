@@ -1,46 +1,44 @@
-import { SvgProps, SvgPath, TypeSvgSvg, addAttrObj } from '@type-dom/framework';
+import { SvgProps, SvgPath, TypeSvgSvg, addAttrObj } from "@type-dom/framework";
 export class FlBuildingStoreColorSvg extends TypeSvgSvg {
-  className: 'FlBuildingStoreColorSvg';
+  className: "FlBuildingStoreColorSvg";
   override childNodes: SvgPath[];
   constructor(params: SvgProps = {}) {
     super(params);
-    this.className = 'FlBuildingStoreColorSvg';
-   addAttrObj(this, {
-      name: 'FlBuildingStoreColorSvg'
+    this.className = "FlBuildingStoreColorSvg";
+    addAttrObj(this, {
+      name: "FlBuildingStoreColorSvg",
     });
-   addAttrObj(this, {
-      viewBox: '0 0 20 20',
+    addAttrObj(this, {
+      viewBox: "0 0 20 20",
     });
     this.resetSize(24, 24);
     this.childNodes = [];
-    const path0 = new SvgPath({ attrObj: { fill: 'currentColor' }});
-    path0.setData(
-      'M3 7H17V17.5C17 17.7761 16.7761 18 16.5 18H3.5C3.22386 18 3 17.7761 3 17.5V7Z',
-    );
+    const path0 = new SvgPath({ attrObj: { fill: "currentColor" } });
+    path0.setData("M3 7H17V17.5C17 17.7761 16.7761 18 16.5 18H3.5C3.22386 18 3 17.7761 3 17.5V7Z");
     this.addChild(path0);
-    const path1 = new SvgPath({ attrObj: { fill: 'currentColor' }});
+    const path1 = new SvgPath({ attrObj: { fill: "currentColor" } });
     path1.setData(
-      'M5 11.5C5 11.2239 5.22386 11 5.5 11H9.5C9.77614 11 10 11.2239 10 11.5V17.5C10 17.7761 9.77614 18 9.5 18H5.5C5.22386 18 5 17.7761 5 17.5V11.5Z',
+      "M5 11.5C5 11.2239 5.22386 11 5.5 11H9.5C9.77614 11 10 11.2239 10 11.5V17.5C10 17.7761 9.77614 18 9.5 18H5.5C5.22386 18 5 17.7761 5 17.5V11.5Z",
     );
     this.addChild(path1);
-    const path2 = new SvgPath({ attrObj: { fill: 'currentColor' }});
+    const path2 = new SvgPath({ attrObj: { fill: "currentColor" } });
     path2.setData(
-      'M11 11.5C11 11.2239 11.2239 11 11.5 11H14.5C14.7761 11 15 11.2239 15 11.5V14.5C15 14.7761 14.7761 15 14.5 15H11.5C11.2239 15 11 14.7761 11 14.5V11.5Z',
+      "M11 11.5C11 11.2239 11.2239 11 11.5 11H14.5C14.7761 11 15 11.2239 15 11.5V14.5C15 14.7761 14.7761 15 14.5 15H11.5C11.2239 15 11 14.7761 11 14.5V11.5Z",
     );
     this.addChild(path2);
-    const path3 = new SvgPath({ attrObj: { fill: 'currentColor' }});
+    const path3 = new SvgPath({ attrObj: { fill: "currentColor" } });
     path3.setData(
-      'M4.60008 2.17991L2.12804 5.14636C2.04531 5.24563 2 5.37077 2 5.5V7C2 8.65685 3.34315 10 5 10C6.65685 10 8 8.65685 8 7V5.5H7.5L8.5 2H4.98419C4.8358 2 4.69507 2.06591 4.60008 2.17991Z',
+      "M4.60008 2.17991L2.12804 5.14636C2.04531 5.24563 2 5.37077 2 5.5V7C2 8.65685 3.34315 10 5 10C6.65685 10 8 8.65685 8 7V5.5H7.5L8.5 2H4.98419C4.8358 2 4.69507 2.06591 4.60008 2.17991Z",
     );
     this.addChild(path3);
-    const path4 = new SvgPath({ attrObj: { fill: 'currentColor' }});
+    const path4 = new SvgPath({ attrObj: { fill: "currentColor" } });
     path4.setData(
-      'M11.5 2L12.5 5.5H12V7C12 8.65685 13.3431 10 15 10C16.6569 10 18 8.65685 18 7V5.5C18 5.37077 17.9547 5.24563 17.872 5.14636L15.3999 2.17991C15.3049 2.06591 15.1642 2 15.0158 2H11.5Z',
+      "M11.5 2L12.5 5.5H12V7C12 8.65685 13.3431 10 15 10C16.6569 10 18 8.65685 18 7V5.5C18 5.37077 17.9547 5.24563 17.872 5.14636L15.3999 2.17991C15.3049 2.06591 15.1642 2 15.0158 2H11.5Z",
     );
     this.addChild(path4);
-    const path5 = new SvgPath({ attrObj: { fill: 'currentColor' }});
+    const path5 = new SvgPath({ attrObj: { fill: "currentColor" } });
     path5.setData(
-      'M8.09091 2L7 5.5V7.25C7 8.76878 8.34315 10 10 10C11.6569 10 13 8.76878 13 7.25V5.5L11.9091 2H8.09091Z',
+      "M8.09091 2L7 5.5V7.25C7 8.76878 8.34315 10 10 10C11.6569 10 13 8.76878 13 7.25V5.5L11.9091 2H8.09091Z",
     );
     this.addChild(path5);
   }

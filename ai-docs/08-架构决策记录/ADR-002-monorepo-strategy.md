@@ -2,7 +2,7 @@
 
 **日期**: 2026-03-05  
 **状态**: 已接受  
-**分类**: 架构设计  
+**分类**: 架构设计
 
 ---
 
@@ -49,12 +49,14 @@ src/
 ```
 
 **优势**:
+
 - ✅ 结构清晰，一目了然
 - ✅ 每个文件独立，便于 tree-shaking
 - ✅ 支持多级按需导入
 - ✅ 易于批量操作和自动化
 
 **劣势**:
+
 - ❌ 文件数量较多
 - ❌ 需要维护多个索引文件
 
@@ -74,10 +76,12 @@ src/
 ```
 
 **优势**:
+
 - ✅ 按用途分类，便于查找
 - ✅ 符合业务场景
 
 **劣势**:
+
 - ❌ 分类标准主观，容易混淆
 - ❌ 跨类别复用困难
 - ❌ 不利于批量处理
@@ -91,10 +95,12 @@ src/
 ```
 
 **优势**:
+
 - ✅ 文件管理简单
 - ✅ 导入方便
 
 **劣势**:
+
 - ❌ 文件巨大，难以维护
 - ❌ 无法 tree-shaking
 - ❌ 编译速度慢
@@ -184,14 +190,14 @@ import { TdAddSvg } from '@type-dom/svgs';
 
 ```typescript
 // src/lib/common-index.ts
-export { Td404Svg } from './common/404';
-export { TdAddSvg } from './common/add';
-export { TdCloseSvg } from './common/close';
-export { TdUserSvg } from './common/user';
+export { Td404Svg } from "./common/404";
+export { TdAddSvg } from "./common/add";
+export { TdCloseSvg } from "./common/close";
+export { TdUserSvg } from "./common/user";
 // ... 导出所有 Common 分类组件
 
 // 同时导出类型
-export type { SvgComponentClass } from './common/types';
+export type { SvgComponentClass } from "./common/types";
 ```
 
 ### 主入口文件
@@ -199,16 +205,13 @@ export type { SvgComponentClass } from './common/types';
 ```typescript
 // src/index.ts
 // 导出所有分类
-export * from './lib/common-index';
-export * from './lib/element-plus-index';
-export * from './lib/fluentui-index';
-export * from './lib/other-index';
+export * from "./lib/common-index";
+export * from "./lib/element-plus-index";
+export * from "./lib/fluentui-index";
+export * from "./lib/other-index";
 
 // 导出工具函数
-export { 
-  addAttrObj, 
-  addStyleObj 
-} from '@type-dom/framework';
+export { addAttrObj, addStyleObj } from "@type-dom/framework";
 ```
 
 ### package.json 配置
@@ -229,6 +232,7 @@ export {
 ```
 
 **关键点**:
+
 - `"sideEffects": false` - 启用 tree-shaking
 - 细粒度的 exports 映射 - 支持按需导入
 - 类型定义同步导出 - 完整的类型支持
@@ -241,8 +245,8 @@ export {
 
 ```typescript
 // 文件名：kebab-case
-src/lib/common/add.ts
-src/lib/common/arrow-down.ts
+src / lib / common / add.ts;
+src / lib / common / arrow - down.ts;
 
 // 类名：PascalCase + 前缀
 export class TdAddSvg extends TypeSvgSvg {}
@@ -261,25 +265,25 @@ export class FlAccessTimeSvg extends TypeSvgSvg {}
 // scripts/generate-index.js
 // 自动生成索引文件
 
-const fs = require('fs');
-const path = require('path');
+const fs = require("fs");
+const path = require("path");
 
 function generateIndex(dir, outputFile) {
   const files = fs.readdirSync(dir);
   const exports = [];
-  
-  files.forEach(file => {
-    if (file.endsWith('.ts') && file !== 'index.ts') {
-      const className = path.basename(file, '.ts');
+
+  files.forEach((file) => {
+    if (file.endsWith(".ts") && file !== "index.ts") {
+      const className = path.basename(file, ".ts");
       const pascalName = toPascalCase(className);
       exports.push(`export { ${pascalName} } from './${className}';`);
     }
   });
-  
-  fs.writeFileSync(outputFile, exports.join('\n'));
+
+  fs.writeFileSync(outputFile, exports.join("\n"));
 }
 
-generateIndex('./src/lib/common', './src/lib/common-index.ts');
+generateIndex("./src/lib/common", "./src/lib/common-index.ts");
 ```
 
 ---
@@ -289,10 +293,10 @@ generateIndex('./src/lib/common', './src/lib/common-index.ts');
 ### 打包体积对比
 
 | 导入方式 | 打包体积 | Tree-shaking | 推荐使用场景 |
-|---------|---------|-------------|------------|
-| 单个组件 | ~2KB | ✅ 完全 | 生产环境 |
-| 分类索引 | ~50KB | ⚠️ 部分 | 开发阶段 |
-| 主入口 | ~500KB | ❌ 无 | 快速原型 |
+| -------- | -------- | ------------ | ------------ |
+| 单个组件 | ~2KB     | ✅ 完全      | 生产环境     |
+| 分类索引 | ~50KB    | ⚠️ 部分      | 开发阶段     |
+| 主入口   | ~500KB   | ❌ 无        | 快速原型     |
 
 ### 开发体验
 
@@ -315,16 +319,19 @@ generateIndex('./src/lib/common', './src/lib/common-index.ts');
 ### 积极影响
 
 ✅ **性能优化**
+
 - Tree-shaking 减少 80-90% 打包体积
 - 按需加载提升首屏速度
 - 独立的组件文件便于缓存
 
 ✅ **可维护性提升**
+
 - 清晰的目录结构
 - 单一职责原则
 - 易于定位和修改
 
 ✅ **开发效率**
+
 - 自动化脚本生成索引
 - AI 辅助批量操作
 - 类型安全保障
@@ -332,19 +339,23 @@ generateIndex('./src/lib/common', './src/lib/common-index.ts');
 ### 潜在风险
 
 ⚠️ **文件数量增长**
+
 - 当前：~500 个组件文件
 - 未来：可能达到 1000+
 
 **缓解措施**:
+
 - 自动化文件管理工具
 - 批量重命名脚本
 - AI 辅助维护
 
 ⚠️ **索引文件维护**
+
 - 手动维护容易出错
 - 容易遗漏或重复
 
 **缓解措施**:
+
 - 自动生成索引脚本
 - CI/CD自动检查
 - Git hooks 验证

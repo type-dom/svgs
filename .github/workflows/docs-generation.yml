@@ -4,61 +4,61 @@ on:
   push:
     branches: [main, develop]
     paths:
-      - 'src/**/*.ts'
-      - 'ai-docs/**/*.md'
-      - 'typedoc.json'
-      - 'package.json'
+      - "src/**/*.ts"
+      - "ai-docs/**/*.md"
+      - "typedoc.json"
+      - "package.json"
   pull_request:
     branches: [main, develop]
     paths:
-      - 'src/**/*.ts'
-      - 'ai-docs/**/*.md'
+      - "src/**/*.ts"
+      - "ai-docs/**/*.md"
 
 jobs:
   generate-docs:
     runs-on: ubuntu-latest
-    
+
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
-      
+
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '20'
-          cache: 'npm'
-      
+          node-version: "20"
+          cache: "npm"
+
       - name: Install dependencies
         run: npm ci
-      
+
       - name: Build project
         run: npm run build
-      
+
       - name: Generate API documentation
         run: npm run docs:api
-      
+
       - name: Sync documentation version
         run: npm run docs:sync
-      
+
       - name: Generate statistics report
         run: npm run docs:stats
-      
+
       - name: Upload API documentation
         uses: actions/upload-artifact@v4
         with:
           name: api-documentation
           path: GENERATED/api-extractor/
           retention-days: 30
-      
+
       - name: Upload statistics report
         uses: actions/upload-artifact@v4
         with:
           name: statistics-report
           path: GENERATED/reports/docs-statistics.html
           retention-days: 30
-      
+
       - name: Deploy to GitHub Pages (if main branch)
         if: github.ref == 'refs/heads/main'
         uses: peaceiris/actions-gh-pages@v3

@@ -1,21 +1,21 @@
-import { SvgProps, SvgPath, TypeSvgSvg, addAttrObj } from '@type-dom/framework';
+import { SvgProps, SvgPath, TypeSvgSvg, addAttrObj } from "@type-dom/framework";
 export class TdAlignJustifiedSvg extends TypeSvgSvg {
-  className: 'TdAlignJustifiedSvg';
+  className: "TdAlignJustifiedSvg";
   override childNodes: SvgPath[];
   constructor(params: SvgProps = {}) {
     super(params);
-    this.className = 'TdAlignJustifiedSvg';
+    this.className = "TdAlignJustifiedSvg";
     addAttrObj(this, {
-      name: 'TdAlignJustifiedSvg'
+      name: "TdAlignJustifiedSvg",
     });
     addAttrObj(this, {
-      viewBox: '0 0 1024 1024',
+      viewBox: "0 0 1024 1024",
     });
     this.resetSize(24, 24);
     this.childNodes = [];
-    const path0 = new SvgPath({ attrObj: { fill: 'currentColor' }});
+    const path0 = new SvgPath({ attrObj: { fill: "currentColor" } });
     path0.setData(
-      'M864 160h-704a32 32 0 0 1 0-64h704a32 32 0 0 1 0 64zM864 672h-704a32 32 0 0 1 0-64h704a32 32 0 0 1 0 64zM864 928h-704a32 32 0 0 1 0-64h704a32 32 0 0 1 0 64zM864 416h-704a32 32 0 0 1 0-64h704a32 32 0 0 1 0 64z',
+      "M864 160h-704a32 32 0 0 1 0-64h704a32 32 0 0 1 0 64zM864 672h-704a32 32 0 0 1 0-64h704a32 32 0 0 1 0 64zM864 928h-704a32 32 0 0 1 0-64h704a32 32 0 0 1 0 64zM864 416h-704a32 32 0 0 1 0-64h704a32 32 0 0 1 0 64z",
     );
     this.addChild(path0);
   }

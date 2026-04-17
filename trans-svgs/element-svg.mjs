@@ -1,10 +1,10 @@
-import * as fs from 'fs';
-import { TypeNodeParser } from '@type-dom/parser';
-import { toHump } from './utils.mjs';
+import * as fs from "fs";
+import { TypeNodeParser } from "@type-dom/parser";
+import { toHump } from "./utils.mjs";
 
-const SVG_PATH = './trans-svgs/element-plus/svg-files';
-const INDEX_PATH = './src/lib';
-const CLASS_PATH = './src/lib/element-plus';
+const SVG_PATH = "./trans-svgs/element-plus/svg-files";
+const INDEX_PATH = "./src/lib";
+const CLASS_PATH = "./src/lib/element-plus";
 
 async function generateSvgClasses() {
   fs.readdir(SVG_PATH, (err, files) => {
@@ -15,11 +15,11 @@ async function generateSvgClasses() {
     // 将 svg 转换成 ts 文件
     files.forEach((file) => {
       // 获得文件扩展名
-      const fileExtension = file.split('.').pop();
-      if (fileExtension !== 'svg') {
+      const fileExtension = file.split(".").pop();
+      if (fileExtension !== "svg") {
         return;
       }
-      fs.readFile(SVG_PATH + '/' + file, (err, data) => {
+      fs.readFile(SVG_PATH + "/" + file, (err, data) => {
         if (err) {
           return console.error(err);
         }
@@ -34,12 +34,12 @@ async function generateSvgClasses() {
         const paths = svgStr.match(pathRegex);
         // 输出匹配到的结果
         // console.log('paths is ', paths);
-        const fileName = file.replace('.svg', '');
+        const fileName = file.replace(".svg", "");
         const className =
-          'El' +
+          "El" +
           toHump(fileName) // 获取类名
-            .replaceAll('+', 'Plus') +
-          'Svg';
+            .replaceAll("+", "Plus") +
+          "Svg";
         // .replaceAll('-', 'Minus');
         let template = `import { SvgProps, SvgPath, TypeSvgSvg, addAttrObj } from '@type-dom/framework';
 export class ${className} extends TypeSvgSvg {
@@ -52,7 +52,7 @@ export class ${className} extends TypeSvgSvg {
       name: '${className}'
     });`;
         svgDom.attributes.forEach((item) => {
-          if (item.name === 'viewBox') {
+          if (item.name === "viewBox") {
             template += `
    addAttrObj(this, {
       viewBox: '${item.value}',
@@ -66,7 +66,7 @@ export class ${className} extends TypeSvgSvg {
           paths.forEach((path, index) => {
             // const dom = parser.parseFromString(path);
             // console.log('path is ', path);
-            const data = path.replace('d=', '').replaceAll('"', '\'');
+            const data = path.replace("d=", "").replaceAll('"', "'");
             // console.log('data is ', data);
             template += `
     const path${index} = new SvgPath({ attrObj: { fill: 'currentColor' }});
@@ -82,14 +82,14 @@ export class ${className} extends TypeSvgSvg {
 `;
         fs.writeFile(`${CLASS_PATH}/${fileName}.ts`, template, (err) => {
           if (err) {
-            return console.error(fileName + '转换失败', err);
+            return console.error(fileName + "转换失败", err);
           }
-          console.log(fileName + '转换成功');
+          console.log(fileName + "转换成功");
         });
       });
     });
   });
-  return '生成svg文件成功！';
+  return "生成svg文件成功！";
 }
 
 // 导出目录
@@ -99,19 +99,18 @@ async function generateSvgIndexes() {
       return console.error(err);
     }
     // console.log('files is ', files);
-    let template = '';
+    let template = "";
     files.forEach((file) => {
-      const fileName = file.replace('.svg', ''); // 获取文件名
-      const className =
-        'El' + toHump(fileName).replaceAll('+', 'Plus') + 'Svg';
+      const fileName = file.replace(".svg", ""); // 获取文件名
+      const className = "El" + toHump(fileName).replaceAll("+", "Plus") + "Svg";
       template += `export { ${className} } from './element-plus/${fileName}';
 `;
     });
-    fs.writeFile(INDEX_PATH + '/element-plus-index.ts', template, (err) => {
+    fs.writeFile(INDEX_PATH + "/element-plus-index.ts", template, (err) => {
       if (err) {
         return console.error(err);
       }
-      console.log('index.ts 注册代码重新生成！');
+      console.log("index.ts 注册代码重新生成！");
     });
   });
 }
@@ -126,9 +125,8 @@ function generateSvgList() {
     let template = `import { TypeDiv, CSSProperties } from '@type-dom/framework';
 import {`;
     files.forEach((file) => {
-      const fileName = file.replace('.svg', ''); // 获取文件名
-      const className =
-        'El' + toHump(fileName).replaceAll('+', 'Plus') + 'Svg';
+      const fileName = file.replace(".svg", ""); // 获取文件名
+      const className = "El" + toHump(fileName).replaceAll("+", "Plus") + "Svg";
       template += `
   ${className},`;
     });
@@ -147,9 +145,8 @@ export class ElementPlusSvgList extends TypeDiv {
     };
     this.addChildren(`;
     files.forEach((file) => {
-      const fileName = file.replace('.svg', ''); // 获取文件名
-      const className =
-        'El' + toHump(fileName).replaceAll('+', 'Plus') + 'Svg';
+      const fileName = file.replace(".svg", ""); // 获取文件名
+      const className = "El" + toHump(fileName).replaceAll("+", "Plus") + "Svg";
       template += `
       new ${className}({
         attrObj: {
@@ -163,11 +160,11 @@ export class ElementPlusSvgList extends TypeDiv {
     );
   }
 }`;
-    fs.writeFile('./src/element-plus-svg-list.ts', template, (err) => {
+    fs.writeFile("./src/element-plus-svg-list.ts", template, (err) => {
       if (err) {
         return console.error(err);
       }
-      console.log('element-plus-svg-list.ts 注册代码重新生成！');
+      console.log("element-plus-svg-list.ts 注册代码重新生成！");
     });
   });
 }

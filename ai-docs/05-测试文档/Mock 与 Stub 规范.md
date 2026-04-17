@@ -13,11 +13,11 @@
 
 ### 定义对比
 
-| 类型 | 用途 | 特点 | 使用场景 |
-|-----|------|------|---------|
-| **Mock** | 模拟外部依赖 | 验证交互和行为 | API 调用、数据库操作 |
-| **Stub** | 替换真实实现 | 提供可控的返回值 | 复杂逻辑、耗时操作 |
-| **Fake** | 简化实现 | 功能完整但简化 | 内存数据库、测试服务器 |
+| 类型     | 用途         | 特点             | 使用场景               |
+| -------- | ------------ | ---------------- | ---------------------- |
+| **Mock** | 模拟外部依赖 | 验证交互和行为   | API 调用、数据库操作   |
+| **Stub** | 替换真实实现 | 提供可控的返回值 | 复杂逻辑、耗时操作     |
+| **Fake** | 简化实现     | 功能完整但简化   | 内存数据库、测试服务器 |
 
 ### TypeDOM SVG 中的使用
 
@@ -26,7 +26,7 @@
 const mockProps = {
   width: 24,
   height: 24,
-  fill: 'currentColor'
+  fill: "currentColor",
 };
 const svg = new TdIconSvg(mockProps);
 
@@ -35,9 +35,9 @@ const stubMethod = vi.fn().mockReturnValue(42);
 
 // Fake: 简化的组件实例
 const fakeComponent = {
-  className: 'FakeComponent',
+  className: "FakeComponent",
   childNodes: [],
-  addChild: vi.fn()
+  addChild: vi.fn(),
 };
 ```
 
@@ -48,45 +48,41 @@ const fakeComponent = {
 ### 基础 Mock
 
 ```typescript
-import { describe, it, expect, vi, beforeEach } from 'vitest';
+import { describe, it, expect, vi, beforeEach } from "vitest";
 
-describe('Basic Mocking', () => {
-  
+describe("Basic Mocking", () => {
   // 1. 函数 Mock
-  it('mocks a function', () => {
+  it("mocks a function", () => {
     const mockFn = vi.fn();
-    mockFn('hello');
-    
-    expect(mockFn).toHaveBeenCalledWith('hello');
+    mockFn("hello");
+
+    expect(mockFn).toHaveBeenCalledWith("hello");
     expect(mockFn).toHaveBeenCalledTimes(1);
   });
 
   // 2. 带返回值的 Mock
-  it('mocks with return value', () => {
+  it("mocks with return value", () => {
     const mockFn = vi.fn().mockReturnValue(42);
     expect(mockFn()).toBe(42);
     expect(mockFn()).toBe(42); // Always returns 42
   });
 
   // 3. 链式调用 Mock
-  it('mocks chained calls', () => {
-    const mockFn = vi.fn()
-      .mockReturnValueOnce(1)
-      .mockReturnValueOnce(2)
-      .mockReturnValue(3);
-    
+  it("mocks chained calls", () => {
+    const mockFn = vi.fn().mockReturnValueOnce(1).mockReturnValueOnce(2).mockReturnValue(3);
+
     expect(mockFn()).toBe(1);
     expect(mockFn()).toBe(2);
     expect(mockFn()).toBe(3);
   });
 
   // 4. 抛出错误的 Mock
-  it('mocks error throwing', () => {
+  it("mocks error throwing", () => {
     const mockFn = vi.fn().mockImplementation(() => {
-      throw new Error('Test error');
+      throw new Error("Test error");
     });
-    
-    expect(() => mockFn()).toThrow('Test error');
+
+    expect(() => mockFn()).toThrow("Test error");
   });
 });
 ```
@@ -94,10 +90,10 @@ describe('Basic Mocking', () => {
 ### Module Mocking
 
 ```typescript
-import { vi, beforeEach } from 'vitest';
+import { vi, beforeEach } from "vitest";
 
 // Mock entire module
-vi.mock('@type-dom/framework', () => ({
+vi.mock("@type-dom/framework", () => ({
   TypeSvgSvg: class MockTypeSvgSvg {
     constructor() {}
     addChild = vi.fn();
@@ -106,13 +102,13 @@ vi.mock('@type-dom/framework', () => ({
   SvgPath: class MockSvgPath {
     constructor() {}
     setData = vi.fn();
-  }
+  },
 }));
 
 // Hoist mock declaration
 vi.hoisted(() => {
   return {
-    mockFunction: vi.fn()
+    mockFunction: vi.fn(),
   };
 });
 ```
@@ -124,31 +120,30 @@ vi.hoisted(() => {
 ### 1. Props Mock
 
 ```typescript
-import { TdUserSvg } from '../src/lib/common/user';
+import { TdUserSvg } from "../src/lib/common/user";
 
-describe('Props Mocking', () => {
-  
+describe("Props Mocking", () => {
   // 标准 Props Mock
   const createMockProps = (overrides = {}) => ({
     width: 24,
     height: 24,
-    fill: 'currentColor',
+    fill: "currentColor",
     opacity: 1,
-    ...overrides
+    ...overrides,
   });
 
-  it('uses mock props', () => {
+  it("uses mock props", () => {
     const mockProps = createMockProps({ width: 32 });
     const svg = new TdUserSvg(mockProps);
-    
+
     expect(svg.props.width).toBe(32);
     expect(svg.props.height).toBe(24); // Default
   });
 
-  it('uses minimal mock props', () => {
+  it("uses minimal mock props", () => {
     const minimalProps = createMockProps({ width: 48 });
     const svg = new TdUserSvg(minimalProps);
-    
+
     expect(svg.props.width).toBe(48);
   });
 });
@@ -157,26 +152,25 @@ describe('Props Mocking', () => {
 ### 2. Path Data Mock
 
 ```typescript
-describe('Path Data Mocking', () => {
-  
-  const MOCK_PATH_DATA = 'M10 10 L90 10 L90 90 L10 90 Z';
-  
+describe("Path Data Mocking", () => {
+  const MOCK_PATH_DATA = "M10 10 L90 10 L90 90 L10 90 Z";
+
   const createMockPath = (data = MOCK_PATH_DATA) => ({
     setData: vi.fn(),
     getData: vi.fn().mockReturnValue(data),
     attrObj: {
-      fill: 'currentColor',
-      stroke: 'none'
-    }
+      fill: "currentColor",
+      stroke: "none",
+    },
   });
 
-  it('uses mock path data', () => {
+  it("uses mock path data", () => {
     const mockPath = createMockPath();
     expect(mockPath.getData()).toBe(MOCK_PATH_DATA);
   });
 
-  it('customizes mock path', () => {
-    const customData = 'M0 0 L100 100';
+  it("customizes mock path", () => {
+    const customData = "M0 0 L100 100";
     const mockPath = createMockPath(customData);
     expect(mockPath.getData()).toBe(customData);
   });
@@ -186,35 +180,36 @@ describe('Path Data Mocking', () => {
 ### 3. Signal Mock
 
 ```typescript
-import { signal, computed } from '@type-dom/signals';
+import { signal, computed } from "@type-dom/signals";
 
-describe('Signal Mocking', () => {
-  
+describe("Signal Mocking", () => {
   // Mock reactive signal
   const createMockSignal = <T>(initialValue: T) => {
     let value = initialValue;
     return {
       get: vi.fn(() => value),
-      set: vi.fn((newValue: T) => { value = newValue; }),
-      peek: vi.fn(() => value)
+      set: vi.fn((newValue: T) => {
+        value = newValue;
+      }),
+      peek: vi.fn(() => value),
     };
   };
 
-  it('mocks signal behavior', () => {
+  it("mocks signal behavior", () => {
     const mockSignal = createMockSignal(24);
-    
+
     expect(mockSignal.get()).toBe(24);
     mockSignal.set(48);
     expect(mockSignal.get()).toBe(48);
     expect(mockSignal.set).toHaveBeenCalledWith(48);
   });
 
-  it('mocks computed signal', () => {
+  it("mocks computed signal", () => {
     const widthSignal = createMockSignal(24);
     const doubleWidth = {
-      get: vi.fn(() => widthSignal.get() * 2)
+      get: vi.fn(() => widthSignal.get() * 2),
     };
-    
+
     expect(doubleWidth.get()).toBe(48);
   });
 });
@@ -227,39 +222,38 @@ describe('Signal Mocking', () => {
 ### 1. 方法 Stub
 
 ```typescript
-import { TdComplexSvg } from '../src/lib/common/complex';
+import { TdComplexSvg } from "../src/lib/common/complex";
 
-describe('Method Stubbing', () => {
-  
-  it('stubs complex method', () => {
+describe("Method Stubbing", () => {
+  it("stubs complex method", () => {
     const svg = new TdComplexSvg();
-    
+
     // Replace implementation
     svg.complexCalculation = vi.fn().mockReturnValue(100);
-    
+
     expect(svg.complexCalculation()).toBe(100);
     expect(svg.complexCalculation).toHaveBeenCalledTimes(1);
   });
 
-  it('stubs async method', async () => {
+  it("stubs async method", async () => {
     const svg = new TdComplexSvg();
-    
+
     svg.loadData = vi.fn().mockResolvedValue({
       success: true,
-      data: []
+      data: [],
     });
-    
+
     const result = await svg.loadData();
     expect(result.success).toBe(true);
   });
 
-  it('stubs method to throw', () => {
+  it("stubs method to throw", () => {
     const svg = new TdComplexSvg();
-    
+
     svg.riskyOperation = vi.fn().mockImplementation(() => {
-      throw new Error('Simulated failure');
+      throw new Error("Simulated failure");
     });
-    
+
     expect(() => svg.riskyOperation()).toThrow();
   });
 });
@@ -268,38 +262,37 @@ describe('Method Stubbing', () => {
 ### 2. 组件 Stub
 
 ```typescript
-describe('Component Stubbing', () => {
-  
+describe("Component Stubbing", () => {
   // Full component stub
   const createSvgStub = (overrides = {}) => ({
-    className: 'StubSvg',
+    className: "StubSvg",
     childNodes: [],
     props: {
       width: 24,
       height: 24,
-      fill: 'currentColor'
+      fill: "currentColor",
     },
     addChild: vi.fn(),
     removeChild: vi.fn(),
-    getAttribute: vi.fn().mockReturnValue(''),
+    getAttribute: vi.fn().mockReturnValue(""),
     setAttribute: vi.fn(),
     destroy: vi.fn(),
-    ...overrides
+    ...overrides,
   });
 
-  it('uses component stub', () => {
-    const stubSvg = createSvgStub({ className: 'CustomStub' });
-    
-    expect(stubSvg.className).toBe('CustomStub');
+  it("uses component stub", () => {
+    const stubSvg = createSvgStub({ className: "CustomStub" });
+
+    expect(stubSvg.className).toBe("CustomStub");
     expect(stubSvg.addChild).toBeDefined();
   });
 
-  it('interacts with stub', () => {
+  it("interacts with stub", () => {
     const stubSvg = createSvgStub();
     const childStub = createSvgStub();
-    
+
     stubSvg.addChild(childStub);
-    
+
     expect(stubSvg.addChild).toHaveBeenCalledWith(childStub);
     expect(stubSvg.childNodes.length).toBe(0); // Stub doesn't implement logic
   });
@@ -309,25 +302,24 @@ describe('Component Stubbing', () => {
 ### 3. DOM API Stub
 
 ```typescript
-describe('DOM API Stubbing', () => {
-  
+describe("DOM API Stubbing", () => {
   // Stub document methods
   const documentStub = {
     createElementNS: vi.fn().mockReturnValue({
       setAttribute: vi.fn(),
       getAttribute: vi.fn(),
-      appendChild: vi.fn()
+      appendChild: vi.fn(),
     }),
     createElement: vi.fn(),
-    querySelector: vi.fn()
+    querySelector: vi.fn(),
   };
 
-  it('uses DOM stub', () => {
-    const element = documentStub.createElementNS('http://www.w3.org/2000/svg', 'svg');
-    element.setAttribute('viewBox', '0 0 100 100');
-    
+  it("uses DOM stub", () => {
+    const element = documentStub.createElementNS("http://www.w3.org/2000/svg", "svg");
+    element.setAttribute("viewBox", "0 0 100 100");
+
     expect(documentStub.createElementNS).toHaveBeenCalled();
-    expect(element.setAttribute).toHaveBeenCalledWith('viewBox', '0 0 100 100');
+    expect(element.setAttribute).toHaveBeenCalledWith("viewBox", "0 0 100 100");
   });
 });
 ```
@@ -344,26 +336,26 @@ describe('DOM API Stubbing', () => {
 export class SvgFactory {
   static createSvg(overrides = {}) {
     return {
-      className: 'FactorySvg',
+      className: "FactorySvg",
       childNodes: [],
       props: {
         width: 24,
         height: 24,
-        fill: 'currentColor'
+        fill: "currentColor",
       },
       addChild: vi.fn(),
-      ...overrides
+      ...overrides,
     };
   }
 
-  static createPath(data = 'M0 0 L10 10') {
+  static createPath(data = "M0 0 L10 10") {
     return {
       setData: vi.fn(),
       getData: vi.fn().mockReturnValue(data),
       attrObj: {
-        fill: 'currentColor',
-        stroke: 'none'
-      }
+        fill: "currentColor",
+        stroke: "none",
+      },
     };
   }
 
@@ -371,26 +363,26 @@ export class SvgFactory {
     return {
       width: 24,
       height: 24,
-      fill: 'currentColor',
+      fill: "currentColor",
       opacity: 1,
-      transform: '',
-      ...overrides
+      transform: "",
+      ...overrides,
     };
   }
 }
 
 // Usage in tests
-import { SvgFactory } from '../factories/svg-factory';
+import { SvgFactory } from "../factories/svg-factory";
 
-describe('Using Factory', () => {
-  it('creates svg with factory', () => {
-    const svg = SvgFactory.createSvg({ className: 'CustomSvg' });
-    expect(svg.className).toBe('CustomSvg');
+describe("Using Factory", () => {
+  it("creates svg with factory", () => {
+    const svg = SvgFactory.createSvg({ className: "CustomSvg" });
+    expect(svg.className).toBe("CustomSvg");
   });
 
-  it('creates path with factory', () => {
-    const path = SvgFactory.createPath('M10 10 L20 20');
-    expect(path.getData()).toBe('M10 10 L20 20');
+  it("creates path with factory", () => {
+    const path = SvgFactory.createPath("M10 10 L20 20");
+    expect(path.getData()).toBe("M10 10 L20 20");
   });
 });
 ```
@@ -401,10 +393,10 @@ describe('Using Factory', () => {
 // tests/builders/svg-builder.ts
 
 export class SvgBuilder {
-  private className = 'BuiltSvg';
+  private className = "BuiltSvg";
   private width = 24;
   private height = 24;
-  private fill = 'currentColor';
+  private fill = "currentColor";
   private paths: any[] = [];
 
   withClassName(name: string): this {
@@ -435,28 +427,28 @@ export class SvgBuilder {
       props: {
         width: this.width,
         height: this.height,
-        fill: this.fill
+        fill: this.fill,
       },
       addChild: vi.fn(),
-      getAttribute: vi.fn()
+      getAttribute: vi.fn(),
     };
   }
 }
 
 // Usage
-import { SvgBuilder } from '../builders/svg-builder';
+import { SvgBuilder } from "../builders/svg-builder";
 
-describe('Using Builder', () => {
-  it('builds complex svg', () => {
+describe("Using Builder", () => {
+  it("builds complex svg", () => {
     const svg = new SvgBuilder()
-      .withClassName('ComplexSvg')
+      .withClassName("ComplexSvg")
       .withSize(48, 48)
-      .withFill('blue')
+      .withFill("blue")
       .build();
-    
-    expect(svg.className).toBe('ComplexSvg');
+
+    expect(svg.className).toBe("ComplexSvg");
     expect(svg.props.width).toBe(48);
-    expect(svg.props.fill).toBe('blue');
+    expect(svg.props.fill).toBe("blue");
   });
 });
 ```
@@ -468,21 +460,20 @@ describe('Using Builder', () => {
 ### 1. Animation Mock
 
 ```typescript
-describe('Animation Mocking', () => {
-  
+describe("Animation Mocking", () => {
   const createAnimationMock = () => ({
     play: vi.fn(),
     pause: vi.fn(),
     cancel: vi.fn(),
     finish: vi.fn(),
     currentTime: 0,
-    playbackRate: 1
+    playbackRate: 1,
   });
 
-  it('mocks animation', () => {
+  it("mocks animation", () => {
     const animation = createAnimationMock();
     animation.play();
-    
+
     expect(animation.play).toHaveBeenCalled();
   });
 });
@@ -491,25 +482,24 @@ describe('Animation Mocking', () => {
 ### 2. Event Mock
 
 ```typescript
-describe('Event Mocking', () => {
-  
+describe("Event Mocking", () => {
   const createClickEventMock = () => ({
-    type: 'click',
+    type: "click",
     target: null,
     currentTarget: null,
     preventDefault: vi.fn(),
     stopPropagation: vi.fn(),
     clientX: 0,
     clientY: 0,
-    button: 0
+    button: 0,
   });
 
-  it('mocks click event', () => {
+  it("mocks click event", () => {
     const event = createClickEventMock();
     event.clientX = 100;
     event.clientY = 200;
-    
-    expect(event.type).toBe('click');
+
+    expect(event.type).toBe("click");
     expect(event.clientX).toBe(100);
   });
 });
@@ -518,33 +508,32 @@ describe('Event Mocking', () => {
 ### 3. Timer Mock
 
 ```typescript
-describe('Timer Mocking', () => {
-  
-  it('mocks setTimeout', () => {
+describe("Timer Mocking", () => {
+  it("mocks setTimeout", () => {
     vi.useFakeTimers();
-    
+
     const callback = vi.fn();
     setTimeout(callback, 1000);
-    
+
     expect(callback).not.toHaveBeenCalled();
-    
+
     vi.advanceTimersByTime(1000);
     expect(callback).toHaveBeenCalled();
-    
+
     vi.useRealTimers();
   });
 
-  it('mocks requestAnimationFrame', () => {
+  it("mocks requestAnimationFrame", () => {
     vi.useFakeTimers();
-    
+
     const callback = vi.fn();
     requestAnimationFrame(callback);
-    
+
     expect(callback).not.toHaveBeenCalled();
-    
+
     vi.advanceTimersByTime(16); // ~60fps
     expect(callback).toHaveBeenCalled();
-    
+
     vi.useRealTimers();
   });
 });
@@ -558,14 +547,14 @@ describe('Timer Mocking', () => {
 
 ```typescript
 // 1. 明确 Mock 目的
-it('mocks external dependency', () => {
+it("mocks external dependency", () => {
   // Clear what we're mocking and why
   const mockApi = vi.fn().mockResolvedValue({ data: [] });
 });
 
 // 2. 保持 Mock 简单
 const simpleMock = {
-  method: vi.fn().mockReturnValue(42)
+  method: vi.fn().mockReturnValue(42),
 };
 
 // 3. 清理 Mock
@@ -574,14 +563,16 @@ afterEach(() => {
 });
 
 // 4. 使用工厂函数
-const createMock = () => ({ /* ... */ });
+const createMock = () => ({
+  /* ... */
+});
 ```
 
 ### ❌ 避免做法
 
 ```typescript
 // 1. 过度 Mock
-it('mocks everything', () => {
+it("mocks everything", () => {
   const overMocked = {
     method1: vi.fn(),
     method2: vi.fn(),
@@ -605,7 +596,7 @@ const badMock = vi.fn().mockImplementation((x) => {
 
 // 3. 忘记清理
 beforeEach(() => {
-  vi.spyOn(console, 'log');
+  vi.spyOn(console, "log");
   // Missing: afterEach cleanup
 });
 ```
@@ -617,37 +608,37 @@ beforeEach(() => {
 ### 验证调用
 
 ```typescript
-describe('Mock Verification', () => {
-  it('verifies call count', () => {
+describe("Mock Verification", () => {
+  it("verifies call count", () => {
     const mockFn = vi.fn();
     mockFn();
     mockFn();
-    
+
     expect(mockFn).toHaveBeenCalledTimes(2);
   });
 
-  it('verifies arguments', () => {
+  it("verifies arguments", () => {
     const mockFn = vi.fn();
-    mockFn('hello', 42);
-    
-    expect(mockFn).toHaveBeenCalledWith('hello', 42);
-    expect(mockFn).toHaveBeenLastCalledWith('hello', 42);
+    mockFn("hello", 42);
+
+    expect(mockFn).toHaveBeenCalledWith("hello", 42);
+    expect(mockFn).toHaveBeenLastCalledWith("hello", 42);
   });
 
-  it('verifies call order', () => {
+  it("verifies call order", () => {
     const mock1 = vi.fn();
     const mock2 = vi.fn();
-    
+
     mock1();
     mock2();
-    
+
     expect(mock1).toHaveBeenCalledBefore(mock2);
   });
 
-  it('verifies return values', () => {
+  it("verifies return values", () => {
     const mockFn = vi.fn().mockReturnValue(42);
     mockFn();
-    
+
     expect(mockFn).toHaveReturnedWith(42);
   });
 });
@@ -656,31 +647,31 @@ describe('Mock Verification', () => {
 ### Spy 使用
 
 ```typescript
-import { vi, expect } from 'vitest';
+import { vi, expect } from "vitest";
 
-describe('Spy Usage', () => {
-  it('spies on method', () => {
+describe("Spy Usage", () => {
+  it("spies on method", () => {
     const obj = {
-      method: () => 42
+      method: () => 42,
     };
-    
-    const spy = vi.spyOn(obj, 'method');
+
+    const spy = vi.spyOn(obj, "method");
     obj.method();
-    
+
     expect(spy).toHaveBeenCalled();
     expect(spy).toHaveReturnedWith(42);
-    
+
     spy.mockRestore();
   });
 
-  it('spies and changes implementation', () => {
+  it("spies and changes implementation", () => {
     const obj = {
-      method: () => 'original'
+      method: () => "original",
     };
-    
-    vi.spyOn(obj, 'method').mockImplementation(() => 'mocked');
-    
-    expect(obj.method()).toBe('mocked');
+
+    vi.spyOn(obj, "method").mockImplementation(() => "mocked");
+
+    expect(obj.method()).toBe("mocked");
   });
 });
 ```

@@ -1,31 +1,29 @@
-import { SvgProps, SvgPath, TypeSvgSvg, addAttrObj } from '@type-dom/framework';
+import { SvgProps, SvgPath, TypeSvgSvg, addAttrObj } from "@type-dom/framework";
 export class ElLocationInformationSvg extends TypeSvgSvg {
-  className: 'ElLocationInformationSvg';
+  className: "ElLocationInformationSvg";
   override childNodes: SvgPath[];
   constructor(params: SvgProps = {}) {
     super(params);
-    this.className = 'ElLocationInformationSvg';
-   addAttrObj(this, {
-      name: 'ElLocationInformationSvg'
+    this.className = "ElLocationInformationSvg";
+    addAttrObj(this, {
+      name: "ElLocationInformationSvg",
     });
-   addAttrObj(this, {
-      viewBox: '0 0 1024 1024',
+    addAttrObj(this, {
+      viewBox: "0 0 1024 1024",
     });
     this.resetSize(24, 24);
     this.childNodes = [];
-    const path0 = new SvgPath({ attrObj: { fill: 'currentColor' }});
-    path0.setData(
-      'M288 896h448q32 0 32 32t-32 32H288q-32 0-32-32t32-32z',
-    );
+    const path0 = new SvgPath({ attrObj: { fill: "currentColor" } });
+    path0.setData("M288 896h448q32 0 32 32t-32 32H288q-32 0-32-32t32-32z");
     this.addChild(path0);
-    const path1 = new SvgPath({ attrObj: { fill: 'currentColor' }});
+    const path1 = new SvgPath({ attrObj: { fill: "currentColor" } });
     path1.setData(
-      'M800 416a288 288 0 1 0-576 0c0 118.144 94.528 272.128 288 456.576C705.472 688.128 800 534.144 800 416zM512 960C277.312 746.688 160 565.312 160 416a352 352 0 0 1 704 0c0 149.312-117.312 330.688-352 544z',
+      "M800 416a288 288 0 1 0-576 0c0 118.144 94.528 272.128 288 456.576C705.472 688.128 800 534.144 800 416zM512 960C277.312 746.688 160 565.312 160 416a352 352 0 0 1 704 0c0 149.312-117.312 330.688-352 544z",
     );
     this.addChild(path1);
-    const path2 = new SvgPath({ attrObj: { fill: 'currentColor' }});
+    const path2 = new SvgPath({ attrObj: { fill: "currentColor" } });
     path2.setData(
-      'M512 512a96 96 0 1 0 0-192 96 96 0 0 0 0 192zm0 64a160 160 0 1 1 0-320 160 160 0 0 1 0 320z',
+      "M512 512a96 96 0 1 0 0-192 96 96 0 0 0 0 192zm0 64a160 160 0 1 1 0-320 160 160 0 0 1 0 320z",
     );
     this.addChild(path2);
   }

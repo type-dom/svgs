@@ -1,13 +1,7 @@
 {
   "version": "0.9",
   "language": "en-US,zh-CN",
-  "dictionaries": [
-    "en_US",
-    "zh_CN",
-    "typescript",
-    "node",
-    "software-terms"
-  ],
+  "dictionaries": ["en_US", "zh_CN", "typescript", "node", "software-terms"],
   "words": [
     "TypeDom",
     "TypeScript",
@@ -104,14 +98,7 @@
     }
   ],
   "useGitignore": true,
-  "enableFiletypes": [
-    ".md",
-    ".markdown",
-    ".ts",
-    ".tsx",
-    ".js",
-    ".jsx"
-  ],
+  "enableFiletypes": [".md", ".markdown", ".ts", ".tsx", ".js", ".jsx"],
   "caseSensitive": false,
   "suggestCount": 5,
   "showSuggestions": true,

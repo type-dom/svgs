@@ -2,7 +2,7 @@
 
 /**
  * Generate documentation statistics
- * 
+ *
  * This script:
  * 1. Counts total documents by category
  * 2. Calculates machine readability rate
@@ -10,15 +10,15 @@
  * 4. Generates visual reports
  */
 
-import { readFileSync, writeFileSync, readdirSync, statSync } from 'fs';
-import { join, dirname } from 'path';
-import { fileURLToPath } from 'url';
+import { readFileSync, writeFileSync, readdirSync, statSync } from "fs";
+import { join, dirname } from "path";
+import { fileURLToPath } from "url";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
-const rootDir = join(__dirname, '..');
-const aiDocsDir = join(rootDir, 'ai-docs');
+const rootDir = join(__dirname, "..");
+const aiDocsDir = join(rootDir, "ai-docs");
 
-console.log('📊 Generating documentation statistics...\n');
+console.log("📊 Generating documentation statistics...\n");
 
 const stats = {
   totalFiles: 0,
@@ -27,19 +27,19 @@ const stats = {
   frontmatterStats: {
     complete: 0,
     incomplete: 0,
-    missing: 0
+    missing: 0,
   },
   aiTags: {
-    'AI-First': 0,
-    'Auto-Generated': 0,
-    'Human-Written': 0,
-    'Prompt-Template': 0,
-    'Quick-Start': 0,
-    'Code-As-Docs': 0,
-    'Docs-As-Code': 0
+    "AI-First": 0,
+    "Auto-Generated": 0,
+    "Human-Written": 0,
+    "Prompt-Template": 0,
+    "Quick-Start": 0,
+    "Code-As-Docs": 0,
+    "Docs-As-Code": 0,
   },
   filesWithExamples: 0,
-  filesWithDiagrams: 0
+  filesWithDiagrams: 0,
 };
 
 /**
@@ -47,63 +47,71 @@ const stats = {
  */
 function analyzeFile(filePath) {
   try {
-    const content = readFileSync(filePath, 'utf-8');
-    const lines = content.split('\n');
+    const content = readFileSync(filePath, "utf-8");
+    const lines = content.split("\n");
     const lineCount = lines.length;
-    
+
     stats.totalFiles++;
     stats.totalLines += lineCount;
-    
+
     // Check frontmatter
-    if (content.startsWith('---')) {
-      const frontmatterEnd = content.indexOf('---', 3);
+    if (content.startsWith("---")) {
+      const frontmatterEnd = content.indexOf("---", 3);
       if (frontmatterEnd !== -1) {
         const frontmatter = content.substring(3, frontmatterEnd);
-        
+
         // Check required fields
-        const hasTitle = frontmatter.includes('title:');
-        const hasDescription = frontmatter.includes('description:');
-        const hasVersion = frontmatter.includes('version:');
-        const hasLastUpdated = frontmatter.includes('lastUpdated:');
-        const hasTags = frontmatter.includes('tags:');
-        
+        const hasTitle = frontmatter.includes("title:");
+        const hasDescription = frontmatter.includes("description:");
+        const hasVersion = frontmatter.includes("version:");
+        const hasLastUpdated = frontmatter.includes("lastUpdated:");
+        const hasTags = frontmatter.includes("tags:");
+
         if (hasTitle && hasDescription && hasVersion && hasLastUpdated && hasTags) {
           stats.frontmatterStats.complete++;
         } else {
           stats.frontmatterStats.incomplete++;
         }
-        
+
         // Count AI tags
-        if (frontmatter.includes('#AI-First') || frontmatter.includes('ai-first')) {
-          stats.aiTags['AI-First']++;
+        if (frontmatter.includes("#AI-First") || frontmatter.includes("ai-first")) {
+          stats.aiTags["AI-First"]++;
         }
-        if (frontmatter.includes('#Auto-Generated')) {
-          stats.aiTags['Auto-Generated']++;
+        if (frontmatter.includes("#Auto-Generated")) {
+          stats.aiTags["Auto-Generated"]++;
         }
-        if (frontmatter.includes('#Human-Written')) {
-          stats.aiTags['Human-Written']++;
+        if (frontmatter.includes("#Human-Written")) {
+          stats.aiTags["Human-Written"]++;
         }
-        if (frontmatter.includes('#Prompt-Template')) {
-          stats.aiTags['Prompt-Template']++;
+        if (frontmatter.includes("#Prompt-Template")) {
+          stats.aiTags["Prompt-Template"]++;
         }
-        if (frontmatter.includes('#Quick-Start')) {
-          stats.aiTags['Quick-Start']++;
+        if (frontmatter.includes("#Quick-Start")) {
+          stats.aiTags["Quick-Start"]++;
         }
       }
     } else {
       stats.frontmatterStats.missing++;
     }
-    
+
     // Check for examples
-    if (content.includes('```typescript') || content.includes('```javascript') || content.includes('```yaml')) {
+    if (
+      content.includes("```typescript") ||
+      content.includes("```javascript") ||
+      content.includes("```yaml")
+    ) {
       stats.filesWithExamples++;
     }
-    
+
     // Check for diagrams
-    if (content.includes('```mermaid') || content.includes('graph ') || content.includes('flowchart ')) {
+    if (
+      content.includes("```mermaid") ||
+      content.includes("graph ") ||
+      content.includes("flowchart ")
+    ) {
       stats.filesWithDiagrams++;
     }
-    
+
     return lineCount;
   } catch (error) {
     console.error(`❌ Error reading ${filePath}:`, error.message);
@@ -116,20 +124,20 @@ function analyzeFile(filePath) {
  */
 function processDirectory(dir, categoryName = null) {
   const files = readdirSync(dir);
-  
+
   for (const file of files) {
     const filePath = join(dir, file);
     const stat = statSync(filePath);
-    
+
     if (stat.isDirectory()) {
       // Skip GENERATED and ARCHIVE
-      if (!file.startsWith('.') && file !== 'GENERATED' && file !== 'ARCHIVE') {
+      if (!file.startsWith(".") && file !== "GENERATED" && file !== "ARCHIVE") {
         const subCategoryName = file;
         processDirectory(filePath, subCategoryName);
       }
-    } else if (file.endsWith('.md')) {
+    } else if (file.endsWith(".md")) {
       const lineCount = analyzeFile(filePath);
-      
+
       if (categoryName) {
         if (!stats.categories[categoryName]) {
           stats.categories[categoryName] = { files: 0, lines: 0 };
@@ -145,8 +153,10 @@ function processDirectory(dir, categoryName = null) {
  * Generate HTML report
  */
 function generateHtmlReport() {
-  const machineReadableRate = ((stats.frontmatterStats.complete / stats.totalFiles) * 100).toFixed(1);
-  
+  const machineReadableRate = ((stats.frontmatterStats.complete / stats.totalFiles) * 100).toFixed(
+    1,
+  );
+
   const html = `<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -233,7 +243,7 @@ function generateHtmlReport() {
 <body>
   <div class="container">
     <h1>📊 Documentation Statistics Report</h1>
-    <p><strong>Generated:</strong> ${new Date().toISOString().split('T')[0]}</p>
+    <p><strong>Generated:</strong> ${new Date().toISOString().split("T")[0]}</p>
     
     <h2>Overview</h2>
     <div class="stat-grid">
@@ -297,9 +307,13 @@ function generateHtmlReport() {
     
     <h2>AI Tags Distribution</h2>
     <div>
-      ${Object.entries(stats.aiTags).map(([tag, count]) => `
-        <span class="tag-badge tag-${tag.replace('-', '')}">#${tag}</span> ${count}
-      `).join('')}
+      ${Object.entries(stats.aiTags)
+        .map(
+          ([tag, count]) => `
+        <span class="tag-badge tag-${tag.replace("-", "")}">#${tag}</span> ${count}
+      `,
+        )
+        .join("")}
     </div>
     
     <h2>Documents by Category</h2>
@@ -310,14 +324,18 @@ function generateHtmlReport() {
         <th>Lines</th>
         <th>Avg Lines/File</th>
       </tr>
-      ${Object.entries(stats.categories).map(([category, data]) => `
+      ${Object.entries(stats.categories)
+        .map(
+          ([category, data]) => `
         <tr>
           <td><strong>${category}</strong></td>
           <td>${data.files}</td>
           <td>${data.lines.toLocaleString()}</td>
           <td>${Math.round(data.lines / data.files)}</td>
         </tr>
-      `).join('')}
+      `,
+        )
+        .join("")}
     </table>
     
     <h2>Content Quality</h2>
@@ -346,25 +364,25 @@ function generateHtmlReport() {
   </div>
 </body>
 </html>`;
-  
-  const outputPath = join(rootDir, 'GENERATED', 'reports', 'docs-statistics.html');
-  writeFileSync(outputPath, html, 'utf-8');
+
+  const outputPath = join(rootDir, "GENERATED", "reports", "docs-statistics.html");
+  writeFileSync(outputPath, html, "utf-8");
   console.log(`✅ HTML report generated: ${outputPath}`);
 }
 
 // Main execution
 processDirectory(aiDocsDir);
 
-console.log('📊 Statistics Summary:');
-console.log('='.repeat(60));
+console.log("📊 Statistics Summary:");
+console.log("=".repeat(60));
 console.log(`Total Files: ${stats.totalFiles}`);
 console.log(`Total Lines: ${stats.totalLines.toLocaleString()}`);
 console.log(`Frontmatter Complete: ${stats.frontmatterStats.complete}`);
 console.log(`Frontmatter Incomplete: ${stats.frontmatterStats.incomplete}`);
 console.log(`Frontmatter Missing: ${stats.frontmatterStats.missing}`);
-console.log('='.repeat(60));
+console.log("=".repeat(60));
 
 // Generate HTML report
 generateHtmlReport();
 
-console.log('\n✅ Documentation statistics completed!');
+console.log("\n✅ Documentation statistics completed!");

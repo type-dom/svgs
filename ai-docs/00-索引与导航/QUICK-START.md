@@ -64,27 +64,27 @@ npm run typecheck
 
 ```typescript
 // src/lib/common/my-icon.ts
-import { SvgProps, SvgPath, TypeSvgSvg } from '@type-dom/framework';
+import { SvgProps, SvgPath, TypeSvgSvg } from "@type-dom/framework";
 
 export class MyIconSvg extends TypeSvgSvg {
-  className: 'MyIconSvg';
+  className: "MyIconSvg";
   override childNodes: SvgPath[];
-  
+
   constructor(params: SvgProps = {}) {
     super(params);
-    this.className = 'MyIconSvg';
-    
+    this.className = "MyIconSvg";
+
     // 设置 viewBox
-    this.attrObj.viewBox = '0 0 1024 1024';
+    this.attrObj.viewBox = "0 0 1024 1024";
     this.resetSize(24, 24);
-    
+
     // 创建路径
-    const path = new SvgPath({ 
-      attrObj: { fill: 'currentColor' }
+    const path = new SvgPath({
+      attrObj: { fill: "currentColor" },
     });
-    
-    path.setData('M512 42.666667...'); // 你的 SVG 路径数据
-    
+
+    path.setData("M512 42.666667..."); // 你的 SVG 路径数据
+
     this.addChild(path);
     this.childNodes = [path];
   }
@@ -95,16 +95,16 @@ export class MyIconSvg extends TypeSvgSvg {
 
 ```typescript
 // 在应用中使用
-import { MyIconSvg } from '@type-dom/svgs/common/my-icon';
+import { MyIconSvg } from "@type-dom/svgs/common/my-icon";
 
 const icon = new MyIconSvg({
   width: 32,
   height: 32,
-  fill: '#ff0000'
+  fill: "#ff0000",
 });
 
 // 挂载到 DOM
-icon.mount(document.getElementById('app'));
+icon.mount(document.getElementById("app"));
 ```
 
 ---
@@ -167,20 +167,20 @@ icon.mount(document.getElementById('app'));
 
 ```typescript
 // tests/my-icon.spec.ts
-import { describe, it, expect } from 'vitest';
-import { MyIconSvg } from '../src/lib/common/my-icon';
+import { describe, it, expect } from "vitest";
+import { MyIconSvg } from "../src/lib/common/my-icon";
 
-describe('MyIconSvg', () => {
-  it('should create instance correctly', () => {
+describe("MyIconSvg", () => {
+  it("should create instance correctly", () => {
     const icon = new MyIconSvg();
-    expect(icon.className).toBe('MyIconSvg');
-    expect(icon.viewBox).toBe('0 0 1024 1024');
+    expect(icon.className).toBe("MyIconSvg");
+    expect(icon.viewBox).toBe("0 0 1024 1024");
   });
-  
-  it('should accept custom props', () => {
+
+  it("should accept custom props", () => {
     const icon = new MyIconSvg({
       width: 32,
-      height: 32
+      height: 32,
     });
     expect(icon.width).toBe(32);
     expect(icon.height).toBe(32);
@@ -189,6 +189,7 @@ describe('MyIconSvg', () => {
 ```
 
 运行测试:
+
 ```bash
 npm test -- tests/my-icon.spec.ts
 ```
@@ -223,7 +224,8 @@ npm run fluentui-svgs    # 转换 FluentUI SVG
 
 ### Q1: 如何添加新的 SVG 图标？
 
-**A**: 
+**A**:
+
 1. 在 `src/lib/common/` 创建新文件 `my-icon.ts`
 2. 继承 `TypeSvgSvg` 基类
 3. 实现构造函数和路径数据
@@ -235,6 +237,7 @@ npm run fluentui-svgs    # 转换 FluentUI SVG
 ### Q2: 如何使用 AI 辅助开发？
 
 **A**:
+
 1. 安装通义灵码插件 (2.5.4+)
 2. 开启智能体模式
 3. 引用相关文档
@@ -245,6 +248,7 @@ npm run fluentui-svgs    # 转换 FluentUI SVG
 ### Q3: 测试覆盖率要求是多少？
 
 **A**:
+
 - 语句覆盖率 ≥ 70%
 - 分支覆盖率 ≥ 70%
 - 函数覆盖率 ≥ 70%
@@ -269,6 +273,7 @@ npm run fluentui-svgs    # 转换 FluentUI SVG
 ## 📞 获取帮助
 
 如有问题:
+
 - 📖 查看完整文档索引：[`00-索引与导航/DOCUMENTATION-INDEX.md`](./DOCUMENTATION-INDEX.md)
 - 💬 提交 Issue: https://github.com/type-dom/svgs/issues
 - 📧 邮件联系：xjf7711@qq.com

@@ -1,21 +1,21 @@
-import { SvgProps, SvgPath, TypeSvgSvg, addAttrObj } from '@type-dom/framework';
+import { SvgProps, SvgPath, TypeSvgSvg, addAttrObj } from "@type-dom/framework";
 export class TdUnderlineSvg extends TypeSvgSvg {
-  className: 'TdUnderlineSvg';
+  className: "TdUnderlineSvg";
   override childNodes: SvgPath[];
   constructor(params: SvgProps = {}) {
     super(params);
-    this.className = 'TdUnderlineSvg';
+    this.className = "TdUnderlineSvg";
     addAttrObj(this, {
-      name: 'TdUnderlineSvg'
+      name: "TdUnderlineSvg",
     });
     addAttrObj(this, {
-      viewBox: '0 0 1024 1024',
+      viewBox: "0 0 1024 1024",
     });
     this.resetSize(24, 24);
     this.childNodes = [];
-    const path0 = new SvgPath({ attrObj: { fill: 'currentColor' }});
+    const path0 = new SvgPath({ attrObj: { fill: "currentColor" } });
     path0.setData(
-      'M244.80391196 930.26336805v-53.30830343l534.39217608-4.84906561v53.29783023L244.80391196 930.26336805zM753.79871378 521.41276965q0 273.50615719-248.10878291 273.50615797-237.74037025 0-237.74037027-263.92323078V139.30010844h83.26149514v387.93572969q0 193.57512211 162.33373288 193.5751221 156.94006385 0 156.94006386-187.3331282V139.24774305H753.79871378z',
+      "M244.80391196 930.26336805v-53.30830343l534.39217608-4.84906561v53.29783023L244.80391196 930.26336805zM753.79871378 521.41276965q0 273.50615719-248.10878291 273.50615797-237.74037025 0-237.74037027-263.92323078V139.30010844h83.26149514v387.93572969q0 193.57512211 162.33373288 193.5751221 156.94006385 0 156.94006386-187.3331282V139.24774305H753.79871378z",
     );
     this.addChild(path0);
   }

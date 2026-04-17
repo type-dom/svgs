@@ -1,31 +1,31 @@
-import { SvgProps, SvgPath, TypeSvgSvg, addAttrObj } from '@type-dom/framework';
+import { SvgProps, SvgPath, TypeSvgSvg, addAttrObj } from "@type-dom/framework";
 export class TdTemplatesSvg extends TypeSvgSvg {
-  className: 'TdTemplatesSvg';
+  className: "TdTemplatesSvg";
   override childNodes: SvgPath[];
   constructor(params: SvgProps = {}) {
     super(params);
-    this.className = 'TdTemplatesSvg';
+    this.className = "TdTemplatesSvg";
     addAttrObj(this, {
-      name: 'TdTemplatesSvg'
+      name: "TdTemplatesSvg",
     });
     addAttrObj(this, {
-      viewBox: '0 0 1024 1024',
+      viewBox: "0 0 1024 1024",
     });
     this.resetSize(24, 24);
     this.childNodes = [];
-    const path0 = new SvgPath({ attrObj: { fill: 'currentColor' }});
+    const path0 = new SvgPath({ attrObj: { fill: "currentColor" } });
     path0.setData(
-      'M866.304 793.6h-60.416v-51.2h60.416c16.384 0 29.696-13.312 29.696-29.696V157.696a29.696 29.696 0 0 0-29.696-29.696H311.296a29.696 29.696 0 0 0-29.696 29.696v60.416h-51.2V157.696c0-44.544 36.352-80.896 80.896-80.896h554.496c44.544 0 80.896 36.352 80.896 80.896v554.496c0.512 45.056-35.84 81.408-80.384 81.408z',
+      "M866.304 793.6h-60.416v-51.2h60.416c16.384 0 29.696-13.312 29.696-29.696V157.696a29.696 29.696 0 0 0-29.696-29.696H311.296a29.696 29.696 0 0 0-29.696 29.696v60.416h-51.2V157.696c0-44.544 36.352-80.896 80.896-80.896h554.496c44.544 0 80.896 36.352 80.896 80.896v554.496c0.512 45.056-35.84 81.408-80.384 81.408z",
     );
     this.addChild(path0);
-    const path1 = new SvgPath({ attrObj: { fill: 'currentColor' }});
+    const path1 = new SvgPath({ attrObj: { fill: "currentColor" } });
     path1.setData(
-      'M763.904 896h-55.296v-51.2h55.296c16.384 0 29.696-13.312 29.696-29.696V260.096a29.696 29.696 0 0 0-29.696-29.696H208.896a29.696 29.696 0 0 0-29.696 29.696v55.296h-51.2V260.096c0-44.544 36.352-80.896 80.896-80.896h554.496c44.544 0 80.896 36.352 80.896 80.896v554.496c0.512 45.056-35.84 81.408-80.384 81.408z',
+      "M763.904 896h-55.296v-51.2h55.296c16.384 0 29.696-13.312 29.696-29.696V260.096a29.696 29.696 0 0 0-29.696-29.696H208.896a29.696 29.696 0 0 0-29.696 29.696v55.296h-51.2V260.096c0-44.544 36.352-80.896 80.896-80.896h554.496c44.544 0 80.896 36.352 80.896 80.896v554.496c0.512 45.056-35.84 81.408-80.384 81.408z",
     );
     this.addChild(path1);
-    const path2 = new SvgPath({ attrObj: { fill: 'currentColor' }});
+    const path2 = new SvgPath({ attrObj: { fill: "currentColor" } });
     path2.setData(
-      'M661.504 998.4H106.496c-44.544 0-80.896-36.352-80.896-80.896V362.496c0-44.544 36.352-80.896 80.896-80.896h554.496c44.544 0 80.896 36.352 80.896 80.896v554.496c0.512 45.056-35.84 81.408-80.384 81.408zM106.496 332.8a29.696 29.696 0 0 0-29.696 29.696v554.496c0 16.384 13.312 29.696 29.696 29.696h554.496c16.384 0 29.696-13.312 29.696-29.696V362.496a29.696 29.696 0 0 0-29.696-29.696H106.496z',
+      "M661.504 998.4H106.496c-44.544 0-80.896-36.352-80.896-80.896V362.496c0-44.544 36.352-80.896 80.896-80.896h554.496c44.544 0 80.896 36.352 80.896 80.896v554.496c0.512 45.056-35.84 81.408-80.384 81.408zM106.496 332.8a29.696 29.696 0 0 0-29.696 29.696v554.496c0 16.384 13.312 29.696 29.696 29.696h554.496c16.384 0 29.696-13.312 29.696-29.696V362.496a29.696 29.696 0 0 0-29.696-29.696H106.496z",
     );
     this.addChild(path2);
   }

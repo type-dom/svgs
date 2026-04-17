@@ -11,20 +11,20 @@
 
 ### ✅ 已完成 (100% 符合 LingMa.md)
 
-| 目录分类 | 推荐数量 | 实际数量 | 完成率 | 质量评级 |
-|---------|---------|---------|--------|---------|
-| **00-索引与导航/** | 3 | 3 | ✅ 100% | ⭐⭐⭐⭐⭐ |
-| **01-项目概述/** | 4 | 4 | ✅ 100% | ⭐⭐⭐⭐⭐ |
-| **02-开发规范/** | 5 | 5 | ✅ 100% | ⭐⭐⭐⭐⭐ |
-| **03-API 文档/** | 4 | 4 | ✅ 100% | ⭐⭐⭐⭐⭐ |
-| **04-业务文档/** | 4 | 4 | ✅ 100% | ⭐⭐⭐⭐⭐ |
-| **05-测试文档/** | 7 | 7 | ✅ 100% | ⭐⭐⭐⭐⭐ |
-| **06-运维文档/** | 4 | 4 | ✅ 100% | ⭐⭐⭐⭐⭐ |
-| **07-AI 专项文档/** | 5 | 5 | ✅ 100% | ⭐⭐⭐⭐⭐ |
-| **08-架构决策记录/** | 3 | 3 | ✅ 100% | ⭐⭐⭐⭐⭐ |
-| **GENERATED/** | 4 | 4 | ✅ 100% | ⭐⭐⭐⭐⭐ |
-| **ARCHIVE/** | 2 | 2 | ✅ 100% | ⭐⭐⭐⭐⭐ |
-| **总计** | **45** | **45** | ✅ **100%** | ⭐⭐⭐⭐⭐ |
+| 目录分类             | 推荐数量 | 实际数量 | 完成率      | 质量评级   |
+| -------------------- | -------- | -------- | ----------- | ---------- |
+| **00-索引与导航/**   | 3        | 3        | ✅ 100%     | ⭐⭐⭐⭐⭐ |
+| **01-项目概述/**     | 4        | 4        | ✅ 100%     | ⭐⭐⭐⭐⭐ |
+| **02-开发规范/**     | 5        | 5        | ✅ 100%     | ⭐⭐⭐⭐⭐ |
+| **03-API 文档/**     | 4        | 4        | ✅ 100%     | ⭐⭐⭐⭐⭐ |
+| **04-业务文档/**     | 4        | 4        | ✅ 100%     | ⭐⭐⭐⭐⭐ |
+| **05-测试文档/**     | 7        | 7        | ✅ 100%     | ⭐⭐⭐⭐⭐ |
+| **06-运维文档/**     | 4        | 4        | ✅ 100%     | ⭐⭐⭐⭐⭐ |
+| **07-AI 专项文档/**  | 5        | 5        | ✅ 100%     | ⭐⭐⭐⭐⭐ |
+| **08-架构决策记录/** | 3        | 3        | ✅ 100%     | ⭐⭐⭐⭐⭐ |
+| **GENERATED/**       | 4        | 4        | ✅ 100%     | ⭐⭐⭐⭐⭐ |
+| **ARCHIVE/**         | 2        | 2        | ✅ 100%     | ⭐⭐⭐⭐⭐ |
+| **总计**             | **45**   | **45**   | ✅ **100%** | ⭐⭐⭐⭐⭐ |
 
 ### 📈 核心指标
 
@@ -63,13 +63,14 @@ contributors: []
 relatedDocs:
   - related-doc-1.md
   - related-doc-2.md
-status: active  # active | deprecated | archived
-priority: high  # high | medium | low
-category: index_navigation  # 对应目录名
+status: active # active | deprecated | archived
+priority: high # high | medium | low
+category: index_navigation # 对应目录名
 ---
 ```
 
 **实施状态**:
+
 - ✅ DOCUMENTATION-INDEX.md (已优化)
 - ✅ documentation-metadata.json (已创建)
 - ✅ .docs-config.yaml (已创建)
@@ -79,10 +80,11 @@ category: index_navigation  # 对应目录名
 
 ```markdown
 <!-- 正向引用 -->
+
 详见 [AI 协作指南](./07-AI 专项文档/AI-ITERATION-WORKFLOW.md#L45-L67)
 
 <!-- 反向链接 (AI 自动生成) -->
-<!-- 
+<!--
 ## 📌 被以下文档引用
 - [文档 A](path/to/doc-a.md)
 - [文档 B](path/to/doc-b.md)
@@ -90,6 +92,7 @@ category: index_navigation  # 对应目录名
 ```
 
 **工具支持**:
+
 ```bash
 npm run docs:links    # 验证所有链接
 npm run docs:sync     # 同步交叉引用
@@ -120,6 +123,7 @@ ai:
 ```
 
 **预期效果**:
+
 - AI 代码准确率：60% → **85%** (+42%)
 - 规范遵循度：45% → **78%** (+73%)
 - 幻觉率：25% → **5%** (-80%)
@@ -127,17 +131,19 @@ ai:
 #### Agent 技能深度整合 🛠️
 
 **已集成技能**:
+
 ```yaml
 agent:
   skills:
-    - code_generation       # Skill 2: SVG 组件生成 (95%+ 成功率)
-    - test_generation       # Skill 3: 单元测试生成 (80-90% 覆盖率)
-    - documentation_generation  # Skill 6: 文档生成
-    - code_review           # Skill 4: 代码审查 (~90% 准确率)
-    - bug_fixing            # Skill 7: Bug 修复 (~85% 成功率)
+    - code_generation # Skill 2: SVG 组件生成 (95%+ 成功率)
+    - test_generation # Skill 3: 单元测试生成 (80-90% 覆盖率)
+    - documentation_generation # Skill 6: 文档生成
+    - code_review # Skill 4: 代码审查 (~90% 准确率)
+    - bug_fixing # Skill 7: Bug 修复 (~85% 成功率)
 ```
 
 **使用统计** (来自 AGENT-SKILLS.md):
+
 ```
 Skill 2 (SVG 生成): 20-30 次/天，满意度 4.8/5
 Skill 3 (测试生成): 10-15 次/天，覆盖率 80-90%
@@ -147,6 +153,7 @@ Skill 4 (代码审查): 5-10 次/天，准确率 ~90%
 #### 提示词模板库 📝
 
 **10 大核心模板** (AI-PROMPT-TEMPLATES.md):
+
 1. SVG 组件生成模板
 2. 单元测试生成模板
 3. 代码审查模板
@@ -186,6 +193,7 @@ graph LR
 ```
 
 **NPM 脚本** (package.json):
+
 ```json
 {
   "scripts": {
@@ -228,6 +236,7 @@ graph LR
 ```
 
 **输出结构**:
+
 ```
 GENERATED/api-extractor/
 ├── index.html              # API 首页
@@ -245,12 +254,14 @@ GENERATED/api-extractor/
 #### 四层质量门禁 🚪
 
 **Layer 1: Git Hooks (pre-commit)**
+
 ```bash
 - markdownlint --fix    # 语法检查 + 自动修复
 - cspell                # 拼写检查
 ```
 
 **Layer 2: CI Checks (pull request)**
+
 ```bash
 - markdownlint          # Markdown 语法
 - lychee                # 链接验证
@@ -259,6 +270,7 @@ GENERATED/api-extractor/
 ```
 
 **Layer 3: Quality Gates (merge)**
+
 ```yaml
 quality_gates:
   markdownlint: error
@@ -269,6 +281,7 @@ quality_gates:
 ```
 
 **Layer 4: Periodic Audit (weekly)**
+
 ```bash
 - AI 辅助审查
 - 人工抽检
@@ -280,16 +293,17 @@ quality_gates:
 
 **核心 KPI**:
 
-| 指标 | 计算公式 | 当前值 | 目标值 | 状态 |
-|-----|---------|-------|-------|------|
-| **完整性** | 文档数/应文档数 | 100% | 100% | ✅ |
-| **准确性** | 已验证文档/总文档 | 98% | 98% | ✅ |
-| **一致性** | 一致术语/总术语 | 97% | 97% | ✅ |
-| **可搜索性** | 标记文档/总文档 | 95% | 95% | ✅ |
-| **AI 友好性** | 结构化文档/总文档 | 96% | 96% | ✅ |
-| **机器可读性** | 机器可读文档/总文档 | 88% | 90% | ⚠️ |
+| 指标           | 计算公式            | 当前值 | 目标值 | 状态 |
+| -------------- | ------------------- | ------ | ------ | ---- |
+| **完整性**     | 文档数/应文档数     | 100%   | 100%   | ✅   |
+| **准确性**     | 已验证文档/总文档   | 98%    | 98%    | ✅   |
+| **一致性**     | 一致术语/总术语     | 97%    | 97%    | ✅   |
+| **可搜索性**   | 标记文档/总文档     | 95%    | 95%    | ✅   |
+| **AI 友好性**  | 结构化文档/总文档   | 96%    | 96%    | ✅   |
+| **机器可读性** | 机器可读文档/总文档 | 88%    | 90%    | ⚠️   |
 
 **监控命令**:
+
 ```bash
 npm run docs:stats    # 查看统计数据
 npm run docs:quality  # 全面质量评估
@@ -303,59 +317,60 @@ npm run docs:quality  # 全面质量评估
 
 **示例**:
 
-```typescript
+````typescript
 /**
  * SVG 组件基础接口
- * 
+ *
  * @version 0.4.0
  * @since 0.1.0
  * @author TypeDom Team
- * 
+ *
  * @description
  * 所有 SVG 组件的基础接口，定义了通用的属性和行为。
  * 支持响应式尺寸、自定义颜色、无障碍访问等特性。
- * 
+ *
  * @example
  * ```typescript
  * import { TdAddSvg } from '@type-dom/svgs/common'
- * 
+ *
  * // 默认用法
  * <TdAddSvg />
- * 
+ *
  * // 自定义尺寸和颜色
  * <TdAddSvg size={32} color="#333" />
- * 
+ *
  * // 响应式尺寸
  * <TdAddSvg size="lg" ariaLabel="Add item" />
  * ```
- * 
+ *
  * @see {@link https://type-dom.github.io/svgs} 完整文档
  * @see TdAddSvg - 添加图标组件示例
  */
 export interface SvgComponentProps {
-  /** 
+  /**
    * 组件尺寸
    * @default 24
    * @type number | string ('sm' | 'md' | 'lg')
    */
   size?: number | string;
-  
-  /** 
+
+  /**
    * 组件颜色
    * @default 'currentColor'
    * @type string 任何有效的 CSS 颜色值
    */
   color?: string;
-  
+
   /**
    * 无障碍访问标签
    * @default undefined
    */
   ariaLabel?: string;
 }
-```
+````
 
 **检查清单**:
+
 - ✅ 所有导出符号都有 JSDoc
 - ✅ 包含类型说明
 - ✅ 提供默认值信息
@@ -369,17 +384,20 @@ export interface SvgComponentProps {
 ### 00-索引与导航/ (Index & Navigation) ⭐
 
 **文档清单**:
+
 1. ✅ DOCUMENTATION-INDEX.md - 文档总索引 (含 AI 标签)
 2. ✅ QUICK-START.md - 5 分钟快速开始
 3. ✅ AI-PROMPT-TEMPLATES.md - AI 提示词模板库
 
 **优化要点**:
+
 - ✅ Frontmatter 完整
 - ✅ AI 标签系统
 - ✅ 双向链接
 - ✅ 机器可读元数据
 
 **使用场景**:
+
 ```
 新人入职 → QUICK-START.md
 AI 协作 → AI-PROMPT-TEMPLATES.md
@@ -391,27 +409,30 @@ AI 协作 → AI-PROMPT-TEMPLATES.md
 ### 01-项目概述/ (Project Overview)
 
 **文档清单**:
+
 1. ✅ 项目背景.md - 项目愿景、目标、核心价值
 2. ✅ 技术栈.md - TypeScript, TypeDom, Vite Plus
 3. ✅ 架构图.md - 四层架构、组件继承体系
 4. ✅ AI-FIRST-MANIFESTO.md - AI 协作开发理念
 
 **优化要点**:
+
 - ✅ 项目背景：添加 Mermaid 流程图
 - ✅ 技术栈：版本矩阵表
 - ✅ 架构图：Mermaid 可视化
 - ✅ AI 宣言：实践案例
 
 **示例**:
+
 ```markdown
 ## 技术栈版本矩阵
 
-| 技术 | 版本 | 用途 | 必选 |
-|-----|------|------|------|
-| TypeScript | ^5.9.3 | 开发语言 | ✅ |
-| TypeDom Framework | ^0.5.0 | 核心框架 | ✅ |
-| Vite Plus | latest | 构建工具 | ✅ |
-| Vitest | latest | 测试框架 | ✅ |
+| 技术              | 版本   | 用途     | 必选 |
+| ----------------- | ------ | -------- | ---- |
+| TypeScript        | ^5.9.3 | 开发语言 | ✅   |
+| TypeDom Framework | ^0.5.0 | 核心框架 | ✅   |
+| Vite Plus         | latest | 构建工具 | ✅   |
+| Vitest            | latest | 测试框架 | ✅   |
 ```
 
 ---
@@ -419,6 +440,7 @@ AI 协作 → AI-PROMPT-TEMPLATES.md
 ### 02-开发规范/ (Development Standards)
 
 **文档清单**:
+
 1. ✅ 编码规范.md - 命名约定、代码风格、注释规范
 2. ✅ 命名约定.md - 组件命名、文件命名规则
 3. ✅ 代码审查清单.md - 代码质量检查项
@@ -426,6 +448,7 @@ AI 协作 → AI-PROMPT-TEMPLATES.md
 5. ✅ AI-CODE-GENERATION.md - AI 代码生成规范
 
 **优化要点**:
+
 - ✅ 编码规范：正反例对比
 - ✅ 命名约定：完整示例
 - ✅ 审查清单：Checklist 格式
@@ -433,6 +456,7 @@ AI 协作 → AI-PROMPT-TEMPLATES.md
 - ✅ AI 生成：提问模板
 
 **AI 代码生成流程**:
+
 ```markdown
 1. 需求澄清 (2 分钟)
 2. 方案设计 (3 分钟)
@@ -452,39 +476,42 @@ AI 协作 → AI-PROMPT-TEMPLATES.md
 ### 03-API 文档/ (API Documentation)
 
 **文档清单**:
+
 1. ✅ 接口定义.md - 组件接口、属性说明
 2. ✅ 数据模型.md - 类型定义、数据结构
 3. ✅ 错误码.md - 常见错误、异常处理
 4. ✅ API-REFERENCE.md - TypeDoc 自动生成
 
 **优化要点**:
+
 - ✅ 接口定义：完整 Props 表格
 - ✅ 数据模型：TypeScript 类型
 - ✅ 错误码：排查指南
 - ✅ API 参考：自动同步源码
 
 **接口定义示例**:
+
 ```markdown
 ## TdAddSvg 组件
 
 ### Props
 
-| 属性 | 类型 | 默认值 | 必填 | 说明 |
-|-----|------|--------|------|------|
-| size | `number \| string` | `24` | ❌ | 组件尺寸 |
-| color | `string` | `'currentColor'` | ❌ | 组件颜色 |
-| ariaLabel | `string` | `undefined` | ❌ | 无障碍标签 |
+| 属性      | 类型               | 默认值           | 必填 | 说明       |
+| --------- | ------------------ | ---------------- | ---- | ---------- |
+| size      | `number \| string` | `24`             | ❌   | 组件尺寸   |
+| color     | `string`           | `'currentColor'` | ❌   | 组件颜色   |
+| ariaLabel | `string`           | `undefined`      | ❌   | 无障碍标签 |
 
 ### Events
 
-| 事件名 | 参数 | 说明 |
-|-------|------|------|
+| 事件名  | 参数         | 说明     |
+| ------- | ------------ | -------- |
 | onClick | `MouseEvent` | 点击事件 |
 
 ### Slots
 
-| 插槽名 | 说明 |
-|-------|------|
+| 插槽名  | 说明       |
+| ------- | ---------- |
 | default | 自定义内容 |
 ```
 
@@ -493,18 +520,21 @@ AI 协作 → AI-PROMPT-TEMPLATES.md
 ### 04-业务文档/ (Business Documentation)
 
 **文档清单**:
+
 1. ✅ 业务流程.md - SVG 封装流程、开发工作流
 2. ✅ 领域术语.md - 核心术语解释
 3. ✅ 用户故事.md - 用户角色、使用场景
 4. ✅ DOMAIN-KNOWLEDGE.md - 领域知识图谱
 
 **优化要点**:
+
 - ✅ 业务流程：Mermaid 流程图
 - ✅ 领域术语：术语表 + 关系图
 - ✅ 用户故事：角色地图
 - ✅ 知识图谱：Mermaid 思维导图
 
 **领域知识图谱示例**:
+
 ```mermaid
 graph TD
     A[SVG 组件] --> B[TypeDom Framework]
@@ -524,6 +554,7 @@ graph TD
 ### 05-测试文档/ (Testing Documentation)
 
 **文档清单**:
+
 1. ✅ README.md - 测试文档导航
 2. ✅ 测试策略.md - 测试金字塔、工具链
 3. ✅ 单元测试指南.md - Vitest 使用规范
@@ -534,6 +565,7 @@ graph TD
 8. ✅ 测试工具配置.md - Vitest, Playwright 配置
 
 **优化要点**:
+
 - ✅ 测试策略：金字塔可视化
 - ✅ 单元/集成/E2E:完整示例
 - ✅ Mock 规范：最佳实践
@@ -541,12 +573,13 @@ graph TD
 - ✅ 工具配置：开箱即用
 
 **测试金字塔**:
+
 ```
         /\
        /  \
       / E2E \       10% (关键路径)
-     /______\       
-    /        \      
+     /______\
+    /        \
    /  Integration \  20% (模块交互)
   /________________\
  /                  \
@@ -555,6 +588,7 @@ graph TD
 ```
 
 **覆盖率要求**:
+
 ```typescript
 // 质量门禁
 - 语句覆盖率：≥80%
@@ -568,18 +602,21 @@ graph TD
 ### 06-运维文档/ (Operations Documentation)
 
 **文档清单**:
+
 1. ✅ 部署指南.md - 本地开发、生产构建、NPM 发布
 2. ✅ 监控告警.md - 监控指标、告警规则
 3. ✅ 故障处理.md - 故障分类、应急预案
 4. ✅ CI-CD-PIPELINE.md - CI/CD 流程
 
 **优化要点**:
+
 - ✅ 部署指南：分步截图
 - ✅ 监控告警：Dashboard 配置
 - ✅ 故障处理：决策树
 - ✅ CI/CD:完整 YAML 配置
 
 **CI/CD 流程示例**:
+
 ```yaml
 # .github/workflows/ci.yml
 name: CI/CD Pipeline
@@ -593,30 +630,30 @@ on:
 jobs:
   build-test-deploy:
     runs-on: ubuntu-latest
-    
+
     steps:
       - uses: actions/checkout@v4
-      
+
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '20'
-          
+          node-version: "20"
+
       - name: Install dependencies
         run: npm ci
-        
+
       - name: Build
         run: npm run build
-        
+
       - name: Test
         run: npm test
-        
+
       - name: Generate API Docs
         run: npm run docs:api
-        
+
       - name: Quality Check
         run: npm run docs:check
-        
+
       - name: Deploy to NPM
         if: github.ref == 'refs/heads/main'
         run: npm publish
@@ -629,6 +666,7 @@ jobs:
 ### 07-AI 专项文档/ (AI-Specific Documentation) ⭐
 
 **文档清单**:
+
 1. ✅ LINGMA-CONFIGURATION.md - 通义灵码配置
 2. ✅ AGENT-SKILLS.md - Agent 技能清单
 3. ✅ CONTEXT-MANAGEMENT.md - 上下文管理技巧
@@ -636,6 +674,7 @@ jobs:
 5. ✅ AI-ITERATION-WORKFLOW.md - AI 迭代工作流
 
 **优化要点**:
+
 - ✅ 配置：YAML 详解
 - ✅ 技能：使用统计
 - ✅ 上下文：Token 优化
@@ -643,6 +682,7 @@ jobs:
 - ✅ 工作流：实战案例
 
 **RAG 检索流程**:
+
 ```mermaid
 graph LR
     A[用户提问] --> B[Agent 理解]
@@ -655,6 +695,7 @@ graph LR
 ```
 
 **预期收益**:
+
 ```
 AI 代码准确率：60% → 85% (+42%)
 规范遵循度：45% → 78% (+73%)
@@ -667,31 +708,38 @@ AI 代码准确率：60% → 85% (+42%)
 ### 08-架构决策记录/ (Architecture Decision Records)
 
 **文档清单**:
+
 1. ✅ ADR-001-framework-selection.md - 为什么选择 TypeDom
 2. ✅ ADR-002-monorepo-strategy.md - Monorepo vs 多仓库
 3. ✅ ADR-003-testing-strategy.md - 测试策略选择
 
 **优化要点**:
+
 - ✅ 标准 ADR 格式
 - ✅ 决策背景详述
 - ✅ 选项对比表格
 - ✅ 后果分析完整
 
 **ADR 标准格式**:
+
 ```markdown
 # ADR-XXX: 决策标题
 
 ## 状态
+
 ✅ 已采纳 | ⏳ 提议中 | ❌ 已废弃
 
 ## 背景
+
 为什么要做这个决策？
 
 ## 决策驱动因素
+
 - 因素 1
 - 因素 2
 
 ## 考虑的选项
+
 1. 选项 A
    - ✅ 优点
    - ❌ 缺点
@@ -700,17 +748,21 @@ AI 代码准确率：60% → 85% (+42%)
    - ❌ 缺点
 
 ## 最终决策
+
 选择 XXX，因为...
 
 ## 影响和后果
+
 - 技术影响
 - 团队影响
 - 成本影响
 
 ## 合规性验证
+
 如何验证决策被正确执行？
 
 ## 参考链接
+
 - 相关链接 1
 - 相关链接 2
 ```
@@ -720,18 +772,21 @@ AI 代码准确率：60% → 85% (+42%)
 ### GENERATED/ (Auto-Generated Documentation)
 
 **文档清单**:
+
 1. ✅ api-extractor/ - TypeDoc 生成的 API 文档
 2. ✅ changelog/ - 自动生成的变更日志
 3. ✅ coverage-reports/ - 测试覆盖率报告
 4. ✅ architecture-diagrams/ - Mermaid 生成的架构图
 
 **优化要点**:
+
 - ✅ 自动化生成
 - ✅ 版本关联
 - ✅ 历史追溯
 - ✅ 可视化展示
 
 **生成命令**:
+
 ```bash
 npm run docs:api         # TypeDoc API 文档
 npm run docs:rag-build   # RAG 知识库
@@ -743,17 +798,20 @@ npm run test:coverage    # 覆盖率报告
 ### ARCHIVE/ (Historical Archive)
 
 **文档清单**:
+
 1. ✅ README.md - 归档说明
 2. ⏳ v2.x/ - 2.x 版本文档 (待创建)
 3. ⏳ deprecated/ - 废弃内容 (待创建)
 
 **优化要点**:
+
 - ✅ 清晰的归档策略
 - ✅ 版本时间线
 - ✅ 迁移指南
 - ✅ 检索支持
 
 **归档策略**:
+
 ```yaml
 archive_policy:
   trigger:
@@ -889,21 +947,21 @@ archive_policy:
 
 ### 短期收益 (1-2 周)
 
-| 指标 | 基线 | 预期 | 提升 |
-|-----|------|------|------|
-| 新人上手时间 | 2 周 | 3 天 | **-80%** |
-| AI 代码准确率 | 60% | 85% | **+42%** |
-| 文档检索时间 | 5 分钟 | 1 分钟 | **+80%** |
-| 代码审查效率 | 1 小时 | 15 分钟 | **+75%** |
+| 指标          | 基线   | 预期    | 提升     |
+| ------------- | ------ | ------- | -------- |
+| 新人上手时间  | 2 周   | 3 天    | **-80%** |
+| AI 代码准确率 | 60%    | 85%     | **+42%** |
+| 文档检索时间  | 5 分钟 | 1 分钟  | **+80%** |
+| 代码审查效率  | 1 小时 | 15 分钟 | **+75%** |
 
 ### 中期收益 (1-2 月)
 
-| 指标 | 提升幅度 |
-|-----|---------|
-| 整体开发效率 | **+50-70%** |
-| 代码质量 | **+40-60%** |
-| 文档覆盖率 | **+36%** (70% → 95%) |
-| Bug 率 | **-65%** |
+| 指标          | 提升幅度              |
+| ------------- | --------------------- |
+| 整体开发效率  | **+50-70%**           |
+| 代码质量      | **+40-60%**           |
+| 文档覆盖率    | **+36%** (70% → 95%)  |
+| Bug 率        | **-65%**              |
 | AI 协作渗透率 | **+300%** (20% → 80%) |
 
 ### 长期收益 (3-6 月)
@@ -948,6 +1006,7 @@ archive_policy:
 ### 按角色分类
 
 **新人入职**:
+
 ```
 AI-FIRST-QUICK-GUIDE.md (5 分钟)
 → QUICK-START.md (5 分钟)
@@ -958,6 +1017,7 @@ AI-FIRST-QUICK-GUIDE.md (5 分钟)
 ```
 
 **日常开发**:
+
 ```
 AI-CODE-GENERATION.md
 → AGENT-SKILLS.md
@@ -966,6 +1026,7 @@ AI-CODE-GENERATION.md
 ```
 
 **代码审查**:
+
 ```
 代码审查清单.md
 → 编码规范.md
@@ -974,6 +1035,7 @@ AI-CODE-GENERATION.md
 ```
 
 **运维部署**:
+
 ```
 部署指南.md
 → CI-CD-PIPELINE.md
