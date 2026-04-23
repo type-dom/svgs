@@ -1,6 +1,6 @@
 {
   "name": "@type-dom/svgs",
-  "version": "0.4.0",
+  "version": "0.6.0",
   "description": "",
   "homepage": "https://github.com/type-dom/svgs#readme",
   "bugs": {
@@ -15,6 +15,7 @@
   "files": [
     "dist"
   ],
+  "sideEffects": false,
   "type": "module",
   "types": "./dist/index.d.ts",
   "exports": {
@@ -22,6 +23,7 @@
     "./common": "./dist/lib/common-index.mjs",
     "./element-plus": "./dist/lib/element-plus-index.mjs",
     "./fluentui": "./dist/lib/fluentui-index.mjs",
+    "./mis": "./dist/lib/mis-index.mjs",
     "./other": "./dist/lib/other-index.mjs",
     "./package.json": "./package.json"
   },
@@ -41,6 +43,7 @@
     "common-svgs": "node trans-svgs/common-svg.mjs",
     "element-svgs": "node trans-svgs/element-svg.mjs",
     "fluentui-svgs": "node trans-svgs/fluentui-svg.mjs",
+    "mis-svgs": "node trans-svgs/mis-svg.mjs",
     "docs:check": "markdownlint ai-docs/**/*.md && lychee ai-docs && cspell ai-docs/**/*.md",
     "docs:fix": "markdownlint ai-docs/**/*.md --fix",
     "docs:links": "lychee ai-docs/**/*.md --verbose",

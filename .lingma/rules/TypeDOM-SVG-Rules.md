@@ -1,8 +1,11 @@
+---
+trigger: always_on
+---
 # TypeDOM SVG 组件库 - 通义灵码 AI 开发规则
 
 **版本**: 1.0.0  
 **最后更新**: 2026-03-18  
-**适用项目**: @type-dom/svgs v0.4.0+
+**适用项目**: @type-dom/svgs v0.5.0
 
 ---
 

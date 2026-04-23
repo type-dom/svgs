@@ -8,6 +8,7 @@
 | `common-index.mjs`       | ~10.7 KB | Common 分类（195 个图标）       |
 | `element-plus-index.mjs` | ~17.8 KB | Element Plus 分类（293 个图标） |
 | `fluentui-index.mjs`     | ~425 KB  | FluentUI 分类（5255 个图标）    |
+| `mis-index.mjs`          | ~2.5 KB  | MIS 分类（52 个图标）           |
 | `other/index.mjs`        | ~1.7 KB  | Other 分类（33 个图标）         |
 | 单个图标文件             | ~0.27 KB | 每个独立图标组件                |
 
@@ -45,6 +46,9 @@ import { TdSomeIcon } from "@type-dom/svgs/element-plus";
 
 // 只导入 FluentUI 分类的图标
 import { TdFluentIcon } from "@type-dom/svgs/fluentui";
+
+// 只导入 MIS 分类的图标
+import { MisCloseSvg } from "@type-dom/svgs/mis";
 
 // 只导入 Other 分类的图标
 import { TdOtherIcon } from "@type-dom/svgs/other";
