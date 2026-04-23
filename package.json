@@ -64,7 +64,6 @@
     "changelogen": "^0.5.5",
     "cspell": "^8.3.2",
     "jest-extended": "^7.0.0",
-    "lycheeverse": "^0.15.0",
     "markdownlint-cli": "^0.39.0",
     "textlint": "^13.4.1",
     "typedoc": "^0.27.0",
